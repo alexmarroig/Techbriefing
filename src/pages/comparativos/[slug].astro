@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ComparativoPage from '../../components/pages/ComparativoPage.jsx';
+import { getCollection } from 'astro:content';
+
+export function getStaticPaths() {
+  return getCollection('comparativos').then((entries) =>
+    entries.map((entry) => ({
+      params: { slug: entry.id },
+      props: { entry },
+    })),
+  );
+}
+
+const { entry } = Astro.props;
+const { title, description, image } = entry.data;
+---
+
+<BaseLayout title={`${title} - Tech Briefing`} description={description} image={image} active="Comparativo" type="article">
+  <ComparativoPage entry={{ slug: entry.id, ...entry.data }} client:load />
+</BaseLayout>

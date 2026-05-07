@@ -1,0 +1,10 @@
+{
+  "name": "OpenAI",
+  "icon": "🤖",
+  "description": "Modelos e APIs centrais para construir produtos com inteligência artificial generativa.",
+  "category": "IA & LLMs",
+  "categoryId": "ia",
+  "rating": 5,
+  "affiliate": false,
+  "url": "/ferramentas"
+}

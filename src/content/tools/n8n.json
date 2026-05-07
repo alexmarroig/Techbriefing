@@ -1,0 +1,10 @@
+{
+  "name": "n8n",
+  "icon": "⚡",
+  "description": "Automação visual self-hosted para fluxos complexos, integrações com IA e controle total de dados.",
+  "category": "Automação",
+  "categoryId": "automacao",
+  "rating": 5,
+  "affiliate": true,
+  "url": "/ferramentas"
+}

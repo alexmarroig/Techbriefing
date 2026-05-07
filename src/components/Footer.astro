@@ -1,0 +1,43 @@
+---
+const { active = '' } = Astro.props;
+const columns = [
+  { h: 'Conteudo', ls: [['Guias', '/'], ['Agentes de IA', '/agentes-de-ia'], ['Automacao', '/arquivo'], ['Ferramentas', '/ferramentas'], ['Comparativos', '/comparativos/n8n-vs-make']] },
+  { h: 'Produtos', ls: [['Ebooks', '/ebooks'], ['Nossos Apps', '/apps'], ['Newsletter', '/newsletter'], ['Anuncie', '/contato'], ['Afiliados', '/ferramentas']] },
+  { h: 'Nexora', ls: [['Sobre', '/sobre'], ['Contato', '/contato'], ['Privacidade', '#'], ['Termos', '#'], ['Imprensa', '#']] },
+];
+---
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo"><div class="nav-pip"></div><span>Tech Briefing</span></div>
+        <p class="footer-desc">Portal editorial premium de referencia em IA aplicada, automacao e produtos digitais.</p>
+        <div class="footer-socials">
+          <div class="footer-social">X</div>
+          <div class="footer-social">in</div>
+          <div class="footer-social">play</div>
+          <div class="footer-social">@</div>
+        </div>
+      </div>
+      {columns.map((col) => (
+        <div>
+          <div class="footer-col-h">{col.h}</div>
+          <ul class="footer-links">
+            {col.ls.map(([label, href]) => (
+              <li><a href={href} class:list={[{ active: active === label || active === label.replace('Nossos ', '') }]}>{label}</a></li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">(c) 2026 Tech Briefing - Uma iniciativa Nexora Systems.</span>
+      <div class="footer-bl">
+        <a href="#">Privacidade</a>
+        <a href="#">Termos</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>

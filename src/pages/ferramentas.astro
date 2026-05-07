@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import FerramentasPage from '../components/pages/FerramentasPage.jsx';
+import { getCollection } from 'astro:content';
+
+const tools = (await getCollection('tools')).map((entry) => ({
+  slug: entry.id,
+  ...entry.data,
+}));
+---
+
+<BaseLayout title="Ferramentas Recomendadas - Tech Briefing" description="Ferramentas de IA, automacao e produtividade avaliadas para uso profissional." active="Ferramentas">
+  <FerramentasPage tools={tools} client:load />
+</BaseLayout>

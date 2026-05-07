@@ -1,0 +1,27 @@
+---
+const { active = '' } = Astro.props;
+const links = [
+  ['Guias', '/'],
+  ['Agentes', '/agentes-de-ia'],
+  ['Ferramentas', '/ferramentas'],
+  ['Ebooks', '/ebooks'],
+  ['Apps', '/apps'],
+  ['Arquivo', '/arquivo'],
+  ['Sobre', '/sobre'],
+];
+---
+
+<nav class="nav">
+  <div class="nav-i">
+    <a class="nav-logo" href="/">
+      <div class="nav-pip"></div>
+      <span>Tech Briefing</span>
+    </a>
+    <ul class="nav-links">
+      {links.map(([label, href]) => (
+        <li><a href={href} class:list={[{ active: active === label }]}>{label}</a></li>
+      ))}
+    </ul>
+    <a class="nav-nl" href="/newsletter">Newsletter</a>
+  </div>
+</nav>

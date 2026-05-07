@@ -1,0 +1,99 @@
+backend:
+  name: test-repo
+
+local_backend: true
+
+media_folder: "public/assets/uploads"
+public_folder: "/assets/uploads"
+
+site_url: "https://techbriefing.com.br"
+display_url: "https://techbriefing.com.br"
+logo_url: "/favicon.svg"
+
+collections:
+  - name: "articles"
+    label: "Artigos"
+    folder: "src/content/articles"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Descrição SEO", name: "description", widget: "text" }
+      - { label: "Categoria", name: "category", widget: "string" }
+      - { label: "Autor", name: "author", widget: "string", default: "Lucas Faria" }
+      - { label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Tempo de leitura", name: "readTime", widget: "string", default: "8 min" }
+      - { label: "Destaque", name: "featured", widget: "boolean", default: false }
+      - { label: "Imagem", name: "image", widget: "image", required: false }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - { label: "Corpo", name: "body", widget: "markdown" }
+
+  - name: "comparativos"
+    label: "Comparativos"
+    folder: "src/content/comparativos"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Descrição SEO", name: "description", widget: "text" }
+      - { label: "Categoria", name: "category", widget: "string", default: "Comparativo" }
+      - { label: "Autor", name: "author", widget: "string", default: "Lucas Faria" }
+      - { label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Tempo de leitura", name: "readTime", widget: "string", default: "12 min" }
+      - { label: "Destaque", name: "featured", widget: "boolean", default: false }
+      - { label: "Imagem", name: "image", widget: "image", required: false }
+      - { label: "Ferramentas", name: "tools", widget: "list", required: false }
+      - { label: "Corpo", name: "body", widget: "markdown" }
+
+  - name: "tools"
+    label: "Ferramentas"
+    folder: "src/content/tools"
+    create: true
+    slug: "{{slug}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - { label: "Nome", name: "name", widget: "string" }
+      - { label: "Ícone", name: "icon", widget: "string" }
+      - { label: "Descrição", name: "description", widget: "text" }
+      - { label: "Categoria", name: "category", widget: "string" }
+      - { label: "ID da categoria", name: "categoryId", widget: "string" }
+      - { label: "Nota", name: "rating", widget: "number", min: 0, max: 5, value_type: "float" }
+      - { label: "Afiliado", name: "affiliate", widget: "boolean", default: false }
+      - { label: "URL", name: "url", widget: "string", default: "/ferramentas" }
+
+  - name: "apps"
+    label: "Apps"
+    folder: "src/content/apps"
+    create: true
+    slug: "{{slug}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - { label: "Nome", name: "name", widget: "string" }
+      - { label: "Ícone", name: "icon", widget: "string" }
+      - { label: "Descrição", name: "description", widget: "text" }
+      - { label: "Status", name: "status", widget: "string" }
+      - { label: "Plataforma", name: "platform", widget: "string" }
+      - { label: "URL", name: "url", widget: "string", default: "/apps" }
+
+  - name: "ebooks"
+    label: "Ebooks"
+    folder: "src/content/ebooks"
+    create: true
+    slug: "{{slug}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Descrição", name: "description", widget: "text" }
+      - { label: "Preço", name: "price", widget: "string" }
+      - { label: "Preço anterior", name: "oldPrice", widget: "string", required: false }
+      - { label: "Páginas", name: "pages", widget: "number", value_type: "int" }
+      - { label: "Cor", name: "color", widget: "select", options: ["amber", "cyan"], default: "amber" }
+      - { label: "Benefícios", name: "benefits", widget: "list" }
+      - { label: "URL", name: "url", widget: "string", default: "/ebooks" }

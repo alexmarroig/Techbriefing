@@ -1,11 +1,32 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import IndexPage from '../components/pages/IndexPage.jsx';
+import { getCollection } from 'astro:content';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const articles = (await getCollection('articles'))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .map((entry) => ({
+    slug: entry.id,
+    href: `/artigos/${entry.id}`,
+    ...entry.data,
+  }));
+
+const tools = (await getCollection('tools')).map((entry) => ({
+  slug: entry.id,
+  ...entry.data,
+}));
+
+const apps = (await getCollection('apps')).map((entry) => ({
+  slug: entry.id,
+  ...entry.data,
+}));
+
+const ebooks = (await getCollection('ebooks')).map((entry) => ({
+  slug: entry.id,
+  ...entry.data,
+}));
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<BaseLayout title="Tech Briefing - Inteligencia Artificial Aplicada" description="Analises, guias e ferramentas para aplicar inteligencia artificial em negocios, produtos e trabalho." active="Home">
+  <IndexPage articles={articles} tools={tools} apps={apps} ebooks={ebooks} client:load />
+</BaseLayout>

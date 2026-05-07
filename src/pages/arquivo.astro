@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ArquivoPage from '../components/pages/ArquivoPage.jsx';
+import { getCollection } from 'astro:content';
+
+const articles = [
+  ...(await getCollection('articles')).map((entry) => ({ type: 'article', slug: entry.id, href: `/artigos/${entry.id}`, ...entry.data })),
+  ...(await getCollection('comparativos')).map((entry) => ({ type: 'comparativo', slug: entry.id, href: `/comparativos/${entry.id}`, ...entry.data })),
+].sort((a, b) => b.date.valueOf() - a.date.valueOf());
+---
+
+<BaseLayout title="Arquivo - Tech Briefing" description="Explore o arquivo editorial da Tech Briefing com artigos, guias e comparativos." active="Arquivo">
+  <ArquivoPage articles={articles} client:load />
+</BaseLayout>

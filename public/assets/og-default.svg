@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Tech Briefing</title>
+  <desc id="desc">Open Graph image for Tech Briefing.</desc>
+  <rect width="1200" height="630" fill="#121417"/>
+  <path d="M0 560h1200v70H0z" fill="#d9a441"/>
+  <circle cx="108" cy="108" r="10" fill="#d9a441"/>
+  <text x="96" y="250" fill="#f4f0e8" font-family="Georgia, serif" font-size="88" font-weight="700">Tech Briefing</text>
+  <text x="100" y="330" fill="#b9c0c7" font-family="Arial, sans-serif" font-size="30">IA aplicada, automacao e produtos digitais</text>
+</svg>
