@@ -40,7 +40,33 @@ const siteName = 'Tech Briefing';
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" href="/favicon.ico" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
     <title>{title}</title>
+    <!-- Google Analytics — substitua G-XXXXXXXXXX pelo seu ID -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": type === 'article' ? 'Article' : 'WebSite',
+      "name": title,
+      "description": description,
+      "url": canonical,
+      "image": new URL(image, Astro.site ?? Astro.url).toString(),
+      "publisher": {
+        "@type": "Organization",
+        "name": "Tech Briefing",
+        "url": "https://techbriefing.com.br",
+        "logo": { "@type": "ImageObject", "url": "https://techbriefing.com.br/favicon.svg" }
+      },
+      ...(type === 'article' ? { "author": { "@type": "Organization", "name": "Nexora Systems" }, "datePublished": new Date().toISOString() } : {}),
+      ...(type !== 'article' ? { "potentialAction": { "@type": "SearchAction", "target": "https://techbriefing.com.br/arquivo?q={search_term_string}", "query-input": "required name=search_term_string" } } : {})
+    })} />
   </head>
   <body>
     <Navbar active={active} />
