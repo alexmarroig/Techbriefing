@@ -179,6 +179,27 @@ body::after{
   transition:all .2s;
 }
 .nav-nl:hover{background:var(--amber-x)}
+.nav-toggle{
+  display:none;background:none;border:none;cursor:pointer;
+  width:36px;height:36px;flex-direction:column;align-items:center;justify-content:center;gap:5px;
+  padding:6px;
+}
+.nav-toggle span{
+  display:block;width:20px;height:2px;background:var(--text-2);
+  border-radius:1px;transition:all .2s;
+}
+@media(max-width:768px){
+  .nav-toggle{display:flex}
+  .nav-links{
+    display:none;position:absolute;top:60px;left:0;right:0;
+    flex-direction:column;background:oklch(0.09 0.008 240 / 0.96);
+    backdrop-filter:blur(24px);border-bottom:1px solid var(--line-s);
+    padding:16px 0;gap:0;
+  }
+  .nav-links.open{display:flex}
+  .nav-links a{padding:12px var(--pad);font-size:14px}
+  .nav-nl{display:none}
+}
 
 /* ─── HERO ───────────────────────────────────────────── */
 .hero{

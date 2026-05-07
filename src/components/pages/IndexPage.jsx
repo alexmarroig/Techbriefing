@@ -25,11 +25,11 @@ const ASIDE = [
 ];
 
 const CATS = [
-  {num:'01',name:'IA Prática',nameEm:'',desc:'Tutoriais, casos de uso e guias diretos ao ponto',count:'124'},
-  {num:'02',name:'Agentes de',nameEm:'IA',desc:'Frameworks, ferramentas e arquiteturas para agentes',count:'87'},
-  {num:'03',name:'Automação',nameEm:'',desc:'Flows no-code, integração e sistemas automáticos',count:'96'},
-  {num:'04',name:'Software e',nameEm:'Ferramentas',desc:'Reviews honestos e comparativos aprofundados',count:'203'},
-  {num:'05',name:'Apps e Negócios',nameEm:'Digitais',desc:'Estratégia, monetização e produtos digitais',count:'68'},
+  {num:'01',name:'IA Prática',nameEm:'',desc:'Tutoriais, casos de uso e guias diretos ao ponto'},
+  {num:'02',name:'Agentes de',nameEm:'IA',desc:'Frameworks, ferramentas e arquiteturas para agentes'},
+  {num:'03',name:'Automação',nameEm:'',desc:'Flows no-code, integração e sistemas automáticos'},
+  {num:'04',name:'Software e',nameEm:'Ferramentas',desc:'Reviews honestos e comparativos aprofundados'},
+  {num:'05',name:'Negócios',nameEm:'Digitais',desc:'Estratégia, monetização e produtos digitais'},
 ];
 
 const GUIDES = [
@@ -40,10 +40,10 @@ const GUIDES = [
 ];
 
 const RANKING = [
-  {n:'01',name:'Claude 3.7 Sonnet',sub:'Raciocínio e código',score:'9.4',gold:true},
-  {n:'02',name:'GPT-4o',sub:'Multimodal, versátil',score:'9.1',gold:false},
-  {n:'03',name:'Gemini 2.5 Pro',sub:'Contexto longo',score:'8.9',gold:false},
-  {n:'04',name:'Llama 3.3 70B',sub:'Open source, grátis',score:'8.2',gold:false},
+  {n:'01',name:'Claude Opus 4',sub:'Raciocínio avançado e código',score:'9.6',gold:true},
+  {n:'02',name:'GPT-4.1',sub:'Multimodal, versátil',score:'9.3',gold:false},
+  {n:'03',name:'Gemini 2.5 Pro',sub:'Contexto longo, multimodal',score:'9.1',gold:false},
+  {n:'04',name:'Llama 4 Scout',sub:'Open source, eficiente',score:'8.5',gold:false},
 ];
 
 const TOOLS = [
@@ -86,19 +86,19 @@ function Hero(){
           Guias práticos, comparativos honestos e ferramentas testadas. Para quem quer aplicar IA e automação no negócio, no trabalho e na vida — sem hype, sem papo de guru.
         </p>
         <div className="hero-actions">
-          <button className="btn btn-fill">
+          <a href="/arquivo" className="btn btn-fill">
             Explorar conteúdo
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-          </button>
-          <a href="#" className="arrow-link">Ver ferramentas →</a>
+          </a>
+          <a href="/ferramentas" className="arrow-link">Ver ferramentas →</a>
         </div>
       </div>
       <div className="hero-bar wrap">
         {[
-          {n:'500+',em:'',l:'Artigos publicados'},
-          {n:'12',em:'k',l:'Leitores na newsletter'},
-          {n:'80+',em:'',l:'Ferramentas testadas'},
-          {n:'4',em:'anos',l:'Cobrindo o mercado'},
+          {n:'50+',em:'',l:'Guias e artigos'},
+          {n:'3',em:'k+',l:'Leitores na newsletter'},
+          {n:'20+',em:'',l:'Ferramentas testadas'},
+          {n:'2',em:'',l:'Ebooks publicados'},
         ].map((s,i)=>(
           <div className="hero-stat" key={i}>
             <div className="hero-stat-n">{s.n}{s.em&&<em>{s.em}</em>}</div>
@@ -301,12 +301,12 @@ function EbooksSection(){
 
 function AppsSection(){
   const NEXORA_APPS=[
-    {ico:'🌟',name:'Ethos',desc:'Produtividade, valores e intenção. Seu companheiro pessoal construído para quem quer viver e trabalhar com mais propósito.',tag:'App',tagV:'c',status:'Disponível'},
-    {ico:'🌙',name:'Celestia',desc:'Guia de astrologia e insights de vida. Descubra padrões, ciclos e perspectivas para suas decisões.',tag:'App',tagV:'',status:'Disponível'},
-    {ico:'🌐',name:'BioHub',desc:'Seu hub de identidade digital. Tudo que você é, tudo que você cria — em um único link.',tag:'App',tagV:'',status:'Disponível'},
-    {ico:'🔮',name:'Código do Destino',desc:'Numerologia, arquétipos e autoconhecimento. Descubra os padrões que guiam sua trajetória.',tag:'App',tagV:'',status:'Disponível'},
-    {ico:'⏱️',name:'M-Timer',desc:'Foco, tempo e ritmo. O timer que respeita como você pensa e trabalha.',tag:'App',tagV:'',status:'Disponível'},
-    {ico:'📔',name:'Dream Diary',desc:'Diário de sonhos com IA. Registre, interprete e explore o que acontece enquanto você dorme.',tag:'App',tagV:'',status:'Disponível'},
+    {ico:'🌟',name:'Ethos',desc:'Produtividade, valores e intenção. Seu companheiro pessoal para viver e trabalhar com mais propósito.',tag:'App',tagV:'c',status:'Disponível'},
+    {ico:'⏱️',name:'M-Timer',desc:'Foco, tempo e ritmo. O timer que respeita como você pensa e trabalha.',tag:'App',tagV:'c',status:'Disponível'},
+    {ico:'🌐',name:'BioHub',desc:'Seu hub de identidade digital. Tudo que você é e cria — em um único link profissional.',tag:'App',tagV:'',status:'Disponível'},
+    {ico:'📔',name:'Dream Diary',desc:'Diário de sonhos com IA. Registre, interprete e explore padrões com inteligência artificial.',tag:'App',tagV:'',status:'Disponível'},
+    {ico:'🌙',name:'Celestia',desc:'Insights de vida e autoconhecimento. Descubra padrões e perspectivas para suas decisões.',tag:'App',tagV:'',status:'Disponível'},
+    {ico:'🔮',name:'Código do Destino',desc:'Numerologia, arquétipos e autoconhecimento. Descubra padrões que guiam sua trajetória.',tag:'App',tagV:'',status:'Disponível'},
   ];
   return (
     <section className="apps">
@@ -373,7 +373,7 @@ function NewsletterSection(){
             ):(
               <form style={{display:'flex',flexDirection:'column',gap:14}} onSubmit={e=>{e.preventDefault();if(email)setDone(true)}}>
                 <div className="nl-stat">
-                  <div className="nl-stat-n">12k</div>
+                  <div className="nl-stat-n">3k+</div>
                   <div className="nl-stat-l">leitores — freelancers, fundadores e criadores</div>
                 </div>
                 <div>
@@ -387,7 +387,7 @@ function NewsletterSection(){
                 <button type="submit" className="btn btn-fill" style={{justifyContent:'center',borderRadius:10,padding:'14px'}}>
                   Quero receber toda semana →
                 </button>
-                <p className="nl-note">LGPD compliant · Dados protegidos · Unsubscribe em 1 clique</p>
+                <p className="nl-note">Conforme LGPD · Dados protegidos · Cancele em 1 clique</p>
               </form>
             )}
           </div>

@@ -27,6 +27,6 @@ const ebooks = (await getCollection('ebooks')).map((entry) => ({
 }));
 ---
 
-<BaseLayout title="Tech Briefing - Inteligencia Artificial Aplicada" description="Analises, guias e ferramentas para aplicar inteligencia artificial em negocios, produtos e trabalho." active="Home">
+<BaseLayout title="Tech Briefing — Inteligência Artificial Aplicada" description="Guias práticos, comparativos honestos e ferramentas testadas para aplicar IA e automação no seu negócio, trabalho e vida." active="Home">
   <IndexPage articles={articles} tools={tools} apps={apps} ebooks={ebooks} client:load />
 </BaseLayout>

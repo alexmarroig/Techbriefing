@@ -150,7 +150,7 @@ function NlStrip(){
                 <input className="nl-strip-input" type="email" placeholder="seu@email.com" value={email} onChange={e=>setEmail(e.target.value)} required/>
                 <button type="submit" className="btn btn-fill">Quero receber →</button>
               </div>
-              <div style={{fontFamily:'var(--mono)',fontSize:10.5,color:'var(--text-4)',letterSpacing:'.03em'}}>12.000 leitores · LGPD · Cancele quando quiser</div>
+              <div style={{fontFamily:'var(--mono)',fontSize:10.5,color:'var(--text-4)',letterSpacing:'.03em'}}>3.000+ leitores · Conforme LGPD · Cancele quando quiser</div>
             </form>
           )}
         </div>

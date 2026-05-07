@@ -17,6 +17,9 @@ const links = [
       <div class="nav-pip"></div>
       <span>Tech Briefing</span>
     </a>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
     <ul class="nav-links">
       {links.map(([label, href]) => (
         <li><a href={href} class:list={[{ active: active === label }]}>{label}</a></li>
