@@ -28,7 +28,7 @@ const CONFIG = {
 
   heroBadge: 'Ebook — Arquitetura & Execução',
   heroHeadline: 'Agentes de IA não são chatbots com nome bonito.',
-  heroSub: 'Este guia mostra o que separa um experimento de uma operação real: arquitetura, regras, observabilidade e o papel do humano como arquiteto do sistema.',
+  heroSub: 'Um guia de 126 páginas para quem quer parar de improvisar com IA e começar a construir sistemas que tomam decisões, executam ações e funcionam sem depender de empurrão humano a cada passo.',
 
   pages: '126',
   chapters: '12',
@@ -42,19 +42,19 @@ const CONFIG = {
     { icon: '🏗️', title: 'Fundadores e gestores', desc: 'Que querem entender como agentes funcionam antes de investir — e saber separar o que escala do que é apenas demo.' },
     { icon: '⚙️', title: 'Operadores e analistas', desc: 'Que precisam transformar processos repetitivos em sistemas autônomos com regras claras e limites definidos.' },
     { icon: '🧩', title: 'Consultores e freelancers', desc: 'Que querem oferecer implementação de agentes como serviço — com método, não com improviso.' },
-    { icon: '🔬', title: 'Profissionais de tecnologia', desc: 'Que já testaram ferramentas, mas ainda não construíram um agente com arquitetura real: memória, ferramentas, avaliação e observabilidade.' },
-    { icon: '📐', title: 'Quem quer sair da curiosidade', desc: 'E entrar em clareza: saber o que construir, como validar e quando escalar.' },
+    { icon: '🔬', title: 'Profissionais de tecnologia', desc: 'Que já testaram ferramentas de IA, mas ainda não construíram algo com arquitetura real — que funciona sozinho e melhora com o tempo.' },
+    { icon: '📐', title: 'Quem já cansou de demo', desc: 'E quer saber como ir do primeiro teste a uma operação de verdade — com método, não com sorte.' },
   ],
 
   benefits: [
-    'Entenda a diferença real entre chatbot, automação e agente — sem depender de hype',
-    'Conheça os 6 blocos que compõem todo agente funcional: modelo, memória, ferramentas, regras, observabilidade e avaliação',
-    'Saiba como escolher entre agente único e multi-agente — e quando a simplicidade vence a complexidade',
-    'Aprenda o framework de 8 passos para criar seu primeiro agente: do problema certo ao deploy com controle',
-    'Entenda por que a maioria dos agentes falha — e os padrões que você precisa evitar desde o início',
-    'Veja como o papel humano muda: de executor para supervisor e, depois, para arquiteto do sistema',
-    'Descubra como transformar um experimento em operação confiável com observabilidade e avaliação contínua',
-    'Saia da teoria com um roteiro claro para aplicar agentes no seu contexto — com clareza, não com pressa',
+    'A diferença real entre chatbot, automação e agente — e por que confundir os três custa caro',
+    'Os 6 blocos de um agente funcional — e por que nenhum deles é opcional em sistemas reais',
+    'Quando usar um agente único e quando investir em multi-agente — sem complicar antes da hora',
+    'O framework de 8 passos para criar seu primeiro agente: do problema certo ao deploy com controle',
+    'Por que a maioria dos projetos com agentes falha — e os padrões que você precisa evitar desde o início',
+    'Como o papel humano muda: de quem executa para quem projeta o que o sistema deve fazer',
+    'Como transformar um experimento que funciona às vezes em uma operação que funciona sempre',
+    'Um roteiro claro para sair da teoria — com clareza de processo, não com pressa de ferramenta',
   ],
 
   chapterList: [
@@ -81,8 +81,9 @@ const CONFIG = {
   faq: [
     { q: 'Preciso saber programar?', a: 'Não. O ebook cobre desde opções no-code até abordagens com código, mas programação não é pré-requisito. O diferencial está em clareza de processo, não em habilidade técnica.' },
     { q: 'O conteúdo é teórico ou prático?', a: 'Os dois, na medida certa. A teoria existe para construir um modelo mental sólido. Mas cada capítulo avança para frameworks, cenários e passos aplicáveis.' },
-    { q: 'O que diferencia este ebook de tutoriais gratuitos?', a: 'Tutoriais ensinam a clicar botões. Este guia ensina a pensar em sistemas: arquitetura, regras, observabilidade, avaliação e o papel humano na operação. É a diferença entre montar uma demo e construir algo que funciona de verdade.' },
-    { q: 'Serve para quem já usa IA no dia a dia?', a: 'Especialmente. Se você já usa ChatGPT ou ferramentas similares, este ebook mostra o próximo nível: sair do chat e entrar na execução operacional com agentes estruturados.' },
+    { q: 'O que diferencia este ebook de tutoriais gratuitos?', a: 'Tutoriais ensinam a usar uma ferramenta. Este guia ensina a pensar em sistemas — arquitetura, regras, limites, observabilidade e o papel do humano na operação. É a diferença entre montar uma demo e construir algo que funciona todos os dias.' },
+    { q: 'Serve para quem já usa IA no dia a dia?', a: 'Especialmente. Se você já usa ChatGPT ou ferramentas similares, este ebook mostra o próximo nível: sair do chat e entrar na execução operacional com agentes que tomam decisões e executam ações.' },
+    { q: 'O conteúdo não fica desatualizado rápido?', a: 'O ebook foca em arquitetura e princípios de design, não em ferramentas específicas. Os 6 blocos, o framework de decisão e o método de construção permanecem válidos independente de qual modelo ou plataforma você usar.' },
     { q: 'O ebook é digital?', a: 'Sim. Você recebe acesso imediato em PDF e EPUB — leia em qualquer dispositivo.' },
     { q: 'Como recebo o acesso?', a: 'Imediatamente após a confirmação do pagamento, por e-mail.' },
     { q: 'Tem versão impressa?', a: 'Sim. Disponível sob demanda pelo Clube dos Autores. A versão digital é entregue imediatamente.' },
@@ -274,7 +275,7 @@ const image = '/assets/og-default.svg';
       <span class="lp-section-label">Dentro do ebook</span>
     </div>
     <h2 class="lp-h2">Os 6 blocos que todo agente funcional <em>precisa ter.</em></h2>
-    <p class="lp-section-intro">Entender esses elementos muda completamente a forma como você constrói. Você deixa de montar fluxos de forma intuitiva e começa a desenhar arquitetura.</p>
+    <p class="lp-section-intro">A partir desse ponto, você deixa de montar fluxos de forma intuitiva e começa a desenhar arquitetura. É o que separa um agente que funciona de um que parece funcionar.</p>
     <div class="lp-blocks-grid">
       {[
         { num: '01', title: 'Modelo de linguagem', desc: 'O cérebro que toma decisões. Não é só GPT — é entender qual modelo serve para qual função.' },
@@ -317,7 +318,7 @@ const image = '/assets/og-default.svg';
         </div>
       ))}
     </div>
-    <p class="lp-role-note">É uma mudança de função, não de relevância. O humano permanece essencial — mas em um nível estratégico superior.</p>
+    <p class="lp-role-note">Não é uma mudança de relevância. É uma mudança de alavancagem. Seu julgamento passa a ter mais impacto porque atua no nível certo.</p>
   </div>
 </section>
 
@@ -354,8 +355,8 @@ const image = '/assets/og-default.svg';
       <div>
         <h2 class="lp-h2">Por que a {CONFIG.authorBrand} criou este guia.</h2>
         <div class="lp-origin-body">
-          <p>O mercado de IA está cheio de promessas. Mas entre o hype e a realidade, existe um vácuo: <strong>como construir agentes que funcionam em produção — com arquitetura real, limites definidos e observabilidade.</strong></p>
-          <p>A {CONFIG.authorBrand} nasceu para preencher esse espaço. Testamos ferramentas, implementamos fluxos e documentamos o que funciona — sem filtro, sem patrocínio, sem atalho.</p>
+          <p>Existem milhares de tutoriais sobre IA. Mas quase nenhum responde à pergunta que realmente importa: <strong>como transformar um experimento em um sistema que funciona todos os dias, sem depender de alguém empurrando cada etapa.</strong></p>
+          <p>A {CONFIG.authorBrand} nasceu para documentar esse caminho. Testamos ferramentas, implementamos fluxos e registramos o que funciona — sem filtro, sem patrocínio, sem atalho.</p>
           <p>Este ebook é o resultado dessa experiência condensada em <strong>{CONFIG.pages} páginas</strong> de frameworks, cenários e decisões práticas.</p>
         </div>
       </div>
@@ -448,8 +449,8 @@ const image = '/assets/og-default.svg';
 <section class="lp-section lp-section-alt lp-section-close">
   <div class="lp-wrap">
     <div class="lp-close-content">
-      <h2 class="lp-h2-center">A diferença entre quem entende e quem executa <em>está no movimento.</em></h2>
-      <p class="lp-close-sub">Você pode continuar lendo sobre agentes de IA. Assistir mais vídeos. Consumir mais conteúdo. Esperar o momento certo.<br/>Ou pode decidir construir o primeiro. Com clareza, com método, com arquitetura.</p>
+      <h2 class="lp-h2-center">Quem usa IA como chat melhora a eficiência. Quem usa agentes <em>transforma a operação.</em></h2>
+      <p class="lp-close-sub">Você pode continuar consumindo conteúdo sobre IA. Ou pode decidir construir o primeiro sistema que trabalha por você.<br/>Imperfeito no começo, mas real. Esse é o caminho.</p>
       <div class="lp-hero-price" style="justify-content:center">
         <span class="lp-price-old">{CONFIG.fullPrice}</span>
         <span class="lp-price-current">{CONFIG.promoPrice}</span>
