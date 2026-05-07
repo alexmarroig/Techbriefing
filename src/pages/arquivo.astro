@@ -9,6 +9,6 @@ const articles = [
 ].sort((a, b) => b.date.valueOf() - a.date.valueOf());
 ---
 
-<BaseLayout title="Arquivo - Tech Briefing" description="Explore o arquivo editorial do Tech Briefing com artigos, guias e comparativos." active="Arquivo">
+<BaseLayout title="Artigos - Tech Briefing" description="Explore o arquivo editorial do Tech Briefing com artigos, guias e comparativos." active="Artigos">
   <ArquivoPage articles={articles} client:load />
 </BaseLayout>
