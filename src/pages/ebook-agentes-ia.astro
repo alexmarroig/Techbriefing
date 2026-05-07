@@ -10,20 +10,29 @@ const CONFIG = {
   authorBrand: 'Nexora Systems',
   portalBrand: 'Tech Briefing',
 
-  fullPrice: 'R$ 67',
-  promoPrice: 'R$ 47',
+  fullPrice: 'R$ 49,90',
+  promoPrice: 'R$ 29,90',
   promoLabel: 'Lançamento',
 
-  primaryBuyLink: '#',
-  secondaryBuyLink: '#',
+  primaryBuyLink: '#hotmart',
+  secondaryBuyLink: '#kiwify',
+
+  buyLinks: {
+    hotmart: { label: 'Hotmart', url: '#' },
+    kiwify: { label: 'Kiwify', url: '#' },
+    amazon: { label: 'Amazon Kindle', url: '#' },
+    herospark: { label: 'HeroSpark', url: '#' },
+    cacto: { label: 'Cacto', url: '#' },
+    clubeAutores: { label: 'Clube dos Autores', url: '#' },
+  },
 
   heroBadge: 'Ebook — Estratégia & Operação',
   heroHeadline: 'Pare de testar IA no escuro.',
   heroSub: 'Descubra onde agentes de IA realmente geram resultado no seu negócio — com frameworks claros, casos reais e um roteiro prático para sair da teoria.',
 
-  pages: '180',
+  pages: '126',
   format: 'PDF + EPUB',
-  updated: 'Abril 2026',
+  updated: 'Maio 2026',
   language: 'Português',
 
   guaranteeText: 'Se em 7 dias você sentir que o conteúdo não entregou o que prometeu, devolvemos 100% do valor. Sem perguntas.',
@@ -48,13 +57,18 @@ const CONFIG = {
   ],
 
   chapters: [
-    { num: '01', title: 'O que são agentes de IA — e por que agora', desc: 'Fundamentos sem enrolação. O que mudou, o que funciona e por que esse é o momento certo.' },
-    { num: '02', title: 'Mapeando seu negócio para agentes', desc: 'Framework para identificar onde agentes geram alavancagem real nas suas operações.' },
-    { num: '03', title: 'Os 5 tipos de agente mais úteis', desc: 'Classificação prática por função: execução, pesquisa, criação, análise e orquestração.' },
-    { num: '04', title: 'Ferramentas por nível técnico', desc: 'De no-code a código: qual stack usar dependendo do seu perfil e do seu time.' },
-    { num: '05', title: 'Do piloto ao processo em produção', desc: 'Como testar rápido, validar resultado e transformar um experimento em operação.' },
-    { num: '06', title: 'Cases reais por setor e função', desc: 'Vendas, suporte, conteúdo, ops — exemplos concretos com resultados mensuráveis.' },
-    { num: '07', title: 'O próximo passo da automação inteligente', desc: 'Tendências, riscos e como se posicionar para o que vem depois.' },
+    { num: '01', title: 'Estrutura do Guia', desc: 'Um guia prático para entender e aplicar agentes de IA em negócios reais.' },
+    { num: '02', title: 'De assistente a executor', desc: 'Como a IA passou de assistente a executor e o que isso muda para sempre.' },
+    { num: '03', title: 'Entrada — Coleta de dados', desc: 'Como agentes capturam e processam informações do mundo real.' },
+    { num: '04', title: 'Decisão — Lógica inteligente', desc: 'O motor de raciocínio: como agentes tomam decisões autônomas.' },
+    { num: '05', title: 'Execução — Ação real', desc: 'Da decisão à ação: como agentes executam tarefas no mundo real.' },
+    { num: '06', title: 'Orquestração — Multi-agentes', desc: 'Como coordenar múltiplos agentes para fluxos complexos.' },
+    { num: '07', title: 'Memória — Contexto persistente', desc: 'Como agentes lembram, aprendem e melhoram com o tempo.' },
+    { num: '08', title: 'Cenário prático 1', desc: 'Caso real de implementação com análise passo a passo.' },
+    { num: '09', title: 'Chatbots vs. Agentes', desc: 'Por que agentes se destacam quando você nem percebe.' },
+    { num: '10', title: 'Cenários avançados', desc: 'Aplicações avançadas em vendas, suporte e operações.' },
+    { num: '11', title: 'Fluxo de execução real', desc: 'Arquitetura completa de um agente em produção.' },
+    { num: '12', title: 'Próximos passos', desc: 'Como começar a implementar agentes no seu negócio hoje.' },
   ],
 
   bonuses: [
@@ -66,7 +80,7 @@ const CONFIG = {
     { q: 'O ebook é digital?', a: 'Sim. Você recebe acesso imediato em PDF e EPUB — leia em qualquer dispositivo.' },
     { q: 'Como recebo o acesso?', a: 'Imediatamente após a confirmação do pagamento, por e-mail. Sem espera.' },
     { q: 'Posso ler no celular?', a: 'Sim. O formato EPUB é otimizado para leitura em celular, tablet e e-reader.' },
-    { q: 'Tem versão impressa?', a: 'Não no momento. Apenas digital (PDF + EPUB).' },
+    { q: 'Tem versão impressa?', a: 'Sim! Disponível sob demanda pelo Clube dos Autores. A versão digital (PDF + EPUB) é entregue imediatamente.' },
     { q: 'É indicado para iniciantes?', a: 'Sim. O conteúdo parte do zero e avança com clareza. Não exige conhecimento técnico prévio.' },
     { q: 'Preciso saber programar?', a: 'Não. O ebook cobre desde opções no-code até abordagens com código, mas programação não é pré-requisito.' },
     { q: 'O conteúdo é teórico ou prático?', a: 'Prático. Cada capítulo tem frameworks, exemplos e passos aplicáveis. A teoria existe só para dar contexto.' },
@@ -331,6 +345,14 @@ const image = '/assets/og-default.svg';
           <span class="lp-price-current-lg">{CONFIG.promoPrice}</span>
         </div>
         <a href={CONFIG.primaryBuyLink} class="lp-btn-primary lp-btn-full">Comprar agora →</a>
+        <div class="lp-platforms">
+          <span class="lp-platforms-label">Também disponível em:</span>
+          <div class="lp-platforms-links">
+            {Object.values(CONFIG.buyLinks).map(link => (
+              <a href={link.url} class="lp-platform-link">{link.label}</a>
+            ))}
+          </div>
+        </div>
         <div class="lp-offer-guarantee">
           <span class="lp-guarantee-ico">🛡️</span>
           <span>{CONFIG.guaranteeText}</span>
@@ -742,6 +764,25 @@ const image = '/assets/og-default.svg';
   font-family: var(--serif); font-size: 52px;
   font-weight: 700; color: var(--amber); letter-spacing: -0.02em;
 }
+.lp-platforms {
+  margin-top: 16px; text-align: center;
+}
+.lp-platforms-label {
+  display: block; font-size: 12px; color: var(--text-3);
+  text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;
+}
+.lp-platforms-links {
+  display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;
+}
+.lp-platform-link {
+  font-size: 12px; color: var(--amber); padding: 4px 12px;
+  border: 1px solid oklch(0.75 0.15 85 / 0.25); border-radius: 6px;
+  text-decoration: none; transition: all 0.2s;
+}
+.lp-platform-link:hover {
+  background: oklch(0.75 0.15 85 / 0.1); border-color: var(--amber);
+}
+
 .lp-offer-guarantee {
   display: flex; align-items: flex-start; gap: 12px;
   margin-top: 20px; padding: 16px 20px;
