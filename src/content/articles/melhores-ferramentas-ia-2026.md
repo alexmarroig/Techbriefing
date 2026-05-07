@@ -1,4 +1,4 @@
----
+﻿---
 title: "As melhores ferramentas de IA para negócios em 2026"
 description: "Conheça as ferramentas de inteligência artificial mais eficazes para empresas em 2026: do atendimento ao cliente à automação de processos e análise de dados."
 category: "Software"
@@ -6,7 +6,7 @@ author: "Nexora Systems"
 date: 2026-03-20
 readTime: "12 min"
 featured: true
-image: "/assets/og-default.svg"
+image: "/images/article-blocks.png"
 tags:
   - Ferramentas de IA
   - Software

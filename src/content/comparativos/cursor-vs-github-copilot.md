@@ -1,4 +1,4 @@
----
+﻿---
 title: "Cursor vs GitHub Copilot: qual assistente de código escolher em 2026"
 description: "Comparativo detalhado entre Cursor e GitHub Copilot: recursos de IA, integração com IDEs, preços e qual assistente de programação é melhor para desenvolvedores em 2026."
 category: "Comparativo"
@@ -6,7 +6,7 @@ author: "Nexora Systems"
 date: 2026-05-06
 readTime: "10 min"
 featured: false
-image: "/assets/og-default.svg"
+image: "/images/article-scenario.png"
 tools:
   - Cursor
   - GitHub Copilot

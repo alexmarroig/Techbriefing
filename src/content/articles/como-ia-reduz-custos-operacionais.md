@@ -1,4 +1,4 @@
----
+﻿---
 title: "Como a IA reduz custos operacionais na prática: números reais"
 description: "Descubra como empresas usam IA para reduzir custos operacionais com dados reais, casos práticos e estratégias para calcular o ROI das iniciativas de IA."
 category: "IA Prática"
@@ -6,7 +6,7 @@ author: "Nexora Systems"
 date: 2026-04-20
 readTime: "9 min"
 featured: false
-image: "/assets/og-default.svg"
+image: "/images/article-components.png"
 tags:
   - Custos
   - ROI

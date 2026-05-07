@@ -1,4 +1,4 @@
----
+﻿---
 title: "Notion AI vs ClickUp AI: qual ferramenta de produtividade com IA vale mais em 2026"
 description: "Comparativo completo entre Notion AI e ClickUp AI: recursos, preços e qual escolher para gestão de projetos e produtividade com inteligência artificial."
 category: "Comparativo"
@@ -6,7 +6,7 @@ author: "Nexora Systems"
 date: 2026-04-22
 readTime: "8 min"
 featured: false
-image: "/assets/og-default.svg"
+image: "/images/article-scenario.png"
 tools:
   - Notion AI
   - ClickUp AI

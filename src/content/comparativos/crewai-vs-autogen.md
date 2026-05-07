@@ -1,4 +1,4 @@
----
+﻿---
 title: "CrewAI vs AutoGen: frameworks multi-agente comparados para desenvolvedores"
 description: "Comparativo técnico entre CrewAI e AutoGen da Microsoft: arquitetura, casos de uso, facilidade de uso e qual framework multi-agente escolher em 2026."
 category: "Comparativo"
@@ -6,7 +6,7 @@ author: "Nexora Systems"
 date: 2026-04-15
 readTime: "10 min"
 featured: false
-image: "/assets/og-default.svg"
+image: "/images/article-scenario.png"
 tools:
   - CrewAI
   - AutoGen

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Melhores ferramentas no-code para criar IA em 2026"
 description: "Conheça as melhores plataformas no-code para criar aplicações e agentes de IA sem programar. Comparativo completo com preços, casos de uso e para quem é cada uma."
 category: "Software"
@@ -6,7 +6,7 @@ author: "Nexora Systems"
 date: 2026-04-18
 readTime: "10 min"
 featured: false
-image: "/assets/og-default.svg"
+image: "/images/article-blocks.png"
 tags:
   - No-code
   - Ferramentas de IA

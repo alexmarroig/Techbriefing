@@ -1,4 +1,4 @@
----
+﻿---
 title: "Como integrar inteligência artificial no seu negócio: roteiro prático"
 description: "Guia completo para integrar IA no seu negócio de forma estratégica: diagnóstico, planejamento, implementação e gestão de mudança. Do zero ao primeiro resultado."
 category: "IA Prática"
@@ -6,7 +6,7 @@ author: "Nexora Systems"
 date: 2026-04-12
 readTime: "10 min"
 featured: true
-image: "/assets/og-default.svg"
+image: "/images/article-components.png"
 tags:
   - IA Prática
   - Negócios

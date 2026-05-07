@@ -1,4 +1,4 @@
----
+﻿---
 title: "Midjourney vs DALL-E 3: qual IA gera imagens melhores em 2026"
 description: "Comparativo completo entre Midjourney e DALL-E 3: qualidade de imagem, prompt following, preços e qual gerador de imagens por IA escolher em 2026."
 category: "Comparativo"
@@ -6,7 +6,7 @@ author: "Nexora Systems"
 date: 2026-05-02
 readTime: "9 min"
 featured: true
-image: "/assets/og-default.svg"
+image: "/images/article-scenario.png"
 tools:
   - Midjourney
   - DALL-E 3

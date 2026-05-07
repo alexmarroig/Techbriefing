@@ -1,4 +1,4 @@
----
+﻿---
 title: "Relevance AI vs Voiceflow: qual plataforma no-code para agentes de IA escolher"
 description: "Compare Relevance AI e Voiceflow para criar agentes de IA sem código. Descubra qual plataforma se encaixa melhor no seu caso de uso em 2026."
 category: "Comparativo"
@@ -6,7 +6,7 @@ author: "Nexora Systems"
 date: 2026-04-08
 readTime: "9 min"
 featured: true
-image: "/assets/og-default.svg"
+image: "/images/article-scenario.png"
 tools:
   - Relevance AI
   - Voiceflow
