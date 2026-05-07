@@ -6,7 +6,7 @@ import '../styles/global.css';
    ═══════════════════════════════════════════════════════════ */
 const CONFIG = {
   bookTitle: 'Agentes de IA para Negócios',
-  subtitle: 'Do chat à execução operacional',
+  subtitle: 'Do entendimento à aplicação real',
   authorBrand: 'Nexora Systems',
   portalBrand: 'Tech Briefing',
 
@@ -14,8 +14,8 @@ const CONFIG = {
   promoPrice: 'R$ 29,90',
   promoLabel: 'Lançamento',
 
-  primaryBuyLink: '#hotmart',
-  secondaryBuyLink: '#kiwify',
+  primaryBuyLink: '#oferta',
+  buyLink: '#',
 
   buyLinks: {
     hotmart: { label: 'Hotmart', url: '#' },
@@ -26,11 +26,12 @@ const CONFIG = {
     clubeAutores: { label: 'Clube dos Autores', url: '#' },
   },
 
-  heroBadge: 'Ebook — Estratégia & Operação',
-  heroHeadline: 'Pare de testar IA no escuro.',
-  heroSub: 'Descubra onde agentes de IA realmente geram resultado no seu negócio — com frameworks claros, casos reais e um roteiro prático para sair da teoria.',
+  heroBadge: 'Ebook — Arquitetura & Execução',
+  heroHeadline: 'Agentes de IA não são chatbots com nome bonito.',
+  heroSub: 'Este guia mostra o que separa um experimento de uma operação real: arquitetura, regras, observabilidade e o papel do humano como arquiteto do sistema.',
 
   pages: '126',
+  chapters: '12',
   format: 'PDF + EPUB',
   updated: 'Maio 2026',
   language: 'Português',
@@ -38,37 +39,38 @@ const CONFIG = {
   guaranteeText: 'Se em 7 dias você sentir que o conteúdo não entregou o que prometeu, devolvemos 100% do valor. Sem perguntas.',
 
   audienceBullets: [
-    { icon: '🎯', title: 'Fundadores e gestores', desc: 'Que querem aplicar IA em operações reais sem depender de hype.' },
-    { icon: '⚡', title: 'Freelancers e consultores', desc: 'Que precisam entregar mais com menos — e cobrar por isso.' },
-    { icon: '🔧', title: 'Operadores e analistas', desc: 'Que lidam com tarefas repetitivas e querem automatizar com método.' },
-    { icon: '🚀', title: 'Criadores e empreendedores digitais', desc: 'Que buscam escalar sem aumentar equipe.' },
-    { icon: '💡', title: 'Profissionais de tecnologia', desc: 'Que querem entender agentes de IA além do tutorial básico.' },
+    { icon: '🏗️', title: 'Fundadores e gestores', desc: 'Que querem entender como agentes funcionam antes de investir — e saber separar o que escala do que é apenas demo.' },
+    { icon: '⚙️', title: 'Operadores e analistas', desc: 'Que precisam transformar processos repetitivos em sistemas autônomos com regras claras e limites definidos.' },
+    { icon: '🧩', title: 'Consultores e freelancers', desc: 'Que querem oferecer implementação de agentes como serviço — com método, não com improviso.' },
+    { icon: '🔬', title: 'Profissionais de tecnologia', desc: 'Que já testaram ferramentas, mas ainda não construíram um agente com arquitetura real: memória, ferramentas, avaliação e observabilidade.' },
+    { icon: '📐', title: 'Quem quer sair da curiosidade', desc: 'E entrar em clareza: saber o que construir, como validar e quando escalar.' },
   ],
 
   benefits: [
-    'Mapeie processos onde agentes reduzem trabalho manual de verdade',
-    'Identifique oportunidades de automação que você está ignorando',
-    'Estruture seus primeiros fluxos sem precisar programar',
-    'Entenda qual tipo de agente serve para cada situação',
-    'Evite desperdício com ferramentas que não fazem sentido pro seu caso',
-    'Aplique frameworks testados em vendas, suporte, conteúdo e operações',
-    'Saia do hype e entre na execução com clareza estratégica',
-    'Ganhe vantagem competitiva antes que seu mercado se adapte',
+    'Entenda a diferença real entre chatbot, automação e agente — sem depender de hype',
+    'Conheça os 6 blocos que compõem todo agente funcional: modelo, memória, ferramentas, regras, observabilidade e avaliação',
+    'Saiba como escolher entre agente único e multi-agente — e quando a simplicidade vence a complexidade',
+    'Aprenda o framework de 8 passos para criar seu primeiro agente: do problema certo ao deploy com controle',
+    'Entenda por que a maioria dos agentes falha — e os padrões que você precisa evitar desde o início',
+    'Veja como o papel humano muda: de executor para supervisor e, depois, para arquiteto do sistema',
+    'Descubra como transformar um experimento em operação confiável com observabilidade e avaliação contínua',
+    'Saia da teoria com um roteiro claro para aplicar agentes no seu contexto — com clareza, não com pressa',
   ],
 
-  chapters: [
-    { num: '01', title: 'Estrutura do Guia', desc: 'Um guia prático para entender e aplicar agentes de IA em negócios reais.' },
-    { num: '02', title: 'De assistente a executor', desc: 'Como a IA passou de assistente a executor e o que isso muda para sempre.' },
-    { num: '03', title: 'Entrada — Coleta de dados', desc: 'Como agentes capturam e processam informações do mundo real.' },
-    { num: '04', title: 'Decisão — Lógica inteligente', desc: 'O motor de raciocínio: como agentes tomam decisões autônomas.' },
-    { num: '05', title: 'Execução — Ação real', desc: 'Da decisão à ação: como agentes executam tarefas no mundo real.' },
-    { num: '06', title: 'Orquestração — Multi-agentes', desc: 'Como coordenar múltiplos agentes para fluxos complexos.' },
-    { num: '07', title: 'Memória — Contexto persistente', desc: 'Como agentes lembram, aprendem e melhoram com o tempo.' },
-    { num: '08', title: 'Cenário prático 1', desc: 'Caso real de implementação com análise passo a passo.' },
-    { num: '09', title: 'Chatbots vs. Agentes', desc: 'Por que agentes se destacam quando você nem percebe.' },
-    { num: '10', title: 'Cenários avançados', desc: 'Aplicações avançadas em vendas, suporte e operações.' },
-    { num: '11', title: 'Fluxo de execução real', desc: 'Arquitetura completa de um agente em produção.' },
-    { num: '12', title: 'Próximos passos', desc: 'Como começar a implementar agentes no seu negócio hoje.' },
+  chapterList: [
+    { num: '—', title: 'Introdução', desc: 'Por que agentes de IA são a próxima vantagem competitiva — e por que a maioria ainda não entendeu a mudança.' },
+    { num: '01', title: 'O fim da IA como "chat"', desc: 'Como a IA passou de assistente a executor. A diferença entre ajudar a pensar e ajudar a fazer.' },
+    { num: '02', title: 'O que são agentes de IA (de verdade)', desc: 'A definição que não quebra depois do hype. O que separa um agente real de um chatbot com nome diferente.' },
+    { num: '03', title: 'Cenário real: agente de qualificação', desc: 'Um caso prático completo — do problema à solução — para ver a teoria funcionando.' },
+    { num: '04', title: 'Os 6 blocos de um agente moderno', desc: 'Modelo de linguagem, memória, ferramentas, regras e limites, observabilidade e avaliação. Nenhum é opcional.' },
+    { num: '05', title: 'Tipos de agentes para negócios', desc: 'Operacional, analítico, de decisão, criativo e coordenador. Como escolher o tipo certo para cada problema.' },
+    { num: '06', title: 'Single-agent vs. multi-agent', desc: 'Quando simplificar é estratégia — e quando a complexidade realmente se justifica.' },
+    { num: '07', title: 'No-code + IA: construção acessível', desc: 'Por que construir agentes deixou de ser privilégio técnico e passou a depender de clareza de processo.' },
+    { num: '08', title: 'Como criar seu primeiro agente', desc: 'O framework de 8 passos: problema, objetivo, fluxo, ferramentas, construção, teste, ajuste e escala.' },
+    { num: '09', title: 'Casos reais de agentes em ação', desc: 'Onde agentes já estão gerando resultado — e por que esses casos podem ser replicados.' },
+    { num: '10', title: 'Erros comuns e como evitá-los', desc: 'Padrões que comprometem projetos de agentes — e estratégias para não repeti-los.' },
+    { num: '11', title: 'O futuro dos negócios com agentes', desc: 'Por que agentes estão deixando de ser diferencial para se tornarem infraestrutura operacional.' },
+    { num: '12', title: 'O que muda a partir de agora', desc: 'Uma nova perspectiva sobre trabalho, escala e atenção em um mundo com agentes.' },
   ],
 
   bonuses: [
@@ -77,19 +79,19 @@ const CONFIG = {
   ],
 
   faq: [
+    { q: 'Preciso saber programar?', a: 'Não. O ebook cobre desde opções no-code até abordagens com código, mas programação não é pré-requisito. O diferencial está em clareza de processo, não em habilidade técnica.' },
+    { q: 'O conteúdo é teórico ou prático?', a: 'Os dois, na medida certa. A teoria existe para construir um modelo mental sólido. Mas cada capítulo avança para frameworks, cenários e passos aplicáveis.' },
+    { q: 'O que diferencia este ebook de tutoriais gratuitos?', a: 'Tutoriais ensinam a clicar botões. Este guia ensina a pensar em sistemas: arquitetura, regras, observabilidade, avaliação e o papel humano na operação. É a diferença entre montar uma demo e construir algo que funciona de verdade.' },
+    { q: 'Serve para quem já usa IA no dia a dia?', a: 'Especialmente. Se você já usa ChatGPT ou ferramentas similares, este ebook mostra o próximo nível: sair do chat e entrar na execução operacional com agentes estruturados.' },
     { q: 'O ebook é digital?', a: 'Sim. Você recebe acesso imediato em PDF e EPUB — leia em qualquer dispositivo.' },
-    { q: 'Como recebo o acesso?', a: 'Imediatamente após a confirmação do pagamento, por e-mail. Sem espera.' },
-    { q: 'Posso ler no celular?', a: 'Sim. O formato EPUB é otimizado para leitura em celular, tablet e e-reader.' },
-    { q: 'Tem versão impressa?', a: 'Sim! Disponível sob demanda pelo Clube dos Autores. A versão digital (PDF + EPUB) é entregue imediatamente.' },
-    { q: 'É indicado para iniciantes?', a: 'Sim. O conteúdo parte do zero e avança com clareza. Não exige conhecimento técnico prévio.' },
-    { q: 'Preciso saber programar?', a: 'Não. O ebook cobre desde opções no-code até abordagens com código, mas programação não é pré-requisito.' },
-    { q: 'O conteúdo é teórico ou prático?', a: 'Prático. Cada capítulo tem frameworks, exemplos e passos aplicáveis. A teoria existe só para dar contexto.' },
+    { q: 'Como recebo o acesso?', a: 'Imediatamente após a confirmação do pagamento, por e-mail.' },
+    { q: 'Tem versão impressa?', a: 'Sim. Disponível sob demanda pelo Clube dos Autores. A versão digital é entregue imediatamente.' },
     { q: 'Tem garantia?', a: 'Sim. Garantia incondicional de 7 dias. Se não gostar, devolvemos 100%.' },
   ],
 };
 
 const title = `${CONFIG.bookTitle} — Ebook por ${CONFIG.authorBrand}`;
-const description = 'Descubra onde agentes de IA realmente geram resultado no seu negócio. Frameworks, casos reais e um roteiro prático. Ebook por Nexora Systems.';
+const description = 'Arquitetura, regras, observabilidade e execução real: o guia para sair do hype e construir agentes de IA que funcionam no seu negócio. Por Nexora Systems.';
 const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url).toString();
 const image = '/assets/og-default.svg';
 ---
@@ -100,7 +102,6 @@ const image = '/assets/og-default.svg';
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content={description} />
-  <meta name="robots" content="noindex, nofollow" />
   <meta name="theme-color" content="#121417" />
   <link rel="canonical" href={canonical} />
   <meta property="og:type" content="product" />
@@ -147,11 +148,11 @@ const image = '/assets/og-default.svg';
           <span class="lp-price-label">{CONFIG.promoLabel}</span>
         </div>
         <div class="lp-hero-actions">
-          <a href={CONFIG.primaryBuyLink} class="lp-btn-primary">Comprar agora →</a>
-          <a href="#aprender" class="lp-btn-ghost">Ver o que você vai aprender</a>
+          <a href={CONFIG.primaryBuyLink} class="lp-btn-primary">Garantir meu exemplar →</a>
+          <a href="#conteudo" class="lp-btn-ghost">Ver os 12 capítulos</a>
         </div>
         <div class="lp-hero-specs">
-          {[`${CONFIG.pages} páginas`, CONFIG.format, `Atualizado: ${CONFIG.updated}`].map(s => (
+          {[`${CONFIG.pages} páginas`, `${CONFIG.chapters} capítulos`, CONFIG.format, CONFIG.language].map(s => (
             <span class="lp-spec"><span class="lp-spec-dot"></span>{s}</span>
           ))}
         </div>
@@ -178,11 +179,11 @@ const image = '/assets/og-default.svg';
   <div class="lp-wrap">
     <div class="lp-trust-inner">
       {[
-        { ico: '📄', label: 'PDF + EPUB inclusos' },
+        { ico: '📐', label: 'Arquitetura real de agentes' },
         { ico: '⚡', label: 'Acesso imediato' },
         { ico: '🔒', label: 'Pagamento seguro' },
         { ico: '🔄', label: 'Garantia de 7 dias' },
-        { ico: '🇧🇷', label: 'Feito no Brasil' },
+        { ico: '🇧🇷', label: 'Conteúdo em português' },
       ].map(t => (
         <div class="lp-trust-item">
           <span class="lp-trust-ico">{t.ico}</span>
@@ -193,15 +194,42 @@ const image = '/assets/og-default.svg';
   </div>
 </div>
 
-<!-- ═══ PARA QUEM É ═══ -->
+<!-- ═══ O PROBLEMA ═══ -->
 <section class="lp-section">
   <div class="lp-wrap">
     <div class="lp-section-header">
       <span class="lp-section-num">01</span>
       <div class="lp-section-rule"></div>
+      <span class="lp-section-label">O problema</span>
+    </div>
+    <h2 class="lp-h2">Quando tudo vira "agente", o termo <em>deixa de explicar.</em></h2>
+    <div class="lp-problem-grid">
+      {[
+        { label: 'O hype', desc: 'Chatbots com instruções mais longas, automações com um webhook no meio e scripts com nome bonito — tudo virou "agente de IA".' },
+        { label: 'A confusão', desc: 'Sem uma definição clara, você não sabe se está construindo algo que escala ou apenas criando versões mais rápidas do mesmo trabalho.' },
+        { label: 'O custo', desc: 'Ferramentas erradas, arquitetura improvisada, agentes sem observabilidade — cada erro se multiplica quando você tenta escalar.' },
+      ].map(p => (
+        <div class="lp-problem-card">
+          <div class="lp-problem-label">{p.label}</div>
+          <div class="lp-problem-desc">{p.desc}</div>
+        </div>
+      ))}
+    </div>
+    <div class="lp-problem-pivot">
+      <p>Este ebook existe para resolver isso. Para dar a você uma definição que não quebra depois do hype, uma arquitetura que funciona em produção e um método para sair da curiosidade e entrar na execução.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PARA QUEM É ═══ -->
+<section class="lp-section lp-section-alt">
+  <div class="lp-wrap">
+    <div class="lp-section-header">
+      <span class="lp-section-num">02</span>
+      <div class="lp-section-rule"></div>
       <span class="lp-section-label">Para quem é</span>
     </div>
-    <h2 class="lp-h2">Este ebook é para quem quer <em>aplicar</em>, não só entender.</h2>
+    <h2 class="lp-h2">Para quem quer construir, <em>não só consumir.</em></h2>
     <div class="lp-audience-grid">
       {CONFIG.audienceBullets.map(a => (
         <div class="lp-audience-card">
@@ -215,16 +243,16 @@ const image = '/assets/og-default.svg';
 </section>
 
 <!-- ═══ O QUE VOCÊ VAI APRENDER ═══ -->
-<section class="lp-section lp-section-alt" id="aprender">
+<section class="lp-section" id="aprender">
   <div class="lp-wrap">
     <div class="lp-section-header">
-      <span class="lp-section-num">02</span>
+      <span class="lp-section-num">03</span>
       <div class="lp-section-rule"></div>
       <span class="lp-section-label">O que você vai aprender</span>
     </div>
-    <h2 class="lp-h2">Clareza para agir. <em>Método para executar.</em></h2>
+    <h2 class="lp-h2">Um modelo mental completo. <em>Um método para executar.</em></h2>
     <div class="lp-benefits-grid">
-      {CONFIG.benefits.map((b, i) => (
+      {CONFIG.benefits.map(b => (
         <div class="lp-benefit-row">
           <span class="lp-benefit-check">✓</span>
           <span>{b}</span>
@@ -237,44 +265,73 @@ const image = '/assets/og-default.svg';
   </div>
 </section>
 
-<!-- ═══ POR QUE A NEXORA CRIOU ═══ -->
-<section class="lp-section">
-  <div class="lp-wrap">
-    <div class="lp-section-header">
-      <span class="lp-section-num">03</span>
-      <div class="lp-section-rule"></div>
-      <span class="lp-section-label">A origem</span>
-    </div>
-    <div class="lp-origin-layout">
-      <div>
-        <h2 class="lp-h2">Por que a {CONFIG.authorBrand} criou este guia.</h2>
-        <div class="lp-origin-body">
-          <p>O mercado de IA está cheio de promessas. Mas entre o hype e a realidade, existe um vácuo enorme: <strong>como aplicar agentes de IA em negócios reais, com processos reais, para pessoas reais.</strong></p>
-          <p>A {CONFIG.authorBrand} nasceu para preencher esse espaço. Testamos ferramentas, implementamos fluxos e documentamos o que funciona — sem filtro, sem patrocínio, sem atalho.</p>
-          <p>Este ebook é o resultado dessa experiência condensada em <strong>{CONFIG.pages} páginas</strong> de frameworks, casos e decisões práticas.</p>
-        </div>
-      </div>
-      <div class="lp-origin-card">
-        <div class="lp-origin-card-pip"></div>
-        <div class="lp-origin-card-name">{CONFIG.authorBrand}</div>
-        <div class="lp-origin-card-desc">Tecnologia, sistemas e inteligência artificial aplicada ao mundo real. Criamos conteúdo, ferramentas e produtos para quem quer transformar IA em resultado.</div>
-        <a href="/sobre" class="lp-arrow-link">Conhecer a Nexora →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ CAPÍTULOS ═══ -->
+<!-- ═══ DIFERENCIAL: OS 6 BLOCOS ═══ -->
 <section class="lp-section lp-section-alt">
   <div class="lp-wrap">
     <div class="lp-section-header">
       <span class="lp-section-num">04</span>
       <div class="lp-section-rule"></div>
-      <span class="lp-section-label">Capítulos</span>
+      <span class="lp-section-label">Dentro do ebook</span>
     </div>
-    <h2 class="lp-h2">{CONFIG.pages} páginas. 7 capítulos. <em>Zero enrolação.</em></h2>
+    <h2 class="lp-h2">Os 6 blocos que todo agente funcional <em>precisa ter.</em></h2>
+    <p class="lp-section-intro">Entender esses elementos muda completamente a forma como você constrói. Você deixa de montar fluxos de forma intuitiva e começa a desenhar arquitetura.</p>
+    <div class="lp-blocks-grid">
+      {[
+        { num: '01', title: 'Modelo de linguagem', desc: 'O cérebro que toma decisões. Não é só GPT — é entender qual modelo serve para qual função.' },
+        { num: '02', title: 'Memória', desc: 'O que impede o sistema de começar do zero toda vez. Contexto persistente que melhora com o uso.' },
+        { num: '03', title: 'Ferramentas', desc: 'Onde a IA deixa de falar e começa a agir. APIs, integrações e ações no mundo real.' },
+        { num: '04', title: 'Regras e limites', desc: 'O que torna o sistema confiável. Permissões, segurança e limites definidos por humanos.' },
+        { num: '05', title: 'Observabilidade', desc: 'Enxergar o que está acontecendo. Sem isso, você não sabe se o agente funciona ou apenas parece funcionar.' },
+        { num: '06', title: 'Avaliação', desc: 'Onde o sistema deixa de ser experimento. Métricas reais que permitem evolução contínua.' },
+      ].map(b => (
+        <div class="lp-block-card">
+          <div class="lp-block-num">{b.num}</div>
+          <div class="lp-block-title">{b.title}</div>
+          <div class="lp-block-desc">{b.desc}</div>
+        </div>
+      ))}
+    </div>
+    <p class="lp-blocks-quote">Cada um resolve um problema específico. Nenhum é opcional em sistemas reais.</p>
+  </div>
+</section>
+
+<!-- ═══ TRANSFORMAÇÃO: O PAPEL HUMANO ═══ -->
+<section class="lp-section">
+  <div class="lp-wrap">
+    <div class="lp-section-header">
+      <span class="lp-section-num">05</span>
+      <div class="lp-section-rule"></div>
+      <span class="lp-section-label">A mudança de papel</span>
+    </div>
+    <h2 class="lp-h2">O humano não sai do sistema. <em>Ele muda de posição.</em></h2>
+    <div class="lp-roles-grid">
+      {[
+        { phase: 'Fase 1', role: 'Executor', desc: 'Realiza tarefas passo a passo. É onde a maioria ainda está.' },
+        { phase: 'Fase 2', role: 'Supervisor', desc: 'Monitora agentes e ajusta regras. O sistema executa, o humano valida.' },
+        { phase: 'Fase 3', role: 'Arquiteto', desc: 'Projeta objetivos e define o processo. O humano decide o que o sistema deve fazer — não como.' },
+      ].map(r => (
+        <div class="lp-role-card">
+          <div class="lp-role-phase">{r.phase}</div>
+          <div class="lp-role-title">{r.role}</div>
+          <div class="lp-role-desc">{r.desc}</div>
+        </div>
+      ))}
+    </div>
+    <p class="lp-role-note">É uma mudança de função, não de relevância. O humano permanece essencial — mas em um nível estratégico superior.</p>
+  </div>
+</section>
+
+<!-- ═══ CAPÍTULOS ═══ -->
+<section class="lp-section lp-section-alt" id="conteudo">
+  <div class="lp-wrap">
+    <div class="lp-section-header">
+      <span class="lp-section-num">06</span>
+      <div class="lp-section-rule"></div>
+      <span class="lp-section-label">Conteúdo completo</span>
+    </div>
+    <h2 class="lp-h2">{CONFIG.pages} páginas. {CONFIG.chapters} capítulos. <em>Zero enrolação.</em></h2>
     <div class="lp-chapters-grid">
-      {CONFIG.chapters.map(ch => (
+      {CONFIG.chapterList.map(ch => (
         <div class="lp-chapter-card">
           <div class="lp-chapter-num">{ch.num}</div>
           <div class="lp-chapter-title">{ch.title}</div>
@@ -285,29 +342,29 @@ const image = '/assets/og-default.svg';
   </div>
 </section>
 
-<!-- ═══ BENEFÍCIOS ESTRATÉGICOS ═══ -->
+<!-- ═══ POR QUE A NEXORA ═══ -->
 <section class="lp-section">
   <div class="lp-wrap">
     <div class="lp-section-header">
-      <span class="lp-section-num">05</span>
+      <span class="lp-section-num">07</span>
       <div class="lp-section-rule"></div>
-      <span class="lp-section-label">Vantagem prática</span>
+      <span class="lp-section-label">A origem</span>
     </div>
-    <h2 class="lp-h2">Depois de ler, você vai saber <em>exatamente</em> onde agir.</h2>
-    <div class="lp-strat-grid">
-      {[
-        { title: 'Mapeie trabalho repetitivo', desc: 'Identifique quais tarefas do seu dia a dia podem ser delegadas para agentes — com critérios claros.' },
-        { title: 'Encontre oportunidades escondidas', desc: 'Veja onde agentes geram alavancagem real que você ainda não percebeu no seu negócio.' },
-        { title: 'Escolha as ferramentas certas', desc: 'Pare de perder tempo testando tudo. Saiba qual stack serve para o seu nível técnico e contexto.' },
-        { title: 'Aplique com método', desc: 'Siga frameworks testados para ir do piloto ao processo em produção sem improvisar.' },
-        { title: 'Evite armadilhas comuns', desc: 'Saiba o que não funciona antes de investir tempo e dinheiro na direção errada.' },
-        { title: 'Ganhe vantagem competitiva', desc: 'Posicione-se agora, enquanto a maioria ainda está só assistindo.' },
-      ].map(s => (
-        <div class="lp-strat-card">
-          <div class="lp-strat-title">{s.title}</div>
-          <div class="lp-strat-desc">{s.desc}</div>
+    <div class="lp-origin-layout">
+      <div>
+        <h2 class="lp-h2">Por que a {CONFIG.authorBrand} criou este guia.</h2>
+        <div class="lp-origin-body">
+          <p>O mercado de IA está cheio de promessas. Mas entre o hype e a realidade, existe um vácuo: <strong>como construir agentes que funcionam em produção — com arquitetura real, limites definidos e observabilidade.</strong></p>
+          <p>A {CONFIG.authorBrand} nasceu para preencher esse espaço. Testamos ferramentas, implementamos fluxos e documentamos o que funciona — sem filtro, sem patrocínio, sem atalho.</p>
+          <p>Este ebook é o resultado dessa experiência condensada em <strong>{CONFIG.pages} páginas</strong> de frameworks, cenários e decisões práticas.</p>
         </div>
-      ))}
+      </div>
+      <div class="lp-origin-card">
+        <div class="lp-origin-card-pip"></div>
+        <div class="lp-origin-card-name">{CONFIG.authorBrand}</div>
+        <div class="lp-origin-card-desc">Tecnologia, sistemas e inteligência artificial aplicada ao mundo real. Criamos conteúdo, ferramentas e produtos para quem quer transformar IA em resultado.</div>
+        <a href="/sobre" class="lp-arrow-link">Conhecer a Nexora →</a>
+      </div>
     </div>
   </div>
 </section>
@@ -332,9 +389,11 @@ const image = '/assets/og-default.svg';
         <h2 class="lp-offer-title">{CONFIG.bookTitle}</h2>
         <p class="lp-offer-sub">{CONFIG.subtitle}</p>
         <ul class="lp-offer-includes">
-          <li><span class="lp-oi-check">✓</span> Ebook completo — {CONFIG.pages} páginas</li>
-          <li><span class="lp-oi-check">✓</span> Formatos PDF + EPUB</li>
-          <li><span class="lp-oi-check">✓</span> Acesso imediato por e-mail</li>
+          <li><span class="lp-oi-check">✓</span> Guia completo — {CONFIG.pages} páginas, {CONFIG.chapters} capítulos</li>
+          <li><span class="lp-oi-check">✓</span> Os 6 blocos de arquitetura de agentes</li>
+          <li><span class="lp-oi-check">✓</span> Framework de 8 passos para criar seu primeiro agente</li>
+          <li><span class="lp-oi-check">✓</span> Cenários reais com análise passo a passo</li>
+          <li><span class="lp-oi-check">✓</span> Formatos PDF + EPUB — acesso imediato</li>
           <li><span class="lp-oi-check">✓</span> Atualizações futuras incluídas</li>
           {CONFIG.bonuses.map(b => (
             <li><span class="lp-oi-check lp-oi-bonus">+</span> <strong>Bônus:</strong> {b.title}</li>
@@ -344,7 +403,7 @@ const image = '/assets/og-default.svg';
           <span class="lp-price-old-lg">{CONFIG.fullPrice}</span>
           <span class="lp-price-current-lg">{CONFIG.promoPrice}</span>
         </div>
-        <a href={CONFIG.primaryBuyLink} class="lp-btn-primary lp-btn-full">Comprar agora →</a>
+        <a href={CONFIG.buyLink} class="lp-btn-primary lp-btn-full">Comprar agora →</a>
         <div class="lp-platforms">
           <span class="lp-platforms-label">Também disponível em:</span>
           <div class="lp-platforms-links">
@@ -366,7 +425,7 @@ const image = '/assets/og-default.svg';
 <section class="lp-section">
   <div class="lp-wrap">
     <div class="lp-section-header">
-      <span class="lp-section-num">06</span>
+      <span class="lp-section-num">08</span>
       <div class="lp-section-rule"></div>
       <span class="lp-section-label">Perguntas frequentes</span>
     </div>
@@ -380,7 +439,23 @@ const image = '/assets/og-default.svg';
       ))}
     </div>
     <div class="lp-cta-mid">
-      <a href={CONFIG.primaryBuyLink} class="lp-btn-primary">Garantir meu ebook →</a>
+      <a href={CONFIG.primaryBuyLink} class="lp-btn-primary">Garantir meu exemplar →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FECHAMENTO ═══ -->
+<section class="lp-section lp-section-alt lp-section-close">
+  <div class="lp-wrap">
+    <div class="lp-close-content">
+      <h2 class="lp-h2-center">A diferença entre quem entende e quem executa <em>está no movimento.</em></h2>
+      <p class="lp-close-sub">Você pode continuar lendo sobre agentes de IA. Assistir mais vídeos. Consumir mais conteúdo. Esperar o momento certo.<br/>Ou pode decidir construir o primeiro. Com clareza, com método, com arquitetura.</p>
+      <div class="lp-hero-price" style="justify-content:center">
+        <span class="lp-price-old">{CONFIG.fullPrice}</span>
+        <span class="lp-price-current">{CONFIG.promoPrice}</span>
+        <span class="lp-price-label">{CONFIG.promoLabel}</span>
+      </div>
+      <a href={CONFIG.primaryBuyLink} class="lp-btn-primary">Começar agora →</a>
     </div>
   </div>
 </section>
@@ -481,15 +556,15 @@ const image = '/assets/og-default.svg';
 }
 .lp-h1 {
   font-family: var(--serif);
-  font-size: clamp(36px, 5vw, 64px);
-  font-weight: 700; line-height: 1.05;
+  font-size: clamp(36px, 5vw, 58px);
+  font-weight: 700; line-height: 1.08;
   letter-spacing: -0.02em;
   margin-bottom: 24px;
 }
 .lp-hero-sub {
   font-size: 17px; line-height: 1.7;
   color: var(--text-2); font-weight: 300;
-  max-width: 520px; margin-bottom: 32px;
+  max-width: 540px; margin-bottom: 32px;
 }
 .lp-hero-price {
   display: flex; align-items: baseline; gap: 12px;
@@ -618,15 +693,46 @@ const image = '/assets/og-default.svg';
 }
 .lp-h2 em { font-style: italic; color: var(--amber); }
 
+.lp-section-intro {
+  font-size: 16px; color: var(--text-2); line-height: 1.7;
+  max-width: 640px; margin-bottom: 48px;
+}
+
+/* Problem section */
+.lp-problem-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px; margin-bottom: 40px;
+}
+.lp-problem-card {
+  background: var(--bg-2); border: 1px solid var(--line-s);
+  border-radius: 12px; padding: 28px;
+  border-left: 3px solid oklch(0.65 0.15 25);
+}
+.lp-problem-label {
+  font-family: var(--mono); font-size: 10.5px; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: oklch(0.75 0.12 25); margin-bottom: 12px;
+}
+.lp-problem-desc { font-size: 14px; color: var(--text-2); line-height: 1.7; }
+.lp-problem-pivot {
+  max-width: 680px;
+  font-size: 16px; color: var(--text-2); line-height: 1.7;
+  padding: 24px 0; border-top: 1px solid var(--line-s);
+}
+.lp-problem-pivot p { margin: 0; }
+
 /* Audience */
 .lp-audience-grid {
   display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 16px;
 }
 .lp-audience-card {
-  background: var(--bg-2); border: 1px solid var(--line-s);
+  background: oklch(0.09 0.008 240 / 0.5); border: 1px solid var(--line-s);
   border-radius: 12px; padding: 24px;
   transition: border-color 0.2s;
+}
+.lp-section-alt .lp-audience-card {
+  background: var(--bg);
 }
 .lp-audience-card:hover { border-color: var(--line); }
 .lp-audience-ico { font-size: 24px; margin-bottom: 14px; }
@@ -646,7 +752,7 @@ const image = '/assets/og-default.svg';
   display: flex; align-items: flex-start; gap: 12px;
   font-size: 15px; color: var(--text-2); line-height: 1.6;
   padding: 14px 18px;
-  background: oklch(0.09 0.008 240 / 0.5);
+  background: var(--bg-2);
   border: 1px solid var(--line-s); border-radius: 10px;
 }
 .lp-benefit-check {
@@ -655,6 +761,62 @@ const image = '/assets/og-default.svg';
 
 /* CTA mid */
 .lp-cta-mid { text-align: center; }
+
+/* 6 Blocks */
+.lp-blocks-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px; margin-bottom: 32px;
+}
+.lp-block-card {
+  background: var(--bg); border: 1px solid var(--line-s);
+  border-radius: 12px; padding: 28px;
+  transition: border-color 0.2s;
+}
+.lp-block-card:hover { border-color: var(--amber-d); }
+.lp-block-num {
+  font-family: var(--mono); font-size: 11px; font-weight: 500;
+  color: var(--amber); letter-spacing: 0.06em; margin-bottom: 14px;
+}
+.lp-block-title {
+  font-family: var(--serif); font-size: 18px; font-weight: 700;
+  letter-spacing: -0.01em; line-height: 1.3; margin-bottom: 10px;
+  text-transform: capitalize;
+}
+.lp-block-desc { font-size: 13.5px; color: var(--text-2); line-height: 1.6; }
+.lp-blocks-quote {
+  font-family: var(--serif); font-size: 17px; font-style: italic;
+  color: var(--text-2); line-height: 1.6;
+  padding: 20px 0; border-top: 1px solid var(--line-s);
+  max-width: 600px;
+}
+
+/* Roles / Human role */
+.lp-roles-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+  margin-bottom: 32px;
+}
+@media(max-width:768px){ .lp-roles-grid { grid-template-columns: 1fr; } }
+.lp-role-card {
+  background: var(--bg-2); border: 1px solid var(--line-s);
+  border-radius: 12px; padding: 28px; text-align: center;
+  position: relative;
+}
+.lp-role-card:last-child { border-color: var(--amber-d); }
+.lp-role-phase {
+  font-family: var(--mono); font-size: 10.5px; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--text-3); margin-bottom: 12px;
+}
+.lp-role-title {
+  font-family: var(--serif); font-size: 28px; font-weight: 700;
+  margin-bottom: 10px; letter-spacing: -0.02em;
+}
+.lp-role-card:last-child .lp-role-title { color: var(--amber); }
+.lp-role-desc { font-size: 13.5px; color: var(--text-2); line-height: 1.6; }
+.lp-role-note {
+  font-size: 15px; color: var(--text-2); line-height: 1.7;
+  max-width: 640px; font-style: italic;
+}
 
 /* Origin */
 .lp-origin-layout {
@@ -694,10 +856,11 @@ const image = '/assets/og-default.svg';
   gap: 16px;
 }
 .lp-chapter-card {
-  background: oklch(0.09 0.008 240 / 0.6);
+  background: var(--bg);
   border: 1px solid var(--line-s); border-radius: 12px;
   padding: 28px; transition: border-color 0.2s;
 }
+.lp-section-alt .lp-chapter-card { background: oklch(0.09 0.008 240 / 0.6); }
 .lp-chapter-card:hover { border-color: var(--amber-d); }
 .lp-chapter-num {
   font-family: var(--mono); font-size: 11px; font-weight: 500;
@@ -708,21 +871,6 @@ const image = '/assets/og-default.svg';
   letter-spacing: -0.01em; line-height: 1.3; margin-bottom: 10px;
 }
 .lp-chapter-desc { font-size: 13.5px; color: var(--text-2); line-height: 1.6; }
-
-/* Strategic benefits */
-.lp-strat-grid {
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 16px;
-}
-.lp-strat-card {
-  border-left: 2px solid var(--amber-d);
-  padding: 20px 24px;
-  background: var(--bg-2); border-radius: 0 10px 10px 0;
-}
-.lp-strat-title {
-  font-family: var(--sans); font-size: 15px; font-weight: 600; margin-bottom: 8px;
-}
-.lp-strat-desc { font-size: 13.5px; color: var(--text-2); line-height: 1.6; }
 
 /* Offer */
 .lp-section-offer { background: var(--bg-2); }
@@ -818,6 +966,22 @@ const image = '/assets/og-default.svg';
   padding: 0 24px 18px; border-top: 1px solid var(--line-s);
   padding-top: 14px;
 }
+
+/* Closing section */
+.lp-section-close { text-align: center; }
+.lp-h2-center {
+  font-family: var(--serif);
+  font-size: clamp(26px, 3.5vw, 44px);
+  font-weight: 700; line-height: 1.15;
+  letter-spacing: -0.02em; margin-bottom: 24px;
+  max-width: 700px; margin-left: auto; margin-right: auto;
+}
+.lp-h2-center em { font-style: italic; color: var(--amber); }
+.lp-close-sub {
+  font-size: 16px; color: var(--text-2); line-height: 1.7;
+  max-width: 580px; margin: 0 auto 32px;
+}
+.lp-close-content { display: flex; flex-direction: column; align-items: center; }
 
 /* Footer */
 .lp-footer {
