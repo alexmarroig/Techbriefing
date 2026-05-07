@@ -130,7 +130,7 @@ function Sidebar(){
       <div style={{background:'var(--bg-2)',border:'1px solid oklch(0.80 0.14 62/.2)',borderRadius:12,padding:20}}>
         <div style={{fontFamily:'var(--mono)',fontSize:10,fontWeight:500,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--amber)',marginBottom:10}}>Ebook em destaque</div>
         <div style={{fontFamily:'var(--serif)',fontSize:17,fontWeight:700,letterSpacing:'-.01em',lineHeight:1.3,marginBottom:8}}>Agentes de IA para Negócios</div>
-        <div style={{fontSize:13,color:'var(--text-2)',lineHeight:1.6,marginBottom:14}}>126 páginas de implementação prática. R$ 29,90.</div>
+        <div style={{fontSize:13,color:'var(--text-2)',lineHeight:1.6,marginBottom:14}}>126 páginas de implementação prática. R$ 37,00.</div>
         <a href="/ebook-agentes-ia" className="btn btn-fill" style={{fontSize:12,padding:'9px 14px',justifyContent:'center',width:'100%',borderRadius:8}}>Ver ebook →</a>
       </div>
     </div>
