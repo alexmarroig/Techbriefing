@@ -159,15 +159,17 @@ const image = '/assets/og-default.svg';
         </div>
       </div>
       <div class="lp-hero-mockup">
-        <div class="lp-book-cover">
+        <div class="lp-book-3d">
           <div class="lp-book-glow" aria-hidden="true"></div>
-          <div class="lp-book-inner">
-            <div class="lp-book-mark">IA</div>
-            <div class="lp-book-line"></div>
-            <div class="lp-book-title">{CONFIG.bookTitle}</div>
-            <div class="lp-book-sub">{CONFIG.subtitle}</div>
-            <div class="lp-book-line"></div>
-            <div class="lp-book-author">{CONFIG.authorBrand}</div>
+          <img src="/images/ebook-cover.png" alt="Capa do ebook Agentes de IA para Negócios" class="lp-cover-img" width="380" height="540" />
+          <div class="lp-cover-circuit" aria-hidden="true">
+            <svg viewBox="0 0 380 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="40" cy="80" r="3" fill="#e84393" opacity="0.6"><animate attributeName="opacity" values="0.3;0.8;0.3" dur="3s" repeatCount="indefinite"/></circle>
+              <circle cx="340" cy="120" r="2.5" fill="#e84393" opacity="0.4"><animate attributeName="opacity" values="0.2;0.7;0.2" dur="4s" repeatCount="indefinite"/></circle>
+              <circle cx="60" cy="460" r="2" fill="#e84393" opacity="0.5"><animate attributeName="opacity" values="0.3;0.9;0.3" dur="2.5s" repeatCount="indefinite"/></circle>
+              <path d="M40,80 L120,80 L120,140" stroke="#e84393" stroke-width="0.8" opacity="0.25"><animate attributeName="opacity" values="0.1;0.4;0.1" dur="3s" repeatCount="indefinite"/></path>
+              <path d="M340,120 L280,120 L280,200" stroke="#e84393" stroke-width="0.8" opacity="0.2"><animate attributeName="opacity" values="0.1;0.35;0.1" dur="4s" repeatCount="indefinite"/></path>
+            </svg>
           </div>
         </div>
       </div>
@@ -196,7 +198,16 @@ const image = '/assets/og-default.svg';
 </div>
 
 <!-- ═══ O PROBLEMA ═══ -->
-<section class="lp-section">
+<section class="lp-section" style="position:relative;overflow:hidden">
+  <div class="lp-circuit-bg" aria-hidden="true">
+    <svg width="100%" height="100%" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="200" x2="200" y2="200" stroke="oklch(0.80 0.14 62/.08)" stroke-width="1"/><line x1="200" y1="200" x2="200" y2="400" stroke="oklch(0.80 0.14 62/.08)" stroke-width="1"/>
+      <line x1="1000" y1="100" x2="1200" y2="100" stroke="oklch(0.80 0.14 62/.06)" stroke-width="1"/><line x1="1000" y1="100" x2="1000" y2="350" stroke="oklch(0.80 0.14 62/.06)" stroke-width="1"/>
+      <circle cx="200" cy="200" r="4" fill="oklch(0.80 0.14 62/.15)"><animate attributeName="r" values="3;6;3" dur="4s" repeatCount="indefinite"/></circle>
+      <circle cx="1000" cy="100" r="3" fill="oklch(0.80 0.14 62/.12)"><animate attributeName="r" values="2;5;2" dur="5s" repeatCount="indefinite"/></circle>
+      <circle cx="1000" cy="350" r="3" fill="oklch(0.80 0.14 62/.1)"><animate attributeName="r" values="2;4;2" dur="3.5s" repeatCount="indefinite"/></circle>
+    </svg>
+  </div>
   <div class="lp-wrap">
     <div class="lp-section-header">
       <span class="lp-section-num">01</span>
@@ -267,7 +278,22 @@ const image = '/assets/og-default.svg';
 </section>
 
 <!-- ═══ DIFERENCIAL: OS 6 BLOCOS ═══ -->
-<section class="lp-section lp-section-alt">
+<section class="lp-section lp-section-alt" style="position:relative;overflow:hidden">
+  <div class="lp-neural-bg" aria-hidden="true">
+    <svg width="100%" height="100%" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g opacity="0.12">
+        <circle cx="150" cy="200" r="40" stroke="oklch(0.80 0.14 62)" stroke-width="0.5" fill="none"/><circle cx="150" cy="200" r="5" fill="oklch(0.80 0.14 62/.3)"><animate attributeName="r" values="4;7;4" dur="3s" repeatCount="indefinite"/></circle>
+        <circle cx="400" cy="100" r="30" stroke="oklch(0.80 0.14 62)" stroke-width="0.5" fill="none"/><circle cx="400" cy="100" r="4" fill="oklch(0.80 0.14 62/.25)"/>
+        <circle cx="350" cy="350" r="35" stroke="oklch(0.80 0.14 62)" stroke-width="0.5" fill="none"/><circle cx="350" cy="350" r="4" fill="oklch(0.80 0.14 62/.2)"/>
+        <circle cx="850" cy="150" r="45" stroke="oklch(0.80 0.14 62)" stroke-width="0.5" fill="none"/><circle cx="850" cy="150" r="5" fill="oklch(0.80 0.14 62/.2)"><animate attributeName="r" values="3;6;3" dur="4s" repeatCount="indefinite"/></circle>
+        <circle cx="1050" cy="400" r="30" stroke="oklch(0.80 0.14 62)" stroke-width="0.5" fill="none"/><circle cx="1050" cy="400" r="4" fill="oklch(0.80 0.14 62/.2)"/>
+        <circle cx="600" cy="600" r="25" stroke="oklch(0.80 0.14 62)" stroke-width="0.5" fill="none"/>
+        <line x1="150" y1="200" x2="400" y2="100" stroke="oklch(0.80 0.14 62)" stroke-width="0.4"/><line x1="150" y1="200" x2="350" y2="350" stroke="oklch(0.80 0.14 62)" stroke-width="0.4"/>
+        <line x1="400" y1="100" x2="850" y2="150" stroke="oklch(0.80 0.14 62)" stroke-width="0.4"/><line x1="350" y1="350" x2="600" y2="600" stroke="oklch(0.80 0.14 62)" stroke-width="0.4"/>
+        <line x1="850" y1="150" x2="1050" y2="400" stroke="oklch(0.80 0.14 62)" stroke-width="0.4"/><line x1="1050" y1="400" x2="600" y2="600" stroke="oklch(0.80 0.14 62)" stroke-width="0.3"/>
+      </g>
+    </svg>
+  </div>
   <div class="lp-wrap">
     <div class="lp-section-header">
       <span class="lp-section-num">04</span>
@@ -297,7 +323,15 @@ const image = '/assets/og-default.svg';
 </section>
 
 <!-- ═══ TRANSFORMAÇÃO: O PAPEL HUMANO ═══ -->
-<section class="lp-section">
+<section class="lp-section" style="position:relative;overflow:hidden">
+  <div class="lp-flow-bg" aria-hidden="true">
+    <svg width="100%" height="100%" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,250 Q300,100 600,250 T1200,250" stroke="oklch(0.80 0.14 62/.08)" stroke-width="1.5" fill="none"/>
+      <path d="M0,300 Q300,150 600,300 T1200,300" stroke="oklch(0.80 0.14 62/.05)" stroke-width="1" fill="none"/>
+      <circle r="4" fill="oklch(0.80 0.14 62/.3)"><animateMotion dur="8s" repeatCount="indefinite" path="M0,250 Q300,100 600,250 T1200,250"/></circle>
+      <circle r="3" fill="oklch(0.80 0.14 62/.2)"><animateMotion dur="10s" repeatCount="indefinite" path="M0,300 Q300,150 600,300 T1200,300"/></circle>
+    </svg>
+  </div>
   <div class="lp-wrap">
     <div class="lp-section-header">
       <span class="lp-section-num">05</span>
@@ -375,14 +409,9 @@ const image = '/assets/og-default.svg';
   <div class="lp-wrap">
     <div class="lp-offer-box">
       <div class="lp-offer-left">
-        <div class="lp-book-cover lp-book-small">
-          <div class="lp-book-inner">
-            <div class="lp-book-mark">IA</div>
-            <div class="lp-book-line"></div>
-            <div class="lp-book-title">{CONFIG.bookTitle}</div>
-            <div class="lp-book-line"></div>
-            <div class="lp-book-author">{CONFIG.authorBrand}</div>
-          </div>
+        <div class="lp-offer-cover-wrap">
+          <img src="/images/ebook-spread.png" alt="Ebook aberto — capa e contracapa" class="lp-offer-spread" width="600" height="380" />
+          <div class="lp-offer-cover-glow" aria-hidden="true"></div>
         </div>
       </div>
       <div class="lp-offer-right">
@@ -446,7 +475,16 @@ const image = '/assets/og-default.svg';
 </section>
 
 <!-- ═══ FECHAMENTO ═══ -->
-<section class="lp-section lp-section-alt lp-section-close">
+<section class="lp-section lp-section-alt lp-section-close" style="position:relative;overflow:hidden">
+  <div class="lp-hex-bg" aria-hidden="true">
+    <svg width="100%" height="100%" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g opacity="0.08" transform="translate(100,50)"><polygon points="30,0 60,17 60,52 30,69 0,52 0,17" stroke="oklch(0.80 0.14 62)" stroke-width="0.8" fill="none"/></g>
+      <g opacity="0.06" transform="translate(200,120)"><polygon points="30,0 60,17 60,52 30,69 0,52 0,17" stroke="oklch(0.80 0.14 62)" stroke-width="0.8" fill="none"/></g>
+      <g opacity="0.1" transform="translate(900,30)"><polygon points="30,0 60,17 60,52 30,69 0,52 0,17" stroke="oklch(0.80 0.14 62)" stroke-width="0.8" fill="none"/></g>
+      <g opacity="0.07" transform="translate(1000,180)"><polygon points="30,0 60,17 60,52 30,69 0,52 0,17" stroke="oklch(0.80 0.14 62)" stroke-width="0.8" fill="none"/></g>
+      <g opacity="0.05" transform="translate(550,250)"><polygon points="30,0 60,17 60,52 30,69 0,52 0,17" stroke="oklch(0.80 0.14 62)" stroke-width="0.8" fill="none"/></g>
+    </svg>
+  </div>
   <div class="lp-wrap">
     <div class="lp-close-content">
       <h2 class="lp-h2-center">Quem usa IA como chat melhora a eficiência. Quem usa agentes <em>transforma a operação.</em></h2>
@@ -611,43 +649,62 @@ const image = '/assets/og-default.svg';
 }
 .lp-spec-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--amber-d); }
 
-/* Book mockup */
-.lp-book-cover {
-  width: 280px; aspect-ratio: 3/4;
-  background: linear-gradient(145deg, oklch(0.14 0.02 62 / 0.6), oklch(0.09 0.008 240));
-  border: 1px solid oklch(0.80 0.14 62 / 0.2);
-  border-radius: 4px 16px 16px 4px;
-  position: relative; overflow: hidden;
-  box-shadow: 0 32px 80px oklch(0 0 0 / 0.5), 0 0 60px oklch(0.80 0.14 62 / 0.08);
+/* Book 3D with real cover */
+.lp-book-3d {
+  position: relative;
+  width: 340px;
+  perspective: 1200px;
 }
-.lp-book-glow {
-  position: absolute; top: -40%; left: -20%; width: 140%; height: 100%;
-  background: radial-gradient(ellipse at 30% 20%, oklch(0.80 0.14 62 / 0.12), transparent 60%);
+.lp-book-3d .lp-book-glow {
+  position: absolute; top: -20%; left: -20%; width: 140%; height: 140%;
+  background: radial-gradient(ellipse at 40% 30%, oklch(0.80 0.14 62 / 0.12), transparent 60%);
+  pointer-events: none; z-index: 0;
 }
-.lp-book-inner {
+.lp-cover-img {
   position: relative; z-index: 1;
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  height: 100%; padding: 40px 28px; gap: 16px; text-align: center;
+  width: 100%; height: auto;
+  border-radius: 4px 14px 14px 4px;
+  box-shadow:
+    -8px 8px 0 oklch(0.10 0.01 240),
+    0 32px 80px oklch(0 0 0 / 0.5),
+    0 0 60px oklch(0.80 0.14 62 / 0.06);
+  transition: transform 0.5s ease;
 }
-.lp-book-mark {
-  font-family: var(--serif); font-size: 48px; font-weight: 700;
-  color: var(--amber); line-height: 1;
+.lp-book-3d:hover .lp-cover-img {
+  transform: rotateY(-4deg) scale(1.02);
 }
-.lp-book-line { width: 48px; height: 1px; background: var(--amber); opacity: 0.4; }
-.lp-book-title {
-  font-family: var(--serif); font-size: 18px; font-weight: 700;
-  line-height: 1.25; letter-spacing: -0.01em; color: var(--text);
+.lp-cover-circuit {
+  position: absolute; inset: 0; z-index: 2; pointer-events: none;
 }
-.lp-book-sub {
-  font-family: var(--sans); font-size: 12px; color: var(--text-2);
-  font-weight: 300;
+.lp-cover-circuit svg { width: 100%; height: 100%; }
+
+/* Offer cover spread */
+.lp-offer-cover-wrap {
+  position: relative;
 }
-.lp-book-author {
-  font-family: var(--mono); font-size: 9px; font-weight: 500;
-  letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-3);
+.lp-offer-spread {
+  width: 100%; max-width: 560px; height: auto;
+  border-radius: 12px;
+  box-shadow: 0 24px 60px oklch(0 0 0 / 0.4), 0 0 40px oklch(0.80 0.14 62 / 0.05);
 }
-.lp-book-small { width: 220px; }
-@media(max-width:900px){ .lp-book-cover { width: 200px; } .lp-book-small { width: 180px; } }
+.lp-offer-cover-glow {
+  position: absolute; inset: -20%; z-index: -1;
+  background: radial-gradient(ellipse, oklch(0.80 0.14 62 / 0.06), transparent 70%);
+  border-radius: 50%;
+}
+
+/* Section SVG backgrounds */
+.lp-circuit-bg, .lp-neural-bg, .lp-flow-bg, .lp-hex-bg {
+  position: absolute; inset: 0; pointer-events: none; z-index: 0;
+}
+.lp-circuit-bg svg, .lp-neural-bg svg, .lp-flow-bg svg, .lp-hex-bg svg {
+  width: 100%; height: 100%;
+}
+
+@media(max-width:900px){
+  .lp-book-3d { width: 240px; }
+  .lp-offer-spread { max-width: 400px; }
+}
 
 /* Trust strip */
 .lp-trust {
