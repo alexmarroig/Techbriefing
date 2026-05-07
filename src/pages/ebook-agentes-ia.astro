@@ -1,0 +1,807 @@
+---
+import '../styles/global.css';
+
+/* ═══════════════════════════════════════════════════════════
+   CONFIG — Edite aqui todos os dados comerciais da página
+   ═══════════════════════════════════════════════════════════ */
+const CONFIG = {
+  bookTitle: 'Agentes de IA para Negócios',
+  subtitle: 'Do chat à execução operacional',
+  authorBrand: 'Nexora Systems',
+  portalBrand: 'Tech Briefing',
+
+  fullPrice: 'R$ 67',
+  promoPrice: 'R$ 47',
+  promoLabel: 'Lançamento',
+
+  primaryBuyLink: '#',
+  secondaryBuyLink: '#',
+
+  heroBadge: 'Ebook — Estratégia & Operação',
+  heroHeadline: 'Pare de testar IA no escuro.',
+  heroSub: 'Descubra onde agentes de IA realmente geram resultado no seu negócio — com frameworks claros, casos reais e um roteiro prático para sair da teoria.',
+
+  pages: '180',
+  format: 'PDF + EPUB',
+  updated: 'Abril 2026',
+  language: 'Português',
+
+  guaranteeText: 'Se em 7 dias você sentir que o conteúdo não entregou o que prometeu, devolvemos 100% do valor. Sem perguntas.',
+
+  audienceBullets: [
+    { icon: '🎯', title: 'Fundadores e gestores', desc: 'Que querem aplicar IA em operações reais sem depender de hype.' },
+    { icon: '⚡', title: 'Freelancers e consultores', desc: 'Que precisam entregar mais com menos — e cobrar por isso.' },
+    { icon: '🔧', title: 'Operadores e analistas', desc: 'Que lidam com tarefas repetitivas e querem automatizar com método.' },
+    { icon: '🚀', title: 'Criadores e empreendedores digitais', desc: 'Que buscam escalar sem aumentar equipe.' },
+    { icon: '💡', title: 'Profissionais de tecnologia', desc: 'Que querem entender agentes de IA além do tutorial básico.' },
+  ],
+
+  benefits: [
+    'Mapeie processos onde agentes reduzem trabalho manual de verdade',
+    'Identifique oportunidades de automação que você está ignorando',
+    'Estruture seus primeiros fluxos sem precisar programar',
+    'Entenda qual tipo de agente serve para cada situação',
+    'Evite desperdício com ferramentas que não fazem sentido pro seu caso',
+    'Aplique frameworks testados em vendas, suporte, conteúdo e operações',
+    'Saia do hype e entre na execução com clareza estratégica',
+    'Ganhe vantagem competitiva antes que seu mercado se adapte',
+  ],
+
+  chapters: [
+    { num: '01', title: 'O que são agentes de IA — e por que agora', desc: 'Fundamentos sem enrolação. O que mudou, o que funciona e por que esse é o momento certo.' },
+    { num: '02', title: 'Mapeando seu negócio para agentes', desc: 'Framework para identificar onde agentes geram alavancagem real nas suas operações.' },
+    { num: '03', title: 'Os 5 tipos de agente mais úteis', desc: 'Classificação prática por função: execução, pesquisa, criação, análise e orquestração.' },
+    { num: '04', title: 'Ferramentas por nível técnico', desc: 'De no-code a código: qual stack usar dependendo do seu perfil e do seu time.' },
+    { num: '05', title: 'Do piloto ao processo em produção', desc: 'Como testar rápido, validar resultado e transformar um experimento em operação.' },
+    { num: '06', title: 'Cases reais por setor e função', desc: 'Vendas, suporte, conteúdo, ops — exemplos concretos com resultados mensuráveis.' },
+    { num: '07', title: 'O próximo passo da automação inteligente', desc: 'Tendências, riscos e como se posicionar para o que vem depois.' },
+  ],
+
+  bonuses: [
+    { title: 'Checklist de mapeamento de processos', desc: 'Template prático para identificar onde agentes fazem sentido no seu negócio.' },
+    { title: 'Glossário de agentes de IA', desc: '40+ termos explicados de forma direta — sem jargão desnecessário.' },
+  ],
+
+  faq: [
+    { q: 'O ebook é digital?', a: 'Sim. Você recebe acesso imediato em PDF e EPUB — leia em qualquer dispositivo.' },
+    { q: 'Como recebo o acesso?', a: 'Imediatamente após a confirmação do pagamento, por e-mail. Sem espera.' },
+    { q: 'Posso ler no celular?', a: 'Sim. O formato EPUB é otimizado para leitura em celular, tablet e e-reader.' },
+    { q: 'Tem versão impressa?', a: 'Não no momento. Apenas digital (PDF + EPUB).' },
+    { q: 'É indicado para iniciantes?', a: 'Sim. O conteúdo parte do zero e avança com clareza. Não exige conhecimento técnico prévio.' },
+    { q: 'Preciso saber programar?', a: 'Não. O ebook cobre desde opções no-code até abordagens com código, mas programação não é pré-requisito.' },
+    { q: 'O conteúdo é teórico ou prático?', a: 'Prático. Cada capítulo tem frameworks, exemplos e passos aplicáveis. A teoria existe só para dar contexto.' },
+    { q: 'Tem garantia?', a: 'Sim. Garantia incondicional de 7 dias. Se não gostar, devolvemos 100%.' },
+  ],
+};
+
+const title = `${CONFIG.bookTitle} — Ebook por ${CONFIG.authorBrand}`;
+const description = 'Descubra onde agentes de IA realmente geram resultado no seu negócio. Frameworks, casos reais e um roteiro prático. Ebook por Nexora Systems.';
+const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url).toString();
+const image = '/assets/og-default.svg';
+---
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={description} />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#121417" />
+  <link rel="canonical" href={canonical} />
+  <meta property="og:type" content="product" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:image" content={new URL(image, Astro.site ?? Astro.url).toString()} />
+  <meta property="og:site_name" content={CONFIG.portalBrand} />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Space+Grotesk:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <title>{title}</title>
+</head>
+<body>
+
+<!-- ═══ TOP BAR ═══ -->
+<div class="lp-topbar">
+  <div class="lp-wrap">
+    <a href="/" class="lp-topbar-logo">
+      <div class="lp-pip"></div>
+      <span>{CONFIG.portalBrand}</span>
+    </a>
+    <span class="lp-topbar-label">{CONFIG.authorBrand}</span>
+  </div>
+</div>
+
+<!-- ═══ HERO ═══ -->
+<section class="lp-hero">
+  <div class="lp-hero-grid-bg" aria-hidden="true"></div>
+  <div class="lp-hero-glow" aria-hidden="true"></div>
+  <div class="lp-wrap">
+    <div class="lp-hero-layout">
+      <div class="lp-hero-content">
+        <div class="lp-badge">{CONFIG.heroBadge}</div>
+        <h1 class="lp-h1">{CONFIG.heroHeadline}</h1>
+        <p class="lp-hero-sub">{CONFIG.heroSub}</p>
+        <div class="lp-hero-price">
+          <span class="lp-price-old">{CONFIG.fullPrice}</span>
+          <span class="lp-price-current">{CONFIG.promoPrice}</span>
+          <span class="lp-price-label">{CONFIG.promoLabel}</span>
+        </div>
+        <div class="lp-hero-actions">
+          <a href={CONFIG.primaryBuyLink} class="lp-btn-primary">Comprar agora →</a>
+          <a href="#aprender" class="lp-btn-ghost">Ver o que você vai aprender</a>
+        </div>
+        <div class="lp-hero-specs">
+          {[`${CONFIG.pages} páginas`, CONFIG.format, `Atualizado: ${CONFIG.updated}`].map(s => (
+            <span class="lp-spec"><span class="lp-spec-dot"></span>{s}</span>
+          ))}
+        </div>
+      </div>
+      <div class="lp-hero-mockup">
+        <div class="lp-book-cover">
+          <div class="lp-book-glow" aria-hidden="true"></div>
+          <div class="lp-book-inner">
+            <div class="lp-book-mark">IA</div>
+            <div class="lp-book-line"></div>
+            <div class="lp-book-title">{CONFIG.bookTitle}</div>
+            <div class="lp-book-sub">{CONFIG.subtitle}</div>
+            <div class="lp-book-line"></div>
+            <div class="lp-book-author">{CONFIG.authorBrand}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TRUST STRIP ═══ -->
+<div class="lp-trust">
+  <div class="lp-wrap">
+    <div class="lp-trust-inner">
+      {[
+        { ico: '📄', label: 'PDF + EPUB inclusos' },
+        { ico: '⚡', label: 'Acesso imediato' },
+        { ico: '🔒', label: 'Pagamento seguro' },
+        { ico: '🔄', label: 'Garantia de 7 dias' },
+        { ico: '🇧🇷', label: 'Feito no Brasil' },
+      ].map(t => (
+        <div class="lp-trust-item">
+          <span class="lp-trust-ico">{t.ico}</span>
+          <span>{t.label}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
+<!-- ═══ PARA QUEM É ═══ -->
+<section class="lp-section">
+  <div class="lp-wrap">
+    <div class="lp-section-header">
+      <span class="lp-section-num">01</span>
+      <div class="lp-section-rule"></div>
+      <span class="lp-section-label">Para quem é</span>
+    </div>
+    <h2 class="lp-h2">Este ebook é para quem quer <em>aplicar</em>, não só entender.</h2>
+    <div class="lp-audience-grid">
+      {CONFIG.audienceBullets.map(a => (
+        <div class="lp-audience-card">
+          <div class="lp-audience-ico">{a.icon}</div>
+          <div class="lp-audience-title">{a.title}</div>
+          <div class="lp-audience-desc">{a.desc}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- ═══ O QUE VOCÊ VAI APRENDER ═══ -->
+<section class="lp-section lp-section-alt" id="aprender">
+  <div class="lp-wrap">
+    <div class="lp-section-header">
+      <span class="lp-section-num">02</span>
+      <div class="lp-section-rule"></div>
+      <span class="lp-section-label">O que você vai aprender</span>
+    </div>
+    <h2 class="lp-h2">Clareza para agir. <em>Método para executar.</em></h2>
+    <div class="lp-benefits-grid">
+      {CONFIG.benefits.map((b, i) => (
+        <div class="lp-benefit-row">
+          <span class="lp-benefit-check">✓</span>
+          <span>{b}</span>
+        </div>
+      ))}
+    </div>
+    <div class="lp-cta-mid">
+      <a href={CONFIG.primaryBuyLink} class="lp-btn-primary">Quero esse ebook →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ POR QUE A NEXORA CRIOU ═══ -->
+<section class="lp-section">
+  <div class="lp-wrap">
+    <div class="lp-section-header">
+      <span class="lp-section-num">03</span>
+      <div class="lp-section-rule"></div>
+      <span class="lp-section-label">A origem</span>
+    </div>
+    <div class="lp-origin-layout">
+      <div>
+        <h2 class="lp-h2">Por que a {CONFIG.authorBrand} criou este guia.</h2>
+        <div class="lp-origin-body">
+          <p>O mercado de IA está cheio de promessas. Mas entre o hype e a realidade, existe um vácuo enorme: <strong>como aplicar agentes de IA em negócios reais, com processos reais, para pessoas reais.</strong></p>
+          <p>A {CONFIG.authorBrand} nasceu para preencher esse espaço. Testamos ferramentas, implementamos fluxos e documentamos o que funciona — sem filtro, sem patrocínio, sem atalho.</p>
+          <p>Este ebook é o resultado dessa experiência condensada em <strong>{CONFIG.pages} páginas</strong> de frameworks, casos e decisões práticas.</p>
+        </div>
+      </div>
+      <div class="lp-origin-card">
+        <div class="lp-origin-card-pip"></div>
+        <div class="lp-origin-card-name">{CONFIG.authorBrand}</div>
+        <div class="lp-origin-card-desc">Tecnologia, sistemas e inteligência artificial aplicada ao mundo real. Criamos conteúdo, ferramentas e produtos para quem quer transformar IA em resultado.</div>
+        <a href="/sobre" class="lp-arrow-link">Conhecer a Nexora →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CAPÍTULOS ═══ -->
+<section class="lp-section lp-section-alt">
+  <div class="lp-wrap">
+    <div class="lp-section-header">
+      <span class="lp-section-num">04</span>
+      <div class="lp-section-rule"></div>
+      <span class="lp-section-label">Capítulos</span>
+    </div>
+    <h2 class="lp-h2">{CONFIG.pages} páginas. 7 capítulos. <em>Zero enrolação.</em></h2>
+    <div class="lp-chapters-grid">
+      {CONFIG.chapters.map(ch => (
+        <div class="lp-chapter-card">
+          <div class="lp-chapter-num">{ch.num}</div>
+          <div class="lp-chapter-title">{ch.title}</div>
+          <div class="lp-chapter-desc">{ch.desc}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- ═══ BENEFÍCIOS ESTRATÉGICOS ═══ -->
+<section class="lp-section">
+  <div class="lp-wrap">
+    <div class="lp-section-header">
+      <span class="lp-section-num">05</span>
+      <div class="lp-section-rule"></div>
+      <span class="lp-section-label">Vantagem prática</span>
+    </div>
+    <h2 class="lp-h2">Depois de ler, você vai saber <em>exatamente</em> onde agir.</h2>
+    <div class="lp-strat-grid">
+      {[
+        { title: 'Mapeie trabalho repetitivo', desc: 'Identifique quais tarefas do seu dia a dia podem ser delegadas para agentes — com critérios claros.' },
+        { title: 'Encontre oportunidades escondidas', desc: 'Veja onde agentes geram alavancagem real que você ainda não percebeu no seu negócio.' },
+        { title: 'Escolha as ferramentas certas', desc: 'Pare de perder tempo testando tudo. Saiba qual stack serve para o seu nível técnico e contexto.' },
+        { title: 'Aplique com método', desc: 'Siga frameworks testados para ir do piloto ao processo em produção sem improvisar.' },
+        { title: 'Evite armadilhas comuns', desc: 'Saiba o que não funciona antes de investir tempo e dinheiro na direção errada.' },
+        { title: 'Ganhe vantagem competitiva', desc: 'Posicione-se agora, enquanto a maioria ainda está só assistindo.' },
+      ].map(s => (
+        <div class="lp-strat-card">
+          <div class="lp-strat-title">{s.title}</div>
+          <div class="lp-strat-desc">{s.desc}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- ═══ OFERTA ═══ -->
+<section class="lp-section lp-section-offer" id="oferta">
+  <div class="lp-wrap">
+    <div class="lp-offer-box">
+      <div class="lp-offer-left">
+        <div class="lp-book-cover lp-book-small">
+          <div class="lp-book-inner">
+            <div class="lp-book-mark">IA</div>
+            <div class="lp-book-line"></div>
+            <div class="lp-book-title">{CONFIG.bookTitle}</div>
+            <div class="lp-book-line"></div>
+            <div class="lp-book-author">{CONFIG.authorBrand}</div>
+          </div>
+        </div>
+      </div>
+      <div class="lp-offer-right">
+        <div class="lp-badge">{CONFIG.promoLabel}</div>
+        <h2 class="lp-offer-title">{CONFIG.bookTitle}</h2>
+        <p class="lp-offer-sub">{CONFIG.subtitle}</p>
+        <ul class="lp-offer-includes">
+          <li><span class="lp-oi-check">✓</span> Ebook completo — {CONFIG.pages} páginas</li>
+          <li><span class="lp-oi-check">✓</span> Formatos PDF + EPUB</li>
+          <li><span class="lp-oi-check">✓</span> Acesso imediato por e-mail</li>
+          <li><span class="lp-oi-check">✓</span> Atualizações futuras incluídas</li>
+          {CONFIG.bonuses.map(b => (
+            <li><span class="lp-oi-check lp-oi-bonus">+</span> <strong>Bônus:</strong> {b.title}</li>
+          ))}
+        </ul>
+        <div class="lp-offer-price">
+          <span class="lp-price-old-lg">{CONFIG.fullPrice}</span>
+          <span class="lp-price-current-lg">{CONFIG.promoPrice}</span>
+        </div>
+        <a href={CONFIG.primaryBuyLink} class="lp-btn-primary lp-btn-full">Comprar agora →</a>
+        <div class="lp-offer-guarantee">
+          <span class="lp-guarantee-ico">🛡️</span>
+          <span>{CONFIG.guaranteeText}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section class="lp-section">
+  <div class="lp-wrap">
+    <div class="lp-section-header">
+      <span class="lp-section-num">06</span>
+      <div class="lp-section-rule"></div>
+      <span class="lp-section-label">Perguntas frequentes</span>
+    </div>
+    <h2 class="lp-h2">Dúvidas? <em>Respostas.</em></h2>
+    <div class="lp-faq-list">
+      {CONFIG.faq.map(f => (
+        <details class="lp-faq-item">
+          <summary class="lp-faq-q">{f.q}</summary>
+          <div class="lp-faq-a">{f.a}</div>
+        </details>
+      ))}
+    </div>
+    <div class="lp-cta-mid">
+      <a href={CONFIG.primaryBuyLink} class="lp-btn-primary">Garantir meu ebook →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="lp-footer">
+  <div class="lp-wrap">
+    <div class="lp-footer-inner">
+      <div>
+        <div class="lp-footer-brand">
+          <div class="lp-pip"></div>
+          <span>{CONFIG.authorBrand}</span>
+        </div>
+        <p class="lp-footer-desc">Tecnologia, sistemas e inteligência artificial aplicada ao mundo real.</p>
+      </div>
+      <div class="lp-footer-links">
+        <a href={CONFIG.primaryBuyLink}>Comprar ebook</a>
+        <a href="/">Tech Briefing</a>
+        <a href="/sobre">Sobre</a>
+        <a href="/contato">Contato</a>
+      </div>
+    </div>
+    <div class="lp-footer-bottom">
+      <span>&copy; 2026 {CONFIG.authorBrand}. Todos os direitos reservados.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
+
+<style>
+/* ═══ LANDING PAGE SCOPED STYLES ═══ */
+
+/* Layout */
+.lp-wrap { max-width: 1120px; margin: 0 auto; padding: 0 var(--pad, 40px); }
+@media(max-width:640px){ .lp-wrap { padding: 0 20px; } }
+
+/* Top bar */
+.lp-topbar {
+  position: sticky; top: 0; z-index: 200;
+  background: oklch(0.09 0.008 240 / 0.9);
+  backdrop-filter: blur(24px) saturate(180%);
+  border-bottom: 1px solid var(--line-s);
+}
+.lp-topbar .lp-wrap {
+  height: 52px; display: flex; align-items: center; justify-content: space-between;
+}
+.lp-topbar-logo {
+  font-family: var(--serif); font-size: 17px; font-weight: 600;
+  display: flex; align-items: center; gap: 10px; color: var(--text);
+}
+.lp-topbar-label {
+  font-family: var(--mono); font-size: 10.5px; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-3);
+}
+.lp-pip {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--amber);
+  box-shadow: 0 0 10px var(--amber), 0 0 20px oklch(0.80 0.14 62 / 0.4);
+}
+
+/* Hero */
+.lp-hero {
+  position: relative; overflow: hidden;
+  padding: 100px 0 80px;
+}
+.lp-hero-grid-bg {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(oklch(0.22 0.01 240 / 0.35) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(0.22 0.01 240 / 0.35) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 90% 100% at 50% 0%, black 0%, transparent 100%);
+}
+.lp-hero-glow {
+  position: absolute; top: -300px; left: 50%; transform: translateX(-50%);
+  width: 1000px; height: 700px; border-radius: 50%;
+  background: radial-gradient(ellipse, oklch(0.80 0.14 62 / 0.06) 0%, transparent 65%);
+  pointer-events: none;
+}
+.lp-hero-layout {
+  display: grid; grid-template-columns: 1fr 380px; gap: 80px; align-items: center;
+  position: relative; z-index: 1;
+}
+@media(max-width:900px){
+  .lp-hero-layout { grid-template-columns: 1fr; gap: 48px; }
+  .lp-hero-mockup { order: -1; display: flex; justify-content: center; }
+  .lp-hero { padding: 64px 0 56px; }
+}
+.lp-badge {
+  display: inline-block;
+  font-family: var(--mono); font-size: 10.5px; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 5px 14px; border-radius: 100px;
+  border: 1px solid var(--amber-d); color: var(--amber);
+  margin-bottom: 24px;
+}
+.lp-h1 {
+  font-family: var(--serif);
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 700; line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+}
+.lp-hero-sub {
+  font-size: 17px; line-height: 1.7;
+  color: var(--text-2); font-weight: 300;
+  max-width: 520px; margin-bottom: 32px;
+}
+.lp-hero-price {
+  display: flex; align-items: baseline; gap: 12px;
+  margin-bottom: 28px;
+}
+.lp-price-old {
+  font-family: var(--mono); font-size: 15px;
+  color: var(--text-4); text-decoration: line-through;
+}
+.lp-price-current {
+  font-family: var(--serif); font-size: 40px;
+  font-weight: 700; color: var(--amber); letter-spacing: -0.02em;
+}
+.lp-price-label {
+  font-family: var(--mono); font-size: 10px; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--bg); background: var(--amber);
+  padding: 3px 10px; border-radius: 100px;
+}
+.lp-hero-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 32px; }
+.lp-btn-primary {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  font-family: var(--sans); font-size: 15px; font-weight: 600;
+  padding: 14px 32px; border-radius: 100px; cursor: pointer;
+  background: var(--amber); color: oklch(0.09 0.008 240);
+  border: none; transition: all 0.2s; text-decoration: none;
+}
+.lp-btn-primary:hover { background: oklch(0.86 0.14 62); transform: translateY(-1px); }
+.lp-btn-full { width: 100%; }
+.lp-btn-ghost {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--sans); font-size: 14px; font-weight: 500;
+  padding: 14px 24px; border-radius: 100px;
+  border: 1px solid var(--line); color: var(--text-2);
+  background: none; cursor: pointer; transition: all 0.2s; text-decoration: none;
+}
+.lp-btn-ghost:hover { border-color: var(--text-3); color: var(--text); }
+.lp-hero-specs { display: flex; gap: 20px; flex-wrap: wrap; }
+.lp-spec {
+  font-family: var(--mono); font-size: 11px;
+  color: var(--text-3); letter-spacing: 0.04em;
+  display: flex; align-items: center; gap: 8px;
+}
+.lp-spec-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--amber-d); }
+
+/* Book mockup */
+.lp-book-cover {
+  width: 280px; aspect-ratio: 3/4;
+  background: linear-gradient(145deg, oklch(0.14 0.02 62 / 0.6), oklch(0.09 0.008 240));
+  border: 1px solid oklch(0.80 0.14 62 / 0.2);
+  border-radius: 4px 16px 16px 4px;
+  position: relative; overflow: hidden;
+  box-shadow: 0 32px 80px oklch(0 0 0 / 0.5), 0 0 60px oklch(0.80 0.14 62 / 0.08);
+}
+.lp-book-glow {
+  position: absolute; top: -40%; left: -20%; width: 140%; height: 100%;
+  background: radial-gradient(ellipse at 30% 20%, oklch(0.80 0.14 62 / 0.12), transparent 60%);
+}
+.lp-book-inner {
+  position: relative; z-index: 1;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  height: 100%; padding: 40px 28px; gap: 16px; text-align: center;
+}
+.lp-book-mark {
+  font-family: var(--serif); font-size: 48px; font-weight: 700;
+  color: var(--amber); line-height: 1;
+}
+.lp-book-line { width: 48px; height: 1px; background: var(--amber); opacity: 0.4; }
+.lp-book-title {
+  font-family: var(--serif); font-size: 18px; font-weight: 700;
+  line-height: 1.25; letter-spacing: -0.01em; color: var(--text);
+}
+.lp-book-sub {
+  font-family: var(--sans); font-size: 12px; color: var(--text-2);
+  font-weight: 300;
+}
+.lp-book-author {
+  font-family: var(--mono); font-size: 9px; font-weight: 500;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-3);
+}
+.lp-book-small { width: 220px; }
+@media(max-width:900px){ .lp-book-cover { width: 200px; } .lp-book-small { width: 180px; } }
+
+/* Trust strip */
+.lp-trust {
+  border-top: 1px solid var(--line-s); border-bottom: 1px solid var(--line-s);
+  background: var(--bg-2); padding: 20px 0;
+}
+.lp-trust-inner {
+  display: flex; align-items: center; justify-content: center;
+  gap: 36px; flex-wrap: wrap;
+}
+.lp-trust-item {
+  display: flex; align-items: center; gap: 10px;
+  font-family: var(--mono); font-size: 11px;
+  color: var(--text-2); letter-spacing: 0.03em;
+}
+.lp-trust-ico { font-size: 16px; }
+
+/* Sections */
+.lp-section { padding: 100px 0; }
+.lp-section-alt { background: var(--bg-2); }
+@media(max-width:640px){ .lp-section { padding: 64px 0; } }
+
+.lp-section-header {
+  display: flex; align-items: center; gap: 20px;
+  margin-bottom: 48px; padding-bottom: 20px;
+  border-bottom: 1px solid var(--line-s);
+}
+.lp-section-num {
+  font-family: var(--mono); font-size: 11px; font-weight: 500;
+  color: var(--text-3); letter-spacing: 0.05em;
+}
+.lp-section-rule { flex: 1; height: 1px; background: var(--line-s); }
+.lp-section-label {
+  font-family: var(--mono); font-size: 11px; font-weight: 500;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-2);
+}
+
+.lp-h2 {
+  font-family: var(--serif);
+  font-size: clamp(26px, 3.5vw, 44px);
+  font-weight: 700; line-height: 1.15;
+  letter-spacing: -0.02em; margin-bottom: 48px;
+  max-width: 700px;
+}
+.lp-h2 em { font-style: italic; color: var(--amber); }
+
+/* Audience */
+.lp-audience-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+.lp-audience-card {
+  background: var(--bg-2); border: 1px solid var(--line-s);
+  border-radius: 12px; padding: 24px;
+  transition: border-color 0.2s;
+}
+.lp-audience-card:hover { border-color: var(--line); }
+.lp-audience-ico { font-size: 24px; margin-bottom: 14px; }
+.lp-audience-title {
+  font-family: var(--sans); font-size: 15px; font-weight: 600;
+  margin-bottom: 6px;
+}
+.lp-audience-desc { font-size: 13.5px; color: var(--text-2); line-height: 1.6; }
+
+/* Benefits */
+.lp-benefits-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
+  margin-bottom: 48px;
+}
+@media(max-width:640px){ .lp-benefits-grid { grid-template-columns: 1fr; } }
+.lp-benefit-row {
+  display: flex; align-items: flex-start; gap: 12px;
+  font-size: 15px; color: var(--text-2); line-height: 1.6;
+  padding: 14px 18px;
+  background: oklch(0.09 0.008 240 / 0.5);
+  border: 1px solid var(--line-s); border-radius: 10px;
+}
+.lp-benefit-check {
+  color: var(--amber); font-size: 14px; flex-shrink: 0; padding-top: 2px;
+}
+
+/* CTA mid */
+.lp-cta-mid { text-align: center; }
+
+/* Origin */
+.lp-origin-layout {
+  display: grid; grid-template-columns: 1fr 380px; gap: 56px; align-items: start;
+}
+@media(max-width:900px){ .lp-origin-layout { grid-template-columns: 1fr; } }
+.lp-origin-body { font-size: 15px; color: var(--text-2); line-height: 1.8; }
+.lp-origin-body p { margin-bottom: 16px; }
+.lp-origin-body strong { color: var(--text); font-weight: 500; }
+.lp-origin-card {
+  background: var(--bg-2); border: 1px solid var(--line-s);
+  border-radius: 16px; padding: 32px;
+}
+.lp-origin-card-pip {
+  width: 7px; height: 7px; border-radius: 50%; background: var(--amber);
+  box-shadow: 0 0 10px var(--amber); margin-bottom: 16px;
+}
+.lp-origin-card-name {
+  font-family: var(--mono); font-size: 11px; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--amber); margin-bottom: 14px;
+}
+.lp-origin-card-desc {
+  font-size: 14px; color: var(--text-2); line-height: 1.7; margin-bottom: 20px;
+}
+.lp-arrow-link {
+  font-family: var(--mono); font-size: 11.5px; font-weight: 500;
+  color: var(--amber); letter-spacing: 0.04em;
+  display: inline-flex; align-items: center; gap: 6px;
+  transition: gap 0.2s;
+}
+.lp-arrow-link:hover { gap: 10px; }
+
+/* Chapters */
+.lp-chapters-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+.lp-chapter-card {
+  background: oklch(0.09 0.008 240 / 0.6);
+  border: 1px solid var(--line-s); border-radius: 12px;
+  padding: 28px; transition: border-color 0.2s;
+}
+.lp-chapter-card:hover { border-color: var(--amber-d); }
+.lp-chapter-num {
+  font-family: var(--mono); font-size: 11px; font-weight: 500;
+  color: var(--amber); letter-spacing: 0.06em; margin-bottom: 14px;
+}
+.lp-chapter-title {
+  font-family: var(--serif); font-size: 18px; font-weight: 700;
+  letter-spacing: -0.01em; line-height: 1.3; margin-bottom: 10px;
+}
+.lp-chapter-desc { font-size: 13.5px; color: var(--text-2); line-height: 1.6; }
+
+/* Strategic benefits */
+.lp-strat-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+.lp-strat-card {
+  border-left: 2px solid var(--amber-d);
+  padding: 20px 24px;
+  background: var(--bg-2); border-radius: 0 10px 10px 0;
+}
+.lp-strat-title {
+  font-family: var(--sans); font-size: 15px; font-weight: 600; margin-bottom: 8px;
+}
+.lp-strat-desc { font-size: 13.5px; color: var(--text-2); line-height: 1.6; }
+
+/* Offer */
+.lp-section-offer { background: var(--bg-2); }
+.lp-offer-box {
+  display: grid; grid-template-columns: auto 1fr; gap: 56px; align-items: center;
+  background: var(--bg); border: 1px solid var(--line);
+  border-radius: 20px; padding: 56px;
+}
+@media(max-width:900px){
+  .lp-offer-box { grid-template-columns: 1fr; padding: 32px; }
+  .lp-offer-left { display: flex; justify-content: center; }
+}
+.lp-offer-title {
+  font-family: var(--serif); font-size: clamp(24px, 3vw, 36px);
+  font-weight: 700; letter-spacing: -0.02em; margin-bottom: 4px;
+}
+.lp-offer-sub {
+  font-size: 15px; color: var(--text-2); margin-bottom: 24px;
+}
+.lp-offer-includes {
+  list-style: none; padding: 0; margin-bottom: 28px;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.lp-offer-includes li {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 14px; color: var(--text-2);
+}
+.lp-oi-check { color: var(--amber); font-size: 13px; flex-shrink: 0; }
+.lp-oi-bonus { color: var(--cyan); }
+.lp-offer-price {
+  display: flex; align-items: baseline; gap: 14px;
+  margin-bottom: 20px;
+}
+.lp-price-old-lg {
+  font-family: var(--mono); font-size: 18px;
+  color: var(--text-4); text-decoration: line-through;
+}
+.lp-price-current-lg {
+  font-family: var(--serif); font-size: 52px;
+  font-weight: 700; color: var(--amber); letter-spacing: -0.02em;
+}
+.lp-offer-guarantee {
+  display: flex; align-items: flex-start; gap: 12px;
+  margin-top: 20px; padding: 16px 20px;
+  background: var(--bg-2); border: 1px solid var(--line-s);
+  border-radius: 12px;
+  font-size: 13px; color: var(--text-2); line-height: 1.6;
+}
+.lp-guarantee-ico { font-size: 18px; flex-shrink: 0; }
+
+/* FAQ */
+.lp-faq-list {
+  display: flex; flex-direction: column; gap: 4px;
+  max-width: 760px; margin-bottom: 48px;
+}
+.lp-faq-item {
+  border: 1px solid var(--line-s); border-radius: 10px;
+  overflow: hidden; transition: border-color 0.2s;
+}
+.lp-faq-item[open] { border-color: var(--line); }
+.lp-faq-q {
+  font-family: var(--sans); font-size: 15px; font-weight: 500;
+  padding: 18px 24px; cursor: pointer; color: var(--text);
+  list-style: none; display: flex; align-items: center; justify-content: space-between;
+}
+.lp-faq-q::after {
+  content: '+'; font-family: var(--mono); font-size: 18px;
+  color: var(--text-3); transition: transform 0.2s;
+}
+.lp-faq-item[open] .lp-faq-q::after { content: '−'; }
+.lp-faq-q::-webkit-details-marker { display: none; }
+.lp-faq-a {
+  font-size: 14px; color: var(--text-2); line-height: 1.7;
+  padding: 0 24px 18px; border-top: 1px solid var(--line-s);
+  padding-top: 14px;
+}
+
+/* Footer */
+.lp-footer {
+  border-top: 1px solid var(--line-s);
+  padding: 48px 0 32px;
+}
+.lp-footer-inner {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  gap: 40px; flex-wrap: wrap; margin-bottom: 32px;
+}
+.lp-footer-brand {
+  font-family: var(--serif); font-size: 17px; font-weight: 600;
+  display: flex; align-items: center; gap: 10px; margin-bottom: 10px;
+}
+.lp-footer-desc { font-size: 13px; color: var(--text-3); max-width: 320px; line-height: 1.6; }
+.lp-footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+.lp-footer-links a {
+  font-family: var(--mono); font-size: 11.5px;
+  color: var(--text-3); letter-spacing: 0.04em;
+  transition: color 0.15s;
+}
+.lp-footer-links a:hover { color: var(--text); }
+.lp-footer-bottom {
+  border-top: 1px solid var(--line-s); padding-top: 20px;
+  font-family: var(--mono); font-size: 11px; color: var(--text-4);
+  letter-spacing: 0.03em;
+}
+</style>
