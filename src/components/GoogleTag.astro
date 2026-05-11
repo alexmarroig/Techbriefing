@@ -1,0 +1,58 @@
+---
+const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
+const googleAdsId = import.meta.env.PUBLIC_GOOGLE_ADS_ID;
+const conversionLabel = import.meta.env.PUBLIC_GOOGLE_ADS_CONVERSION_LABEL;
+const tagId = googleAdsId || gaMeasurementId;
+---
+
+{tagId && (
+  <>
+    <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${tagId}`}></script>
+    <script is:inline define:vars={{ gaMeasurementId, googleAdsId, conversionLabel }}>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = window.gtag || gtag;
+
+      gtag('js', new Date());
+
+      if (gaMeasurementId) {
+        gtag('config', gaMeasurementId);
+      }
+
+      if (googleAdsId) {
+        gtag('config', googleAdsId);
+      }
+
+      window.trackTechBriefingEvent = function(eventName, params) {
+        if (!window.gtag) return;
+        window.gtag('event', eventName, params || {});
+      };
+
+      window.trackEbookCheckout = function(params) {
+        const payload = {
+          currency: 'BRL',
+          value: 37.00,
+          items: [{
+            item_id: 'ebook-agentes-ia-negocios',
+            item_name: 'Agentes de IA para Negocios',
+            item_category: 'Ebook',
+            price: 37.00,
+            quantity: 1
+          }],
+          ...params
+        };
+
+        window.trackTechBriefingEvent('begin_checkout', payload);
+
+        if (googleAdsId && conversionLabel) {
+          window.gtag('event', 'conversion', {
+            send_to: `${googleAdsId}/${conversionLabel}`,
+            value: payload.value,
+            currency: payload.currency,
+            transaction_id: payload.transaction_id || ''
+          });
+        }
+      };
+    </script>
+  </>
+)}

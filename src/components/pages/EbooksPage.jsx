@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 
 
@@ -7,38 +7,49 @@ const EBOOKS = [
   {
     id:'agentes',
     color:'var(--amber)',colorX:'var(--amber-x)',colorD:'var(--amber-d)',pill:'a',
-    eyebrow:'Estratégia & Operação',
-    title:'Agentes de IA para Negócios',
-    subtitle:'Do chat à execução operacional',
-    desc:'Como identificar onde agentes de IA podem trabalhar por você — com frameworks claros, casos reais e um roteiro prático para sair da teoria e chegar à aplicação.',
+    eyebrow:'EstratÃ©gia & OperaÃ§Ã£o',
+    title:'Agentes de IA para NegÃ³cios',
+    subtitle:'Do chat Ã  execuÃ§Ã£o operacional',
+    desc:'Como identificar onde agentes de IA podem trabalhar por vocÃª â€” com frameworks claros, casos reais e um roteiro prÃ¡tico para sair da teoria e chegar Ã  aplicaÃ§Ã£o.',
     pages:'180',format:'PDF + EPUB',updated:'Abril 2026',
     price:'R$ 47',priceOld:'R$ 67',
-    benefits:['Mapeie processos onde agentes reduzem trabalho manual','Estruture seus primeiros fluxos sem precisar programar','Frameworks e templates prontos para implementar','Cases reais por setor: vendas, suporte, conteúdo, ops'],
-    toc:['O que são agentes de IA e por que agora','Mapeando seu negócio para agentes','Os 5 tipos de agente mais úteis','Ferramentas por nível técnico','Do piloto ao processo em produção','Cases por setor e função','O próximo passo da automação inteligente'],
+    benefits:['Mapeie processos onde agentes reduzem trabalho manual','Estruture seus primeiros fluxos sem precisar programar','Frameworks e templates prontos para implementar','Cases reais por setor: vendas, suporte, conteÃºdo, ops'],
+    toc:['O que sÃ£o agentes de IA e por que agora','Mapeando seu negÃ³cio para agentes','Os 5 tipos de agente mais Ãºteis','Ferramentas por nÃ­vel tÃ©cnico','Do piloto ao processo em produÃ§Ã£o','Cases por setor e funÃ§Ã£o','O prÃ³ximo passo da automaÃ§Ã£o inteligente'],
   },
   {
     id:'sociedade',
     color:'var(--cyan)',colorX:'var(--cyan-x)',colorD:'oklch(0.52 0.10 200)',pill:'c',
-    eyebrow:'Reflexão & Posicionamento',
-    title:'A Sociedade Pós-IA',
-    subtitle:'Trabalho, relações e futuro',
-    desc:'Os impactos reais da IA em trabalho, ansiedade, regulação, relações humanas e escolhas sociais — uma análise honesta e profunda para quem quer entender o que está realmente mudando.',
-    pages:'140',format:'PDF + EPUB',updated:'Março 2026',
+    eyebrow:'ReflexÃ£o & Posicionamento',
+    title:'A Sociedade PÃ³s-IA',
+    subtitle:'Trabalho, relaÃ§Ãµes e futuro',
+    desc:'Os impactos reais da IA em trabalho, ansiedade, regulaÃ§Ã£o, relaÃ§Ãµes humanas e escolhas sociais â€” uma anÃ¡lise honesta e profunda para quem quer entender o que estÃ¡ realmente mudando.',
+    pages:'140',format:'PDF + EPUB',updated:'MarÃ§o 2026',
     price:'R$ 29',priceOld:'R$ 49',
-    benefits:['Entenda o que está mudando de verdade no mercado de trabalho','Posicione-se diante das transformações sem paralisia','Análise honesta de riscos, oportunidades e escolhas','O que líderes, trabalhadores e cidadãos precisam saber'],
-    toc:['A virada que já aconteceu','Trabalho no mundo dos agentes','Ansiedade, confiança e adaptação','Regulação: quem vai decidir?','Relações humanas na era dos assistentes','O que fica para os humanos','Escolhas individuais e coletivas'],
+    benefits:['Entenda o que estÃ¡ mudando de verdade no mercado de trabalho','Posicione-se diante das transformaÃ§Ãµes sem paralisia','AnÃ¡lise honesta de riscos, oportunidades e escolhas','O que lÃ­deres, trabalhadores e cidadÃ£os precisam saber'],
+    toc:['A virada que jÃ¡ aconteceu','Trabalho no mundo dos agentes','Ansiedade, confianÃ§a e adaptaÃ§Ã£o','RegulaÃ§Ã£o: quem vai decidir?','RelaÃ§Ãµes humanas na era dos assistentes','O que fica para os humanos','Escolhas individuais e coletivas'],
   },
 ];
 
 const RELATED = [
-  {tag:'IA Prática',v:'a',title:'Como montar um sistema de automação com agentes de IA sem código',date:'28 abr',rt:'11 min'},
+  {tag:'IA PrÃ¡tica',v:'a',title:'Como montar um sistema de automaÃ§Ã£o com agentes de IA sem cÃ³digo',date:'28 abr',rt:'11 min'},
   {tag:'Agentes',v:'c',title:'AutoGPT, CrewAI ou LangGraph? Guia definitivo para 2026',date:'28 abr',rt:'14 min'},
-  {tag:'Análise',v:'',title:'O que a IA está mudando no mercado de trabalho agora',date:'21 abr',rt:'8 min'},
+  {tag:'AnÃ¡lise',v:'',title:'O que a IA estÃ¡ mudando no mercado de trabalho agora',date:'21 abr',rt:'8 min'},
 ];
 
 
 function EbookCard({e}){
   const [tocOpen,setTocOpen]=React.useState(false);
+  const track = (eventName, extra = {}) => {
+    window.trackTechBriefingEvent?.(eventName, {
+      item_id: `ebook-${e.id}`,
+      item_name: e.title,
+      item_category: 'Ebook',
+      value: e.id === 'agentes' ? 37.00 : undefined,
+      currency: 'BRL',
+      ...extra,
+    });
+  };
+
   return(
     <div className="ebook-card">
       <div className="ebook-cover" style={{background:`oklch(from ${e.color} l c h / 0.10)`}}>
@@ -48,7 +59,7 @@ function EbookCard({e}){
           <div className="ebook-cover-line" style={{background:e.color}}/>
           <div style={{fontFamily:'var(--serif)',fontSize:15,fontWeight:600,color:'var(--text)',textAlign:'center',lineHeight:1.3,letterSpacing:'-.01em',maxWidth:140}}>{e.title}</div>
           <div className="ebook-cover-pub">Nexora<br/>Systems</div>
-          <div className="ebook-cover-pages">{e.pages} páginas</div>
+          <div className="ebook-cover-pages">{e.pages} pÃ¡ginas</div>
         </div>
       </div>
       <div className="ebook-body">
@@ -58,14 +69,14 @@ function EbookCard({e}){
         <div className="ebook-benefits">
           {e.benefits.map((b,i)=>(
             <div className="ebook-benefit" key={i}>
-              <span style={{color:e.color,flexShrink:0,fontSize:12,paddingTop:3}}>✓</span>
+              <span style={{color:e.color,flexShrink:0,fontSize:12,paddingTop:3}}>âœ“</span>
               {b}
             </div>
           ))}
         </div>
         <div className="ebook-toc">
           <div className="ebook-toc-label" style={{display:'flex',alignItems:'center',justifyContent:'space-between',cursor:'pointer'}} onClick={()=>setTocOpen(o=>!o)}>
-            <span>Conteúdo do livro</span>
+            <span>ConteÃºdo do livro</span>
             <span style={{fontFamily:'var(--mono)',fontSize:14,transition:'transform .2s',display:'inline-block',transform:tocOpen?'rotate(45deg)':'none'}}>+</span>
           </div>
           {tocOpen&&(
@@ -86,14 +97,27 @@ function EbookCard({e}){
               <span className="ebook-price-old">{e.priceOld}</span>
             </div>
             <div className="ebook-specs">
-              {[`${e.pages} páginas`,e.format,`Atualizado: ${e.updated}`].map((s,i)=>(
-                <div className="ebook-spec" key={i}><span style={{color:e.color}}>·</span>{s}</div>
+              {[`${e.pages} pÃ¡ginas`,e.format,`Atualizado: ${e.updated}`].map((s,i)=>(
+                <div className="ebook-spec" key={i}><span style={{color:e.color}}>Â·</span>{s}</div>
               ))}
             </div>
           </div>
           <div className="ebook-cta-group">
-            <button className="btn btn-fill" style={{fontSize:14,padding:'12px 28px'}}>Comprar agora →</button>
-            <button className="btn btn-stroke" style={{fontSize:13}}>Ver prévia</button>
+            <a
+              className="btn btn-fill"
+              href={e.id === 'agentes' ? '/ebook-agentes-ia/' : '#'}
+              onClick={() => track(e.id === 'agentes' ? 'select_item' : 'ebook_waitlist_click', { link_text: 'Comprar agora' })}
+              style={{fontSize:14,padding:'12px 28px'}}
+            >
+              Comprar agora {'->'}
+            </a>
+            <button
+              className="btn btn-stroke"
+              onClick={() => track('view_item', { link_text: 'Ver previa' })}
+              style={{fontSize:13}}
+            >
+              Ver previa
+            </button>
           </div>
         </div>
       </div>
@@ -107,11 +131,11 @@ function TrustStrip(){
       <div className="wrap">
         <div className="trust-strip-inner">
           {[
-            {ico:'📄',label:'PDF + EPUB inclusos',sub:'Leia em qualquer dispositivo'},
-            {ico:'⚡',label:'Acesso imediato',sub:'Entregue por email instantaneamente'},
-            {ico:'🔒',label:'Pagamento seguro',sub:'Stripe — criptografia SSL'},
-            {ico:'🔄',label:'Atualizado em 2026',sub:'Conteúdo revisado e atual'},
-            {ico:'🌐',label:'Nexora Systems',sub:'Produto desenvolvido no Brasil'},
+            {ico:'ðŸ“„',label:'PDF + EPUB inclusos',sub:'Leia em qualquer dispositivo'},
+            {ico:'âš¡',label:'Acesso imediato',sub:'Entregue por email instantaneamente'},
+            {ico:'ðŸ”’',label:'Pagamento seguro',sub:'Stripe â€” criptografia SSL'},
+            {ico:'ðŸ”„',label:'Atualizado em 2026',sub:'ConteÃºdo revisado e atual'},
+            {ico:'ðŸŒ',label:'Nexora Systems',sub:'Produto desenvolvido no Brasil'},
           ].map((t,i)=>(
             <div className="trust-block" key={i}>
               <div className="trust-icon">{t.ico}</div>
@@ -137,20 +161,20 @@ function NlStrip(){
           <div>
             <div className="nl-strip-eyebrow">Newsletter semanal</div>
             <div className="nl-strip-title">IA aplicada na<br/><em>sua caixa. Toda semana.</em></div>
-            <div className="nl-strip-sub">Guias, ferramentas e novidades — sem hype.</div>
+            <div className="nl-strip-sub">Guias, ferramentas e novidades â€” sem hype.</div>
           </div>
           {done?(
             <div style={{textAlign:'center',padding:'16px 32px',border:'1px solid var(--line-s)',borderRadius:12,background:'var(--bg-3)'}}>
-              <div style={{fontFamily:'var(--serif)',fontSize:28,color:'var(--amber)'}}>✓</div>
+              <div style={{fontFamily:'var(--serif)',fontSize:28,color:'var(--amber)'}}>âœ“</div>
               <div style={{fontFamily:'var(--serif)',fontSize:16,fontWeight:600}}>Confirmado!</div>
             </div>
           ):(
-            <form style={{display:'flex',flexDirection:'column',gap:8}} onSubmit={e=>{e.preventDefault();if(email)setDone(true)}}>
+            <form style={{display:'flex',flexDirection:'column',gap:8}} onSubmit={e=>{e.preventDefault();if(email){window.trackTechBriefingEvent?.('generate_lead',{method:'newsletter_ebooks'});setDone(true)}}}>
               <div style={{display:'flex',gap:10,flexWrap:'wrap'}}>
                 <input className="nl-strip-input" type="email" placeholder="seu@email.com" value={email} onChange={e=>setEmail(e.target.value)} required/>
-                <button type="submit" className="btn btn-fill">Quero receber →</button>
+                <button type="submit" className="btn btn-fill">Quero receber â†’</button>
               </div>
-              <div style={{fontFamily:'var(--mono)',fontSize:10.5,color:'var(--text-4)',letterSpacing:'.03em'}}>3.000+ leitores · Conforme LGPD · Cancele quando quiser</div>
+              <div style={{fontFamily:'var(--mono)',fontSize:10.5,color:'var(--text-4)',letterSpacing:'.03em'}}>3.000+ leitores Â· Conforme LGPD Â· Cancele quando quiser</div>
             </form>
           )}
         </div>
@@ -165,7 +189,7 @@ function App(){
     <>
       <div className="bc"><div className="wrap"><div className="bc-inner">
         <a href="/" className="bc-a">Home</a>
-        <span className="bc-sep">›</span>
+        <span className="bc-sep">â€º</span>
         <span className="bc-cur">Ebooks</span>
       </div></div></div>
       <section className="hero">
@@ -173,7 +197,7 @@ function App(){
         <div className="wrap"><div className="hero-inner">
           <div className="hero-eyebrow"><div className="hero-eyebrow-rule"/><span className="hero-eyebrow-text">Produtos Digitais</span></div>
           <h1 className="hero-title">Conhecimento que<br/>vira <em>resultado.</em></h1>
-          <p className="hero-sub">Ebooks escritos pela equipe do Tech Briefing e Nexora Systems. Sem enrolação — só o que você pode aplicar na prática, no negócio e na vida.</p>
+          <p className="hero-sub">Ebooks escritos pela equipe do Tech Briefing e Nexora Systems. Sem enrolaÃ§Ã£o â€” sÃ³ o que vocÃª pode aplicar na prÃ¡tica, no negÃ³cio e na vida.</p>
           <div className="hero-trust">
             {['PDF + EPUB inclusos','Acesso imediato','Atualizado em 2026','Feito no Brasil'].map(t=>(
               <div className="trust-item" key={t}><div className="trust-dot"/>{t}</div>
@@ -191,7 +215,7 @@ function App(){
         <div className="wrap">
           <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',marginBottom:40}}>
             <div style={{fontFamily:'var(--serif)',fontSize:'clamp(24px,3vw,32px)',fontWeight:700,letterSpacing:'-.02em'}}>Leitura complementar</div>
-            <a href="/agentes-de-ia" className="arrow-link">Ver categoria →</a>
+            <a href="/agentes-de-ia" className="arrow-link">Ver categoria â†’</a>
           </div>
           <div className="related-grid">
             {RELATED.map((r,i)=>(
@@ -200,7 +224,7 @@ function App(){
                 <div className="rel-card-body">
                   <span className={`pill ${r.v}`}>{r.tag}</span>
                   <div className="rel-card-title">{r.title}</div>
-                  <div className="rel-card-meta">{r.date} · {r.rt} de leitura</div>
+                  <div className="rel-card-meta">{r.date} Â· {r.rt} de leitura</div>
                 </div>
               </div>
             ))}
