@@ -74,15 +74,6 @@ const tagId = googleAdsId || googleTagId || gaMeasurementId;
         };
 
         window.trackTechBriefingEvent('begin_checkout', payload);
-
-        if (googleAdsId && conversionLabel) {
-          window.gtag('event', 'conversion', {
-            send_to: `${googleAdsId}/${conversionLabel}`,
-            value: payload.value,
-            currency: payload.currency,
-            transaction_id: payload.transaction_id || ''
-          });
-        }
       };
     </script>
   </>
