@@ -1,12 +1,12 @@
----
+﻿---
 import '../styles/global.css';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import GoogleTag from '../components/GoogleTag.astro';
 
 const {
-  title = 'Tech Briefing — Inteligência Artificial Aplicada',
-  description = 'Guias práticos, comparativos honestos e ferramentas testadas sobre inteligência artificial, automação e negócios digitais.',
+  title = 'Tech Briefing â€” InteligÃªncia Artificial Aplicada',
+  description = 'Guias prÃ¡ticos, comparativos honestos e ferramentas testadas sobre inteligÃªncia artificial, automaÃ§Ã£o e negÃ³cios digitais.',
   active = '',
   image = '/images/og-default.png',
   type = 'website',
@@ -43,7 +43,6 @@ const siteName = 'Tech Briefing';
     <link rel="apple-touch-icon" href="/favicon.ico" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <title>{title}</title>
-    <!-- Google Analytics — substitua G-XXXXXXXXXX pelo seu ID -->
     <GoogleTag />
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json" set:html={JSON.stringify({
@@ -64,6 +63,7 @@ const siteName = 'Tech Briefing';
     })} />
   </head>
   <body>
+    <GoogleTag mode="body" />
     <Navbar active={active} />
     <slot />
     <Footer active={active} />
