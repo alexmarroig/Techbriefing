@@ -3,8 +3,14 @@ const mode = Astro.props.mode ?? 'head';
 const gtmId = import.meta.env.PUBLIC_GTM_ID || 'GTM-KJHRR82Q';
 const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID || 'G-SL0K23D01V';
 const googleTagId = import.meta.env.PUBLIC_GOOGLE_TAG_ID || 'G-KZBZNLBWHR';
-const googleAdsId = import.meta.env.PUBLIC_GOOGLE_ADS_ID || 'AW-16452822769';
-const conversionLabel = import.meta.env.PUBLIC_GOOGLE_ADS_CONVERSION_LABEL || 'fT_7CKati6wcEPHNqKU9';
+const configuredGoogleAdsId = import.meta.env.PUBLIC_GOOGLE_ADS_ID;
+const googleAdsId = configuredGoogleAdsId && configuredGoogleAdsId !== 'AW-123456789'
+  ? configuredGoogleAdsId
+  : 'AW-16452822769';
+const configuredConversionLabel = import.meta.env.PUBLIC_GOOGLE_ADS_CONVERSION_LABEL;
+const conversionLabel = configuredConversionLabel && configuredConversionLabel !== 'XXXXXXXXXXXXXXX'
+  ? configuredConversionLabel
+  : 'fT_7CKati6wcEPHNqKU9';
 const tagId = googleAdsId || googleTagId || gaMeasurementId;
 ---
 
