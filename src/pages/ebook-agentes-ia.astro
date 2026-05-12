@@ -14,6 +14,7 @@ const CONFIG = {
   fullPrice: 'R$ 49,90',
   promoPrice: 'R$ 37,00',
   promoLabel: 'Lançamento',
+  promoEndIso: '2026-05-14T23:59:00-03:00',
 
   primaryBuyLink: 'https://pay.kiwify.com.br/U0ynSdt',
   buyLink: 'https://pay.kiwify.com.br/U0ynSdt',
@@ -27,9 +28,9 @@ const CONFIG = {
     clubeAutores: { label: 'Clube dos Autores', url: 'https://clubedeautores.com.br/livro/agentes-de-ia-para-negocios' },
   },
 
-  heroBadge: 'Ebook — Arquitetura & Execução',
-  heroHeadline: 'Agentes de IA não são chatbots com nome bonito.',
-  heroSub: 'Um guia de 126 páginas para quem quer parar de improvisar com IA e começar a construir sistemas que tomam decisões, executam ações e funcionam sem depender de empurrão humano a cada passo.',
+  heroBadge: 'Oferta de lançamento - acesso imediato',
+  heroHeadline: 'Pare de brincar de IA. Comece a criar agentes que trabalham pelo seu negócio.',
+  heroSub: 'Um guia direto para sair do ChatGPT solto, das automações frágeis e dos testes que nunca viram processo. Aprenda a estruturar agentes de IA que decidem, executam e reduzem trabalho manual com método.',
 
   pages: '126',
   chapters: '12',
@@ -39,23 +40,36 @@ const CONFIG = {
 
   guaranteeText: 'Se em 7 dias você sentir que o conteúdo não entregou o que prometeu, devolvemos 100% do valor. Sem perguntas.',
 
+  painPoints: [
+    { label: 'Você usa IA, mas continua fazendo tudo manualmente', desc: 'A IA responde, mas quem copia, cola, confere, envia e cobra ainda é você.' },
+    { label: 'Suas automações quebram quando o cenário muda', desc: 'Um campo diferente, um lead incompleto ou uma exceção simples já derruba o fluxo inteiro.' },
+    { label: 'Você não sabe onde colocar agentes no negócio', desc: 'Sem mapa de processo, vira tentativa aleatória: muita ferramenta, pouca operação real.' },
+    { label: 'Você tem medo de vender IA e não entregar', desc: 'Sem arquitetura, limite e avaliação, qualquer projeto parece bonito na demo e perigoso na prática.' },
+  ],
+
+  outcomes: [
+    { title: 'Encontrar processos com potencial real', desc: 'Você aprende a separar tarefas que merecem agente daquelas que só precisam de uma automação simples.' },
+    { title: 'Desenhar um agente antes da ferramenta', desc: 'Objetivo, entradas, regras, memória, ferramentas, limites e métrica ficam claros antes de abrir qualquer plataforma.' },
+    { title: 'Evitar erros caros de implementação', desc: 'Você entende por que projetos falham: falta de observabilidade, escopo frouxo, ação sem permissão e testes ruins.' },
+    { title: 'Transformar IA em oferta ou operação', desc: 'Use o método para melhorar seu próprio negócio ou vender projetos com mais segurança para clientes.' },
+  ],
+
   audienceBullets: [
-    { icon: '🏗️', title: 'Fundadores e gestores', desc: 'Que querem entender como agentes funcionam antes de investir — e saber separar o que escala do que é apenas demo.' },
-    { icon: '⚙️', title: 'Operadores e analistas', desc: 'Que precisam transformar processos repetitivos em sistemas autônomos com regras claras e limites definidos.' },
-    { icon: '🧩', title: 'Consultores e freelancers', desc: 'Que querem oferecer implementação de agentes como serviço — com método, não com improviso.' },
-    { icon: '🔬', title: 'Profissionais de tecnologia', desc: 'Que já testaram ferramentas de IA, mas ainda não construíram algo com arquitetura real — que funciona sozinho e melhora com o tempo.' },
-    { icon: '📐', title: 'Quem já cansou de demo', desc: 'E quer saber como ir do primeiro teste a uma operação de verdade — com método, não com sorte.' },
+    { icon: '01', title: 'Empreendedores sem tempo para errar', desc: 'Você quer usar IA para vender, atender, produzir ou operar melhor, mas não pode desperdiçar semanas em ferramenta errada.' },
+    { icon: '02', title: 'Consultores e freelancers', desc: 'Você quer oferecer agentes de IA como serviço, com método claro para diagnosticar, desenhar e entregar projetos.' },
+    { icon: '03', title: 'Gestores e operadores', desc: 'Você vive apagando incêndio em tarefas repetitivas e precisa transformar processo manual em sistema confiável.' },
+    { icon: '04', title: 'Quem já testou IA e travou', desc: 'Você sabe que existe oportunidade, mas ainda não conseguiu sair da conversa com o chat para uma operação de verdade.' },
   ],
 
   benefits: [
-    'A diferença real entre chatbot, automação e agente — e por que confundir os três custa caro',
-    'Os 6 blocos de um agente funcional — e por que nenhum deles é opcional em sistemas reais',
-    'Quando usar um agente único e quando investir em multi-agente — sem complicar antes da hora',
-    'O framework de 8 passos para criar seu primeiro agente: do problema certo ao deploy com controle',
-    'Por que a maioria dos projetos com agentes falha — e os padrões que você precisa evitar desde o início',
-    'Como o papel humano muda: de quem executa para quem projeta o que o sistema deve fazer',
-    'Como transformar um experimento que funciona às vezes em uma operação que funciona sempre',
-    'Um roteiro claro para sair da teoria — com clareza de processo, não com pressa de ferramenta',
+    'Identificar onde agentes realmente economizam tempo e onde só criam complexidade',
+    'Montar a arquitetura mínima de um agente útil: objetivo, memória, ferramentas, regras e avaliação',
+    'Criar critérios para escolher entre chatbot, automação, agente único ou multi-agente',
+    'Mapear processos de vendas, suporte, conteúdo e operação que podem virar agentes',
+    'Evitar projetos que funcionam na demo, mas quebram no primeiro cliente real',
+    'Definir limites humanos para o agente agir sem colocar seu negócio em risco',
+    'Transformar conhecimento de IA em uma oferta mais clara para clientes',
+    'Sair do improviso com um roteiro de 8 passos para construir o primeiro agente',
   ],
 
   chapterList: [
@@ -124,6 +138,11 @@ const image = '/images/ebook-cover.png';
 </head>
 <body>
 <GoogleTag mode="body" />
+<div class="lp-interactive-bg" aria-hidden="true">
+  <div class="lp-orbit lp-orbit-a"></div>
+  <div class="lp-orbit lp-orbit-b"></div>
+  <div class="lp-orbit lp-orbit-c"></div>
+</div>
 
 <!-- TOP BAR -->
 <div class="lp-topbar">
@@ -146,13 +165,25 @@ const image = '/images/ebook-cover.png';
         <div class="lp-badge">{CONFIG.heroBadge}</div>
         <h1 class="lp-h1">{CONFIG.heroHeadline}</h1>
         <p class="lp-hero-sub">{CONFIG.heroSub}</p>
+        <div class="lp-urgency-card" data-promo-end={CONFIG.promoEndIso}>
+          <div>
+            <span class="lp-urgency-kicker">Promocao imperdivel</span>
+            <strong>R$ 37 somente no lancamento</strong>
+            <span class="lp-urgency-note">Depois, o ebook volta para {CONFIG.fullPrice}.</span>
+          </div>
+          <div class="lp-countdown" aria-label="Tempo restante da promocao">
+            <span><b data-countdown-days>00</b><small>Dias</small></span>
+            <span><b data-countdown-hours>00</b><small>Horas</small></span>
+            <span><b data-countdown-minutes>00</b><small>Min</small></span>
+          </div>
+        </div>
         <div class="lp-hero-price">
           <span class="lp-price-old">{CONFIG.fullPrice}</span>
           <span class="lp-price-current">{CONFIG.promoPrice}</span>
           <span class="lp-price-label">{CONFIG.promoLabel}</span>
         </div>
         <div class="lp-hero-actions">
-          <a href={CONFIG.primaryBuyLink} class="lp-btn-primary">Garantir meu exemplar →</a>
+          <a href={CONFIG.primaryBuyLink} class="lp-btn-primary">Garantir por R$ 37 agora →</a>
           <a href="#conteudo" class="lp-btn-ghost">Ver os 12 capítulos</a>
         </div>
         <div class="lp-hero-specs">
@@ -175,6 +206,10 @@ const image = '/images/ebook-cover.png';
             </svg>
           </div>
         </div>
+        <div class="lp-hero-proof">
+          <strong>Para quem quer vender, atender ou operar com agentes.</strong>
+          <span>Sem depender de tentativa, hype ou promessa vazia.</span>
+        </div>
       </div>
     </div>
   </div>
@@ -185,11 +220,11 @@ const image = '/images/ebook-cover.png';
   <div class="lp-wrap">
     <div class="lp-trust-inner">
       {[
-        { ico: '📐', label: 'Arquitetura real de agentes' },
-        { ico: '⚡', label: 'Acesso imediato' },
-        { ico: '🔒', label: 'Pagamento seguro' },
-        { ico: '🔄', label: 'Garantia de 7 dias' },
-        { ico: '🇧🇷', label: 'Conteúdo em português' },
+        { ico: 'PDF', label: 'PDF + EPUB' },
+        { ico: '24H', label: 'Acesso imediato' },
+        { ico: 'SSL', label: 'Pagamento seguro' },
+        { ico: '7D', label: 'Garantia de 7 dias' },
+        { ico: 'BR', label: 'Conteúdo em português' },
       ].map(t => (
         <div class="lp-trust-item">
           <span class="lp-trust-ico">{t.ico}</span>
@@ -217,13 +252,9 @@ const image = '/images/ebook-cover.png';
       <div class="lp-section-rule"></div>
       <span class="lp-section-label">O problema</span>
     </div>
-    <h2 class="lp-h2">Quando tudo vira "agente", o termo <em>deixa de explicar.</em></h2>
+    <h2 class="lp-h2">A dor não é falta de IA. É usar IA e continuar preso no trabalho manual.</h2>
     <div class="lp-problem-grid">
-      {[
-        { label: 'O hype', desc: 'Chatbots com instruções mais longas, automações com um webhook no meio e scripts com nome bonito — tudo virou "agente de IA".' },
-        { label: 'A confusão', desc: 'Sem uma definição clara, você não sabe se está construindo algo que escala ou apenas criando versões mais rápidas do mesmo trabalho.' },
-        { label: 'O custo', desc: 'Ferramentas erradas, arquitetura improvisada, agentes sem observabilidade — cada erro se multiplica quando você tenta escalar.' },
-      ].map(p => (
+      {CONFIG.painPoints.map(p => (
         <div class="lp-problem-card">
           <div class="lp-problem-label">{p.label}</div>
           <div class="lp-problem-desc">{p.desc}</div>
@@ -231,7 +262,31 @@ const image = '/images/ebook-cover.png';
       ))}
     </div>
     <div class="lp-problem-pivot">
-      <p>Este ebook existe para resolver isso. Para dar a você uma definição que não quebra depois do hype, uma arquitetura que funciona em produção e um método para sair da curiosidade e entrar na execução.</p>
+      <p>Este ebook foi feito para trocar improviso por arquitetura. Voce entende onde agentes fazem sentido, como desenhar o fluxo e como evitar o tipo de projeto que parece inteligente, mas nao entrega resultado.</p>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTADOS -->
+<section class="lp-section lp-section-outcomes">
+  <div class="lp-wrap">
+    <div class="lp-section-header">
+      <span class="lp-section-num">02</span>
+      <div class="lp-section-rule"></div>
+      <span class="lp-section-label">Beneficios praticos</span>
+    </div>
+    <h2 class="lp-h2">O que voce vai conseguir fazer depois de ler.</h2>
+    <div class="lp-outcomes-grid">
+      {CONFIG.outcomes.map((o, index) => (
+        <div class="lp-outcome-card">
+          <span class="lp-outcome-num">{String(index + 1).padStart(2, '0')}</span>
+          <h3>{o.title}</h3>
+          <p>{o.desc}</p>
+        </div>
+      ))}
+    </div>
+    <div class="lp-cta-mid">
+      <a href={CONFIG.primaryBuyLink} class="lp-btn-primary">Quero sair do improviso →</a>
     </div>
   </div>
 </section>
@@ -240,11 +295,11 @@ const image = '/images/ebook-cover.png';
 <section class="lp-section lp-section-alt">
   <div class="lp-wrap">
     <div class="lp-section-header">
-      <span class="lp-section-num">02</span>
+      <span class="lp-section-num">03</span>
       <div class="lp-section-rule"></div>
-      <span class="lp-section-label">Para quem é</span>
+      <span class="lp-section-label">Para quem esta travado</span>
     </div>
-    <h2 class="lp-h2">Para quem quer construir, <em>não só consumir.</em></h2>
+    <h2 class="lp-h2">Para quem quer transformar interesse em IA em uma vantagem real.</h2>
     <div class="lp-audience-grid">
       {CONFIG.audienceBullets.map(a => (
         <div class="lp-audience-card">
@@ -261,11 +316,11 @@ const image = '/images/ebook-cover.png';
 <section class="lp-section" id="aprender">
   <div class="lp-wrap">
     <div class="lp-section-header">
-      <span class="lp-section-num">03</span>
+      <span class="lp-section-num">04</span>
       <div class="lp-section-rule"></div>
       <span class="lp-section-label">O que você vai aprender</span>
     </div>
-    <h2 class="lp-h2">Um modelo mental completo. <em>Um método para executar.</em></h2>
+    <h2 class="lp-h2">Menos teoria solta. Mais clareza para executar.</h2>
     <div class="lp-benefits-grid">
       {CONFIG.benefits.map(b => (
         <div class="lp-benefit-row">
@@ -275,7 +330,7 @@ const image = '/images/ebook-cover.png';
       ))}
     </div>
     <div class="lp-cta-mid">
-      <a href={CONFIG.primaryBuyLink} class="lp-btn-primary">Quero esse ebook →</a>
+      <a href={CONFIG.primaryBuyLink} class="lp-btn-primary">Comprar com acesso imediato →</a>
     </div>
   </div>
 </section>
@@ -299,7 +354,7 @@ const image = '/images/ebook-cover.png';
   </div>
   <div class="lp-wrap">
     <div class="lp-section-header">
-      <span class="lp-section-num">04</span>
+      <span class="lp-section-num">05</span>
       <div class="lp-section-rule"></div>
       <span class="lp-section-label">Dentro do ebook</span>
     </div>
@@ -337,7 +392,7 @@ const image = '/images/ebook-cover.png';
   </div>
   <div class="lp-wrap">
     <div class="lp-section-header">
-      <span class="lp-section-num">05</span>
+      <span class="lp-section-num">06</span>
       <div class="lp-section-rule"></div>
       <span class="lp-section-label">A mudança de papel</span>
     </div>
@@ -363,7 +418,7 @@ const image = '/images/ebook-cover.png';
 <section class="lp-section lp-section-alt" id="conteudo">
   <div class="lp-wrap">
     <div class="lp-section-header">
-      <span class="lp-section-num">06</span>
+      <span class="lp-section-num">07</span>
       <div class="lp-section-rule"></div>
       <span class="lp-section-label">Conteúdo completo</span>
     </div>
@@ -381,26 +436,26 @@ const image = '/images/ebook-cover.png';
 </section>
 
 <!-- POR QUE A NEXORA -->
-<section class="lp-section">
+<section class="lp-section lp-nexora-section">
   <div class="lp-wrap">
     <div class="lp-section-header">
-      <span class="lp-section-num">07</span>
+      <span class="lp-section-num">08</span>
       <div class="lp-section-rule"></div>
       <span class="lp-section-label">A origem</span>
     </div>
     <div class="lp-origin-layout">
       <div>
-        <h2 class="lp-h2">Por que a {CONFIG.authorBrand} criou este guia.</h2>
+        <h2 class="lp-h2">Criado pela Nexora Systems para quem quer IA aplicada, nao palestra sobre IA.</h2>
         <div class="lp-origin-body">
-          <p>Existem milhares de tutoriais sobre IA. Mas quase nenhum responde à pergunta que realmente importa: <strong>como transformar um experimento em um sistema que funciona todos os dias, sem depender de alguém empurrando cada etapa.</strong></p>
-          <p>A {CONFIG.authorBrand} nasceu para documentar esse caminho. Testamos ferramentas, implementamos fluxos e registramos o que funciona — sem filtro, sem patrocínio, sem atalho.</p>
-          <p>Este ebook é o resultado dessa experiência condensada em <strong>{CONFIG.pages} páginas</strong> de frameworks, cenários e decisões práticas.</p>
+          <p>O Tech Briefing e a Nexora Systems existem para transformar tecnologia em decisao pratica. Sem empilhar ferramenta, sem vender milagre e sem esconder as partes dificeis.</p>
+          <p>Este guia nasceu de uma pergunta simples: <strong>como transformar IA em processo que opera, mede e melhora?</strong> A resposta esta em arquitetura, limites, observabilidade e escolha correta do problema.</p>
+          <p>Voce recebe <strong>{CONFIG.pages} paginas</strong> com frameworks, cenarios e decisoes praticas para aplicar no seu negocio ou nos projetos dos seus clientes.</p>
         </div>
       </div>
       <div class="lp-origin-card">
-        <div class="lp-origin-card-pip"></div>
+        <img src="/images/nexora-systems-logo.png" alt="Nexora Systems" class="lp-nexora-logo-img" width="640" height="400" />
         <div class="lp-origin-card-name">{CONFIG.authorBrand}</div>
-        <div class="lp-origin-card-desc">Tecnologia, sistemas e inteligência artificial aplicada ao mundo real. Criamos conteúdo, ferramentas e produtos para quem quer transformar IA em resultado.</div>
+        <div class="lp-origin-card-desc">Tecnologia, sistemas e inteligencia artificial aplicada ao mundo real. Conteudo, produtos e metodos para quem quer transformar IA em resultado.</div>
         <a href="/sobre" class="lp-arrow-link">Conhecer a Nexora →</a>
       </div>
     </div>
@@ -436,7 +491,8 @@ const image = '/images/ebook-cover.png';
           <span class="lp-price-old-lg">{CONFIG.fullPrice}</span>
           <span class="lp-price-current-lg">{CONFIG.promoPrice}</span>
         </div>
-        <a href={CONFIG.buyLink} class="lp-btn-primary lp-btn-full">Comprar agora →</a>
+        <div class="lp-offer-deadline">Preco de lancamento por tempo limitado. O contador no topo usa a data real da campanha.</div>
+        <a href={CONFIG.buyLink} class="lp-btn-primary lp-btn-full">Garantir por R$ 37 agora →</a>
         <div class="lp-platforms">
           <span class="lp-platforms-label">Também disponível em:</span>
           <div class="lp-platforms-links">
@@ -458,7 +514,7 @@ const image = '/images/ebook-cover.png';
 <section class="lp-section">
   <div class="lp-wrap">
     <div class="lp-section-header">
-      <span class="lp-section-num">08</span>
+      <span class="lp-section-num">09</span>
       <div class="lp-section-rule"></div>
       <span class="lp-section-label">Perguntas frequentes</span>
     </div>
@@ -491,13 +547,13 @@ const image = '/images/ebook-cover.png';
   <div class="lp-wrap">
     <div class="lp-close-content">
       <h2 class="lp-h2-center">Quem usa IA como chat melhora a eficiência. Quem usa agentes <em>transforma a operação.</em></h2>
-      <p class="lp-close-sub">Você pode continuar consumindo conteúdo sobre IA. Ou pode decidir construir o primeiro sistema que trabalha por você.<br/>Imperfeito no começo, mas real. Esse é o caminho.</p>
+      <p class="lp-close-sub">Voce pode continuar salvando posts sobre IA para ler depois. Ou pode pegar um metodo e construir o primeiro sistema que trabalha por voce.</p>
       <div class="lp-hero-price" style="justify-content:center">
         <span class="lp-price-old">{CONFIG.fullPrice}</span>
         <span class="lp-price-current">{CONFIG.promoPrice}</span>
         <span class="lp-price-label">{CONFIG.promoLabel}</span>
       </div>
-      <a href={CONFIG.primaryBuyLink} class="lp-btn-primary">Começar agora →</a>
+      <a href={CONFIG.primaryBuyLink} class="lp-btn-primary">Comprar com acesso imediato →</a>
     </div>
   </div>
 </section>
@@ -527,6 +583,58 @@ const image = '/images/ebook-cover.png';
 </footer>
 
 <script is:inline>
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+document.querySelectorAll('[data-promo-end]').forEach(card => {
+  const endDate = new Date(card.dataset.promoEnd || '').getTime();
+  const days = card.querySelector('[data-countdown-days]');
+  const hours = card.querySelector('[data-countdown-hours]');
+  const minutes = card.querySelector('[data-countdown-minutes]');
+  const note = card.querySelector('.lp-urgency-note');
+
+  const render = () => {
+    const distance = endDate - Date.now();
+    if (!Number.isFinite(endDate) || distance <= 0) {
+      card.classList.add('is-expired');
+      if (days) days.textContent = '00';
+      if (hours) hours.textContent = '00';
+      if (minutes) minutes.textContent = '00';
+      if (note) note.textContent = 'Promocao encerrada. Confira o preco atual no checkout.';
+      return;
+    }
+
+    const totalMinutes = Math.floor(distance / 60000);
+    const dayValue = Math.floor(totalMinutes / 1440);
+    const hourValue = Math.floor((totalMinutes % 1440) / 60);
+    const minuteValue = totalMinutes % 60;
+
+    if (days) days.textContent = String(dayValue).padStart(2, '0');
+    if (hours) hours.textContent = String(hourValue).padStart(2, '0');
+    if (minutes) minutes.textContent = String(minuteValue).padStart(2, '0');
+  };
+
+  render();
+  window.setInterval(render, 30000);
+});
+
+if (!reduceMotion) {
+  const bg = document.querySelector('.lp-interactive-bg');
+  window.addEventListener('pointermove', event => {
+    if (!bg) return;
+    const x = (event.clientX / window.innerWidth - 0.5).toFixed(3);
+    const y = (event.clientY / window.innerHeight - 0.5).toFixed(3);
+    bg.style.setProperty('--mx', x);
+    bg.style.setProperty('--my', y);
+    document.documentElement.style.setProperty('--mx', x);
+    document.documentElement.style.setProperty('--my', y);
+  }, { passive: true });
+
+  window.addEventListener('scroll', () => {
+    if (!bg) return;
+    bg.style.setProperty('--scroll', String(Math.min(window.scrollY / 1200, 1)));
+  }, { passive: true });
+}
+
 // Send tracking before leaving for Kiwify checkout.
 document.querySelectorAll('a[href="https://pay.kiwify.com.br/U0ynSdt"]').forEach(link => {
   link.addEventListener('click', function(e) {
@@ -552,6 +660,66 @@ document.querySelectorAll('a[href="https://pay.kiwify.com.br/U0ynSdt"]').forEach
 /* Layout */
 .lp-wrap { max-width: 1120px; margin: 0 auto; padding: 0 var(--pad, 40px); }
 @media(max-width:640px){ .lp-wrap { padding: 0 20px; } }
+
+body {
+  background:
+    radial-gradient(circle at calc(50% + (var(--mx, 0) * 160px)) calc(10% + (var(--my, 0) * 80px)), oklch(0.72 0.18 338 / 0.13), transparent 28rem),
+    radial-gradient(circle at calc(78% - (var(--mx, 0) * 120px)) calc(24% - (var(--my, 0) * 70px)), oklch(0.80 0.14 62 / 0.12), transparent 24rem),
+    var(--bg);
+}
+
+.lp-interactive-bg {
+  --mx: 0;
+  --my: 0;
+  --scroll: 0;
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  opacity: calc(0.92 - (var(--scroll) * 0.2));
+}
+.lp-interactive-bg::before {
+  content: '';
+  position: absolute;
+  inset: -20%;
+  background-image:
+    linear-gradient(115deg, transparent 0 42%, oklch(0.72 0.18 338 / 0.11) 42.2% 42.7%, transparent 43% 100%),
+    linear-gradient(65deg, transparent 0 58%, oklch(0.80 0.14 62 / 0.09) 58.2% 58.6%, transparent 59% 100%);
+  transform: translate(calc(var(--mx) * 34px), calc(var(--my) * 28px));
+  transition: transform 0.16s ease-out;
+}
+.lp-orbit {
+  position: absolute;
+  border: 1px solid oklch(0.72 0.18 338 / 0.18);
+  border-radius: 999px;
+  filter: blur(0.1px);
+  transform: translate(calc(var(--mx) * -22px), calc(var(--my) * -18px));
+}
+.lp-orbit::after {
+  content: '';
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: oklch(0.72 0.18 338);
+  box-shadow: 0 0 20px oklch(0.72 0.18 338 / 0.7);
+}
+.lp-orbit-a { width: 360px; height: 180px; right: 8%; top: 16%; transform: rotate(-18deg) translate(calc(var(--mx) * -22px), calc(var(--my) * -18px)); }
+.lp-orbit-a::after { right: 22%; top: -4px; }
+.lp-orbit-b { width: 280px; height: 140px; left: -4%; top: 42%; transform: rotate(24deg) translate(calc(var(--mx) * 18px), calc(var(--my) * 14px)); }
+.lp-orbit-b::after { left: 18%; bottom: -4px; }
+.lp-orbit-c { width: 420px; height: 210px; right: -10%; bottom: 16%; border-color: oklch(0.80 0.14 62 / 0.12); }
+.lp-orbit-c::after { background: var(--amber); box-shadow: 0 0 20px oklch(0.80 0.14 62 / 0.6); left: 28%; top: -4px; }
+
+.lp-topbar,
+.lp-hero,
+.lp-trust,
+.lp-section,
+.lp-footer {
+  position: relative;
+  z-index: 1;
+}
 
 /* Top bar */
 .lp-topbar {
@@ -621,9 +789,75 @@ document.querySelectorAll('a[href="https://pay.kiwify.com.br/U0ynSdt"]').forEach
   margin-bottom: 24px;
 }
 .lp-hero-sub {
-  font-size: 17px; line-height: 1.7;
+  font-size: 18px; line-height: 1.7;
   color: var(--text-2); font-weight: 300;
   max-width: 540px; margin-bottom: 32px;
+}
+.lp-urgency-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: center;
+  max-width: 620px;
+  margin: 0 0 28px;
+  padding: 16px;
+  border: 1px solid oklch(0.80 0.14 62 / 0.35);
+  border-radius: 16px;
+  background:
+    linear-gradient(135deg, oklch(0.80 0.14 62 / 0.12), oklch(0.72 0.18 338 / 0.08)),
+    oklch(0.10 0.01 240 / 0.82);
+  box-shadow: 0 22px 70px oklch(0 0 0 / 0.28);
+}
+.lp-urgency-kicker,
+.lp-urgency-note {
+  display: block;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--amber);
+}
+.lp-urgency-card strong {
+  display: block;
+  margin: 4px 0 6px;
+  font-family: var(--serif);
+  font-size: 24px;
+  letter-spacing: -0.02em;
+}
+.lp-urgency-note {
+  color: var(--text-3);
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+.lp-countdown {
+  display: flex;
+  gap: 8px;
+}
+.lp-countdown span {
+  min-width: 58px;
+  padding: 9px 8px;
+  border-radius: 10px;
+  background: oklch(0.06 0.006 240 / 0.88);
+  border: 1px solid var(--line-s);
+  text-align: center;
+}
+.lp-countdown b {
+  display: block;
+  font-family: var(--mono);
+  font-size: 18px;
+  color: var(--text);
+}
+.lp-countdown small {
+  display: block;
+  margin-top: 2px;
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-4);
+}
+.lp-urgency-card.is-expired {
+  border-color: var(--line);
 }
 .lp-hero-price {
   display: flex; align-items: baseline; gap: 12px;
@@ -697,6 +931,29 @@ document.querySelectorAll('a[href="https://pay.kiwify.com.br/U0ynSdt"]').forEach
   position: absolute; inset: 0; z-index: 2; pointer-events: none;
 }
 .lp-cover-circuit svg { width: 100%; height: 100%; }
+.lp-hero-proof {
+  margin-top: 22px;
+  max-width: 340px;
+  padding: 16px 18px;
+  border: 1px solid var(--line-s);
+  border-radius: 14px;
+  background: oklch(0.08 0.008 240 / 0.8);
+  box-shadow: 0 18px 50px oklch(0 0 0 / 0.22);
+}
+.lp-hero-proof strong,
+.lp-hero-proof span {
+  display: block;
+}
+.lp-hero-proof strong {
+  font-size: 14px;
+  line-height: 1.35;
+}
+.lp-hero-proof span {
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--text-3);
+  line-height: 1.55;
+}
 
 /* Offer cover spread */
 .lp-offer-cover-wrap {
@@ -741,11 +998,42 @@ document.querySelectorAll('a[href="https://pay.kiwify.com.br/U0ynSdt"]').forEach
   color: var(--text-2); letter-spacing: 0.03em;
 }
 .lp-trust-ico { font-size: 16px; }
+.lp-trust-ico {
+  min-width: 34px;
+  height: 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line-s);
+  border-radius: 8px;
+  background: oklch(0.07 0.006 240 / 0.72);
+  color: var(--amber);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.06em;
+}
 
 /* Sections */
 .lp-section { padding: 100px 0; }
 .lp-section-alt { background: var(--bg-2); }
 @media(max-width:640px){ .lp-section { padding: 64px 0; } }
+
+@media(max-width:900px){
+  .lp-urgency-card { grid-template-columns: 1fr; }
+  .lp-countdown { width: 100%; }
+  .lp-countdown span { flex: 1; }
+  .lp-outcomes-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media(max-width:640px){
+  .lp-h1 { font-size: clamp(38px, 12vw, 52px); }
+  .lp-hero-sub { font-size: 16px; }
+  .lp-hero-price { flex-wrap: wrap; }
+  .lp-price-current { font-size: 38px; }
+  .lp-outcomes-grid { grid-template-columns: 1fr; }
+  .lp-outcome-card { min-height: auto; }
+  .lp-interactive-bg { opacity: 0.52; }
+}
 
 .lp-section-header {
   display: flex; align-items: center; gap: 20px;
@@ -798,6 +1086,60 @@ document.querySelectorAll('a[href="https://pay.kiwify.com.br/U0ynSdt"]').forEach
   padding: 24px 0; border-top: 1px solid var(--line-s);
 }
 .lp-problem-pivot p { margin: 0; }
+
+/* Outcomes */
+.lp-section-outcomes {
+  background:
+    linear-gradient(180deg, transparent, oklch(0.08 0.006 240 / 0.82)),
+    var(--bg);
+}
+.lp-outcomes-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 42px;
+}
+.lp-outcome-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 230px;
+  padding: 26px;
+  border: 1px solid var(--line-s);
+  border-radius: 14px;
+  background:
+    radial-gradient(circle at 80% 0%, oklch(0.72 0.18 338 / 0.12), transparent 55%),
+    var(--bg-2);
+}
+.lp-outcome-card::after {
+  content: '';
+  position: absolute;
+  inset: auto 20px 20px auto;
+  width: 44px;
+  height: 1px;
+  background: var(--amber);
+  opacity: 0.7;
+}
+.lp-outcome-num {
+  display: inline-flex;
+  margin-bottom: 34px;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--amber);
+  letter-spacing: 0.08em;
+}
+.lp-outcome-card h3 {
+  font-family: var(--serif);
+  font-size: 21px;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin: 0 0 12px;
+}
+.lp-outcome-card p {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--text-2);
+}
 
 /* Audience */
 .lp-audience-grid {
@@ -898,15 +1240,22 @@ document.querySelectorAll('a[href="https://pay.kiwify.com.br/U0ynSdt"]').forEach
 
 /* Origin */
 .lp-origin-layout {
-  display: grid; grid-template-columns: 1fr 380px; gap: 56px; align-items: start;
+  display: grid; grid-template-columns: minmax(0, 1fr) 460px; gap: 56px; align-items: center;
 }
 @media(max-width:900px){ .lp-origin-layout { grid-template-columns: 1fr; } }
+.lp-nexora-section {
+  background:
+    radial-gradient(circle at 72% 42%, oklch(0.72 0.18 338 / 0.16), transparent 28rem),
+    var(--bg);
+}
 .lp-origin-body { font-size: 15px; color: var(--text-2); line-height: 1.8; }
 .lp-origin-body p { margin-bottom: 16px; }
 .lp-origin-body strong { color: var(--text); font-weight: 500; }
 .lp-origin-card {
-  background: var(--bg-2); border: 1px solid var(--line-s);
-  border-radius: 16px; padding: 32px;
+  overflow: hidden;
+  background: oklch(0.07 0.006 240 / 0.9); border: 1px solid oklch(0.72 0.18 338 / 0.26);
+  border-radius: 18px; padding: 0 0 28px;
+  box-shadow: 0 28px 90px oklch(0 0 0 / 0.4), 0 0 70px oklch(0.72 0.18 338 / 0.08);
 }
 .lp-origin-card-pip {
   width: 7px; height: 7px; border-radius: 50%; background: var(--amber);
@@ -915,16 +1264,26 @@ document.querySelectorAll('a[href="https://pay.kiwify.com.br/U0ynSdt"]').forEach
 .lp-origin-card-name {
   font-family: var(--mono); font-size: 11px; font-weight: 500;
   letter-spacing: 0.1em; text-transform: uppercase;
-  color: var(--amber); margin-bottom: 14px;
+  color: oklch(0.78 0.18 338); margin: 24px 28px 14px;
 }
 .lp-origin-card-desc {
-  font-size: 14px; color: var(--text-2); line-height: 1.7; margin-bottom: 20px;
+  font-size: 14px; color: var(--text-2); line-height: 1.7; margin: 0 28px 20px;
+}
+.lp-nexora-logo-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: center;
+  border-bottom: 1px solid oklch(0.72 0.18 338 / 0.18);
 }
 .lp-arrow-link {
   font-family: var(--mono); font-size: 11.5px; font-weight: 500;
   color: var(--amber); letter-spacing: 0.04em;
   display: inline-flex; align-items: center; gap: 6px;
   transition: gap 0.2s;
+  margin: 0 28px;
 }
 .lp-arrow-link:hover { gap: 10px; }
 
@@ -989,6 +1348,18 @@ document.querySelectorAll('a[href="https://pay.kiwify.com.br/U0ynSdt"]').forEach
 .lp-price-current-lg {
   font-family: var(--serif); font-size: 52px;
   font-weight: 700; color: var(--amber); letter-spacing: -0.02em;
+}
+.lp-offer-deadline {
+  margin: -8px 0 18px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: oklch(0.80 0.14 62 / 0.09);
+  border: 1px solid oklch(0.80 0.14 62 / 0.18);
+  font-family: var(--mono);
+  font-size: 10.5px;
+  line-height: 1.55;
+  color: var(--text-2);
+  letter-spacing: 0.03em;
 }
 .lp-platforms {
   margin-top: 16px; text-align: center;
@@ -1086,5 +1457,21 @@ document.querySelectorAll('a[href="https://pay.kiwify.com.br/U0ynSdt"]').forEach
   border-top: 1px solid var(--line-s); padding-top: 20px;
   font-family: var(--mono); font-size: 11px; color: var(--text-4);
   letter-spacing: 0.03em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lp-interactive-bg,
+  .lp-cover-circuit,
+  .lp-circuit-bg,
+  .lp-neural-bg,
+  .lp-flow-bg,
+  .lp-hex-bg {
+    opacity: 0.35;
+  }
+  .lp-btn-primary,
+  .lp-cover-img,
+  .lp-arrow-link {
+    transition: none;
+  }
 }
 </style>
