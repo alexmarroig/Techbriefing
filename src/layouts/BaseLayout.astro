@@ -55,11 +55,11 @@ const siteName = 'Tech Briefing';
       "publisher": {
         "@type": "Organization",
         "name": "Tech Briefing",
-        "url": "https://techbriefing.com.br",
-        "logo": { "@type": "ImageObject", "url": "https://techbriefing.com.br/favicon.svg" }
+        "url": "https://www.techbriefing.com.br",
+        "logo": { "@type": "ImageObject", "url": "https://www.techbriefing.com.br/favicon.svg" }
       },
       ...(type === 'article' ? { "author": { "@type": "Organization", "name": "Nexora Systems" }, "datePublished": new Date().toISOString() } : {}),
-      ...(type !== 'article' ? { "potentialAction": { "@type": "SearchAction", "target": "https://techbriefing.com.br/arquivo?q={search_term_string}", "query-input": "required name=search_term_string" } } : {})
+      ...(type !== 'article' ? { "potentialAction": { "@type": "SearchAction", "target": "https://www.techbriefing.com.br/arquivo?q={search_term_string}", "query-input": "required name=search_term_string" } } : {})
     })} />
   </head>
   <body>

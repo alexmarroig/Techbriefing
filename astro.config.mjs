@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://techbriefing.com.br',
+  site: 'https://www.techbriefing.com.br',
   integrations: [react(), sitemap()],
   vite: {
     esbuild: {
