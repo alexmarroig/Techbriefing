@@ -6,7 +6,7 @@ author: "Nexora Systems"
 date: 2026-03-10
 readTime: "10 min"
 featured: false
-image: "/images/article-ai-agent.png"
+image: "/images/article-ai-agent.webp"
 tags:
   - Agentes de IA
   - No-code

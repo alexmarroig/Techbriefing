@@ -6,7 +6,7 @@ author: "Nexora Systems"
 date: 2026-05-03
 readTime: "11 min"
 featured: false
-image: "/images/article-automation.png"
+image: "/images/article-automation.webp"
 tags:
   - Chatbot
   - Atendimento

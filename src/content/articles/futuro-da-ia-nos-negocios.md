@@ -6,7 +6,7 @@ author: "Nexora Systems"
 date: 2026-05-05
 readTime: "10 min"
 featured: false
-image: "/images/article-ai-agent.png"
+image: "/images/article-ai-agent.webp"
 tags:
   - Futuro
   - Tendências

@@ -10,7 +10,7 @@ const FEATURE_ART = {
   tags:[{l:'Agentes de IA',v:'c'},{l:'Framework',v:''}],
   title:'AutoGPT, CrewAI ou LangGraph? Guia definitivo para escolher o framework certo em 2026',
   excerpt:'O ecossistema de frameworks para agentes de IA cresceu muito em pouco tempo. Mas qual usar? Testamos os três em cenários reais — automação, análise de dados e suporte ao cliente — e comparamos performance, custo e complexidade.',
-  author:'Lucas Faria', date:'28 abr 2026', readTime:'14 min', href:'/artigos/autogpt-crewai-langgraph', image:'/images/article-ai-agent.png',
+  author:'Lucas Faria', date:'28 abr 2026', readTime:'14 min', href:'/artigos/autogpt-crewai-langgraph', image:'/images/article-ai-agent.webp',
 };
 
 const ASIDE = [
@@ -20,9 +20,9 @@ const ASIDE = [
 ];
 
 const ARTS = [
-  {tag:'Tutorial',v:'c',title:'Construindo um agente de pesquisa com n8n e Claude 3.7',excerpt:'Passo a passo completo para criar um agente que pesquisa, sintetiza e entrega resultados.',date:'26 abr',rt:'10 min',href:'/artigos/como-criar-agente-ia-sem-codigo',image:'/images/article-ai-agent.png'},
-  {tag:'Agentes',v:'c',title:'Orquestração de agentes: o guia que você não encontra em lugar nenhum',excerpt:'Arquiteturas, padrões de comunicação e como evitar os erros mais comuns.',date:'23 abr',rt:'12 min',href:'/artigos/agentes-ia-nao-sao-chatbots',image:'/images/article-components.png'},
-  {tag:'Análise',v:'',title:'Por que a maioria dos agentes de IA falha em produção',excerpt:'Os problemas reais que aparecem depois do tutorial — e como resolver cada um.',date:'20 abr',rt:'7 min',href:'/artigos/erro-automacoes-com-ia-quebram',image:'/images/article-blocks.png'},
+  {tag:'Tutorial',v:'c',title:'Construindo um agente de pesquisa com n8n e Claude 3.7',excerpt:'Passo a passo completo para criar um agente que pesquisa, sintetiza e entrega resultados.',date:'26 abr',rt:'10 min',href:'/artigos/como-criar-agente-ia-sem-codigo',image:'/images/article-ai-agent.webp'},
+  {tag:'Agentes',v:'c',title:'Orquestração de agentes: o guia que você não encontra em lugar nenhum',excerpt:'Arquiteturas, padrões de comunicação e como evitar os erros mais comuns.',date:'23 abr',rt:'12 min',href:'/artigos/agentes-ia-nao-sao-chatbots',image:'/images/article-components.webp'},
+  {tag:'Análise',v:'',title:'Por que a maioria dos agentes de IA falha em produção',excerpt:'Os problemas reais que aparecem depois do tutorial — e como resolver cada um.',date:'20 abr',rt:'7 min',href:'/artigos/erro-automacoes-com-ia-quebram',image:'/images/article-blocks.webp'},
 ];
 
 const ART_LIST = [

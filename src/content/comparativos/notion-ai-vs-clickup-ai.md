@@ -6,7 +6,7 @@ author: "Nexora Systems"
 date: 2026-04-22
 readTime: "8 min"
 featured: false
-image: "/images/article-scenario.png"
+image: "/images/article-scenario.webp"
 tools:
   - Notion AI
   - ClickUp AI

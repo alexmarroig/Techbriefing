@@ -6,7 +6,7 @@ author: "Nexora Systems"
 date: 2026-05-06
 readTime: "13 min"
 featured: true
-image: "/images/article-components.png"
+image: "/images/article-components.webp"
 tags:
   - LangChain
   - Python

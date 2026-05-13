@@ -6,7 +6,7 @@ author: "Nexora Systems"
 date: 2026-05-06
 readTime: "10 min"
 featured: false
-image: "/images/article-scenario.png"
+image: "/images/article-scenario.webp"
 tools:
   - Cursor
   - GitHub Copilot

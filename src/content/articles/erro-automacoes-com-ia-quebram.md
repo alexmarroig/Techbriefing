@@ -6,7 +6,7 @@ author: "Nexora Systems"
 date: 2026-05-12
 readTime: "7 min"
 featured: false
-image: "/images/article-blocks.png"
+image: "/images/article-blocks.webp"
 tags:
   - Automação com IA
   - Processos

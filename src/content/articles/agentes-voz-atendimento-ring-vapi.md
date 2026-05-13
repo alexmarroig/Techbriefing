@@ -6,7 +6,7 @@ author: "Nexora Systems"
 date: 2026-05-13
 readTime: "8 min"
 featured: true
-image: "/images/article-ai-agent.png"
+image: "/images/article-ai-agent.webp"
 tags:
   - Agentes de voz
   - Atendimento com IA

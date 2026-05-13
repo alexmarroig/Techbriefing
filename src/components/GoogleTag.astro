@@ -18,25 +18,28 @@ const siteName = 'tech_briefing';
 {mode === 'head' && gtmId && (
   <script is:inline define:vars={{ gtmId }}>
     window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-      'gtm.start': new Date().getTime(),
-      event: 'gtm.js'
-    });
+    window.__loadTechBriefingGtm = function(){
+      if (window.__techBriefingGtmLoaded) return;
+      window.__techBriefingGtmLoaded = true;
+      window.dataLayer.push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
 
-    (function(w,d,s,l,i){
-      var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
-      j.async=true;
-      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-      f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer',gtmId);
+      (function(w,d,s,l,i){
+        var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+        j.async=true;
+        j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+        f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer',gtmId);
+    };
   </script>
 )}
 
 {mode === 'head' && tagId && (
   <>
-    <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${tagId}`}></script>
-    <script is:inline define:vars={{ gaMeasurementId, googleTagId, googleAdsId, conversionLabel, siteName }}>
+    <script is:inline define:vars={{ tagId, gaMeasurementId, googleTagId, googleAdsId, conversionLabel, siteName }}>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       window.gtag = window.gtag || gtag;
@@ -114,6 +117,44 @@ const siteName = 'tech_briefing';
           item_name: 'Agentes de IA para Negocios'
         });
       }
+
+      window.__loadTechBriefingGtag = function(){
+        if (window.__techBriefingGtagLoaded) return;
+        window.__techBriefingGtagLoaded = true;
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=' + tagId;
+        document.head.appendChild(script);
+      };
+
+      window.__loadTechBriefingTags = function(){
+        if (window.__loadTechBriefingGtag) window.__loadTechBriefingGtag();
+        if (window.__loadTechBriefingGtm) window.__loadTechBriefingGtm();
+      };
+
+      const scheduleTags = function(){
+        const load = function(){
+          window.setTimeout(window.__loadTechBriefingTags, 1800);
+        };
+        if ('requestIdleCallback' in window) {
+          window.requestIdleCallback(load, { timeout: 3500 });
+        } else {
+          load();
+        }
+      };
+
+      if (document.readyState === 'complete') {
+        scheduleTags();
+      } else {
+        window.addEventListener('load', scheduleTags, { once: true });
+      }
+
+      ['pointerdown', 'keydown', 'touchstart'].forEach(function(eventName) {
+        window.addEventListener(eventName, window.__loadTechBriefingTags, {
+          once: true,
+          passive: true
+        });
+      });
     </script>
   </>
 )}

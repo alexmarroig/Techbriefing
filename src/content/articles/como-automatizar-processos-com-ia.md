@@ -6,7 +6,7 @@ author: "Nexora Systems"
 date: 2026-03-25
 readTime: "11 min"
 featured: false
-image: "/images/article-automation.png"
+image: "/images/article-automation.webp"
 tags:
   - Automação
   - Processos

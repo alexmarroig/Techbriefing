@@ -6,7 +6,7 @@ author: "Nexora Systems"
 date: 2026-03-28
 readTime: "9 min"
 featured: false
-image: "/images/article-scenario.png"
+image: "/images/article-scenario.webp"
 tags:
   - Claude
   - ChatGPT

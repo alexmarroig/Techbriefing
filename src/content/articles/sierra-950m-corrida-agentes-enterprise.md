@@ -6,7 +6,7 @@ author: "Nexora Systems"
 date: 2026-05-13
 readTime: "8 min"
 featured: false
-image: "/images/article-scenario.png"
+image: "/images/article-scenario.webp"
 tags:
   - Agentes enterprise
   - Customer experience

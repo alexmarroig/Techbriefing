@@ -6,7 +6,7 @@ author: "Nexora Systems"
 date: 2026-04-23
 readTime: "12 min"
 featured: true
-image: "/images/article-components.png"
+image: "/images/article-components.webp"
 tags:
   - Prompt Engineering
   - IA Prática

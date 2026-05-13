@@ -6,7 +6,7 @@ author: "Nexora Systems"
 date: 2026-05-12
 readTime: "7 min"
 featured: true
-image: "/images/article-automation.png"
+image: "/images/article-automation.webp"
 tags:
   - IA para negócios
   - Automação

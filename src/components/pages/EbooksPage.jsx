@@ -19,9 +19,9 @@ const EBOOKS = [
 ];
 
 const RELATED = [
-  {tag:'IA Prática',v:'a',title:'Como montar um sistema de automação com agentes de IA sem código',date:'28 abr',rt:'11 min',href:'/artigos/transformar-ia-em-processo',image:'/images/article-automation.png'},
-  {tag:'Agentes',v:'c',title:'AutoGPT, CrewAI ou LangGraph? Guia definitivo para 2026',date:'28 abr',rt:'14 min',href:'/artigos/agentes-ia-nao-sao-chatbots',image:'/images/article-ai-agent.png'},
-  {tag:'Análise',v:'',title:'O que a IA está mudando no mercado de trabalho agora',date:'21 abr',rt:'8 min',href:'/artigos/agentes-ia-oferta-servico',image:'/images/article-future.png'},
+  {tag:'IA Prática',v:'a',title:'Como montar um sistema de automação com agentes de IA sem código',date:'28 abr',rt:'11 min',href:'/artigos/transformar-ia-em-processo',image:'/images/article-automation.webp'},
+  {tag:'Agentes',v:'c',title:'AutoGPT, CrewAI ou LangGraph? Guia definitivo para 2026',date:'28 abr',rt:'14 min',href:'/artigos/agentes-ia-nao-sao-chatbots',image:'/images/article-ai-agent.webp'},
+  {tag:'Análise',v:'',title:'O que a IA está mudando no mercado de trabalho agora',date:'21 abr',rt:'8 min',href:'/artigos/agentes-ia-oferta-servico',image:'/images/article-future.webp'},
 ];
 
 

@@ -6,7 +6,7 @@ author: "Nexora Systems"
 date: 2026-03-05
 readTime: "8 min"
 featured: true
-image: "/images/article-ai-agent.png"
+image: "/images/article-ai-agent.webp"
 tags:
   - Agentes de IA
   - Inteligência Artificial

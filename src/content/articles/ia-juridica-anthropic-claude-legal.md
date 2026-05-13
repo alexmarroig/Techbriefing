@@ -6,7 +6,7 @@ author: "Nexora Systems"
 date: 2026-05-13
 readTime: "7 min"
 featured: false
-image: "/images/article-components.png"
+image: "/images/article-components.webp"
 tags:
   - IA jurídica
   - Claude

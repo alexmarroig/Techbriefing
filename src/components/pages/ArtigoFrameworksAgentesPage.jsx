@@ -75,9 +75,9 @@ const FAQS = [
 ];
 
 const RELATED = [
-  {tag:'Tutorial',v:'c',title:'Construindo um agente de pesquisa com n8n e Claude 3.7',date:'26 abr',rt:'10 min',href:'/artigos/como-criar-agente-ia-sem-codigo',image:'/images/article-ai-agent.png'},
-  {tag:'Comparativo',v:'',title:'Relevance AI vs Voiceflow: qual plataforma para seus agentes?',date:'11 abr',rt:'9 min',href:'/comparativos/relevance-ai-vs-voiceflow',image:'/images/article-scenario.png'},
-  {tag:'Guia',v:'a',title:'RAG com agentes: quando recuperar contexto muda tudo',date:'14 abr',rt:'11 min',href:'/artigos/rag-explicado-guia-pratico',image:'/images/article-components.png'},
+  {tag:'Tutorial',v:'c',title:'Construindo um agente de pesquisa com n8n e Claude 3.7',date:'26 abr',rt:'10 min',href:'/artigos/como-criar-agente-ia-sem-codigo',image:'/images/article-ai-agent.webp'},
+  {tag:'Comparativo',v:'',title:'Relevance AI vs Voiceflow: qual plataforma para seus agentes?',date:'11 abr',rt:'9 min',href:'/comparativos/relevance-ai-vs-voiceflow',image:'/images/article-scenario.webp'},
+  {tag:'Guia',v:'a',title:'RAG com agentes: quando recuperar contexto muda tudo',date:'14 abr',rt:'11 min',href:'/artigos/rag-explicado-guia-pratico',image:'/images/article-components.webp'},
 ];
 
 /* ── COMPONENTS ────────────────────────── */
