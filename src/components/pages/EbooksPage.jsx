@@ -31,9 +31,9 @@ const EBOOKS = [
 ];
 
 const RELATED = [
-  {tag:'IA Prática',v:'a',title:'Como montar um sistema de automação com agentes de IA sem código',date:'28 abr',rt:'11 min'},
-  {tag:'Agentes',v:'c',title:'AutoGPT, CrewAI ou LangGraph? Guia definitivo para 2026',date:'28 abr',rt:'14 min'},
-  {tag:'Análise',v:'',title:'O que a IA está mudando no mercado de trabalho agora',date:'21 abr',rt:'8 min'},
+  {tag:'IA Prática',v:'a',title:'Como montar um sistema de automação com agentes de IA sem código',date:'28 abr',rt:'11 min',href:'/artigos/transformar-ia-em-processo',image:'/images/article-automation.png'},
+  {tag:'Agentes',v:'c',title:'AutoGPT, CrewAI ou LangGraph? Guia definitivo para 2026',date:'28 abr',rt:'14 min',href:'/artigos/agentes-ia-nao-sao-chatbots',image:'/images/article-ai-agent.png'},
+  {tag:'Análise',v:'',title:'O que a IA está mudando no mercado de trabalho agora',date:'21 abr',rt:'8 min',href:'/artigos/agentes-ia-oferta-servico',image:'/images/article-future.png'},
 ];
 
 
@@ -105,7 +105,7 @@ function EbookCard({e}){
           <div className="ebook-cta-group">
             <a
               className="btn btn-fill"
-              href={e.id === 'agentes' ? '/ebook-agentes-ia/' : '#'}
+              href={e.id === 'agentes' ? '/ebook-agentes-ia/' : '/contato'}
               onClick={() => track(e.id === 'agentes' ? 'select_item' : 'ebook_waitlist_click', { link_text: 'Comprar agora' })}
               style={{fontSize:14,padding:'12px 28px'}}
             >
@@ -219,14 +219,16 @@ function App(){
           </div>
           <div className="related-grid">
             {RELATED.map((r,i)=>(
-              <div className="rel-card" key={i}>
-                <div className="rel-card-img" style={{fontFamily:'var(--mono)',fontSize:11,color:'var(--text-4)',padding:'8px 14px',border:'1px solid var(--line-s)',borderRadius:4}}>imagem do artigo</div>
+              <a className="rel-card" href={r.href} key={i}>
+                <div className="rel-card-img">
+                  <img src={r.image} alt={r.title} loading="lazy"/>
+                </div>
                 <div className="rel-card-body">
                   <span className={`pill ${r.v}`}>{r.tag}</span>
                   <div className="rel-card-title">{r.title}</div>
                   <div className="rel-card-meta">{r.date} · {r.rt} de leitura</div>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>

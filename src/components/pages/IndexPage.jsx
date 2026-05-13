@@ -17,26 +17,28 @@ const FEATURED = {
   title:'Como montar um sistema de automação com agentes de IA — sem escrever uma linha de código',
   excerpt:'O novo paradigma de automação está aqui — e ele não exige programação. Descubra como combinar n8n, Make e modelos de linguagem para criar fluxos que trabalham enquanto você dorme.',
   author:'Lucas Faria', date:'28 abr 2026', readTime:'11 min',
+  href:'/arquivo',
+  image:'/images/article-automation.png',
 };
 const ASIDE = [
-  {tag:'Agentes de IA',v:'c',title:'AutoGPT, CrewAI ou LangGraph? Qual framework escolher em 2026',date:'26 abr',rt:'8 min'},
-  {tag:'Software',v:'',title:'As 7 ferramentas de produtividade que os pros usam e você nunca ouviu falar',date:'24 abr',rt:'6 min'},
-  {tag:'Automação',v:'a',title:'Integre CRM, e-mail e Notion num único fluxo automatizado',date:'22 abr',rt:'9 min'},
+  {tag:'Agentes de IA',v:'c',title:'AutoGPT, CrewAI ou LangGraph? Qual framework escolher em 2026',date:'26 abr',rt:'8 min',href:'/arquivo'},
+  {tag:'Software',v:'',title:'As 7 ferramentas de produtividade que os pros usam e você nunca ouviu falar',date:'24 abr',rt:'6 min',href:'/ferramentas'},
+  {tag:'Automação',v:'a',title:'Integre CRM, e-mail e Notion num único fluxo automatizado',date:'22 abr',rt:'9 min',href:'/arquivo'},
 ];
 
 const CATS = [
-  {num:'01',name:'IA Prática',nameEm:'',desc:'Tutoriais, casos de uso e guias diretos ao ponto'},
-  {num:'02',name:'Agentes de',nameEm:'IA',desc:'Frameworks, ferramentas e arquiteturas para agentes'},
-  {num:'03',name:'Automação',nameEm:'',desc:'Flows no-code, integração e sistemas automáticos'},
-  {num:'04',name:'Software e',nameEm:'Ferramentas',desc:'Reviews honestos e comparativos aprofundados'},
-  {num:'05',name:'Negócios',nameEm:'Digitais',desc:'Estratégia, monetização e produtos digitais'},
+  {num:'01',name:'IA Prática',nameEm:'',desc:'Tutoriais, casos de uso e guias diretos ao ponto',href:'/arquivo'},
+  {num:'02',name:'Agentes de',nameEm:'IA',desc:'Frameworks, ferramentas e arquiteturas para agentes',href:'/agentes-de-ia'},
+  {num:'03',name:'Automação',nameEm:'',desc:'Flows no-code, integração e sistemas automáticos',href:'/arquivo'},
+  {num:'04',name:'Software e',nameEm:'Ferramentas',desc:'Reviews honestos e comparativos aprofundados',href:'/ferramentas'},
+  {num:'05',name:'Negócios',nameEm:'Digitais',desc:'Estratégia, monetização e produtos digitais',href:'/ebooks'},
 ];
 
 const GUIDES = [
-  {tag:'Guia',v:'a',title:'Automação para freelancers: do zero ao sistema em 7 dias',desc:'Passo a passo para montar seu primeiro sistema de automação completo.'},
-  {tag:'Tutorial',v:'c',title:'Crie seu primeiro agente de IA com n8n + GPT-4o',desc:'Sem código. Do setup ao agente funcionando em produção.'},
-  {tag:'Guia',v:'a',title:'Workflow de conteúdo com IA: pesquisa, pauta, escrita e publicação',desc:'O processo completo para criadores que querem escalar.'},
-  {tag:'Comparativo',v:'',title:'Automação de vendas B2B: da prospecção ao fechamento',desc:'Como construir um pipeline inteligente com ferramentas acessíveis.'},
+  {tag:'Guia',v:'a',title:'Automação para freelancers: do zero ao sistema em 7 dias',desc:'Passo a passo para montar seu primeiro sistema de automação completo.',href:'/artigos/erro-automacoes-com-ia-quebram'},
+  {tag:'Tutorial',v:'c',title:'Crie seu primeiro agente de IA com n8n + GPT-4o',desc:'Sem código. Do setup ao agente funcionando em produção.',href:'/artigos/agentes-ia-nao-sao-chatbots'},
+  {tag:'Guia',v:'a',title:'Workflow de conteúdo com IA: pesquisa, pauta, escrita e publicação',desc:'O processo completo para criadores que querem escalar.',href:'/artigos/transformar-ia-em-processo'},
+  {tag:'Comparativo',v:'',title:'Automação de vendas B2B: da prospecção ao fechamento',desc:'Como construir um pipeline inteligente com ferramentas acessíveis.',href:'/artigos/agentes-ia-oferta-servico'},
 ];
 
 const RANKING = [
@@ -61,7 +63,7 @@ function SH({num, label, more, moreHref}){
       <span className="sh-num">{num}</span>
       <div className="sh-rule"/>
       <span className="sh-label">{label}</span>
-      {more && <><div className="sh-rule" style={{flex:'0 0 20px'}}/><a href={moreHref||'#'} className="sh-more">{more} →</a></>}
+      {more && <><div className="sh-rule" style={{flex:'0 0 20px'}}/><a href={moreHref||'/arquivo'} className="sh-more">{more} →</a></>}
     </div>
   );
 }
@@ -118,11 +120,9 @@ function FeatureSection(){
         <div className="feature-layout">
           <div className="feature-ord" aria-hidden="true">01</div>
           <div>
-            <div className="feature-img-wrap ph" style={{aspectRatio:'16/9'}}>
-              <div className="ph" style={{width:'100%',height:'100%'}}>
-                <span className="ph-label">imagem de destaque do artigo</span>
-              </div>
-            </div>
+            <a className="feature-img-wrap feature-img-link" href={FEATURED.href} aria-label={FEATURED.title}>
+              <img src={FEATURED.image} alt={FEATURED.title} loading="lazy"/>
+            </a>
             <div style={{marginTop:32}}>
               <div className="feature-tags">
                 {FEATURED.tags.map((t,i)=><span key={i} className={`pill ${t.v}`}>{t.l}</span>)}
@@ -136,17 +136,17 @@ function FeatureSection(){
                 <span className="feature-meta-sep">—</span>
                 <span>{FEATURED.readTime} de leitura</span>
               </div>
-              <a href="#" className="arrow-link">Ler artigo completo →</a>
+              <a href={FEATURED.href} className="arrow-link">Ler artigo completo -&gt;</a>
             </div>
           </div>
           <div className="feature-side">
             <div className="aside-title">Mais lidos</div>
             {ASIDE.map((a,i)=>(
-              <div className="aside-item" key={i}>
+              <a className="aside-item" href={a.href} key={i}>
                 <span className={`pill ${a.v}`}>{a.tag}</span>
                 <div className="aside-item-title">{a.title}</div>
-                <div className="aside-item-meta">{a.date} · {a.rt}</div>
-              </div>
+                <div className="aside-item-meta">{a.date} - {a.rt}</div>
+              </a>
             ))}
           </div>
         </div>
@@ -162,7 +162,7 @@ function CategoriesSection(){
         <SH num="02" label="Categorias"/>
         <div className="cat-list">
           {CATS.map((c,i)=>(
-            <a key={i} className="cat-row" href="#">
+            <a key={i} className="cat-row" href={c.href}>
               <span className="cat-row-num">{c.num}</span>
               <span className="cat-row-name">{c.name} {c.nameEm&&<em>{c.nameEm}</em>}</span>
               <span className="cat-row-desc">{c.desc}</span>
@@ -179,18 +179,18 @@ function GuidesSection(){
   return (
     <section className="guides">
       <div className="wrap">
-        <SH num="03" label="Guias e Comparativos" more="Ver biblioteca"/>
+        <SH num="03" label="Guias e Comparativos" more="Ver biblioteca" moreHref="/arquivo"/>
         <div className="guides-grid">
           <div className="guide-list">
             {GUIDES.map((g,i)=>(
-              <div className="guide-row" key={i}>
+              <a className="guide-row" href={g.href} key={i}>
                 <div className="guide-n">0{i+1}</div>
                 <div>
                   <span className={`pill ${g.v}`}>{g.tag}</span>
                   <div className="guide-title">{g.title}</div>
                   <div className="guide-desc">{g.desc}</div>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
           <div className="rank-card">
@@ -209,7 +209,7 @@ function GuidesSection(){
               </div>
             ))}
             <div className="rank-foot">
-              <a href="#" className="arrow-link" style={{fontSize:11}}>Ver comparativo completo →</a>
+              <a href="/comparativo" className="arrow-link" style={{fontSize:11}}>Ver comparativo completo -&gt;</a>
             </div>
           </div>
         </div>
@@ -256,8 +256,8 @@ function ToolsSection({tweaks}){
 
 function EbooksSection(){
   const EB=[
-    {title:'Agentes de IA para Negócios',sub:'Do chat à execução operacional',desc:'Como identificar onde agentes de IA podem trabalhar por você — com frameworks, cases e clareza para começar.',price:'R$ 47',priceOld:'R$ 67',pages:'180',color:'var(--amber)',tagV:'a',tag:'E-book',benefits:['Mapeie onde agentes reduzem trabalho manual','Estruture seus primeiros fluxos com IA','Cases e frameworks para negócios reais']},
-    {title:'A Sociedade Pós-IA',sub:'Trabalho, relações e futuro',desc:'Os impactos reais da IA em trabalho, ansiedade, regulação e escolhas sociais — sem alarmismo, com profundidade.',price:'R$ 29',priceOld:'R$ 49',pages:'140',color:'var(--cyan)',tagV:'c',tag:'E-book',benefits:['Entenda o que está mudando de verdade','Posicione-se sem paralisia diante das mudanças','Análise honesta do futuro próximo']},
+    {title:'Agentes de IA para Negócios',sub:'Do chat à execução operacional',desc:'Como identificar onde agentes de IA podem trabalhar por você — com frameworks, cases e clareza para começar.',price:'R$ 47',priceOld:'R$ 67',pages:'180',color:'var(--amber)',tagV:'a',tag:'E-book',href:'/ebook-agentes-ia/',benefits:['Mapeie onde agentes reduzem trabalho manual','Estruture seus primeiros fluxos com IA','Cases e frameworks para negócios reais']},
+    {title:'A Sociedade Pós-IA',sub:'Trabalho, relações e futuro',desc:'Os impactos reais da IA em trabalho, ansiedade, regulação e escolhas sociais — sem alarmismo, com profundidade.',price:'R$ 29',priceOld:'R$ 49',pages:'140',color:'var(--cyan)',tagV:'c',tag:'E-book',href:'/ebooks',benefits:['Entenda o que está mudando de verdade','Posicione-se sem paralisia diante das mudanças','Análise honesta do futuro próximo']},
   ];
   return(
     <section className="apps" style={{background:'var(--bg)'}}>
@@ -265,7 +265,7 @@ function EbooksSection(){
         <SH num="05" label="Ebooks" more="Ver todos" moreHref="/ebooks"/>
         <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:20}}>
           {EB.map((e,i)=>(
-            <div key={i} style={{background:'var(--bg-2)',border:'1px solid var(--line-s)',borderRadius:16,overflow:'hidden',display:'flex',cursor:'pointer',transition:'border-color .2s'}} onMouseEnter={ev=>ev.currentTarget.style.borderColor='var(--line)'} onMouseLeave={ev=>ev.currentTarget.style.borderColor='var(--line-s)'}>
+            <a href={e.href} key={i} style={{background:'var(--bg-2)',border:'1px solid var(--line-s)',borderRadius:16,overflow:'hidden',display:'flex',cursor:'pointer',transition:'border-color .2s',color:'inherit',textDecoration:'none'}} onMouseEnter={ev=>ev.currentTarget.style.borderColor='var(--line)'} onMouseLeave={ev=>ev.currentTarget.style.borderColor='var(--line-s)'}>
               <div style={{width:120,flexShrink:0,background:`oklch(from ${e.color} l c h / 0.12)`,borderRight:'1px solid var(--line-s)',display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',padding:'24px 12px',gap:12}}>
                 <div style={{fontFamily:'var(--serif)',fontSize:28,fontWeight:700,color:e.color,lineHeight:1}}>IA</div>
                 <div style={{fontFamily:'var(--mono)',fontSize:9,fontWeight:500,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--text-3)',textAlign:'center',lineHeight:1.4}}>Nexora<br/>Systems</div>
@@ -288,10 +288,10 @@ function EbooksSection(){
                     <span style={{fontFamily:'var(--serif)',fontSize:26,fontWeight:700,color:e.color,letterSpacing:'-.02em'}}>{e.price}</span>
                     <span style={{fontFamily:'var(--mono)',fontSize:11,color:'var(--text-4)',textDecoration:'line-through',marginLeft:6}}>{e.priceOld}</span>
                   </div>
-                  <button className="btn btn-fill" style={{fontSize:12,padding:'9px 16px'}}>Comprar →</button>
+                  <span className="btn btn-fill" style={{fontSize:12,padding:'9px 16px'}}>Comprar -&gt;</span>
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>
@@ -407,6 +407,17 @@ function App({ articles = [], tools = [], apps = [], ebooks = [] }){
     FEATURED.author = featuredArticle.author;
     FEATURED.date = new Date(featuredArticle.date).toLocaleDateString('pt-BR', { day: '2-digit', month: 'short', year: 'numeric' });
     FEATURED.readTime = featuredArticle.readTime;
+    FEATURED.href = featuredArticle.href;
+    FEATURED.image = featuredArticle.image || FEATURED.image;
+    FEATURED.tags = [{l: featuredArticle.category || 'Artigo', v: featuredArticle.category?.includes('Agentes') ? 'c' : 'a'}];
+    ASIDE.splice(0, ASIDE.length, ...articles.slice(1, 4).map((a)=>({
+      tag: a.category || 'Artigo',
+      v: a.category?.includes('Agentes') ? 'c' : a.category?.includes('Autom') ? 'a' : '',
+      title: a.title,
+      date: new Date(a.date).toLocaleDateString('pt-BR', { day: '2-digit', month: 'short' }),
+      rt: a.readTime,
+      href: a.href,
+    })));
   }
   if (tools.length) {
     TOOLS.splice(0, TOOLS.length, ...tools.slice(0, 4).map((t)=>({

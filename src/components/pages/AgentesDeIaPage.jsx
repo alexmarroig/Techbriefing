@@ -10,34 +10,34 @@ const FEATURE_ART = {
   tags:[{l:'Agentes de IA',v:'c'},{l:'Framework',v:''}],
   title:'AutoGPT, CrewAI ou LangGraph? Guia definitivo para escolher o framework certo em 2026',
   excerpt:'O ecossistema de frameworks para agentes de IA cresceu muito em pouco tempo. Mas qual usar? Testamos os três em cenários reais — automação, análise de dados e suporte ao cliente — e comparamos performance, custo e complexidade.',
-  author:'Lucas Faria', date:'28 abr 2026', readTime:'14 min',
+  author:'Lucas Faria', date:'28 abr 2026', readTime:'14 min', href:'/artigos/autogpt-crewai-langgraph', image:'/images/article-ai-agent.png',
 };
 
 const ASIDE = [
-  {tag:'Tutorial',v:'c',title:'Como criar um agente ReAct do zero com LangChain',date:'25 abr',rt:'9 min'},
-  {tag:'Análise',v:'',title:'O que mudou no GPT-4o para uso em agentes autônomos',date:'22 abr',rt:'6 min'},
-  {tag:'Agentes',v:'c',title:'Multi-agente vs. agente único: quando cada um faz sentido',date:'18 abr',rt:'8 min'},
+  {tag:'Tutorial',v:'c',title:'Como criar um agente ReAct do zero com LangChain',date:'25 abr',rt:'9 min',href:'/artigos/langchain-tutorial-portugues'},
+  {tag:'Análise',v:'',title:'O que mudou no GPT-4o para uso em agentes autônomos',date:'22 abr',rt:'6 min',href:'/artigos/futuro-da-ia-nos-negocios'},
+  {tag:'Agentes',v:'c',title:'Multi-agente vs. agente único: quando cada um faz sentido',date:'18 abr',rt:'8 min',href:'/artigos/multi-agente-vs-agente-unico'},
 ];
 
 const ARTS = [
-  {tag:'Tutorial',v:'c',title:'Construindo um agente de pesquisa com n8n e Claude 3.7',excerpt:'Passo a passo completo para criar um agente que pesquisa, sintetiza e entrega resultados.',date:'26 abr',rt:'10 min'},
-  {tag:'Agentes',v:'c',title:'Orquestração de agentes: o guia que você não encontra em lugar nenhum',excerpt:'Arquiteturas, padrões de comunicação e como evitar os erros mais comuns.',date:'23 abr',rt:'12 min'},
-  {tag:'Análise',v:'',title:'Por que a maioria dos agentes de IA falha em produção',excerpt:'Os problemas reais que aparecem depois do tutorial — e como resolver cada um.',date:'20 abr',rt:'7 min'},
+  {tag:'Tutorial',v:'c',title:'Construindo um agente de pesquisa com n8n e Claude 3.7',excerpt:'Passo a passo completo para criar um agente que pesquisa, sintetiza e entrega resultados.',date:'26 abr',rt:'10 min',href:'/artigos/como-criar-agente-ia-sem-codigo',image:'/images/article-ai-agent.png'},
+  {tag:'Agentes',v:'c',title:'Orquestração de agentes: o guia que você não encontra em lugar nenhum',excerpt:'Arquiteturas, padrões de comunicação e como evitar os erros mais comuns.',date:'23 abr',rt:'12 min',href:'/artigos/agentes-ia-nao-sao-chatbots',image:'/images/article-components.png'},
+  {tag:'Análise',v:'',title:'Por que a maioria dos agentes de IA falha em produção',excerpt:'Os problemas reais que aparecem depois do tutorial — e como resolver cada um.',date:'20 abr',rt:'7 min',href:'/artigos/erro-automacoes-com-ia-quebram',image:'/images/article-blocks.png'},
 ];
 
 const ART_LIST = [
-  {num:'04',tag:'Caso de uso',v:'',title:'Agentes de IA para atendimento ao cliente: o que funciona de verdade',date:'17 abr',rt:'8 min'},
-  {num:'05',tag:'Tutorial',v:'c',title:'RAG com agentes: quando recuperar contexto muda tudo',date:'14 abr',rt:'11 min'},
-  {num:'06',tag:'Ferramentas',v:'',title:'Relevance AI vs Voiceflow: qual plataforma usar para seus agentes',date:'11 abr',rt:'9 min'},
-  {num:'07',tag:'Estratégia',v:'a',title:'Como monetizar agentes de IA no seu negócio em 2026',date:'8 abr',rt:'6 min'},
-  {num:'08',tag:'Agentes',v:'c',title:'Memory e contexto em agentes de longa duração',date:'5 abr',rt:'10 min'},
+  {num:'04',tag:'Caso de uso',v:'',title:'Agentes de IA para atendimento ao cliente: o que funciona de verdade',date:'17 abr',rt:'8 min',href:'/artigos/agentes-ia-para-vendas'},
+  {num:'05',tag:'Tutorial',v:'c',title:'RAG com agentes: quando recuperar contexto muda tudo',date:'14 abr',rt:'11 min',href:'/artigos/rag-explicado-guia-pratico'},
+  {num:'06',tag:'Ferramentas',v:'',title:'Relevance AI vs Voiceflow: qual plataforma usar para seus agentes',date:'11 abr',rt:'9 min',href:'/comparativos/relevance-ai-vs-voiceflow'},
+  {num:'07',tag:'Estratégia',v:'a',title:'Como monetizar agentes de IA no seu negócio em 2026',date:'8 abr',rt:'6 min',href:'/artigos/agentes-ia-oferta-servico'},
+  {num:'08',tag:'Agentes',v:'c',title:'Memory e contexto em agentes de longa duração',date:'5 abr',rt:'10 min',href:'/artigos/multi-agente-vs-agente-unico'},
 ];
 
 const GUIDES = [
-  {tag:'Guia',v:'a',title:'Do zero ao agente em produção: o roadmap completo',desc:'Infraestrutura, escolha de framework, deploy e monitoramento.'},
-  {tag:'Comparativo',v:'',title:'Comparativo completo: AutoGPT vs CrewAI vs LangGraph vs Relevance',desc:'Testamos os quatro em 6 cenários diferentes. Veja os resultados.'},
-  {tag:'Tutorial',v:'c',title:'Construindo um time de agentes especializados com CrewAI',desc:'Como dividir tarefas complexas entre agentes que colaboram.'},
-  {tag:'Guia',v:'a',title:'Avaliação e debug de agentes: como saber se está funcionando',desc:'Métricas, logs e ferramentas para monitorar agentes em produção.'},
+  {tag:'Guia',v:'a',title:'Do zero ao agente em produção: o roadmap completo',desc:'Infraestrutura, escolha de framework, deploy e monitoramento.',href:'/artigos/o-que-sao-agentes-de-ia'},
+  {tag:'Comparativo',v:'',title:'Comparativo completo: AutoGPT vs CrewAI vs LangGraph vs Relevance',desc:'Testamos os quatro em 6 cenários diferentes. Veja os resultados.',href:'/comparativo'},
+  {tag:'Tutorial',v:'c',title:'Construindo um time de agentes especializados com CrewAI',desc:'Como dividir tarefas complexas entre agentes que colaboram.',href:'/artigos/automacao-agentes-sem-codigo'},
+  {tag:'Guia',v:'a',title:'Avaliação e debug de agentes: como saber se está funcionando',desc:'Métricas, logs e ferramentas para monitorar agentes em produção.',href:'/artigos/erro-automacoes-com-ia-quebram'},
 ];
 
 const RANKING = [
@@ -56,13 +56,13 @@ const TOOLS = [
 
 /* ── COMPONENTS ─────────────────────────────── */
 
-function SH({num, label, more}){
+function SH({num, label, more, moreHref}){
   return (
     <div className="sh">
       <span className="sh-num">{num}</span>
       <div className="sh-rule"/>
       <span className="sh-label">{label}</span>
-      {more && <><div className="sh-rule" style={{flex:'0 0 20px'}}/><a href="#" className="sh-more">{more} →</a></>}
+      {more && <><div className="sh-rule" style={{flex:'0 0 20px'}}/><a href={moreHref || "/arquivo"} className="sh-more">{more} -&gt;</a></>}
     </div>
   );
 }
@@ -140,11 +140,9 @@ function FeaturedArticle(){
         <SH num="01" label="Artigo em destaque"/>
         <div className="feature-grid">
           <div>
-            <div className="feature-img ph">
-              <div className="ph" style={{width:'100%',height:'100%'}}>
-                <span className="ph-label">imagem do artigo em destaque</span>
-              </div>
-            </div>
+            <a className="feature-img" href={FEATURE_ART.href}>
+              <img src={FEATURE_ART.image} alt={FEATURE_ART.title} loading="lazy"/>
+            </a>
             <div className="feature-tags">
               {FEATURE_ART.tags.map((t,i)=><span key={i} className={`pill ${t.v}`}>{t.l}</span>)}
             </div>
@@ -157,16 +155,16 @@ function FeaturedArticle(){
               <span className="feature-meta-sep">—</span>
               <span>{FEATURE_ART.readTime} de leitura</span>
             </div>
-            <a href="#" className="arrow-link">Ler artigo completo →</a>
+            <a href={FEATURE_ART.href} className="arrow-link">Ler artigo completo -&gt;</a>
           </div>
           <div>
             <div className="aside-title">Também em destaque</div>
             {ASIDE.map((a,i)=>(
-              <div className="aside-item" key={i}>
+              <a className="aside-item" href={a.href} key={i}>
                 <span className={`pill ${a.v}`}>{a.tag}</span>
                 <div className="aside-item-title">{a.title}</div>
-                <div className="aside-item-meta">{a.date} · {a.rt}</div>
-              </div>
+                <div className="aside-item-meta">{a.date} - {a.rt}</div>
+              </a>
             ))}
           </div>
         </div>
@@ -182,11 +180,9 @@ function RecentArticles(){
         <SH num="02" label="Artigos recentes" more="Ver todos"/>
         <div className="article-grid">
           {ARTS.map((a,i)=>(
-            <div className="art-card" key={i}>
-              <div className="art-card-img ph">
-                <div className="ph" style={{width:'100%',height:'100%'}}>
-                  <span className="ph-label">imagem do artigo</span>
-                </div>
+            <a className="art-card" href={a.href} key={i}>
+              <div className="art-card-img">
+                <img src={a.image} alt={a.title} loading="lazy"/>
               </div>
               <div className="art-card-body">
                 <span className={`pill ${a.v}`}>{a.tag}</span>
@@ -198,23 +194,22 @@ function RecentArticles(){
                   <span>{a.rt} de leitura</span>
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
         <div className="art-list">
           {ART_LIST.map((a,i)=>(
-            <div className="art-list-item" key={i}>
+            <a className="art-list-item" href={a.href} key={i}>
               <div className="art-list-num">{a.num}</div>
               <div>
                 <span className={`pill ${a.v}`} style={{marginBottom:8,display:'inline-block'}}>{a.tag}</span>
                 <div className="art-list-title">{a.title}</div>
               </div>
               <div className="art-list-meta">{a.date} · {a.rt}</div>
-            </div>
+            </a>
           ))}
         </div>
-        <div style={{marginTop:36,display:'flex',justifyContent:'center'}}>
-          <button className="btn btn-stroke">Carregar mais artigos</button>
+        <div style={{marginTop:36,display:'flex',justifyContent:'center'}}><a href="/arquivo" className="btn btn-stroke">Ver todos os artigos</a>
         </div>
       </div>
     </section>
@@ -225,18 +220,18 @@ function GuidesSection(){
   return (
     <section className="guides">
       <div className="wrap">
-        <SH num="03" label="Guias e Comparativos" more="Ver biblioteca"/>
+        <SH num="03" label="Guias e Comparativos" more="Ver biblioteca" moreHref="/arquivo"/>
         <div className="guides-layout">
           <div>
             {GUIDES.map((g,i)=>(
-              <div className="guide-row" key={i}>
+              <a className="guide-row" href={g.href} key={i}>
                 <div className="guide-n">0{i+1}</div>
                 <div>
                   <div className="guide-tag-row"><span className={`pill ${g.v}`}>{g.tag}</span></div>
                   <div className="guide-title">{g.title}</div>
                   <div className="guide-desc">{g.desc}</div>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
           <div className="rank-card">
@@ -255,7 +250,7 @@ function GuidesSection(){
               </div>
             ))}
             <div className="rank-foot">
-              <a href="#" className="arrow-link" style={{fontSize:11}}>Ver comparativo completo →</a>
+              <a href="/comparativo" className="arrow-link" style={{fontSize:11}}>Ver comparativo completo -&gt;</a>
             </div>
           </div>
         </div>
@@ -268,7 +263,7 @@ function ToolsSection(){
   return (
     <section className="tools">
       <div className="wrap">
-        <SH num="04" label="Ferramentas para Agentes de IA" more="Ver todas"/>
+        <SH num="04" label="Ferramentas para Agentes de IA" more="Ver todas" moreHref="/ferramentas"/>
         <div style={{marginBottom:28,marginTop:-16}}>
           <p style={{fontSize:13,color:'var(--text-3)'}}>
             Ferramentas testadas e recomendadas para criar e escalar agentes de IA.

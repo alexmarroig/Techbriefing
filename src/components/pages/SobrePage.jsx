@@ -152,10 +152,10 @@ function App(){
             <p className="contact-desc">Sugestões editoriais, parcerias, oportunidades de anúncio ou só um feedback honesto — estamos disponíveis.</p>
             <div className="contact-links">
               {[
-                {ico:'✉️',title:'E-mail geral',desc:'contato@iaworld.com.br',href:'#'},
-                {ico:'🤝',title:'Parcerias e anúncios',desc:'Acesso ao media kit e formatos',href:'#'},
-                {ico:'𝕏',title:'Twitter / X',desc:'@iaworldbr',href:'#'},
-                {ico:'in',title:'LinkedIn',desc:'Tech Briefing — Nexora Systems',href:'#'},
+                {ico:'✉️',title:'E-mail geral',desc:'contato@iaworld.com.br',href:'mailto:contato@iaworld.com.br'},
+                {ico:'🤝',title:'Parcerias e anúncios',desc:'Acesso ao media kit e formatos',href:'/contato'},
+                {ico:'𝕏',title:'Twitter / X',desc:'@iaworldbr',href:'/contato'},
+                {ico:'in',title:'LinkedIn',desc:'Tech Briefing — Nexora Systems',href:'/contato'},
               ].map((c,i)=>(
                 <a href={c.href} className="contact-link" key={i}>
                   <div className="contact-link-ico">{c.ico}</div>
