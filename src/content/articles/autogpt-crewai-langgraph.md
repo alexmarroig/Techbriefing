@@ -6,7 +6,7 @@ author: "Lucas Faria"
 date: 2026-04-28
 readTime: "14 min"
 featured: true
-image: "/images/article-ai-agent.webp"
+image: "/images/editorial/agents-operations.svg"
 tags:
   - Agentes de IA
   - Frameworks

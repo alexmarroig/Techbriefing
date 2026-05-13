@@ -1,0 +1,18 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustracao editorial de automacao e fluxos de trabalho com IA">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#07120d"/><stop offset=".55" stop-color="#0c1728"/><stop offset="1" stop-color="#17120a"/></linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#79ffb2"/><stop offset=".5" stop-color="#64d8ff"/><stop offset="1" stop-color="#ffb35c"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="9" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="675" rx="34" fill="url(#bg)"/>
+  <g stroke="#fff" stroke-opacity=".05"><path d="M80 100h1040M80 220h1040M80 340h1040M80 460h1040M80 580h1040"/><path d="M190 40v595M390 40v595M590 40v595M790 40v595M990 40v595"/></g>
+  <path d="M170 338h176c64 0 54-122 118-122h154c70 0 54 246 124 246h286" stroke="url(#line)" stroke-width="9" fill="none" stroke-linecap="round" filter="url(#glow)"/>
+  <g fill="#101923" stroke="#fff" stroke-opacity=".13">
+    <rect x="118" y="276" width="168" height="124" rx="24"/>
+    <rect x="492" y="154" width="180" height="124" rx="24"/>
+    <rect x="710" y="400" width="192" height="124" rx="24"/>
+    <rect x="936" y="276" width="160" height="124" rx="24"/>
+  </g>
+  <g stroke="#eaf6ff" stroke-linecap="round"><path d="M168 320h68M168 350h84" stroke-width="10"/><path d="M542 198h76M542 228h48" stroke-width="10"/><path d="M760 444h92M760 474h54" stroke-width="10"/><path d="M986 320h60M986 350h84" stroke-width="10"/></g>
+  <circle cx="202" cy="338" r="11" fill="#79ffb2"/><circle cx="582" cy="216" r="11" fill="#64d8ff"/><circle cx="806" cy="462" r="11" fill="#ffb35c"/><circle cx="1016" cy="338" r="11" fill="#fff"/>
+</svg>

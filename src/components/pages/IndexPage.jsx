@@ -18,7 +18,7 @@ const FEATURED = {
   excerpt:'O novo paradigma de automação está aqui — e ele não exige programação. Descubra como combinar n8n, Make e modelos de linguagem para criar fluxos que trabalham enquanto você dorme.',
   author:'Lucas Faria', date:'28 abr 2026', readTime:'11 min',
   href:'/arquivo',
-  image:'/images/article-automation.webp',
+  image:'/images/editorial/automation-workflow.svg',
 };
 const ASIDE = [
   {tag:'Agentes de IA',v:'c',title:'AutoGPT, CrewAI ou LangGraph? Qual framework escolher em 2026',date:'26 abr',rt:'8 min',href:'/arquivo'},

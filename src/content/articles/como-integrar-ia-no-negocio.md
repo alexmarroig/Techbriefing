@@ -6,7 +6,7 @@ author: "Nexora Systems"
 date: 2026-04-12
 readTime: "10 min"
 featured: true
-image: "/images/article-components.webp"
+image: "/images/editorial/api-components.svg"
 tags:
   - IA Prática
   - Negócios

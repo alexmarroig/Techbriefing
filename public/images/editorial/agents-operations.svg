@@ -1,0 +1,28 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustracao editorial de agentes de IA operando fluxos de voz e atendimento">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#061116"/>
+      <stop offset="0.52" stop-color="#0b1024"/>
+      <stop offset="1" stop-color="#1a0b18"/>
+    </linearGradient>
+    <linearGradient id="hot" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#58f5ff"/>
+      <stop offset="1" stop-color="#ff9f52"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="675" rx="34" fill="url(#bg)"/>
+  <path d="M0 120h1200M0 240h1200M0 360h1200M0 480h1200M160 0v675M320 0v675M480 0v675M640 0v675M800 0v675M960 0v675" stroke="#ffffff" stroke-opacity=".045"/>
+  <circle cx="245" cy="205" r="70" fill="#111b2d" stroke="#58f5ff" stroke-opacity=".45"/>
+  <circle cx="245" cy="205" r="34" fill="none" stroke="#58f5ff" stroke-width="8" stroke-linecap="round" stroke-dasharray="90 42"/>
+  <path d="M320 205h140c72 0 62 132 134 132h88" stroke="url(#hot)" stroke-width="8" fill="none" stroke-linecap="round" filter="url(#glow)"/>
+  <rect x="695" y="245" width="210" height="184" rx="26" fill="#111827" stroke="#ff9f52" stroke-opacity=".55"/>
+  <path d="M756 336c0-42 88-42 88 0s-88 42-88 0Z" fill="none" stroke="#ff9f52" stroke-width="10"/>
+  <path d="M800 292v88M756 336h88" stroke="#ff9f52" stroke-width="10" stroke-linecap="round"/>
+  <rect x="184" y="420" width="314" height="92" rx="22" fill="#101722" stroke="#ffffff" stroke-opacity=".12"/>
+  <path d="M225 467h200" stroke="#e8eef5" stroke-opacity=".75" stroke-width="10" stroke-linecap="round"/>
+  <path d="M225 493h150" stroke="#58f5ff" stroke-opacity=".55" stroke-width="7" stroke-linecap="round"/>
+  <path d="M930 146c86 40 132 112 138 214" stroke="#ff4fa3" stroke-opacity=".28" stroke-width="2" fill="none"/>
+  <path d="M908 186c58 30 98 80 118 150" stroke="#ff4fa3" stroke-opacity=".42" stroke-width="2" fill="none"/>
+  <circle cx="1068" cy="360" r="7" fill="#ff4fa3"/>
+</svg>

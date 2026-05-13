@@ -6,7 +6,7 @@ author: "Nexora Systems"
 date: 2026-04-18
 readTime: "10 min"
 featured: false
-image: "/images/article-blocks.webp"
+image: "/images/editorial/failure-blocks.svg"
 tags:
   - No-code
   - Ferramentas de IA

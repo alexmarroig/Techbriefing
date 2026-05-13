@@ -6,7 +6,7 @@ author: "Nexora Systems"
 date: 2026-04-02
 readTime: "13 min"
 featured: false
-image: "/images/article-automation.webp"
+image: "/images/editorial/automation-workflow.svg"
 tags:
   - n8n
   - Automação

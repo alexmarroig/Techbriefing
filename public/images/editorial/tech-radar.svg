@@ -1,0 +1,19 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustracao editorial de radar de tecnologia e noticias de IA">
+  <defs>
+    <radialGradient id="r" cx=".5" cy=".5" r=".72"><stop offset="0" stop-color="#10253a"/><stop offset=".62" stop-color="#08131c"/><stop offset="1" stop-color="#04080d"/></radialGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="675" rx="34" fill="url(#r)"/>
+  <g transform="translate(600 338)" fill="none" stroke="#fff" stroke-opacity=".08">
+    <circle r="86"/><circle r="168"/><circle r="252"/><circle r="334"/>
+    <path d="M-360 0h720M0-360v720M-255-255l510 510M255-255l-510 510"/>
+  </g>
+  <path d="M600 338l275-170" stroke="#63e6ff" stroke-width="7" stroke-linecap="round" filter="url(#glow)"/>
+  <circle cx="600" cy="338" r="18" fill="#ffb35c"/>
+  <circle cx="875" cy="168" r="14" fill="#63e6ff"/>
+  <circle cx="416" cy="214" r="10" fill="#ff4fa3"/>
+  <circle cx="770" cy="460" r="12" fill="#9dff8a"/>
+  <circle cx="310" cy="420" r="9" fill="#ffb35c"/>
+  <rect x="118" y="92" width="258" height="92" rx="22" fill="#101923" stroke="#fff" stroke-opacity=".12"/>
+  <path d="M164 132h130M164 160h76" stroke="#f2f7fb" stroke-opacity=".75" stroke-width="8" stroke-linecap="round"/>
+</svg>

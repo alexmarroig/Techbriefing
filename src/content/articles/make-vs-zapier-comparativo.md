@@ -6,7 +6,7 @@ author: "Nexora Systems"
 date: 2026-05-01
 readTime: "8 min"
 featured: false
-image: "/images/article-scenario.webp"
+image: "/images/editorial/tech-radar.svg"
 tags:
   - Make
   - Zapier

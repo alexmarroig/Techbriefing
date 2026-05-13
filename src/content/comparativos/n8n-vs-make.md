@@ -6,7 +6,7 @@ author: "Lucas Faria"
 date: 2026-04-29
 readTime: "12 min"
 featured: true
-image: "/images/article-scenario.webp"
+image: "/images/editorial/tech-radar.svg"
 tools:
   - n8n
   - Make

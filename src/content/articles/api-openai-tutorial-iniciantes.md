@@ -6,7 +6,7 @@ author: "Nexora Systems"
 date: 2026-04-25
 readTime: "11 min"
 featured: false
-image: "/images/article-components.webp"
+image: "/images/editorial/api-components.svg"
 tags:
   - OpenAI
   - API

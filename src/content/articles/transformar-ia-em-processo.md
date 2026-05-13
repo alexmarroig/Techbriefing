@@ -6,7 +6,7 @@ author: "Nexora Systems"
 date: 2026-05-12
 readTime: "7 min"
 featured: false
-image: "/images/article-scenario.webp"
+image: "/images/editorial/tech-radar.svg"
 tags:
   - IA para negócios
   - Processos

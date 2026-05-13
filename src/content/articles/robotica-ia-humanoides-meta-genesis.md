@@ -6,7 +6,7 @@ author: "Nexora Systems"
 date: 2026-05-13
 readTime: "8 min"
 featured: false
-image: "/images/article-blocks.webp"
+image: "/images/editorial/failure-blocks.svg"
 tags:
   - Robótica
   - IA física

@@ -1,0 +1,22 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustracao editorial de componentes, APIs e arquitetura de software">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#071019"/><stop offset=".6" stop-color="#10172a"/><stop offset="1" stop-color="#0b1020"/></linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7dd3fc"/><stop offset="1" stop-color="#f59e0b"/></linearGradient>
+  </defs>
+  <rect width="1200" height="675" rx="34" fill="url(#bg)"/>
+  <path d="M0 118h1200M0 238h1200M0 358h1200M0 478h1200M220 0v675M460 0v675M700 0v675M940 0v675" stroke="#ffffff" stroke-opacity=".045"/>
+  <g fill="#101827" stroke="url(#edge)" stroke-opacity=".85" stroke-width="3">
+    <rect x="190" y="180" width="220" height="128" rx="24"/>
+    <rect x="490" y="130" width="220" height="128" rx="24"/>
+    <rect x="790" y="180" width="220" height="128" rx="24"/>
+    <rect x="340" y="410" width="220" height="128" rx="24"/>
+    <rect x="640" y="410" width="220" height="128" rx="24"/>
+  </g>
+  <g stroke="#7dd3fc" stroke-width="7" stroke-linecap="round" fill="none">
+    <path d="M410 244h80M710 194h80M600 258l-90 152M710 258l-70 152M790 244h-80M560 474h80"/>
+  </g>
+  <g stroke="#eef6ff" stroke-opacity=".8" stroke-linecap="round">
+    <path d="M238 225h118M238 258h80M538 175h120M538 208h72M838 225h100M838 258h64M388 455h116M388 488h74M688 455h118M688 488h84" stroke-width="9"/>
+  </g>
+  <circle cx="600" cy="258" r="13" fill="#f59e0b"/><circle cx="710" cy="258" r="13" fill="#f59e0b"/><circle cx="560" cy="474" r="13" fill="#7dd3fc"/><circle cx="640" cy="474" r="13" fill="#7dd3fc"/>
+</svg>

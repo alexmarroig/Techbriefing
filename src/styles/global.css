@@ -2515,3 +2515,78 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;o
 .tool-try{
   color: var(--amber) !important;
 }
+
+/* Home refinements: editorial images and clearer category navigation. */
+.feature-img-wrap{
+  background:
+    radial-gradient(circle at 30% 20%, oklch(0.74 0.12 200 / 0.22), transparent 34%),
+    linear-gradient(135deg, var(--bg-3), var(--bg));
+  box-shadow: 0 18px 60px oklch(0 0 0 / 0.28);
+}
+.categories{
+  background:
+    radial-gradient(circle at 100% 0%, oklch(0.80 0.14 62 / 0.08), transparent 32%),
+    var(--bg-2) !important;
+}
+.cat-row{
+  border-color: oklch(0.30 0.012 240) !important;
+}
+.cat-row-name{
+  color: var(--text) !important;
+}
+.cat-row-num,
+.cat-row-arrow{
+  color: oklch(0.80 0.14 62 / 0.86) !important;
+}
+.cat-row-desc{
+  color: oklch(0.86 0.006 240) !important;
+}
+@media(max-width:640px){
+  .categories{
+    padding: 56px 0 64px !important;
+  }
+  .cat-list{
+    display: grid;
+    gap: 14px;
+  }
+  .cat-row,
+  .cat-row:first-child,
+  .cat-row:last-child{
+    grid-template-columns: 34px 1fr 34px !important;
+    gap: 12px !important;
+    align-items: center !important;
+    padding: 20px 18px !important;
+    border: 1px solid oklch(0.30 0.012 240) !important;
+    border-radius: 16px;
+    background:
+      linear-gradient(135deg, oklch(0.17 0.010 240 / 0.94), oklch(0.11 0.008 240 / 0.96));
+    box-shadow: 0 14px 36px oklch(0 0 0 / 0.22);
+  }
+  .cat-row-name{
+    font-size: clamp(30px, 9vw, 44px) !important;
+    line-height: 0.98 !important;
+  }
+  .cat-row-num{
+    font-size: 12px !important;
+  }
+  .cat-row-arrow{
+    grid-column: auto !important;
+    width: 34px;
+    height: 34px;
+    border-radius: 999px;
+    display: grid;
+    place-items: center;
+    background: var(--amber-x);
+    border: 1px solid var(--amber-d);
+    text-align: center !important;
+    font-size: 18px !important;
+  }
+  .cat-row-desc{
+    display: block !important;
+    grid-column: 2 / 4 !important;
+    max-width: none !important;
+    margin-top: -4px;
+    font-size: 14px !important;
+    line-height: 1.45;
+  }
+}

@@ -6,7 +6,7 @@ author: "Nexora Systems"
 date: 2026-05-12
 readTime: "8 min"
 featured: false
-image: "/images/article-components.webp"
+image: "/images/editorial/api-components.svg"
 tags:
   - Agentes de IA
   - Chatbots

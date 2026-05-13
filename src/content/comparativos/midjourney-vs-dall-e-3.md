@@ -6,7 +6,7 @@ author: "Nexora Systems"
 date: 2026-05-02
 readTime: "9 min"
 featured: true
-image: "/images/article-scenario.webp"
+image: "/images/editorial/tech-radar.svg"
 tools:
   - Midjourney
   - DALL-E 3

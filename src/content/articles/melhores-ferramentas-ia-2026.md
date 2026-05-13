@@ -6,7 +6,7 @@ author: "Nexora Systems"
 date: 2026-03-20
 readTime: "12 min"
 featured: true
-image: "/images/article-blocks.webp"
+image: "/images/editorial/failure-blocks.svg"
 tags:
   - Ferramentas de IA
   - Software

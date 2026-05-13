@@ -6,7 +6,7 @@ author: "Lucas Faria"
 date: 2026-04-25
 readTime: "11 min"
 featured: false
-image: "/images/article-automation.webp"
+image: "/images/editorial/automation-workflow.svg"
 tags:
   - Automação
   - IA Prática

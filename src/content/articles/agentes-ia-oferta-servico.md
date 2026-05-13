@@ -6,7 +6,7 @@ author: "Nexora Systems"
 date: 2026-05-12
 readTime: "8 min"
 featured: false
-image: "/images/article-future.webp"
+image: "/images/editorial/market-shift.svg"
 tags:
   - Consultoria
   - Agentes de IA
