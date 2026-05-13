@@ -35,10 +35,17 @@ const STOP_DOMAINS = new Set([
 ]);
 
 function todayParts() {
-  const now = new Date();
-  const yyyy = now.getFullYear();
-  const mm = String(now.getMonth() + 1).padStart(2, '0');
-  const dd = String(now.getDate()).padStart(2, '0');
+  const timeZone = process.env.RADAR_TIMEZONE || 'America/Sao_Paulo';
+  const parts = new Intl.DateTimeFormat('en-CA', {
+    timeZone,
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).formatToParts(new Date());
+  const values = Object.fromEntries(parts.map((part) => [part.type, part.value]));
+  const yyyy = values.year;
+  const mm = values.month;
+  const dd = values.day;
   return { yyyy, mm, dd, iso: `${yyyy}-${mm}-${dd}` };
 }
 

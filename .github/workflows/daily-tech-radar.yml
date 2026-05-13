@@ -1,0 +1,71 @@
+name: Daily Tech Radar
+
+on:
+  schedule:
+    # 08:00 in Sao Paulo (UTC-3). GitHub schedules use UTC.
+    - cron: '0 11 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-tech-radar
+  cancel-in-progress: false
+
+jobs:
+  publish-radar:
+    runs-on: ubuntu-latest
+    env:
+      RADAR_TIMEZONE: America/Sao_Paulo
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate radar
+        id: radar
+        shell: bash
+        run: |
+          set +e
+          npm run radar:tech
+          status=$?
+          set -e
+
+          if [ "$status" -ne 0 ]; then
+            echo "Radar already exists or generation failed. Checking whether there are file changes."
+          fi
+
+          if git diff --quiet -- src/content/articles; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Build site
+        if: steps.radar.outputs.changed == 'true'
+        run: npm run build
+
+      - name: Commit daily radar
+        if: steps.radar.outputs.changed == 'true'
+        run: |
+          git config user.name "tech-briefing-bot"
+          git config user.email "actions@github.com"
+          git add src/content/articles
+          git commit -m "Add daily tech radar"
+          git push
+
+      - name: Nothing to publish
+        if: steps.radar.outputs.changed != 'true'
+        run: echo "No new radar post to publish today."
