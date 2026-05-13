@@ -336,6 +336,40 @@ const image = '/images/ebook-cover.png';
   </div>
 </section>
 
+<!-- VIDEO PREVIEW -->
+<section class="lp-section lp-video-section" id="preview">
+  <div class="lp-wrap">
+    <div class="lp-section-header">
+      <span class="lp-section-num">05</span>
+      <div class="lp-section-rule"></div>
+      <span class="lp-section-label">Veja o que voce recebe</span>
+    </div>
+    <div class="lp-video-layout">
+      <div>
+        <h2 class="lp-h2">Um preview rapido do ebook antes de comprar.</h2>
+        <p class="lp-section-intro">Veja a apresentacao visual do material e confirme se ele tem a pegada certa para voce: direto, pratico e feito para transformar IA em processo de negocio.</p>
+        <div class="lp-video-points">
+          <span>Preview do produto</span>
+          <span>Acesso digital imediato</span>
+          <span>PDF + EPUB</span>
+        </div>
+        <a href={CONFIG.primaryBuyLink} class="lp-btn-primary">Quero acessar agora →</a>
+      </div>
+      <div class="lp-video-frame">
+        <video
+          class="lp-preview-video"
+          src="/videos/ebook-agentes-preview.mp4"
+          poster="/images/ebook-video-poster.jpg"
+          controls
+          playsinline
+          preload="metadata"
+          aria-label="Preview do ebook Agentes de IA para Negocios"
+        ></video>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- DIFERENCIAL: OS 6 BLOCOS -->
 <section class="lp-section lp-section-alt" style="position:relative;overflow:hidden">
   <div class="lp-neural-bg" aria-hidden="true">
@@ -355,7 +389,7 @@ const image = '/images/ebook-cover.png';
   </div>
   <div class="lp-wrap">
     <div class="lp-section-header">
-      <span class="lp-section-num">05</span>
+      <span class="lp-section-num">06</span>
       <div class="lp-section-rule"></div>
       <span class="lp-section-label">Dentro do ebook</span>
     </div>
@@ -393,7 +427,7 @@ const image = '/images/ebook-cover.png';
   </div>
   <div class="lp-wrap">
     <div class="lp-section-header">
-      <span class="lp-section-num">06</span>
+      <span class="lp-section-num">07</span>
       <div class="lp-section-rule"></div>
       <span class="lp-section-label">A mudança de papel</span>
     </div>
@@ -419,7 +453,7 @@ const image = '/images/ebook-cover.png';
 <section class="lp-section lp-section-alt" id="conteudo">
   <div class="lp-wrap">
     <div class="lp-section-header">
-      <span class="lp-section-num">07</span>
+      <span class="lp-section-num">08</span>
       <div class="lp-section-rule"></div>
       <span class="lp-section-label">Conteúdo completo</span>
     </div>
@@ -440,7 +474,7 @@ const image = '/images/ebook-cover.png';
 <section class="lp-section lp-nexora-section">
   <div class="lp-wrap">
     <div class="lp-section-header">
-      <span class="lp-section-num">08</span>
+      <span class="lp-section-num">09</span>
       <div class="lp-section-rule"></div>
       <span class="lp-section-label">A origem</span>
     </div>
@@ -515,7 +549,7 @@ const image = '/images/ebook-cover.png';
 <section class="lp-section">
   <div class="lp-wrap">
     <div class="lp-section-header">
-      <span class="lp-section-num">09</span>
+      <span class="lp-section-num">10</span>
       <div class="lp-section-rule"></div>
       <span class="lp-section-label">Perguntas frequentes</span>
     </div>
@@ -1045,6 +1079,7 @@ body {
   .lp-countdown { width: 100%; }
   .lp-countdown span { flex: 1; }
   .lp-outcomes-grid { grid-template-columns: 1fr 1fr; }
+  .lp-video-layout { grid-template-columns: 1fr; }
 }
 
 @media(max-width:640px){
@@ -1165,6 +1200,75 @@ body {
   font-size: 13.5px;
   line-height: 1.65;
   color: var(--text-2);
+}
+
+/* Video preview */
+.lp-video-section {
+  background:
+    radial-gradient(circle at 72% 40%, oklch(0.72 0.18 338 / 0.12), transparent 26rem),
+    var(--bg);
+}
+.lp-video-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(360px, 1.18fr);
+  gap: 52px;
+  align-items: center;
+}
+.lp-video-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: -18px 0 28px;
+}
+.lp-video-points span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 7px 12px;
+  border: 1px solid var(--line-s);
+  border-radius: 999px;
+  background: oklch(0.08 0.008 240 / 0.78);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-2);
+}
+.lp-video-frame {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid oklch(0.72 0.18 338 / 0.28);
+  border-radius: 20px;
+  padding: 10px;
+  background:
+    linear-gradient(135deg, oklch(0.72 0.18 338 / 0.12), transparent 42%),
+    oklch(0.06 0.006 240 / 0.9);
+  box-shadow: 0 32px 90px oklch(0 0 0 / 0.42), 0 0 80px oklch(0.72 0.18 338 / 0.1);
+}
+.lp-video-frame::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(90deg, transparent, oklch(1 0 0 / 0.08), transparent);
+  transform: translateX(-100%);
+  animation: lp-video-sheen 6s ease-in-out infinite;
+  pointer-events: none;
+}
+.lp-preview-video {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 14px;
+  background: oklch(0.04 0.004 240);
+}
+@keyframes lp-video-sheen {
+  0%, 55% { transform: translateX(-100%); opacity: 0; }
+  65% { opacity: 1; }
+  100% { transform: translateX(100%); opacity: 0; }
 }
 
 /* Audience */
@@ -1491,8 +1595,10 @@ body {
   .lp-circuit-bg,
   .lp-neural-bg,
   .lp-flow-bg,
-  .lp-hex-bg {
+  .lp-hex-bg,
+  .lp-video-frame::before {
     opacity: 0.35;
+    animation: none;
   }
   .lp-btn-primary,
   .lp-cover-img,
