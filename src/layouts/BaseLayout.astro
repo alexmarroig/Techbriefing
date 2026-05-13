@@ -114,7 +114,9 @@ const schemas = [
   <body>
     <GoogleTag mode="body" />
     <Navbar active={active} />
-    <slot />
+    <main id="conteudo-principal">
+      <slot />
+    </main>
     <Footer active={active} />
   </body>
 </html>

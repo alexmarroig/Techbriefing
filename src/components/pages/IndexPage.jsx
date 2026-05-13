@@ -121,7 +121,7 @@ function FeatureSection(){
           <div className="feature-ord" aria-hidden="true">01</div>
           <div>
             <a className="feature-img-wrap feature-img-link" href={FEATURED.href} aria-label={FEATURED.title}>
-              <img src={FEATURED.image} alt={FEATURED.title} loading="lazy"/>
+              <img src={FEATURED.image} alt={FEATURED.title} loading="lazy" width="900" height="506"/>
             </a>
             <div style={{marginTop:32}}>
               <div className="feature-tags">

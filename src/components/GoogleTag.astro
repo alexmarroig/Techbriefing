@@ -133,11 +133,13 @@ const siteName = 'tech_briefing';
       };
 
       const scheduleTags = function(){
+        const isEbookLanding = window.location.pathname.replace(/\/$/, '') === '/ebook-agentes-ia';
+        const delay = isEbookLanding ? 1800 : 6500;
         const load = function(){
-          window.setTimeout(window.__loadTechBriefingTags, 1800);
+          window.setTimeout(window.__loadTechBriefingTags, delay);
         };
         if ('requestIdleCallback' in window) {
-          window.requestIdleCallback(load, { timeout: 3500 });
+          window.requestIdleCallback(load, { timeout: isEbookLanding ? 3500 : 8000 });
         } else {
           load();
         }
