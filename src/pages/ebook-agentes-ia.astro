@@ -29,8 +29,8 @@ const CONFIG = {
   },
 
   heroBadge: 'Oferta de lançamento - acesso imediato',
-  heroHeadline: 'Pare de brincar de IA. Comece a criar agentes que trabalham pelo seu negócio.',
-  heroSub: 'Um guia direto para sair do ChatGPT solto, das automações frágeis e dos testes que nunca viram processo. Aprenda a estruturar agentes de IA que decidem, executam e reduzem trabalho manual com método.',
+  heroHeadline: 'IA não paga boleto se continuar presa no chat.',
+  heroSub: 'Pare de usar IA só para gerar texto bonito. Este ebook mostra como transformar ChatGPT, automações e ferramentas de IA em agentes que executam tarefas reais, reduzem trabalho manual e abrem novas ofertas para o seu negócio.',
 
   pages: '126',
   chapters: '12',
@@ -41,22 +41,22 @@ const CONFIG = {
   guaranteeText: 'Se em 7 dias você sentir que o conteúdo não entregou o que prometeu, devolvemos 100% do valor. Sem perguntas.',
 
   painPoints: [
-    { label: 'Você usa IA, mas continua fazendo tudo manualmente', desc: 'A IA responde, mas quem copia, cola, confere, envia e cobra ainda é você.' },
-    { label: 'Suas automações quebram quando o cenário muda', desc: 'Um campo diferente, um lead incompleto ou uma exceção simples já derruba o fluxo inteiro.' },
-    { label: 'Você não sabe onde colocar agentes no negócio', desc: 'Sem mapa de processo, vira tentativa aleatória: muita ferramenta, pouca operação real.' },
-    { label: 'Você tem medo de vender IA e não entregar', desc: 'Sem arquitetura, limite e avaliação, qualquer projeto parece bonito na demo e perigoso na prática.' },
+    { label: 'Você pede ajuda para a IA, mas o trabalho volta para você', desc: 'A IA responde. Só que quem copia, cola, revisa, envia, cobra e acompanha ainda é você.' },
+    { label: 'Automação fraca parece lucro, mas vira retrabalho', desc: 'Um campo diferente, um lead incompleto ou uma exceção simples já derruba o fluxo inteiro.' },
+    { label: 'Você vê oportunidade, mas não sabe o que vender', desc: 'Sem mapa de processo, vira tentativa aleatória: muita ferramenta, pouca proposta comercial.' },
+    { label: 'Você quer cobrar por IA, mas tem medo de entregar mal', desc: 'Sem arquitetura, limite e avaliação, qualquer projeto parece bonito na demo e perigoso no cliente real.' },
   ],
 
   outcomes: [
     { title: 'Encontrar processos com potencial real', desc: 'Você aprende a separar tarefas que merecem agente daquelas que só precisam de uma automação simples.' },
     { title: 'Desenhar um agente antes da ferramenta', desc: 'Objetivo, entradas, regras, memória, ferramentas, limites e métrica ficam claros antes de abrir qualquer plataforma.' },
     { title: 'Evitar erros caros de implementação', desc: 'Você entende por que projetos falham: falta de observabilidade, escopo frouxo, ação sem permissão e testes ruins.' },
-    { title: 'Transformar IA em oferta ou operação', desc: 'Use o método para melhorar seu próprio negócio ou vender projetos com mais segurança para clientes.' },
+    { title: 'Cobrar melhor por projetos de IA', desc: 'Use o método para transformar agentes em entrega consultiva, com escopo mais claro e menos promessa vazia.' },
   ],
 
   audienceBullets: [
     { icon: '01', title: 'Empreendedores sem tempo para errar', desc: 'Você quer usar IA para vender, atender, produzir ou operar melhor, mas não pode desperdiçar semanas em ferramenta errada.' },
-    { icon: '02', title: 'Consultores e freelancers', desc: 'Você quer oferecer agentes de IA como serviço, com método claro para diagnosticar, desenhar e entregar projetos.' },
+    { icon: '02', title: 'Consultores e freelancers que querem cobrar por IA', desc: 'Você quer vender agentes de IA como serviço, com método claro para diagnosticar, desenhar e entregar projetos.' },
     { icon: '03', title: 'Gestores e operadores', desc: 'Você vive apagando incêndio em tarefas repetitivas e precisa transformar processo manual em sistema confiável.' },
     { icon: '04', title: 'Quem já testou IA e travou', desc: 'Você sabe que existe oportunidade, mas ainda não conseguiu sair da conversa com o chat para uma operação de verdade.' },
   ],
@@ -68,7 +68,7 @@ const CONFIG = {
     'Mapear processos de vendas, suporte, conteúdo e operação que podem virar agentes',
     'Evitar projetos que funcionam na demo, mas quebram no primeiro cliente real',
     'Definir limites humanos para o agente agir sem colocar seu negócio em risco',
-    'Transformar conhecimento de IA em uma oferta mais clara para clientes',
+    'Transformar conhecimento de IA em uma oferta que você consegue explicar, vender e entregar',
     'Sair do improviso com um roteiro de 8 passos para construir o primeiro agente',
   ],
 
@@ -167,7 +167,7 @@ const image = '/images/ebook-cover.png';
         <p class="lp-hero-sub">{CONFIG.heroSub}</p>
         <div class="lp-urgency-card" data-promo-end={CONFIG.promoEndIso}>
           <div>
-            <span class="lp-urgency-kicker">Promocao imperdivel</span>
+            <span class="lp-urgency-kicker">Promoção imperdível</span>
             <strong>R$ 37 somente no lancamento</strong>
             <span class="lp-urgency-note">Depois, o ebook volta para {CONFIG.fullPrice}.</span>
           </div>
@@ -263,7 +263,7 @@ const image = '/images/ebook-cover.png';
       ))}
     </div>
     <div class="lp-problem-pivot">
-      <p>Este ebook foi feito para trocar improviso por arquitetura. Voce entende onde agentes fazem sentido, como desenhar o fluxo e como evitar o tipo de projeto que parece inteligente, mas nao entrega resultado.</p>
+      <p>Este ebook foi feito para trocar improviso por arquitetura. Você entende onde agentes fazem sentido, como desenhar o fluxo e como evitar o tipo de projeto que parece inteligente, mas não entrega resultado.</p>
     </div>
   </div>
 </section>
@@ -274,9 +274,9 @@ const image = '/images/ebook-cover.png';
     <div class="lp-section-header">
       <span class="lp-section-num">02</span>
       <div class="lp-section-rule"></div>
-      <span class="lp-section-label">Beneficios praticos</span>
+      <span class="lp-section-label">Benefícios práticos</span>
     </div>
-    <h2 class="lp-h2">O que voce vai conseguir fazer depois de ler.</h2>
+    <h2 class="lp-h2">O que você vai conseguir fazer depois de ler.</h2>
     <div class="lp-outcomes-grid">
       {CONFIG.outcomes.map((o, index) => (
         <div class="lp-outcome-card">
@@ -298,7 +298,7 @@ const image = '/images/ebook-cover.png';
     <div class="lp-section-header">
       <span class="lp-section-num">03</span>
       <div class="lp-section-rule"></div>
-      <span class="lp-section-label">Para quem esta travado</span>
+      <span class="lp-section-label">Para quem está travado</span>
     </div>
     <h2 class="lp-h2">Para quem quer transformar interesse em IA em uma vantagem real.</h2>
     <div class="lp-audience-grid">
@@ -336,35 +336,42 @@ const image = '/images/ebook-cover.png';
   </div>
 </section>
 
-<!-- VIDEO PREVIEW -->
-<section class="lp-section lp-video-section" id="preview">
+<!-- VALUE PROOF -->
+<section class="lp-section lp-proof-section" id="preview">
   <div class="lp-wrap">
     <div class="lp-section-header">
       <span class="lp-section-num">05</span>
       <div class="lp-section-rule"></div>
-      <span class="lp-section-label">Veja o que voce recebe</span>
+      <span class="lp-section-label">Para cobrar melhor</span>
     </div>
-    <div class="lp-video-layout">
+    <div class="lp-proof-layout">
       <div>
-        <h2 class="lp-h2">Um preview rapido do ebook antes de comprar.</h2>
-        <p class="lp-section-intro">Veja a apresentacao visual do material e confirme se ele tem a pegada certa para voce: direto, pratico e feito para transformar IA em processo de negocio.</p>
-        <div class="lp-video-points">
-          <span>Preview do produto</span>
-          <span>Acesso digital imediato</span>
-          <span>PDF + EPUB</span>
+        <h2 class="lp-h2">Não venda “prompt”. Venda processo, automação e resultado.</h2>
+        <p class="lp-section-intro">Cliente não paga mais porque você sabe usar uma ferramenta. Cliente paga quando entende que você consegue tirar uma tarefa repetitiva da mão dele, reduzir erro e criar uma operação mais leve.</p>
+        <div class="lp-proof-points">
+          <span>Diagnóstico claro</span>
+          <span>Escopo defendável</span>
+          <span>Entrega com método</span>
         </div>
-        <a href={CONFIG.primaryBuyLink} class="lp-btn-primary">Quero acessar agora →</a>
+        <a href={CONFIG.primaryBuyLink} class="lp-btn-primary">Quero cobrar por IA com mais clareza →</a>
       </div>
-      <div class="lp-video-frame">
-        <video
-          class="lp-preview-video"
-          src="/videos/ebook-agentes-preview.mp4"
-          poster="/images/ebook-video-poster.jpg"
-          controls
-          playsinline
-          preload="metadata"
-          aria-label="Preview do ebook Agentes de IA para Negocios"
-        ></video>
+      <div class="lp-proof-board" aria-label="Resumo do valor do ebook">
+        <div class="lp-proof-card lp-proof-card-hot">
+          <span>Antes</span>
+          <strong>Você entrega conversa com IA.</strong>
+          <p>O cliente acha interessante, mas não enxerga operação, economia ou retorno.</p>
+        </div>
+        <div class="lp-proof-arrow" aria-hidden="true">→</div>
+        <div class="lp-proof-card">
+          <span>Depois</span>
+          <strong>Você entrega agente com função.</strong>
+          <p>Problema, fluxo, regra, ferramenta, limite humano e métrica ficam claros.</p>
+        </div>
+        <div class="lp-proof-price">
+          <small>Oferta de lançamento</small>
+          <strong>R$ 37</strong>
+          <span>Acesso imediato em PDF + EPUB</span>
+        </div>
       </div>
     </div>
   </div>
@@ -484,7 +491,7 @@ const image = '/images/ebook-cover.png';
         <div class="lp-origin-body">
           <p>O Tech Briefing e a Nexora Systems existem para transformar tecnologia em decisao pratica. Sem empilhar ferramenta, sem vender milagre e sem esconder as partes dificeis.</p>
           <p>Este guia nasceu de uma pergunta simples: <strong>como transformar IA em processo que opera, mede e melhora?</strong> A resposta esta em arquitetura, limites, observabilidade e escolha correta do problema.</p>
-          <p>Voce recebe <strong>{CONFIG.pages} paginas</strong> com frameworks, cenarios e decisoes praticas para aplicar no seu negocio ou nos projetos dos seus clientes.</p>
+          <p>Você recebe <strong>{CONFIG.pages} páginas</strong> com frameworks, cenários e decisões práticas para aplicar no seu negócio ou nos projetos dos seus clientes.</p>
         </div>
       </div>
       <div class="lp-origin-card">
@@ -582,7 +589,7 @@ const image = '/images/ebook-cover.png';
   <div class="lp-wrap">
     <div class="lp-close-content">
       <h2 class="lp-h2-center">Quem usa IA como chat melhora a eficiência. Quem usa agentes <em>transforma a operação.</em></h2>
-      <p class="lp-close-sub">Voce pode continuar salvando posts sobre IA para ler depois. Ou pode pegar um metodo e construir o primeiro sistema que trabalha por voce.</p>
+      <p class="lp-close-sub">Você pode continuar salvando posts sobre IA para ler depois. Ou pode pegar um método e construir o primeiro sistema que trabalha por você.</p>
       <div class="lp-hero-price" style="justify-content:center">
         <span class="lp-price-old">{CONFIG.fullPrice}</span>
         <span class="lp-price-current">{CONFIG.promoPrice}</span>
@@ -636,7 +643,7 @@ document.querySelectorAll('[data-promo-end]').forEach(card => {
       if (hours) hours.textContent = '00';
       if (minutes) minutes.textContent = '00';
       if (seconds) seconds.textContent = '00';
-      if (note) note.textContent = 'Promocao encerrada. Confira o preco atual no checkout.';
+      if (note) note.textContent = 'Promoção encerrada. Confira o preço atual no checkout.';
       return;
     }
 
@@ -823,9 +830,9 @@ body {
 }
 .lp-h1 {
   font-family: var(--serif);
-  font-size: clamp(46px, 6.4vw, 76px);
-  font-weight: 700; line-height: 0.98;
-  letter-spacing: -0.035em;
+  font-size: clamp(50px, 7vw, 88px);
+  font-weight: 800; line-height: 0.94;
+  letter-spacing: -0.04em;
   margin-bottom: 24px;
   max-width: 760px;
   text-wrap: balance;
@@ -835,7 +842,7 @@ body {
 }
 .lp-hero-sub {
   font-size: 20px; line-height: 1.55;
-  color: var(--text); font-weight: 400;
+  color: var(--text); font-weight: 500;
   max-width: 640px; margin-bottom: 32px;
   text-wrap: pretty;
 }
@@ -870,7 +877,7 @@ body {
   display: block;
   margin: 4px 0 6px;
   font-family: var(--serif);
-  font-size: 30px;
+  font-size: 34px;
   line-height: 1.05;
   letter-spacing: -0.035em;
   color: var(--text);
@@ -936,10 +943,12 @@ body {
 .lp-hero-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 32px; }
 .lp-btn-primary {
   display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-  font-family: var(--sans); font-size: 15px; font-weight: 600;
+  font-family: var(--sans); font-size: 15px; font-weight: 800;
+  letter-spacing: 0.01em;
   padding: 14px 32px; border-radius: 100px; cursor: pointer;
   background: var(--amber); color: oklch(0.09 0.008 240);
   border: none; transition: all 0.2s; text-decoration: none;
+  box-shadow: 0 18px 46px oklch(0.80 0.14 62 / 0.22);
 }
 .lp-btn-primary:hover { background: oklch(0.86 0.14 62); transform: translateY(-1px); }
 .lp-btn-full { width: 100%; }
@@ -1079,7 +1088,7 @@ body {
   .lp-countdown { width: 100%; }
   .lp-countdown span { flex: 1; }
   .lp-outcomes-grid { grid-template-columns: 1fr 1fr; }
-  .lp-video-layout { grid-template-columns: 1fr; }
+  .lp-proof-layout { grid-template-columns: 1fr; }
 }
 
 @media(max-width:640px){
@@ -1202,25 +1211,25 @@ body {
   color: var(--text-2);
 }
 
-/* Video preview */
-.lp-video-section {
+/* Value proof */
+.lp-proof-section {
   background:
     radial-gradient(circle at 72% 40%, oklch(0.72 0.18 338 / 0.12), transparent 26rem),
     var(--bg);
 }
-.lp-video-layout {
+.lp-proof-layout {
   display: grid;
   grid-template-columns: minmax(0, 0.82fr) minmax(360px, 1.18fr);
   gap: 52px;
   align-items: center;
 }
-.lp-video-points {
+.lp-proof-points {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin: -18px 0 28px;
 }
-.lp-video-points span {
+.lp-proof-points span {
   display: inline-flex;
   align-items: center;
   min-height: 32px;
@@ -1234,41 +1243,101 @@ body {
   text-transform: uppercase;
   color: var(--text-2);
 }
-.lp-video-frame {
+.lp-proof-board {
   position: relative;
-  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 16px;
+  align-items: stretch;
   border: 1px solid oklch(0.72 0.18 338 / 0.28);
   border-radius: 20px;
-  padding: 10px;
+  padding: 18px;
   background:
-    linear-gradient(135deg, oklch(0.72 0.18 338 / 0.12), transparent 42%),
+    linear-gradient(135deg, oklch(0.72 0.18 338 / 0.15), transparent 46%),
     oklch(0.06 0.006 240 / 0.9);
   box-shadow: 0 32px 90px oklch(0 0 0 / 0.42), 0 0 80px oklch(0.72 0.18 338 / 0.1);
 }
-.lp-video-frame::before {
+.lp-proof-board::before {
   content: '';
   position: absolute;
-  inset: 0;
+  inset: 1px;
   border-radius: inherit;
-  background: linear-gradient(90deg, transparent, oklch(1 0 0 / 0.08), transparent);
-  transform: translateX(-100%);
-  animation: lp-video-sheen 6s ease-in-out infinite;
+  background-image:
+    linear-gradient(oklch(1 0 0 / 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(1 0 0 / 0.04) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: radial-gradient(circle at 50% 50%, black, transparent 72%);
   pointer-events: none;
 }
-.lp-preview-video {
+.lp-proof-card,
+.lp-proof-price {
   position: relative;
   z-index: 1;
-  display: block;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  border-radius: 14px;
-  background: oklch(0.04 0.004 240);
+  border: 1px solid var(--line-s);
+  border-radius: 16px;
+  background: oklch(0.08 0.008 240 / 0.84);
+  padding: 24px;
 }
-@keyframes lp-video-sheen {
-  0%, 55% { transform: translateX(-100%); opacity: 0; }
-  65% { opacity: 1; }
-  100% { transform: translateX(100%); opacity: 0; }
+.lp-proof-card-hot {
+  border-color: oklch(0.65 0.15 25 / 0.4);
+  background: linear-gradient(180deg, oklch(0.65 0.15 25 / 0.12), oklch(0.08 0.008 240 / 0.84));
+}
+.lp-proof-card span,
+.lp-proof-price small {
+  display: block;
+  font-family: var(--mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--amber);
+  margin-bottom: 18px;
+}
+.lp-proof-card strong {
+  display: block;
+  font-family: var(--serif);
+  font-size: clamp(25px, 2.8vw, 38px);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+.lp-proof-card p,
+.lp-proof-price span {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.62;
+  color: var(--text-2);
+}
+.lp-proof-arrow {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  color: var(--amber);
+  font-family: var(--serif);
+  font-size: 42px;
+  padding: 0 4px;
+}
+.lp-proof-price {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  border-color: oklch(0.80 0.14 62 / 0.36);
+  background: linear-gradient(90deg, oklch(0.80 0.14 62 / 0.16), oklch(0.08 0.008 240 / 0.84));
+}
+.lp-proof-price small { margin-bottom: 0; }
+.lp-proof-price strong {
+  font-family: var(--serif);
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 0.9;
+  color: var(--amber);
+  letter-spacing: -0.03em;
+}
+@media(max-width:760px){
+  .lp-proof-board { grid-template-columns: 1fr; }
+  .lp-proof-arrow { justify-content: center; transform: rotate(90deg); padding: 0; }
+  .lp-proof-price { align-items: flex-start; flex-direction: column; }
 }
 
 /* Audience */
@@ -1596,7 +1665,7 @@ body {
   .lp-neural-bg,
   .lp-flow-bg,
   .lp-hex-bg,
-  .lp-video-frame::before {
+  .lp-proof-board::before {
     opacity: 0.35;
     animation: none;
   }

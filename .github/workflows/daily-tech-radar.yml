@@ -2,8 +2,8 @@ name: Daily Tech Radar
 
 on:
   schedule:
-    # 08:00 in Sao Paulo (UTC-3). GitHub schedules use UTC.
-    - cron: '0 11 * * *'
+    # 11:00 in Sao Paulo (UTC-3). GitHub schedules use UTC.
+    - cron: '0 14 * * *'
   workflow_dispatch:
 
 permissions:
