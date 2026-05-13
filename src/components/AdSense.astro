@@ -1,0 +1,17 @@
+---
+const adsenseClientId = import.meta.env.PUBLIC_ADSENSE_CLIENT_ID;
+const isConfigured = typeof adsenseClientId === 'string' && adsenseClientId.startsWith('ca-pub-');
+---
+
+{isConfigured && (
+  <>
+    <meta name="google-adsense-account" content={adsenseClientId} />
+    <script
+      is:inline
+      async
+      src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClientId}`}
+      crossorigin="anonymous"
+    >
+    </script>
+  </>
+)}
