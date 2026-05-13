@@ -55,6 +55,13 @@ const TOOLS = [
   {ico:'📝',name:'Notion AI',desc:'O hub de trabalho da sua equipe com IA nativa. Integra com tudo que você já usa.',stars:'★★★★☆',aff:false},
 ];
 
+const FALLBACK_ARTICLE_IMAGE = '/images/editorial/tech-radar.svg';
+
+function formatArticleDate(date, opts = { day: '2-digit', month: 'short' }) {
+  if (!date) return '';
+  return new Date(date).toLocaleDateString('pt-BR', opts);
+}
+
 /* ── COMPONENTS ─────────────────────────────────────────── */
 
 function SH({num, label, more, moreHref}){
@@ -78,29 +85,28 @@ function Hero(){
         <div className="hero-eyebrow">
           <span className="hero-eyebrow-mark">Tech Briefing</span>
           <div className="hero-eyebrow-rule"/>
-          <span className="hero-eyebrow-tag">Inteligência Artificial Aplicada</span>
+          <span className="hero-eyebrow-tag">Blog de IA aplicada</span>
         </div>
         <h1 className="hero-h1">
-          IA que trabalha.<br/>
-          Negócio que <em>escala.</em>
+          Análises, guias e sinais para aplicar IA de verdade.
         </h1>
         <p className="hero-sub">
-          Guias práticos, comparativos honestos e ferramentas testadas. Para quem quer aplicar IA e automação no negócio, no trabalho e na vida — sem hype, sem papo de guru.
+          Um blog direto para quem quer transformar IA, automação e software em processo real: notícias filtradas, tutoriais práticos, comparativos e ideias que viram ação.
         </p>
         <div className="hero-actions">
           <a href="/arquivo" className="btn btn-fill">
-            Explorar conteúdo
+            Ler últimas publicações
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
           </a>
-          <a href="/ferramentas" className="arrow-link">Ver ferramentas →</a>
+          <a href="/artigos/radar-tech-2026-05-13" className="arrow-link">Ver radar tech →</a>
         </div>
       </div>
       <div className="hero-bar wrap">
         {[
-          {n:'50+',em:'',l:'Guias e artigos'},
-          {n:'3',em:'k+',l:'Leitores na newsletter'},
-          {n:'20+',em:'',l:'Ferramentas testadas'},
-          {n:'2',em:'',l:'Ebooks publicados'},
+          {n:'50+',em:'',l:'publicações no arquivo'},
+          {n:'20+',em:'',l:'temas de IA e automação'},
+          {n:'2026',em:'',l:'radar atualizado'},
+          {n:'BR',em:'',l:'conteúdo em português'},
         ].map((s,i)=>(
           <div className="hero-stat" key={i}>
             <div className="hero-stat-n">{s.n}{s.em&&<em>{s.em}</em>}</div>
@@ -116,7 +122,7 @@ function FeatureSection(){
   return (
     <section className="feature">
       <div className="wrap">
-        <SH num="01" label="Destaque da semana" more="Todos os artigos"/>
+        <SH num="01" label="Matéria em destaque" more="Todos os artigos"/>
         <div className="feature-layout">
           <div className="feature-ord" aria-hidden="true">01</div>
           <div>
@@ -140,7 +146,7 @@ function FeatureSection(){
             </div>
           </div>
           <div className="feature-side">
-            <div className="aside-title">Mais lidos</div>
+            <div className="aside-title">Também no radar</div>
             {ASIDE.map((a,i)=>(
               <a className="aside-item" href={a.href} key={i}>
                 <span className={`pill ${a.v}`}>{a.tag}</span>
@@ -155,11 +161,48 @@ function FeatureSection(){
   );
 }
 
+function RecentArticlesSection({ articles = [] }) {
+  const items = articles.slice(0, 8);
+  if (!items.length) return null;
+
+  return (
+    <section className="latest" id="ultimas">
+      <div className="wrap">
+        <SH num="02" label="Últimas publicações" more="Arquivo completo" moreHref="/arquivo"/>
+        <div className="latest-grid">
+          {items.map((article, index) => (
+            <a className={`latest-card ${index === 0 ? 'lead' : ''}`} href={article.href} key={article.href || article.slug || index}>
+              <div className="latest-img">
+                <img
+                  src={article.image || FALLBACK_ARTICLE_IMAGE}
+                  alt={article.title}
+                  loading="lazy"
+                  width="720"
+                  height="405"
+                />
+              </div>
+              <div className="latest-body">
+                <div className="latest-kicker">
+                  <span>{article.category || 'Artigo'}</span>
+                  <span>{formatArticleDate(article.date)}</span>
+                </div>
+                <h3 className="latest-title">{article.title}</h3>
+                <p className="latest-desc">{article.description}</p>
+                <div className="latest-meta">{article.readTime} de leitura</div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function CategoriesSection(){
   return (
     <section className="categories">
       <div className="wrap">
-        <SH num="02" label="Categorias"/>
+        <SH num="03" label="Categorias"/>
         <div className="cat-list">
           {CATS.map((c,i)=>(
             <a key={i} className="cat-row" href={c.href}>
@@ -179,7 +222,7 @@ function GuidesSection(){
   return (
     <section className="guides">
       <div className="wrap">
-        <SH num="03" label="Guias e Comparativos" more="Ver biblioteca" moreHref="/arquivo"/>
+        <SH num="04" label="Guias e Comparativos" more="Ver biblioteca" moreHref="/arquivo"/>
         <div className="guides-grid">
           <div className="guide-list">
             {GUIDES.map((g,i)=>(
@@ -222,7 +265,7 @@ function ToolsSection({tweaks}){
   return (
     <section className="tools">
       <div className="wrap">
-        <SH num="04" label="Ferramentas Recomendadas" more="Ver todas"/>
+        <SH num="05" label="Ferramentas Recomendadas" more="Ver todas"/>
         <div style={{marginBottom:32,marginTop:-20}}>
           <p style={{fontSize:13,color:'var(--text-3)',fontWeight:300}}>
             Testadas pela equipe. Links marcados como <span style={{color:'var(--text-4)',fontFamily:'var(--mono)',fontSize:11,letterSpacing:'.05em'}}>AFILIADO</span> nos ajudam a manter o conteúdo gratuito.
@@ -261,7 +304,7 @@ function NewsletterSection(){
   return (
     <section className="nl">
       <div className="wrap">
-        <SH num="07" label="Newsletter"/>
+        <SH num="06" label="Newsletter"/>
         <div className="nl-inner">
           <div>
             <h2 className="nl-h">IA aplicada<br/>na sua caixa.<br/><em>Toda semana.</em></h2>
@@ -346,10 +389,12 @@ function App({ articles = [], tools = [], apps = [], ebooks = [] }){
     })));
   }
   const tweaks=TWEAK_DEFAULTS;
+  const latestArticles = articles.filter((article)=>article.href !== FEATURED.href);
   return (
     <>
       <Hero/>
       <FeatureSection/>
+      <RecentArticlesSection articles={latestArticles}/>
       <CategoriesSection/>
       <GuidesSection/>
       <ToolsSection tweaks={tweaks}/>
