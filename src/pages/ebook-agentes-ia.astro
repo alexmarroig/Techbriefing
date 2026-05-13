@@ -10,6 +10,7 @@ const CONFIG = {
   subtitle: 'Do entendimento à aplicação real',
   authorBrand: 'Nexora Systems',
   portalBrand: 'Tech Briefing',
+  portalTagline: 'IA aplicada para negócios reais',
 
   fullPrice: 'R$ 49,90',
   promoPrice: 'R$ 37,00',
@@ -29,8 +30,8 @@ const CONFIG = {
   },
 
   heroBadge: 'Oferta de lançamento - acesso imediato',
-  heroHeadline: 'IA não paga boleto se continuar presa no chat.',
-  heroSub: 'Pare de usar IA só para gerar texto bonito. Este ebook mostra como transformar ChatGPT, automações e ferramentas de IA em agentes que executam tarefas reais, reduzem trabalho manual e abrem novas ofertas para o seu negócio.',
+  heroHeadline: 'Pare de brincar com IA. Comece a transformar IA em dinheiro, tempo e operação.',
+  heroSub: 'Um guia direto para quem usa ChatGPT, automações e ferramentas de IA, mas ainda não sabe transformar isso em processos reais, agentes úteis e ofertas que clientes entendem e compram.',
 
   pages: '126',
   chapters: '12',
@@ -62,14 +63,14 @@ const CONFIG = {
   ],
 
   benefits: [
-    'Identificar onde agentes realmente economizam tempo e onde só criam complexidade',
-    'Montar a arquitetura mínima de um agente útil: objetivo, memória, ferramentas, regras e avaliação',
-    'Criar critérios para escolher entre chatbot, automação, agente único ou multi-agente',
-    'Mapear processos de vendas, suporte, conteúdo e operação que podem virar agentes',
-    'Evitar projetos que funcionam na demo, mas quebram no primeiro cliente real',
-    'Definir limites humanos para o agente agir sem colocar seu negócio em risco',
-    'Transformar conhecimento de IA em uma oferta que você consegue explicar, vender e entregar',
-    'Sair do improviso com um roteiro de 8 passos para construir o primeiro agente',
+    'Descobrir quais tarefas merecem um agente e quais só precisam de automação simples',
+    'Montar a arquitetura mínima de um agente: objetivo, memória, ferramentas, regras e avaliação',
+    'Saber explicar para um cliente por que aquilo vale dinheiro e não é só “um chatbot”',
+    'Mapear processos de vendas, suporte, conteúdo e operação que podem virar entrega real',
+    'Evitar projetos bonitos na demo, mas frágeis quando entram no negócio de verdade',
+    'Definir limites humanos para o agente agir sem colocar sua reputação em risco',
+    'Criar uma oferta mais clara para vender IA sem depender de promessa vaga',
+    'Seguir um roteiro de 8 passos para construir seu primeiro agente com método',
   ],
 
   chapterList: [
@@ -148,10 +149,14 @@ const image = '/images/ebook-cover.png';
 <div class="lp-topbar">
   <div class="lp-wrap">
     <a href="/" class="lp-topbar-logo">
-      <div class="lp-pip"></div>
-      <span>{CONFIG.portalBrand}</span>
+      <div class="lp-brand-mark" aria-hidden="true">
+        <span></span>
+        <span></span>
+      </div>
+      <span class="lp-brand-word">{CONFIG.portalBrand}</span>
+      <span class="lp-brand-sub">{CONFIG.portalTagline}</span>
     </a>
-    <span class="lp-topbar-label">{CONFIG.authorBrand}</span>
+    <a href="#oferta" class="lp-topbar-cta">Garantir R$ 37</a>
   </div>
 </div>
 
@@ -168,10 +173,10 @@ const image = '/images/ebook-cover.png';
         <div class="lp-urgency-card" data-promo-end={CONFIG.promoEndIso}>
           <div>
             <span class="lp-urgency-kicker">Promoção imperdível</span>
-            <strong>R$ 37 somente no lancamento</strong>
+            <strong>R$ 37 somente no lançamento</strong>
             <span class="lp-urgency-note">Depois, o ebook volta para {CONFIG.fullPrice}.</span>
           </div>
-          <div class="lp-countdown" aria-label="Tempo restante da promocao">
+          <div class="lp-countdown" aria-label="Tempo restante da promoção">
             <span><b data-countdown-days>00</b><small>Dias</small></span>
             <span><b data-countdown-hours>00</b><small>Horas</small></span>
             <span><b data-countdown-minutes>00</b><small>Min</small></span>
@@ -186,6 +191,11 @@ const image = '/images/ebook-cover.png';
         <div class="lp-hero-actions">
           <a href={CONFIG.primaryBuyLink} class="lp-btn-primary">Garantir por R$ 37 agora →</a>
           <a href="#conteudo" class="lp-btn-ghost">Ver os 12 capítulos</a>
+        </div>
+        <div class="lp-fast-trust" aria-label="Sinais de segurança">
+          <span>Compra segura</span>
+          <span>Acesso imediato</span>
+          <span>7 dias de garantia</span>
         </div>
         <div class="lp-hero-specs">
           {[`${CONFIG.pages} páginas`, `${CONFIG.chapters} capítulos`, CONFIG.format, CONFIG.language].map(s => (
@@ -210,6 +220,19 @@ const image = '/images/ebook-cover.png';
         <div class="lp-hero-proof">
           <strong>Para quem quer vender, atender ou operar com agentes.</strong>
           <span>Sem depender de tentativa, hype ou promessa vazia.</span>
+        </div>
+        <div class="lp-checkout-card" aria-label="Resumo da compra">
+          <div class="lp-checkout-kicker">Resumo da compra</div>
+          <div class="lp-checkout-product">
+            <img src="/images/ebook-cover.png" alt="" width="48" height="68" />
+            <div>
+              <strong>Agentes de IA para Negócios</strong>
+              <span>PDF + EPUB • acesso imediato</span>
+            </div>
+          </div>
+          <div class="lp-checkout-row"><span>Preço promocional</span><strong>R$ 37,00</strong></div>
+          <div class="lp-checkout-row"><span>Garantia</span><strong>7 dias</strong></div>
+          <a href={CONFIG.primaryBuyLink} class="lp-btn-primary lp-btn-full">Comprar agora →</a>
         </div>
       </div>
     </div>
@@ -264,6 +287,7 @@ const image = '/images/ebook-cover.png';
     </div>
     <div class="lp-problem-pivot">
       <p>Este ebook foi feito para trocar improviso por arquitetura. Você entende onde agentes fazem sentido, como desenhar o fluxo e como evitar o tipo de projeto que parece inteligente, mas não entrega resultado.</p>
+      <a href={CONFIG.primaryBuyLink} class="lp-inline-cta">Quero parar de improvisar →</a>
     </div>
   </div>
 </section>
@@ -277,6 +301,7 @@ const image = '/images/ebook-cover.png';
       <span class="lp-section-label">Benefícios práticos</span>
     </div>
     <h2 class="lp-h2">O que você vai conseguir fazer depois de ler.</h2>
+    <p class="lp-section-intro">A promessa é simples: sair do consumo infinito de conteúdo sobre IA e ganhar um mapa prático para construir, vender ou implementar agentes com mais segurança.</p>
     <div class="lp-outcomes-grid">
       {CONFIG.outcomes.map((o, index) => (
         <div class="lp-outcome-card">
@@ -287,7 +312,7 @@ const image = '/images/ebook-cover.png';
       ))}
     </div>
     <div class="lp-cta-mid">
-      <a href={CONFIG.primaryBuyLink} class="lp-btn-primary">Quero sair do improviso →</a>
+      <a href={CONFIG.primaryBuyLink} class="lp-btn-primary">Quero sair do improviso por R$ 37 →</a>
     </div>
   </div>
 </section>
@@ -487,17 +512,17 @@ const image = '/images/ebook-cover.png';
     </div>
     <div class="lp-origin-layout">
       <div>
-        <h2 class="lp-h2">Criado pela Nexora Systems para quem quer IA aplicada, nao palestra sobre IA.</h2>
+        <h2 class="lp-h2">Criado pela Nexora Systems para quem quer IA aplicada, não palestra sobre IA.</h2>
         <div class="lp-origin-body">
-          <p>O Tech Briefing e a Nexora Systems existem para transformar tecnologia em decisao pratica. Sem empilhar ferramenta, sem vender milagre e sem esconder as partes dificeis.</p>
-          <p>Este guia nasceu de uma pergunta simples: <strong>como transformar IA em processo que opera, mede e melhora?</strong> A resposta esta em arquitetura, limites, observabilidade e escolha correta do problema.</p>
+          <p>O <strong>Tech Briefing</strong> é o braço editorial da Nexora Systems: uma linha de guias, análises e produtos para transformar tecnologia em decisão prática. Sem empilhar ferramenta, sem vender milagre e sem esconder as partes difíceis.</p>
+          <p>Este guia nasceu de uma pergunta simples: <strong>como transformar IA em processo que opera, mede e melhora?</strong> A resposta está em arquitetura, limites, observabilidade e escolha correta do problema.</p>
           <p>Você recebe <strong>{CONFIG.pages} páginas</strong> com frameworks, cenários e decisões práticas para aplicar no seu negócio ou nos projetos dos seus clientes.</p>
         </div>
       </div>
       <div class="lp-origin-card">
         <img src="/images/nexora-systems-logo.png" alt="Nexora Systems" class="lp-nexora-logo-img" width="640" height="400" />
         <div class="lp-origin-card-name">{CONFIG.authorBrand}</div>
-        <div class="lp-origin-card-desc">Tecnologia, sistemas e inteligencia artificial aplicada ao mundo real. Conteudo, produtos e metodos para quem quer transformar IA em resultado.</div>
+        <div class="lp-origin-card-desc">Tecnologia, sistemas e inteligência artificial aplicada ao mundo real. Conteúdo, produtos e métodos para quem quer transformar IA em resultado.</div>
         <a href="/sobre" class="lp-arrow-link">Conhecer a Nexora →</a>
       </div>
     </div>
@@ -533,7 +558,7 @@ const image = '/images/ebook-cover.png';
           <span class="lp-price-old-lg">{CONFIG.fullPrice}</span>
           <span class="lp-price-current-lg">{CONFIG.promoPrice}</span>
         </div>
-        <div class="lp-offer-deadline">Preco de lancamento por tempo limitado. O contador no topo usa a data real da campanha.</div>
+        <div class="lp-offer-deadline">Preço de lançamento por tempo limitado. O contador no topo usa a data real da campanha.</div>
         <a href={CONFIG.buyLink} class="lp-btn-primary lp-btn-full">Garantir por R$ 37 agora →</a>
         <div class="lp-platforms">
           <span class="lp-platforms-label">Também disponível em:</span>
@@ -623,6 +648,14 @@ const image = '/images/ebook-cover.png';
     </div>
   </div>
 </footer>
+
+<div class="lp-mobile-buy" aria-label="Comprar ebook">
+  <div>
+    <span>Oferta de lançamento</span>
+    <strong>R$ 37,00</strong>
+  </div>
+  <a href={CONFIG.primaryBuyLink}>Comprar agora</a>
+</div>
 
 <script is:inline>
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -776,15 +809,62 @@ body {
   border-bottom: 1px solid var(--line-s);
 }
 .lp-topbar .lp-wrap {
-  height: 52px; display: flex; align-items: center; justify-content: space-between;
+  height: 64px; display: flex; align-items: center; justify-content: space-between;
 }
 .lp-topbar-logo {
-  font-family: var(--serif); font-size: 17px; font-weight: 600;
-  display: flex; align-items: center; gap: 10px; color: var(--text);
+  display: grid;
+  grid-template-columns: 34px auto;
+  column-gap: 10px;
+  align-items: center;
+  color: var(--text);
 }
-.lp-topbar-label {
+.lp-brand-mark {
+  grid-row: 1 / span 2;
+  width: 34px;
+  height: 34px;
+  border: 1px solid oklch(0.80 0.14 62 / 0.35);
+  border-radius: 10px;
+  background:
+    radial-gradient(circle at 72% 26%, oklch(0.80 0.14 62 / 0.28), transparent 42%),
+    oklch(0.06 0.006 240 / 0.92);
+  display: grid;
+  place-items: center;
+  box-shadow: 0 0 28px oklch(0.80 0.14 62 / 0.12);
+}
+.lp-brand-mark span:first-child {
+  width: 16px;
+  height: 16px;
+  border-left: 2px solid var(--amber);
+  border-bottom: 2px solid var(--amber);
+  transform: rotate(-45deg);
+}
+.lp-brand-mark span:last-child {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--amber);
+  box-shadow: 0 0 12px var(--amber);
+}
+.lp-brand-word {
+  font-family: var(--serif);
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.lp-brand-sub,
+.lp-topbar-cta {
   font-family: var(--mono); font-size: 10.5px; font-weight: 500;
-  letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-3);
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-3);
+}
+.lp-topbar-cta {
+  color: oklch(0.08 0.006 240);
+  background: var(--amber);
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-weight: 800;
+  box-shadow: 0 12px 34px oklch(0.80 0.14 62 / 0.18);
 }
 .lp-pip {
   width: 7px; height: 7px; border-radius: 50%;
@@ -795,7 +875,7 @@ body {
 /* Hero */
 .lp-hero {
   position: relative; overflow: hidden;
-  padding: 100px 0 80px;
+  padding: 72px 0 64px;
 }
 .lp-hero-grid-bg {
   position: absolute; inset: 0;
@@ -812,12 +892,12 @@ body {
   pointer-events: none;
 }
 .lp-hero-layout {
-  display: grid; grid-template-columns: 1fr 380px; gap: 80px; align-items: center;
+  display: grid; grid-template-columns: minmax(0, 1fr) 390px; gap: 70px; align-items: center;
   position: relative; z-index: 1;
 }
 @media(max-width:900px){
-  .lp-hero-layout { grid-template-columns: 1fr; gap: 48px; }
-  .lp-hero-mockup { order: -1; display: flex; justify-content: center; }
+  .lp-hero-layout { grid-template-columns: 1fr; gap: 36px; }
+  .lp-hero-mockup { order: -1; display: grid; justify-items: center; }
   .lp-hero { padding: 64px 0 56px; }
 }
 .lp-badge {
@@ -830,20 +910,20 @@ body {
 }
 .lp-h1 {
   font-family: var(--serif);
-  font-size: clamp(50px, 7vw, 88px);
-  font-weight: 800; line-height: 0.94;
-  letter-spacing: -0.04em;
-  margin-bottom: 24px;
-  max-width: 760px;
+  font-size: clamp(46px, 5.7vw, 76px);
+  font-weight: 800; line-height: 0.97;
+  letter-spacing: -0.035em;
+  margin-bottom: 20px;
+  max-width: 690px;
   text-wrap: balance;
   text-shadow:
     0 0 34px oklch(0.80 0.14 62 / 0.10),
     0 18px 70px oklch(0 0 0 / 0.42);
 }
 .lp-hero-sub {
-  font-size: 20px; line-height: 1.55;
+  font-size: 18px; line-height: 1.55;
   color: var(--text); font-weight: 500;
-  max-width: 640px; margin-bottom: 32px;
+  max-width: 620px; margin-bottom: 24px;
   text-wrap: pretty;
 }
 .lp-hero-sub::first-letter {
@@ -855,8 +935,8 @@ body {
   gap: 18px;
   align-items: center;
   max-width: 620px;
-  margin: 0 0 28px;
-  padding: 16px;
+  margin: 0 0 20px;
+  padding: 14px;
   border: 1px solid oklch(0.80 0.14 62 / 0.35);
   border-radius: 16px;
   background:
@@ -877,7 +957,7 @@ body {
   display: block;
   margin: 4px 0 6px;
   font-family: var(--serif);
-  font-size: 34px;
+  font-size: 28px;
   line-height: 1.05;
   letter-spacing: -0.035em;
   color: var(--text);
@@ -923,7 +1003,7 @@ body {
 }
 .lp-hero-price {
   display: flex; align-items: baseline; gap: 12px;
-  margin-bottom: 28px;
+  margin-bottom: 20px;
 }
 .lp-price-old {
   font-family: var(--mono); font-size: 15px;
@@ -961,6 +1041,35 @@ body {
 }
 .lp-btn-ghost:hover { border-color: var(--text-3); color: var(--text); }
 .lp-hero-specs { display: flex; gap: 20px; flex-wrap: wrap; }
+.lp-fast-trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: -18px 0 28px;
+}
+.lp-fast-trust span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 28px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--line-s);
+  background: oklch(0.07 0.006 240 / 0.68);
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-2);
+}
+.lp-fast-trust span::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--amber);
+  box-shadow: 0 0 10px var(--amber);
+}
 .lp-spec {
   font-family: var(--mono); font-size: 11px;
   color: var(--text-3); letter-spacing: 0.04em;
@@ -971,7 +1080,7 @@ body {
 /* Book 3D with real cover */
 .lp-book-3d {
   position: relative;
-  width: 340px;
+  width: 300px;
   perspective: 1200px;
 }
 .lp-book-3d .lp-book-glow {
@@ -997,8 +1106,8 @@ body {
 }
 .lp-cover-circuit svg { width: 100%; height: 100%; }
 .lp-hero-proof {
-  margin-top: 22px;
-  max-width: 340px;
+  margin-top: 14px;
+  max-width: 360px;
   padding: 16px 18px;
   border: 1px solid var(--line-s);
   border-radius: 14px;
@@ -1018,6 +1127,70 @@ body {
   font-size: 12px;
   color: var(--text-3);
   line-height: 1.55;
+}
+.lp-checkout-card {
+  width: 100%;
+  max-width: 360px;
+  margin-top: 14px;
+  padding: 16px;
+  border: 1px solid oklch(0.80 0.14 62 / 0.28);
+  border-radius: 18px;
+  background:
+    linear-gradient(160deg, oklch(0.80 0.14 62 / 0.10), transparent 48%),
+    oklch(0.08 0.008 240 / 0.94);
+  box-shadow: 0 24px 70px oklch(0 0 0 / 0.34);
+}
+.lp-checkout-kicker {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 14px;
+}
+.lp-checkout-product {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding-bottom: 14px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid var(--line-s);
+}
+.lp-checkout-product img {
+  width: 48px;
+  height: 68px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.lp-checkout-product strong,
+.lp-checkout-product span {
+  display: block;
+}
+.lp-checkout-product strong {
+  font-size: 14px;
+  line-height: 1.25;
+}
+.lp-checkout-product span {
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--text-3);
+}
+.lp-checkout-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 8px 0;
+  font-size: 13px;
+  color: var(--text-2);
+}
+.lp-checkout-row strong {
+  color: var(--text);
+}
+.lp-checkout-card .lp-btn-primary {
+  margin-top: 12px;
+  min-height: 46px;
+  padding: 12px 18px;
 }
 
 /* Offer cover spread */
@@ -1092,8 +1265,13 @@ body {
 }
 
 @media(max-width:640px){
-  .lp-h1 { font-size: clamp(42px, 13vw, 58px); }
-  .lp-hero-sub { font-size: 17px; }
+  .lp-topbar .lp-wrap { height: 58px; }
+  .lp-brand-sub { display: none; }
+  .lp-brand-word { font-size: 18px; }
+  .lp-brand-mark { width: 30px; height: 30px; border-radius: 9px; }
+  .lp-topbar-cta { padding: 9px 11px; font-size: 9px; }
+  .lp-h1 { font-size: clamp(36px, 10.6vw, 48px); line-height: 1; letter-spacing: -0.03em; }
+  .lp-hero-sub { font-size: 16px; }
   .lp-hero-price { flex-wrap: wrap; }
   .lp-price-current { font-size: 38px; }
   .lp-countdown { gap: 6px; }
@@ -1103,6 +1281,17 @@ body {
   .lp-outcomes-grid { grid-template-columns: 1fr; }
   .lp-outcome-card { min-height: auto; }
   .lp-interactive-bg { opacity: 0.52; }
+  .lp-hero-actions { flex-direction: column; gap: 10px; }
+  .lp-btn-primary, .lp-btn-ghost { width: 100%; }
+  .lp-fast-trust { margin-top: -12px; }
+  .lp-hero-specs { gap: 10px 14px; }
+  .lp-hero-mockup { order: 0; }
+  .lp-book-3d { width: min(190px, 58vw); }
+  .lp-hero-proof { display: none; }
+  .lp-checkout-card { max-width: 100%; }
+  .lp-trust-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .lp-trust-item { justify-content: flex-start; }
+  body { padding-bottom: 86px; }
 }
 
 .lp-section-header {
@@ -1156,6 +1345,15 @@ body {
   padding: 24px 0; border-top: 1px solid var(--line-s);
 }
 .lp-problem-pivot p { margin: 0; }
+.lp-inline-cta {
+  display: inline-flex;
+  margin-top: 18px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--amber);
+}
 
 /* Outcomes */
 .lp-section-outcomes {
@@ -1656,6 +1854,57 @@ body {
   border-top: 1px solid var(--line-s); padding-top: 20px;
   font-family: var(--mono); font-size: 11px; color: var(--text-4);
   letter-spacing: 0.03em;
+}
+.lp-mobile-buy {
+  position: fixed;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  z-index: 300;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 10px 10px 14px;
+  border: 1px solid oklch(0.80 0.14 62 / 0.35);
+  border-radius: 18px;
+  background: oklch(0.07 0.006 240 / 0.94);
+  backdrop-filter: blur(18px) saturate(160%);
+  box-shadow: 0 20px 60px oklch(0 0 0 / 0.46);
+}
+.lp-mobile-buy span,
+.lp-mobile-buy strong {
+  display: block;
+}
+.lp-mobile-buy span {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+.lp-mobile-buy strong {
+  margin-top: 2px;
+  font-family: var(--serif);
+  font-size: 24px;
+  line-height: 0.95;
+  color: var(--amber);
+}
+.lp-mobile-buy a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 16px;
+  border-radius: 999px;
+  background: var(--amber);
+  color: oklch(0.08 0.006 240);
+  font-weight: 800;
+  font-size: 13px;
+  white-space: nowrap;
+}
+@media(max-width:640px){
+  .lp-mobile-buy { display: flex; }
 }
 
 @media (prefers-reduced-motion: reduce) {
