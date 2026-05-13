@@ -19,9 +19,31 @@ const formattedDate = new Intl.DateTimeFormat('pt-BR', {
   month: 'short',
   year: 'numeric',
 }).format(date);
+const articleUrl = new URL(Astro.url.pathname, Astro.site ?? Astro.url).toString();
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: new URL('/', Astro.site ?? Astro.url).toString() },
+    { '@type': 'ListItem', position: 2, name: 'Arquivo', item: new URL('/arquivo/', Astro.site ?? Astro.url).toString() },
+    { '@type': 'ListItem', position: 3, name: title, item: articleUrl },
+  ],
+};
 ---
 
-<BaseLayout title={`${title} - Tech Briefing`} description={description} image={image} active="Artigo" type="article">
+<BaseLayout
+  title={`${title} - Tech Briefing`}
+  description={description}
+  image={image}
+  active="Artigo"
+  type="article"
+  publishedTime={date.toISOString()}
+  modifiedTime={date.toISOString()}
+  author={author}
+  category={category}
+  tags={tags}
+  jsonLd={[breadcrumbJsonLd]}
+>
   <div class="article-progress" aria-hidden="true"></div>
 
   <article class="seo-article">
