@@ -16,18 +16,6 @@ const EBOOKS = [
     benefits:['Mapeie processos onde agentes reduzem trabalho manual','Estruture seus primeiros fluxos sem precisar programar','Frameworks e templates prontos para implementar','Cases reais por setor: vendas, suporte, conteúdo, ops'],
     toc:['O que são agentes de IA e por que agora','Mapeando seu negócio para agentes','Os 5 tipos de agente mais úteis','Ferramentas por nível técnico','Do piloto ao processo em produção','Cases por setor e função','O próximo passo da automação inteligente'],
   },
-  {
-    id:'sociedade',
-    color:'var(--cyan)',colorX:'var(--cyan-x)',colorD:'oklch(0.52 0.10 200)',pill:'c',
-    eyebrow:'Reflexão & Posicionamento',
-    title:'A Sociedade Pós-IA',
-    subtitle:'Trabalho, relações e futuro',
-    desc:'Os impactos reais da IA em trabalho, ansiedade, regulação, relações humanas e escolhas sociais — uma análise honesta e profunda para quem quer entender o que está realmente mudando.',
-    pages:'140',format:'PDF + EPUB',updated:'Março 2026',
-    price:'R$ 29',priceOld:'R$ 49',
-    benefits:['Entenda o que está mudando de verdade no mercado de trabalho','Posicione-se diante das transformações sem paralisia','Análise honesta de riscos, oportunidades e escolhas','O que líderes, trabalhadores e cidadãos precisam saber'],
-    toc:['A virada que já aconteceu','Trabalho no mundo dos agentes','Ansiedade, confiança e adaptação','Regulação: quem vai decidir?','Relações humanas na era dos assistentes','O que fica para os humanos','Escolhas individuais e coletivas'],
-  },
 ];
 
 const RELATED = [

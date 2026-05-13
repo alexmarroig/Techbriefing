@@ -254,89 +254,6 @@ function ToolsSection({tweaks}){
   );
 }
 
-function EbooksSection(){
-  const EB=[
-    {title:'Agentes de IA para Negócios',sub:'Do chat à execução operacional',desc:'Como identificar onde agentes de IA podem trabalhar por você — com frameworks, cases e clareza para começar.',price:'R$ 47',priceOld:'R$ 67',pages:'180',color:'var(--amber)',tagV:'a',tag:'E-book',href:'/ebook-agentes-ia/',benefits:['Mapeie onde agentes reduzem trabalho manual','Estruture seus primeiros fluxos com IA','Cases e frameworks para negócios reais']},
-    {title:'A Sociedade Pós-IA',sub:'Trabalho, relações e futuro',desc:'Os impactos reais da IA em trabalho, ansiedade, regulação e escolhas sociais — sem alarmismo, com profundidade.',price:'R$ 29',priceOld:'R$ 49',pages:'140',color:'var(--cyan)',tagV:'c',tag:'E-book',href:'/ebooks',benefits:['Entenda o que está mudando de verdade','Posicione-se sem paralisia diante das mudanças','Análise honesta do futuro próximo']},
-  ];
-  return(
-    <section className="apps" style={{background:'var(--bg)'}}>
-      <div className="wrap">
-        <SH num="05" label="Ebooks" more="Ver todos" moreHref="/ebooks"/>
-        <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:20}}>
-          {EB.map((e,i)=>(
-            <a href={e.href} key={i} style={{background:'var(--bg-2)',border:'1px solid var(--line-s)',borderRadius:16,overflow:'hidden',display:'flex',cursor:'pointer',transition:'border-color .2s',color:'inherit',textDecoration:'none'}} onMouseEnter={ev=>ev.currentTarget.style.borderColor='var(--line)'} onMouseLeave={ev=>ev.currentTarget.style.borderColor='var(--line-s)'}>
-              <div style={{width:120,flexShrink:0,background:`oklch(from ${e.color} l c h / 0.12)`,borderRight:'1px solid var(--line-s)',display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',padding:'24px 12px',gap:12}}>
-                <div style={{fontFamily:'var(--serif)',fontSize:28,fontWeight:700,color:e.color,lineHeight:1}}>IA</div>
-                <div style={{fontFamily:'var(--mono)',fontSize:9,fontWeight:500,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--text-3)',textAlign:'center',lineHeight:1.4}}>Nexora<br/>Systems</div>
-                <div style={{width:32,height:1,background:e.color,opacity:.4}}/>
-                <div style={{fontFamily:'var(--mono)',fontSize:9,color:'var(--text-4)',letterSpacing:'.06em'}}>{e.pages} pág</div>
-              </div>
-              <div style={{padding:28,flex:1,display:'flex',flexDirection:'column',gap:14}}>
-                <div><span className={`pill ${e.tagV}`}>{e.tag}</span></div>
-                <div style={{fontFamily:'var(--serif)',fontSize:20,fontWeight:700,lineHeight:1.2,letterSpacing:'-.01em'}}>{e.title}</div>
-                <div style={{fontSize:13,color:'var(--text-2)',lineHeight:1.6}}>{e.desc}</div>
-                <div style={{display:'flex',flexDirection:'column',gap:6}}>
-                  {e.benefits.map((b,j)=>(
-                    <div key={j} style={{display:'flex',gap:8,alignItems:'flex-start',fontSize:12.5,color:'var(--text-2)'}}>
-                      <span style={{color:e.color,flexShrink:0,fontSize:11,paddingTop:2}}>✓</span>{b}
-                    </div>
-                  ))}
-                </div>
-                <div style={{marginTop:'auto',paddingTop:16,borderTop:'1px solid var(--line-s)',display:'flex',alignItems:'center',justifyContent:'space-between'}}>
-                  <div>
-                    <span style={{fontFamily:'var(--serif)',fontSize:26,fontWeight:700,color:e.color,letterSpacing:'-.02em'}}>{e.price}</span>
-                    <span style={{fontFamily:'var(--mono)',fontSize:11,color:'var(--text-4)',textDecoration:'line-through',marginLeft:6}}>{e.priceOld}</span>
-                  </div>
-                  <span className="btn btn-fill" style={{fontSize:12,padding:'9px 16px'}}>Comprar -&gt;</span>
-                </div>
-              </div>
-            </a>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function AppsSection(){
-  const NEXORA_APPS=[
-    {ico:'🌟',name:'Ethos',desc:'Produtividade, valores e intenção. Seu companheiro pessoal para viver e trabalhar com mais propósito.',tag:'App',tagV:'c',status:'Disponível'},
-    {ico:'⏱️',name:'M-Timer',desc:'Foco, tempo e ritmo. O timer que respeita como você pensa e trabalha.',tag:'App',tagV:'c',status:'Disponível'},
-    {ico:'🌐',name:'BioHub',desc:'Seu hub de identidade digital. Tudo que você é e cria — em um único link profissional.',tag:'App',tagV:'',status:'Disponível'},
-    {ico:'📔',name:'Dream Diary',desc:'Diário de sonhos com IA. Registre, interprete e explore padrões com inteligência artificial.',tag:'App',tagV:'',status:'Disponível'},
-    {ico:'🌙',name:'Celestia',desc:'Insights de vida e autoconhecimento. Descubra padrões e perspectivas para suas decisões.',tag:'App',tagV:'',status:'Disponível'},
-    {ico:'🔮',name:'Código do Destino',desc:'Numerologia, arquétipos e autoconhecimento. Descubra padrões que guiam sua trajetória.',tag:'App',tagV:'',status:'Disponível'},
-  ];
-  return (
-    <section className="apps">
-      <div className="wrap">
-        <SH num="06" label="Nossos Apps" more="Ver todos os produtos" moreHref="/apps"/>
-        <div style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:16}}>
-          {NEXORA_APPS.map((a,i)=>(
-            <div key={i} style={{background:'var(--bg-2)',border:'1px solid var(--line-s)',borderRadius:12,padding:22,cursor:'pointer',transition:'border-color .2s',display:'flex',flexDirection:'column',gap:12}} onMouseEnter={ev=>ev.currentTarget.style.borderColor='var(--line)'} onMouseLeave={ev=>ev.currentTarget.style.borderColor='var(--line-s)'}>
-              <div style={{display:'flex',alignItems:'center',justifyContent:'space-between'}}>
-                <div style={{width:44,height:44,borderRadius:10,background:'var(--bg-3)',border:'1px solid var(--line)',display:'flex',alignItems:'center',justifyContent:'center',fontSize:22}}>{a.ico}</div>
-                <span className={`pill ${a.tagV}`} style={{fontSize:9.5}}>{a.status}</span>
-              </div>
-              <div style={{fontFamily:'var(--serif)',fontSize:18,fontWeight:700,letterSpacing:'-.01em'}}>{a.name}</div>
-              <div style={{fontSize:13,color:'var(--text-2)',lineHeight:1.6,flex:1}}>{a.desc}</div>
-              <a href="/apps" className="arrow-link" style={{fontSize:11}}>Ver app →</a>
-            </div>
-          ))}
-        </div>
-        <div style={{marginTop:24,padding:'20px 28px',background:'var(--amber-x)',border:'1px solid oklch(0.80 0.14 62 / 0.2)',borderRadius:12,display:'flex',alignItems:'center',justifyContent:'space-between',gap:20,flexWrap:'wrap'}}>
-          <div>
-            <div style={{fontFamily:'var(--mono)',fontSize:11,fontWeight:500,letterSpacing:'.08em',textTransform:'uppercase',color:'var(--amber)',marginBottom:6}}>Nexora Systems</div>
-            <div style={{fontFamily:'var(--serif)',fontSize:20,fontWeight:700,letterSpacing:'-.01em'}}>Todos os apps são desenvolvidos pela nossa equipe.</div>
-          </div>
-          <a href="/sobre" className="arrow-link">Conhecer a Nexora →</a>
-        </div>
-      </div>
-    </section>
-  );
-}
-
 function NewsletterSection(){
   const [name,setName]=React.useState('');
   const [email,setEmail]=React.useState('');
@@ -436,8 +353,6 @@ function App({ articles = [], tools = [], apps = [], ebooks = [] }){
       <CategoriesSection/>
       <GuidesSection/>
       <ToolsSection tweaks={tweaks}/>
-      <EbooksSection/>
-      <AppsSection/>
       <NewsletterSection/>
       </>
   );

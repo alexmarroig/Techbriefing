@@ -63,7 +63,7 @@ function App(){
             <div className="about-hero-card-logo"><div className="nav-pip"/>Nexora Systems</div>
             <div className="about-hero-card-desc">Tecnologia, sistemas e inteligência artificial aplicada ao mundo real. Criamos conteúdo, ferramentas e produtos para quem quer transformar IA em resultado.</div>
             <div className="about-hero-stat-grid">
-              {[{n:'50+',em:'',l:'Guias e artigos'},{n:'3',em:'k+',l:'Na newsletter'},{n:'6',em:'',l:'Apps no portfólio'},{n:'2',em:'',l:'Ebooks publicados'}].map((s,i)=>(
+              {[{n:'70+',em:'',l:'Guias e artigos'},{n:'3',em:'k+',l:'Na newsletter'},{n:'20+',em:'',l:'Fontes monitoradas'},{n:'1',em:'',l:'Ebook publicado'}].map((s,i)=>(
                 <div className="about-stat" key={i}>
                   <div className="about-stat-n">{s.n}{s.em&&<em>{s.em}</em>}</div>
                   <div className="about-stat-l">{s.l}</div>
@@ -127,9 +127,9 @@ function App(){
             <div className="nexora-box">
               <div className="nexora-box-label">Nexora Systems</div>
               <div className="nexora-box-title">O ecossistema por trás do portal</div>
-              <div className="nexora-box-desc">A Nexora Systems desenvolve o Tech Briefing, nossos apps e ebooks. Somos uma equipe focada em tecnologia aplicada — conteúdo, produtos e sistemas que funcionam no mundo real.</div>
+              <div className="nexora-box-desc">A Nexora Systems desenvolve o Tech Briefing, nossos guias e ebooks. Somos uma equipe focada em tecnologia aplicada — conteúdo, produtos e sistemas que funcionam no mundo real.</div>
               <div className="nexora-box-links">
-                {[{name:'Nossos Apps',desc:'6 produtos no portfólio',href:'/apps'},{name:'Ebooks',desc:'2 títulos publicados',href:'/ebooks'},{name:'Ferramentas recomendadas',desc:'20+ ferramentas testadas',href:'/ferramentas'}].map((l,i)=>(
+                {[{name:'Ebooks',desc:'1 título publicado',href:'/ebooks'},{name:'Ferramentas recomendadas',desc:'20+ ferramentas testadas',href:'/ferramentas'}].map((l,i)=>(
                   <a href={l.href} className="nexora-link" key={i}>
                     <div>
                       <div className="nexora-link-name">{l.name}</div>
