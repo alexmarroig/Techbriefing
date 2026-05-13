@@ -716,11 +716,35 @@ if (!reduceMotion) {
 }
 
 // Send tracking before leaving for Kiwify checkout.
-document.querySelectorAll('a[href="https://pay.kiwify.com.br/U0ynSdt"]').forEach(link => {
+document.querySelectorAll('a[href="https://pay.kiwify.com.br/U0ynSdt"]').forEach((link, index) => {
+  if (!link.dataset.ctaId) {
+    link.dataset.ctaId = `ebook_cta_${index + 1}`;
+  }
+
+  const checkoutUrl = new URL(link.href);
+  const currentParams = new URLSearchParams(window.location.search);
+  [
+    'utm_source',
+    'utm_medium',
+    'utm_campaign',
+    'utm_content',
+    'utm_term',
+    'gclid',
+    'gbraid',
+    'wbraid'
+  ].forEach(param => {
+    const value = currentParams.get(param);
+    if (value && !checkoutUrl.searchParams.has(param)) {
+      checkoutUrl.searchParams.set(param, value);
+    }
+  });
+  link.href = checkoutUrl.toString();
+
   link.addEventListener('click', function(e) {
     e.preventDefault();
     window.trackEbookCheckout?.({
       checkout_provider: 'kiwify',
+      cta_id: this.dataset.ctaId || '',
       link_text: this.textContent?.trim() || 'checkout',
       page_location: window.location.href
     });

@@ -12,6 +12,7 @@ const conversionLabel = configuredConversionLabel && configuredConversionLabel !
   ? configuredConversionLabel
   : 'fT_7CKati6wcEPHNqKU9';
 const tagId = googleAdsId || googleTagId || gaMeasurementId;
+const siteName = 'tech_briefing';
 ---
 
 {mode === 'head' && gtmId && (
@@ -35,7 +36,7 @@ const tagId = googleAdsId || googleTagId || gaMeasurementId;
 {mode === 'head' && tagId && (
   <>
     <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${tagId}`}></script>
-    <script is:inline define:vars={{ gaMeasurementId, googleTagId, googleAdsId, conversionLabel }}>
+    <script is:inline define:vars={{ gaMeasurementId, googleTagId, googleAdsId, conversionLabel, siteName }}>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       window.gtag = window.gtag || gtag;
@@ -54,13 +55,35 @@ const tagId = googleAdsId || googleTagId || gaMeasurementId;
         gtag('config', googleAdsId);
       }
 
+      const baseEventParams = function(params) {
+        return {
+          site_name: siteName,
+          page_path: window.location.pathname,
+          page_location: window.location.href,
+          page_title: document.title,
+          ...params
+        };
+      };
+
       window.trackTechBriefingEvent = function(eventName, params) {
+        const payload = baseEventParams(params || {});
+
+        window.dataLayer.push({
+          event: eventName,
+          ...payload
+        });
+
         if (!window.gtag) return;
-        window.gtag('event', eventName, params || {});
+        window.gtag('event', eventName, payload);
       };
 
       window.trackEbookCheckout = function(params) {
+        const eventId = 'ebook_checkout_' + Date.now();
         const payload = {
+          event_id: eventId,
+          funnel_name: 'ebook_agentes_ia',
+          page_type: 'ebook_landing',
+          checkout_provider: 'kiwify',
           currency: 'BRL',
           value: 37.00,
           items: [{
@@ -73,8 +96,24 @@ const tagId = googleAdsId || googleTagId || gaMeasurementId;
           ...params
         };
 
+        window.trackTechBriefingEvent('ebook_cta_click', {
+          ...payload,
+          event_id: eventId + '_cta'
+        });
+
         window.trackTechBriefingEvent('begin_checkout', payload);
       };
+
+      if (window.location.pathname.replace(/\/$/, '') === '/ebook-agentes-ia') {
+        window.trackTechBriefingEvent('ebook_page_view', {
+          funnel_name: 'ebook_agentes_ia',
+          page_type: 'ebook_landing',
+          currency: 'BRL',
+          value: 37.00,
+          item_id: 'ebook-agentes-ia-negocios',
+          item_name: 'Agentes de IA para Negocios'
+        });
+      }
     </script>
   </>
 )}
