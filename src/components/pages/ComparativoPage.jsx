@@ -79,7 +79,7 @@ function Sidebar(){
         <div style={{fontFamily:'var(--serif)',fontSize:17,fontWeight:700,letterSpacing:'-.01em',marginBottom:6,lineHeight:1.3}}>Agentes de IA para Negócios</div>
         <div style={{fontSize:13,color:'var(--text-2)',lineHeight:1.6,marginBottom:14}}>Aprenda a usar essas ferramentas em fluxos com IA.</div>
         <div style={{display:'flex',gap:8,flexDirection:'column'}}>
-          <a href="/ebooks" className="btn btn-fill" style={{fontSize:12,padding:'9px 16px',justifyContent:'center',borderRadius:8}}>Comprar — R$ 47 →</a>
+          <a href="/ebooks" className="btn btn-fill" style={{fontSize:12,padding:'9px 16px',justifyContent:'center',borderRadius:8}}>Comprar — R$ 37 →</a>
         </div>
       </div>
     </div>
@@ -252,9 +252,9 @@ function Body(){
         <div>
           <div className="ebook-inline-eyebrow">Ebook relacionado</div>
           <div className="ebook-inline-title">Agentes de IA para Negócios</div>
-          <div className="ebook-inline-desc">Aprenda a estruturar fluxos com n8n, Make e LLMs em processos reais de negócios. 180 páginas + frameworks prontos.</div>
+          <div className="ebook-inline-desc">Aprenda a estruturar fluxos com n8n, Make e LLMs em processos reais de negócios. 126 páginas + frameworks práticos.</div>
           <div className="ebook-inline-actions">
-            <span className="ebook-inline-price">R$ 47</span>
+            <span className="ebook-inline-price">R$ 37</span>
             <a href="/ebooks" className="btn btn-fill" style={{fontSize:13,padding:'10px 20px'}}>Comprar na Amazon →</a>
             <a href="/ebooks" className="btn btn-stroke" style={{fontSize:13}}>Comprar direto</a>
           </div>

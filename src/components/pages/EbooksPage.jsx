@@ -11,8 +11,8 @@ const EBOOKS = [
     title:'Agentes de IA para Negócios',
     subtitle:'Do chat à execução operacional',
     desc:'Como identificar onde agentes de IA podem trabalhar por você — com frameworks claros, casos reais e um roteiro prático para sair da teoria e chegar à aplicação.',
-    pages:'180',format:'PDF + EPUB',updated:'Abril 2026',
-    price:'R$ 47',priceOld:'R$ 67',
+    pages:'126',format:'PDF + EPUB',updated:'Maio 2026',
+    price:'R$ 37',priceOld:'',
     benefits:['Mapeie processos onde agentes reduzem trabalho manual','Estruture seus primeiros fluxos sem precisar programar','Frameworks e templates prontos para implementar','Cases reais por setor: vendas, suporte, conteúdo, ops'],
     toc:['O que são agentes de IA e por que agora','Mapeando seu negócio para agentes','Os 5 tipos de agente mais úteis','Ferramentas por nível técnico','Do piloto ao processo em produção','Cases por setor e função','O próximo passo da automação inteligente'],
   },
@@ -82,7 +82,7 @@ function EbookCard({e}){
           <div>
             <div className="ebook-price-block">
               <span className="ebook-price" style={{color:e.color}}>{e.price}</span>
-              <span className="ebook-price-old">{e.priceOld}</span>
+              {e.priceOld && <span className="ebook-price-old">{e.priceOld}</span>}
             </div>
             <div className="ebook-specs">
               {[`${e.pages} páginas`,e.format,`Atualizado: ${e.updated}`].map((s,i)=>(
