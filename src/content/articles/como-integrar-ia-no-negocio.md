@@ -47,7 +47,7 @@ Com os problemas mapeados, crie uma matriz simples:
 
 **Baixo impacto + Difícil**: Evite por enquanto.
 
-### Sinais de que um processo é bom candidato para IA
+### Como saber se um processo é bom candidato para IA
 
 - Envolve processamento de texto, imagens ou dados estruturados
 - Tem volume alto e frequência regular

@@ -23,19 +23,19 @@ A ideia aqui não é traduzir a internet inteira. É separar sinal de ruído e m
       <div class="radar-signal-label">Agentes</div>
       <div class="radar-signal-value">12/12</div>
       <div class="radar-signal-bar"><span style="width:100%"></span></div>
-      <p>Sinais sobre IA executando tarefas</p>
+      <p>Ideias sobre IA executando tarefas</p>
     </div>
     <div class="radar-signal-card">
       <div class="radar-signal-label">Automação</div>
       <div class="radar-signal-value">8/12</div>
       <div class="radar-signal-bar"><span style="width:67%"></span></div>
-      <p>Sinais sobre fluxos, APIs e operação</p>
+      <p>Ideias sobre fluxos, APIs e operação</p>
     </div>
     <div class="radar-signal-card">
       <div class="radar-signal-label">Negócios</div>
       <div class="radar-signal-value">7/12</div>
       <div class="radar-signal-bar"><span style="width:58%"></span></div>
-      <p>Sinais sobre mercado, clientes e renda</p>
+      <p>Ideias sobre mercado, clientes e renda</p>
     </div>
   </div>
 </div>

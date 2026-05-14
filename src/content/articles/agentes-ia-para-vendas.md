@@ -32,7 +32,7 @@ Um agente de IA faz isso em segundos para cada lead, e pode processar centenas p
 - **Notícias recentes**: expansões, captações de recursos, contratações, lançamentos de produtos
 - **Dores potenciais**: com base no setor e tamanho, quais problemas essa empresa provavelmente enfrenta
 - **Tomadores de decisão**: quem são, quais são seus backgrounds, o que publicam
-- **Sinais de compra**: crescimento de equipe (indica investimento), novas contratações técnicas, mudança de liderança
+- **Indícios de compra**: crescimento de equipe (indica investimento), novas contratações técnicas, mudança de liderança
 
 O resultado é um briefing completo para cada lead que o vendedor recebe antes de qualquer contato.
 
@@ -59,7 +59,7 @@ A maioria dos times de vendas trata todos os leads da mesma forma — ou usa reg
 
 Um agente de scoring analisa:
 - Compatibilidade com o ICP (Ideal Customer Profile) da empresa
-- Sinais de intenção de compra (visitou a página de preços? Abriu 5 e-mails?)
+- Indícios de intenção de compra (visitou a página de preços? Abriu 5 e-mails?)
 - Momento da empresa (está crescendo? Acabou de captar investimento?)
 - Engajamento histórico (já interagiu com a empresa antes?)
 - Fit cultural e geográfico

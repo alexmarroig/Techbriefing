@@ -1,6 +1,6 @@
 ---
-title: "3 sinais de que você está usando IA errado no negócio"
-description: "Você usa ChatGPT, testa automações e ainda sente que nada virou resultado? Veja os 3 sinais de que a IA está sendo usada do jeito errado no seu negócio."
+title: "3 provas de que você está usando IA errado no negócio"
+description: "Você usa ChatGPT, testa automações e ainda sente que nada virou resultado? Veja 3 provas práticas de que a IA está sendo usada do jeito errado no seu negócio."
 category: "IA Prática"
 author: "Nexora Systems"
 date: 2026-05-12

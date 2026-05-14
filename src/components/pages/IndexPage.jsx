@@ -27,18 +27,57 @@ const ASIDE = [
 ];
 
 const CATS = [
-  {num:'01',name:'IA Prática',nameEm:'',desc:'Tutoriais, casos de uso e guias diretos ao ponto',href:'/arquivo'},
-  {num:'02',name:'Agentes de',nameEm:'IA',desc:'Frameworks, ferramentas e arquiteturas para agentes',href:'/agentes-de-ia'},
-  {num:'03',name:'Automação',nameEm:'',desc:'Flows no-code, integração e sistemas automáticos',href:'/arquivo'},
-  {num:'04',name:'Software e',nameEm:'Ferramentas',desc:'Reviews honestos e comparativos aprofundados',href:'/ferramentas'},
-  {num:'05',name:'Negócios',nameEm:'Digitais',desc:'Estratégia, monetização e produtos digitais',href:'/ebooks'},
+  {num:'01',name:'Notícias',nameEm:'aplicáveis',desc:'O que mudou hoje e como isso vira ação no trabalho',href:'/arquivo'},
+  {num:'02',name:'Manuais e',nameEm:'Tutoriais',desc:'Passo a passo para criar, testar e publicar com IA',href:'/manuais'},
+  {num:'03',name:'Agentes de',nameEm:'IA',desc:'Frameworks, ferramentas e arquiteturas para agentes autônomos',href:'/agentes-de-ia'},
+  {num:'04',name:'Reviews de',nameEm:'Ferramentas',desc:'Análise de preço, uso real, pontos fortes e limites',href:'/ferramentas'},
+  {num:'05',name:'Negócios',nameEm:'Digitais',desc:'Estratégia, monetização, ofertas e produtos digitais',href:'/ebooks'},
 ];
 
 const GUIDES = [
-  {tag:'Guia',v:'a',title:'Automação para freelancers: do zero ao sistema em 7 dias',desc:'Passo a passo para montar seu primeiro sistema de automação completo.',href:'/artigos/erro-automacoes-com-ia-quebram'},
-  {tag:'Tutorial',v:'c',title:'Crie seu primeiro agente de IA com n8n + GPT-4o',desc:'Sem código. Do setup ao agente funcionando em produção.',href:'/artigos/agentes-ia-nao-sao-chatbots'},
-  {tag:'Guia',v:'a',title:'Workflow de conteúdo com IA: pesquisa, pauta, escrita e publicação',desc:'O processo completo para criadores que querem escalar.',href:'/artigos/transformar-ia-em-processo'},
-  {tag:'Comparativo',v:'',title:'Automação de vendas B2B: da prospecção ao fechamento',desc:'Como construir um pipeline inteligente com ferramentas acessíveis.',href:'/artigos/agentes-ia-oferta-servico'},
+  {tag:'Manual',v:'a',title:'Como criar voz com IA e usar em conteúdo, aulas e anúncios',desc:'Ferramentas, roteiro, cuidados de direitos e fluxo para publicar.',href:'/manuais#voz-ia'},
+  {tag:'Tutorial',v:'c',title:'Como criar agentes autônomos com OpenHands, OpenClaw, n8n e CrewAI',desc:'Do conceito ao primeiro agente que executa tarefas reais.',href:'/manuais#agentes-autonomos'},
+  {tag:'Review',v:'',title:'Melhores apps de IA para vídeo por texto: preço, qualidade e limite',desc:'Comparativo para escolher sem desperdiçar assinatura.',href:'/manuais#video-texto'},
+  {tag:'Guia',v:'a',title:'Como criar cortes virais de um vídeo longo com IA',desc:'Pipeline para transformar live, aula ou podcast em posts curtos.',href:'/manuais#cortes-virais'},
+];
+
+const MANUAL_TRACKS = [
+  {
+    tag:'Voz e avatar',
+    title:'Como criar voz, clonar voz e montar um clone/avatar com IA',
+    desc:'Guia para ElevenLabs, HeyGen, Synthesia, D-ID e alternativas, com cuidados legais e roteiro pronto.',
+    href:'/manuais#voz-avatar',
+  },
+  {
+    tag:'Vídeo viral',
+    title:'Como criar vídeos virais de IA, bichos cantando e vídeos longos',
+    desc:'Prompt, ferramenta, edição, thumbnail, legenda e publicação em Shorts, Reels e TikTok.',
+    href:'/manuais#video-viral',
+  },
+  {
+    tag:'Agentes autônomos',
+    title:'Como criar agentes autônomos com OpenHands, OpenClaw, CrewAI e n8n',
+    desc:'Quando usar cada stack, como testar com segurança e como transformar em serviço para clientes.',
+    href:'/manuais#agentes-autonomos',
+  },
+  {
+    tag:'Apps com texto',
+    title:'Melhores apps para criar aplicativos usando apenas texto',
+    desc:'Lovable, Bolt, Replit, Cursor, v0 e similares: preço, pontos fortes e quando vale pagar.',
+    href:'/manuais#apps-texto',
+  },
+  {
+    tag:'Reviews',
+    title:'Reviews com preço: vídeo, voz, automação, imagem, agentes e criação de app',
+    desc:'Análises práticas para escolher ferramenta sem cair em promessa bonita.',
+    href:'/manuais#reviews',
+  },
+  {
+    tag:'Renda com IA',
+    title:'Como transformar essas técnicas em serviço, produto e oferta',
+    desc:'Ideias de pacotes para freelancers, pequenos negócios e criadores venderem usando IA.',
+    href:'/manuais#renda-ia',
+  },
 ];
 
 const RANKING = [
@@ -88,7 +127,7 @@ function Hero(){
           <span className="hero-eyebrow-tag">Blog de IA aplicada</span>
         </div>
         <h1 className="hero-h1">
-          Análises, guias e sinais para aplicar IA de verdade.
+          Notícias e ideias para aplicar IA de verdade.
         </h1>
         <p className="hero-sub">
           Um blog direto para quem quer transformar IA, automação e software em processo real: notícias filtradas, tutoriais práticos, comparativos e ideias que viram ação.
@@ -98,7 +137,7 @@ function Hero(){
             Ler últimas publicações
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
           </a>
-          <a href="/artigos/radar-tech-2026-05-13" className="arrow-link">Ver radar tech →</a>
+          <a href="/manuais" className="arrow-link">Ver manuais práticos →</a>
         </div>
       </div>
       <div className="hero-bar wrap">
@@ -222,7 +261,7 @@ function GuidesSection(){
   return (
     <section className="guides">
       <div className="wrap">
-        <SH num="04" label="Guias e Comparativos" more="Ver biblioteca" moreHref="/arquivo"/>
+        <SH num="05" label="Guias e Comparativos" more="Ver biblioteca" moreHref="/arquivo"/>
         <div className="guides-grid">
           <div className="guide-list">
             {GUIDES.map((g,i)=>(
@@ -261,11 +300,35 @@ function GuidesSection(){
   );
 }
 
+function ManualsSection(){
+  return (
+    <section className="manuals-home">
+      <div className="wrap">
+        <SH num="04" label="Manuais, Guias e Tutoriais" more="Ver central" moreHref="/manuais"/>
+        <div className="manuals-home-head">
+          <h2>Aprenda o que está bombando antes de virar lugar comum.</h2>
+          <p>Não é só notícia. Cada tema vira manual prático: ferramenta, passo a passo, custo, risco, prompt, teste e forma de aplicar no trabalho ou vender como serviço.</p>
+        </div>
+        <div className="manuals-home-grid">
+          {MANUAL_TRACKS.map((item, index)=>(
+            <a className="manual-track-card" href={item.href} key={item.title}>
+              <span className="manual-track-num">{String(index + 1).padStart(2,'0')}</span>
+              <span className="manual-track-tag">{item.tag}</span>
+              <strong>{item.title}</strong>
+              <p>{item.desc}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function ToolsSection({tweaks}){
   return (
     <section className="tools">
       <div className="wrap">
-        <SH num="05" label="Ferramentas Recomendadas" more="Ver todas"/>
+        <SH num="06" label="Ferramentas Recomendadas" more="Ver todas"/>
         <div style={{marginBottom:32,marginTop:-20}}>
           <p style={{fontSize:13,color:'var(--text-3)',fontWeight:300}}>
             Testadas pela equipe. Links marcados como <span style={{color:'var(--text-4)',fontFamily:'var(--mono)',fontSize:11,letterSpacing:'.05em'}}>AFILIADO</span> nos ajudam a manter o conteúdo gratuito.
@@ -304,7 +367,7 @@ function NewsletterSection(){
   return (
     <section className="nl">
       <div className="wrap">
-        <SH num="06" label="Newsletter"/>
+        <SH num="07" label="Newsletter"/>
         <div className="nl-inner">
           <div>
             <h2 className="nl-h">IA aplicada<br/>na sua caixa.<br/><em>Toda semana.</em></h2>
@@ -396,6 +459,7 @@ function App({ articles = [], tools = [], apps = [], ebooks = [] }){
       <FeatureSection/>
       <RecentArticlesSection articles={latestArticles}/>
       <CategoriesSection/>
+      <ManualsSection/>
       <GuidesSection/>
       <ToolsSection tweaks={tweaks}/>
       <NewsletterSection/>

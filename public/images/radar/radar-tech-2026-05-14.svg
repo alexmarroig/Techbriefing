@@ -1,6 +1,6 @@
 <svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">Radar Tech 2026-05-14</title>
-  <desc id="desc">Painel editorial visual com principais sinais de tecnologia do dia.</desc>
+  <desc id="desc">Painel editorial visual com principais notícias e ideias de tecnologia do dia.</desc>
   <defs>
     <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(942 130) rotate(142) scale(820 560)">
       <stop stop-color="#22d3ee" stop-opacity=".30"/>
@@ -21,7 +21,7 @@
   </g>
   <rect x="72" y="60" width="1056" height="555" rx="34" fill="#090d13" stroke="#253245"/>
   <text x="112" y="122" fill="#ffb15f" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="800" letter-spacing="5">TECH BRIEFING / RADAR 2026-05-14</text>
-  <text x="112" y="190" fill="#f8fafc" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="800">3 sinais para aplicar</text>
+  <text x="112" y="190" fill="#f8fafc" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="800">3 ideias para aplicar</text>
   <text x="112" y="248" fill="#f8fafc" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="800">antes que vire hype.</text>
   <foreignObject x="112" y="290" width="610" height="110">
     <div xmlns="http://www.w3.org/1999/xhtml" style="font-family:Arial,sans-serif;color:#cbd5e1;font-size:24px;line-height:1.35;font-weight:700">O Slackbot virou agente: o escritório está entrando na era da IA operacional</div>
