@@ -23,6 +23,40 @@ const isAgent = manual.category.includes('Agentes');
 const isVoice = manual.category.includes('Voz');
 const primaryTool = manual.tools[0];
 const starterPrompt = `Quero criar ${manual.title.toLowerCase()} para um projeto real. Meu objetivo é [descreva o resultado], meu público é [descreva o público] e minhas restrições são [tempo/orçamento/ferramentas]. Monte um plano prático com: ferramentas recomendadas, passo a passo, riscos, checklist de qualidade e uma primeira versão simples para testar hoje.`;
+const categoryGuide = isVoice
+  ? {
+      promise: 'transformar roteiro em presença: voz, rosto, ritmo e confiança',
+      asset: 'um vídeo curto narrado, com avatar ou voz sintética, pronto para testar em uma página, anúncio ou rede social',
+      niche: 'um consultor que quer gravar aulas e anúncios sem depender de estúdio toda semana',
+      thirty: ['Escreva um roteiro de 90 segundos', 'Gere 3 versões de voz', 'Escolha a mais natural', 'Monte com legenda grande', 'Publique como teste privado ou anúncio pequeno'],
+    }
+  : isVideo
+    ? {
+        promise: 'transformar uma ideia simples em peça visual que prende atenção',
+        asset: 'um vídeo vertical com gancho, legenda, imagem forte e chamada para ação',
+        niche: 'um criador que quer transformar uma notícia, aula ou oferta em cortes que geram clique',
+        thirty: ['Escolha um gancho visual', 'Escreva roteiro de 8 a 20 segundos', 'Gere 2 variações', 'Edite legenda e ritmo', 'Publique 3 versões com aberturas diferentes'],
+      }
+    : isAgent
+      ? {
+          promise: 'tirar uma tarefa da cabeça e colocar em um fluxo que executa com regra',
+          asset: 'um agente pequeno que recebe uma entrada, usa ferramentas e devolve uma saída revisável',
+          niche: 'um prestador de serviço que perde tempo pesquisando, respondendo ou organizando informação manualmente',
+          thirty: ['Escolha uma tarefa repetitiva', 'Defina entrada e saída', 'Liste ferramentas permitidas', 'Teste com 3 casos reais', 'Adicione revisão humana antes de publicar'],
+        }
+      : isReview
+        ? {
+            promise: 'decidir ferramenta com base em custo, uso real e limite, não em demo bonita',
+            asset: 'uma matriz simples para escolher o app certo antes de pagar assinatura',
+            niche: 'um freelancer que precisa produzir rápido, mas não pode gastar em cinco ferramentas ao mesmo tempo',
+            thirty: ['Defina o resultado que você quer', 'Teste o mesmo prompt em 3 apps', 'Anote custo por entrega aprovada', 'Compare velocidade e controle', 'Escolha uma ferramenta principal e uma reserva'],
+          }
+        : {
+            promise: 'transformar conhecimento em rotina, audiência e oferta vendável',
+            asset: 'um processo repetível para publicar, capturar leads ou vender um serviço simples',
+            niche: 'um profissional que quer usar IA para criar demanda, não só consumir novidade',
+            thirty: ['Escolha uma dor clara', 'Monte uma entrega pequena', 'Crie uma prova visual', 'Publique com CTA', 'Meça resposta e ajuste a oferta'],
+          };
 const useCases = isVoice
   ? ['Aulas e cursos com narração consistente', 'Anúncios curtos sem precisar gravar toda semana', 'Atendimento, onboarding e vídeos de venda com avatar']
   : isVideo
@@ -48,6 +82,11 @@ const faq = [
     a: manual.mistakes[0] || 'Começar grande demais. Primeiro valide uma versão simples, depois melhore qualidade, automação e escala.',
   },
 ];
+const decisionRows = manual.tools.map((tool, index) => ({
+  tool,
+  bestFor: index === 0 ? 'primeiro teste sério' : index === 1 ? 'comparar qualidade e preço' : index === 2 ? 'variações e casos específicos' : 'produção complementar',
+  watch: index === 0 ? 'limites do plano e licença comercial' : index === 1 ? 'curva de aprendizado' : 'qualidade final antes de publicar',
+}));
 ---
 
 <BaseLayout
@@ -92,15 +131,25 @@ const faq = [
           <section class="manual-prose-section">
             <h2>O que você vai construir</h2>
             <p>
-              Este manual existe para tirar a ideia do campo da curiosidade e colocar em um fluxo prático.
-              A meta não é testar IA por testar. A meta é produzir algo que possa ser usado em conteúdo,
-              atendimento, venda, operação ou criação de produto.
+              Este manual existe para {categoryGuide.promise}. A meta não é testar IA por testar.
+              A meta é terminar com {categoryGuide.asset}.
             </p>
             <p>
-              A forma mais segura de começar é pequena: uma primeira versão, um teste de qualidade, uma
-              revisão humana e só depois uma rotina repetível. Isso evita o erro clássico de gastar horas
-              em ferramenta bonita sem gerar nenhum ativo útil.
+              Pense no caso de {categoryGuide.niche}. A diferença entre brincar com ferramenta e aplicar
+              de verdade está no processo: objetivo claro, teste pequeno, revisão humana e uma próxima ação
+              mensurável.
             </p>
+          </section>
+
+          <section class="manual-playbook">
+            <div>
+              <span>Receita de 30 minutos</span>
+              <h2>Faça uma primeira versão hoje</h2>
+              <p>Não espere o setup perfeito. A primeira vitória é criar algo pequeno o bastante para publicar, medir e melhorar.</p>
+            </div>
+            <ol>
+              {categoryGuide.thirty.map((item) => <li>{item}</li>)}
+            </ol>
           </section>
 
           <section class="manual-chart-section">
@@ -138,11 +187,27 @@ const faq = [
 
           <h2>Ferramentas para começar</h2>
           <div class="manual-tool-table">
-            {manual.tools.map((tool, index) => (
+            {decisionRows.map((row, index) => (
               <div class="manual-tool-row">
-                <strong>{tool}</strong>
+                <strong>{row.tool}</strong>
                 <span>{index === 0 ? 'Melhor ponto de partida' : index === 1 ? 'Boa alternativa para comparar' : 'Use para testar variações'}</span>
                 <em>{index === 0 ? 'Prioridade alta' : index === 1 ? 'Prioridade média' : 'Opcional'}</em>
+              </div>
+            ))}
+          </div>
+
+          <h2>Matriz de decisão</h2>
+          <div class="manual-decision-table">
+            <div class="manual-decision-head">
+              <span>Ferramenta</span>
+              <span>Use quando</span>
+              <span>Atenção</span>
+            </div>
+            {decisionRows.map((row) => (
+              <div class="manual-decision-row">
+                <strong>{row.tool}</strong>
+                <span>{row.bestFor}</span>
+                <span>{row.watch}</span>
               </div>
             ))}
           </div>
@@ -175,6 +240,16 @@ const faq = [
             e só então transforme em rotina, serviço ou conteúdo. IA aplicada não começa grande: começa
             com um fluxo que funciona uma vez e depois fica repetível.
           </p>
+
+          <div class="manual-publish-plan">
+            <span>Plano de publicação</span>
+            <h2>Como tirar do teste e levar para o mundo</h2>
+            <div>
+              <p><strong>Dia 1:</strong> publique a versão simples para um grupo pequeno ou em modo privado.</p>
+              <p><strong>Dia 2:</strong> ajuste o que ficou artificial, lento, confuso ou caro.</p>
+              <p><strong>Dia 3:</strong> transforme em artigo, post curto, oferta, vídeo ou demonstração para cliente.</p>
+            </div>
+          </div>
 
           <h2>Perguntas frequentes</h2>
           <div class="manual-faq">
