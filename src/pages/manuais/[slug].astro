@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { MANUALS, getManualBySlug } from '../../data/manuals.js';
+
+export function getStaticPaths() {
+  return MANUALS.map((manual) => ({
+    params: { slug: manual.slug },
+    props: { manual },
+  }));
+}
+
+const { manual } = Astro.props;
+const related = MANUALS.filter((item) => item.slug !== manual.slug && item.category === manual.category).slice(0, 3);
+---
+
+<BaseLayout
+  title={`${manual.title} — Manual Tech Briefing`}
+  description={manual.description}
+  active="Manuais"
+>
+  <main class="manual-detail">
+    <section class="manual-detail-hero">
+      <div class="wrap">
+        <a class="manual-back" href="/manuais/">← Todos os manuais</a>
+        <div class="manual-detail-kicker">{manual.category}</div>
+        <h1>{manual.title}</h1>
+        <p>{manual.description}</p>
+        <div class="manual-outcome">
+          <span>Resultado esperado</span>
+          <strong>{manual.outcome}</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="manual-detail-body">
+      <div class="wrap manual-detail-grid">
+        <article class="manual-detail-content">
+          <h2>Passo a passo</h2>
+          <ol class="manual-steps">
+            {manual.steps.map((step) => <li>{step}</li>)}
+          </ol>
+
+          <h2>Erros que mais travam</h2>
+          <div class="manual-mistakes">
+            {manual.mistakes.map((mistake) => <div>{mistake}</div>)}
+          </div>
+
+          <h2>Como transformar isso em aplicação real</h2>
+          <p>
+            Pegue um caso pequeno, execute uma versão simples, compare antes e depois, salve o processo
+            e só então transforme em rotina, serviço ou conteúdo. IA aplicada não começa grande: começa
+            com um fluxo que funciona uma vez e depois fica repetível.
+          </p>
+        </article>
+
+        <aside class="manual-detail-side">
+          <div class="manual-side-card">
+            <span>Ferramentas citadas</span>
+            <div class="manual-tools detail">
+              {manual.tools.map((tool) => <a href="/ferramentas/">{tool}</a>)}
+            </div>
+          </div>
+          <div class="manual-side-card">
+            <span>Próximo passo</span>
+            <strong>Receba os próximos guias práticos por e-mail.</strong>
+            <a class="btn btn-fill" href="/newsletter/">Entrar na newsletter →</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    {related.length > 0 && (
+      <section class="manual-related">
+        <div class="wrap">
+          <div class="manuals-section-head">
+            <span>Relacionados</span>
+            <p>Continue na mesma trilha.</p>
+          </div>
+          <div class="manuals-ideas-grid">
+            {related.map((item) => (
+              <a class="manual-idea link" href={`/manuais/${item.slug}/`}>
+                <span>{item.category}</span>
+                <strong>{item.title}</strong>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+  </main>
+</BaseLayout>
