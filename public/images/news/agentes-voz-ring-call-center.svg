@@ -1,0 +1,75 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Agentes de voz no atendimento</title>
+  <desc id="desc">Imagem editorial mostrando ligacoes sendo roteadas por um agente de IA em uma central de atendimento.</desc>
+  <defs>
+    <radialGradient id="bgGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(924 189) rotate(141) scale(812 588)">
+      <stop stop-color="#ff4ab8" stop-opacity=".32"/>
+      <stop offset=".36" stop-color="#22d3ee" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#050708" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="lineHot" x1="121" y1="174" x2="1042" y2="508" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22d3ee"/>
+      <stop offset=".48" stop-color="#ffb15f"/>
+      <stop offset="1" stop-color="#ff4ab8"/>
+    </linearGradient>
+    <linearGradient id="card" x1="170" y1="112" x2="991" y2="556" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#121926"/>
+      <stop offset="1" stop-color="#090b12"/>
+    </linearGradient>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="675" fill="#050708"/>
+  <rect width="1200" height="675" fill="url(#bgGlow)"/>
+  <g opacity=".28">
+    <path d="M0 95H1200M0 190H1200M0 285H1200M0 380H1200M0 475H1200M0 570H1200" stroke="#6b7280" stroke-opacity=".22"/>
+    <path d="M92 0V675M184 0V675M276 0V675M368 0V675M460 0V675M552 0V675M644 0V675M736 0V675M828 0V675M920 0V675M1012 0V675M1104 0V675" stroke="#6b7280" stroke-opacity=".16"/>
+  </g>
+  <rect x="74" y="58" width="1052" height="559" rx="34" fill="url(#card)" stroke="#223041"/>
+  <g opacity=".9">
+    <rect x="124" y="112" width="258" height="136" rx="22" fill="#0c111a" stroke="#29394b"/>
+    <text x="154" y="154" fill="#ffb15f" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="4">INBOUND CALL</text>
+    <text x="154" y="196" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="800">Cliente na linha</text>
+    <text x="154" y="224" fill="#9aa4b2" font-family="Inter, Arial, sans-serif" font-size="15">duvida, suporte, venda</text>
+  </g>
+  <g filter="url(#softGlow)">
+    <path d="M410 181C494 181 493 337 575 337H664" stroke="url(#lineHot)" stroke-width="10" stroke-linecap="round"/>
+    <path d="M244 463C348 463 340 381 444 381H522" stroke="url(#lineHot)" stroke-width="8" stroke-linecap="round"/>
+    <path d="M754 337H824C913 337 912 224 1002 224" stroke="url(#lineHot)" stroke-width="8" stroke-linecap="round"/>
+    <path d="M754 337H834C920 337 911 452 1003 452" stroke="url(#lineHot)" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <g>
+    <rect x="563" y="236" width="206" height="202" rx="30" fill="#111827" stroke="#ffb15f" stroke-opacity=".7"/>
+    <circle cx="666" cy="314" r="47" fill="#0b1220" stroke="#22d3ee" stroke-width="4"/>
+    <path d="M640 319c13 30 40 30 53 0M640 310c13-30 40-30 53 0" stroke="#22d3ee" stroke-width="8" stroke-linecap="round"/>
+    <path d="M666 266v96M618 314h96" stroke="#ffb15f" stroke-width="5" stroke-linecap="round"/>
+    <text x="614" y="398" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" letter-spacing="2">VOICE AGENT</text>
+  </g>
+  <g opacity=".92">
+    <rect x="824" y="128" width="212" height="118" rx="20" fill="#0c111a" stroke="#29394b"/>
+    <text x="856" y="166" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="900">RING</text>
+    <text x="856" y="202" fill="#9aa4b2" font-family="Inter, Arial, sans-serif" font-size="15">Atendimento com IA</text>
+    <path d="M986 164c18 15 18 48 0 64" stroke="#ff4ab8" stroke-width="3" stroke-linecap="round"/>
+    <path d="M1008 145c32 29 32 75 0 104" stroke="#ff4ab8" stroke-width="3" stroke-linecap="round" opacity=".6"/>
+  </g>
+  <g>
+    <rect x="786" y="416" width="262" height="116" rx="20" fill="#0c111a" stroke="#29394b"/>
+    <text x="818" y="456" fill="#22d3ee" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="4">AI ROUTING</text>
+    <text x="818" y="491" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800">resolve ou escala</text>
+  </g>
+  <g>
+    <rect x="150" y="376" width="252" height="122" rx="20" fill="#0c111a" stroke="#29394b"/>
+    <path d="M180 433c20-38 44-38 64 0s44 38 64 0 44-38 64 0" stroke="#22d3ee" stroke-width="6" stroke-linecap="round"/>
+    <text x="180" y="470" fill="#9aa4b2" font-family="Inter, Arial, sans-serif" font-size="15">voz vira tarefa executada</text>
+  </g>
+  <circle cx="410" cy="181" r="12" fill="#22d3ee"/>
+  <circle cx="244" cy="463" r="12" fill="#22d3ee"/>
+  <circle cx="1002" cy="224" r="12" fill="#ff4ab8"/>
+  <circle cx="1003" cy="452" r="12" fill="#ff4ab8"/>
+  <text x="94" y="600" fill="#6b7280" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="5">TECH BRIEFING / AGENTES DE VOZ</text>
+</svg>

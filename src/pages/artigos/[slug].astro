@@ -72,7 +72,7 @@ const breadcrumbJsonLd = {
 
       {image && (
         <figure class="seo-hero-image">
-          <img src={image} alt="" loading="eager" />
+          <img src={image} alt={title} loading="eager" />
         </figure>
       )}
 
@@ -80,22 +80,66 @@ const breadcrumbJsonLd = {
         <div class="seo-content">
           <Content />
         </div>
-
-        <aside class="seo-sidebar" aria-label="Oferta relacionada">
-          <div class="seo-offer-card">
-            <div class="seo-offer-kicker">Ebook recomendado</div>
-            <h2>Agentes de IA para Negócios</h2>
-            <p>Saia do ChatGPT solto e aprenda a estruturar agentes que executam processos reais.</p>
-            <div class="seo-offer-price">
-              <span>R$ 37</span>
-              <small>PDF + EPUB</small>
-            </div>
-            <a href="/ebook-agentes-ia/" class="btn btn-fill">Ver ebook →</a>
-          </div>
-        </aside>
       </div>
     </div>
   </article>
+
+  <div class="article-product-nudge" data-article-product-nudge hidden>
+    <button class="article-nudge-close" type="button" aria-label="Fechar oferta" data-nudge-close>&times;</button>
+    <div class="article-nudge-kicker">Próximo passo</div>
+    <strong>Quer aplicar isso no seu negócio?</strong>
+    <p>Veja o guia prático de agentes de IA e transforme leitura em fluxo, tarefa e automação real.</p>
+    <div class="article-nudge-actions">
+      <a href="/ebook-agentes-ia/" class="article-nudge-primary" data-nudge-link="ebook">Ver ebook por R$ 37</a>
+      <a href="/ferramentas/" class="article-nudge-secondary" data-nudge-link="tools">Ferramentas</a>
+    </div>
+  </div>
+
+  <script is:inline>
+    (() => {
+      const nudge = document.querySelector('[data-article-product-nudge]');
+      if (!nudge) return;
+
+      const storageKey = 'tb_article_product_nudge_closed_v1';
+      if (sessionStorage.getItem(storageKey) === '1') return;
+
+      let visible = false;
+      const track = (name, params = {}) => {
+        if (typeof window.trackTechBriefingEvent === 'function') {
+          window.trackTechBriefingEvent(name, {
+            placement: 'article_product_nudge',
+            ...params,
+          });
+        }
+      };
+      const show = (reason) => {
+        if (visible) return;
+        visible = true;
+        nudge.hidden = false;
+        track('product_nudge_view', { reason });
+      };
+      const close = () => {
+        nudge.hidden = true;
+        sessionStorage.setItem(storageKey, '1');
+        track('product_nudge_close');
+      };
+
+      nudge.querySelectorAll('[data-nudge-close]').forEach((button) => {
+        button.addEventListener('click', close);
+      });
+      nudge.querySelectorAll('[data-nudge-link]').forEach((link) => {
+        link.addEventListener('click', () => {
+          track('product_nudge_click', { target: link.getAttribute('data-nudge-link') });
+        });
+      });
+
+      window.setTimeout(() => show('time'), 16000);
+      window.addEventListener('scroll', () => {
+        const trigger = Math.min(900, document.documentElement.scrollHeight * 0.22);
+        if (window.scrollY > trigger) show('scroll');
+      }, { passive: true });
+    })();
+  </script>
 </BaseLayout>
 
 <style>
@@ -181,8 +225,9 @@ const breadcrumbJsonLd = {
   }
   .seo-layout {
     display: grid;
-    grid-template-columns: minmax(0, 760px) 300px;
-    gap: 64px;
+    grid-template-columns: minmax(0, 820px);
+    justify-content: center;
+    gap: 0;
     align-items: start;
     padding-bottom: 96px;
   }
@@ -232,68 +277,93 @@ const breadcrumbJsonLd = {
     color: var(--text);
     border-radius: 0 12px 12px 0;
   }
-  .seo-sidebar {
-    position: sticky;
-    top: 92px;
+  .article-product-nudge[hidden] {
+    display: none;
   }
-  .seo-offer-card {
-    padding: 24px;
-    border: 1px solid oklch(0.80 0.14 62 / 0.24);
-    border-radius: 14px;
+  .article-product-nudge {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    z-index: 420;
+    width: min(360px, calc(100vw - 32px));
+    padding: 20px;
+    border: 1px solid oklch(0.80 0.14 62 / 0.32);
+    border-radius: 16px;
     background:
-      radial-gradient(circle at 80% 0%, oklch(0.80 0.14 62 / 0.14), transparent 55%),
-      var(--bg-2);
+      radial-gradient(circle at 92% 0%, oklch(0.80 0.14 62 / 0.16), transparent 48%),
+      oklch(0.14 0.01 245 / 0.96);
+    box-shadow: 0 20px 60px oklch(0 0 0 / 0.46);
+    backdrop-filter: blur(14px);
   }
-  .seo-offer-kicker {
-    margin-bottom: 12px;
+  .article-nudge-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    border: 1px solid var(--line-s);
+    border-radius: 999px;
+    background: var(--bg-2);
+    color: var(--text-2);
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+  }
+  .article-nudge-kicker {
+    margin-bottom: 10px;
+    color: var(--amber);
     font-family: var(--mono);
     font-size: 10px;
-    color: var(--amber);
     letter-spacing: 0.12em;
     text-transform: uppercase;
   }
-  .seo-offer-card h2 {
-    margin: 0 0 10px;
+  .article-product-nudge strong {
+    display: block;
+    max-width: 280px;
+    color: var(--text);
     font-family: var(--serif);
-    font-size: 26px;
-    line-height: 1.1;
+    font-size: 24px;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
   }
-  .seo-offer-card p {
-    margin: 0 0 18px;
+  .article-product-nudge p {
+    margin: 12px 0 16px;
     color: var(--text-2);
     font-size: 14px;
-    line-height: 1.6;
+    line-height: 1.55;
   }
-  .seo-offer-price {
+  .article-nudge-actions {
     display: flex;
-    align-items: baseline;
     gap: 10px;
-    margin-bottom: 18px;
+    align-items: center;
   }
-  .seo-offer-price span {
-    color: var(--amber);
-    font-family: var(--serif);
-    font-size: 34px;
-    font-weight: 700;
-  }
-  .seo-offer-price small {
-    color: var(--text-3);
-    font-family: var(--mono);
-    font-size: 10px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
-  .seo-offer-card .btn {
-    width: 100%;
+  .article-nudge-primary,
+  .article-nudge-secondary {
+    display: inline-flex;
+    align-items: center;
     justify-content: center;
+    min-height: 40px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 800;
+    text-decoration: none;
+  }
+  .article-nudge-primary {
+    flex: 1;
+    color: oklch(0.13 0.01 45);
+    background: var(--amber);
+  }
+  .article-nudge-secondary {
+    padding: 0 14px;
+    color: var(--text-2);
+    border: 1px solid var(--line-s);
   }
   @media(max-width: 980px) {
     .seo-layout {
       grid-template-columns: 1fr;
       gap: 36px;
-    }
-    .seo-sidebar {
-      position: static;
     }
   }
   @media(max-width: 640px) {
@@ -305,6 +375,13 @@ const breadcrumbJsonLd = {
     }
     .seo-content {
       font-size: 16px;
+    }
+    .article-product-nudge {
+      right: 12px;
+      bottom: 12px;
+      left: 12px;
+      width: auto;
+      padding: 18px;
     }
   }
 </style>

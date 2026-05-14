@@ -6,7 +6,7 @@ author: "Nexora Systems"
 date: 2026-05-13
 readTime: "8 min"
 featured: true
-image: "/images/editorial/agents-operations.svg"
+image: "/images/news/agentes-voz-ring-call-center.svg"
 tags:
   - Agentes de voz
   - Atendimento com IA

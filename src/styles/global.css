@@ -1254,10 +1254,11 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;o
 .nl-topics-header{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:48px;gap:20px;flex-wrap:wrap}
 .nl-topics-title{font-family:var(--serif);font-size:clamp(28px,4vw,44px);font-weight:700;letter-spacing:-.02em}
 .nl-topics-list{display:flex;flex-direction:column;gap:0}
-.nl-topic-row{display:grid;grid-template-columns:48px 1fr auto;gap:24px;align-items:center;padding:20px 0;border-bottom:1px solid var(--line-s);cursor:pointer;transition:opacity .2s}
+.nl-topic-row{display:grid;grid-template-columns:48px 1fr auto;gap:24px;align-items:center;padding:20px 0;border-bottom:1px solid var(--line-s);cursor:pointer;transition:opacity .2s,color .2s;text-decoration:none;color:inherit}
 .nl-topic-row:first-child{padding-top:0}
 .nl-topic-row:last-child{border-bottom:none;padding-bottom:0}
 .nl-topic-row:hover{opacity:.75}
+.nl-topic-row:focus-visible{outline:2px solid var(--amber);outline-offset:6px;border-radius:8px}
 .nl-topic-num{font-family:var(--mono);font-size:11px;font-weight:500;color:var(--text-4);letter-spacing:.05em;text-align:right}
 .nl-topic-title{font-family:var(--serif);font-size:clamp(17px,2vw,22px);font-weight:600;letter-spacing:-.01em}
 .nl-topic-pill{flex-shrink:0}

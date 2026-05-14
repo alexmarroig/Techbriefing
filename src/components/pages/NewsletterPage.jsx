@@ -13,12 +13,12 @@ const BENEFITS = [
 ];
 
 const TOPICS = [
-  {title:'Agentes de IA em produção: o que funciona de verdade',tag:'Guia',v:'a'},
-  {title:'As 5 ferramentas de automação mais úteis de 2026 — testadas',tag:'Comparativo',v:''},
-  {title:'Como usar Claude e GPT-4o juntos no mesmo fluxo',tag:'Tutorial',v:'c'},
-  {title:'O que a IA está mudando no trabalho dos criadores agora',tag:'Análise',v:''},
-  {title:'n8n vs Make: qual usar no seu negócio em 2026',tag:'Comparativo',v:''},
-  {title:'RAG, embeddings e memória: o guia que ninguém escreve simples',tag:'Guia',v:'a'},
+  {title:'Agentes de IA em produção: o que funciona de verdade',tag:'Guia',v:'a',href:'/artigos/agentes-voz-atendimento-ring-vapi/'},
+  {title:'As 5 ferramentas de automação mais úteis de 2026 — testadas',tag:'Comparativo',v:'',href:'/ferramentas/'},
+  {title:'Como usar Claude e GPT-4o juntos no mesmo fluxo',tag:'Tutorial',v:'c',href:'/artigos/claude-vs-chatgpt-comparativo/'},
+  {title:'O que a IA está mudando no trabalho dos criadores agora',tag:'Análise',v:'',href:'/artigos/empresas-trocando-habilidades-ia-gm/'},
+  {title:'n8n vs Make: qual usar no seu negócio em 2026',tag:'Comparativo',v:'',href:'/comparativos/n8n-vs-make/'},
+  {title:'RAG, embeddings e memória: o guia que ninguém escreve simples',tag:'Guia',v:'a',href:'/artigos/rag-explicado-guia-pratico/'},
 ];
 
 const AUDIENCE = ['Pequenos empresários','Freelancers','Criadores de conteúdo','Gestores de operações','Desenvolvedores','Fundadores de startups','Profissionais de marketing'];
@@ -136,11 +136,11 @@ function App(){
           </div>
           <div className="nl-topics-list">
             {TOPICS.map((t,i)=>(
-              <div className="nl-topic-row" key={i}>
+              <a className="nl-topic-row" href={t.href} key={i} aria-label={`Ler: ${t.title}`}>
                 <div className="nl-topic-num">0{i+1}</div>
                 <div className="nl-topic-title">{t.title}</div>
                 <span className={`pill ${t.v} nl-topic-pill`}>{t.tag}</span>
-              </div>
+              </a>
             ))}
           </div>
         </div>
