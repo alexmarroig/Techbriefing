@@ -4,6 +4,7 @@ import path from 'node:path';
 
 const ROOT = process.cwd();
 const OUT_DIR = path.join(ROOT, 'src', 'content', 'articles');
+const OUT_IMAGE_DIR = path.join(ROOT, 'public', 'images', 'radar');
 const MAX_ITEMS = Number(process.env.RADAR_MAX_ITEMS || 12);
 const HN_LIMIT = Number(process.env.RADAR_HN_LIMIT || 35);
 
@@ -88,6 +89,14 @@ function escapeYaml(value) {
   return String(value).replace(/"/g, '\\"');
 }
 
+function escapeXml(value) {
+  return String(value || '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
 function getDomain(url) {
   try {
     return new URL(url).hostname.replace(/^www\./, '');
@@ -169,6 +178,127 @@ function makeSummary(item) {
   const clean = stripHtml(item.summary || '');
   if (clean.length > 70) return clean.slice(0, 260).replace(/\s+\S*$/, '') + '.';
   return `${item.source} publicou ou destacou: "${item.title}". O tema entra no radar porque conversa com IA aplicada, automação e negócios digitais.`;
+}
+
+function signalCounts(items) {
+  const counters = { agents: 0, automation: 0, business: 0 };
+  for (const item of items) {
+    const text = `${item.title} ${item.summary || ''}`.toLowerCase();
+    if (/agent|agentic|voice|assistant/.test(text)) counters.agents += 1;
+    if (/automation|workflow|process|robot|deploy|api/.test(text)) counters.automation += 1;
+    if (/business|enterprise|funding|startup|customer|revenue|market/.test(text)) counters.business += 1;
+  }
+  return counters;
+}
+
+function practicalAction(item) {
+  const text = `${item.title} ${item.summary || ''}`.toLowerCase();
+  if (/agent|agentic|voice|assistant/.test(text)) {
+    return 'Liste um atendimento, resposta ou análise repetitiva que hoje depende de você e desenhe quais dados um agente precisaria acessar.';
+  }
+  if (/automation|workflow|api|deploy/.test(text)) {
+    return 'Escolha um fluxo manual de 3 passos e escreva como ele ficaria em gatilho, ação e revisão humana.';
+  }
+  if (/security|governance|risk/.test(text)) {
+    return 'Revise uma automação ou uso de IA atual e defina onde a aprovação humana continua obrigatória.';
+  }
+  if (/funding|startup|market|enterprise/.test(text)) {
+    return 'Transforme a tendência em oferta: qual problema pequeno você poderia resolver para um cliente usando essa tecnologia?';
+  }
+  return 'Anote uma forma concreta de transformar essa notícia em teste, processo, conteúdo ou oferta nos próximos 7 dias.';
+}
+
+function opportunityAngle(item) {
+  const text = `${item.title} ${item.summary || ''}`.toLowerCase();
+  if (/voice|customer|support|call/.test(text)) return 'Pacote de atendimento com IA para pequenos negócios que perdem vendas por demora na resposta.';
+  if (/coding|developer|github|claude code/.test(text)) return 'Serviço de automação interna: transformar tarefas repetidas de planilha, e-mail e relatório em fluxos assistidos por IA.';
+  if (/security|governance/.test(text)) return 'Diagnóstico simples de risco em IA: mapear onde a empresa usa IA sem regra, revisão ou registro.';
+  if (/robot|physical/.test(text)) return 'Conteúdo educativo para setores tradicionais explicando como IA operacional reduz retrabalho antes de chegar na robótica.';
+  return 'Newsletter, consultoria rápida ou mini-guia explicando como aplicar essa tendência em um nicho específico.';
+}
+
+function renderSignalBoard(items) {
+  const counts = signalCounts(items);
+  const max = Math.max(1, items.length);
+  const data = [
+    ['Agentes', counts.agents, 'Sinais sobre IA executando tarefas'],
+    ['Automação', counts.automation, 'Sinais sobre fluxos, APIs e operação'],
+    ['Negócios', counts.business, 'Sinais sobre mercado, clientes e renda'],
+  ];
+
+  return `<div class="radar-signal-board">
+  <h3>Painel visual do dia</h3>
+  <div class="radar-signal-grid">
+${data.map(([label, value, desc]) => `    <div class="radar-signal-card">
+      <div class="radar-signal-label">${label}</div>
+      <div class="radar-signal-value">${value}/${max}</div>
+      <div class="radar-signal-bar"><span style="width:${Math.max(12, Math.round((value / max) * 100))}%"></span></div>
+      <p>${desc}</p>
+    </div>`).join('\n')}
+  </div>
+</div>`;
+}
+
+function renderRadarImage(items, date) {
+  const top = items[0];
+  const counts = signalCounts(items);
+  const max = Math.max(1, items.length);
+  const topTitle = escapeXml(translateAngle(top.title));
+  const dateLabel = escapeXml(date.iso);
+  const bars = [
+    ['AGENTES', counts.agents, '#22d3ee'],
+    ['AUTOMACAO', counts.automation, '#ffb15f'],
+    ['NEGOCIOS', counts.business, '#ff4ab8'],
+  ];
+
+  return `<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Radar Tech ${dateLabel}</title>
+  <desc id="desc">Painel editorial visual com principais sinais de tecnologia do dia.</desc>
+  <defs>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(942 130) rotate(142) scale(820 560)">
+      <stop stop-color="#22d3ee" stop-opacity=".30"/>
+      <stop offset=".42" stop-color="#ffb15f" stop-opacity=".16"/>
+      <stop offset="1" stop-color="#050708" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hot" x1="92" y1="93" x2="1062" y2="586" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22d3ee"/>
+      <stop offset=".48" stop-color="#ffb15f"/>
+      <stop offset="1" stop-color="#ff4ab8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="#050708"/>
+  <rect width="1200" height="675" fill="url(#glow)"/>
+  <g opacity=".22">
+    <path d="M0 96H1200M0 192H1200M0 288H1200M0 384H1200M0 480H1200M0 576H1200" stroke="#64748b"/>
+    <path d="M96 0V675M192 0V675M288 0V675M384 0V675M480 0V675M576 0V675M672 0V675M768 0V675M864 0V675M960 0V675M1056 0V675" stroke="#64748b"/>
+  </g>
+  <rect x="72" y="60" width="1056" height="555" rx="34" fill="#090d13" stroke="#253245"/>
+  <text x="112" y="122" fill="#ffb15f" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="800" letter-spacing="5">TECH BRIEFING / RADAR ${dateLabel}</text>
+  <text x="112" y="190" fill="#f8fafc" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="800">3 sinais para aplicar</text>
+  <text x="112" y="248" fill="#f8fafc" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="800">antes que vire hype.</text>
+  <foreignObject x="112" y="290" width="610" height="110">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family:Arial,sans-serif;color:#cbd5e1;font-size:24px;line-height:1.35;font-weight:700">${topTitle}</div>
+  </foreignObject>
+  <g transform="translate(112 458)">
+${bars.map(([label, value, color], index) => {
+    const width = Math.max(58, Math.round((value / max) * 340));
+    const y = index * 48;
+    return `    <text x="0" y="${y + 18}" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="800" letter-spacing="3">${label}</text>
+    <rect x="140" y="${y}" width="360" height="24" rx="12" fill="#111827" stroke="#263244"/>
+    <rect x="140" y="${y}" width="${width}" height="24" rx="12" fill="${color}"/>
+    <text x="524" y="${y + 18}" fill="#f8fafc" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="900">${value}/${max}</text>`;
+  }).join('\n')}
+  </g>
+  <g transform="translate(780 164)">
+    <rect width="276" height="318" rx="26" fill="#101827" stroke="#2b3a4d"/>
+    <path d="M68 234C112 160 158 154 204 74" stroke="url(#hot)" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="68" cy="234" r="14" fill="#22d3ee"/>
+    <circle cx="204" cy="74" r="14" fill="#ff4ab8"/>
+    <circle cx="138" cy="154" r="42" fill="#0b111b" stroke="#ffb15f" stroke-width="3"/>
+    <path d="M118 154H158M138 134V174" stroke="#ffb15f" stroke-width="6" stroke-linecap="round"/>
+    <text x="34" y="284" fill="#f8fafc" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="800">Noticia vira acao</text>
+  </g>
+</svg>`;
 }
 
 async function fetchJson(url) {
@@ -255,10 +385,10 @@ function dedupe(items) {
   return clean;
 }
 
-function renderMarkdown(items, date) {
+function renderMarkdown(items, date, imagePath) {
   const top = items[0];
   const title = `Radar Tech: ${items.length} movimentos de IA e tecnologia para acompanhar`;
-  const description = `Uma curadoria em português com as notícias de tecnologia mais relevantes do dia e o que elas significam para IA, automação e negócios digitais.`;
+  const description = `Uma curadoria em português com as notícias de tecnologia mais relevantes do dia, traduzidas em impacto prático, oportunidade e próximo passo.`;
   const tags = [...new Set(items.flatMap((item) => [categorize(item), item.source]).slice(0, 8))];
 
   return `---
@@ -269,20 +399,27 @@ author: "Nexora Systems"
 date: ${date.iso}
 readTime: "${Math.max(6, Math.ceil(items.length * 1.1))} min"
 featured: true
-image: "/images/article-scenario.png"
+image: "${imagePath}"
 tags:
 ${tags.map((tag) => `  - ${tag}`).join('\n')}
 ---
 
-Este é o Radar Tech do dia: uma curadoria das notícias e discussões que mais importam para quem acompanha IA aplicada, automação, agentes, software e negócios digitais.
+Este é o Radar Tech do dia: uma curadoria das notícias e discussões que mais importam para quem quer transformar IA, automação e tecnologia em produtividade, negócio e renda.
 
-A ideia aqui não é traduzir a internet inteira. É separar sinal de ruído e explicar, em português direto, o que pode virar oportunidade, risco ou mudança prática.
+A ideia aqui não é traduzir a internet inteira. É separar sinal de ruído e mostrar o que você pode aplicar, testar ou transformar em oferta.
+
+${renderSignalBoard(items)}
 
 ## Manchete do dia
 
 **${translateAngle(top.title)}.**
 
 A notícia que mais chamou atenção no radar foi: [${top.title}](${top.url}), publicada/destacada em ${top.source}. ${whyItMatters(top)}
+
+<div class="radar-action-box">
+  <strong>Ação de 10 minutos</strong>
+  <p>${practicalAction(top)}</p>
+</div>
 
 ## Principais movimentos
 
@@ -297,6 +434,10 @@ ${makeSummary(item)}
 **Por que importa:** ${whyItMatters(item)}
 
 **Leitura prática:** se isso toca seu mercado, pense em qual processo poderia ser melhorado com uma camada de IA: atendimento, análise, suporte, criação, revisão, monitoramento ou venda.
+
+**Ação sugerida:** ${practicalAction(item)}
+
+**Oportunidade possível:** ${opportunityAngle(item)}
 `).join('\n')}
 
 ## O padrão que aparece nas notícias
@@ -305,21 +446,28 @@ O fio comum é simples: IA está migrando de ferramenta isolada para infraestrut
 
 Para negócios menores, isso abre uma janela interessante: dá para aplicar a mesma lógica em escala menor, começando por um fluxo repetitivo e mensurável.
 
-## Como transformar esse radar em ação
+## Mini-manual: como transformar esse radar em ação
 
-Escolha uma notícia da lista e responda:
+Use este processo sempre que uma notícia parecer importante, mas ainda abstrata:
 
-- qual processo do meu negócio parece com esse movimento?
-- existe uma tarefa repetida que poderia virar agente?
-- qual dado ou ferramenta esse agente precisaria acessar?
-- onde a revisão humana continua obrigatória?
-- qual métrica provaria que a automação funcionou?
+1. **Traduza a notícia em problema.** Quem está ganhando tempo, reduzindo custo ou vendendo melhor com isso?
+2. **Encontre o processo equivalente no seu contexto.** Atendimento, vendas, relatório, criação, suporte, pesquisa ou operação.
+3. **Desenhe o fluxo simples.** Entrada, decisão, ferramenta, saída e revisão humana.
+4. **Teste pequeno.** Uma automação, um prompt operacional, uma página, um serviço ou um conteúdo.
+5. **Meça o resultado.** Tempo economizado, erro reduzido, lead gerado, resposta enviada ou venda influenciada.
 
-Se você responder essas perguntas, a notícia deixa de ser curiosidade e começa a virar estratégia.
+Se você seguir esses passos, a notícia deixa de ser curiosidade e começa a virar estratégia.
+
+## Radar de oportunidades
+
+- **Para pequenos negócios:** escolha uma tarefa que o dono faz toda semana e transforme em checklist automatizável.
+- **Para freelancers:** empacote uma dessas tendências como serviço simples: diagnóstico, automação, setup ou treinamento.
+- **Para criadores:** transforme o tema mais forte do dia em post, carrossel, roteiro curto ou newsletter de nicho.
+- **Para profissionais:** use o assunto para propor uma melhoria concreta no seu trabalho antes que alguém peça.
 
 ## Próximo passo
 
-Se você quer aprender a estruturar agentes de IA com método, veja o ebook [Agentes de IA para Negócios](/ebook-agentes-ia/). Ele foi feito para transformar esse tipo de tendência em aplicação real.
+Se você quer receber esse tipo de leitura todos os dias, assine a [newsletter do Tech Briefing](/newsletter/). Se quer ir direto para execução com agentes, veja o ebook [Agentes de IA para Negócios](/ebook-agentes-ia/).
 
 ---
 
@@ -329,6 +477,7 @@ Curadoria gerada com apoio de automação editorial do Tech Briefing. Sempre con
 
 async function main() {
   await mkdir(OUT_DIR, { recursive: true });
+  await mkdir(OUT_IMAGE_DIR, { recursive: true });
   const date = todayParts();
   const allItems = dedupe([...(await getHackerNewsItems()), ...(await getRssItems())])
     .map((item) => ({ ...item, score: scoreItem(item) }))
@@ -341,17 +490,22 @@ async function main() {
 
   const filename = `radar-tech-${date.iso}.md`;
   const outputPath = path.join(OUT_DIR, filename);
+  const imageFilename = `radar-tech-${date.iso}.svg`;
+  const imageOutputPath = path.join(OUT_IMAGE_DIR, imageFilename);
+  const imagePublicPath = `/images/radar/${imageFilename}`;
   if (existsSync(outputPath) && !process.env.RADAR_OVERWRITE) {
     throw new Error(`Arquivo já existe: ${outputPath}. Use RADAR_OVERWRITE=1 para sobrescrever.`);
   }
 
-  await writeFile(outputPath, renderMarkdown(allItems, date), 'utf8');
+  await writeFile(imageOutputPath, renderRadarImage(allItems, date), 'utf8');
+  await writeFile(outputPath, renderMarkdown(allItems, date, imagePublicPath), 'utf8');
 
   console.log(`[radar] ${allItems.length} itens selecionados.`);
   for (const item of allItems) {
     console.log(`- (${item.score}) ${item.source}: ${item.title}`);
   }
   console.log(`[radar] Post gerado: ${outputPath}`);
+  console.log(`[radar] Imagem gerada: ${imageOutputPath}`);
 }
 
 main().catch((error) => {

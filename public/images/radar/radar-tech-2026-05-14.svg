@@ -1,0 +1,52 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Radar Tech 2026-05-14</title>
+  <desc id="desc">Painel editorial visual com principais sinais de tecnologia do dia.</desc>
+  <defs>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(942 130) rotate(142) scale(820 560)">
+      <stop stop-color="#22d3ee" stop-opacity=".30"/>
+      <stop offset=".42" stop-color="#ffb15f" stop-opacity=".16"/>
+      <stop offset="1" stop-color="#050708" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hot" x1="92" y1="93" x2="1062" y2="586" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22d3ee"/>
+      <stop offset=".48" stop-color="#ffb15f"/>
+      <stop offset="1" stop-color="#ff4ab8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="#050708"/>
+  <rect width="1200" height="675" fill="url(#glow)"/>
+  <g opacity=".22">
+    <path d="M0 96H1200M0 192H1200M0 288H1200M0 384H1200M0 480H1200M0 576H1200" stroke="#64748b"/>
+    <path d="M96 0V675M192 0V675M288 0V675M384 0V675M480 0V675M576 0V675M672 0V675M768 0V675M864 0V675M960 0V675M1056 0V675" stroke="#64748b"/>
+  </g>
+  <rect x="72" y="60" width="1056" height="555" rx="34" fill="#090d13" stroke="#253245"/>
+  <text x="112" y="122" fill="#ffb15f" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="800" letter-spacing="5">TECH BRIEFING / RADAR 2026-05-14</text>
+  <text x="112" y="190" fill="#f8fafc" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="800">3 sinais para aplicar</text>
+  <text x="112" y="248" fill="#f8fafc" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="800">antes que vire hype.</text>
+  <foreignObject x="112" y="290" width="610" height="110">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family:Arial,sans-serif;color:#cbd5e1;font-size:24px;line-height:1.35;font-weight:700">O Slackbot virou agente: o escritório está entrando na era da IA operacional</div>
+  </foreignObject>
+  <g transform="translate(112 458)">
+    <text x="0" y="18" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="800" letter-spacing="3">AGENTES</text>
+    <rect x="140" y="0" width="360" height="24" rx="12" fill="#111827" stroke="#263244"/>
+    <rect x="140" y="0" width="340" height="24" rx="12" fill="#22d3ee"/>
+    <text x="524" y="18" fill="#f8fafc" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="900">12/12</text>
+    <text x="0" y="66" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="800" letter-spacing="3">AUTOMACAO</text>
+    <rect x="140" y="48" width="360" height="24" rx="12" fill="#111827" stroke="#263244"/>
+    <rect x="140" y="48" width="227" height="24" rx="12" fill="#ffb15f"/>
+    <text x="524" y="66" fill="#f8fafc" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="900">8/12</text>
+    <text x="0" y="114" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="800" letter-spacing="3">NEGOCIOS</text>
+    <rect x="140" y="96" width="360" height="24" rx="12" fill="#111827" stroke="#263244"/>
+    <rect x="140" y="96" width="198" height="24" rx="12" fill="#ff4ab8"/>
+    <text x="524" y="114" fill="#f8fafc" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="900">7/12</text>
+  </g>
+  <g transform="translate(780 164)">
+    <rect width="276" height="318" rx="26" fill="#101827" stroke="#2b3a4d"/>
+    <path d="M68 234C112 160 158 154 204 74" stroke="url(#hot)" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="68" cy="234" r="14" fill="#22d3ee"/>
+    <circle cx="204" cy="74" r="14" fill="#ff4ab8"/>
+    <circle cx="138" cy="154" r="42" fill="#0b111b" stroke="#ffb15f" stroke-width="3"/>
+    <path d="M118 154H158M138 134V174" stroke="#ffb15f" stroke-width="6" stroke-linecap="round"/>
+    <text x="34" y="284" fill="#f8fafc" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="800">Noticia vira acao</text>
+  </g>
+</svg>
