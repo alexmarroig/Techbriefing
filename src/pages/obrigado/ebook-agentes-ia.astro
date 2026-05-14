@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { EBOOK_OFFER } from '../../data/ebookOffer.js';
+---
+
+<BaseLayout
+  title="Compra recebida — Agentes de IA para Negócios"
+  description="Sua compra do ebook Agentes de IA para Negócios foi recebida."
+  active="Ebooks"
+>
+  <main class="thanks-page">
+    <section class="thanks-card">
+      <div class="checkout-kicker">Compra recebida</div>
+      <h1>Seu acesso está quase pronto.</h1>
+      <p>
+        O pagamento foi processado pelo Stripe. Em seguida você receberá as instruções de acesso do ebook.
+        Se precisar de ajuda, fale com a Tech Briefing pela página de contato.
+      </p>
+      <div class="checkout-proof-row">
+        <div><strong>{EBOOK_OFFER.name}</strong><span>produto</span></div>
+        <div><strong>PDF + EPUB</strong><span>formato</span></div>
+        <div><strong>7 dias</strong><span>garantia</span></div>
+      </div>
+      <div class="thanks-actions">
+        <a class="btn btn-fill" href="/newsletter/">Entrar na newsletter →</a>
+        <a class="btn btn-ghost" href="/manuais/">Ver manuais práticos</a>
+      </div>
+    </section>
+  </main>
+
+  <script is:inline>
+    (() => {
+      window.trackTechBriefingEvent?.('purchase', {
+        funnel_name: 'ebook_agentes_ia',
+        checkout_provider: 'stripe',
+        transaction_id: new URLSearchParams(window.location.search).get('session_id') || undefined,
+        currency: 'BRL',
+        value: 37.00,
+        items: [{
+          item_id: 'ebook-agentes-ia-negocios',
+          item_name: 'Agentes de IA para Negocios',
+          item_category: 'Ebook',
+          price: 37.00,
+          quantity: 1
+        }]
+      });
+    })();
+  </script>
+</BaseLayout>

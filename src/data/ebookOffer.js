@@ -1,0 +1,26 @@
+export const EBOOK_OFFER = {
+  id: 'ebook-agentes-ia-negocios',
+  name: 'Agentes de IA para Negócios',
+  subtitle: 'O guia prático para sair do uso solto do ChatGPT e criar agentes que executam processos reais.',
+  price: 37,
+  oldPrice: 49.9,
+  currency: 'BRL',
+  pages: 126,
+  formats: ['PDF', 'EPUB'],
+  checkoutUrl: '/checkout/ebook-agentes-ia/',
+  successUrl: '/obrigado/ebook-agentes-ia/',
+  fallbackKiwifyUrl: 'https://pay.kiwify.com.br/U0ynSdt',
+  benefits: [
+    'Mapa para identificar processos onde agentes reduzem trabalho manual',
+    'Framework para criar agentes úteis, não chatbots bonitos',
+    'Exemplos de aplicação em vendas, suporte, conteúdo e operação',
+    'Templates mentais para evitar automações frágeis',
+    'Acesso imediato após a compra',
+    'Garantia de 7 dias',
+  ],
+  bonuses: [
+    'Checklist de processos bons para agentes',
+    'Mapa de ferramentas para começar sem equipe técnica',
+    'Plano de implementação em 7 dias',
+  ],
+};

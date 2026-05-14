@@ -15,8 +15,10 @@
   "dependencies": {
     "@astrojs/react": "^5.0.4",
     "@astrojs/sitemap": "^3.7.2",
+    "@astrojs/vercel": "^10.0.7",
     "astro": "^6.2.2",
     "react": "^19.2.5",
-    "react-dom": "^19.2.5"
+    "react-dom": "^19.2.5",
+    "stripe": "^22.1.1"
   }
 }

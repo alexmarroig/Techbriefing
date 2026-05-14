@@ -1,6 +1,7 @@
 ﻿---
 import '../styles/global.css';
 import GoogleTag from '../components/GoogleTag.astro';
+import { EBOOK_OFFER } from '../data/ebookOffer.js';
 
 /*
    CONFIG — Edite aqui todos os dados comerciais da página
@@ -16,16 +17,16 @@ const CONFIG = {
   currentPrice: 'R$ 37,00',
   currentLabel: 'Preço atual',
 
-  primaryBuyLink: 'https://pay.kiwify.com.br/U0ynSdt',
-  buyLink: 'https://pay.kiwify.com.br/U0ynSdt',
+  primaryBuyLink: EBOOK_OFFER.checkoutUrl,
+  buyLink: EBOOK_OFFER.checkoutUrl,
   exitOfferLink: 'https://pay.kiwify.com.br/RsEtbll',
 
   buyLinks: {
-    hotmart: { label: 'Hotmart', url: 'https://pay.kiwify.com.br/U0ynSdt' },
-    kiwify: { label: 'Kiwify', url: 'https://pay.kiwify.com.br/U0ynSdt' },
-    amazon: { label: 'Amazon Kindle', url: 'https://pay.kiwify.com.br/U0ynSdt' },
+    hotmart: { label: 'Stripe', url: EBOOK_OFFER.checkoutUrl },
+    kiwify: { label: 'Checkout seguro', url: EBOOK_OFFER.checkoutUrl },
+    amazon: { label: 'Acesso imediato', url: EBOOK_OFFER.checkoutUrl },
     herospark: { label: 'HeroSpark', url: 'https://pay.herospark.com/agentes-de-ia-para-negocios-521255' },
-    cacto: { label: 'Cacto', url: 'https://pay.kiwify.com.br/U0ynSdt' },
+    cacto: { label: 'Cartão/Pix', url: EBOOK_OFFER.checkoutUrl },
     clubeAutores: { label: 'Clube dos Autores', url: 'https://clubedeautores.com.br/livro/agentes-de-ia-para-negocios' },
   },
 
@@ -822,13 +823,13 @@ document.addEventListener('keydown', event => {
   if (event.key === 'Escape') closeExitOffer();
 });
 
-// Send tracking before leaving for Kiwify checkout.
-document.querySelectorAll('a[href^="https://pay.kiwify.com.br/"]').forEach((link, index) => {
+// Send tracking before leaving for checkout.
+document.querySelectorAll('a[href^="https://pay.kiwify.com.br/"], a[href^="/checkout/"]').forEach((link, index) => {
   if (!link.dataset.ctaId) {
     link.dataset.ctaId = `ebook_cta_${index + 1}`;
   }
 
-  const checkoutUrl = new URL(link.href);
+  const checkoutUrl = new URL(link.getAttribute('href'), window.location.origin);
   const currentParams = new URLSearchParams(window.location.search);
   [
     'utm_source',
@@ -850,9 +851,10 @@ document.querySelectorAll('a[href^="https://pay.kiwify.com.br/"]').forEach((link
   link.addEventListener('click', function(e) {
     e.preventDefault();
     const isExitOffer = this.href.includes('/RsEtbll');
+    const isStripeCheckout = this.pathname.startsWith('/checkout/');
     const offerValue = isExitOffer ? 33.00 : 37.00;
     window.trackEbookCheckout?.({
-      checkout_provider: 'kiwify',
+      checkout_provider: isStripeCheckout ? 'stripe' : 'kiwify',
       cta_id: this.dataset.ctaId || '',
       link_text: this.textContent?.trim() || 'checkout',
       page_location: window.location.href,

@@ -86,7 +86,7 @@ const siteName = 'tech_briefing';
           event_id: eventId,
           funnel_name: 'ebook_agentes_ia',
           page_type: 'ebook_landing',
-          checkout_provider: 'kiwify',
+          checkout_provider: params?.checkout_provider || 'stripe',
           currency: 'BRL',
           value: 37.00,
           items: [{
