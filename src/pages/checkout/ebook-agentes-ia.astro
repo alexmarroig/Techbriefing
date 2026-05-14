@@ -58,6 +58,7 @@ import { EBOOK_OFFER } from '../../data/ebookOffer.js';
         <button class="checkout-pay-button" type="button" data-stripe-checkout>
           Pagar com segurança →
         </button>
+        <p class="checkout-error" data-checkout-error hidden></p>
         <a class="checkout-fallback" href={EBOOK_OFFER.fallbackKiwifyUrl} rel="nofollow">Problema com Stripe? Usar checkout reserva</a>
 
         <div class="checkout-security">
@@ -66,7 +67,6 @@ import { EBOOK_OFFER } from '../../data/ebookOffer.js';
           <div><strong>Garantia</strong><span>7 dias para testar sem risco</span></div>
         </div>
 
-        <p class="checkout-error" data-checkout-error hidden></p>
       </aside>
     </section>
   </main>
@@ -86,6 +86,10 @@ import { EBOOK_OFFER } from '../../data/ebookOffer.js';
       button.addEventListener('click', async () => {
         button.disabled = true;
         button.textContent = 'Abrindo pagamento seguro...';
+        if (errorBox) {
+          errorBox.hidden = true;
+          errorBox.textContent = '';
+        }
 
         window.trackEbookCheckout?.({
           checkout_provider: 'stripe',
@@ -102,7 +106,7 @@ import { EBOOK_OFFER } from '../../data/ebookOffer.js';
               clientReferenceId: window.crypto?.randomUUID?.() || String(Date.now()),
             }),
           });
-          const data = await response.json();
+          const data = await response.json().catch(() => ({}));
           if (!response.ok || !data.url) throw new Error(data.error || 'Não foi possível abrir o checkout.');
           window.location.href = data.url;
         } catch (error) {

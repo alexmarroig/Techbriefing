@@ -10,16 +10,18 @@ const json = (body, status = 200) =>
   });
 
 export async function POST({ request, url }) {
-  const secretKey = import.meta.env.STRIPE_SECRET_KEY;
-  const priceId = import.meta.env.STRIPE_PRICE_EBOOK_AGENTES_IA || 'price_1TVyIoLtNj5NTcPOI4D0WJdo';
+  const secretKey = import.meta.env.STRIPE_SECRET_KEY?.trim();
+  const priceId = (import.meta.env.STRIPE_PRICE_EBOOK_AGENTES_IA || 'price_1TVyIoLtNj5NTcPOI4D0WJdo').trim();
 
   if (!secretKey) {
-    return json({ error: 'STRIPE_SECRET_KEY não configurada.' }, 500);
+    return json({ error: 'STRIPE_SECRET_KEY não configurada no Vercel.' }, 500);
   }
 
-  const stripe = new Stripe(secretKey, {
-    apiVersion: '2025-11-17.clover',
-  });
+  if (!priceId.startsWith('price_')) {
+    return json({ error: 'STRIPE_PRICE_EBOOK_AGENTES_IA precisa ser um ID de preço começando com price_.' }, 500);
+  }
+
+  const stripe = new Stripe(secretKey);
 
   let payload = {};
   try {
@@ -35,26 +37,40 @@ export async function POST({ request, url }) {
   const cancelUrl = new URL('/checkout/ebook-agentes-ia/', origin);
   cancelUrl.searchParams.set('cancelled', '1');
 
-  const session = await stripe.checkout.sessions.create({
-    mode: 'payment',
-    line_items: [{ price: priceId, quantity: 1 }],
-    success_url: successUrl.toString(),
-    cancel_url: cancelUrl.toString(),
-    billing_address_collection: 'auto',
-    allow_promotion_codes: true,
-    client_reference_id: payload?.clientReferenceId || undefined,
-    metadata: {
-      product_id: EBOOK_OFFER.id,
-      funnel: 'ebook_agentes_ia',
-      source_path: payload?.sourcePath || '',
-    },
-    payment_intent_data: {
+  try {
+    const session = await stripe.checkout.sessions.create({
+      mode: 'payment',
+      line_items: [{ price: priceId, quantity: 1 }],
+      success_url: successUrl.toString(),
+      cancel_url: cancelUrl.toString(),
+      billing_address_collection: 'auto',
+      allow_promotion_codes: true,
+      client_reference_id: payload?.clientReferenceId || undefined,
       metadata: {
         product_id: EBOOK_OFFER.id,
         funnel: 'ebook_agentes_ia',
+        source_path: payload?.sourcePath || '',
       },
-    },
-  });
+      payment_intent_data: {
+        metadata: {
+          product_id: EBOOK_OFFER.id,
+          funnel: 'ebook_agentes_ia',
+        },
+      },
+    });
 
-  return json({ url: session.url });
+    return json({ url: session.url });
+  } catch (error) {
+    console.error('[stripe-checkout]', {
+      type: error?.type,
+      code: error?.code,
+      message: error?.message,
+    });
+
+    return json({
+      error: error?.message
+        ? `Erro do Stripe: ${error.message}`
+        : 'Erro ao criar checkout no Stripe.',
+    }, 500);
+  }
 }
