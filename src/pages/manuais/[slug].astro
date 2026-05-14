@@ -11,6 +11,43 @@ export function getStaticPaths() {
 
 const { manual } = Astro.props;
 const related = MANUALS.filter((item) => item.slug !== manual.slug && item.category === manual.category).slice(0, 3);
+const manualIndex = MANUALS.findIndex((item) => item.slug === manual.slug);
+const score = {
+  difficulty: 46 + ((manualIndex * 13) % 38),
+  cost: 32 + ((manual.tools.length * 11 + manualIndex * 5) % 44),
+  speed: 58 + ((manualIndex * 9) % 34),
+};
+const isReview = manual.category === 'Review';
+const isVideo = manual.category.includes('Vídeo');
+const isAgent = manual.category.includes('Agentes');
+const isVoice = manual.category.includes('Voz');
+const primaryTool = manual.tools[0];
+const starterPrompt = `Quero criar ${manual.title.toLowerCase()} para um projeto real. Meu objetivo é [descreva o resultado], meu público é [descreva o público] e minhas restrições são [tempo/orçamento/ferramentas]. Monte um plano prático com: ferramentas recomendadas, passo a passo, riscos, checklist de qualidade e uma primeira versão simples para testar hoje.`;
+const useCases = isVoice
+  ? ['Aulas e cursos com narração consistente', 'Anúncios curtos sem precisar gravar toda semana', 'Atendimento, onboarding e vídeos de venda com avatar']
+  : isVideo
+    ? ['Conteúdo curto para Reels, Shorts e TikTok', 'Transformar aulas, lives e podcasts em ativos de tráfego', 'Criar provas visuais para ofertas e páginas de venda']
+    : isAgent
+      ? ['Pesquisa e resumo automático de informações', 'Execução de tarefas repetitivas com revisão humana', 'Automação de operação, suporte, vendas e conteúdo']
+      : isReview
+        ? ['Escolher ferramenta antes de gastar assinatura', 'Comparar custo real por entrega aprovada', 'Decidir stack para produção, teste e escala']
+        : ['Criar rotina editorial recorrente', 'Empacotar técnica como serviço vendável', 'Aumentar velocidade de produção sem perder controle'];
+const faq = [
+  {
+    q: 'Preciso saber programar?',
+    a: isAgent
+      ? 'Ajuda, mas não é obrigatório para começar. O mais importante é desenhar bem a tarefa, limitar permissões e testar com casos pequenos antes de automatizar processos sensíveis.'
+      : 'Não. Para começar, você precisa entender o fluxo, escolher uma ferramenta simples e revisar o resultado com critério.',
+  },
+  {
+    q: 'Dá para usar comercialmente?',
+    a: 'Depende da ferramenta e do plano. Antes de publicar para cliente ou anúncio, confira licença comercial, política de voz/imagem e direitos dos assets usados.',
+  },
+  {
+    q: 'Qual é o erro mais caro?',
+    a: manual.mistakes[0] || 'Começar grande demais. Primeiro valide uma versão simples, depois melhore qualidade, automação e escala.',
+  },
+];
 ---
 
 <BaseLayout
@@ -22,12 +59,29 @@ const related = MANUALS.filter((item) => item.slug !== manual.slug && item.categ
     <section class="manual-detail-hero">
       <div class="wrap">
         <a class="manual-back" href="/manuais/">← Todos os manuais</a>
-        <div class="manual-detail-kicker">{manual.category}</div>
-        <h1>{manual.title}</h1>
-        <p>{manual.description}</p>
-        <div class="manual-outcome">
-          <span>Resultado esperado</span>
-          <strong>{manual.outcome}</strong>
+        <div class="manual-detail-hero-grid">
+          <div>
+            <div class="manual-detail-kicker">{manual.category}</div>
+            <h1>{manual.title}</h1>
+            <p>{manual.description}</p>
+            <div class="manual-outcome">
+              <span>Resultado esperado</span>
+              <strong>{manual.outcome}</strong>
+            </div>
+          </div>
+          <figure class="manual-visual" aria-label={`Painel visual do manual ${manual.title}`}>
+            <div class="manual-visual-grid"></div>
+            <div class="manual-visual-orb one"></div>
+            <div class="manual-visual-orb two"></div>
+            <div class="manual-visual-card">
+              <span>{manual.category}</span>
+              <strong>{manual.title}</strong>
+              <p>{primaryTool} + processo + revisão humana</p>
+            </div>
+            <div class="manual-visual-flow">
+              <i></i><i></i><i></i>
+            </div>
+          </figure>
         </div>
       </div>
     </section>
@@ -35,14 +89,84 @@ const related = MANUALS.filter((item) => item.slug !== manual.slug && item.categ
     <section class="manual-detail-body">
       <div class="wrap manual-detail-grid">
         <article class="manual-detail-content">
+          <section class="manual-prose-section">
+            <h2>O que você vai construir</h2>
+            <p>
+              Este manual existe para tirar a ideia do campo da curiosidade e colocar em um fluxo prático.
+              A meta não é testar IA por testar. A meta é produzir algo que possa ser usado em conteúdo,
+              atendimento, venda, operação ou criação de produto.
+            </p>
+            <p>
+              A forma mais segura de começar é pequena: uma primeira versão, um teste de qualidade, uma
+              revisão humana e só depois uma rotina repetível. Isso evita o erro clássico de gastar horas
+              em ferramenta bonita sem gerar nenhum ativo útil.
+            </p>
+          </section>
+
+          <section class="manual-chart-section">
+            <h2>Mapa rápido do esforço</h2>
+            <div class="manual-chart">
+              <div>
+                <span>Dificuldade</span>
+                <b style={`--v:${score.difficulty}%`}><i></i></b>
+                <em>{score.difficulty}/100</em>
+              </div>
+              <div>
+                <span>Custo inicial</span>
+                <b style={`--v:${score.cost}%`}><i></i></b>
+                <em>{score.cost}/100</em>
+              </div>
+              <div>
+                <span>Velocidade para testar</span>
+                <b style={`--v:${score.speed}%`}><i></i></b>
+                <em>{score.speed}/100</em>
+              </div>
+            </div>
+          </section>
+
+          <section class="manual-prose-section">
+            <h2>Quando vale usar</h2>
+            <div class="manual-use-grid">
+              {useCases.map((useCase) => <div>{useCase}</div>)}
+            </div>
+          </section>
+
           <h2>Passo a passo</h2>
           <ol class="manual-steps">
             {manual.steps.map((step) => <li>{step}</li>)}
           </ol>
 
+          <h2>Ferramentas para começar</h2>
+          <div class="manual-tool-table">
+            {manual.tools.map((tool, index) => (
+              <div class="manual-tool-row">
+                <strong>{tool}</strong>
+                <span>{index === 0 ? 'Melhor ponto de partida' : index === 1 ? 'Boa alternativa para comparar' : 'Use para testar variações'}</span>
+                <em>{index === 0 ? 'Prioridade alta' : index === 1 ? 'Prioridade média' : 'Opcional'}</em>
+              </div>
+            ))}
+          </div>
+
+          <h2>Prompt para copiar</h2>
+          <div class="manual-prompt">
+            <button type="button" data-copy-manual-prompt>Copiar prompt</button>
+            <pre><code>{starterPrompt}</code></pre>
+          </div>
+
           <h2>Erros que mais travam</h2>
           <div class="manual-mistakes">
             {manual.mistakes.map((mistake) => <div>{mistake}</div>)}
+          </div>
+
+          <h2>Checklist antes de publicar</h2>
+          <div class="manual-checklist">
+            {[
+              'O resultado tem um objetivo claro e mensurável.',
+              'Você revisou direitos de uso, voz, imagem e licença comercial.',
+              'O arquivo final foi testado no celular.',
+              'Existe uma versão simples para publicar hoje.',
+              'Você salvou o processo para repetir ou vender depois.',
+            ].map((item) => <label><input type="checkbox" /> <span>{item}</span></label>)}
           </div>
 
           <h2>Como transformar isso em aplicação real</h2>
@@ -51,6 +175,16 @@ const related = MANUALS.filter((item) => item.slug !== manual.slug && item.categ
             e só então transforme em rotina, serviço ou conteúdo. IA aplicada não começa grande: começa
             com um fluxo que funciona uma vez e depois fica repetível.
           </p>
+
+          <h2>Perguntas frequentes</h2>
+          <div class="manual-faq">
+            {faq.map((item) => (
+              <details>
+                <summary>{item.q}</summary>
+                <p>{item.a}</p>
+              </details>
+            ))}
+          </div>
         </article>
 
         <aside class="manual-detail-side">
@@ -88,4 +222,16 @@ const related = MANUALS.filter((item) => item.slug !== manual.slug && item.categ
       </section>
     )}
   </main>
+  <script is:inline>
+    (() => {
+      const button = document.querySelector('[data-copy-manual-prompt]');
+      const code = document.querySelector('.manual-prompt code');
+      if (!button || !code || !navigator.clipboard) return;
+      button.addEventListener('click', async () => {
+        await navigator.clipboard.writeText(code.textContent || '');
+        button.textContent = 'Copiado';
+        window.setTimeout(() => { button.textContent = 'Copiar prompt'; }, 1600);
+      });
+    })();
+  </script>
 </BaseLayout>
