@@ -22,7 +22,7 @@ function TrackCard({ track, index }) {
       <p>{track.outcome}</p>
       <div className="manual-list">
         {manuals.map((manual) => (
-          <a className="manual-item" href={`/manuais/${manual.slug}/`} key={manual.slug}>
+          <a className="manual-item" href={`/guias/${manual.slug}/`} key={manual.slug}>
             <span aria-hidden="true">→</span>
             <b>{manual.title}</b>
             <small>{manual.description}</small>
@@ -81,7 +81,7 @@ export default function ManuaisPage() {
           </div>
           <div className="manuals-all">
             {MANUALS.map((manual) => (
-              <a href={`/manuais/${manual.slug}/`} key={manual.slug}>
+              <a href={`/guias/${manual.slug}/`} key={manual.slug}>
                 <span>{manual.category}</span>
                 <strong>{manual.title}</strong>
               </a>

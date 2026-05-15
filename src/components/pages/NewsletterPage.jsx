@@ -157,7 +157,7 @@ function App() {
           <div className="nl-social-proof">
             <div className="nl-sp-item">
               <div className="nl-sp-dot"/>
-              <span className="nl-sp-strong">3.000+</span> leitores
+              <span className="nl-sp-strong">Briefing</span> gratuito
             </div>
 
             <div className="nl-sp-item">
@@ -180,7 +180,7 @@ function App() {
             <div className="nl-form-title">Inscreva-se gratuitamente</div>
 
             <div className="nl-form-sub">
-              Junte-se a 3.000+ freelancers, fundadores e gestores que aplicam IA no dia a dia.
+              Receba curadoria prática para aplicar IA no trabalho, no negócio e nos produtos digitais.
             </div>
 
             <NlForm compact={false}/>
@@ -315,7 +315,7 @@ function App() {
 
             <div className="nl-audience-form">
               <div className="nl-audience-form-title">
-                Junte-se a 3.000+ leitores
+                Receba o briefing semanal
               </div>
 
               <div className="nl-audience-form-sub">

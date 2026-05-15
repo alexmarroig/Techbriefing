@@ -326,8 +326,8 @@ function App(){
           <div className="related-grid">
             {[
               {tag:'Agentes',v:'c',title:'AutoGPT, CrewAI ou LangGraph? Guia definitivo 2026',meta:'28 abr · 14 min',href:'/artigos/autogpt-crewai-langgraph'},
-              {tag:'Tutorial',v:'c',title:'Como criar um agente de IA com n8n + GPT-4o',meta:'25 abr · 9 min',href:'/agentes-de-ia'},
-              {tag:'Guia',v:'a',title:'Automação para freelancers: do zero ao sistema em 7 dias',meta:'20 abr · 11 min',href:'/agentes-de-ia'},
+              {tag:'Tutorial',v:'c',title:'Como criar um agente de IA com n8n + GPT-4o',meta:'25 abr · 9 min',href:'/agentes'},
+              {tag:'Guia',v:'a',title:'Automação para freelancers: do zero ao sistema em 7 dias',meta:'20 abr · 11 min',href:'/agentes'},
             ].map((r,i)=>(
               <a href={r.href} className="rel-card" key={i}>
                 <div className="rel-card-img" style={{fontFamily:'var(--mono)',fontSize:11,color:'var(--text-4)',padding:'8px 12px',border:'1px solid var(--line-s)',borderRadius:4}}>imagem</div>

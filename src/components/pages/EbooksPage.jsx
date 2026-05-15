@@ -203,7 +203,7 @@ function App(){
         <div className="wrap">
           <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',marginBottom:40}}>
             <div style={{fontFamily:'var(--serif)',fontSize:'clamp(24px,3vw,32px)',fontWeight:700,letterSpacing:'-.02em'}}>Leitura complementar</div>
-            <a href="/agentes-de-ia" className="arrow-link">Ver categoria →</a>
+            <a href="/agentes" className="arrow-link">Ver categoria →</a>
           </div>
           <div className="related-grid">
             {RELATED.map((r,i)=>(

@@ -105,7 +105,7 @@ function Breadcrumb(){
         <div className="bc-inner">
           <a href="/" className="bc-link">Home</a>
           <span className="bc-sep">›</span>
-          <a href="/agentes-de-ia" className="bc-link">Agentes de IA</a>
+          <a href="/agentes" className="bc-link">Agentes de IA</a>
           <span className="bc-sep">›</span>
           <span className="bc-cur">AutoGPT, CrewAI ou LangGraph?</span>
         </div>
@@ -481,7 +481,7 @@ function RelatedArticles(){
             <div style={{fontFamily:'var(--mono)',fontSize:11,fontWeight:500,letterSpacing:'.1em',textTransform:'uppercase',color:var_text_3,marginBottom:8}}>Continue lendo</div>
             <div style={{fontFamily:'var(--serif)',fontSize:'clamp(26px,3vw,36px)',fontWeight:700,letterSpacing:'-.02em',color:'var(--text)'}}>Artigos relacionados</div>
           </div>
-          <a href="/agentes-de-ia" className="arrow-link">Ver categoria →</a>
+          <a href="/agentes" className="arrow-link">Ver categoria →</a>
         </div>
         <div className="related-grid">
           {RELATED.map((r,i)=>(

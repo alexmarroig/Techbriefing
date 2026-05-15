@@ -35,10 +35,10 @@ const CATS = [
 ];
 
 const GUIDES = [
-  {tag:'Manual',v:'a',title:'Como criar voz com IA e usar em conteúdo, aulas e anúncios',desc:'Ferramentas, roteiro, cuidados de direitos e fluxo para publicar.',href:'/manuais/como-criar-voz-com-ia'},
-  {tag:'Tutorial',v:'c',title:'Como criar agentes autônomos com n8n e CrewAI',desc:'Do conceito ao primeiro agente que executa tarefas reais.',href:'/manuais/como-criar-agentes-autonomos'},
-  {tag:'Review',v:'',title:'Melhores apps de IA para vídeo por texto: preço, qualidade e limite',desc:'Comparativo para escolher sem desperdiçar assinatura.',href:'/manuais/melhores-apps-ia-video-por-texto'},
-  {tag:'Guia',v:'a',title:'Como criar cortes virais de um vídeo longo com IA',desc:'Pipeline para transformar live, aula ou podcast em posts curtos.',href:'/manuais/como-criar-cortes-virais-com-ia'},
+  {tag:'Manual',v:'a',title:'Como criar voz com IA e usar em conteúdo, aulas e anúncios',desc:'Ferramentas, roteiro, cuidados de direitos e fluxo para publicar.',href:'/guias/como-criar-voz-com-ia'},
+  {tag:'Tutorial',v:'c',title:'Como criar agentes autônomos com n8n e CrewAI',desc:'Do conceito ao primeiro agente que executa tarefas reais.',href:'/guias/como-criar-agentes-autonomos'},
+  {tag:'Review',v:'',title:'Melhores apps de IA para vídeo por texto: preço, qualidade e limite',desc:'Comparativo para escolher sem desperdiçar assinatura.',href:'/guias/melhores-apps-ia-video-por-texto'},
+  {tag:'Guia',v:'a',title:'Como criar cortes virais de um vídeo longo com IA',desc:'Pipeline para transformar live, aula ou podcast em posts curtos.',href:'/guias/como-criar-cortes-virais-com-ia'},
 ];
 
 const MANUAL_TRACKS = [
@@ -215,7 +215,7 @@ function TrustSection(){
           <span className="trust-label">Autoridade reconhecida em IA Operacional:</span>
           <div className="trust-stats">
             <div className="trust-stat"><strong>50+</strong> Testes Reais</div>
-            <div className="trust-stat"><strong>3.000+</strong> Leitores</div>
+            <div className="trust-stat"><strong>IA</strong> Aplicada</div>
             <div className="trust-stat"><strong>#1</strong> Referência em Agentes</div>
           </div>
         </div>
@@ -446,7 +446,7 @@ function NewsletterSection(){
             ) : (
               <form style={{display:'flex',flexDirection:'column',gap:14}} onSubmit={e=>{e.preventDefault();if(email)setDone(true)}}>
                 <div className="nl-stat">
-                  <div className="nl-stat-n">3.000+</div>
+                  <div className="nl-stat-n">IA</div>
                   <div className="nl-stat-l">operadores, gestores e fundadores lendo semanalmente</div>
                 </div>
 

@@ -119,7 +119,7 @@ function App(){
               <div className="about-hero-stat-grid">
                 {[
                   {n:'50+',em:'',l:'Guias de operação'},
-                  {n:'3.000+',em:'',l:'Leitores ativos'},
+                  {n:'IA',em:'',l:'Aplicada'},
                   {n:'Weekly',em:'',l:'Briefing estratégico'},
                   {n:'1',em:'',l:'Ebook premium'},
                 ].map((s,i)=>(

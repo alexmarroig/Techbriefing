@@ -61,14 +61,14 @@ function articleCoverSvg(index) {
 /* ── DATA ── */
 const ARTICLES = [
   {cat:'Agentes de IA',cv:'c',title:'AutoGPT, CrewAI ou LangGraph? Guia definitivo para escolher o framework certo em 2026',excerpt:'Testamos os três frameworks em cenários reais e comparamos performance, custo e complexidade para que você tome a decisão certa.',date:'28 abr 2026',rt:'14 min',href:'/artigos/autogpt-crewai-langgraph'},
-  {cat:'Automação',cv:'a',title:'Como montar um sistema de automação com agentes de IA sem escrever uma linha de código',excerpt:'O novo paradigma de automação está aqui — e ele não exige programação. Descubra como combinar n8n, Make e LLMs em fluxos que trabalham por você.',date:'25 abr 2026',rt:'11 min',href:'/agentes-de-ia'},
+  {cat:'Automação',cv:'a',title:'Como montar um sistema de automação com agentes de IA sem escrever uma linha de código',excerpt:'O novo paradigma de automação está aqui — e ele não exige programação. Descubra como combinar n8n, Make e LLMs em fluxos que trabalham por você.',date:'25 abr 2026',rt:'11 min',href:'/agentes'},
   {cat:'Comparativo',cv:'',title:'n8n vs Make: qual ferramenta de automação escolher em 2026?',excerpt:'Testamos as duas em cinco cenários reais. Este é o comparativo honesto que você precisava antes de escolher.',date:'22 abr 2026',rt:'12 min',href:'/comparativos/n8n-vs-make'},
-  {cat:'IA Prática',cv:'a',title:'Construindo um agente de pesquisa com n8n e Claude 3.7 Sonnet',excerpt:'Passo a passo completo para criar um agente que pesquisa, sintetiza e entrega resultados sem intervenção manual.',date:'20 abr 2026',rt:'10 min',href:'/agentes-de-ia'},
-  {cat:'Agentes de IA',cv:'c',title:'Multi-agente vs. agente único: quando cada arquitetura faz sentido',excerpt:'Nem sempre mais agentes é melhor. Aprenda quando simplificar é a decisão mais inteligente.',date:'17 abr 2026',rt:'8 min',href:'/agentes-de-ia'},
+  {cat:'IA Prática',cv:'a',title:'Construindo um agente de pesquisa com n8n e Claude 3.7 Sonnet',excerpt:'Passo a passo completo para criar um agente que pesquisa, sintetiza e entrega resultados sem intervenção manual.',date:'20 abr 2026',rt:'10 min',href:'/agentes'},
+  {cat:'Agentes de IA',cv:'c',title:'Multi-agente vs. agente único: quando cada arquitetura faz sentido',excerpt:'Nem sempre mais agentes é melhor. Aprenda quando simplificar é a decisão mais inteligente.',date:'17 abr 2026',rt:'8 min',href:'/agentes'},
   {cat:'Software',cv:'',title:'As 7 ferramentas de produtividade que os profissionais de IA usam e você nunca ouviu falar',excerpt:'Da captura de contexto ao gerenciamento de prompts — curadoria das ferramentas que mudam o fluxo de trabalho.',date:'14 abr 2026',rt:'7 min',href:'/ferramentas'},
   {cat:'Automação',cv:'a',title:'Integre CRM, e-mail e Notion num único fluxo automatizado — guia completo',excerpt:'Do zero ao sistema rodando: como conectar suas ferramentas de vendas, comunicação e gestão sem código.',date:'11 abr 2026',rt:'9 min',href:'/comparativos/n8n-vs-make'},
-  {cat:'IA Prática',cv:'a',title:'RAG com agentes: quando recuperar contexto muda tudo',excerpt:'Como combinar busca semântica e LLMs para criar agentes que realmente entendem os seus dados.',date:'8 abr 2026',rt:'11 min',href:'/agentes-de-ia'},
-  {cat:'Agentes de IA',cv:'c',title:'Memory e contexto em agentes de longa duração',excerpt:'Os desafios reais de manter contexto entre sessões e como os frameworks modernos resolvem esse problema.',date:'5 abr 2026',rt:'9 min',href:'/agentes-de-ia'},
+  {cat:'IA Prática',cv:'a',title:'RAG com agentes: quando recuperar contexto muda tudo',excerpt:'Como combinar busca semântica e LLMs para criar agentes que realmente entendem os seus dados.',date:'8 abr 2026',rt:'11 min',href:'/agentes'},
+  {cat:'Agentes de IA',cv:'c',title:'Memory e contexto em agentes de longa duração',excerpt:'Os desafios reais de manter contexto entre sessões e como os frameworks modernos resolvem esse problema.',date:'5 abr 2026',rt:'9 min',href:'/agentes'},
   {cat:'Comparativo',cv:'',title:'Relevance AI vs Voiceflow: qual plataforma para criar agentes no-code?',excerpt:'Testamos as duas com o mesmo caso de uso. Veja qual vai mais longe para o seu perfil.',date:'2 abr 2026',rt:'10 min',href:'/comparativos/n8n-vs-make'},
 ];
 
@@ -106,7 +106,7 @@ function Sidebar(){
       <div className="sidebar-card">
         <div className="sidebar-card-head">Categorias</div>
         <div className="sidebar-card-body">
-          {[['Agentes de IA','20+','/agentes-de-ia'],['IA Prática','15+','/arquivo'],['Automação','15+','/arquivo'],['Comparativos','10+','/comparativos/n8n-vs-make'],['Software','10+','/ferramentas']].map(([n,c,h],i)=>(
+          {[['Agentes de IA','20+','/agentes'],['IA Prática','15+','/arquivo'],['Automação','15+','/arquivo'],['Comparativos','10+','/comparativos/n8n-vs-make'],['Software','10+','/ferramentas']].map(([n,c,h],i)=>(
             <a href={h} className="sidebar-cat-row" key={i}>
               <span className="sidebar-cat-name">{n}</span>
               <span className="sidebar-cat-count">{c} artigos</span>
