@@ -1,9 +1,40 @@
 ---
 const { active = '' } = Astro.props;
+
 const columns = [
-  { h: 'Pilares', ls: [['IA Aplicada', '/ia-aplicada'], ['Agentes', '/agentes'], ['Automação', '/automacao'], ['Ferramentas', '/ferramentas'], ['Guias', '/guias']] },
-  { h: 'Recursos', ls: [['Ebooks', '/ebooks'], ['Newsletter', '/newsletter'], ['Comparativos', '/comparativo'], ['Arquivo', '/arquivo']] },
-  { h: 'Institucional', ls: [['Sobre', '/sobre'], ['Metodologia', '/metodologia'], ['Contato', '/contato'], ['Privacidade', '/privacidade'], ['Termos', '/termos']] },
+  {
+    h: 'Conteúdo',
+    ls: [
+      ['Notícias', '/'],
+      ['IA Aplicada', '/ia-aplicada'],
+      ['Agentes', '/agentes'],
+      ['Automação', '/automacao'],
+      ['Ferramentas', '/ferramentas'],
+      ['Guias', '/guias'],
+      ['Comparativos', '/comparativo'],
+      ['Arquivo', '/arquivo'],
+    ],
+  },
+  {
+    h: 'Recursos',
+    ls: [
+      ['Ebooks', '/ebooks'],
+      ['Newsletter', '/newsletter'],
+      ['Ferramentas recomendadas', '/ferramentas'],
+      ['Anuncie', '/anuncie'],
+    ],
+  },
+  {
+    h: 'Institucional',
+    ls: [
+      ['Sobre', '/sobre'],
+      ['Metodologia editorial', '/metodologia-editorial'],
+      ['Contato', '/contato'],
+      ['Privacidade', '/privacidade'],
+      ['Termos', '/termos'],
+      ['Cookies', '/cookies'],
+    ],
+  },
 ];
 ---
 
@@ -13,29 +44,47 @@ const columns = [
       <div>
         <div class="footer-logo">
           <span class="brand-mark" aria-hidden="true"><span>TB</span></span>
-          <span class="brand-word"><span class="brand-main">Tech</span><span class="brand-accent">Briefing</span></span>
+          <span class="brand-word">
+            <span class="brand-main">Tech</span><span class="brand-accent">Briefing</span>
+          </span>
         </div>
-        <p class="footer-desc">Curadoria editorial estratégica sobre IA, Agentes e Automação para profissionais e empresas.</p>
-        <div class="footer-socials">
-          <div class="footer-social">X</div>
-          <div class="footer-social">in</div>
-          <div class="footer-social">play</div>
-          <div class="footer-social">@</div>
+
+        <p class="footer-desc">
+          Publicação editorial da Nexora Systems sobre IA aplicada, agentes, automação,
+          ferramentas digitais e processos reais.
+        </p>
+
+        <div class="footer-socials" aria-label="Canais do Tech Briefing">
+          <a class="footer-social" href="/newsletter" aria-label="Newsletter">NL</a>
+          <a class="footer-social" href="/contato" aria-label="Contato">@</a>
+          <a class="footer-social" href="/anuncie" aria-label="Anuncie">AD</a>
         </div>
       </div>
+
       {columns.map((col) => (
         <div>
           <div class="footer-col-h">{col.h}</div>
           <ul class="footer-links">
             {col.ls.map(([label, href]) => (
-              <li><a href={href} class:list={[{ active: active === label || active === label.replace('Nossos ', '') }]}>{label}</a></li>
+              <li>
+                <a
+                  href={href}
+                  class:list={[{ active: active === label || active === label.replace('Nossos ', '') }]}
+                >
+                  {label}
+                </a>
+              </li>
             ))}
           </ul>
         </div>
       ))}
     </div>
+
     <div class="footer-bottom">
-      <span class="footer-copy">&copy; 2026 Tech Briefing — Uma iniciativa Nexora Systems.</span>
+      <span class="footer-copy">
+        &copy; 2026 Tech Briefing - uma publicação editorial da Nexora Systems.
+      </span>
+
       <div class="footer-bl">
         <a href="/privacidade">Privacidade</a>
         <a href="/termos">Termos</a>

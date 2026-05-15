@@ -162,7 +162,7 @@ function NlStrip(){
                 <input className="nl-strip-input" type="email" placeholder="seu@email.com" value={email} onChange={e=>setEmail(e.target.value)} required/>
                 <button type="submit" className="btn btn-fill">Quero receber →</button>
               </div>
-              <div style={{fontFamily:'var(--mono)',fontSize:10.5,color:'var(--text-4)',letterSpacing:'.03em'}}>3.000+ leitores · Conforme LGPD · Cancele quando quiser</div>
+              <div style={{fontFamily:'var(--mono)',fontSize:10.5,color:'var(--text-4)',letterSpacing:'.03em'}}>Newsletter editorial · Conforme LGPD · Cancele quando quiser</div>
             </form>
           )}
         </div>
@@ -185,7 +185,7 @@ function App(){
         <div className="wrap"><div className="hero-inner">
           <div className="hero-eyebrow"><div className="hero-eyebrow-rule"/><span className="hero-eyebrow-text">Produtos Digitais</span></div>
           <h1 className="hero-title">Conhecimento que<br/>vira <em>resultado.</em></h1>
-          <p className="hero-sub">Ebooks escritos pela equipe do Tech Briefing e Nexora Systems. Sem enrolação — só o que você pode aplicar na prática, no negócio e na vida.</p>
+          <p className="hero-sub">Ebooks publicados pelo Tech Briefing, uma publicação editorial da Nexora Systems. Guias práticos para transformar IA, automação e ferramentas digitais em processo real.</p>
           <div className="hero-trust">
             {['PDF + EPUB inclusos','Acesso imediato','Atualizado em 2026','Feito no Brasil'].map(t=>(
               <div className="trust-item" key={t}><div className="trust-dot"/>{t}</div>

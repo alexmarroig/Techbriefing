@@ -7,7 +7,7 @@ import AdSense from '../components/AdSense.astro';
 
 const {
   title = 'Tech Briefing — Inteligência Artificial Aplicada',
-  description = 'Guias práticos, comparativos honestos e ferramentas testadas sobre inteligência artificial, automação e negócios digitais.',
+  description = 'Notícias filtradas, guias práticos, comparativos e reviews para aplicar IA, automação e ferramentas digitais em processos reais.',
   active = '',
   image = '/images/og-default.webp',
   type = 'website',
@@ -29,12 +29,18 @@ const schemas = [
     '@type': 'Organization',
     '@id': 'https://www.techbriefing.com.br/#organization',
     name: 'Tech Briefing',
-    alternateName: 'Nexora Systems',
+    alternateName: 'TechBriefing',
+    parentOrganization: {
+      '@type': 'Organization',
+      name: 'Nexora Systems',
+    },
+    email: 'contato@techbriefing.com.br',
     url: 'https://www.techbriefing.com.br',
     logo: {
       '@type': 'ImageObject',
       url: 'https://www.techbriefing.com.br/favicon.svg',
     },
+    publishingPrinciples: 'https://www.techbriefing.com.br/metodologia-editorial/',
     sameAs: [],
   },
   type === 'article'

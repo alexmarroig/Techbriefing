@@ -1,10 +1,10 @@
 import React from 'react';
 
 const TWEAK_DEFAULTS = {
-  "accentColor": "amber",
-  "heroSize": "large",
-  "showAff": true,
-  "density": "comfortable"
+  accentColor: 'amber',
+  heroSize: 'large',
+  showAff: true,
+  density: 'comfortable'
 };
 
 /* ── DATA ───────────────────────────────────────────────── */
@@ -13,10 +13,13 @@ const FEATURED = {
   tags:[{l:'Agentes',v:'c'},{l:'Prioridade',v:''}],
   title:'Como montar um sistema de automação com agentes de IA — sem escrever uma linha de código',
   excerpt:'O novo paradigma de automação está aqui — e ele não exige programação. Descubra como combinar n8n, Make e modelos de linguagem para criar fluxos que trabalham enquanto você dorme.',
-  author:'Lucas Faria', date:'28 abr 2026', readTime:'11 min',
+  author:'Lucas Faria',
+  date:'28 abr 2026',
+  readTime:'11 min',
   href:'/artigos/como-criar-agente-ia-sem-codigo',
   image:'/images/editorial/automation-workflow.svg',
 };
+
 const ASIDE = [
   {tag:'Agentes',v:'c',title:'AutoGPT, CrewAI ou LangGraph? Qual framework escolher em 2026',date:'26 abr',rt:'8 min',href:'/artigos/autogpt-crewai-langgraph'},
   {tag:'IA Aplicada',v:'a',title:'As 7 ferramentas de produtividade que os pros usam e você nunca ouviu falar',date:'24 abr',rt:'6 min',href:'/ferramentas'},
@@ -94,11 +97,15 @@ function SH({num, label, more, moreHref}){
       <span className="sh-num">{num}</span>
       <div className="sh-rule"/>
       <span className="sh-label">{label}</span>
-      {more && <><div className="sh-rule" style={{flex:'0 0 20px'}}/><a href={moreHref||'/arquivo'} className="sh-more">{more} →</a></>}
+      {more && (
+        <>
+          <div className="sh-rule" style={{flex:'0 0 20px'}}/>
+          <a href={moreHref || '/arquivo'} className="sh-more">{more} →</a>
+        </>
+      )}
     </div>
   );
 }
-
 
 function Hero(){
   return (
@@ -111,29 +118,36 @@ function Hero(){
           <div className="hero-eyebrow-rule"/>
           <span className="hero-eyebrow-tag">Inteligência Artificial Aplicada</span>
         </div>
+
         <h1 className="hero-h1">
-          Onde a tecnologia encontra a <em>Operação Real.</em>
+          IA aplicada para transformar tecnologia em <em>operação real.</em>
         </h1>
+
         <p className="hero-sub">
-          Curadoria editorial estratégica sobre IA, Agentes e Automação. Sem hype, sem superficialidade — apenas o que gera ROI operacional para empresas e profissionais.
+          Curadoria editorial sobre IA, agentes, automação e ferramentas digitais.
+          Menos hype, mais processo, implementação e ROI operacional.
         </p>
+
         <div className="hero-actions">
           <a href="/ia-aplicada" className="btn btn-fill">
             Explorar IA Aplicada
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
           </a>
           <a href="/metodologia" className="arrow-link">Nossa metodologia de teste →</a>
         </div>
       </div>
+
       <div className="hero-bar wrap">
         {[
-          {n:'50+',em:'',l:'Guias Práticos'},
-          {n:'3.000+',em:'',l:'Membros no Briefing'},
-          {n:'100%',em:'',l:'Independente'},
-          {n:'Daily',em:'',l:'Monitoramento de IA'},
+          {n:'50+',em:'',l:'Guias práticos'},
+          {n:'Reviews',em:'',l:'ferramentas testadas'},
+          {n:'Workflows',em:'',l:'automação aplicada'},
+          {n:'BR',em:'',l:'conteúdo em português'},
         ].map((s,i)=>(
           <div className="hero-stat" key={i}>
-            <div className="hero-stat-n">{s.n}{s.em&&<em>{s.em}</em>}</div>
+            <div className="hero-stat-n">{s.n}{s.em && <em>{s.em}</em>}</div>
             <div className="hero-stat-l">{s.l}</div>
           </div>
         ))}
@@ -149,16 +163,22 @@ function FeatureSection(){
         <SH num="01" label="Foco Editorial" more="Ver tudo"/>
         <div className="feature-layout">
           <div className="feature-ord" aria-hidden="true">01</div>
+
           <div>
             <a className="feature-img-wrap feature-img-link" href={FEATURED.href} aria-label={FEATURED.title}>
               <img src={FEATURED.image} alt={FEATURED.title} loading="lazy" width="900" height="506"/>
             </a>
+
             <div style={{marginTop:32}}>
               <div className="feature-tags">
-                {FEATURED.tags.map((t,i)=><span key={i} className={`pill ${t.v}`}>{t.l}</span>)}
+                {FEATURED.tags.map((t,i)=>(
+                  <span key={i} className={`pill ${t.v}`}>{t.l}</span>
+                ))}
               </div>
+
               <h2 className="feature-title">{FEATURED.title}</h2>
               <p className="feature-excerpt">{FEATURED.excerpt}</p>
+
               <div className="feature-meta">
                 <span>{FEATURED.author}</span>
                 <span className="feature-meta-sep">—</span>
@@ -166,9 +186,11 @@ function FeatureSection(){
                 <span className="feature-meta-sep">—</span>
                 <span>{FEATURED.readTime} de leitura</span>
               </div>
+
               <a href={FEATURED.href} className="arrow-link">Ler guia completo -&gt;</a>
             </div>
           </div>
+
           <div className="feature-side">
             <div className="aside-title">Essenciais da Semana</div>
             {ASIDE.map((a,i)=>(
@@ -210,17 +232,22 @@ function RecentArticlesSection({ articles = [] }) {
     <section className="latest" id="ultimas">
       <div className="wrap">
         <SH num="02" label="Últimas publicações" more="Arquivo completo" moreHref="/arquivo"/>
+
         <div className="latest-grid">
           {items.map((article, index) => (
             <a className={`latest-card ${index === 0 ? 'lead' : ''}`} href={article.href} key={article.href || article.slug || index}>
               <div className="latest-img-wrap">
                 <img src={article.image || FALLBACK_ARTICLE_IMAGE} alt="" loading="lazy"/>
               </div>
+
               <div className="latest-content">
                 <div className="latest-top">
-                  <span className={`pill ${article.category?.includes('Agente') ? 'c' : 'a'}`}>{article.category || 'IA'}</span>
+                  <span className={`pill ${article.category?.includes('Agente') ? 'c' : 'a'}`}>
+                    {article.category || 'IA'}
+                  </span>
                   <span>{formatArticleDate(article.date)}</span>
                 </div>
+
                 <h3 className="latest-title">{article.title}</h3>
                 <p className="latest-desc">{article.description}</p>
                 <div className="latest-meta">{article.readTime} de leitura</div>
@@ -238,11 +265,12 @@ function CategoriesSection(){
     <section className="categories">
       <div className="wrap">
         <SH num="03" label="Pilares Estratégicos"/>
+
         <div className="cat-list">
           {CATS.map((c,i)=>(
             <a key={i} className="cat-row" href={c.href}>
               <span className="cat-row-num">{c.num}</span>
-              <span className="cat-row-name">{c.name} {c.nameEm&&<em>{c.nameEm}</em>}</span>
+              <span className="cat-row-name">{c.name} {c.nameEm && <em>{c.nameEm}</em>}</span>
               <span className="cat-row-desc">{c.desc}</span>
               <span className="cat-row-arrow">↗</span>
             </a>
@@ -258,6 +286,7 @@ function GuidesSection(){
     <section className="guides">
       <div className="wrap">
         <SH num="05" label="Laboratório & Rankings" more="Ver biblioteca" moreHref="/arquivo"/>
+
         <div className="guides-grid">
           <div className="guide-list">
             {GUIDES.map((g,i)=>(
@@ -271,14 +300,16 @@ function GuidesSection(){
               </a>
             ))}
           </div>
+
           <div className="rank-card">
             <div className="rank-head">
               <span className="rank-head-title">Ranking LLMs — 2026</span>
               <span className="pill c">Top Agentes</span>
             </div>
+
             {RANKING.map((r,i)=>(
               <div className="rank-item" key={i}>
-                <div className={`rank-n ${r.gold?'g':''}`}>{r.n}</div>
+                <div className={`rank-n ${r.gold ? 'g' : ''}`}>{r.n}</div>
                 <div>
                   <div className="rank-name">{r.name}</div>
                   <div className="rank-sub">{r.sub}</div>
@@ -286,8 +317,11 @@ function GuidesSection(){
                 <div className="rank-score">{r.score}</div>
               </div>
             ))}
+
             <div className="rank-foot">
-              <a href="/comparativo" className="arrow-link" style={{fontSize:11}}>Metodologia de Benchmark -&gt;</a>
+              <a href="/comparativo" className="arrow-link" style={{fontSize:11}}>
+                Metodologia de Benchmark -&gt;
+              </a>
             </div>
           </div>
         </div>
@@ -301,10 +335,15 @@ function ManualsSection(){
     <section className="manuals-home">
       <div className="wrap">
         <SH num="04" label="Trilhas de Implementação" more="Ver central" moreHref="/manuais"/>
+
         <div className="manuals-home-head">
           <h2>Não é sobre o que a IA faz, é sobre o que <em>você faz</em> com ela.</h2>
-          <p>Documentamos processos repetíveis para criar valor real. De agentes autônomos a pipelines de conteúdo — testados em nossos fluxos antes de chegarem a você.</p>
+          <p>
+            Documentamos processos repetíveis para criar valor real.
+            De agentes autônomos a pipelines de conteúdo — testados em nossos fluxos antes de chegarem a você.
+          </p>
         </div>
+
         <div className="manuals-home-grid">
           {MANUAL_TRACKS.map((item, index)=>(
             <a className="manual-track-card" href={item.href} key={item.title}>
@@ -325,11 +364,13 @@ function ToolsSection({tweaks}){
     <section className="tools">
       <div className="wrap">
         <SH num="06" label="Laboratório de Ferramentas" more="Ver todas"/>
+
         <div style={{marginBottom:32,marginTop:-20}}>
           <p style={{fontSize:13,color:'var(--text-3)',fontWeight:300}}>
             O ROI editorial e operacional começa na escolha da stack certa. Reviews 100% independentes.
           </p>
         </div>
+
         <div className="tools-grid">
           {TOOLS.map((t,i)=>(
             <div className="tool-card" key={i}>
@@ -338,14 +379,21 @@ function ToolsSection({tweaks}){
                   <div className="tool-ico">{t.ico}</div>
                   <div className="tool-name">{t.name}</div>
                 </div>
-                {t.aff && tweaks.showAff && <span className="tool-aff-badge">Afiliado</span>}
+
+                {t.aff && tweaks.showAff && (
+                  <span className="tool-aff-badge">Afiliado</span>
+                )}
               </div>
+
               <div className="tool-desc">{t.desc}</div>
+
               <div className="tool-foot">
                 <span className="tool-stars">{t.stars}</span>
                 <span className="tool-try">
                   Análise Completa
-                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                    <path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
                 </span>
               </div>
             </div>
@@ -357,17 +405,22 @@ function ToolsSection({tweaks}){
 }
 
 function NewsletterSection(){
-  const [name,setName]=React.useState('');
-  const [email,setEmail]=React.useState('');
-  const [done,setDone]=React.useState(false);
+  const [name,setName] = React.useState('');
+  const [email,setEmail] = React.useState('');
+  const [done,setDone] = React.useState(false);
+
   return (
     <section className="nl">
       <div className="wrap">
         <SH num="07" label="Newsletter"/>
+
         <div className="nl-inner">
           <div>
             <h2 className="nl-h">Receba o<br/>Briefing.<br/><em>Opere melhor.</em></h2>
-            <p className="nl-sub">A dose semanal de estratégia de IA que chega antes da sua primeira reunião de segunda-feira.</p>
+            <p className="nl-sub">
+              A dose semanal de estratégia de IA que chega antes da sua primeira reunião de segunda-feira.
+            </p>
+
             <div className="nl-checks">
               {[
                 'Benchmarks e reviews de ferramentas',
@@ -382,6 +435,7 @@ function NewsletterSection(){
               ))}
             </div>
           </div>
+
           <div>
             {done ? (
               <div style={{textAlign:'center',padding:'48px 0'}}>
@@ -389,23 +443,40 @@ function NewsletterSection(){
                 <div style={{fontFamily:'var(--serif)',fontSize:28,fontWeight:600,marginBottom:8,letterSpacing:'-.01em'}}>Você está no Briefing.</div>
                 <div style={{fontSize:14,color:'var(--text-2)',fontWeight:300}}>Obrigado pela confiança. Sua primeira edição chega em breve.</div>
               </div>
-            ):(
+            ) : (
               <form style={{display:'flex',flexDirection:'column',gap:14}} onSubmit={e=>{e.preventDefault();if(email)setDone(true)}}>
                 <div className="nl-stat">
                   <div className="nl-stat-n">3.000+</div>
-                  <div className="nl-stat-l">operadores, gestores e fundadores</div>
+                  <div className="nl-stat-l">operadores, gestores e fundadores lendo semanalmente</div>
                 </div>
+
                 <div>
                   <label className="nl-label">Seu nome</label>
-                  <input className="nl-input" type="text" placeholder="Como podemos te chamar?" value={name} onChange={e=>setName(e.target.value)}/>
+                  <input
+                    className="nl-input"
+                    type="text"
+                    placeholder="Como podemos te chamar?"
+                    value={name}
+                    onChange={e=>setName(e.target.value)}
+                  />
                 </div>
+
                 <div>
                   <label className="nl-label">E-mail Profissional</label>
-                  <input className="nl-input" type="email" placeholder="seu@trabalho.com" value={email} onChange={e=>setEmail(e.target.value)} required/>
+                  <input
+                    className="nl-input"
+                    type="email"
+                    placeholder="seu@trabalho.com"
+                    value={email}
+                    onChange={e=>setEmail(e.target.value)}
+                    required
+                  />
                 </div>
+
                 <button type="submit" className="btn btn-fill" style={{justifyContent:'center',borderRadius:10,padding:'14px'}}>
                   Quero participar do Briefing →
                 </button>
+
                 <p className="nl-note">LGPD Compliance · Cancele a qualquer momento</p>
               </form>
             )}
@@ -416,28 +487,38 @@ function NewsletterSection(){
   );
 }
 
-
 /* APP ────────────────────────────────────────────────── */
+
 function App({ articles = [], tools = [], apps = [], ebooks = [] }){
   const featuredArticle = articles.find((a)=>a.featured) || articles[0];
+
   if (featuredArticle) {
     FEATURED.title = featuredArticle.title;
     FEATURED.excerpt = featuredArticle.description;
     FEATURED.author = featuredArticle.author;
-    FEATURED.date = new Date(featuredArticle.date).toLocaleDateString('pt-BR', { day: '2-digit', month: 'short', year: 'numeric' });
+    FEATURED.date = new Date(featuredArticle.date).toLocaleDateString('pt-BR', {
+      day: '2-digit',
+      month: 'short',
+      year: 'numeric'
+    });
     FEATURED.readTime = featuredArticle.readTime;
     FEATURED.href = featuredArticle.href;
     FEATURED.image = featuredArticle.image || FEATURED.image;
     FEATURED.tags = [{l: featuredArticle.category || 'Agentes', v: 'c'}];
+
     ASIDE.splice(0, ASIDE.length, ...articles.slice(1, 4).map((a)=>({
       tag: a.category || 'IA Aplicada',
       v: a.category?.includes('Agente') ? 'c' : 'a',
       title: a.title,
-      date: new Date(a.date).toLocaleDateString('pt-BR', { day: '2-digit', month: 'short' }),
+      date: new Date(a.date).toLocaleDateString('pt-BR', {
+        day: '2-digit',
+        month: 'short'
+      }),
       rt: a.readTime,
       href: a.href,
     })));
   }
+
   if (tools.length) {
     TOOLS.splice(0, TOOLS.length, ...tools.slice(0, 4).map((t)=>({
       ico: t.icon,
@@ -447,8 +528,10 @@ function App({ articles = [], tools = [], apps = [], ebooks = [] }){
       aff: t.affiliate,
     })));
   }
-  const tweaks=TWEAK_DEFAULTS;
+
+  const tweaks = TWEAK_DEFAULTS;
   const latestArticles = articles.filter((article)=>article.href !== FEATURED.href);
+
   return (
     <>
       <Hero/>
@@ -460,7 +543,7 @@ function App({ articles = [], tools = [], apps = [], ebooks = [] }){
       <GuidesSection/>
       <ToolsSection tweaks={tweaks}/>
       <NewsletterSection/>
-      </>
+    </>
   );
 }
 
