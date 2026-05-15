@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection, render } from 'astro:content';
+import AuthorBio from '../../components/AuthorBio.astro';
 
 export function getStaticPaths() {
   return getCollection('articles').then((entries) =>
@@ -64,7 +65,7 @@ const breadcrumbJsonLd = {
         <h1>{title}</h1>
         <p>{description}</p>
         <div class="seo-meta">
-          <span>{author}</span>
+          <span class="author-link">{author}</span>
           <span>{formattedDate}</span>
           <span>{readTime} de leitura</span>
         </div>
@@ -79,6 +80,7 @@ const breadcrumbJsonLd = {
       <div class="seo-layout">
         <div class="seo-content">
           <Content />
+          <AuthorBio author={author} />
         </div>
       </div>
     </div>
@@ -383,5 +385,17 @@ const breadcrumbJsonLd = {
       width: auto;
       padding: 18px;
     }
+  }
+</style>
+
+<style is:global>
+  .article-nudge-primary:hover {
+    filter: brightness(1.1);
+    transform: scale(1.02);
+    transition: all 0.2s ease;
+  }
+  .article-nudge-close:hover {
+    background: var(--bg-3);
+    color: var(--text);
   }
 </style>

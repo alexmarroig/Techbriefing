@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const articles = (await getCollection('articles'))
+  .filter(a => a.data.category?.toLowerCase().includes('autom') || a.data.category?.toLowerCase().includes('oper'))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<BaseLayout title="Automação e Operações | Tech Briefing" active="Automação">
+  <section class="page-header">
+    <div class="wrap">
+      <div class="kicker">Pilar Editorial 04</div>
+      <h1 class="page-title">Automação & <em>Operações.</em></h1>
+      <p class="page-sub">Integrações, pipelines no-code e a infraestrutura necessária para rodar IA em escala.</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="wrap">
+      <div class="latest-grid">
+        {articles.map((article) => (
+          <a class="latest-card" href={`/artigos/${article.id}`}>
+            <div class="latest-img-wrap">
+              <img src={article.data.image || '/images/editorial/tech-radar.svg'} alt="" loading="lazy"/>
+            </div>
+            <div class="latest-content">
+              <div class="latest-top">
+                <span class="pill c">{article.data.category || 'Automação'}</span>
+                <span>{new Date(article.data.date).toLocaleDateString('pt-BR', { day: '2-digit', month: 'short' })}</span>
+              </div>
+              <h3 class="latest-title">{article.data.title}</h3>
+              <p class="latest-desc">{article.data.description}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

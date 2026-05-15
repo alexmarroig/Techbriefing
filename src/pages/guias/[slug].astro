@@ -92,12 +92,12 @@ const decisionRows = manual.tools.map((tool, index) => ({
 <BaseLayout
   title={`${manual.title} — Manual Tech Briefing`}
   description={manual.description}
-  active="Manuais"
+  active="Guias"
 >
   <main class="manual-detail">
     <section class="manual-detail-hero">
       <div class="wrap">
-        <a class="manual-back" href="/manuais/">← Todos os manuais</a>
+        <a class="manual-back" href="/guias/">← Todos os manuais</a>
         <div class="manual-detail-hero-grid">
           <div>
             <div class="manual-detail-kicker">{manual.category}</div>
@@ -287,7 +287,7 @@ const decisionRows = manual.tools.map((tool, index) => ({
           </div>
           <div class="manuals-ideas-grid">
             {related.map((item) => (
-              <a class="manual-idea link" href={`/manuais/${item.slug}/`}>
+              <a class="manual-idea link" href={`/guias/${item.slug}/`}>
                 <span>{item.category}</span>
                 <strong>{item.title}</strong>
               </a>

@@ -1,12 +1,11 @@
 ---
 const { active = '' } = Astro.props;
 const links = [
-  ['Notícias', '/'],
-  ['Manuais', '/manuais'],
-  ['Agentes', '/agentes-de-ia'],
+  ['IA Aplicada', '/ia-aplicada'],
+  ['Agentes', '/agentes'],
   ['Ferramentas', '/ferramentas'],
-  ['Ebooks', '/ebooks'],
-  ['Arquivo', '/arquivo'],
+  ['Automação', '/automacao'],
+  ['Guias', '/guias'],
   ['Sobre', '/sobre'],
 ];
 ---
@@ -33,3 +32,16 @@ const links = [
     <a class="nav-nl" href="/newsletter">Newsletter</a>
   </div>
 </nav>
+
+<style is:global>
+  .nav-links li a {
+    font-size: 13.5px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+  @media (max-width: 1024px) {
+    .nav-links li a {
+      font-size: 16px;
+    }
+  }
+</style>

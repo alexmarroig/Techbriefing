@@ -106,7 +106,7 @@ function Sidebar(){
       <div className="sidebar-card">
         <div className="sidebar-card-head">Categorias</div>
         <div className="sidebar-card-body">
-          {[['Agentes de IA','87','/agentes-de-ia'],['IA Prática','124','/arquivo'],['Automação','96','/arquivo'],['Comparativos','32','/comparativos/n8n-vs-make'],['Software','203','/ferramentas']].map(([n,c,h],i)=>(
+          {[['Agentes de IA','20+','/agentes-de-ia'],['IA Prática','15+','/arquivo'],['Automação','15+','/arquivo'],['Comparativos','10+','/comparativos/n8n-vs-make'],['Software','10+','/ferramentas']].map(([n,c,h],i)=>(
             <a href={h} className="sidebar-cat-row" key={i}>
               <span className="sidebar-cat-name">{n}</span>
               <span className="sidebar-cat-count">{c} artigos</span>

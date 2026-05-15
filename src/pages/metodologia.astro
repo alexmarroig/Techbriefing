@@ -1,0 +1,71 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Metodologia Editorial | Tech Briefing" active="Sobre">
+  <section class="page-header">
+    <div class="wrap">
+      <div class="kicker">Autoridade Editorial</div>
+      <h1 class="page-title">Como construímos <em>confiança.</em></h1>
+      <p class="page-sub">Transparência total sobre nosso processo de teste, curadoria e aplicação real de IA.</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="wrap">
+      <div class="prose">
+        <div class="lead-text">
+          Diferente de portais de notícias genéricos, o TechBriefing nasceu como um laboratório de operações. Não reescrevemos press releases; nós documentamos o que funciona em produção.
+        </div>
+
+        <h2>A Diferença Editorial</h2>
+        <p>No TechBriefing, tratamos o conteúdo como um produto de engenharia. Cada guia ou review passa por um framework de validação antes de ser publicado.</p>
+
+        <div class="method-grid">
+          <div class="method-card">
+            <h3>1. Teste em Produção</h3>
+            <p>Toda ferramenta ou workflow citado foi testado em cenários reais de estresse. Se dizemos que um agente de IA funciona, é porque ele rodou em nossa stack.</p>
+          </div>
+          <div class="method-card">
+            <h3>2. Curadoria Humana</h3>
+            <p>Usamos IA para acelerar processos, mas nunca para gerar opinião editorial. Nossos vereditos são 100% baseados na experiência prática de especialistas humanos.</p>
+          </div>
+          <div class="method-card">
+            <h3>3. Antipagamento (Pay-to-Play)</h3>
+            <p>Nenhuma marca pode comprar uma posição em nossos rankings. Nossa receita vem de parcerias transparentes e produtos educacionais, nunca da venda de integridade editorial.</p>
+          </div>
+          <div class="method-card">
+            <h3>4. Foco em ROI Operacional</h3>
+            <p>Analisamos a tecnologia pelo prisma da eficiência. Se a ferramenta é impressionante mas não reduz custo ou tempo, nós avisamos.</p>
+          </div>
+        </div>
+
+        <h2>Nosso "Veredito Técnico"</h2>
+        <p>Quando avaliamos uma ferramenta no Laboratório, atribuímos pesos a quatro critérios fundamentais:</p>
+        <ul>
+          <li><strong>Facilidade de Implementação:</strong> Quanto tempo leva do "sign up" ao primeiro resultado útil?</li>
+          <li><strong>Escalabilidade:</strong> A solução aguenta volume ou quebra sob pressão?</li>
+          <li><strong>Custo-Benefício:</strong> O preço é justificado pelo ganho de produtividade?</li>
+          <li><strong>Ecossistema:</strong> Quão bem ela se integra com outras ferramentas do mercado?</li>
+        </ul>
+
+        <div class="cta-box">
+          <p>Dúvidas sobre nosso processo? <a href="/contato">Entre em contato</a> com nossa equipe editorial.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .kicker { font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.15em; color: var(--amber); margin-bottom: 12px; font-weight: 600; }
+  .prose { max-width: 800px; margin: 0 auto; line-height: 1.8; color: var(--text-2); }
+  .lead-text { font-size: 22px; font-family: var(--serif); color: var(--text-1); line-height: 1.4; margin-bottom: 48px; padding-bottom: 32px; border-bottom: 1px solid var(--line-s); }
+  .prose h2 { font-family: var(--serif); color: var(--text-1); font-size: 32px; margin-top: 64px; margin-bottom: 24px; letter-spacing: -0.02em; }
+  .method-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 40px 0; }
+  .method-card { background: var(--bg-2); padding: 24px; border-radius: 12px; border: 1px solid var(--line-s); }
+  .method-card h3 { font-size: 16px; font-weight: 700; color: var(--text-1); margin-bottom: 12px; }
+  .method-card p { font-size: 14px; margin: 0; line-height: 1.6; }
+  .cta-box { margin-top: 64px; padding: 32px; background: var(--bg-3); border-radius: 16px; border: 1px dashed var(--amber); text-align: center; font-weight: 500; }
+  @media (max-width: 768px) { .method-grid { grid-template-columns: 1fr; } }
+</style>
