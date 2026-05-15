@@ -319,7 +319,7 @@ function NewsletterStrip(){
                 <input className="nl-strip-input" type="email" placeholder="seu@email.com" value={email} onChange={e=>setEmail(e.target.value)} required/>
                 <button type="submit" className="btn btn-fill" style={{whiteSpace:'nowrap'}}>Quero receber →</button>
               </div>
-              <div className="nl-strip-note">12.000 leitores · LGPD · Cancele quando quiser</div>
+              <div className="nl-strip-note">Briefing editorial · LGPD · Cancele quando quiser</div>
             </form>
           )}
         </div>

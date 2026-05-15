@@ -3924,3 +3924,106 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;o
     font-size: clamp(42px, 13vw, 62px);
   }
 }
+
+/* Institutional pages */
+.legal-page{
+  padding: 92px 0;
+  border-top: 1px solid var(--line-s);
+  background:
+    radial-gradient(circle at 20% 0%, rgba(255, 169, 87, .08), transparent 34%),
+    linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+}
+.legal-wrap{
+  width: min(920px, calc(100% - 40px));
+  margin: 0 auto;
+}
+.legal-kicker{
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 16px;
+}
+.legal-page h1{
+  font-family: var(--serif);
+  font-size: clamp(42px, 7vw, 76px);
+  line-height: .98;
+  letter-spacing: -.035em;
+  margin: 0 0 20px;
+}
+.legal-lead{
+  max-width: 760px;
+  color: var(--text-2);
+  font-size: 18px;
+  line-height: 1.7;
+  margin: 0 0 42px;
+}
+.legal-card{
+  background: color-mix(in srgb, var(--bg-2) 82%, transparent);
+  border: 1px solid var(--line-s);
+  border-radius: 16px;
+  padding: 28px;
+  margin-top: 16px;
+  box-shadow: 0 24px 80px rgba(0,0,0,.16);
+}
+.legal-card h2{
+  font-family: var(--serif);
+  font-size: clamp(24px, 3vw, 34px);
+  letter-spacing: -.02em;
+  margin: 0 0 12px;
+}
+.legal-card p,
+.legal-card li{
+  color: var(--text-2);
+  line-height: 1.75;
+  font-size: 15px;
+}
+.legal-card ul{
+  margin: 16px 0 0;
+  padding-left: 20px;
+}
+.legal-card a{
+  color: var(--amber);
+  text-decoration: none;
+}
+.legal-card a:hover{
+  color: var(--amber-d);
+}
+.legal-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+.legal-grid .legal-card{
+  margin-top: 0;
+}
+.legal-cta{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+  padding: 13px 22px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--amber), var(--amber-d));
+  color: #0b0b0b !important;
+  font-weight: 800;
+  text-decoration: none;
+}
+@media(max-width:700px){
+  .legal-page{
+    padding: 64px 0;
+  }
+  .legal-wrap{
+    width: min(100% - 28px, 920px);
+  }
+  .legal-grid{
+    grid-template-columns: 1fr;
+  }
+  .legal-card{
+    padding: 22px;
+    border-radius: 14px;
+  }
+}

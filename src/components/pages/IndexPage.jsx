@@ -127,10 +127,10 @@ function Hero(){
           <span className="hero-eyebrow-tag">Blog de IA aplicada</span>
         </div>
         <h1 className="hero-h1">
-          Notícias e ideias para aplicar IA de verdade.
+          IA aplicada para transformar tecnologia em resultado.
         </h1>
         <p className="hero-sub">
-          Um blog direto para quem quer transformar IA, automação e software em processo real: notícias filtradas, tutoriais práticos, comparativos e ideias que viram ação.
+          Notícias filtradas, manuais, reviews e comparativos para aplicar IA no trabalho, no negócio e nos produtos digitais. Menos hype. Mais processo.
         </p>
         <div className="hero-actions">
           <a href="/arquivo" className="btn btn-fill">
@@ -142,9 +142,9 @@ function Hero(){
       </div>
       <div className="hero-bar wrap">
         {[
-          {n:'50+',em:'',l:'publicações no arquivo'},
-          {n:'20+',em:'',l:'temas de IA e automação'},
-          {n:'2026',em:'',l:'radar atualizado'},
+          {n:'Briefing',em:'',l:'notícias filtradas'},
+          {n:'Manuais',em:'',l:'passo a passo aplicável'},
+          {n:'Reviews',em:'',l:'ferramentas com critério'},
           {n:'BR',em:'',l:'conteúdo em português'},
         ].map((s,i)=>(
           <div className="hero-stat" key={i}>
@@ -396,8 +396,8 @@ function NewsletterSection(){
             ):(
               <form style={{display:'flex',flexDirection:'column',gap:14}} onSubmit={e=>{e.preventDefault();if(email)setDone(true)}}>
                 <div className="nl-stat">
-                  <div className="nl-stat-n">3k+</div>
-                  <div className="nl-stat-l">leitores — freelancers, fundadores e criadores</div>
+                  <div className="nl-stat-n">IA</div>
+                  <div className="nl-stat-l">briefing editorial gratuito para aplicar melhor</div>
                 </div>
                 <div>
                   <label className="nl-label">Seu nome</label>

@@ -26,7 +26,7 @@ function NlCta(){
   return(
     <section className="nl-cta"><div className="wrap"><div className="nl-cta-inner">
       <h2 className="nl-cta-title">IA aplicada na sua caixa.<br/><em>Toda semana.</em></h2>
-      <p className="nl-cta-sub">Guias práticos, ferramentas testadas e novidades da semana — sem hype, sem enrolação. 3.000+ leitores já recebem.</p>
+      <p className="nl-cta-sub">Guias práticos, ferramentas testadas e novidades da semana — sem hype, sem enrolação e sem promessa vazia.</p>
       {done?(
         <div style={{textAlign:'center',padding:'24px',fontFamily:'var(--serif)',fontSize:24,color:'var(--amber)'}}>✓ Você está dentro!</div>
       ):(
@@ -63,7 +63,7 @@ function App(){
             <div className="about-hero-card-logo"><div className="nav-pip"/>Nexora Systems</div>
             <div className="about-hero-card-desc">Tecnologia, sistemas e inteligência artificial aplicada ao mundo real. Criamos conteúdo, ferramentas e produtos para quem quer transformar IA em resultado.</div>
             <div className="about-hero-stat-grid">
-              {[{n:'70+',em:'',l:'Guias e artigos'},{n:'3',em:'k+',l:'Na newsletter'},{n:'20+',em:'',l:'Fontes monitoradas'},{n:'1',em:'',l:'Ebook publicado'}].map((s,i)=>(
+              {[{n:'IA',em:'',l:'aplicada'},{n:'Guias',em:'',l:'práticos'},{n:'Reviews',em:'',l:'com critérios'},{n:'1',em:'',l:'ebook publicado'}].map((s,i)=>(
                 <div className="about-stat" key={i}>
                   <div className="about-stat-n">{s.n}{s.em&&<em>{s.em}</em>}</div>
                   <div className="about-stat-l">{s.l}</div>
@@ -129,7 +129,7 @@ function App(){
               <div className="nexora-box-title">O ecossistema por trás do portal</div>
               <div className="nexora-box-desc">A Nexora Systems desenvolve o Tech Briefing, nossos guias e ebooks. Somos uma equipe focada em tecnologia aplicada — conteúdo, produtos e sistemas que funcionam no mundo real.</div>
               <div className="nexora-box-links">
-                {[{name:'Ebooks',desc:'1 título publicado',href:'/ebooks'},{name:'Ferramentas recomendadas',desc:'20+ ferramentas testadas',href:'/ferramentas'}].map((l,i)=>(
+                {[{name:'Ebooks',desc:'1 título publicado',href:'/ebooks'},{name:'Ferramentas recomendadas',desc:'Biblioteca em evolução',href:'/ferramentas'}].map((l,i)=>(
                   <a href={l.href} className="nexora-link" key={i}>
                     <div>
                       <div className="nexora-link-name">{l.name}</div>
@@ -152,9 +152,9 @@ function App(){
             <p className="contact-desc">Sugestões editoriais, parcerias, oportunidades de anúncio ou só um feedback honesto — estamos disponíveis.</p>
             <div className="contact-links">
               {[
-                {ico:'✉️',title:'E-mail geral',desc:'contato@iaworld.com.br',href:'mailto:contato@iaworld.com.br'},
+                {ico:'✉️',title:'E-mail geral',desc:'contato@techbriefing.com.br',href:'mailto:contato@techbriefing.com.br'},
                 {ico:'🤝',title:'Parcerias e anúncios',desc:'Acesso ao media kit e formatos',href:'/contato'},
-                {ico:'𝕏',title:'Twitter / X',desc:'@iaworldbr',href:'/contato'},
+                {ico:'𝕏',title:'Canais sociais',desc:'Em estruturação',href:'/contato'},
                 {ico:'in',title:'LinkedIn',desc:'Tech Briefing — Nexora Systems',href:'/contato'},
               ].map((c,i)=>(
                 <a href={c.href} className="contact-link" key={i}>
@@ -172,7 +172,7 @@ function App(){
             <div style={{fontFamily:'var(--serif)',fontSize:'clamp(22px,2.5vw,28px)',fontWeight:700,letterSpacing:'-.02em',lineHeight:1.2,marginBottom:14}}>Alcance quem decide sobre IA e tecnologia.</div>
             <div style={{fontSize:14,color:'var(--text-2)',lineHeight:1.7,marginBottom:24}}>Nosso público são fundadores, gestores, freelancers e criadores que aplicam IA no dia a dia. Se a sua ferramenta ou produto serve essa audiência, fale com a gente.</div>
             <div style={{display:'flex',flexDirection:'column',gap:10,marginBottom:24}}>
-              {['Newsletter: 3.000+ assinantes','Artigos patrocinados','Comparativos e reviews','Banners editoriais'].map((i,k)=>(
+              {['Newsletter editorial','Guias patrocinados identificados','Comparativos e reviews','Formatos comerciais discretos'].map((i,k)=>(
                 <div key={k} style={{display:'flex',alignItems:'center',gap:10,fontSize:13.5,color:'var(--text-2)'}}>
                   <span style={{color:'var(--cyan)',fontSize:12}}>✓</span>{i}
                 </div>
