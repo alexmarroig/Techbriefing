@@ -59,7 +59,7 @@ function App(){
             <p className="contact-left-sub">Sugestões, parcerias, anúncios ou só um feedback honesto — estamos disponíveis. Respondemos toda mensagem em até 3 dias úteis.</p>
             <div className="contact-options">
               {[
-                {ico:'✉️',title:'E-mail geral',desc:'contato@iaworld.com.br'},
+                {ico:'✉️',title:'E-mail geral',desc:'contato@techbriefing.com.br'},
                 {ico:'🤝',title:'Parcerias e anúncios',desc:'Acesso ao media kit e formatos disponíveis'},
                 {ico:'📋',title:'Programa de afiliados',desc:'Indique ferramentas e ganhe comissão'},
                 {ico:'🌐',title:'Imprensa',desc:'Entrevistas, dados e contato editorial'},

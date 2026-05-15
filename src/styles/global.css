@@ -3924,3 +3924,26 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;o
     font-size: clamp(42px, 13vw, 62px);
   }
 }
+.trust-bar { padding: 40px 0; border-top: 1px solid var(--line-s); border-bottom: 1px solid var(--line-s); background: var(--bg-2); }
+.trust-inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+.trust-label { font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-4); }
+.trust-stats { display: flex; gap: 48px; }
+.trust-stat { font-size: 14px; color: var(--text-2); }
+.trust-stat strong { color: var(--amber); margin-right: 4px; }
+@media(max-width: 768px) {
+  .trust-inner { flex-direction: column; text-align: center; gap: 24px; }
+  .trust-stats { flex-direction: column; gap: 16px; }
+}
+.nav-nl {
+  background: var(--amber-x);
+  color: var(--amber);
+  border: 1px solid oklch(0.80 0.14 62 / 0.2);
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+.nav-nl:hover {
+  background: var(--amber);
+  color: var(--bg);
+}

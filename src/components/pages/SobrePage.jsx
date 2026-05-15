@@ -1,22 +1,15 @@
 import React from 'react';
 
-
-
-
 const VALUES = [
-  {n:'01',title:'Clareza antes de tudo',desc:'A IA é complexa. O nosso trabalho é torná-la simples, direta e útil — sem sacrificar a profundidade.'},
-  {n:'02',title:'Prática, não teoria',desc:'Cada guia, comparativo e ferramenta é pensado para aplicação real. Se não funciona no dia a dia, não publicamos.'},
-  {n:'03',title:'Honestidade editorial',desc:'Links de afiliados são identificados. Opiniões são nossas. Nenhum patrocinador dita o que escrevemos.'},
-  {n:'04',title:'Profundidade com ritmo',desc:'Longos guias que valem o tempo. Conteúdo que você salva e volta — não apenas lê e esquece.'},
-  {n:'05',title:'Relevância contínua',desc:'O campo da IA muda rápido. Atualizamos nosso conteúdo para refletir o estado real da tecnologia.'},
-  {n:'06',title:'Feito para crescer',desc:'Portal construído para escalar com muito conteúdo, automação e um ecossistema de produtos digitais.'},
+  {n:'01',title:'Pragmatismo Operacional',desc:'Ignoramos o hype. Se a IA não resolve um gargalo, não reduz custo ou não gera ROI, ela não tem espaço em nossa pauta.'},
+  {n:'02',title:'Transparência Técnica',desc:'Nossas análises mostram onde a ferramenta quebra, não apenas onde ela brilha. Documentamos limitações reais.'},
+  {n:'03',title:'Independência Editorial',desc:'O TechBriefing não aceita pagamento por posições em rankings. Nossa curadoria é técnica, não comercial.'},
 ];
 
 const PRINCIPLES = [
-  {title:'Testamos antes de publicar',desc:'Ferramentas que recomendamos foram usadas pela equipe. Guias refletem implementações reais.'},
-  {title:'Identificamos afiliados',desc:'Quando um link é de afiliado, dizemos claramente. Transparência não é opcional.'},
-  {title:'Atualizamos com frequência',desc:'Artigos com data têm contexto. Revisamos guias quando o campo muda. Você sabe o que está lendo.'},
-  {title:'Não vendemos acesso editorial',desc:'Nenhuma empresa paga para aparecer em nosso conteúdo. Avaliações são independentes.'},
+  {title:'Nós testamos em produção',desc:'Diferente de portais de notícias, cada workflow ou ferramenta recomendada foi integrada em nossa própria operação antes de virar guia.'},
+  {title:'Foco em People-First',desc:'Acreditamos que a IA é um multiplicador humano. Nosso conteúdo é escrito por especialistas para profissionais, não por bots para o Google.'},
+  {title:'Atualização Ativa',desc:'O campo da IA muda semanalmente. Mantemos nossos guias e rankings atualizados com base nos últimos benchmarks.'},
 ];
 
 
@@ -25,17 +18,17 @@ function NlCta(){
   const [done,setDone]=React.useState(false);
   return(
     <section className="nl-cta"><div className="wrap"><div className="nl-cta-inner">
-      <h2 className="nl-cta-title">IA aplicada na sua caixa.<br/><em>Toda semana.</em></h2>
-      <p className="nl-cta-sub">Guias práticos, ferramentas testadas e novidades da semana — sem hype, sem enrolação. 3.000+ leitores já recebem.</p>
+      <h2 className="nl-cta-title">Receba o Briefing.<br/><em>Opere melhor.</em></h2>
+      <p className="nl-cta-sub">A dose semanal de estratégia de IA que chega antes da sua primeira reunião de segunda-feira. 3.000+ profissionais já assinam.</p>
       {done?(
-        <div style={{textAlign:'center',padding:'24px',fontFamily:'var(--serif)',fontSize:24,color:'var(--amber)'}}>✓ Você está dentro!</div>
+        <div style={{textAlign:'center',padding:'24px',fontFamily:'var(--serif)',fontSize:24,color:'var(--amber)'}}>✓ Você está no Briefing!</div>
       ):(
         <form className="nl-cta-form" onSubmit={e=>{e.preventDefault();if(email)setDone(true)}}>
-          <input className="nl-cta-input" type="email" placeholder="seu@email.com" value={email} onChange={e=>setEmail(e.target.value)} required/>
-          <button type="submit" className="btn btn-fill" style={{padding:'13px 28px',borderRadius:100}}>Quero receber →</button>
+          <input className="nl-cta-input" type="email" placeholder="seu@trabalho.com" value={email} onChange={e=>setEmail(e.target.value)} required/>
+          <button type="submit" className="btn btn-fill" style={{padding:'13px 28px',borderRadius:100}}>Quero participar →</button>
         </form>
       )}
-      <div style={{marginTop:14,fontFamily:'var(--mono)',fontSize:11,color:'var(--text-4)',letterSpacing:'.04em'}}>LGPD compliant · Cancele em 1 clique · Sem spam</div>
+      <div style={{marginTop:14,fontFamily:'var(--mono)',fontSize:11,color:'var(--text-4)',letterSpacing:'.04em'}}>LGPD · Cancele quando quiser · Sem Spam</div>
     </div></div></section>
   );
 }
@@ -50,20 +43,19 @@ function App(){
         <span className="bc-cur">Sobre</span>
       </div></div></div>
 
-      {/* HERO */}
       <section className="about-hero">
         <div className="about-hero-bg"/>
         <div className="wrap"><div className="about-hero-inner">
           <div>
-            <div className="about-hero-eyebrow"><div className="about-hero-rule"/><span className="about-hero-eyebrow-text">O portal</span></div>
-            <h1 className="about-hero-title">Por trás do<br/><em>Tech Briefing.</em></h1>
-            <p className="about-hero-sub">O Tech Briefing é uma iniciativa da Nexora Systems — focada em tornar a inteligência artificial mais acessível, mais clara e mais relevante para negócios, trabalho e sociedade.</p>
+            <div className="about-hero-eyebrow"><div className="about-hero-rule"/><span className="about-hero-eyebrow-text">A Referência</span></div>
+            <h1 className="about-hero-title">Onde a IA encontra a<br/><em>Operação Real.</em></h1>
+            <p className="about-hero-sub">O TechBriefing não é um portal de notícias. É um laboratório editorial focado em transformar a complexidade da Inteligência Artificial em vantagem competitiva e ROI operacional para empresas e profissionais.</p>
           </div>
           <div className="about-hero-card">
             <div className="about-hero-card-logo"><div className="nav-pip"/>Nexora Systems</div>
-            <div className="about-hero-card-desc">Tecnologia, sistemas e inteligência artificial aplicada ao mundo real. Criamos conteúdo, ferramentas e produtos para quem quer transformar IA em resultado.</div>
+            <div className="about-hero-card-desc">Operamos o TechBriefing como um braço editorial da Nexora, focando em documentar a transição global para fluxos de trabalho agentic e autônomos.</div>
             <div className="about-hero-stat-grid">
-              {[{n:'70+',em:'',l:'Guias e artigos'},{n:'3',em:'k+',l:'Na newsletter'},{n:'20+',em:'',l:'Fontes monitoradas'},{n:'1',em:'',l:'Ebook publicado'}].map((s,i)=>(
+              {[{n:'50+',em:'',l:'Guias de Operação'},{n:'3.000+',em:'',l:'Membros Ativos'},{n:'Weekly',em:'',l:'Briefing Estratégico'},{n:'1',em:'',l:'Ebook Premium'}].map((s,i)=>(
                 <div className="about-stat" key={i}>
                   <div className="about-stat-n">{s.n}{s.em&&<em>{s.em}</em>}</div>
                   <div className="about-stat-l">{s.l}</div>
@@ -74,28 +66,24 @@ function App(){
         </div></div>
       </section>
 
-      {/* MISSION */}
       <section className="mission">
         <div className="wrap"><div className="mission-inner">
           <div className="mission-num" aria-hidden="true">01</div>
           <div>
-            <h2 className="mission-title">Nossa<br/><em>missão.</em></h2>
+            <h2 className="mission-title">Nossa Visão<br/><em>Pragmática.</em></h2>
             <div className="mission-body">
-              <p>O Tech Briefing surgiu da percepção de que <strong>muita gente ouve falar de IA todos os dias, mas ainda encontra dificuldade para entender o que realmente importa</strong>, o que muda na prática e como usar essa tecnologia de forma útil, estratégica e responsável.</p>
-              <p>Não queremos ser mais um canal que amplifica hype. Queremos ser o lugar onde você chega quando precisa de <strong>clareza real</strong> — um guia que funciona, uma comparação honesta, uma ferramenta que vale o teste.</p>
-              <p>A missão é simples: <strong>tornar a IA mais acessível, mais clara e mais relevante</strong> para negócios, trabalho e sociedade. Com conteúdo sério, produtos úteis e uma curadoria que respeita o seu tempo.</p>
+              <p>O TechBriefing nasceu de uma necessidade clara: <strong>separar o hype da utilidade</strong>. Em um mercado saturado de promessas de IA, nós focamos no que pode ser implementado hoje para reduzir custos e aumentar a escala operacional.</p>
+              <p>Nossa abordagem é a de um <strong>praticante</strong>. Não apenas relatamos o que as Big Techs estão lançando; nós quebramos o código, testamos as integrações e documentamos o processo para que você não precise cometer os mesmos erros.</p>
+              <p>Tratamos o TechBriefing como um <strong>produto editorial premium</strong>, onde a curadoria e a profundidade superam o volume. Se está no nosso radar, é porque tem potencial de impacto real no seu negócio.</p>
             </div>
-            <a href="/ebooks" className="arrow-link">Ver nossos ebooks →</a>
+            <a href="/metodologia" className="arrow-link">Conheça nossa metodologia de teste →</a>
           </div>
         </div></div>
       </section>
 
-      {/* VALUES */}
       <section className="values">
         <div className="wrap">
-          <div style={{display:'flex',alignItems:'baseline',gap:24,marginBottom:0}}>
-            <div style={{fontFamily:'var(--serif)',fontSize:clamp_('clamp(28px,4vw,44px)'),fontWeight:700,letterSpacing:'-.02em'}}>O que nos guia</div>
-          </div>
+          <div style={{fontFamily:'var(--serif)',fontSize:'clamp(28px,4vw,44px)',fontWeight:700,letterSpacing:'-.02em'}}>O que nos guia</div>
           <div className="values-grid" style={{marginTop:48}}>
             {VALUES.map((v,i)=>(
               <div className="value-card" key={i}>
@@ -108,10 +96,9 @@ function App(){
         </div>
       </section>
 
-      {/* EDITORIAL */}
       <section className="editorial">
         <div className="wrap">
-          <div style={{fontFamily:'var(--serif)',fontSize:'clamp(28px,4vw,44px)',fontWeight:700,letterSpacing:'-.02em',marginBottom:0}}>Compromisso editorial</div>
+          <div style={{fontFamily:'var(--serif)',fontSize:'clamp(28px,4vw,44px)',fontWeight:700,letterSpacing:'-.02em',marginBottom:0}}>Compromisso com a Autoridade</div>
           <div className="editorial-layout">
             <div className="editorial-principles">
               {PRINCIPLES.map((p,i)=>(
@@ -125,11 +112,11 @@ function App(){
               ))}
             </div>
             <div className="nexora-box">
-              <div className="nexora-box-label">Nexora Systems</div>
+              <div className="nexora-box-label">Iniciativa Nexora</div>
               <div className="nexora-box-title">O ecossistema por trás do portal</div>
-              <div className="nexora-box-desc">A Nexora Systems desenvolve o Tech Briefing, nossos guias e ebooks. Somos uma equipe focada em tecnologia aplicada — conteúdo, produtos e sistemas que funcionam no mundo real.</div>
+              <div className="nexora-box-desc">A Nexora Systems é uma empresa de operações de IA. Desenvolvemos o TechBriefing para servir como a base de conhecimento para o mercado brasileiro de tecnologia aplicada.</div>
               <div className="nexora-box-links">
-                {[{name:'Ebooks',desc:'1 título publicado',href:'/ebooks'},{name:'Ferramentas recomendadas',desc:'20+ ferramentas testadas',href:'/ferramentas'}].map((l,i)=>(
+                {[{name:'Guias Estratégicos',desc:'Páginas-pilar de conhecimento',href:'/guias'},{name:'Laboratório de IA',desc:'Reviews e benchmarks reais',href:'/ferramentas'}].map((l,i)=>(
                   <a href={l.href} className="nexora-link" key={i}>
                     <div>
                       <div className="nexora-link-name">{l.name}</div>
@@ -144,18 +131,17 @@ function App(){
         </div>
       </section>
 
-      {/* CONTACT */}
       <section className="contact">
         <div className="wrap"><div className="contact-inner">
           <div>
-            <h2 className="contact-title">Fale com<br/><em>a gente.</em></h2>
-            <p className="contact-desc">Sugestões editoriais, parcerias, oportunidades de anúncio ou só um feedback honesto — estamos disponíveis.</p>
+            <h2 className="contact-title">Fale com<br/><em>a equipe.</em></h2>
+            <p className="contact-desc">Para sugestões editoriais, parcerias estratégicas ou feedback técnico sobre nossas automações.</p>
             <div className="contact-links">
               {[
-                {ico:'✉️',title:'E-mail geral',desc:'contato@iaworld.com.br',href:'mailto:contato@iaworld.com.br'},
-                {ico:'🤝',title:'Parcerias e anúncios',desc:'Acesso ao media kit e formatos',href:'/contato'},
-                {ico:'𝕏',title:'Twitter / X',desc:'@iaworldbr',href:'/contato'},
-                {ico:'in',title:'LinkedIn',desc:'Tech Briefing — Nexora Systems',href:'/contato'},
+                {ico:'✉️',title:'E-mail Editorial',desc:'contato@techbriefing.com.br',href:'mailto:contato@techbriefing.com.br'},
+                {ico:'🤝',title:'Parcerias',desc:'Solicite nosso media kit estratégico',href:'/contato'},
+                {ico:'𝕏',title:'X (Twitter)',desc:'Acompanhe o radar diário',href:'/contato'},
+                {ico:'in',title:'LinkedIn',desc:'Foco em IA Profissional',href:'/contato'},
               ].map((c,i)=>(
                 <a href={c.href} className="contact-link" key={i}>
                   <div className="contact-link-ico">{c.ico}</div>
@@ -168,17 +154,17 @@ function App(){
             </div>
           </div>
           <div style={{background:'var(--bg-2)',border:'1px solid var(--line-s)',borderRadius:16,padding:36}}>
-            <div style={{fontFamily:'var(--mono)',fontSize:11,fontWeight:500,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--amber)',marginBottom:16}}>Anuncie no Tech Briefing</div>
-            <div style={{fontFamily:'var(--serif)',fontSize:'clamp(22px,2.5vw,28px)',fontWeight:700,letterSpacing:'-.02em',lineHeight:1.2,marginBottom:14}}>Alcance quem decide sobre IA e tecnologia.</div>
-            <div style={{fontSize:14,color:'var(--text-2)',lineHeight:1.7,marginBottom:24}}>Nosso público são fundadores, gestores, freelancers e criadores que aplicam IA no dia a dia. Se a sua ferramenta ou produto serve essa audiência, fale com a gente.</div>
+            <div style={{fontFamily:'var(--mono)',fontSize:11,fontWeight:600,letterSpacing:'.1em',textTransform:'uppercase',color:'var(--amber)',marginBottom:16}}>Media Kit 2026</div>
+            <div style={{fontFamily:'var(--serif)',fontSize:'clamp(22px,2.5vw,28px)',fontWeight:700,letterSpacing:'-.02em',lineHeight:1.2,marginBottom:14}}>Alcance quem lidera a adoção de IA.</div>
+            <div style={{fontSize:14,color:'var(--text-2)',lineHeight:1.7,marginBottom:24}}>Nosso público é composto por decisores, engenheiros de operações e fundadores que buscam escala. Não vendemos cliques, vendemos atenção qualificada.</div>
             <div style={{display:'flex',flexDirection:'column',gap:10,marginBottom:24}}>
-              {['Newsletter: 3.000+ assinantes','Artigos patrocinados','Comparativos e reviews','Banners editoriais'].map((i,k)=>(
+              {['Briefing Semanal: 3k+ decisores','Reviews e Native Advertising','Sponsorships de Longo Prazo'].map((i,k)=>(
                 <div key={k} style={{display:'flex',alignItems:'center',gap:10,fontSize:13.5,color:'var(--text-2)'}}>
                   <span style={{color:'var(--cyan)',fontSize:12}}>✓</span>{i}
                 </div>
               ))}
             </div>
-            <button className="btn btn-fill" style={{width:'100%',justifyContent:'center'}}>Solicitar media kit →</button>
+            <button className="btn btn-fill" style={{width:'100%',justifyContent:'center'}}>Solicitar Media Kit →</button>
           </div>
         </div></div>
       </section>
@@ -187,9 +173,5 @@ function App(){
       </>
   );
 }
-
-const clamp_=v=>v;
-
-
 
 export default App;

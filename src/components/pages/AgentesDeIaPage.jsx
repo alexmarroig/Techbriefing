@@ -108,7 +108,7 @@ function CategoryHero(){
         <div className="cat-hero-meta">
           <div className="cat-hero-stat-block">
             {[
-              {n:'87',em:'',l:'Artigos publicados'},
+              {n:'50+',em:'',l:'Artigos publicados'},
               {n:'24',em:'',l:'Guias e tutoriais'},
               {n:'6',em:'',l:'Ferramentas avaliadas'},
               {n:'abr',em:' 2026',l:'Última atualização'},
@@ -319,7 +319,7 @@ function NewsletterStrip(){
                 <input className="nl-strip-input" type="email" placeholder="seu@email.com" value={email} onChange={e=>setEmail(e.target.value)} required/>
                 <button type="submit" className="btn btn-fill" style={{whiteSpace:'nowrap'}}>Quero receber →</button>
               </div>
-              <div className="nl-strip-note">12.000 leitores · LGPD · Cancele quando quiser</div>
+              <div className="nl-strip-note">3.000+ leitores · LGPD · Cancele quando quiser</div>
             </form>
           )}
         </div>

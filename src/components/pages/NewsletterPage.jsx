@@ -89,14 +89,14 @@ function App(){
           <h1 className="nl-hero-title">IA aplicada.<br/><em>Toda semana.</em></h1>
           <p className="nl-hero-sub">Guias práticos, ferramentas testadas e análises honestas sobre inteligência artificial e automação — para quem quer aplicar, não apenas ler.</p>
           <div className="nl-social-proof">
-            <div className="nl-sp-item"><div className="nl-sp-dot"/><span className="nl-sp-strong">12.000</span> leitores</div>
+            <div className="nl-sp-item"><div className="nl-sp-dot"/><span className="nl-sp-strong">3.000+</span> leitores</div>
             <div className="nl-sp-item"><div className="nl-sp-dot"/>Toda quinta-feira</div>
             <div className="nl-sp-item"><div className="nl-sp-dot"/>Gratuita, sempre</div>
             <div className="nl-sp-item"><div className="nl-sp-dot"/>Cancele quando quiser</div>
           </div>
           <div className="nl-form-card">
             <div className="nl-form-title">Inscreva-se gratuitamente</div>
-            <div className="nl-form-sub">Junte-se a 12.000 freelancers, fundadores e gestores que aplicam IA no dia a dia.</div>
+            <div className="nl-form-sub">Junte-se a 3.000+ freelancers, fundadores e gestores que aplicam IA no dia a dia.</div>
             <NlForm compact={false}/>
           </div>
         </div>
@@ -157,7 +157,7 @@ function App(){
             </div>
           </div>
           <div className="nl-audience-form">
-            <div className="nl-audience-form-title">Junte-se a 12.000 leitores</div>
+            <div className="nl-audience-form-title">Junte-se a 3.000+ leitores</div>
             <div className="nl-audience-form-sub">Gratuita. Toda quinta-feira. Cancele quando quiser.</div>
             <NlForm compact={true}/>
           </div>

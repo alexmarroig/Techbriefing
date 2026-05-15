@@ -119,7 +119,7 @@ function NlStrip(){
             <input className="nl-strip-input" type="email" placeholder="seu@email.com" value={email} onChange={e=>setEmail(e.target.value)} required/>
             <button type="submit" className="btn btn-fill">Quero receber →</button>
           </div>
-          <div style={{fontFamily:'var(--mono)',fontSize:10.5,color:'var(--text-4)',letterSpacing:'.03em'}}>12.000 leitores · LGPD · Cancele quando quiser</div>
+          <div style={{fontFamily:'var(--mono)',fontSize:10.5,color:'var(--text-4)',letterSpacing:'.03em'}}>3.000+ leitores · LGPD · Cancele quando quiser</div>
         </form>
       )}
     </div></div></div>
@@ -160,8 +160,8 @@ function App({ tools = [] }){
         <div className="wrap"><div className="tools-hero-inner">
           <div>
             <div className="tools-hero-eyebrow"><div className="tools-hero-rule"/><span className="tools-hero-eyebrow-text">Curadoria editorial</span></div>
-            <h1 className="tools-hero-title">Ferramentas que<br/><em>valem seu tempo.</em></h1>
-            <p className="tools-hero-sub">Testadas e recomendadas pela equipe do Tech Briefing. Organizadas por categoria, com avaliações honestas e links diretos. Links de afiliado identificados — eles nos ajudam a manter o conteúdo gratuito.</p>
+            <h1 className="tools-hero-title">Laboratório de<br/><em>Ferramentas de IA.</em></h1>
+            <p className="tools-hero-sub">A biblioteca de ferramentas que impulsionam o seu ROI editorial e operacional. Testadas exaustivamente em nossos fluxos reais. Organizadas por categoria, com avaliações honestas e links diretos. Links de afiliado identificados — eles nos ajudam a manter o conteúdo gratuito.</p>
           </div>
           <div className="tools-hero-stats">
             {[{n:`${total}`,em:'',l:'Ferramentas testadas'},{n:String(CATEGORIES.length),em:'',l:'Categorias'},{n:String(affCount),em:'',l:'Links afiliados'}].map((s,i)=>(

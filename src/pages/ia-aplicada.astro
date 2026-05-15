@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const articles = (await getCollection('articles'))
+  .filter(a => a.data.category?.toLowerCase().includes('ia') || a.data.category?.toLowerCase().includes('aplicada'))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<BaseLayout title="IA Aplicada | Tech Briefing" active="IA Aplicada">
+  <section class="page-header">
+    <div class="wrap">
+      <div class="kicker">Pilar Editorial 01</div>
+      <h1 class="page-title">IA <em>Aplicada.</em></h1>
+      <p class="page-sub">Casos de uso reais, produtividade e workflows práticos para transformar tecnologia em resultado.</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="wrap">
+      <div class="latest-grid">
+        {articles.map((article) => (
+          <a class="latest-card" href={`/artigos/${article.id}`}>
+            <div class="latest-img-wrap">
+              <img src={article.data.image || '/images/editorial/tech-radar.svg'} alt="" loading="lazy"/>
+            </div>
+            <div class="latest-content">
+              <div class="latest-top">
+                <span class="pill a">{article.data.category || 'IA'}</span>
+                <span>{new Date(article.data.date).toLocaleDateString('pt-BR', { day: '2-digit', month: 'short' })}</span>
+              </div>
+              <h3 class="latest-title">{article.data.title}</h3>
+              <p class="latest-desc">{article.data.description}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
