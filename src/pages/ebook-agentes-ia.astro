@@ -31,8 +31,8 @@ const CONFIG = {
   },
 
   heroBadge: 'Acesso imediato - checkout oficial',
-  heroHeadline: 'Você usa IA todo dia. Mas ainda faz o trabalho como se fosse 2019.',
-  heroSub: 'O guia direto para parar de colecionar prompts e começar a transformar IA em processos, agentes e ofertas que economizam tempo, reduzem retrabalho e podem virar dinheiro no seu negócio.',
+  heroHeadline: 'Pare de brincar com IA. Crie agentes que trabalham, economizam tempo e viram oferta.',
+  heroSub: 'Um guia direto para sair do uso solto do ChatGPT e transformar IA em processos reais: atendimento, vendas, conteúdo, operação e serviços que você consegue explicar, implementar e cobrar.',
 
   pages: '126',
   chapters: '12',
@@ -219,7 +219,7 @@ const ebookSchemas = [
       <span class="lp-brand-word">{CONFIG.portalBrand}</span>
       <span class="lp-brand-sub">{CONFIG.portalTagline}</span>
     </a>
-    <a href="#oferta" class="lp-topbar-cta">Garantir R$ 37</a>
+        <a href={CONFIG.primaryBuyLink} class="lp-topbar-cta" data-cta-id="ebook_topbar_checkout">Garantir R$ 37</a>
   </div>
 </div>
 
@@ -234,11 +234,17 @@ const ebookSchemas = [
         <div class="lp-danger-line">Se você ainda vende só tempo, prompt ou execução manual, a IA já virou pressão competitiva.</div>
         <h1 class="lp-h1">{CONFIG.heroHeadline}</h1>
         <p class="lp-hero-sub">{CONFIG.heroSub}</p>
+        <div class="lp-hero-answer">
+          <strong>Você compra para conseguir fazer 3 coisas:</strong>
+          <span>identificar processos automatizáveis</span>
+          <span>desenhar agentes úteis</span>
+          <span>transformar IA em entrega vendável</span>
+        </div>
         <div class="lp-urgency-card">
           <div>
             <span class="lp-urgency-kicker">Oferta oficial</span>
             <strong>R$ 37 no checkout oficial</strong>
-            <span class="lp-urgency-note">Mesmo preço configurado na Kiwify. Acesso imediato após a compra.</span>
+            <span class="lp-urgency-note">Mesmo preço em todos os checkouts oficiais. Acesso imediato após a compra.</span>
           </div>
         </div>
         <div class="lp-hero-price">
@@ -246,11 +252,11 @@ const ebookSchemas = [
           <span class="lp-price-label">{CONFIG.currentLabel}</span>
         </div>
         <div class="lp-hero-actions">
-          <a href={CONFIG.primaryBuyLink} class="lp-btn-primary">Quero transformar IA em dinheiro →</a>
-          <a href="#conteudo" class="lp-btn-ghost">Ver exatamente o que recebo</a>
+          <a href={CONFIG.primaryBuyLink} class="lp-btn-primary" data-cta-id="ebook_hero_primary">Comprar por R$ 37 agora →</a>
+          <a href="#aprender" class="lp-btn-ghost">Ver benefícios práticos</a>
         </div>
         <div class="lp-fast-trust" aria-label="Itens de segurança">
-          <span>Compra segura pela Kiwify</span>
+          <span>Compra segura pela Stripe</span>
           <span>Acesso imediato</span>
           <span>Garantia sem risco</span>
         </div>
@@ -289,7 +295,7 @@ const ebookSchemas = [
           </div>
           <div class="lp-checkout-row"><span>Preço atual</span><strong>R$ 37,00</strong></div>
           <div class="lp-checkout-row"><span>Garantia</span><strong>7 dias</strong></div>
-          <a href={CONFIG.primaryBuyLink} class="lp-btn-primary lp-btn-full">Liberar acesso agora →</a>
+          <a href={CONFIG.primaryBuyLink} class="lp-btn-primary lp-btn-full" data-cta-id="ebook_hero_checkout_card">Liberar acesso agora →</a>
         </div>
       </div>
     </div>
@@ -308,7 +314,7 @@ const ebookSchemas = [
         <span class="lp-shock-stat">R$ 37</span>
         <p>Menos que uma assinatura mensal de ferramenta. Mas com o mapa para saber o que construir, vender e evitar.</p>
       </div>
-      <a href={CONFIG.primaryBuyLink} class="lp-shock-cta">Garantir acesso por R$ 37 →</a>
+      <a href={CONFIG.primaryBuyLink} class="lp-shock-cta" data-cta-id="ebook_shock_strip">Garantir acesso por R$ 37 →</a>
     </div>
   </div>
 </section>
@@ -361,7 +367,7 @@ const ebookSchemas = [
     </div>
     <div class="lp-problem-pivot">
       <p>Este ebook foi feito para trocar improviso por arquitetura. Você entende onde agentes fazem sentido, como desenhar o fluxo e como evitar o tipo de projeto que parece revolucionário no print, mas não entrega resultado quando alguém depende dele.</p>
-      <a href={CONFIG.primaryBuyLink} class="lp-inline-cta">Quero parar de improvisar hoje →</a>
+      <a href={CONFIG.primaryBuyLink} class="lp-inline-cta" data-cta-id="ebook_problem_cta">Quero parar de improvisar hoje →</a>
     </div>
   </div>
 </section>
@@ -386,7 +392,7 @@ const ebookSchemas = [
       ))}
     </div>
     <div class="lp-cta-mid">
-      <a href={CONFIG.primaryBuyLink} class="lp-btn-primary">Quero o método por R$ 37 →</a>
+      <a href={CONFIG.primaryBuyLink} class="lp-btn-primary" data-cta-id="ebook_outcomes_cta">Quero o método por R$ 37 →</a>
     </div>
   </div>
 </section>
@@ -430,7 +436,7 @@ const ebookSchemas = [
       ))}
     </div>
     <div class="lp-cta-mid">
-      <a href={CONFIG.primaryBuyLink} class="lp-btn-primary">Comprar agora e receber no e-mail →</a>
+      <a href={CONFIG.primaryBuyLink} class="lp-btn-primary" data-cta-id="ebook_learning_cta">Comprar agora e receber no e-mail →</a>
     </div>
   </div>
 </section>
@@ -452,7 +458,7 @@ const ebookSchemas = [
           <span>Escopo defendável</span>
           <span>Entrega com método</span>
         </div>
-        <a href={CONFIG.primaryBuyLink} class="lp-btn-primary">Quero cobrar por IA com mais clareza →</a>
+        <a href={CONFIG.primaryBuyLink} class="lp-btn-primary" data-cta-id="ebook_value_cta">Quero cobrar por IA com mais clareza →</a>
       </div>
       <div class="lp-proof-board" aria-label="Resumo do valor do ebook">
         <div class="lp-proof-card lp-proof-card-hot">
@@ -540,15 +546,16 @@ const ebookSchemas = [
     <h2 class="lp-h2">O humano não sai do sistema. <em>Ele muda de posição.</em></h2>
     <div class="lp-roles-grid">
       {[
-        { phase: 'Fase 1', role: 'Executor', desc: 'Realiza tarefas passo a passo. É onde a maioria ainda está.' },
-        { phase: 'Fase 2', role: 'Supervisor', desc: 'Monitora agentes e ajusta regras. O sistema executa, o humano valida.' },
-        { phase: 'Fase 3', role: 'Arquiteto', desc: 'Projeta objetivos e define o processo. O humano decide o que o sistema deve fazer — não como.' },
+        { phase: 'Fase 1', role: 'Executor', desc: 'Realiza tarefas passo a passo. É onde a maioria ainda está.', href: '#conteudo' },
+        { phase: 'Fase 2', role: 'Supervisor', desc: 'Monitora agentes e ajusta regras. O sistema executa, o humano valida.', href: '#conteudo' },
+        { phase: 'Fase 3', role: 'Arquiteto', desc: 'Projeta objetivos e define o processo. O humano decide o que o sistema deve fazer — não como.', href: '#conteudo' },
       ].map(r => (
-        <div class="lp-role-card">
+        <a class="lp-role-card" href={r.href} aria-label={`Ver conteúdo sobre papel ${r.role}`}>
           <div class="lp-role-phase">{r.phase}</div>
           <div class="lp-role-title">{r.role}</div>
           <div class="lp-role-desc">{r.desc}</div>
-        </div>
+          <div class="lp-card-more">Ver no conteúdo →</div>
+        </a>
       ))}
     </div>
     <p class="lp-role-note">Não é uma mudança de relevância. É uma mudança de alavancagem. Seu julgamento passa a ter mais impacto porque atua no nível certo.</p>
@@ -631,9 +638,9 @@ const ebookSchemas = [
         <div class="lp-offer-price">
           <span class="lp-price-current-lg">{CONFIG.currentPrice}</span>
         </div>
-        <div class="lp-offer-deadline">O preço da página e o preço da Kiwify estão alinhados: R$ 37 pelo ebook digital com acesso imediato.</div>
-        <a href={CONFIG.buyLink} class="lp-btn-primary lp-btn-full">Liberar acesso por R$ 37 →</a>
-        <div class="lp-offer-microcopy">Pagamento seguro pela Kiwify. Acesso enviado por e-mail. Garantia de 7 dias.</div>
+        <div class="lp-offer-deadline">Preço oficial: R$ 37 pelo ebook digital com acesso imediato.</div>
+        <a href={CONFIG.buyLink} class="lp-btn-primary lp-btn-full" data-cta-id="ebook_offer_final">Liberar acesso por R$ 37 →</a>
+        <div class="lp-offer-microcopy">Pagamento seguro pela Stripe. Acesso enviado por e-mail. Garantia de 7 dias.</div>
         <div class="lp-offer-guarantee">
           <span class="lp-guarantee-ico">🛡️</span>
           <span>{CONFIG.guaranteeText}</span>
@@ -661,7 +668,7 @@ const ebookSchemas = [
       ))}
     </div>
     <div class="lp-cta-mid">
-      <a href={CONFIG.primaryBuyLink} class="lp-btn-primary">Quero meu acesso agora →</a>
+      <a href={CONFIG.primaryBuyLink} class="lp-btn-primary" data-cta-id="ebook_faq_cta">Quero meu acesso agora →</a>
     </div>
   </div>
 </section>
@@ -685,7 +692,7 @@ const ebookSchemas = [
         <span class="lp-price-current">{CONFIG.currentPrice}</span>
         <span class="lp-price-label">{CONFIG.currentLabel}</span>
       </div>
-      <a href={CONFIG.primaryBuyLink} class="lp-btn-primary">Entrar agora por R$ 37 →</a>
+      <a href={CONFIG.primaryBuyLink} class="lp-btn-primary" data-cta-id="ebook_close_cta">Entrar agora por R$ 37 →</a>
     </div>
   </div>
 </section>
@@ -719,7 +726,7 @@ const ebookSchemas = [
     <span>Preço oficial</span>
     <strong>R$ 37,00</strong>
   </div>
-  <a href={CONFIG.primaryBuyLink}>Comprar agora</a>
+  <a href={CONFIG.primaryBuyLink} data-cta-id="ebook_mobile_sticky">Comprar agora</a>
 </div>
 
 <div class="lp-exit-modal" data-exit-modal hidden>
@@ -783,6 +790,7 @@ const showExitOffer = (reason = 'exit_intent') => {
     trigger_reason: reason,
     page_location: window.location.href
   });
+  window.clarity?.('event', 'ebook_exit_offer_view');
   exitModal.querySelector('.lp-exit-cta')?.focus({ preventScroll: true });
 };
 
@@ -855,9 +863,11 @@ document.querySelectorAll('a[href^="https://pay.kiwify.com.br/"], a[href^="/chec
     const offerValue = isExitOffer ? 33.00 : 37.00;
     window.trackEbookCheckout?.({
       checkout_provider: isStripeCheckout ? 'stripe' : 'kiwify',
+      checkout_step: isExitOffer ? 'exit_offer' : 'landing_cta',
       cta_id: this.dataset.ctaId || '',
       link_text: this.textContent?.trim() || 'checkout',
       page_location: window.location.href,
+      currency: 'BRL',
       value: offerValue,
       items: [{
         item_id: 'ebook-agentes-ia-negocios',
@@ -867,6 +877,7 @@ document.querySelectorAll('a[href^="https://pay.kiwify.com.br/"], a[href^="/chec
         quantity: 1
       }]
     });
+    window.clarity?.('event', isExitOffer ? 'ebook_exit_offer_click' : 'ebook_checkout_click');
     window.setTimeout(() => {
       window.location.href = this.href;
     }, 250);
@@ -1100,6 +1111,40 @@ body {
 }
 .lp-hero-sub::first-letter {
   color: var(--amber);
+}
+.lp-hero-answer {
+  display: grid;
+  gap: 8px;
+  max-width: 620px;
+  margin: 0 0 24px;
+  padding: 16px;
+  border: 1px solid oklch(0.80 0.14 62 / 0.24);
+  border-radius: 16px;
+  background:
+    linear-gradient(135deg, oklch(0.80 0.14 62 / 0.10), transparent 54%),
+    oklch(0.07 0.006 240 / 0.74);
+  box-shadow: 0 16px 48px oklch(0 0 0 / 0.22);
+}
+.lp-hero-answer strong {
+  font-size: 15px;
+  color: var(--text);
+}
+.lp-hero-answer span {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--text-2);
+  font-size: 14px;
+  line-height: 1.4;
+}
+.lp-hero-answer span::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: var(--amber);
+  box-shadow: 0 0 14px oklch(0.80 0.14 62 / 0.5);
 }
 .lp-urgency-card {
   display: grid;
@@ -2032,6 +2077,14 @@ body {
   background: var(--bg-2); border: 1px solid var(--line-s);
   border-radius: 12px; padding: 28px; text-align: center;
   position: relative;
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.lp-role-card:hover {
+  border-color: var(--amber-d);
+  transform: translateY(-3px);
+  box-shadow: 0 18px 42px oklch(0 0 0 / 0.24);
 }
 .lp-role-card:last-child { border-color: var(--amber-d); }
 .lp-role-phase {
@@ -2045,6 +2098,14 @@ body {
 }
 .lp-role-card:last-child .lp-role-title { color: var(--amber); }
 .lp-role-desc { font-size: 13.5px; color: var(--text-2); line-height: 1.6; }
+.lp-card-more {
+  margin-top: 18px;
+  color: var(--amber);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
 .lp-role-note {
   font-size: 15px; color: var(--text-2); line-height: 1.7;
   max-width: 640px; font-style: italic;
