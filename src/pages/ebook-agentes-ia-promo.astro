@@ -1,0 +1,2252 @@
+﻿---
+import '../styles/global.css';
+import GoogleTag from '../components/GoogleTag.astro';
+import { EBOOK_OFFER } from '../data/ebookOffer.js';
+
+/*
+   CONFIG — Edite aqui todos os dados comerciais da página
+*/
+const CONFIG = {
+  bookTitle: 'Framework Operacional de Agentes de IA para Negócios',
+  subtitle: 'Manual operacional para aplicar agentes em processos reais',
+  authorBrand: 'Nexora Systems',
+  portalBrand: 'Tech Briefing',
+  portalTagline: 'IA aplicada para negócios reais',
+
+  fullPrice: 'R$ 97,00',
+  currentPrice: 'R$ 19,90',
+  currentLabel: 'Preço promocional hoje',
+
+  primaryBuyLink: 'https://pay.kiwify.com.br/QAJ6EOa',
+  buyLink: 'https://pay.kiwify.com.br/QAJ6EOa',
+
+  buyLinks: {
+    kiwify: { label: 'Checkout oficial', url: 'https://pay.kiwify.com.br/QAJ6EOa' },
+  },
+
+  heroBadge: 'Framework operacional - acesso imediato',
+  heroHeadline: 'Crie agentes de IA para automatizar tarefas reais no seu negócio',
+  heroSub: 'Um framework prático para identificar processos, desenhar fluxos e transformar IA em automação útil — mesmo sem equipe técnica.',
+
+  pages: '180',
+  chapters: '12',
+  format: 'PDF + EPUB',
+  updated: 'Maio 2026',
+  language: 'Português',
+
+  guaranteeText: 'Você tem 7 dias para ler, testar e decidir. Se achar que não valeu, devolvemos 100% do valor. Sem burocracia.',
+
+  painPoints: [
+    { label: 'Você acha que está usando IA, mas só está terceirizando conversa', desc: 'A IA responde bonito. Só que quem copia, cola, revisa, envia, acompanha e resolve exceção continua sendo você.' },
+    { label: 'Automação mal feita parece avanço e vira bomba-relógio', desc: 'Um lead incompleto, um campo errado ou uma exceção simples já quebra o fluxo e devolve o caos para sua mão.' },
+    { label: 'Enquanto você testa ferramenta, alguém transforma isso em oferta', desc: 'O mercado não está pagando por curiosidade em IA. Está pagando por processo, economia, velocidade e execução.' },
+    { label: 'Sem método, todo projeto de IA vira uma demo bonita e frágil', desc: 'Se você não define objetivo, regra, limite, teste e métrica, o agente impressiona no vídeo e falha no negócio real.' },
+  ],
+
+  outcomes: [
+    { title: 'Agente de atendimento', desc: 'Triar dúvidas, buscar contexto, responder com padrão e encaminhar casos sensíveis para humano.' },
+    { title: 'Agente SDR/vendas', desc: 'Qualificar leads, organizar oportunidades, sugerir follow-ups e manter o funil em movimento.' },
+    { title: 'Agente de conteúdo', desc: 'Transformar briefing em pautas, posts, e-mails e roteiros com consistência editorial.' },
+    { title: 'Agente de operações', desc: 'Ler solicitações, preencher sistemas, acionar ferramentas e reduzir tarefas repetitivas.' },
+    { title: 'Agente de monitoramento', desc: 'Acompanhar métricas, alertar exceções e gerar relatórios acionáveis para decisão.' },
+  ],
+
+  audienceBullets: [
+    { icon: '01', title: 'Empreendedor que quer parar de perder tempo', desc: 'Você já percebeu que IA pode vender, atender, produzir e operar melhor, mas não quer gastar semanas no caminho errado.' },
+    { icon: '02', title: 'Freelancer ou consultor que quer vender IA', desc: 'Você quer oferecer agentes e automações sem parecer aventureiro, com diagnóstico, escopo e entrega defendável.' },
+    { icon: '03', title: 'Gestor cansado de processo manual', desc: 'Você vê a equipe repetir tarefa todo dia e quer transformar essa rotina em sistema mais leve, rastreável e confiável.' },
+    { icon: '04', title: 'Quem já testou IA e sentiu que falta uma peça', desc: 'Você sabe usar ChatGPT, mas ainda não conseguiu transformar isso em operação, produto ou dinheiro de verdade.' },
+  ],
+
+  benefits: [
+    'Descobrir quais tarefas têm potencial real de economia, venda ou escala',
+    'Montar a arquitetura mínima de um agente: objetivo, memória, ferramentas, regras, testes e limites',
+    'Explicar por que sua solução vale dinheiro e não é só “um chatbot com nome bonito”',
+    'Mapear processos de vendas, suporte, conteúdo e operação que podem virar entrega real',
+    'Evitar projetos que encantam na demonstração e quebram quando o cliente usa',
+    'Definir onde o agente pode agir sozinho e onde precisa de aprovação humana',
+    'Criar uma oferta mais clara para vender IA sem prometer milagre',
+    'Seguir um roteiro de 8 passos para sair da ideia e chegar ao primeiro agente com método',
+  ],
+
+  chapterList: [
+    { num: '—', title: 'Introdução', desc: 'Por que agentes de IA são a próxima vantagem competitiva — e por que a maioria ainda não entendeu a mudança.' },
+    { num: '01', title: 'O fim da IA como "chat"', desc: 'Como a IA passou de assistente a executor. A diferença entre ajudar a pensar e ajudar a fazer.' },
+    { num: '02', title: 'O que são agentes de IA (de verdade)', desc: 'A definição que não quebra depois do hype. O que separa um agente real de um chatbot com nome diferente.' },
+    { num: '03', title: 'Cenário real: agente de qualificação', desc: 'Um caso prático completo — do problema à solução — para ver a teoria funcionando.' },
+    { num: '04', title: 'Os 6 blocos de um agente moderno', desc: 'Modelo de linguagem, memória, ferramentas, regras e limites, observabilidade e avaliação. Nenhum é opcional.' },
+    { num: '05', title: 'Tipos de agentes para negócios', desc: 'Operacional, analítico, de decisão, criativo e coordenador. Como escolher o tipo certo para cada problema.' },
+    { num: '06', title: 'Single-agent vs. multi-agent', desc: 'Quando simplificar é estratégia — e quando a complexidade realmente se justifica.' },
+    { num: '07', title: 'No-code + IA: construção acessível', desc: 'Por que construir agentes deixou de ser privilégio técnico e passou a depender de clareza de processo.' },
+    { num: '08', title: 'Como criar seu primeiro agente', desc: 'O framework de 8 passos: problema, objetivo, fluxo, ferramentas, construção, teste, ajuste e escala.' },
+    { num: '09', title: 'Casos reais de agentes em ação', desc: 'Onde agentes já estão gerando resultado — e por que esses casos podem ser replicados.' },
+    { num: '10', title: 'Erros comuns e como evitá-los', desc: 'Padrões que comprometem projetos de agentes — e estratégias para não repeti-los.' },
+    { num: '11', title: 'O futuro dos negócios com agentes', desc: 'Por que agentes estão deixando de ser diferencial para se tornarem infraestrutura operacional.' },
+    { num: '12', title: 'O que muda a partir de agora', desc: 'Uma nova perspectiva sobre trabalho, escala e atenção em um mundo com agentes.' },
+  ],
+
+  bonuses: [
+    { title: 'Checklist de mapeamento de processos', desc: 'Template prático para identificar onde agentes fazem sentido no seu negócio.' },
+    { title: 'Glossário de agentes de IA', desc: '40+ termos explicados de forma direta — sem jargão desnecessário.' },
+  ],
+
+  faq: [
+    { q: 'Preciso saber programar?', a: 'Não. O framework cobre desde opções no-code até abordagens com código, mas programação não é pré-requisito. O diferencial está em clareza de processo, não em habilidade técnica.' },
+    { q: 'O conteúdo é teórico ou prático?', a: 'Os dois, na medida certa. A teoria existe para construir um modelo mental sólido. Mas cada capítulo avança para frameworks, cenários e passos aplicáveis.' },
+    { q: 'O que diferencia este framework de tutoriais gratuitos?', a: 'Tutoriais ensinam a usar uma ferramenta. Este manual operacional ensina a pensar em sistemas — arquitetura, regras, limites, observabilidade e o papel do humano na operação. É a diferença entre montar uma demo e construir algo que funciona todos os dias.' },
+    { q: 'Serve para quem já usa IA no dia a dia?', a: 'Especialmente. Se você já usa ChatGPT ou ferramentas similares, este framework mostra o próximo nível: sair do chat e entrar na execução operacional com agentes que tomam decisões e executam ações.' },
+    { q: 'O conteúdo não fica desatualizado rápido?', a: 'O framework foca em arquitetura e princípios de design, não em ferramentas específicas. Os 6 blocos, o framework de decisão e o método de construção permanecem válidos independente de qual modelo ou plataforma você usar.' },
+    { q: 'O produto é digital?', a: 'Sim. Você recebe acesso imediato em PDF e EPUB — leia em qualquer dispositivo.' },
+    { q: 'Como recebo o acesso?', a: 'Imediatamente após a confirmação do pagamento, por e-mail.' },
+    { q: 'Tem versão impressa?', a: 'Sim. Disponível sob demanda pelo Clube dos Autores. A versão digital é entregue imediatamente.' },
+    { q: 'Tem garantia?', a: 'Sim. Garantia incondicional de 7 dias. Se não gostar, devolvemos 100%.' },
+  ],
+};
+
+const title = `${CONFIG.bookTitle} — Tech Briefing`;
+const description = 'Framework prático para identificar processos, desenhar fluxos e transformar IA em automação útil para negócios, mesmo sem equipe técnica.';
+const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url).toString();
+const image = '/images/ebook-cover.png';
+const absoluteImage = new URL(image, Astro.site ?? Astro.url).toString();
+const ebookSchemas = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: new URL('/', Astro.site ?? Astro.url).toString() },
+      { '@type': 'ListItem', position: 2, name: 'Ebooks', item: new URL('/ebooks/', Astro.site ?? Astro.url).toString() },
+      { '@type': 'ListItem', position: 3, name: CONFIG.bookTitle, item: canonical },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: CONFIG.bookTitle,
+    alternateName: 'Manual operacional de agentes de IA para negócios',
+    description,
+    url: canonical,
+    image: absoluteImage,
+    inLanguage: 'pt-BR',
+    numberOfPages: Number(CONFIG.pages),
+    category: 'Framework digital',
+    author: {
+      '@type': 'Organization',
+      name: CONFIG.authorBrand,
+      url: 'https://www.techbriefing.com.br/sobre/',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Tech Briefing',
+      url: 'https://www.techbriefing.com.br/',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://www.techbriefing.com.br/favicon.svg',
+      },
+    },
+    offers: {
+      '@type': 'Offer',
+      url: CONFIG.primaryBuyLink,
+      priceCurrency: 'BRL',
+      price: '19.90',
+      availability: 'https://schema.org/InStock',
+      category: 'Framework',
+    },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: CONFIG.faq.map((item) => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.a,
+      },
+    })),
+  },
+];
+---
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={description} />
+  <meta name="theme-color" content="#121417" />
+  <link rel="canonical" href={canonical} />
+  <meta property="og:type" content="product" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:image" content={absoluteImage} />
+  <meta property="og:site_name" content={CONFIG.portalBrand} />
+  <meta property="product:price:amount" content="19.90" />
+  <meta property="product:price:currency" content="BRL" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={absoluteImage} />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Space+Grotesk:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <title>{title}</title>
+  <GoogleTag />
+  <script type="application/ld+json" set:html={JSON.stringify(ebookSchemas)} />
+</head>
+<body>
+<GoogleTag mode="body" />
+<div class="lp-interactive-bg" aria-hidden="true">
+  <div class="lp-orbit lp-orbit-a"></div>
+  <div class="lp-orbit lp-orbit-b"></div>
+  <div class="lp-orbit lp-orbit-c"></div>
+</div>
+
+<!-- TOP BAR -->
+<div class="lp-topbar">
+  <div class="lp-wrap">
+    <a href="/" class="lp-topbar-logo">
+      <div class="lp-brand-mark" aria-hidden="true">
+        <span></span>
+        <span></span>
+      </div>
+      <span class="lp-brand-word">{CONFIG.portalBrand}</span>
+      <span class="lp-brand-sub">{CONFIG.portalTagline}</span>
+    </a>
+        <a href={CONFIG.primaryBuyLink} class="lp-topbar-cta" data-cta-id="ebook_topbar_checkout">Acessar por R$ 19,90</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="lp-hero">
+  <div class="lp-hero-grid-bg" aria-hidden="true"></div>
+  <div class="lp-hero-glow" aria-hidden="true"></div>
+  <div class="lp-wrap">
+    <div class="lp-hero-layout">
+      <div class="lp-hero-content">
+        <div class="lp-badge">{CONFIG.heroBadge}</div>
+        <div class="lp-danger-line">Para quem quer transformar IA em processo, não em conversa solta.</div>
+        <h1 class="lp-h1">{CONFIG.heroHeadline}</h1>
+        <p class="lp-hero-sub">{CONFIG.heroSub}</p>
+        <div class="lp-hero-answer">
+          <strong>O framework entrega o mapa para:</strong>
+          <span>identificar processos automatizáveis</span>
+          <span>desenhar fluxos de agentes antes de abrir ferramenta</span>
+          <span>transformar IA em automação útil para atendimento, vendas e operação</span>
+          <span>usar checklists, casos e templates sem começar do zero</span>
+        </div>
+        <div class="lp-urgency-card">
+          <div>
+            <span class="lp-urgency-kicker">Oferta oficial</span>
+            <strong>R$ 19,90 no checkout oficial</strong>
+            <span class="lp-urgency-note">Mesmo preço em todos os checkouts oficiais. Acesso imediato após a compra.</span>
+          </div>
+        </div>
+        <div class="lp-hero-price">
+          <span class="lp-price-current">{CONFIG.currentPrice}</span>
+          <span class="lp-price-label">{CONFIG.currentLabel}</span>
+        </div>
+        <div class="lp-hero-actions">
+          <a href={CONFIG.primaryBuyLink} class="lp-btn-primary" data-cta-id="ebook_hero_primary">Quero acessar o framework agora →</a>
+          <a href="#incluido" class="lp-btn-ghost">Ver o que está incluído</a>
+        </div>
+        <div class="lp-fast-trust" aria-label="Itens de segurança">
+          <span>180 páginas</span>
+          <span>PDF + EPUB</span>
+          <span>Frameworks prontos</span>
+          <span>Casos por setor</span>
+          <span>Garantia de 7 dias</span>
+        </div>
+        <div class="lp-hero-specs">
+          {[`${CONFIG.pages} páginas`, `${CONFIG.chapters} capítulos`, CONFIG.format, CONFIG.language].map(s => (
+            <span class="lp-spec"><span class="lp-spec-dot"></span>{s}</span>
+          ))}
+        </div>
+      </div>
+      <div class="lp-hero-mockup">
+        <div class="lp-book-3d">
+          <div class="lp-book-glow" aria-hidden="true"></div>
+          <img src="/images/ebook-cover.png" alt="Capa do ebook Agentes de IA para Negócios" class="lp-cover-img" width="380" height="540" />
+          <div class="lp-cover-circuit" aria-hidden="true">
+            <svg viewBox="0 0 380 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="40" cy="80" r="3" fill="#e84393" opacity="0.6"><animate attributeName="opacity" values="0.3;0.8;0.3" dur="3s" repeatCount="indefinite"/></circle>
+              <circle cx="340" cy="120" r="2.5" fill="#e84393" opacity="0.4"><animate attributeName="opacity" values="0.2;0.7;0.2" dur="4s" repeatCount="indefinite"/></circle>
+              <circle cx="60" cy="460" r="2" fill="#e84393" opacity="0.5"><animate attributeName="opacity" values="0.3;0.9;0.3" dur="2.5s" repeatCount="indefinite"/></circle>
+              <path d="M40,80 L120,80 L120,140" stroke="#e84393" stroke-width="0.8" opacity="0.25"><animate attributeName="opacity" values="0.1;0.4;0.1" dur="3s" repeatCount="indefinite"/></path>
+              <path d="M340,120 L280,120 L280,200" stroke="#e84393" stroke-width="0.8" opacity="0.2"><animate attributeName="opacity" values="0.1;0.35;0.1" dur="4s" repeatCount="indefinite"/></path>
+            </svg>
+          </div>
+        </div>
+        <div class="lp-hero-proof">
+          <strong>Para quem quer parar de testar IA e começar a usar IA como vantagem.</strong>
+          <span>Menos curiosidade. Mais processo, oferta e execução.</span>
+        </div>
+        <div class="lp-checkout-card" aria-label="Resumo da compra">
+          <div class="lp-checkout-kicker">Resumo da compra</div>
+          <div class="lp-checkout-product">
+            <img src="/images/ebook-cover.png" alt="" width="48" height="68" />
+            <div>
+              <strong>Framework Operacional de Agentes de IA</strong>
+              <span>PDF + EPUB • playbook prático</span>
+            </div>
+          </div>
+          <div class="lp-checkout-row"><span>Preço atual</span><strong>R$ 19,90</strong></div>
+          <div class="lp-checkout-row"><span>Garantia</span><strong>7 dias</strong></div>
+          <a href={CONFIG.primaryBuyLink} class="lp-btn-primary lp-btn-full" data-cta-id="ebook_hero_checkout_card">Acessar por R$ 19,90 →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONSTRUCOES -->
+<section class="lp-section lp-section-outcomes lp-build-section" id="construir">
+  <div class="lp-wrap">
+    <div class="lp-section-header">
+      <span class="lp-section-num">01</span>
+      <div class="lp-section-rule"></div>
+      <span class="lp-section-label">O que você vai conseguir construir</span>
+    </div>
+    <h2 class="lp-h2">Agentes com função clara, fluxo definido e utilidade real no negócio.</h2>
+    <p class="lp-section-intro">O objetivo não é criar um robô genérico. É sair com repertório para desenhar agentes que resolvem tarefas específicas e podem virar automação, entrega ou oferta.</p>
+    <div class="lp-outcomes-grid lp-agent-grid">
+      {CONFIG.outcomes.map((o, index) => (
+        <div class="lp-outcome-card lp-agent-card">
+          <span class="lp-outcome-num">{String(index + 1).padStart(2, '0')}</span>
+          <h3>{o.title}</h3>
+          <p>{o.desc}</p>
+        </div>
+      ))}
+    </div>
+    <div class="lp-cta-mid">
+      <a href={CONFIG.primaryBuyLink} class="lp-btn-primary" data-cta-id="ebook_build_cta">Quero acessar o framework agora →</a>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="lp-trust">
+  <div class="lp-wrap">
+    <div class="lp-trust-inner">
+      {[
+        { ico: 'PDF', label: 'PDF + EPUB' },
+        { ico: '24H', label: 'Acesso imediato' },
+        { ico: 'SSL', label: 'Pagamento seguro' },
+        { ico: '7D', label: 'Garantia de 7 dias' },
+        { ico: 'R$19', label: 'Preço promocional' },
+        { ico: 'BR', label: 'Conteúdo em português' },
+      ].map(t => (
+        <div class="lp-trust-item">
+          <span class="lp-trust-ico">{t.ico}</span>
+          <span>{t.label}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
+<!-- O PROBLEMA -->
+<section class="lp-section" style="position:relative;overflow:hidden">
+  <div class="lp-circuit-bg" aria-hidden="true">
+    <svg width="100%" height="100%" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="200" x2="200" y2="200" stroke="oklch(0.80 0.14 62/.08)" stroke-width="1"/><line x1="200" y1="200" x2="200" y2="400" stroke="oklch(0.80 0.14 62/.08)" stroke-width="1"/>
+      <line x1="1000" y1="100" x2="1200" y2="100" stroke="oklch(0.80 0.14 62/.06)" stroke-width="1"/><line x1="1000" y1="100" x2="1000" y2="350" stroke="oklch(0.80 0.14 62/.06)" stroke-width="1"/>
+      <circle cx="200" cy="200" r="4" fill="oklch(0.80 0.14 62/.15)"><animate attributeName="r" values="3;6;3" dur="4s" repeatCount="indefinite"/></circle>
+      <circle cx="1000" cy="100" r="3" fill="oklch(0.80 0.14 62/.12)"><animate attributeName="r" values="2;5;2" dur="5s" repeatCount="indefinite"/></circle>
+      <circle cx="1000" cy="350" r="3" fill="oklch(0.80 0.14 62/.1)"><animate attributeName="r" values="2;4;2" dur="3.5s" repeatCount="indefinite"/></circle>
+    </svg>
+  </div>
+  <div class="lp-wrap">
+    <div class="lp-section-header">
+      <span class="lp-section-num">02</span>
+      <div class="lp-section-rule"></div>
+      <span class="lp-section-label">O problema</span>
+    </div>
+    <h2 class="lp-h2">A dor não é falta de IA. É usar IA todo dia e continuar preso no operacional.</h2>
+    <div class="lp-problem-grid">
+      {CONFIG.painPoints.map(p => (
+        <div class="lp-problem-card">
+          <div class="lp-problem-label">{p.label}</div>
+          <div class="lp-problem-desc">{p.desc}</div>
+        </div>
+      ))}
+    </div>
+    <div class="lp-problem-pivot">
+      <p>Este framework foi feito para trocar improviso por arquitetura. Você entende onde agentes fazem sentido, como desenhar o fluxo e como evitar o tipo de projeto que parece revolucionário no print, mas não entrega resultado quando alguém depende dele.</p>
+      <a href={CONFIG.primaryBuyLink} class="lp-inline-cta" data-cta-id="ebook_problem_cta">Quero sair do improviso →</a>
+    </div>
+  </div>
+</section>
+
+<!-- NAO E SO EBOOK -->
+<section class="lp-section lp-section-outcomes">
+  <div class="lp-wrap">
+    <div class="lp-section-header">
+      <span class="lp-section-num">03</span>
+      <div class="lp-section-rule"></div>
+      <span class="lp-section-label">Por que isso não é só mais um ebook de IA</span>
+    </div>
+    <h2 class="lp-h2">É um playbook de operação para transformar IA em fluxo, decisão e execução.</h2>
+    <p class="lp-section-intro">Conteúdo gratuito costuma mostrar ferramenta. Este manual operacional mostra como decidir o que automatizar, como desenhar a arquitetura e como evitar automações bonitas que quebram no uso real.</p>
+    <div class="lp-outcomes-grid">
+      {[
+        { title: 'Framework visual', desc: 'Você enxerga agente como sistema: objetivo, entrada, regra, memória, ferramenta, validação humana e métrica.' },
+        { title: 'Aplicado a negócios', desc: 'Os exemplos partem de atendimento, vendas, conteúdo, operação e monitoramento, não de demos genéricas.' },
+        { title: 'Passo a passo defendável', desc: 'O foco é montar uma lógica que você consegue explicar para cliente, equipe ou sócio antes de implementar.' },
+        { title: 'Menos hype, mais execução', desc: 'Você entende limites, riscos e critérios para saber quando um agente vale a pena e quando é melhor simplificar.' },
+      ].map((o, index) => (
+        <div class="lp-outcome-card">
+          <span class="lp-outcome-num">{String(index + 1).padStart(2, '0')}</span>
+          <h3>{o.title}</h3>
+          <p>{o.desc}</p>
+        </div>
+      ))}
+    </div>
+    <div class="lp-cta-mid">
+      <a href={CONFIG.primaryBuyLink} class="lp-btn-primary" data-cta-id="ebook_outcomes_cta">Acessar por R$ 19,90 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- PARA QUEM É -->
+<section class="lp-section lp-section-alt">
+  <div class="lp-wrap">
+    <div class="lp-section-header">
+      <span class="lp-section-num">04</span>
+      <div class="lp-section-rule"></div>
+      <span class="lp-section-label">Para quem está travado</span>
+    </div>
+    <h2 class="lp-h2">Para quem sente que está vendo uma oportunidade enorme passar na frente.</h2>
+    <div class="lp-audience-grid">
+      {CONFIG.audienceBullets.map(a => (
+        <div class="lp-audience-card">
+          <div class="lp-audience-ico">{a.icon}</div>
+          <div class="lp-audience-title">{a.title}</div>
+          <div class="lp-audience-desc">{a.desc}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- O QUE VOCE VAI APRENDER -->
+<section class="lp-section" id="incluido">
+  <div class="lp-wrap">
+    <div class="lp-section-header">
+      <span class="lp-section-num">05</span>
+      <div class="lp-section-rule"></div>
+      <span class="lp-section-label">O que você vai aprender</span>
+    </div>
+    <h2 class="lp-h2">Menos teoria solta. Mais clareza para criar algo que alguém pagaria para ter.</h2>
+    <div class="lp-benefits-grid">
+      {CONFIG.benefits.map(b => (
+        <div class="lp-benefit-row">
+          <span class="lp-benefit-check">✓</span>
+          <span>{b}</span>
+        </div>
+      ))}
+    </div>
+    <div class="lp-cta-mid">
+      <a href={CONFIG.primaryBuyLink} class="lp-btn-primary" data-cta-id="ebook_learning_cta">Quero acessar o framework agora →</a>
+    </div>
+  </div>
+</section>
+
+<!-- VALUE PROOF -->
+<section class="lp-section lp-proof-section" id="preview">
+  <div class="lp-wrap">
+    <div class="lp-section-header">
+      <span class="lp-section-num">06</span>
+      <div class="lp-section-rule"></div>
+      <span class="lp-section-label">Para cobrar melhor</span>
+    </div>
+    <div class="lp-proof-layout">
+      <div>
+        <h2 class="lp-h2">Não venda “prompt”. Venda processo, automação e resultado.</h2>
+        <p class="lp-section-intro">Cliente não paga mais porque você sabe usar uma ferramenta. Cliente paga quando entende que você consegue tirar uma tarefa repetitiva da mão dele, reduzir erro e criar uma operação mais leve.</p>
+        <div class="lp-proof-points">
+          <span>Diagnóstico claro</span>
+          <span>Escopo defendável</span>
+          <span>Entrega com método</span>
+        </div>
+        <a href={CONFIG.primaryBuyLink} class="lp-btn-primary" data-cta-id="ebook_value_cta">Quero cobrar por IA com mais clareza →</a>
+      </div>
+      <div class="lp-proof-board" aria-label="Resumo do valor do framework">
+        <div class="lp-proof-card lp-proof-card-hot">
+          <span>Antes</span>
+          <strong>Você entrega conversa com IA.</strong>
+          <p>O cliente acha interessante, mas não enxerga operação, economia ou retorno.</p>
+        </div>
+        <div class="lp-proof-arrow" aria-hidden="true">→</div>
+        <div class="lp-proof-card">
+          <span>Depois</span>
+          <strong>Você entrega agente com função.</strong>
+          <p>Problema, fluxo, regra, ferramenta, limite humano e métrica ficam claros.</p>
+        </div>
+        <div class="lp-proof-price">
+          <small>Preço oficial</small>
+          <strong>R$ 19,90</strong>
+          <span>Acesso imediato em PDF + EPUB</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFERENCIAL: OS 6 BLOCOS -->
+<section class="lp-section lp-section-alt" style="position:relative;overflow:hidden">
+  <div class="lp-neural-bg" aria-hidden="true">
+    <svg width="100%" height="100%" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g opacity="0.12">
+        <circle cx="150" cy="200" r="40" stroke="oklch(0.80 0.14 62)" stroke-width="0.5" fill="none"/><circle cx="150" cy="200" r="5" fill="oklch(0.80 0.14 62/.3)"><animate attributeName="r" values="4;7;4" dur="3s" repeatCount="indefinite"/></circle>
+        <circle cx="400" cy="100" r="30" stroke="oklch(0.80 0.14 62)" stroke-width="0.5" fill="none"/><circle cx="400" cy="100" r="4" fill="oklch(0.80 0.14 62/.25)"/>
+        <circle cx="350" cy="350" r="35" stroke="oklch(0.80 0.14 62)" stroke-width="0.5" fill="none"/><circle cx="350" cy="350" r="4" fill="oklch(0.80 0.14 62/.2)"/>
+        <circle cx="850" cy="150" r="45" stroke="oklch(0.80 0.14 62)" stroke-width="0.5" fill="none"/><circle cx="850" cy="150" r="5" fill="oklch(0.80 0.14 62/.2)"><animate attributeName="r" values="3;6;3" dur="4s" repeatCount="indefinite"/></circle>
+        <circle cx="1050" cy="400" r="30" stroke="oklch(0.80 0.14 62)" stroke-width="0.5" fill="none"/><circle cx="1050" cy="400" r="4" fill="oklch(0.80 0.14 62/.2)"/>
+        <circle cx="600" cy="600" r="25" stroke="oklch(0.80 0.14 62)" stroke-width="0.5" fill="none"/>
+        <line x1="150" y1="200" x2="400" y2="100" stroke="oklch(0.80 0.14 62)" stroke-width="0.4"/><line x1="150" y1="200" x2="350" y2="350" stroke="oklch(0.80 0.14 62)" stroke-width="0.4"/>
+        <line x1="400" y1="100" x2="850" y2="150" stroke="oklch(0.80 0.14 62)" stroke-width="0.4"/><line x1="350" y1="350" x2="600" y2="600" stroke="oklch(0.80 0.14 62)" stroke-width="0.4"/>
+        <line x1="850" y1="150" x2="1050" y2="400" stroke="oklch(0.80 0.14 62)" stroke-width="0.4"/><line x1="1050" y1="400" x2="600" y2="600" stroke="oklch(0.80 0.14 62)" stroke-width="0.3"/>
+      </g>
+    </svg>
+  </div>
+  <div class="lp-wrap">
+    <div class="lp-section-header">
+      <span class="lp-section-num">07</span>
+      <div class="lp-section-rule"></div>
+      <span class="lp-section-label">Dentro do framework</span>
+    </div>
+    <h2 class="lp-h2">Os 6 blocos que todo agente funcional <em>precisa ter.</em></h2>
+    <p class="lp-section-intro">A partir desse ponto, você deixa de montar fluxos de forma intuitiva e começa a desenhar arquitetura. É o que separa um agente que funciona de um que parece funcionar.</p>
+    <div class="lp-blocks-grid">
+      {[
+        { num: '01', title: 'Modelo de linguagem', desc: 'O cérebro que toma decisões. Não é só GPT — é entender qual modelo serve para qual função.' },
+        { num: '02', title: 'Memória', desc: 'O que impede o sistema de começar do zero toda vez. Contexto persistente que melhora com o uso.' },
+        { num: '03', title: 'Ferramentas', desc: 'Onde a IA deixa de falar e começa a agir. APIs, integrações e ações no mundo real.' },
+        { num: '04', title: 'Regras e limites', desc: 'O que torna o sistema confiável. Permissões, segurança e limites definidos por humanos.' },
+        { num: '05', title: 'Observabilidade', desc: 'Enxergar o que está acontecendo. Sem isso, você não sabe se o agente funciona ou apenas parece funcionar.' },
+        { num: '06', title: 'Avaliação', desc: 'Onde o sistema deixa de ser experimento. Métricas reais que permitem evolução contínua.' },
+      ].map(b => (
+        <div class="lp-block-card">
+          <div class="lp-block-num">{b.num}</div>
+          <div class="lp-block-title">{b.title}</div>
+          <div class="lp-block-desc">{b.desc}</div>
+        </div>
+      ))}
+    </div>
+    <p class="lp-blocks-quote">Cada um resolve um problema específico. Nenhum é opcional em sistemas reais.</p>
+  </div>
+</section>
+
+<!-- TRANSFORMACAO: O PAPEL HUMANO -->
+<section class="lp-section" style="position:relative;overflow:hidden">
+  <div class="lp-flow-bg" aria-hidden="true">
+    <svg width="100%" height="100%" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,250 Q300,100 600,250 T1200,250" stroke="oklch(0.80 0.14 62/.08)" stroke-width="1.5" fill="none"/>
+      <path d="M0,300 Q300,150 600,300 T1200,300" stroke="oklch(0.80 0.14 62/.05)" stroke-width="1" fill="none"/>
+      <circle r="4" fill="oklch(0.80 0.14 62/.3)"><animateMotion dur="8s" repeatCount="indefinite" path="M0,250 Q300,100 600,250 T1200,250"/></circle>
+      <circle r="3" fill="oklch(0.80 0.14 62/.2)"><animateMotion dur="10s" repeatCount="indefinite" path="M0,300 Q300,150 600,300 T1200,300"/></circle>
+    </svg>
+  </div>
+  <div class="lp-wrap">
+    <div class="lp-section-header">
+      <span class="lp-section-num">08</span>
+      <div class="lp-section-rule"></div>
+      <span class="lp-section-label">A mudança de papel</span>
+    </div>
+    <h2 class="lp-h2">O humano não sai do sistema. <em>Ele muda de posição.</em></h2>
+    <div class="lp-roles-grid">
+      {[
+        { phase: 'Fase 1', role: 'Executor', desc: 'Realiza tarefas passo a passo. É onde a maioria ainda está.', href: '#conteudo' },
+        { phase: 'Fase 2', role: 'Supervisor', desc: 'Monitora agentes e ajusta regras. O sistema executa, o humano valida.', href: '#conteudo' },
+        { phase: 'Fase 3', role: 'Arquiteto', desc: 'Projeta objetivos e define o processo. O humano decide o que o sistema deve fazer — não como.', href: '#conteudo' },
+      ].map(r => (
+        <a class="lp-role-card" href={r.href} aria-label={`Ver conteúdo sobre papel ${r.role}`}>
+          <div class="lp-role-phase">{r.phase}</div>
+          <div class="lp-role-title">{r.role}</div>
+          <div class="lp-role-desc">{r.desc}</div>
+          <div class="lp-card-more">Ver no conteúdo →</div>
+        </a>
+      ))}
+    </div>
+    <p class="lp-role-note">Não é uma mudança de relevância. É uma mudança de alavancagem. Seu julgamento passa a ter mais impacto porque atua no nível certo.</p>
+  </div>
+</section>
+
+<!-- CAPÍTULOS -->
+<section class="lp-section lp-section-alt" id="conteudo">
+  <div class="lp-wrap">
+    <div class="lp-section-header">
+      <span class="lp-section-num">09</span>
+      <div class="lp-section-rule"></div>
+      <span class="lp-section-label">Conteúdo completo</span>
+    </div>
+    <h2 class="lp-h2">{CONFIG.pages} páginas. {CONFIG.chapters} capítulos. <em>Zero enrolação.</em></h2>
+    <div class="lp-chapters-grid">
+      {CONFIG.chapterList.map(ch => (
+        <div class="lp-chapter-card">
+          <div class="lp-chapter-num">{ch.num}</div>
+          <div class="lp-chapter-title">{ch.title}</div>
+          <div class="lp-chapter-desc">{ch.desc}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- POR QUE A NEXORA -->
+<section class="lp-section lp-nexora-section">
+  <div class="lp-wrap">
+    <div class="lp-section-header">
+      <span class="lp-section-num">10</span>
+      <div class="lp-section-rule"></div>
+      <span class="lp-section-label">A origem</span>
+    </div>
+    <div class="lp-origin-layout">
+      <div>
+        <h2 class="lp-h2">Criado pela Nexora Systems para quem quer IA aplicada, não palestra sobre IA.</h2>
+        <div class="lp-origin-body">
+          <p>O <strong>Tech Briefing</strong> é o braço editorial da Nexora Systems: uma linha de guias, análises e produtos para transformar tecnologia em decisão prática. Sem empilhar ferramenta, sem vender milagre e sem esconder as partes difíceis.</p>
+          <p>Este guia nasceu de uma pergunta simples: <strong>como transformar IA em processo que opera, mede e melhora?</strong> A resposta está em arquitetura, limites, observabilidade e escolha correta do problema.</p>
+          <p>Você recebe <strong>{CONFIG.pages} páginas</strong> com frameworks, cenários e decisões práticas para aplicar no seu negócio ou nos projetos dos seus clientes.</p>
+        </div>
+      </div>
+      <div class="lp-origin-card">
+        <img src="/images/nexora-systems-logo.png" alt="Nexora Systems" class="lp-nexora-logo-img" width="640" height="400" />
+        <div class="lp-origin-card-name">{CONFIG.authorBrand}</div>
+        <div class="lp-origin-card-desc">Tecnologia, sistemas e inteligência artificial aplicada ao mundo real. Conteúdo, produtos e métodos para quem quer transformar IA em resultado.</div>
+        <a href="/sobre" class="lp-arrow-link">Conhecer a Nexora →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFERTA -->
+<section class="lp-section lp-section-offer" id="oferta">
+  <div class="lp-wrap">
+    <div class="lp-offer-box">
+      <div class="lp-offer-left">
+        <div class="lp-offer-cover-wrap">
+          <img src="/images/ebook-spread.png" alt="Ebook aberto — capa e contracapa" class="lp-offer-spread" width="600" height="380" />
+          <div class="lp-offer-cover-glow" aria-hidden="true"></div>
+        </div>
+      </div>
+      <div class="lp-offer-right">
+        <div class="lp-badge">Preço oficial do framework</div>
+        <h2 class="lp-offer-title">{CONFIG.bookTitle}</h2>
+        <p class="lp-offer-sub">Você não está comprando “mais um PDF sobre IA”. Está pegando um mapa para transformar IA em processo, agente, entrega e oferta.</p>
+        <ul class="lp-offer-includes">
+          <li><span class="lp-oi-check">✓</span> Guia completo — {CONFIG.pages} páginas, {CONFIG.chapters} capítulos</li>
+          <li><span class="lp-oi-check">✓</span> Os 6 blocos de arquitetura de agentes</li>
+          <li><span class="lp-oi-check">✓</span> Framework de 8 passos para criar seu primeiro agente</li>
+          <li><span class="lp-oi-check">✓</span> Checklists para mapear processos e evitar automações frágeis</li>
+          <li><span class="lp-oi-check">✓</span> Cenários reais com análise passo a passo</li>
+          <li><span class="lp-oi-check">✓</span> Formatos PDF + EPUB — acesso imediato</li>
+          <li><span class="lp-oi-check">✓</span> Atualizações futuras incluídas</li>
+          {CONFIG.bonuses.map(b => (
+            <li><span class="lp-oi-check lp-oi-bonus">+</span> <strong>Bônus:</strong> {b.title}</li>
+          ))}
+        </ul>
+        <div class="lp-offer-price">
+          <span class="lp-price-current-lg">{CONFIG.currentPrice}</span>
+        </div>
+        <div class="lp-offer-deadline">Preço promocional: R$ 19,90 pelo framework digital com acesso imediato.</div>
+        <a href={CONFIG.buyLink} class="lp-btn-primary lp-btn-full" data-cta-id="ebook_offer_final">Acessar por R$ 19,90 →</a>
+        <div class="lp-offer-microcopy">Pagamento seguro pela Kiwify. Acesso enviado por e-mail. Garantia de 7 dias.</div>
+        <div class="lp-offer-guarantee">
+          <span class="lp-guarantee-ico">🛡️</span>
+          <span>{CONFIG.guaranteeText}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GARANTIA -->
+<section class="lp-section lp-guarantee-section">
+  <div class="lp-wrap">
+    <div class="lp-section-header">
+      <span class="lp-section-num">11</span>
+      <div class="lp-section-rule"></div>
+      <span class="lp-section-label">Garantia simples</span>
+    </div>
+    <div class="lp-guarantee-panel">
+      <div>
+        <h2 class="lp-h2">Teste por 7 dias. Se não fizer sentido, você pode pedir reembolso.</h2>
+        <p class="lp-section-intro">A decisão fica leve: acesse o framework, leia os primeiros blocos, veja se o método ajuda você a enxergar processos e agentes com mais clareza. Se não fizer sentido para sua realidade, peça reembolso dentro do prazo.</p>
+      </div>
+      <a href={CONFIG.primaryBuyLink} class="lp-btn-primary" data-cta-id="ebook_guarantee_cta">Quero testar sem risco →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="lp-section">
+  <div class="lp-wrap">
+    <div class="lp-section-header">
+      <span class="lp-section-num">12</span>
+      <div class="lp-section-rule"></div>
+      <span class="lp-section-label">Perguntas frequentes</span>
+    </div>
+    <h2 class="lp-h2">Dúvidas? <em>Respostas.</em></h2>
+    <div class="lp-faq-list">
+      {CONFIG.faq.map(f => (
+        <details class="lp-faq-item">
+          <summary class="lp-faq-q">{f.q}</summary>
+          <div class="lp-faq-a">{f.a}</div>
+        </details>
+      ))}
+    </div>
+    <div class="lp-cta-mid">
+      <a href={CONFIG.primaryBuyLink} class="lp-btn-primary" data-cta-id="ebook_faq_cta">Quero acessar o framework agora →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FECHAMENTO -->
+<section class="lp-section lp-section-alt lp-section-close" style="position:relative;overflow:hidden">
+  <div class="lp-hex-bg" aria-hidden="true">
+    <svg width="100%" height="100%" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g opacity="0.08" transform="translate(100,50)"><polygon points="30,0 60,17 60,52 30,69 0,52 0,17" stroke="oklch(0.80 0.14 62)" stroke-width="0.8" fill="none"/></g>
+      <g opacity="0.06" transform="translate(200,120)"><polygon points="30,0 60,17 60,52 30,69 0,52 0,17" stroke="oklch(0.80 0.14 62)" stroke-width="0.8" fill="none"/></g>
+      <g opacity="0.1" transform="translate(900,30)"><polygon points="30,0 60,17 60,52 30,69 0,52 0,17" stroke="oklch(0.80 0.14 62)" stroke-width="0.8" fill="none"/></g>
+      <g opacity="0.07" transform="translate(1000,180)"><polygon points="30,0 60,17 60,52 30,69 0,52 0,17" stroke="oklch(0.80 0.14 62)" stroke-width="0.8" fill="none"/></g>
+      <g opacity="0.05" transform="translate(550,250)"><polygon points="30,0 60,17 60,52 30,69 0,52 0,17" stroke="oklch(0.80 0.14 62)" stroke-width="0.8" fill="none"/></g>
+    </svg>
+  </div>
+  <div class="lp-wrap">
+    <div class="lp-close-content">
+      <h2 class="lp-h2-center">O mercado não vai esperar você “entender IA com calma”.</h2>
+      <p class="lp-close-sub">Você pode continuar vendo tutoriais soltos, salvando posts e testando ferramenta aleatória. Ou pode pegar um método direto e construir o primeiro sistema que trabalha por você.</p>
+      <div class="lp-hero-price" style="justify-content:center">
+        <span class="lp-price-current">{CONFIG.currentPrice}</span>
+        <span class="lp-price-label">{CONFIG.currentLabel}</span>
+      </div>
+      <a href={CONFIG.primaryBuyLink} class="lp-btn-primary" data-cta-id="ebook_close_cta">Acessar por R$ 19,90 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="lp-footer">
+  <div class="lp-wrap">
+    <div class="lp-footer-inner">
+      <div>
+        <div class="lp-footer-brand">
+          <div class="lp-pip"></div>
+          <span>{CONFIG.authorBrand}</span>
+        </div>
+        <p class="lp-footer-desc">Tecnologia, sistemas e inteligência artificial aplicada ao mundo real.</p>
+      </div>
+      <div class="lp-footer-links">
+        <a href={CONFIG.primaryBuyLink}>Comprar framework</a>
+        <a href="/">Tech Briefing</a>
+        <a href="/sobre">Sobre</a>
+        <a href="/contato">Contato</a>
+      </div>
+    </div>
+    <div class="lp-footer-bottom">
+      <span>&copy; 2026 {CONFIG.authorBrand}. Todos os direitos reservados.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="lp-mobile-buy" aria-label="Comprar framework">
+  <div>
+    <span>Preço oficial</span>
+    <strong>R$ 19,90</strong>
+  </div>
+  <a href={CONFIG.primaryBuyLink} data-cta-id="ebook_mobile_sticky">Acessar agora</a>
+</div>
+
+<script is:inline>
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if (!reduceMotion) {
+  const bg = document.querySelector('.lp-interactive-bg');
+  window.addEventListener('pointermove', event => {
+    if (!bg) return;
+    const x = (event.clientX / window.innerWidth - 0.5).toFixed(3);
+    const y = (event.clientY / window.innerHeight - 0.5).toFixed(3);
+    bg.style.setProperty('--mx', x);
+    bg.style.setProperty('--my', y);
+    document.documentElement.style.setProperty('--mx', x);
+    document.documentElement.style.setProperty('--my', y);
+  }, { passive: true });
+
+  window.addEventListener('scroll', () => {
+    if (!bg) return;
+    bg.style.setProperty('--scroll', String(Math.min(window.scrollY / 1200, 1)));
+  }, { passive: true });
+}
+
+// Send tracking before leaving for checkout.
+document.querySelectorAll('a[href^="https://pay.kiwify.com.br/"]').forEach((link, index) => {
+  if (!link.dataset.ctaId) {
+    link.dataset.ctaId = `ebook_cta_${index + 1}`;
+  }
+
+  const checkoutUrl = new URL(link.getAttribute('href'), window.location.origin);
+  const currentParams = new URLSearchParams(window.location.search);
+  [
+    'utm_source',
+    'utm_medium',
+    'utm_campaign',
+    'utm_content',
+    'utm_term',
+    'gclid',
+    'gbraid',
+    'wbraid'
+  ].forEach(param => {
+    const value = currentParams.get(param);
+    if (value && !checkoutUrl.searchParams.has(param)) {
+      checkoutUrl.searchParams.set(param, value);
+    }
+  });
+  link.href = checkoutUrl.toString();
+
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    window.trackEbookCheckout?.({
+      checkout_provider: 'kiwify',
+      checkout_step: 'landing_cta',
+      cta_id: this.dataset.ctaId || '',
+      link_text: this.textContent?.trim() || 'checkout',
+      page_location: window.location.href,
+      currency: 'BRL',
+      value: 19.90,
+      items: [{
+        item_id: 'ebook-agentes-ia-negocios',
+        item_name: 'Agentes de IA para Negocios',
+        item_category: 'Framework',
+        price: 19.90,
+        quantity: 1
+      }]
+    });
+    window.clarity?.('event', 'ebook_checkout_click');
+    window.setTimeout(() => {
+      window.location.href = this.href;
+    }, 250);
+  });
+});
+</script>
+
+</body>
+</html>
+
+<style>
+/* LANDING PAGE SCOPED STYLES */
+:root {
+  --lp-bg: oklch(0.115 0.012 242);
+  --lp-bg-2: oklch(0.145 0.014 242);
+  --lp-bg-3: oklch(0.18 0.016 242);
+  --lp-card: oklch(0.16 0.014 242 / 0.82);
+  --lp-card-strong: oklch(0.20 0.018 242 / 0.88);
+}
+
+/* Layout */
+.lp-wrap { max-width: 1120px; margin: 0 auto; padding: 0 var(--pad, 40px); }
+@media(max-width:640px){ .lp-wrap { padding: 0 20px; } }
+
+body {
+  background:
+    radial-gradient(circle at calc(50% + (var(--mx, 0) * 120px)) calc(10% + (var(--my, 0) * 60px)), oklch(0.42 0.08 235 / 0.22), transparent 30rem),
+    radial-gradient(circle at calc(78% - (var(--mx, 0) * 90px)) calc(24% - (var(--my, 0) * 50px)), oklch(0.80 0.14 62 / 0.07), transparent 25rem),
+    linear-gradient(180deg, var(--lp-bg-2), var(--lp-bg));
+}
+
+.lp-interactive-bg {
+  --mx: 0;
+  --my: 0;
+  --scroll: 0;
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  opacity: calc(0.92 - (var(--scroll) * 0.2));
+}
+.lp-interactive-bg::before {
+  content: '';
+  position: absolute;
+  inset: -20%;
+  background-image:
+    linear-gradient(115deg, transparent 0 42%, oklch(0.72 0.18 338 / 0.11) 42.2% 42.7%, transparent 43% 100%),
+    linear-gradient(65deg, transparent 0 58%, oklch(0.80 0.14 62 / 0.09) 58.2% 58.6%, transparent 59% 100%);
+  transform: translate(calc(var(--mx) * 34px), calc(var(--my) * 28px));
+  transition: transform 0.16s ease-out;
+}
+.lp-orbit {
+  position: absolute;
+  border: 1px solid oklch(0.72 0.18 338 / 0.18);
+  border-radius: 999px;
+  filter: blur(0.1px);
+  transform: translate(calc(var(--mx) * -22px), calc(var(--my) * -18px));
+}
+.lp-orbit::after {
+  content: '';
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: oklch(0.72 0.18 338);
+  box-shadow: 0 0 20px oklch(0.72 0.18 338 / 0.7);
+}
+.lp-orbit-a { width: 360px; height: 180px; right: 8%; top: 16%; transform: rotate(-18deg) translate(calc(var(--mx) * -22px), calc(var(--my) * -18px)); }
+.lp-orbit-a::after { right: 22%; top: -4px; }
+.lp-orbit-b { width: 280px; height: 140px; left: -4%; top: 42%; transform: rotate(24deg) translate(calc(var(--mx) * 18px), calc(var(--my) * 14px)); }
+.lp-orbit-b::after { left: 18%; bottom: -4px; }
+.lp-orbit-c { width: 420px; height: 210px; right: -10%; bottom: 16%; border-color: oklch(0.80 0.14 62 / 0.12); }
+.lp-orbit-c::after { background: var(--amber); box-shadow: 0 0 20px oklch(0.80 0.14 62 / 0.6); left: 28%; top: -4px; }
+
+.lp-topbar,
+.lp-hero,
+.lp-trust,
+.lp-section,
+.lp-footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* Top bar */
+.lp-topbar {
+  position: sticky; top: 0; z-index: 200;
+  background: oklch(0.09 0.008 240 / 0.9);
+  backdrop-filter: blur(24px) saturate(180%);
+  border-bottom: 1px solid var(--line-s);
+}
+.lp-topbar .lp-wrap {
+  height: 64px; display: flex; align-items: center; justify-content: space-between;
+}
+.lp-topbar-logo {
+  display: grid;
+  grid-template-columns: 34px auto;
+  column-gap: 10px;
+  align-items: center;
+  color: var(--text);
+}
+.lp-brand-mark {
+  grid-row: 1 / span 2;
+  width: 34px;
+  height: 34px;
+  border: 1px solid oklch(0.80 0.14 62 / 0.35);
+  border-radius: 10px;
+  background:
+    radial-gradient(circle at 72% 26%, oklch(0.80 0.14 62 / 0.28), transparent 42%),
+    oklch(0.06 0.006 240 / 0.92);
+  display: grid;
+  place-items: center;
+  box-shadow: 0 0 28px oklch(0.80 0.14 62 / 0.12);
+}
+.lp-brand-mark span:first-child {
+  width: 16px;
+  height: 16px;
+  border-left: 2px solid var(--amber);
+  border-bottom: 2px solid var(--amber);
+  transform: rotate(-45deg);
+}
+.lp-brand-mark span:last-child {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--amber);
+  box-shadow: 0 0 12px var(--amber);
+}
+.lp-brand-word {
+  font-family: var(--serif);
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.lp-brand-sub,
+.lp-topbar-cta {
+  font-family: var(--mono); font-size: 10.5px; font-weight: 500;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-3);
+}
+.lp-topbar-cta {
+  color: oklch(0.08 0.006 240);
+  background: var(--amber);
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-weight: 800;
+  box-shadow: 0 12px 34px oklch(0.80 0.14 62 / 0.18);
+}
+.lp-pip {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--amber);
+  box-shadow: 0 0 10px var(--amber), 0 0 20px oklch(0.80 0.14 62 / 0.4);
+}
+
+/* Hero */
+.lp-hero {
+  position: relative; overflow: hidden;
+  padding: 72px 0 64px;
+}
+.lp-hero-grid-bg {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(oklch(0.22 0.01 240 / 0.35) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(0.22 0.01 240 / 0.35) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 90% 100% at 50% 0%, black 0%, transparent 100%);
+}
+.lp-hero-glow {
+  position: absolute; top: -300px; left: 50%; transform: translateX(-50%);
+  width: 1000px; height: 700px; border-radius: 50%;
+  background: radial-gradient(ellipse, oklch(0.80 0.14 62 / 0.06) 0%, transparent 65%);
+  pointer-events: none;
+}
+.lp-hero-layout {
+  display: grid; grid-template-columns: minmax(0, 1fr) 390px; gap: 70px; align-items: center;
+  position: relative; z-index: 1;
+}
+@media(max-width:900px){
+  .lp-hero-layout { grid-template-columns: 1fr; gap: 36px; }
+  .lp-hero-mockup { order: -1; display: grid; justify-items: center; }
+  .lp-hero { padding: 64px 0 56px; }
+}
+.lp-badge {
+  display: inline-block;
+  font-family: var(--mono); font-size: 10.5px; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 5px 14px; border-radius: 100px;
+  border: 1px solid var(--amber-d); color: var(--amber);
+  margin-bottom: 24px;
+}
+.lp-danger-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 620px;
+  margin: 0 0 14px;
+  padding: 10px 12px;
+  border: 1px solid oklch(0.70 0.20 32 / 0.42);
+  border-radius: 12px;
+  background: linear-gradient(90deg, oklch(0.70 0.20 32 / 0.16), transparent);
+  color: oklch(0.87 0.12 45);
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+  box-shadow: 0 0 34px oklch(0.70 0.20 32 / 0.08);
+}
+.lp-danger-line::before {
+  content: '!';
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: oklch(0.10 0.01 240);
+  background: oklch(0.87 0.12 45);
+  flex: 0 0 auto;
+}
+.lp-h1 {
+  font-family: var(--serif);
+  font-size: clamp(46px, 5.7vw, 76px);
+  font-weight: 800; line-height: 0.97;
+  letter-spacing: -0.035em;
+  margin-bottom: 20px;
+  max-width: 690px;
+  text-wrap: balance;
+  text-shadow:
+    0 0 34px oklch(0.80 0.14 62 / 0.10),
+    0 18px 70px oklch(0 0 0 / 0.42);
+}
+.lp-hero-sub {
+  font-size: 18px; line-height: 1.55;
+  color: var(--text); font-weight: 500;
+  max-width: 620px; margin-bottom: 24px;
+  text-wrap: pretty;
+}
+.lp-hero-sub::first-letter {
+  color: var(--amber);
+}
+.lp-hero-answer {
+  display: grid;
+  gap: 8px;
+  max-width: 620px;
+  margin: 0 0 24px;
+  padding: 16px;
+  border: 1px solid oklch(0.80 0.14 62 / 0.24);
+  border-radius: 16px;
+  background:
+    linear-gradient(135deg, oklch(0.80 0.14 62 / 0.10), transparent 54%),
+    oklch(0.07 0.006 240 / 0.74);
+  box-shadow: 0 16px 48px oklch(0 0 0 / 0.22);
+}
+.lp-hero-answer strong {
+  font-size: 15px;
+  color: var(--text);
+}
+.lp-hero-answer span {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--text-2);
+  font-size: 14px;
+  line-height: 1.4;
+}
+.lp-hero-answer span::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: var(--amber);
+  box-shadow: 0 0 14px oklch(0.80 0.14 62 / 0.5);
+}
+.lp-urgency-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: center;
+  max-width: 620px;
+  margin: 0 0 20px;
+  padding: 14px;
+  border: 1px solid oklch(0.80 0.14 62 / 0.35);
+  border-radius: 16px;
+  background:
+    linear-gradient(135deg, oklch(0.80 0.14 62 / 0.12), oklch(0.72 0.18 338 / 0.08)),
+    oklch(0.10 0.01 240 / 0.82);
+  box-shadow: 0 22px 70px oklch(0 0 0 / 0.28);
+}
+.lp-urgency-kicker,
+.lp-urgency-note {
+  display: block;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--amber);
+}
+.lp-urgency-card strong {
+  display: block;
+  margin: 4px 0 6px;
+  font-family: var(--serif);
+  font-size: 28px;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  color: var(--text);
+  text-shadow: 0 0 28px oklch(0.80 0.14 62 / 0.15);
+}
+.lp-urgency-note {
+  color: var(--text-3);
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+.lp-hero-price {
+  display: flex; align-items: baseline; gap: 12px;
+  margin-bottom: 20px;
+}
+.lp-price-old {
+  font-family: var(--mono); font-size: 15px;
+  color: var(--text-4); text-decoration: line-through;
+}
+.lp-price-current {
+  font-family: var(--serif); font-size: 40px;
+  font-weight: 700; color: var(--amber); letter-spacing: -0.02em;
+  text-shadow: 0 0 30px oklch(0.80 0.14 62 / 0.18);
+}
+.lp-price-label {
+  font-family: var(--mono); font-size: 10px; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--bg); background: var(--amber);
+  padding: 3px 10px; border-radius: 100px;
+}
+.lp-hero-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 32px; }
+.lp-btn-primary {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  font-family: var(--sans); font-size: 15px; font-weight: 800;
+  letter-spacing: 0.01em;
+  padding: 14px 32px; border-radius: 100px; cursor: pointer;
+  background: var(--amber); color: oklch(0.09 0.008 240);
+  border: none; transition: all 0.2s; text-decoration: none;
+  box-shadow: 0 18px 46px oklch(0.80 0.14 62 / 0.22);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.lp-btn-primary::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(110deg, transparent 0 34%, oklch(1 0 0 / 0.42) 45%, transparent 58% 100%);
+  transform: translateX(-130%);
+  animation: lp-shine 3.4s ease-in-out infinite;
+}
+.lp-btn-primary:hover { background: oklch(0.86 0.14 62); transform: translateY(-1px); }
+@keyframes lp-shine {
+  0%, 46% { transform: translateX(-130%); }
+  68%, 100% { transform: translateX(130%); }
+}
+.lp-btn-full { width: 100%; }
+.lp-btn-ghost {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--sans); font-size: 14px; font-weight: 500;
+  padding: 14px 24px; border-radius: 100px;
+  border: 1px solid var(--line); color: var(--text-2);
+  background: none; cursor: pointer; transition: all 0.2s; text-decoration: none;
+}
+.lp-btn-ghost:hover { border-color: var(--text-3); color: var(--text); }
+.lp-hero-specs { display: flex; gap: 20px; flex-wrap: wrap; }
+.lp-fast-trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: -18px 0 28px;
+}
+.lp-fast-trust span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 28px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--line-s);
+  background: oklch(0.07 0.006 240 / 0.68);
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-2);
+}
+.lp-fast-trust span::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--amber);
+  box-shadow: 0 0 10px var(--amber);
+}
+.lp-spec {
+  font-family: var(--mono); font-size: 11px;
+  color: var(--text-3); letter-spacing: 0.04em;
+  display: flex; align-items: center; gap: 8px;
+}
+.lp-spec-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--amber-d); }
+
+/* Book 3D with real cover */
+.lp-book-3d {
+  position: relative;
+  width: 300px;
+  perspective: 1200px;
+}
+.lp-book-3d .lp-book-glow {
+  position: absolute; top: -20%; left: -20%; width: 140%; height: 140%;
+  background: radial-gradient(ellipse at 40% 30%, oklch(0.80 0.14 62 / 0.12), transparent 60%);
+  pointer-events: none; z-index: 0;
+}
+.lp-cover-img {
+  position: relative; z-index: 1;
+  width: 100%; height: auto;
+  border-radius: 4px 14px 14px 4px;
+  box-shadow:
+    -8px 8px 0 oklch(0.10 0.01 240),
+    0 32px 80px oklch(0 0 0 / 0.5),
+    0 0 60px oklch(0.80 0.14 62 / 0.06);
+  transition: transform 0.5s ease;
+}
+.lp-book-3d:hover .lp-cover-img {
+  transform: rotateY(-4deg) scale(1.02);
+}
+.lp-cover-circuit {
+  position: absolute; inset: 0; z-index: 2; pointer-events: none;
+}
+.lp-cover-circuit svg { width: 100%; height: 100%; }
+.lp-hero-proof {
+  margin-top: 14px;
+  max-width: 360px;
+  padding: 16px 18px;
+  border: 1px solid var(--line-s);
+  border-radius: 14px;
+  background: oklch(0.08 0.008 240 / 0.8);
+  box-shadow: 0 18px 50px oklch(0 0 0 / 0.22);
+}
+.lp-hero-proof strong,
+.lp-hero-proof span {
+  display: block;
+}
+.lp-hero-proof strong {
+  font-size: 14px;
+  line-height: 1.35;
+}
+.lp-hero-proof span {
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--text-3);
+  line-height: 1.55;
+}
+.lp-checkout-card {
+  width: 100%;
+  max-width: 360px;
+  margin-top: 14px;
+  padding: 16px;
+  border: 1px solid oklch(0.80 0.14 62 / 0.28);
+  border-radius: 18px;
+  background:
+    linear-gradient(160deg, oklch(0.80 0.14 62 / 0.10), transparent 48%),
+    oklch(0.08 0.008 240 / 0.94);
+  box-shadow: 0 24px 70px oklch(0 0 0 / 0.34);
+}
+.lp-checkout-kicker {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 14px;
+}
+.lp-checkout-product {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding-bottom: 14px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid var(--line-s);
+}
+.lp-checkout-product img {
+  width: 48px;
+  height: 68px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.lp-checkout-product strong,
+.lp-checkout-product span {
+  display: block;
+}
+.lp-checkout-product strong {
+  font-size: 14px;
+  line-height: 1.25;
+}
+.lp-checkout-product span {
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--text-3);
+}
+.lp-checkout-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 8px 0;
+  font-size: 13px;
+  color: var(--text-2);
+}
+.lp-checkout-row strong {
+  color: var(--text);
+}
+.lp-checkout-card .lp-btn-primary {
+  margin-top: 12px;
+  min-height: 46px;
+  padding: 12px 18px;
+}
+
+/* Offer cover spread */
+.lp-offer-cover-wrap {
+  position: relative;
+}
+.lp-offer-spread {
+  width: 100%; max-width: 560px; height: auto;
+  border-radius: 12px;
+  box-shadow: 0 24px 60px oklch(0 0 0 / 0.4), 0 0 40px oklch(0.80 0.14 62 / 0.05);
+}
+.lp-offer-cover-glow {
+  position: absolute; inset: -20%; z-index: -1;
+  background: radial-gradient(ellipse, oklch(0.80 0.14 62 / 0.06), transparent 70%);
+  border-radius: 50%;
+}
+
+/* Section SVG backgrounds */
+.lp-circuit-bg, .lp-neural-bg, .lp-flow-bg, .lp-hex-bg {
+  position: absolute; inset: 0; pointer-events: none; z-index: 0;
+}
+.lp-circuit-bg svg, .lp-neural-bg svg, .lp-flow-bg svg, .lp-hex-bg svg {
+  width: 100%; height: 100%;
+}
+
+@media(max-width:900px){
+  .lp-book-3d { width: 240px; }
+  .lp-offer-spread { max-width: 400px; }
+}
+
+/* Trust strip */
+.lp-trust {
+  border-top: 1px solid var(--line-s); border-bottom: 1px solid var(--line-s);
+  background: var(--bg-2); padding: 20px 0;
+}
+.lp-trust-inner {
+  display: flex; align-items: center; justify-content: center;
+  gap: 36px; flex-wrap: wrap;
+}
+.lp-trust-item {
+  display: flex; align-items: center; gap: 10px;
+  font-family: var(--mono); font-size: 11px;
+  color: var(--text-2); letter-spacing: 0.03em;
+}
+.lp-trust-ico { font-size: 16px; }
+.lp-trust-ico {
+  min-width: 34px;
+  height: 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line-s);
+  border-radius: 8px;
+  background: oklch(0.07 0.006 240 / 0.72);
+  color: var(--amber);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.06em;
+}
+
+/* Shock strip */
+.lp-shock-strip {
+  position: relative;
+  z-index: 1;
+  padding: 26px 0;
+  border-top: 1px solid oklch(0.80 0.14 62 / 0.18);
+  border-bottom: 1px solid oklch(0.80 0.14 62 / 0.18);
+  background:
+    linear-gradient(90deg, oklch(0.80 0.14 62 / 0.11), oklch(0.72 0.18 338 / 0.08), transparent),
+    oklch(0.06 0.006 240 / 0.96);
+}
+.lp-shock-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(220px, 0.75fr) auto;
+  gap: 22px;
+  align-items: center;
+}
+.lp-shock-kicker {
+  display: block;
+  margin-bottom: 6px;
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--amber);
+}
+.lp-shock-grid strong {
+  display: block;
+  font-family: var(--serif);
+  font-size: clamp(24px, 3vw, 38px);
+  line-height: 1.04;
+  letter-spacing: -0.035em;
+  color: var(--text);
+}
+.lp-shock-stat {
+  display: block;
+  font-family: var(--serif);
+  font-size: 46px;
+  font-weight: 800;
+  line-height: 0.9;
+  color: var(--amber);
+  text-shadow: 0 0 28px oklch(0.80 0.14 62 / 0.18);
+}
+.lp-shock-grid p {
+  margin: 8px 0 0;
+  color: var(--text-2);
+  font-size: 13px;
+  line-height: 1.55;
+}
+.lp-shock-cta {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 48px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  border: 1px solid oklch(0.80 0.14 62 / 0.4);
+  color: var(--amber);
+  font-weight: 800;
+  font-size: 13px;
+  background: oklch(0.10 0.01 240 / 0.68);
+  white-space: nowrap;
+}
+@media(max-width:900px){
+  .lp-shock-grid { grid-template-columns: 1fr; }
+  .lp-shock-cta { width: 100%; white-space: normal; }
+}
+
+/* Sections */
+.lp-section { padding: 100px 0; }
+.lp-section-alt { background: var(--bg-2); }
+@media(max-width:640px){ .lp-section { padding: 64px 0; } }
+
+@media(max-width:900px){
+  .lp-urgency-card { grid-template-columns: 1fr; }
+  .lp-outcomes-grid { grid-template-columns: 1fr 1fr; }
+  .lp-proof-layout { grid-template-columns: 1fr; }
+}
+
+@media(max-width:640px){
+  .lp-topbar .lp-wrap { height: 58px; }
+  .lp-brand-sub { display: none; }
+  .lp-brand-word { font-size: 18px; }
+  .lp-brand-mark { width: 30px; height: 30px; border-radius: 9px; }
+  .lp-topbar-cta { padding: 9px 11px; font-size: 9px; }
+  .lp-h1 { font-size: clamp(36px, 10.6vw, 48px); line-height: 1; letter-spacing: -0.03em; }
+  .lp-hero-sub { font-size: 16px; }
+  .lp-hero-price { flex-wrap: wrap; }
+  .lp-price-current { font-size: 38px; }
+  .lp-outcomes-grid { grid-template-columns: 1fr; }
+  .lp-outcome-card { min-height: auto; }
+  .lp-interactive-bg { opacity: 0.52; }
+  .lp-hero-actions { flex-direction: column; gap: 10px; }
+  .lp-btn-primary, .lp-btn-ghost { width: 100%; }
+  .lp-fast-trust { margin-top: -12px; }
+  .lp-hero-specs { gap: 10px 14px; }
+  .lp-hero-mockup { order: 0; }
+  .lp-book-3d { width: min(190px, 58vw); }
+  .lp-hero-proof { display: none; }
+  .lp-checkout-card { max-width: 100%; }
+  .lp-trust-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .lp-trust-item { justify-content: flex-start; }
+  body { padding-bottom: 86px; }
+}
+
+.lp-section-header {
+  display: flex; align-items: center; gap: 20px;
+  margin-bottom: 48px; padding-bottom: 20px;
+  border-bottom: 1px solid var(--line-s);
+}
+.lp-section-num {
+  font-family: var(--mono); font-size: 11px; font-weight: 500;
+  color: var(--text-3); letter-spacing: 0.05em;
+}
+.lp-section-rule { flex: 1; height: 1px; background: var(--line-s); }
+.lp-section-label {
+  font-family: var(--mono); font-size: 11px; font-weight: 500;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-2);
+}
+
+.lp-h2 {
+  font-family: var(--serif);
+  font-size: clamp(26px, 3.5vw, 44px);
+  font-weight: 700; line-height: 1.15;
+  letter-spacing: -0.02em; margin-bottom: 48px;
+  max-width: 700px;
+}
+.lp-h2 em { font-style: italic; color: var(--amber); }
+
+.lp-section-intro {
+  font-size: 16px; color: var(--text-2); line-height: 1.7;
+  max-width: 640px; margin-bottom: 48px;
+}
+
+/* Problem section */
+.lp-problem-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px; margin-bottom: 40px;
+}
+.lp-problem-card {
+  background: var(--bg-2); border: 1px solid var(--line-s);
+  border-radius: 12px; padding: 28px;
+  border-left: 3px solid oklch(0.65 0.15 25);
+}
+.lp-problem-label {
+  font-family: var(--mono); font-size: 10.5px; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: oklch(0.75 0.12 25); margin-bottom: 12px;
+}
+.lp-problem-desc { font-size: 14px; color: var(--text-2); line-height: 1.7; }
+.lp-problem-pivot {
+  max-width: 680px;
+  font-size: 16px; color: var(--text-2); line-height: 1.7;
+  padding: 24px 0; border-top: 1px solid var(--line-s);
+}
+.lp-problem-pivot p { margin: 0; }
+.lp-inline-cta {
+  display: inline-flex;
+  margin-top: 18px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--amber);
+}
+
+/* Outcomes */
+.lp-section-outcomes {
+  background:
+    linear-gradient(180deg, transparent, oklch(0.08 0.006 240 / 0.82)),
+    var(--bg);
+}
+.lp-outcomes-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 42px;
+}
+.lp-outcome-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 230px;
+  padding: 26px;
+  border: 1px solid var(--line-s);
+  border-radius: 14px;
+  background:
+    radial-gradient(circle at 80% 0%, oklch(0.72 0.18 338 / 0.12), transparent 55%),
+    var(--bg-2);
+}
+.lp-outcome-card::after {
+  content: '';
+  position: absolute;
+  inset: auto 20px 20px auto;
+  width: 44px;
+  height: 1px;
+  background: var(--amber);
+  opacity: 0.7;
+}
+.lp-outcome-num {
+  display: inline-flex;
+  margin-bottom: 34px;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--amber);
+  letter-spacing: 0.08em;
+}
+.lp-outcome-card h3 {
+  font-family: var(--serif);
+  font-size: 21px;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin: 0 0 12px;
+}
+.lp-outcome-card p {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--text-2);
+}
+
+/* Value proof */
+.lp-proof-section {
+  background:
+    radial-gradient(circle at 72% 40%, oklch(0.72 0.18 338 / 0.12), transparent 26rem),
+    var(--bg);
+}
+.lp-proof-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(360px, 1.18fr);
+  gap: 52px;
+  align-items: center;
+}
+.lp-proof-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: -18px 0 28px;
+}
+.lp-proof-points span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 7px 12px;
+  border: 1px solid var(--line-s);
+  border-radius: 999px;
+  background: oklch(0.08 0.008 240 / 0.78);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-2);
+}
+.lp-proof-board {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 16px;
+  align-items: stretch;
+  border: 1px solid oklch(0.72 0.18 338 / 0.28);
+  border-radius: 20px;
+  padding: 18px;
+  background:
+    linear-gradient(135deg, oklch(0.72 0.18 338 / 0.15), transparent 46%),
+    oklch(0.06 0.006 240 / 0.9);
+  box-shadow: 0 32px 90px oklch(0 0 0 / 0.42), 0 0 80px oklch(0.72 0.18 338 / 0.1);
+}
+.lp-proof-board::before {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  background-image:
+    linear-gradient(oklch(1 0 0 / 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(1 0 0 / 0.04) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: radial-gradient(circle at 50% 50%, black, transparent 72%);
+  pointer-events: none;
+}
+.lp-proof-card,
+.lp-proof-price {
+  position: relative;
+  z-index: 1;
+  border: 1px solid var(--line-s);
+  border-radius: 16px;
+  background: oklch(0.08 0.008 240 / 0.84);
+  padding: 24px;
+}
+.lp-proof-card-hot {
+  border-color: oklch(0.65 0.15 25 / 0.4);
+  background: linear-gradient(180deg, oklch(0.65 0.15 25 / 0.12), oklch(0.08 0.008 240 / 0.84));
+}
+.lp-proof-card span,
+.lp-proof-price small {
+  display: block;
+  font-family: var(--mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--amber);
+  margin-bottom: 18px;
+}
+.lp-proof-card strong {
+  display: block;
+  font-family: var(--serif);
+  font-size: clamp(25px, 2.8vw, 38px);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+.lp-proof-card p,
+.lp-proof-price span {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.62;
+  color: var(--text-2);
+}
+.lp-proof-arrow {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  color: var(--amber);
+  font-family: var(--serif);
+  font-size: 42px;
+  padding: 0 4px;
+}
+.lp-proof-price {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  border-color: oklch(0.80 0.14 62 / 0.36);
+  background: linear-gradient(90deg, oklch(0.80 0.14 62 / 0.16), oklch(0.08 0.008 240 / 0.84));
+}
+.lp-proof-price small { margin-bottom: 0; }
+.lp-proof-price strong {
+  font-family: var(--serif);
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 0.9;
+  color: var(--amber);
+  letter-spacing: -0.03em;
+}
+@media(max-width:760px){
+  .lp-proof-board { grid-template-columns: 1fr; }
+  .lp-proof-arrow { justify-content: center; transform: rotate(90deg); padding: 0; }
+  .lp-proof-price { align-items: flex-start; flex-direction: column; }
+}
+
+/* Audience */
+.lp-audience-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+.lp-audience-card {
+  background: oklch(0.09 0.008 240 / 0.5); border: 1px solid var(--line-s);
+  border-radius: 12px; padding: 24px;
+  transition: border-color 0.2s;
+}
+.lp-section-alt .lp-audience-card {
+  background: var(--bg);
+}
+.lp-audience-card:hover { border-color: var(--line); }
+.lp-audience-ico { font-size: 24px; margin-bottom: 14px; }
+.lp-audience-title {
+  font-family: var(--sans); font-size: 15px; font-weight: 600;
+  margin-bottom: 6px;
+}
+.lp-audience-desc { font-size: 13.5px; color: var(--text-2); line-height: 1.6; }
+
+/* Benefits */
+.lp-benefits-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
+  margin-bottom: 48px;
+}
+@media(max-width:640px){ .lp-benefits-grid { grid-template-columns: 1fr; } }
+.lp-benefit-row {
+  display: flex; align-items: flex-start; gap: 12px;
+  font-size: 15px; color: var(--text-2); line-height: 1.6;
+  padding: 14px 18px;
+  background: var(--bg-2);
+  border: 1px solid var(--line-s); border-radius: 10px;
+}
+.lp-benefit-check {
+  color: var(--amber); font-size: 14px; flex-shrink: 0; padding-top: 2px;
+}
+
+/* CTA mid */
+.lp-cta-mid { text-align: center; }
+
+/* 6 Blocks */
+.lp-blocks-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px; margin-bottom: 32px;
+}
+.lp-block-card {
+  background: var(--bg); border: 1px solid var(--line-s);
+  border-radius: 12px; padding: 28px;
+  transition: border-color 0.2s;
+}
+.lp-block-card:hover { border-color: var(--amber-d); }
+.lp-block-num {
+  font-family: var(--mono); font-size: 11px; font-weight: 500;
+  color: var(--amber); letter-spacing: 0.06em; margin-bottom: 14px;
+}
+.lp-block-title {
+  font-family: var(--serif); font-size: 18px; font-weight: 700;
+  letter-spacing: -0.01em; line-height: 1.3; margin-bottom: 10px;
+  text-transform: capitalize;
+}
+.lp-block-desc { font-size: 13.5px; color: var(--text-2); line-height: 1.6; }
+.lp-blocks-quote {
+  font-family: var(--serif); font-size: 17px; font-style: italic;
+  color: var(--text-2); line-height: 1.6;
+  padding: 20px 0; border-top: 1px solid var(--line-s);
+  max-width: 600px;
+}
+
+/* Roles / Human role */
+.lp-roles-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+  margin-bottom: 32px;
+}
+@media(max-width:768px){ .lp-roles-grid { grid-template-columns: 1fr; } }
+.lp-role-card {
+  background: var(--bg-2); border: 1px solid var(--line-s);
+  border-radius: 12px; padding: 28px; text-align: center;
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.lp-role-card:hover {
+  border-color: var(--amber-d);
+  transform: translateY(-3px);
+  box-shadow: 0 18px 42px oklch(0 0 0 / 0.24);
+}
+.lp-role-card:last-child { border-color: var(--amber-d); }
+.lp-role-phase {
+  font-family: var(--mono); font-size: 10.5px; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--text-3); margin-bottom: 12px;
+}
+.lp-role-title {
+  font-family: var(--serif); font-size: 28px; font-weight: 700;
+  margin-bottom: 10px; letter-spacing: -0.02em;
+}
+.lp-role-card:last-child .lp-role-title { color: var(--amber); }
+.lp-role-desc { font-size: 13.5px; color: var(--text-2); line-height: 1.6; }
+.lp-card-more {
+  margin-top: 18px;
+  color: var(--amber);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.lp-role-note {
+  font-size: 15px; color: var(--text-2); line-height: 1.7;
+  max-width: 640px; font-style: italic;
+}
+
+/* Origin */
+.lp-origin-layout {
+  display: grid; grid-template-columns: minmax(0, 1fr) 460px; gap: 56px; align-items: center;
+}
+@media(max-width:900px){ .lp-origin-layout { grid-template-columns: 1fr; } }
+.lp-nexora-section {
+  background:
+    radial-gradient(circle at 72% 42%, oklch(0.72 0.18 338 / 0.16), transparent 28rem),
+    var(--bg);
+}
+.lp-origin-body { font-size: 15px; color: var(--text-2); line-height: 1.8; }
+.lp-origin-body p { margin-bottom: 16px; }
+.lp-origin-body strong { color: var(--text); font-weight: 500; }
+.lp-origin-card {
+  overflow: hidden;
+  background: oklch(0.07 0.006 240 / 0.9); border: 1px solid oklch(0.72 0.18 338 / 0.26);
+  border-radius: 18px; padding: 0 0 28px;
+  box-shadow: 0 28px 90px oklch(0 0 0 / 0.4), 0 0 70px oklch(0.72 0.18 338 / 0.08);
+}
+.lp-origin-card-pip {
+  width: 7px; height: 7px; border-radius: 50%; background: var(--amber);
+  box-shadow: 0 0 10px var(--amber); margin-bottom: 16px;
+}
+.lp-origin-card-name {
+  font-family: var(--mono); font-size: 11px; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: oklch(0.78 0.18 338); margin: 24px 28px 14px;
+}
+.lp-origin-card-desc {
+  font-size: 14px; color: var(--text-2); line-height: 1.7; margin: 0 28px 20px;
+}
+.lp-nexora-logo-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: center;
+  border-bottom: 1px solid oklch(0.72 0.18 338 / 0.18);
+}
+.lp-arrow-link {
+  font-family: var(--mono); font-size: 11.5px; font-weight: 500;
+  color: var(--amber); letter-spacing: 0.04em;
+  display: inline-flex; align-items: center; gap: 6px;
+  transition: gap 0.2s;
+  margin: 0 28px;
+}
+.lp-arrow-link:hover { gap: 10px; }
+
+/* Chapters */
+.lp-chapters-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+.lp-chapter-card {
+  background: var(--bg);
+  border: 1px solid var(--line-s); border-radius: 12px;
+  padding: 28px; transition: border-color 0.2s;
+}
+.lp-section-alt .lp-chapter-card { background: oklch(0.09 0.008 240 / 0.6); }
+.lp-chapter-card:hover { border-color: var(--amber-d); }
+.lp-chapter-num {
+  font-family: var(--mono); font-size: 11px; font-weight: 500;
+  color: var(--amber); letter-spacing: 0.06em; margin-bottom: 14px;
+}
+.lp-chapter-title {
+  font-family: var(--serif); font-size: 18px; font-weight: 700;
+  letter-spacing: -0.01em; line-height: 1.3; margin-bottom: 10px;
+}
+.lp-chapter-desc { font-size: 13.5px; color: var(--text-2); line-height: 1.6; }
+
+/* Offer */
+.lp-section-offer { background: var(--bg-2); }
+.lp-offer-box {
+  display: grid; grid-template-columns: auto 1fr; gap: 56px; align-items: center;
+  background: var(--bg); border: 1px solid var(--line);
+  border-radius: 20px; padding: 56px;
+}
+@media(max-width:900px){
+  .lp-offer-box { grid-template-columns: 1fr; padding: 32px; }
+  .lp-offer-left { display: flex; justify-content: center; }
+}
+.lp-offer-title {
+  font-family: var(--serif); font-size: clamp(24px, 3vw, 36px);
+  font-weight: 700; letter-spacing: -0.02em; margin-bottom: 4px;
+}
+.lp-offer-sub {
+  font-size: 15px; color: var(--text-2); margin-bottom: 24px;
+}
+.lp-offer-includes {
+  list-style: none; padding: 0; margin-bottom: 28px;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.lp-offer-includes li {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 14px; color: var(--text-2);
+}
+.lp-oi-check { color: var(--amber); font-size: 13px; flex-shrink: 0; }
+.lp-oi-bonus { color: var(--cyan); }
+.lp-offer-price {
+  display: flex; align-items: baseline; gap: 14px;
+  margin-bottom: 20px;
+}
+.lp-price-old-lg {
+  font-family: var(--mono); font-size: 18px;
+  color: var(--text-4); text-decoration: line-through;
+}
+.lp-price-current-lg {
+  font-family: var(--serif); font-size: 52px;
+  font-weight: 700; color: var(--amber); letter-spacing: -0.02em;
+}
+.lp-offer-deadline {
+  margin: -8px 0 18px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: oklch(0.80 0.14 62 / 0.09);
+  border: 1px solid oklch(0.80 0.14 62 / 0.18);
+  font-family: var(--mono);
+  font-size: 10.5px;
+  line-height: 1.55;
+  color: var(--text-2);
+  letter-spacing: 0.03em;
+}
+.lp-offer-microcopy {
+  margin-top: 10px;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--text-3);
+  text-align: center;
+}
+.lp-platforms {
+  margin-top: 16px; text-align: center;
+}
+.lp-platforms-label {
+  display: block; font-size: 12px; color: var(--text-3);
+  text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;
+}
+.lp-platforms-links {
+  display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;
+}
+.lp-platform-link {
+  font-size: 12px; color: var(--amber); padding: 4px 12px;
+  border: 1px solid oklch(0.75 0.15 85 / 0.25); border-radius: 6px;
+  text-decoration: none; transition: all 0.2s;
+}
+.lp-platform-link:hover {
+  background: oklch(0.75 0.15 85 / 0.1); border-color: var(--amber);
+}
+
+.lp-offer-guarantee {
+  display: flex; align-items: flex-start; gap: 12px;
+  margin-top: 20px; padding: 16px 20px;
+  background: var(--bg-2); border: 1px solid var(--line-s);
+  border-radius: 12px;
+  font-size: 13px; color: var(--text-2); line-height: 1.6;
+}
+.lp-guarantee-ico { font-size: 18px; flex-shrink: 0; }
+.lp-guarantee-section {
+  background:
+    linear-gradient(135deg, oklch(0.80 0.14 62 / 0.08), transparent 42%),
+    var(--lp-bg);
+}
+.lp-guarantee-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 32px;
+  align-items: center;
+  padding: 38px;
+  border: 1px solid oklch(0.80 0.14 62 / 0.28);
+  border-radius: 22px;
+  background: var(--lp-card-strong);
+}
+.lp-guarantee-panel .lp-section-intro {
+  margin-bottom: 0;
+}
+@media(max-width:760px){
+  .lp-guarantee-panel {
+    grid-template-columns: 1fr;
+    padding: 26px 20px;
+  }
+}
+
+/* FAQ */
+.lp-faq-list {
+  display: flex; flex-direction: column; gap: 4px;
+  max-width: 760px; margin-bottom: 48px;
+}
+.lp-faq-item {
+  border: 1px solid var(--line-s); border-radius: 10px;
+  overflow: hidden; transition: border-color 0.2s;
+}
+.lp-faq-item[open] { border-color: var(--line); }
+.lp-faq-q {
+  font-family: var(--sans); font-size: 15px; font-weight: 500;
+  padding: 18px 24px; cursor: pointer; color: var(--text);
+  list-style: none; display: flex; align-items: center; justify-content: space-between;
+}
+.lp-faq-q::after {
+  content: '+'; font-family: var(--mono); font-size: 18px;
+  color: var(--text-3); transition: transform 0.2s;
+}
+.lp-faq-item[open] .lp-faq-q::after { content: '−'; }
+.lp-faq-q::-webkit-details-marker { display: none; }
+.lp-faq-a {
+  font-size: 14px; color: var(--text-2); line-height: 1.7;
+  padding: 0 24px 18px; border-top: 1px solid var(--line-s);
+  padding-top: 14px;
+}
+
+/* Closing section */
+.lp-section-close { text-align: center; }
+.lp-h2-center {
+  font-family: var(--serif);
+  font-size: clamp(26px, 3.5vw, 44px);
+  font-weight: 700; line-height: 1.15;
+  letter-spacing: -0.02em; margin-bottom: 24px;
+  max-width: 700px; margin-left: auto; margin-right: auto;
+}
+.lp-h2-center em { font-style: italic; color: var(--amber); }
+.lp-close-sub {
+  font-size: 16px; color: var(--text-2); line-height: 1.7;
+  max-width: 580px; margin: 0 auto 32px;
+}
+.lp-close-content { display: flex; flex-direction: column; align-items: center; }
+
+/* Footer */
+.lp-footer {
+  border-top: 1px solid var(--line-s);
+  padding: 48px 0 32px;
+}
+.lp-footer-inner {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  gap: 40px; flex-wrap: wrap; margin-bottom: 32px;
+}
+.lp-footer-brand {
+  font-family: var(--serif); font-size: 17px; font-weight: 600;
+  display: flex; align-items: center; gap: 10px; margin-bottom: 10px;
+}
+.lp-footer-desc { font-size: 13px; color: var(--text-3); max-width: 320px; line-height: 1.6; }
+.lp-footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+.lp-footer-links a {
+  font-family: var(--mono); font-size: 11.5px;
+  color: var(--text-3); letter-spacing: 0.04em;
+  transition: color 0.15s;
+}
+.lp-footer-links a:hover { color: var(--text); }
+.lp-footer-bottom {
+  border-top: 1px solid var(--line-s); padding-top: 20px;
+  font-family: var(--mono); font-size: 11px; color: var(--text-4);
+  letter-spacing: 0.03em;
+}
+.lp-mobile-buy {
+  position: fixed;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  z-index: 300;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 10px 10px 14px;
+  border: 1px solid oklch(0.80 0.14 62 / 0.35);
+  border-radius: 18px;
+  background: oklch(0.07 0.006 240 / 0.94);
+  backdrop-filter: blur(18px) saturate(160%);
+  box-shadow: 0 20px 60px oklch(0 0 0 / 0.46);
+}
+.lp-mobile-buy span,
+.lp-mobile-buy strong {
+  display: block;
+}
+.lp-mobile-buy span {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+.lp-mobile-buy strong {
+  margin-top: 2px;
+  font-family: var(--serif);
+  font-size: 24px;
+  line-height: 0.95;
+  color: var(--amber);
+}
+.lp-mobile-buy a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 16px;
+  border-radius: 999px;
+  background: var(--amber);
+  color: oklch(0.08 0.006 240);
+  font-weight: 800;
+  font-size: 13px;
+  white-space: nowrap;
+}
+@media(max-width:640px){
+  .lp-mobile-buy { display: flex; }
+}
+
+/* CRO polish: cleaner dark surface, higher contrast and stronger mobile taps */
+.lp-section-alt,
+.lp-section-offer,
+.lp-trust {
+  background: var(--lp-bg-2);
+}
+.lp-problem-card,
+.lp-outcome-card,
+.lp-audience-card,
+.lp-block-card,
+.lp-role-card,
+.lp-chapter-card,
+.lp-checkout-card,
+.lp-hero-answer,
+.lp-urgency-card,
+.lp-offer-box,
+.lp-faq-item {
+  background: var(--lp-card);
+  border-color: oklch(0.42 0.02 242 / 0.72);
+  box-shadow: 0 18px 48px oklch(0 0 0 / 0.18);
+}
+.lp-agent-card {
+  background:
+    linear-gradient(180deg, oklch(0.80 0.14 62 / 0.08), transparent 52%),
+    var(--lp-card-strong);
+}
+.lp-section-label,
+.lp-section-intro,
+.lp-problem-desc,
+.lp-outcome-card p,
+.lp-audience-desc,
+.lp-chapter-desc,
+.lp-block-desc,
+.lp-close-sub,
+.lp-origin-body,
+.lp-offer-sub,
+.lp-faq-a {
+  color: oklch(0.83 0.015 245);
+}
+.lp-btn-primary,
+.lp-topbar-cta,
+.lp-mobile-buy a {
+  min-height: 52px;
+  padding-inline: 30px;
+}
+.lp-btn-ghost {
+  min-height: 52px;
+}
+@media(max-width:640px){
+  .lp-btn-primary,
+  .lp-btn-ghost {
+    min-height: 58px;
+    font-size: 16px;
+  }
+  .lp-h1 { font-size: clamp(42px, 13vw, 58px); }
+  .lp-hero-sub { color: oklch(0.91 0.01 245); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lp-interactive-bg,
+  .lp-cover-circuit,
+  .lp-circuit-bg,
+  .lp-neural-bg,
+  .lp-flow-bg,
+  .lp-hex-bg,
+  .lp-proof-board::before {
+    opacity: 0.35;
+    animation: none;
+  }
+  .lp-btn-primary,
+  .lp-cover-img,
+  .lp-arrow-link {
+    transition: none;
+  }
+}
+</style>
+
