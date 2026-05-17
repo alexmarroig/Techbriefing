@@ -27,11 +27,11 @@ const ASIDE = [
 ];
 
 const CATS = [
-  {num:'01',name:'IA',nameEm:'Aplicada',desc:'Casos de uso reais, produtividade e workflows práticos',href:'/ia-aplicada'},
-  {num:'02',name:'Agentes de',nameEm:'IA',desc:'Frameworks, memória e ferramentas para agentes autônomos',href:'/agentes'},
-  {num:'03',name:'Laboratório de',nameEm:'Ferramentas',desc:'Reviews, comparativos e benchmarks que aumentam o ROI',href:'/ferramentas'},
-  {num:'04',name:'Automação e',nameEm:'Operações',desc:'Integrações, no-code e agentes em produção',href:'/automacao'},
-  {num:'05',name:'Guias',nameEm:'Estratégicos',desc:'Frameworks de decisão e adoção de IA profissional',href:'/guias'},
+  {num:'01',name:'Notícias e ideias',nameEm:'para aplicar IA',desc:'O que mudou, por que importa e como transformar em ação real',href:'/arquivo'},
+  {num:'02',name:'Guias e',nameEm:'manuais',desc:'Tutoriais práticos para criar voz, vídeo, agentes, apps e automações',href:'/guias'},
+  {num:'03',name:'Prompts',nameEm:'essenciais',desc:'Modelos copiáveis para trabalhar melhor com IA em qualquer etapa',href:'/prompts'},
+  {num:'04',name:'Ferramentas e',nameEm:'reviews',desc:'Análises para escolher stack sem cair em demo bonita',href:'/ferramentas'},
+  {num:'05',name:'Agentes e',nameEm:'automação',desc:'Arquitetura, processos, limites e implementação operacional',href:'/agentes'},
 ];
 
 const GUIDES = [
@@ -43,16 +43,16 @@ const GUIDES = [
 
 const MANUAL_TRACKS = [
   {
-    tag:'Agentes',
-    title:'Criação de agentes autônomos com CrewAI e n8n',
-    desc:'Quando usar cada stack, como testar com segurança e como transformar em serviço para clientes.',
-    href:'/agentes',
+    tag:'Prompts',
+    title:'Biblioteca gratuita de prompts para aplicar IA',
+    desc:'Modelos para diagnosticar processos, criar agentes, analisar dados e transformar ideia em execução.',
+    href:'/prompts',
   },
   {
-    tag:'Operações',
-    title:'Automação de workflows e pipelines de IA',
-    desc:'Documentamos como integrar agentes e LLMs em fluxos de trabalho reais para escalar produtividade.',
-    href:'/automacao',
+    tag:'Manuais',
+    title:'Voz, avatar, vídeo e apps criados com IA',
+    desc:'Guias práticos para produzir conteúdo, criar ativos digitais e publicar sem depender de tentativa solta.',
+    href:'/guias',
   },
   {
     tag:'Ferramentas',
@@ -116,35 +116,35 @@ function Hero(){
         <div className="hero-eyebrow">
           <span className="hero-eyebrow-mark">Tech Briefing</span>
           <div className="hero-eyebrow-rule"/>
-          <span className="hero-eyebrow-tag">Inteligência Artificial Aplicada</span>
+          <span className="hero-eyebrow-tag">Notícias e ideias para aplicar IA de verdade</span>
         </div>
 
         <h1 className="hero-h1">
-          IA aplicada para transformar tecnologia em <em>operação real.</em>
+          Entenda o que vale a pena usar. Aplique IA com <em>método.</em>
         </h1>
 
         <p className="hero-sub">
-          Curadoria editorial sobre IA, agentes, automação e ferramentas digitais.
-          Menos hype, mais processo, implementação e ROI operacional.
+          Notícias filtradas, guias práticos, prompts gratuitos, reviews e comparativos
+          para transformar IA, agentes e automação em processo real.
         </p>
 
         <div className="hero-actions">
-          <a href="/ia-aplicada" className="btn btn-fill">
-            Explorar IA Aplicada
+          <a href="/guias" className="btn btn-fill">
+            Começar pelos guias
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
               <path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </a>
-          <a href="/metodologia" className="arrow-link">Nossa metodologia de teste →</a>
+          <a href="/prompts" className="arrow-link">Ver prompts gratuitos →</a>
         </div>
       </div>
 
       <div className="hero-bar wrap">
         {[
-          {n:'50+',em:'',l:'Guias práticos'},
-          {n:'Reviews',em:'',l:'ferramentas testadas'},
-          {n:'Workflows',em:'',l:'automação aplicada'},
-          {n:'BR',em:'',l:'conteúdo em português'},
+          {n:'Notícias',em:'',l:'com leitura aplicável'},
+          {n:'Guias',em:'',l:'para executar melhor'},
+          {n:'Prompts',em:'',l:'gratuitos e copiáveis'},
+          {n:'Reviews',em:'',l:'com critério editorial'},
         ].map((s,i)=>(
           <div className="hero-stat" key={i}>
             <div className="hero-stat-n">{s.n}{s.em && <em>{s.em}</em>}</div>
@@ -212,11 +212,11 @@ function TrustSection(){
     <section className="trust-bar">
       <div className="wrap">
         <div className="trust-inner">
-          <span className="trust-label">Autoridade reconhecida em IA Operacional:</span>
+          <span className="trust-label">Nosso filtro editorial:</span>
           <div className="trust-stats">
-            <div className="trust-stat"><strong>50+</strong> Testes Reais</div>
-            <div className="trust-stat"><strong>IA</strong> Aplicada</div>
-            <div className="trust-stat"><strong>#1</strong> Referência em Agentes</div>
+            <div className="trust-stat"><strong>1</strong> O que mudou</div>
+            <div className="trust-stat"><strong>2</strong> Por que importa</div>
+            <div className="trust-stat"><strong>3</strong> Como aplicar</div>
           </div>
         </div>
       </div>
@@ -334,13 +334,13 @@ function ManualsSection(){
   return (
     <section className="manuals-home">
       <div className="wrap">
-        <SH num="04" label="Trilhas de Implementação" more="Ver central" moreHref="/manuais"/>
+        <SH num="04" label="Trilhas de Implementação" more="Ver central" moreHref="/guias"/>
 
         <div className="manuals-home-head">
-          <h2>Não é sobre o que a IA faz, é sobre o que <em>você faz</em> com ela.</h2>
+          <h2>Não é sobre saber a ferramenta. É sobre sair com um <em>processo pronto.</em></h2>
           <p>
-            Documentamos processos repetíveis para criar valor real.
-            De agentes autônomos a pipelines de conteúdo — testados em nossos fluxos antes de chegarem a você.
+            Os guias do Tech Briefing são feitos para quem quer produzir, automatizar,
+            vender, analisar e decidir melhor com IA sem depender de hype.
           </p>
         </div>
 
@@ -418,15 +418,16 @@ function NewsletterSection(){
           <div>
             <h2 className="nl-h">Receba o<br/>Briefing.<br/><em>Opere melhor.</em></h2>
             <p className="nl-sub">
-              A dose semanal de estratégia de IA que chega antes da sua primeira reunião de segunda-feira.
+              Notícias, prompts, guias e ferramentas com um filtro simples:
+              o que vale a pena entender, testar e aplicar.
             </p>
 
             <div className="nl-checks">
               {[
-                'Benchmarks e reviews de ferramentas',
-                'Workflows de automação para copiar',
-                'Análises de impacto de mercado',
-                'Sem spam — foco 100% profissional',
+                'Prompts prontos para copiar',
+                'Manuais e guias acionáveis',
+                'Análises de notícias com próximos passos',
+                'Ferramentas úteis, sem hype vazio',
               ].map((c,i)=>(
                 <div className="nl-check-row" key={i}>
                   <div className="nl-check-ico">✓</div>

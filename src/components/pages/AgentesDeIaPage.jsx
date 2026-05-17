@@ -259,10 +259,10 @@ function CategoryHero() {
         <div className="cat-hero-meta">
           <div className="cat-hero-stat-block">
             {[
-              {n:'50+',em:'',l:'Artigos publicados'},
-              {n:'24',em:'',l:'Guias e tutoriais'},
-              {n:'6',em:'',l:'Ferramentas avaliadas'},
-              {n:'abr',em:' 2026',l:'Última atualização'},
+              {n:'Guias',em:'',l:'Manuais práticos'},
+              {n:'Prompts',em:'',l:'Arquitetura e execução'},
+              {n:'Reviews',em:'',l:'Ferramentas avaliadas'},
+              {n:'2026',em:'',l:'Atualização editorial'},
             ].map((s,i)=>(
               <div className="cat-hero-stat-row" key={i}>
                 <div className="cat-hero-stat-n">

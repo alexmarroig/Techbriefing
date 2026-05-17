@@ -4,16 +4,16 @@ import { EBOOK_OFFER } from '../../data/ebookOffer.js';
 ---
 
 <BaseLayout
-  title="Checkout Seguro - Agentes de IA para Negócios"
-  description="Finalize sua compra do ebook Agentes de IA para Negócios com pagamento seguro via Stripe."
+  title="Checkout Seguro - Framework Operacional de Agentes de IA"
+  description="Finalize sua compra do Framework Operacional de Agentes de IA para Negócios."
   active="Ebooks"
 >
   <main class="stripe-checkout-page">
     <section class="checkout-shell">
       <div class="checkout-left">
-        <a class="manual-back" href="/ebook-agentes-ia/">← Voltar para a página do ebook</a>
+        <a class="manual-back" href="/ebook-agentes-ia/">← Voltar para a página do framework</a>
         <div class="checkout-kicker">Checkout seguro Tech Briefing</div>
-        <h1>Finalize seu acesso ao guia que transforma IA em processo real.</h1>
+        <h1>Finalize seu acesso ao framework que transforma IA em processo real.</h1>
         <p class="checkout-lead">{EBOOK_OFFER.subtitle}</p>
 
         <div class="checkout-proof-row">
@@ -44,13 +44,13 @@ import { EBOOK_OFFER } from '../../data/ebookOffer.js';
             <strong>Agentes de IA para Negócios</strong>
           </div>
           <div>
-            <span>Ebook completo</span>
+            <span>Framework completo</span>
             <strong>{EBOOK_OFFER.name}</strong>
           </div>
         </div>
 
         <div class="checkout-price">
-          <span>De R$ {EBOOK_OFFER.oldPrice.toFixed(2).replace('.', ',')}</span>
+          {EBOOK_OFFER.oldPrice && <span>De R$ {EBOOK_OFFER.oldPrice.toFixed(2).replace('.', ',')}</span>}
           <strong>R$ {EBOOK_OFFER.price.toFixed(2).replace('.', ',')}</strong>
           <em>Pagamento único</em>
         </div>
@@ -59,14 +59,13 @@ import { EBOOK_OFFER } from '../../data/ebookOffer.js';
           Pagar com segurança →
         </button>
         <p class="checkout-error" data-checkout-error hidden></p>
-        <a class="checkout-fallback" href={EBOOK_OFFER.fallbackKiwifyUrl} rel="nofollow">Problema com Stripe? Usar checkout reserva</a>
+        <a class="checkout-fallback" href={EBOOK_OFFER.fallbackKiwifyUrl} rel="nofollow">Usar checkout Kiwify</a>
 
         <div class="checkout-security">
-          <div><strong>Stripe</strong><span>pagamento criptografado</span></div>
+          <div><strong>Pagamento seguro</strong><span>checkout criptografado</span></div>
           <div><strong>Tech Briefing</strong><span>produto digital brasileiro</span></div>
           <div><strong>Garantia</strong><span>7 dias para testar sem risco</span></div>
         </div>
-
       </aside>
     </section>
   </main>
@@ -112,7 +111,7 @@ import { EBOOK_OFFER } from '../../data/ebookOffer.js';
         } catch (error) {
           button.disabled = false;
           button.textContent = 'Tentar novamente';
-          showError(error.message || 'Erro ao abrir o Stripe. Tente novamente ou use o checkout reserva.');
+          showError(error.message || 'Erro ao abrir o pagamento. Tente novamente ou use o checkout Kiwify.');
         }
       });
     })();

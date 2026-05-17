@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { PILLARS } from '../data/pillars.js';
+
+export function getStaticPaths() {
+  return PILLARS.map((pillar) => ({
+    params: { pillar: pillar.slug },
+    props: { pillar },
+  }));
+}
+
+const { pillar } = Astro.props;
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: pillar.title,
+    description: pillar.description,
+    author: {
+      '@type': 'Organization',
+      name: 'Tech Briefing',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Tech Briefing',
+    },
+    inLanguage: 'pt-BR',
+  },
+];
+---
+
+<BaseLayout
+  title={`${pillar.title} | Tech Briefing`}
+  description={pillar.description}
+  active="Guias"
+  type="article"
+  category="Página-pilar"
+  jsonLd={jsonLd}
+>
+  <section class="legal-page pillar-page">
+    <div class="wrap legal-wrap">
+      <p class="legal-kicker">{pillar.kicker}</p>
+      <h1>{pillar.title}</h1>
+      <p class="legal-lead">{pillar.description}</p>
+
+      <div class="legal-grid">
+        {pillar.sections.map(([title, text]) => (
+          <div class="legal-card">
+            <h2>{title}</h2>
+            <p>{text}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="legal-card">
+        <h2>Continue por aqui</h2>
+        <ul>
+          {pillar.links.map(([label, href]) => (
+            <li><a href={href}>{label}</a></li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

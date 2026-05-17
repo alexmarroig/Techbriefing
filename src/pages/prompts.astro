@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PromptsPage from '../components/pages/PromptsPage.jsx';
+import { PROMPT_CATEGORIES, PROMPTS } from '../data/prompts.js';
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Biblioteca de Prompts de IA',
+    description: 'Prompts gratuitos para aplicar IA em negócios, agentes, automação, conteúdo, dados, design, vendas e marketing.',
+    url: 'https://www.techbriefing.com.br/prompts/',
+    inLanguage: 'pt-BR',
+    about: PROMPT_CATEGORIES.map((category) => category.label).join(', '),
+    hasPart: PROMPTS.map((prompt) => ({
+      '@type': 'CreativeWork',
+      name: prompt.title,
+      description: prompt.objective,
+      url: `https://www.techbriefing.com.br/prompts/#${prompt.slug}`,
+    })),
+  },
+];
+---
+
+<BaseLayout
+  title="Prompts de IA gratuitos para negócios, agentes e automação | Tech Briefing"
+  description="Biblioteca gratuita de prompts para aplicar IA de verdade: negócios, agentes, automação, conteúdo, vídeo, voz, dados, design, vendas e marketing."
+  active="Prompts"
+  jsonLd={jsonLd}
+>
+  <PromptsPage client:load />
+</BaseLayout>

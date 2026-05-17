@@ -118,10 +118,10 @@ function App(){
 
               <div className="about-hero-stat-grid">
                 {[
-                  {n:'50+',em:'',l:'Guias de operação'},
-                  {n:'IA',em:'',l:'Aplicada'},
-                  {n:'Weekly',em:'',l:'Briefing estratégico'},
-                  {n:'1',em:'',l:'Ebook premium'},
+                  {n:'Guias',em:'',l:'Manuais práticos'},
+                  {n:'Prompts',em:'',l:'Biblioteca gratuita'},
+                  {n:'Reviews',em:'',l:'Ferramentas avaliadas'},
+                  {n:'Nexora',em:'',l:'Assinatura editorial'},
                 ].map((s,i)=>(
                   <div className="about-stat" key={i}>
                     <div className="about-stat-n">

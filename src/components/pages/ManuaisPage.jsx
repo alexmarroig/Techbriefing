@@ -8,6 +8,8 @@ const EXTRA_IDEAS = [
   'Como criar miniaturas chamativas com IA',
   'Como usar IA para vender serviço local',
   'Como criar roteiro viral a partir de notícia quente',
+  'Como usar prompts para criar uma oferta melhor',
+  'Como montar um agente de pesquisa para notícias tech',
 ];
 
 function TrackCard({ track, index }) {
@@ -42,13 +44,14 @@ export default function ManuaisPage() {
       <section className="manuals-hero">
         <div className="wrap">
           <div className="manuals-kicker">Central de manuais</div>
-          <h1>Aprenda IA pelo caminho que dá resultado: fazer, testar, publicar e vender.</h1>
+          <h1>Manuais para transformar IA em produção, conteúdo, automação e venda.</h1>
           <p>
             Aqui entram os guias práticos do Tech Briefing: voz, avatar, vídeo, agentes autônomos,
-            criação de apps, reviews com preço e ideias para transformar ferramenta em oferta real.
+            criação de apps, prompts, reviews com preço e ideias para transformar ferramenta em oferta real.
           </p>
           <div className="manuals-tabs" aria-label="Trilhas de manuais">
             {MANUAL_TRACKS.map((track) => <a href={`#${track.id}`} key={track.id}>{track.label}</a>)}
+            <a href="/prompts/">Prompts</a>
           </div>
         </div>
       </section>

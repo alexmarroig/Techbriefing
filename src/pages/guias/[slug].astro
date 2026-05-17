@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { MANUALS, getManualBySlug } from '../../data/manuals.js';
+import { PROMPTS } from '../../data/prompts.js';
 
 export function getStaticPaths() {
   return MANUALS.map((manual) => ({
@@ -11,6 +12,12 @@ export function getStaticPaths() {
 
 const { manual } = Astro.props;
 const related = MANUALS.filter((item) => item.slug !== manual.slug && item.category === manual.category).slice(0, 3);
+const relatedPrompts = PROMPTS.filter((prompt) => {
+  if (manual.category === 'Review') return ['dados', 'design-produto'].includes(prompt.category);
+  if (manual.category.includes('Agentes')) return prompt.category === 'agentes';
+  if (manual.category.includes('Voz') || manual.category.includes('Vídeo')) return prompt.category === 'video-voz';
+  return ['negocios', 'automacao', 'conteudo'].includes(prompt.category);
+}).slice(0, 2);
 const manualIndex = MANUALS.findIndex((item) => item.slug === manual.slug);
 const score = {
   difficulty: 46 + ((manualIndex * 13) % 38),
@@ -217,6 +224,21 @@ const decisionRows = manual.tools.map((tool, index) => ({
             <button type="button" data-copy-manual-prompt>Copiar prompt</button>
             <pre><code>{starterPrompt}</code></pre>
           </div>
+
+          {relatedPrompts.length > 0 && (
+            <>
+              <h2>Prompts relacionados</h2>
+              <div class="manual-related-prompts">
+                {relatedPrompts.map((prompt) => (
+                  <a href={`/prompts/#${prompt.slug}`}>
+                    <span>Prompt gratuito</span>
+                    <strong>{prompt.title}</strong>
+                    <p>{prompt.objective}</p>
+                  </a>
+                ))}
+              </div>
+            </>
+          )}
 
           <h2>Erros que mais travam</h2>
           <div class="manual-mistakes">
