@@ -1,0 +1,182 @@
+---
+// Telemetry.astro - Rastreamento leve e assíncrono de interações (CRO)
+---
+
+<script>
+  // Envolvemos tudo em um escopo seguro para não interferir com outros scripts da página
+  (() => {
+    // Apenas ativa se estiver no navegador
+    if (typeof window === 'undefined') return;
+
+    window.addEventListener('load', () => {
+      const pageUrl = window.location.pathname;
+      const startTime = Date.now();
+      
+      // Marcos de scroll já enviados para evitar duplicidade
+      const scrollMilestones = {
+        25: false,
+        50: false,
+        75: false,
+        100: false
+      };
+
+      // Cache para controle de Cliques de Raiva (Rage Clicks)
+      let clickHistory = {
+        element: null,
+        count: 0,
+        lastTimestamp: 0
+      };
+
+      /**
+       * Envia a telemetria usando sendBeacon (padrão de performance) ou fetch secundário
+       */
+      function sendTelemetry(eventType, details = {}) {
+        const payload = JSON.stringify({
+          eventType,
+          pageUrl,
+          timestamp: new Date().toISOString(),
+          details: {
+            ...details,
+            screenSize: `${window.innerWidth}x${window.innerHeight}`,
+            referrer: document.referrer
+          }
+        });
+
+        const endpoint = '/api/telemetry';
+
+        // sendBeacon é assíncrono e roda em segundo plano, sem travar a navegação
+        if (navigator.sendBeacon) {
+          navigator.sendBeacon(endpoint, payload);
+        } else {
+          fetch(endpoint, {
+            method: 'POST',
+            body: payload,
+            headers: { 'Content-Type': 'application/json' },
+            keepalive: true
+          }).catch(() => {});
+        }
+      }
+
+      // ==========================================
+      // 1. RASTREAMENTO DE SCROLL DEPTH
+      // ==========================================
+      window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        
+        if (scrollHeight <= 0) return;
+        
+        const scrollPercentage = Math.round((scrollTop / scrollHeight) * 100);
+
+        [25, 50, 75, 100].forEach(milestone => {
+          if (scrollPercentage >= milestone && !scrollMilestones[milestone]) {
+            scrollMilestones[milestone] = true;
+            sendTelemetry('scroll_depth', { milestone });
+          }
+        });
+      });
+
+      // ==========================================
+      // 2. RASTREAMENTO DE CLIQUES (RAGE & DEAD CLICKS)
+      // ==========================================
+      document.body.addEventListener('click', (event) => {
+        const target = event.target as HTMLElement;
+        if (!target) return;
+
+        const now = Date.now();
+        const elementSelector = getSelector(target);
+        const elementText = (target.innerText || target.getAttribute('alt') || '').substring(0, 50).trim();
+
+        // --- Verificação de Rage Clicks ---
+        if (clickHistory.element === target && (now - clickHistory.lastTimestamp) < 2000) {
+          clickHistory.count++;
+          if (clickHistory.count === 3) {
+            sendTelemetry('rage_click', {
+              selector: elementSelector,
+              text: elementText,
+              clicksCount: clickHistory.count
+            });
+          }
+        } else {
+          clickHistory = {
+            element: target,
+            count: 1,
+            lastTimestamp: now
+          };
+        }
+
+        // --- Verificação de Dead Clicks ---
+        // Checa se o elemento clicado NÃO é interativo por natureza
+        const isInteractive = 
+          target.closest('a') || 
+          target.closest('button') || 
+          target.closest('input') || 
+          target.closest('textarea') || 
+          target.closest('select') || 
+          target.closest('[role="button"]') ||
+          target.style.cursor === 'pointer' ||
+          window.getComputedStyle(target).cursor === 'pointer';
+
+        if (!isInteractive) {
+          // Registra clique morto apenas em tags visuais que podem parecer clicáveis
+          const tag = target.tagName.toUpperCase();
+          if (['IMG', 'SPAN', 'H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'P', 'DIV', 'LI'].includes(tag)) {
+            // Ignora cliques em blocos vazios enormes (white spaces)
+            if (elementText.length > 0 || tag === 'IMG') {
+              sendTelemetry('dead_click', {
+                selector: elementSelector,
+                tag,
+                text: elementText
+              });
+            }
+          }
+        }
+
+        // --- Registro de Cliques em Botões de Compra / Conversão ---
+        const purchaseLink = target.closest('a[href*="kiwify.com.br"]');
+        if (purchaseLink) {
+          sendTelemetry('purchase_intent', {
+            selector: elementSelector,
+            text: elementText,
+            url: purchaseLink.getAttribute('href')
+          });
+        }
+      });
+
+      // ==========================================
+      // 3. TEMPO DE TELA (TIME ON PAGE) AO SAIR
+      // ==========================================
+      window.addEventListener('beforeunload', () => {
+        const timeSpentSeconds = Math.round((Date.now() - startTime) / 1000);
+        sendTelemetry('time_on_page', {
+          durationSeconds: timeSpentSeconds
+        });
+      });
+
+      /**
+       * Gera um seletor CSS legível para identificar o elemento clicado
+       */
+      function getSelector(el) {
+        if (!el) return '';
+        let path = [];
+        while (el && el.nodeType === Node.ELEMENT_NODE) {
+          let selector = el.nodeName.toLowerCase();
+          if (el.id) {
+            selector += '#' + el.id;
+            path.unshift(selector);
+            break; // IDs são únicos, podemos parar aqui
+          } else {
+            let sib = el, nth = 1;
+            while (sib = sib.previousElementSibling) {
+              if (sib.nodeName.toLowerCase() === el.nodeName.toLowerCase()) nth++;
+            }
+            if (nth > 1) selector += `:nth-of-type(${nth})`;
+          }
+          path.unshift(selector);
+          el = el.parentNode;
+        }
+        return path.join(' > ');
+      }
+    });
+  })();
+</script>
