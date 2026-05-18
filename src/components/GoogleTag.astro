@@ -151,9 +151,16 @@ const siteName = 'tech_briefing';
         window.addEventListener('load', scheduleTags, { once: true });
       }
 
+      const loadTagsOnInteraction = function() {
+        ['pointerdown', 'keydown', 'touchstart'].forEach(function(eventName) {
+          window.removeEventListener(eventName, loadTagsOnInteraction);
+        });
+        // Delay script execution by 300ms to let the interaction paint first
+        window.setTimeout(window.__loadTechBriefingTags, 300);
+      };
+
       ['pointerdown', 'keydown', 'touchstart'].forEach(function(eventName) {
-        window.addEventListener(eventName, window.__loadTechBriefingTags, {
-          once: true,
+        window.addEventListener(eventName, loadTagsOnInteraction, {
           passive: true
         });
       });
