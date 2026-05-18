@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import GoogleTag from '../components/GoogleTag.astro';
+import Telemetry from '../components/Telemetry.astro';
 import { EBOOK_OFFER } from '../data/ebookOffer.js';
 
 const CONFIG = {
@@ -169,6 +170,7 @@ const absoluteImage = new URL('/images/ebook-agentes-ia-premium-cover.png', Astr
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <title>{title}</title>
   <GoogleTag />
+  <Telemetry />
 </head>
 <body class="premium-body">
 <GoogleTag mode="body" />
@@ -212,7 +214,7 @@ const absoluteImage = new URL('/images/ebook-agentes-ia-premium-cover.png', Astr
     <div class="hero-grid">
       <div class="hero-text-content">
         <div class="premium-badge-tag">{CONFIG.heroBadge}</div>
-        <h1 class="premium-headline">{CONFIG.heroHeadline}</h1>
+        <h1 class="premium-headline"><a href={CONFIG.buyLink} class="premium-headline-link" data-cta-id="premium_hero_headline">{CONFIG.heroHeadline}</a></h1>
         <p class="premium-subheadline">{CONFIG.heroSub}</p>
 
         <!-- Dynamic Offer Box -->
@@ -239,7 +241,7 @@ const absoluteImage = new URL('/images/ebook-agentes-ia-premium-cover.png', Astr
       <div class="hero-visual">
         <div class="book-container-3d">
           <div class="glowing-backlight"></div>
-          <img src="/images/ebook-agentes-ia-premium-cover.png" alt="Capa do Framework de Agentes de IA para Negócios" class="premium-mockup-cover" width="400" height="570" />
+          <img src="/images/ebook-agentes-ia-premium-cover.png" alt="Capa do Framework de Agentes de IA para Negócios" class="premium-mockup-cover" width="400" height="570" fetchpriority="high" decoding="async" />
           
           <div class="spec-metrics-panel">
             <div class="spec-item">
@@ -291,13 +293,13 @@ const absoluteImage = new URL('/images/ebook-agentes-ia-premium-cover.png', Astr
 
     <div class="cards-grid-4col">
       {CONFIG.benefits.map((b, idx) => (
-        <div class="glass-benefit-card">
+        <a href={CONFIG.buyLink} class="glass-benefit-card premium-card-link" data-cta-id="premium_benefit_click">
           <div class="benefit-icon-box">
             <span class="num-glow-idx">{idx + 1}</span>
           </div>
           <h3 class="benefit-title">{b.title}</h3>
           <p class="benefit-desc">{b.desc}</p>
-        </div>
+        </a>
       ))}
     </div>
   </section>
@@ -1120,10 +1122,30 @@ const absoluteImage = new URL('/images/ebook-agentes-ia-premium-cover.png', Astr
     transition: all 0.3s ease;
   }
 
+  .premium-card-link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+  }
+
   .glass-benefit-card:hover {
     border-color: var(--color-border-glow);
     background: rgba(11, 15, 25, 0.55);
     transform: translateY(-2px);
+  }
+
+  .premium-headline-link {
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+    transition: text-shadow 0.2s, transform 0.2s;
+  }
+  .premium-headline-link:hover {
+    text-shadow: 0 0 30px rgba(14, 165, 233, 0.4);
+    transform: translateY(-2px);
+  }
+  .premium-headline-link:active {
+    transform: translateY(1px);
   }
 
   .benefit-icon-box {
