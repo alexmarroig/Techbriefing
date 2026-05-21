@@ -1,12 +1,12 @@
----
+﻿---
 title: "OpenAI coloca GPT-5.5-Cyber nas mãos de defensores: o que muda na segurança"
 description: "A iniciativa Trusted Access for Cyber mostra uma tendência clara: modelos avançados de IA começam a virar ferramenta operacional para times de defesa digital."
 category: "Cibersegurança"
-author: "Nexora Systems"
+author: "Tech Briefing"
 date: 2026-05-13
 readTime: "6 min"
 featured: true
-image: "/images/news/openai-gpt-55-cyber-defensores.svg"
+image: "/images/article-api-dev.png"
 tags:
   - OpenAI
   - Cibersegurança

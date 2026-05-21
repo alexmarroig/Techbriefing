@@ -2,11 +2,11 @@
 title: "Prompt engineering: guia completo para resultados melhores com IA"
 description: "Aprenda prompt engineering do básico ao avançado: técnicas, padrões e exemplos práticos para obter respostas muito melhores de qualquer modelo de linguagem."
 category: "IA Prática"
-author: "Nexora Systems"
+author: "Tech Briefing"
 date: 2026-04-23
 readTime: "12 min"
 featured: true
-image: "/images/editorial/api-components.svg"
+image: "/images/article-prompt-engineering.png"
 tags:
   - Prompt Engineering
   - IA Prática

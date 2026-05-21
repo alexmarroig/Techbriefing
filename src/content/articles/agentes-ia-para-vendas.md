@@ -2,11 +2,11 @@
 title: "Como usar agentes de IA para vendas e prospecção em 2026"
 description: "Aprenda como usar agentes de IA para automatizar prospecção, qualificar leads, personalizar abordagens e aumentar as taxas de conversão em vendas B2B e B2C."
 category: "Agentes de IA"
-author: "Nexora Systems"
+author: "Tech Briefing"
 date: 2026-04-05
 readTime: "10 min"
 featured: false
-image: "/images/editorial/agents-operations.svg"
+image: "/images/article-ai-sales-2026.png"
 tags:
   - Vendas
   - Agentes de IA

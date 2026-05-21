@@ -2,11 +2,11 @@
 title: "O que são agentes de IA e como funcionam"
 description: "Entenda o que são agentes de inteligência artificial, como funcionam na prática e por que estão transformando empresas de todos os setores em 2026."
 category: "Agentes de IA"
-author: "Nexora Systems"
+author: "Tech Briefing"
 date: 2026-03-05
 readTime: "8 min"
 featured: true
-image: "/images/editorial/agents-operations.svg"
+image: "/images/article-agents-framework.png"
 tags:
   - Agentes de IA
   - Inteligência Artificial

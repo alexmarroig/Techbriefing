@@ -1,12 +1,12 @@
----
+﻿---
 title: "Pentágono libera gigantes de tecnologia para IA em redes classificadas"
 description: "A entrada de grandes empresas em ambientes militares mostra como IA comercial está avançando para usos sensíveis e regulados."
 category: "Geopolítica"
-author: "Nexora Systems"
+author: "Tech Briefing"
 date: 2026-05-13
 readTime: "6 min"
 featured: false
-image: "/images/news/pentagono-ai-redes-classificadas.svg"
+image: "/images/article-strategy-business.png"
 tags:
   - Pentágono
   - IA militar

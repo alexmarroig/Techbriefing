@@ -1,12 +1,12 @@
----
+﻿---
 title: "Statewright chama atenção ao usar máquinas de estado para deixar agentes mais confiáveis"
 description: "A discussão no Hacker News reforça um ponto prático: agentes precisam de trilhos, estados e limites para não tentar fazer tudo ao mesmo tempo."
 category: "Agentes de IA"
-author: "Nexora Systems"
+author: "Tech Briefing"
 date: 2026-05-13
 readTime: "6 min"
 featured: false
-image: "/images/news/statewright-maquinas-estado-agentes-confiaveis.svg"
+image: "/images/article-agents-framework.png"
 tags:
   - State machines
   - Agentes

@@ -495,7 +495,7 @@ function ToolsSection() {
 
         <div className="tools-grid">
           {TOOLS.map((t,i)=>(
-            <div className="tool-card" key={i}>
+            <a className="tool-card" key={i} href={t.href || '/ferramentas'}>
               <div className="tool-head">
                 <div style={{display:'flex',gap:14,alignItems:'center'}}>
                   <div className="tool-ico">{t.ico}</div>
@@ -526,7 +526,7 @@ function ToolsSection() {
                   </svg>
                 </span>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>

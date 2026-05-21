@@ -1,0 +1,29 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Slackbot como agente de trabalho</title>
+  <desc id="desc">Arte editorial com mensagens, dados e tarefas conectadas por um agente de IA.</desc>
+  <rect width="1200" height="675" fill="#070b0d"/>
+  <radialGradient id="g" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(865 355) rotate(155) scale(720 480)">
+    <stop stop-color="#ff4ab8" stop-opacity=".24"/>
+    <stop offset=".5" stop-color="#ffb15f" stop-opacity=".16"/>
+    <stop offset="1" stop-color="#070b0d" stop-opacity="0"/>
+  </radialGradient>
+  <rect width="1200" height="675" fill="url(#g)"/>
+  <rect x="85" y="82" width="1030" height="510" rx="30" fill="#0c1215" stroke="#25333a"/>
+  <text x="130" y="154" fill="#ffb15f" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="5">TRABALHO DIGITAL</text>
+  <text x="130" y="235" fill="#f7f2e8" font-family="Georgia, serif" font-size="64" font-weight="700">Slackbot virou</text>
+  <text x="130" y="305" fill="#f7f2e8" font-family="Georgia, serif" font-size="64" font-weight="700">agente operacional</text>
+  <text x="132" y="365" fill="#b8c4c2" font-family="Arial, sans-serif" font-size="24">A IA corporativa começa a buscar contexto,</text>
+  <text x="132" y="399" fill="#b8c4c2" font-family="Arial, sans-serif" font-size="24">cruzar dados e executar tarefas no fluxo real.</text>
+  <g transform="translate(715 135)">
+    <rect x="0" y="0" width="340" height="405" rx="26" fill="#0a1114" stroke="#344049"/>
+    <rect x="36" y="42" width="210" height="72" rx="18" fill="#151d23" stroke="#4b5964"/>
+    <rect x="94" y="144" width="210" height="72" rx="18" fill="#171f24" stroke="#4b5964"/>
+    <rect x="36" y="246" width="210" height="72" rx="18" fill="#151d23" stroke="#4b5964"/>
+    <circle cx="278" cy="315" r="48" fill="#161116" stroke="#ff4ab8" stroke-width="4"/>
+    <path d="M278 288v54M251 315h54" stroke="#ffb15f" stroke-width="7" stroke-linecap="round"/>
+    <path d="M248 78h54M42 180H16M250 282h46" stroke="#22d3ee" stroke-width="5" stroke-linecap="round"/>
+    <text x="58" y="87" fill="#dfe7e4" font-family="Arial, sans-serif" font-size="18" font-weight="700">Mensagem</text>
+    <text x="118" y="189" fill="#dfe7e4" font-family="Arial, sans-serif" font-size="18" font-weight="700">Contexto</text>
+    <text x="58" y="291" fill="#dfe7e4" font-family="Arial, sans-serif" font-size="18" font-weight="700">Tarefa</text>
+  </g>
+</svg>

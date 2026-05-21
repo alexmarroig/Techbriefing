@@ -1,12 +1,12 @@
----
+﻿---
 title: "Deep Research Max reforça uma nova categoria: agentes de pesquisa longa para empresas"
 description: "A evolução dos agentes de pesquisa do Google indica que relatórios, análise de mercado e due diligence podem virar fluxos semi-autônomos."
 category: "Pesquisa com IA"
-author: "Nexora Systems"
+author: "Tech Briefing"
 date: 2026-05-13
 readTime: "6 min"
 featured: false
-image: "/images/news/google-deep-research-max-agentes-pesquisa.svg"
+image: "/images/article-agents-framework.png"
 tags:
   - Google
   - Deep Research

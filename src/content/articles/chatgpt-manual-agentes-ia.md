@@ -1,12 +1,12 @@
----
+﻿---
 title: "Você usa ChatGPT todo dia, mas ainda faz tudo manualmente?"
 description: "Entenda por que usar ChatGPT não basta para automatizar um negócio e como agentes de IA mudam o jogo quando entram no processo certo."
 category: "IA Prática"
-author: "Nexora Systems"
+author: "Tech Briefing"
 date: 2026-05-12
 readTime: "6 min"
 featured: false
-image: "/images/editorial/agents-operations.svg"
+image: "/images/article-agents-framework.png"
 tags:
   - ChatGPT
   - Agentes de IA

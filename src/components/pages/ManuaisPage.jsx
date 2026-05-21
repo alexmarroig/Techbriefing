@@ -56,6 +56,87 @@ export default function ManuaisPage() {
         </div>
       </section>
 
+      <section className="manuals-pillars" style={{background:'var(--bg-2)', borderBottom:'1px solid var(--line-s)', padding:'48px 0'}}>
+        <div className="wrap">
+          <div className="manuals-section-head" style={{marginBottom: 24}}>
+            <span>Guias de Referência & Páginas-Pilar</span>
+            <p>Nossos guias definitivos de referência para planejar e estruturar sua operação com inteligência artificial.</p>
+          </div>
+          <div className="pillars-grid" style={{display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(240px, 1fr))', gap:20}}>
+            {[
+              {
+                title: 'Guia Definitivo de Agentes de IA',
+                desc: 'Entenda o que são agentes, arquitetura recomendada e quando faz sentido implementar na sua empresa.',
+                href: '/guia-definitivo-agentes-ia/',
+                badge: 'Pilar 01'
+              },
+              {
+                title: 'Melhores Ferramentas por Categoria',
+                desc: 'Um mapa prático e atualizado para escolher as melhores ferramentas de IA para seu workflow diário.',
+                href: '/melhores-ferramentas-ia-categoria/',
+                badge: 'Pilar 02'
+              },
+              {
+                title: 'Stack de IA para Empresas',
+                desc: 'Como desenhar e orquestrar uma stack de inteligência artificial enxuta, segura e de alto retorno.',
+                href: '/stack-ia-para-empresas/',
+                badge: 'Pilar 03'
+              },
+              {
+                title: 'Automação com IA para Negócios',
+                desc: 'Aprenda a mapear processos, criar fluxos com n8n/Make e garantir resiliência contra quebras.',
+                href: '/automacao-ia-para-negocios/',
+                badge: 'Pilar 04'
+              }
+            ].map((p, i) => (
+              <a href={p.href} key={i} className="pillar-card-link" style={{
+                display: 'block',
+                background: 'var(--bg)',
+                border: '1px solid var(--line-s)',
+                borderRadius: 12,
+                padding: 24,
+                textDecoration: 'none',
+                color: 'inherit'
+              }}>
+                <div style={{
+                  fontFamily: 'var(--mono)',
+                  fontSize: 10,
+                  fontWeight: 600,
+                  color: 'var(--amber)',
+                  letterSpacing: '.08em',
+                  textTransform: 'uppercase',
+                  marginBottom: 8
+                }}>{p.badge}</div>
+                <h3 style={{
+                  fontFamily: 'var(--serif)',
+                  fontSize: 18,
+                  fontWeight: 700,
+                  lineHeight: 1.3,
+                  marginBottom: 10
+                }}>{p.title}</h3>
+                <p style={{
+                  fontSize: 13,
+                  color: 'var(--text-2)',
+                  lineHeight: 1.5,
+                  margin: 0
+                }}>{p.desc}</p>
+                <div style={{
+                  marginTop: 16,
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 4,
+                  fontSize: 12,
+                  fontWeight: 500,
+                  color: 'var(--amber)'
+                }}>
+                  Ler guia de referência <span>→</span>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="manuals-tracks">
         <div className="wrap">
           <div className="manuals-section-head">

@@ -2,11 +2,11 @@
 title: "O futuro da IA nos negócios: tendências de 2026 a 2030"
 description: "Análise das principais tendências de IA para negócios nos próximos anos: agentes autônomos, IA multimodal, regulação e como se preparar para as mudanças que estão vindo."
 category: "Agentes de IA"
-author: "Nexora Systems"
+author: "Tech Briefing"
 date: 2026-05-05
 readTime: "10 min"
 featured: false
-image: "/images/editorial/agents-operations.svg"
+image: "/images/article-agents-framework.png"
 tags:
   - Futuro
   - Tendências

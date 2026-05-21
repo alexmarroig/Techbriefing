@@ -1,0 +1,15 @@
+{
+  "name": "mcp-google-ads",
+  "version": "1.0.0",
+  "description": "Model Context Protocol server for managing and optimizing Google Ads campaigns",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.1",
+    "axios": "^1.6.8",
+    "dotenv": "^16.4.5"
+  }
+}

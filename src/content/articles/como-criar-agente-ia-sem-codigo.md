@@ -2,11 +2,11 @@
 title: "Como criar um agente de IA sem programar: tutorial passo a passo"
 description: "Aprenda a criar seu primeiro agente de inteligência artificial sem escrever código usando ferramentas no-code. Tutorial completo para iniciantes em 2026."
 category: "Agentes de IA"
-author: "Nexora Systems"
+author: "Tech Briefing"
 date: 2026-03-10
 readTime: "10 min"
 featured: false
-image: "/images/editorial/agents-operations.svg"
+image: "/images/article-agents-framework.png"
 tags:
   - Agentes de IA
   - No-code

@@ -1,12 +1,12 @@
----
+﻿---
 title: "Microsoft fala em Frontier Firms: empresas começam a redesenhar o trabalho ao redor de agentes"
 description: "A visão de Author, Editor, Director e Orchestrator ajuda a entender como a colaboração entre humanos e agentes está mudando a operação das empresas."
 category: "Trabalho"
-author: "Nexora Systems"
+author: "Tech Briefing"
 date: 2026-05-13
 readTime: "6 min"
 featured: true
-image: "/images/news/microsoft-frontier-firms-modelo-operacional-ia.svg"
+image: "/images/article-strategy-business.png"
 tags:
   - Microsoft
   - Agentes de IA

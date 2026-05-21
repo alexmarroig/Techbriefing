@@ -13,15 +13,15 @@ const FEATURED = {
   tags:[{l:'Agentes',v:'c'},{l:'Prioridade',v:''}],
   title:'Como montar um sistema de automação com agentes de IA — sem escrever uma linha de código',
   excerpt:'O novo paradigma de automação está aqui — e ele não exige programação. Descubra como combinar n8n, Make e modelos de linguagem para criar fluxos que trabalham enquanto você dorme.',
-  author:'Lucas Faria',
+  author:'Tech Briefing',
   date:'28 abr 2026',
   readTime:'11 min',
   href:'/artigos/como-criar-agente-ia-sem-codigo',
-  image:'/images/editorial/automation-workflow.svg',
+  image:'/images/article-autonomous-agents.png',
 };
 
 const ASIDE = [
-  {tag:'Agentes',v:'c',title:'AutoGPT, CrewAI ou LangGraph? Qual framework escolher em 2026',date:'26 abr',rt:'8 min',href:'/artigos/autogpt-crewai-langgraph'},
+  {tag:'Agentes',v:'c',title:'AutoGPT, CrewAI ou LangGraph? Qual framework escolher em 2026',date:'26 abr',rt:'8 min',href:'/artigos/autogpt-crewai-langgraph/'},
   {tag:'IA Aplicada',v:'a',title:'As 7 ferramentas de produtividade que os pros usam e você nunca ouviu falar',date:'24 abr',rt:'6 min',href:'/ferramentas'},
   {tag:'Automação',v:'a',title:'Integre CRM, e-mail e Notion num único fluxo automatizado',date:'22 abr',rt:'9 min',href:'/artigos/como-automatizar-processos-com-ia'},
 ];
@@ -47,24 +47,28 @@ const MANUAL_TRACKS = [
     title:'Biblioteca gratuita de prompts para aplicar IA',
     desc:'Modelos para diagnosticar processos, criar agentes, analisar dados e transformar ideia em execução.',
     href:'/prompts',
+    icon:'📋',
   },
   {
     tag:'Manuais',
     title:'Voz, avatar, vídeo e apps criados com IA',
     desc:'Guias práticos para produzir conteúdo, criar ativos digitais e publicar sem depender de tentativa solta.',
     href:'/guias',
+    icon:'📖',
   },
   {
     tag:'Ferramentas',
     title:'Benchmarks e Reviews de Ferramentas de IA',
     desc:'Análises práticas para escolher ferramenta sem cair em promessa bonita. ROI em primeiro lugar.',
     href:'/ferramentas',
+    icon:'⚙️',
   },
   {
     tag:'Estratégia',
     title:'Guias de Adoção de IA para Negócios',
     desc:'Frameworks de decisão para líderes que precisam aplicar IA com segurança e retorno.',
     href:'/guias',
+    icon:'🎯',
   },
 ];
 
@@ -82,7 +86,7 @@ const TOOLS = [
   {ico:'💻',name:'Cursor',desc:'O editor de código com IA que está mudando o desenvolvimento.',stars:'★★★★★',aff:false},
 ];
 
-const FALLBACK_ARTICLE_IMAGE = '/images/editorial/tech-radar.svg';
+const FALLBACK_ARTICLE_IMAGE = '/images/article-autonomous-agents.png';
 
 function formatArticleDate(date, opts = { day: '2-digit', month: 'short' }) {
   if (!date) return '';
@@ -116,16 +120,16 @@ function Hero(){
         <div className="hero-eyebrow">
           <span className="hero-eyebrow-mark">Tech Briefing</span>
           <div className="hero-eyebrow-rule"/>
-          <span className="hero-eyebrow-tag">Notícias e ideias para aplicar IA de verdade</span>
+          <span className="hero-eyebrow-tag">Inteligência Artificial aplicada para negócios</span>
         </div>
 
         <h1 className="hero-h1">
-          Entenda o que vale a pena usar. Aplique IA com <em>método.</em>
+          IA que funciona.<br/>Aplicada com <em>método.</em>
         </h1>
 
         <p className="hero-sub">
-          Notícias filtradas, guias práticos, prompts gratuitos, reviews e comparativos
-          para transformar IA, agentes e automação em processo real.
+          Notícias filtradas, guias práticos, prompts gratuitos e comparativos
+          para transformar IA, agentes e automação em resultado real.
         </p>
 
         <div className="hero-actions">
@@ -141,7 +145,7 @@ function Hero(){
 
       <div className="hero-bar wrap">
         {[
-          {n:'Notícias',em:'',l:'com leitura aplicável'},
+          {n:'Análises',em:'',l:'com leitura aplicável'},
           {n:'Guias',em:'',l:'para executar melhor'},
           {n:'Prompts',em:'',l:'gratuitos e copiáveis'},
           {n:'Reviews',em:'',l:'com critério editorial'},
@@ -160,13 +164,21 @@ function FeatureSection(){
   return (
     <section className="feature">
       <div className="wrap">
-        <SH num="01" label="Foco Editorial" more="Ver tudo"/>
+        <SH num="01" label="Destaque Editorial" more="Ver tudo" moreHref="/arquivo"/>
         <div className="feature-layout">
           <div className="feature-ord" aria-hidden="true">01</div>
 
           <div>
             <a className="feature-img-wrap feature-img-link" href={FEATURED.href} aria-label={FEATURED.title}>
-              <img src={FEATURED.image} alt={FEATURED.title} loading="lazy" width="900" height="506"/>
+              <img
+                src={FEATURED.image}
+                alt={FEATURED.title}
+                loading="eager"
+                fetchpriority="high"
+                width="900"
+                height="506"
+                style={{objectFit:'cover',width:'100%',height:'100%'}}
+              />
             </a>
 
             <div style={{marginTop:32}}>
@@ -176,8 +188,10 @@ function FeatureSection(){
                 ))}
               </div>
 
-              <h2 className="feature-title">{FEATURED.title}</h2>
-              <p className="feature-excerpt">{FEATURED.excerpt}</p>
+              <a href={FEATURED.href} style={{textDecoration:'none', color:'inherit', display:'block'}}>
+                <h2 className="feature-title">{FEATURED.title}</h2>
+                <p className="feature-excerpt">{FEATURED.excerpt}</p>
+              </a>
 
               <div className="feature-meta">
                 <span>{FEATURED.author}</span>
@@ -187,7 +201,7 @@ function FeatureSection(){
                 <span>{FEATURED.readTime} de leitura</span>
               </div>
 
-              <a href={FEATURED.href} className="arrow-link">Ler guia completo -&gt;</a>
+              <a href={FEATURED.href} className="arrow-link">Ler artigo completo →</a>
             </div>
           </div>
 
@@ -197,7 +211,7 @@ function FeatureSection(){
               <a className="aside-item" href={a.href} key={i}>
                 <span className={`pill ${a.v}`}>{a.tag}</span>
                 <div className="aside-item-title">{a.title}</div>
-                <div className="aside-item-meta">{a.date} - {a.rt}</div>
+                <div className="aside-item-meta">{a.date} · {a.rt}</div>
               </a>
             ))}
           </div>
@@ -214,9 +228,9 @@ function TrustSection(){
         <div className="trust-inner">
           <span className="trust-label">Nosso filtro editorial:</span>
           <div className="trust-stats">
-            <div className="trust-stat"><strong>1</strong> O que mudou</div>
-            <div className="trust-stat"><strong>2</strong> Por que importa</div>
-            <div className="trust-stat"><strong>3</strong> Como aplicar</div>
+            <div className="trust-stat"><span className="trust-num">①</span> O que mudou</div>
+            <div className="trust-stat"><span className="trust-num">②</span> Por que importa</div>
+            <div className="trust-stat"><span className="trust-num">③</span> Como aplicar</div>
           </div>
         </div>
       </div>
@@ -225,36 +239,101 @@ function TrustSection(){
 }
 
 function RecentArticlesSection({ articles = [] }) {
-  const items = articles.slice(0, 8);
+  const items = articles.slice(0, 9);
   if (!items.length) return null;
+
+  const [lead, ...rest] = items;
+  const secondary = rest.slice(0, 2);
+  const small = rest.slice(2, 8);
 
   return (
     <section className="latest" id="ultimas">
       <div className="wrap">
         <SH num="02" label="Últimas publicações" more="Arquivo completo" moreHref="/arquivo"/>
 
-        <div className="latest-grid">
-          {items.map((article, index) => (
-            <a className={`latest-card ${index === 0 ? 'lead' : ''}`} href={article.href} key={article.href || article.slug || index}>
-              <div className="latest-img-wrap">
-                <img src={article.image || FALLBACK_ARTICLE_IMAGE} alt="" loading="lazy"/>
+        {/* Lead + 2 secondary - top row */}
+        <div className="latest-top-row">
+          <a className="latest-lead-card" href={lead.href}>
+            <div className="latest-lead-img">
+              <img
+                src={lead.image || FALLBACK_ARTICLE_IMAGE}
+                alt={lead.title}
+                loading="eager"
+                width="680"
+                height="380"
+                style={{objectFit:'cover',width:'100%',height:'100%'}}
+              />
+              <div className="latest-lead-overlay"/>
+            </div>
+            <div className="latest-lead-body">
+              <div className="latest-lead-meta">
+                <span className={`pill ${lead.category?.includes('Agente') ? 'c' : 'a'}`}>
+                  {lead.category || 'IA'}
+                </span>
+                <span className="latest-meta-date">{formatArticleDate(lead.date)}</span>
               </div>
+              <h2 className="latest-lead-title">{lead.title}</h2>
+              <p className="latest-lead-desc">{lead.description}</p>
+              <span className="latest-readtime">{lead.readTime} de leitura</span>
+            </div>
+          </a>
 
-              <div className="latest-content">
-                <div className="latest-top">
-                  <span className={`pill ${article.category?.includes('Agente') ? 'c' : 'a'}`}>
-                    {article.category || 'IA'}
-                  </span>
-                  <span>{formatArticleDate(article.date)}</span>
+          <div className="latest-secondary-col">
+            {secondary.map((article, i) => (
+              <a className="latest-secondary-card" href={article.href} key={i}>
+                <div className="latest-secondary-img">
+                  <img
+                    src={article.image || FALLBACK_ARTICLE_IMAGE}
+                    alt={article.title}
+                    loading="lazy"
+                    width="280"
+                    height="180"
+                    style={{objectFit:'cover',width:'100%',height:'100%'}}
+                  />
                 </div>
-
-                <h3 className="latest-title">{article.title}</h3>
-                <p className="latest-desc">{article.description}</p>
-                <div className="latest-meta">{article.readTime} de leitura</div>
-              </div>
-            </a>
-          ))}
+                <div className="latest-secondary-body">
+                  <div className="latest-secondary-meta">
+                    <span className={`pill ${article.category?.includes('Agente') ? 'c' : 'a'}`}>
+                      {article.category || 'IA'}
+                    </span>
+                    <span className="latest-meta-date">{formatArticleDate(article.date)}</span>
+                  </div>
+                  <h3 className="latest-secondary-title">{article.title}</h3>
+                  <span className="latest-readtime">{article.readTime}</span>
+                </div>
+              </a>
+            ))}
+          </div>
         </div>
+
+        {/* Small cards grid */}
+        {small.length > 0 && (
+          <div className="latest-small-grid">
+            {small.map((article, index) => (
+              <a className="latest-small-card" href={article.href} key={index}>
+                <div className="latest-small-img">
+                  <img
+                    src={article.image || FALLBACK_ARTICLE_IMAGE}
+                    alt={article.title}
+                    loading="lazy"
+                    width="240"
+                    height="140"
+                    style={{objectFit:'cover',width:'100%',height:'100%'}}
+                  />
+                </div>
+                <div className="latest-small-body">
+                  <div className="latest-small-meta">
+                    <span className={`pill ${article.category?.includes('Agente') ? 'c' : 'a'}`}>
+                      {article.category || 'IA'}
+                    </span>
+                  </div>
+                  <h3 className="latest-small-title">{article.title}</h3>
+                  <span className="latest-readtime">{article.readTime}</span>
+                </div>
+              </a>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
@@ -285,7 +364,7 @@ function GuidesSection(){
   return (
     <section className="guides">
       <div className="wrap">
-        <SH num="05" label="Laboratório & Rankings" more="Ver biblioteca" moreHref="/arquivo"/>
+        <SH num="05" label="Manuais em Destaque" more="Ver biblioteca" moreHref="/arquivo"/>
 
         <div className="guides-grid">
           <div className="guide-list">
@@ -308,19 +387,19 @@ function GuidesSection(){
             </div>
 
             {RANKING.map((r,i)=>(
-              <div className="rank-item" key={i}>
+              <a className="rank-item" key={i} href={r.href || '/artigos/'}>
                 <div className={`rank-n ${r.gold ? 'g' : ''}`}>{r.n}</div>
                 <div>
                   <div className="rank-name">{r.name}</div>
                   <div className="rank-sub">{r.sub}</div>
                 </div>
                 <div className="rank-score">{r.score}</div>
-              </div>
+              </a>
             ))}
 
             <div className="rank-foot">
-              <a href="/comparativo" className="arrow-link" style={{fontSize:11}}>
-                Metodologia de Benchmark -&gt;
+              <a href="/comparativos/n8n-vs-make/" className="arrow-link" style={{fontSize:11}}>
+                Metodologia de Benchmark →
               </a>
             </div>
           </div>
@@ -347,10 +426,11 @@ function ManualsSection(){
         <div className="manuals-home-grid">
           {MANUAL_TRACKS.map((item, index)=>(
             <a className="manual-track-card" href={item.href} key={item.title}>
-              <span className="manual-track-num">{String(index + 1).padStart(2,'0')}</span>
+              <div className="manual-track-icon">{item.icon}</div>
               <span className="manual-track-tag">{item.tag}</span>
               <strong>{item.title}</strong>
               <p>{item.desc}</p>
+              <span className="manual-track-arrow">Ver trilha →</span>
             </a>
           ))}
         </div>
@@ -363,17 +443,17 @@ function ToolsSection({tweaks}){
   return (
     <section className="tools">
       <div className="wrap">
-        <SH num="06" label="Laboratório de Ferramentas" more="Ver todas"/>
+        <SH num="06" label="Laboratório de Ferramentas" more="Ver todas" moreHref="/ferramentas"/>
 
         <div style={{marginBottom:32,marginTop:-20}}>
-          <p style={{fontSize:13,color:'var(--text-3)',fontWeight:300}}>
-            O ROI editorial e operacional começa na escolha da stack certa. Reviews 100% independentes.
+          <p style={{fontSize:13,color:'var(--text-3)',fontWeight:400}}>
+            Reviews 100% independentes. O ROI editorial e operacional começa na escolha da stack certa.
           </p>
         </div>
 
         <div className="tools-grid">
           {TOOLS.map((t,i)=>(
-            <div className="tool-card" key={i}>
+            <a className="tool-card" key={i} href={t.href || '/ferramentas'}>
               <div className="tool-head">
                 <div style={{display:'flex',gap:14,alignItems:'center'}}>
                   <div className="tool-ico">{t.ico}</div>
@@ -396,7 +476,7 @@ function ToolsSection({tweaks}){
                   </svg>
                 </span>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>
@@ -442,13 +522,12 @@ function NewsletterSection(){
               <div style={{textAlign:'center',padding:'48px 0'}}>
                 <div style={{fontFamily:'var(--serif)',fontSize:52,fontWeight:600,color:'var(--amber)',marginBottom:12,lineHeight:1}}>✓</div>
                 <div style={{fontFamily:'var(--serif)',fontSize:28,fontWeight:600,marginBottom:8,letterSpacing:'-.01em'}}>Você está no Briefing.</div>
-                <div style={{fontSize:14,color:'var(--text-2)',fontWeight:300}}>Obrigado pela confiança. Sua primeira edição chega em breve.</div>
+                <div style={{fontSize:14,color:'var(--text-2)',fontWeight:400}}>Obrigado pela confiança. Sua primeira edição chega em breve.</div>
               </div>
             ) : (
               <form style={{display:'flex',flexDirection:'column',gap:14}} onSubmit={e=>{e.preventDefault();if(email)setDone(true)}}>
                 <div className="nl-stat">
-                  <div className="nl-stat-n">IA</div>
-                  <div className="nl-stat-l">operadores, gestores e fundadores lendo semanalmente</div>
+                  <div className="nl-stat-l">Operadores, gestores e fundadores lendo semanalmente</div>
                 </div>
 
                 <div>

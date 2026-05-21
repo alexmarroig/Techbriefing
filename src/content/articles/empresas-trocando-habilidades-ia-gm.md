@@ -1,12 +1,12 @@
----
-title: "A nova seleção natural do mercado: empresas querem gente que sabe trabalhar com IA"
+﻿---
+title: "Mercado busca profissionais com habilidades em IA"
 description: "A reestruturação de tecnologia da GM mostra uma tendência dura: não basta usar ferramentas, é preciso entender dados, automação e workflows com IA."
 category: "Negócios Digitais"
-author: "Nexora Systems"
+author: "Tech Briefing"
 date: 2026-05-13
 readTime: "7 min"
 featured: false
-image: "/images/editorial/market-shift.svg"
+image: "/images/article-strategy-business.png"
 tags:
   - Carreira em IA
   - Automação

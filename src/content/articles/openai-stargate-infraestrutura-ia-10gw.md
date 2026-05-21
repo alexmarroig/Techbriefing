@@ -1,12 +1,12 @@
----
+﻿---
 title: "Stargate passa de promessa a infraestrutura: por que a corrida por data centers importa"
 description: "A expansão de compute da OpenAI reforça que a próxima fase da IA será decidida por energia, chips, capital e capacidade de entregar modelos em escala."
 category: "Infraestrutura"
-author: "Nexora Systems"
+author: "Tech Briefing"
 date: 2026-05-13
 readTime: "6 min"
 featured: true
-image: "/images/news/openai-stargate-infraestrutura-ia-10gw.svg"
+image: "/images/article-strategy-business.png"
 tags:
   - OpenAI
   - Stargate

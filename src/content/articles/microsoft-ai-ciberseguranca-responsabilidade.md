@@ -1,12 +1,12 @@
----
+﻿---
 title: "Microsoft alerta: IA avançada pode fortalecer ou fragilizar a segurança digital"
 description: "A discussão sobre modelos capazes de acelerar descoberta de vulnerabilidades coloca responsabilidade no centro da adoção de IA."
 category: "Cibersegurança"
-author: "Nexora Systems"
+author: "Tech Briefing"
 date: 2026-05-13
 readTime: "6 min"
 featured: false
-image: "/images/news/microsoft-ai-ciberseguranca-responsabilidade.svg"
+image: "/images/article-api-dev.png"
 tags:
   - Microsoft
   - Segurança

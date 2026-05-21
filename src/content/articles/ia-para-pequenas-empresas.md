@@ -2,11 +2,11 @@
 title: "IA para pequenas empresas: por onde começar sem complicar"
 description: "Guia prático de inteligência artificial para pequenas empresas: as melhores ferramentas, casos de uso acessíveis e como começar sem equipe técnica ou grande investimento."
 category: "IA Prática"
-author: "Nexora Systems"
+author: "Tech Briefing"
 date: 2026-04-28
 readTime: "9 min"
 featured: false
-image: "/images/editorial/api-components.svg"
+image: "/images/article-ai-small-business.png"
 tags:
   - Pequenas Empresas
   - IA Prática

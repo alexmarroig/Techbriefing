@@ -2,11 +2,11 @@
 title: "Como usar n8n para automação com IA: guia completo 2026"
 description: "Aprenda a usar o n8n para criar automações poderosas com IA. Do básico ao avançado: instalação, fluxos de trabalho, integrações e casos de uso práticos."
 category: "Automação"
-author: "Nexora Systems"
+author: "Tech Briefing"
 date: 2026-04-02
 readTime: "13 min"
 featured: false
-image: "/images/editorial/automation-workflow.svg"
+image: "/images/article-n8n-agents.png"
 tags:
   - n8n
   - Automação

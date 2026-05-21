@@ -1,12 +1,12 @@
----
-title: "Agentes de voz deixaram de ser promessa: o que o caso Ring ensina para qualquer negócio"
+﻿---
+title: "Agentes de voz no atendimento: o caso Ring"
 description: "A escolha da Ring por agentes de voz em atendimento mostra uma virada importante: IA não é só chat bonito, é operação ao vivo, com regra, controle e métrica."
 category: "Agentes de IA"
-author: "Nexora Systems"
+author: "Tech Briefing"
 date: 2026-05-13
 readTime: "8 min"
 featured: true
-image: "/images/news/agentes-voz-ring-call-center.svg"
+image: "/images/article-automation-workflow.png"
 tags:
   - Agentes de voz
   - Atendimento com IA

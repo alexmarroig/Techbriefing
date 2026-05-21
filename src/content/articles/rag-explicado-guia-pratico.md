@@ -2,11 +2,11 @@
 title: "RAG explicado: o que é e como funciona na prática"
 description: "Entenda o que é RAG (Retrieval Augmented Generation), como funciona tecnicamente, quando usar e como implementar para criar IAs com conhecimento especializado."
 category: "IA Prática"
-author: "Nexora Systems"
+author: "Tech Briefing"
 date: 2026-04-08
 readTime: "11 min"
 featured: false
-image: "/images/editorial/api-components.svg"
+image: "/images/article-api-dev.png"
 tags:
   - RAG
   - IA Prática

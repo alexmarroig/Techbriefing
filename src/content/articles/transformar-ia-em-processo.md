@@ -1,12 +1,12 @@
----
+﻿---
 title: "Como transformar IA em processo, não em brincadeira"
 description: "IA só vira resultado quando entra em um processo com objetivo, regras, ferramentas e medição. Veja um método simples para começar."
 category: "IA Prática"
-author: "Nexora Systems"
+author: "Tech Briefing"
 date: 2026-05-12
 readTime: "7 min"
 featured: false
-image: "/images/editorial/tech-radar.svg"
+image: "/images/article-strategy-business.png"
 tags:
   - IA para negócios
   - Processos

@@ -4,6 +4,56 @@
       "source": "/newsletter%7B",
       "destination": "/newsletter/",
       "permanent": false
+    },
+    {
+      "source": "/comparativo",
+      "destination": "/comparativos/n8n-vs-make/",
+      "permanent": true
+    },
+    {
+      "source": "/comparativo/",
+      "destination": "/comparativos/n8n-vs-make/",
+      "permanent": true
+    },
+    {
+      "source": "/artigo-frameworks-agentes",
+      "destination": "/artigos/autogpt-crewai-langgraph/",
+      "permanent": true
+    },
+    {
+      "source": "/artigo-frameworks-agentes/",
+      "destination": "/artigos/autogpt-crewai-langgraph/",
+      "permanent": true
+    },
+    {
+      "source": "/manuais",
+      "destination": "/guias/",
+      "permanent": true
+    },
+    {
+      "source": "/manuais/",
+      "destination": "/guias/",
+      "permanent": true
+    },
+    {
+      "source": "/manuais/:slug",
+      "destination": "/guias/:slug/",
+      "permanent": true
+    },
+    {
+      "source": "/manuais/:slug/",
+      "destination": "/guias/:slug/",
+      "permanent": true
+    },
+    {
+      "source": "/agentes-de-ia",
+      "destination": "/agentes/",
+      "permanent": true
+    },
+    {
+      "source": "/agentes-de-ia/",
+      "destination": "/agentes/",
+      "permanent": true
     }
   ]
 }

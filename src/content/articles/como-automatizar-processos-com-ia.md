@@ -2,11 +2,11 @@
 title: "Como automatizar processos empresariais com IA: guia completo"
 description: "Aprenda a identificar, mapear e automatizar processos empresariais usando inteligência artificial. Metodologia prática com exemplos reais para PMEs e grandes empresas."
 category: "Automação"
-author: "Nexora Systems"
+author: "Tech Briefing"
 date: 2026-03-25
 readTime: "11 min"
 featured: false
-image: "/images/editorial/automation-workflow.svg"
+image: "/images/article-automation-workflow.png"
 tags:
   - Automação
   - Processos

@@ -15,6 +15,10 @@ const tagId = googleAdsId || googleTagId || gaMeasurementId;
 const siteName = 'tech_briefing';
 ---
 
+{mode === 'head' && (
+  <script src="https://analytics.ahrefs.com/analytics.js" data-key="itj7i7877BPDN5PgMZg+dw" async is:inline></script>
+)}
+
 {mode === 'head' && gtmId && (
   <script is:inline define:vars={{ gtmId }}>
     window.dataLayer = window.dataLayer || [];
@@ -105,6 +109,15 @@ const siteName = 'tech_briefing';
         });
 
         window.trackTechBriefingEvent('begin_checkout', payload);
+
+        if (googleAdsId && conversionLabel && window.gtag) {
+          window.gtag('event', 'conversion', {
+            'send_to': googleAdsId + '/' + conversionLabel,
+            'value': payload.value,
+            'currency': payload.currency,
+            'transaction_id': payload.event_id
+          });
+        }
       };
 
       if (window.location.pathname.replace(/\/$/, '') === '/ebook-agentes-ia') {

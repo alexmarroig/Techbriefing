@@ -1,0 +1,28 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Codex em ambientes corporativos</title>
+  <desc id="desc">Arte editorial mostrando agentes de código em uma infraestrutura empresarial segura.</desc>
+  <rect width="1200" height="675" fill="#080d10"/>
+  <radialGradient id="g" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(260 155) rotate(35) scale(820 540)">
+    <stop stop-color="#ffb15f" stop-opacity=".26"/>
+    <stop offset=".5" stop-color="#22d3ee" stop-opacity=".16"/>
+    <stop offset="1" stop-color="#080d10" stop-opacity="0"/>
+  </radialGradient>
+  <rect width="1200" height="675" fill="url(#g)"/>
+  <rect x="85" y="82" width="1030" height="510" rx="30" fill="#0d1519" stroke="#1f333b"/>
+  <text x="130" y="154" fill="#22d3ee" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="5">AGENTES CORPORATIVOS</text>
+  <text x="130" y="235" fill="#f7f2e8" font-family="Georgia, serif" font-size="64" font-weight="700">Codex entra</text>
+  <text x="130" y="305" fill="#f7f2e8" font-family="Georgia, serif" font-size="64" font-weight="700">na infraestrutura</text>
+  <text x="132" y="365" fill="#b8c4c2" font-family="Arial, sans-serif" font-size="24">O próximo gargalo não é só modelo.</text>
+  <text x="132" y="399" fill="#b8c4c2" font-family="Arial, sans-serif" font-size="24">É segurança, permissão e governança.</text>
+  <g transform="translate(710 154)">
+    <rect x="0" y="0" width="330" height="350" rx="24" fill="#0a1115" stroke="#314b54"/>
+    <rect x="32" y="38" width="266" height="60" rx="12" fill="#111f24" stroke="#24515a"/>
+    <rect x="32" y="132" width="266" height="60" rx="12" fill="#111f24" stroke="#24515a"/>
+    <rect x="32" y="226" width="266" height="60" rx="12" fill="#111f24" stroke="#24515a"/>
+    <path d="M75 68h92M75 162h130M75 256h110" stroke="#ffb15f" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="244" cy="68" r="16" fill="#22d3ee"/>
+    <circle cx="244" cy="162" r="16" fill="#ffb15f"/>
+    <circle cx="244" cy="256" r="16" fill="#22d3ee"/>
+    <path d="M244 84v62M244 178v62" stroke="#51666b" stroke-width="4"/>
+  </g>
+</svg>

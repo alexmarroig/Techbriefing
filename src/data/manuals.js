@@ -98,7 +98,7 @@ export const MANUALS = [
   {
     slug: 'como-criar-cortes-virais-com-ia',
     category: 'Vídeo viral',
-    title: 'Como criar cortes virais de um vídeo longo com IA',
+    title: 'Como criar cortes virais de vídeos com IA',
     description: 'Transforme aula, live, podcast ou reunião em cortes curtos com gancho, legenda e chamada para ação.',
     outcome: 'Criar vários vídeos curtos a partir de um conteúdo longo.',
     tools: ['OpusClip', 'Captions', 'CapCut', 'Descript'],

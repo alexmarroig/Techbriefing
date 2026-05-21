@@ -1,12 +1,12 @@
----
-title: "Anthropic lança agentes para finanças: o escritório entra na era dos fluxos automatizados"
+﻿---
+title: "Anthropic lança agentes especializados para finanças"
 description: "Templates prontos para pitchbooks, KYC e fechamento mensal mostram como agentes começam a se especializar por função."
 category: "Finanças"
-author: "Nexora Systems"
+author: "Tech Briefing"
 date: 2026-05-13
 readTime: "6 min"
 featured: false
-image: "/images/news/anthropic-agentes-financeiros-claude.svg"
+image: "/images/article-strategy-business.png"
 tags:
   - Anthropic
   - Claude

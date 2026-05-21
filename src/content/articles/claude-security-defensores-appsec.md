@@ -1,12 +1,12 @@
----
-title: "Claude Security mira o gargalo entre encontrar vulnerabilidade e corrigir código"
+﻿---
+title: "Claude Security: IA para corrigir vulnerabilidades"
 description: "A proposta da Anthropic para segurança indica que a próxima fase da AppSec será menos relatório parado e mais correção guiada."
 category: "Cibersegurança"
-author: "Nexora Systems"
+author: "Tech Briefing"
 date: 2026-05-13
 readTime: "6 min"
 featured: false
-image: "/images/news/claude-security-defensores-appsec.svg"
+image: "/images/article-api-dev.png"
 tags:
   - Anthropic
   - Claude Security

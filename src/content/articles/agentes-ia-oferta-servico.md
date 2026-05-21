@@ -1,12 +1,12 @@
----
+﻿---
 title: "Se você vende serviço, agentes de IA podem virar sua próxima oferta"
 description: "Consultores, freelancers e agências podem transformar agentes de IA em uma nova oferta de serviço. Veja como começar sem prometer milagre."
 category: "Negócios"
-author: "Nexora Systems"
+author: "Tech Briefing"
 date: 2026-05-12
 readTime: "8 min"
 featured: false
-image: "/images/editorial/market-shift.svg"
+image: "/images/article-strategy-business.png"
 tags:
   - Consultoria
   - Agentes de IA

@@ -1,20 +1,20 @@
 ---
-title: "Radar Tech: 12 movimentos de IA e tecnologia para acompanhar"
-description: "Uma curadoria em portugu√™s com as not√≠cias de tecnologia mais relevantes do dia, traduzidas em impacto pr√°tico, oportunidade e pr√≥ximo passo."
-category: "Radar Tech"
-author: "Nexora Systems"
+title: "12 movimentos de IA para acompanhar"
+description: "Uma curadoria em portuguÍs com as notÌcias de tecnologia mais relevantes do dia, traduzidas em impacto pr·tico, oportunidade e prÛximo passo."
+category: "Tech News"
+author: "Tech Briefing"
 date: 2026-05-14
 readTime: "14 min"
 featured: true
-image: "/images/radar/radar-tech-2026-05-14.svg"
+image: "/images/article-radar-tech-default.png"
 tags:
   - Agentes de IA
   - VentureBeat AI
 ---
 
-Este √© o Radar Tech do dia: uma curadoria das not√≠cias e discuss√µes que mais importam para quem quer transformar IA, automa√ß√£o e tecnologia em produtividade, neg√≥cio e renda.
+Este È o Radar Tech do dia: uma curadoria das notÌcias e discussıes que mais importam para quem quer transformar IA, automaÁ„o e tecnologia em produtividade, negÛcio e renda.
 
-A ideia aqui n√£o √© traduzir a internet inteira. √â separar sinal de ru√≠do e mostrar o que voc√™ pode aplicar, testar ou transformar em oferta.
+A ideia aqui n„o È traduzir a internet inteira. … separar sinal de ruÌdo e mostrar o que vocÍ pode aplicar, testar ou transformar em oferta.
 
 <div class="radar-signal-board">
   <h3>Painel visual do dia</h3>
@@ -26,13 +26,13 @@ A ideia aqui n√£o √© traduzir a internet inteira. √â separar sinal de ru√≠do e m
       <p>Ideias sobre IA executando tarefas</p>
     </div>
     <div class="radar-signal-card">
-      <div class="radar-signal-label">Automa√ß√£o</div>
+      <div class="radar-signal-label">AutomaÁ„o</div>
       <div class="radar-signal-value">8/12</div>
       <div class="radar-signal-bar"><span style="width:67%"></span></div>
-      <p>Ideias sobre fluxos, APIs e opera√ß√£o</p>
+      <p>Ideias sobre fluxos, APIs e operaÁ„o</p>
     </div>
     <div class="radar-signal-card">
-      <div class="radar-signal-label">Neg√≥cios</div>
+      <div class="radar-signal-label">NegÛcios</div>
       <div class="radar-signal-value">7/12</div>
       <div class="radar-signal-bar"><span style="width:58%"></span></div>
       <p>Ideias sobre mercado, clientes e renda</p>
@@ -42,239 +42,197 @@ A ideia aqui n√£o √© traduzir a internet inteira. √â separar sinal de ru√≠do e m
 
 ## Manchete do dia
 
-**O Slackbot virou agente: o escrit√≥rio est√° entrando na era da IA operacional.**
+**O Slackbot virou agente: o escritÛrio est· entrando na era da IA operacional.**
 
-A not√≠cia que mais chamou aten√ß√£o no radar foi: [Salesforce rolls out new Slackbot AI agent as it battles Microsoft and Google in workplace AI](https://venturebeat.com/technology/salesforce-rolls-out-new-slackbot-ai-agent-as-it-battles-microsoft-and), publicada/destacada em VentureBeat AI. Ferramentas de desenvolvimento com IA est√£o deixando de ser autocomplete e virando agentes que planejam, editam, testam e monitoram trabalho.
+A notÌcia que mais chamou atenÁ„o no radar foi: [Salesforce rolls out new Slackbot AI agent as it battles Microsoft and Google in workplace AI](https://venturebeat.com/technology/salesforce-rolls-out-new-slackbot-ai-agent-as-it-battles-microsoft-and), publicada/destacada em VentureBeat AI. Ferramentas de desenvolvimento com IA est„o deixando de ser autocomplete e virando agentes que planejam, editam, testam e monitoram trabalho.
 
 <div class="radar-action-box">
-  <strong>A√ß√£o de 10 minutos</strong>
-  <p>Liste um atendimento, resposta ou an√°lise repetitiva que hoje depende de voc√™ e desenhe quais dados um agente precisaria acessar.</p>
+  <strong>AÁ„o de 10 minutos</strong>
+  <p>Liste um atendimento, resposta ou an·lise repetitiva que hoje depende de vocÍ e desenhe quais dados um agente precisaria acessar.</p>
 </div>
 
 ## Principais movimentos
 
-### 1. O Slackbot virou agente: o escrit√≥rio est√° entrando na era da IA operacional
+### 1. O Slackbot virou agente: o escritÛrio est· entrando na era da IA operacional
 
-**Fonte:** [VentureBeat AI](https://venturebeat.com/technology/salesforce-rolls-out-new-slackbot-ai-agent-as-it-battles-microsoft-and)  
-**T√≠tulo em portugu√™s:** O Slackbot virou agente: o escrit√≥rio est√° entrando na era da IA operacional  
-**T√≠tulo original:** Salesforce rolls out new Slackbot AI agent as it battles Microsoft and Google in workplace AI
 
-Salesforce on Tuesday launched an entirely rebuilt version of Slackbot , the company's workplace assistant, transforming it from a simple notification tool into what executives describe as a fully powered AI agent capable of searching enterprise data,.
 
-**Por que importa:** Ferramentas de desenvolvimento com IA est√£o deixando de ser autocomplete e virando agentes que planejam, editam, testam e monitoram trabalho.
+**Por que importa:** Ferramentas de desenvolvimento com IA est„o deixando de ser autocomplete e virando agentes que planejam, editam, testam e monitoram trabalho.
 
-**Leitura pr√°tica:** se isso toca seu mercado, pense em qual processo poderia ser melhorado com uma camada de IA: atendimento, an√°lise, suporte, cria√ß√£o, revis√£o, monitoramento ou venda.
+**Leitura pr·tica:** se isso toca seu mercado, pense em qual processo poderia ser melhorado com uma camada de IA: atendimento, an·lise, suporte, criaÁ„o, revis„o, monitoramento ou venda.
 
-**A√ß√£o sugerida:** Liste um atendimento, resposta ou an√°lise repetitiva que hoje depende de voc√™ e desenhe quais dados um agente precisaria acessar.
+**AÁ„o sugerida:** Liste um atendimento, resposta ou an·lise repetitiva que hoje depende de vocÍ e desenhe quais dados um agente precisaria acessar.
 
-**Oportunidade poss√≠vel:** Pacote de atendimento com IA para pequenos neg√≥cios que perdem vendas por demora na resposta.
+**Oportunidade possÌvel:** Pacote de atendimento com IA para pequenos negÛcios que perdem vendas por demora na resposta.
 
-### 2. A infraestrutura de cloud est√° sendo redesenhada para a era da IA
+### 2. A infraestrutura de cloud est· sendo redesenhada para a era da IA
 
-**Fonte:** [VentureBeat AI](https://venturebeat.com/infrastructure/railway-secures-usd100-million-to-challenge-aws-with-ai-native-cloud)  
-**T√≠tulo em portugu√™s:** A infraestrutura de cloud est√° sendo redesenhada para a era da IA  
-**T√≠tulo original:** Railway secures $100 million to challenge AWS with AI-native cloud infrastructure
 
-Railway , a San Francisco-based cloud platform that has quietly amassed two million developers without spending a dollar on marketing, announced Thursday that it raised $100 million in a Series B funding round, as surging demand for artificial intelligence.
 
-**Por que importa:** Ferramentas de desenvolvimento com IA est√£o deixando de ser autocomplete e virando agentes que planejam, editam, testam e monitoram trabalho.
+**Por que importa:** Ferramentas de desenvolvimento com IA est„o deixando de ser autocomplete e virando agentes que planejam, editam, testam e monitoram trabalho.
 
-**Leitura pr√°tica:** se isso toca seu mercado, pense em qual processo poderia ser melhorado com uma camada de IA: atendimento, an√°lise, suporte, cria√ß√£o, revis√£o, monitoramento ou venda.
+**Leitura pr·tica:** se isso toca seu mercado, pense em qual processo poderia ser melhorado com uma camada de IA: atendimento, an·lise, suporte, criaÁ„o, revis„o, monitoramento ou venda.
 
-**A√ß√£o sugerida:** Liste um atendimento, resposta ou an√°lise repetitiva que hoje depende de voc√™ e desenhe quais dados um agente precisaria acessar.
+**AÁ„o sugerida:** Liste um atendimento, resposta ou an·lise repetitiva que hoje depende de vocÍ e desenhe quais dados um agente precisaria acessar.
 
-**Oportunidade poss√≠vel:** Pacote de atendimento com IA para pequenos neg√≥cios que perdem vendas por demora na resposta.
+**Oportunidade possÌvel:** Pacote de atendimento com IA para pequenos negÛcios que perdem vendas por demora na resposta.
 
-### 3. A guerra dos agentes de programa√ß√£o est√° ficando mais barata e mais intensa
+### 3. A guerra dos agentes de programaÁ„o est· ficando mais barata e mais intensa
 
-**Fonte:** [VentureBeat AI](https://venturebeat.com/infrastructure/claude-code-costs-up-to-usd200-a-month-goose-does-the-same-thing-for-free)  
-**T√≠tulo em portugu√™s:** A guerra dos agentes de programa√ß√£o est√° ficando mais barata e mais intensa  
-**T√≠tulo original:** Claude Code costs up to $200 a month. Goose does the same thing for free.
 
-The artificial intelligence coding revolution comes with a catch: it's expensive. Claude Code , Anthropic's terminal-based AI agent that can write, debug, and deploy code autonomously, has captured the imagination of software developers worldwide. But its.
 
-**Por que importa:** Ferramentas de desenvolvimento com IA est√£o deixando de ser autocomplete e virando agentes que planejam, editam, testam e monitoram trabalho.
+**Por que importa:** Ferramentas de desenvolvimento com IA est„o deixando de ser autocomplete e virando agentes que planejam, editam, testam e monitoram trabalho.
 
-**Leitura pr√°tica:** se isso toca seu mercado, pense em qual processo poderia ser melhorado com uma camada de IA: atendimento, an√°lise, suporte, cria√ß√£o, revis√£o, monitoramento ou venda.
+**Leitura pr·tica:** se isso toca seu mercado, pense em qual processo poderia ser melhorado com uma camada de IA: atendimento, an·lise, suporte, criaÁ„o, revis„o, monitoramento ou venda.
 
-**A√ß√£o sugerida:** Liste um atendimento, resposta ou an√°lise repetitiva que hoje depende de voc√™ e desenhe quais dados um agente precisaria acessar.
+**AÁ„o sugerida:** Liste um atendimento, resposta ou an·lise repetitiva que hoje depende de vocÍ e desenhe quais dados um agente precisaria acessar.
 
-**Oportunidade poss√≠vel:** Pacote de atendimento com IA para pequenos neg√≥cios que perdem vendas por demora na resposta.
+**Oportunidade possÌvel:** Pacote de atendimento com IA para pequenos negÛcios que perdem vendas por demora na resposta.
 
-### 4. Agentes de desktop come√ßam a chegar para usu√°rios n√£o t√©cnicos
+### 4. Agentes de desktop comeÁam a chegar para usu·rios n„o tÈcnicos
 
-**Fonte:** [VentureBeat AI](https://venturebeat.com/technology/anthropic-launches-cowork-a-claude-desktop-agent-that-works-in-your-files-no)  
-**T√≠tulo em portugu√™s:** Agentes de desktop come√ßam a chegar para usu√°rios n√£o t√©cnicos  
-**T√≠tulo original:** Anthropic launches Cowork, a Claude Desktop agent that works in your files ‚Äî no coding required
 
-Anthropic released Cowork on Monday, a new AI agent capability that extends the power of its wildly successful Claude Code tool to non-technical users ‚Äî and according to company insiders, the team built the entire feature in approximately a week and a half,.
+Anthropic released Cowork on Monday, a new AI agent capability that extends the power of its wildly successful Claude Code tool to non-technical users ó and according to company insiders, the team built the entire feature in approximately a week and a half,.
 
-**Por que importa:** Ferramentas de desenvolvimento com IA est√£o deixando de ser autocomplete e virando agentes que planejam, editam, testam e monitoram trabalho.
+**Por que importa:** Ferramentas de desenvolvimento com IA est„o deixando de ser autocomplete e virando agentes que planejam, editam, testam e monitoram trabalho.
 
-**Leitura pr√°tica:** se isso toca seu mercado, pense em qual processo poderia ser melhorado com uma camada de IA: atendimento, an√°lise, suporte, cria√ß√£o, revis√£o, monitoramento ou venda.
+**Leitura pr·tica:** se isso toca seu mercado, pense em qual processo poderia ser melhorado com uma camada de IA: atendimento, an·lise, suporte, criaÁ„o, revis„o, monitoramento ou venda.
 
-**A√ß√£o sugerida:** Liste um atendimento, resposta ou an√°lise repetitiva que hoje depende de voc√™ e desenhe quais dados um agente precisaria acessar.
+**AÁ„o sugerida:** Liste um atendimento, resposta ou an·lise repetitiva que hoje depende de vocÍ e desenhe quais dados um agente precisaria acessar.
 
-**Oportunidade poss√≠vel:** Pacote de atendimento com IA para pequenos neg√≥cios que perdem vendas por demora na resposta.
+**Oportunidade possÌvel:** Pacote de atendimento com IA para pequenos negÛcios que perdem vendas por demora na resposta.
 
-### 5. A guerra dos agentes de programa√ß√£o est√° ficando mais barata e mais intensa
+### 5. A guerra dos agentes de programaÁ„o est· ficando mais barata e mais intensa
 
-**Fonte:** [VentureBeat AI](https://venturebeat.com/technology/the-creator-of-claude-code-just-revealed-his-workflow-and-developers-are)  
-**T√≠tulo em portugu√™s:** A guerra dos agentes de programa√ß√£o est√° ficando mais barata e mais intensa  
-**T√≠tulo original:** The creator of Claude Code just revealed his workflow, and developers are losing their minds
 
-When the creator of the world's most advanced coding agent speaks, Silicon Valley doesn't just listen ‚Äî it takes notes. For the past week, the engineering community has been dissecting a thread on X from Boris Cherny , the creator and head of Claude Code at.
 
-**Por que importa:** Ferramentas de desenvolvimento com IA est√£o deixando de ser autocomplete e virando agentes que planejam, editam, testam e monitoram trabalho.
+**Por que importa:** Ferramentas de desenvolvimento com IA est„o deixando de ser autocomplete e virando agentes que planejam, editam, testam e monitoram trabalho.
 
-**Leitura pr√°tica:** se isso toca seu mercado, pense em qual processo poderia ser melhorado com uma camada de IA: atendimento, an√°lise, suporte, cria√ß√£o, revis√£o, monitoramento ou venda.
+**Leitura pr·tica:** se isso toca seu mercado, pense em qual processo poderia ser melhorado com uma camada de IA: atendimento, an·lise, suporte, criaÁ„o, revis„o, monitoramento ou venda.
 
-**A√ß√£o sugerida:** Liste um atendimento, resposta ou an√°lise repetitiva que hoje depende de voc√™ e desenhe quais dados um agente precisaria acessar.
+**AÁ„o sugerida:** Liste um atendimento, resposta ou an·lise repetitiva que hoje depende de vocÍ e desenhe quais dados um agente precisaria acessar.
 
-**Oportunidade poss√≠vel:** Pacote de atendimento com IA para pequenos neg√≥cios que perdem vendas por demora na resposta.
+**Oportunidade possÌvel:** Pacote de atendimento com IA para pequenos negÛcios que perdem vendas por demora na resposta.
 
-### 6. A guerra dos agentes de programa√ß√£o est√° ficando mais barata e mais intensa
+### 6. A guerra dos agentes de programaÁ„o est· ficando mais barata e mais intensa
 
-**Fonte:** [VentureBeat AI](https://venturebeat.com/technology/nous-researchs-nouscoder-14b-is-an-open-source-coding-model-landing-right-in)  
-**T√≠tulo em portugu√™s:** A guerra dos agentes de programa√ß√£o est√° ficando mais barata e mais intensa  
-**T√≠tulo original:** Nous Research's NousCoder-14B is an open-source coding model landing right in the Claude Code moment
 
-Nous Research , the open-source artificial intelligence startup backed by crypto venture firm Paradigm , released a new competitive programming model on Monday that it says matches or exceeds several larger proprietary systems ‚Äî trained in just four days.
 
-**Por que importa:** Ferramentas de desenvolvimento com IA est√£o deixando de ser autocomplete e virando agentes que planejam, editam, testam e monitoram trabalho.
+**Por que importa:** Ferramentas de desenvolvimento com IA est„o deixando de ser autocomplete e virando agentes que planejam, editam, testam e monitoram trabalho.
 
-**Leitura pr√°tica:** se isso toca seu mercado, pense em qual processo poderia ser melhorado com uma camada de IA: atendimento, an√°lise, suporte, cria√ß√£o, revis√£o, monitoramento ou venda.
+**Leitura pr·tica:** se isso toca seu mercado, pense em qual processo poderia ser melhorado com uma camada de IA: atendimento, an·lise, suporte, criaÁ„o, revis„o, monitoramento ou venda.
 
-**A√ß√£o sugerida:** Liste um atendimento, resposta ou an√°lise repetitiva que hoje depende de voc√™ e desenhe quais dados um agente precisaria acessar.
+**AÁ„o sugerida:** Liste um atendimento, resposta ou an·lise repetitiva que hoje depende de vocÍ e desenhe quais dados um agente precisaria acessar.
 
-**Oportunidade poss√≠vel:** Pacote de atendimento com IA para pequenos neg√≥cios que perdem vendas por demora na resposta.
+**Oportunidade possÌvel:** Pacote de atendimento com IA para pequenos negÛcios que perdem vendas por demora na resposta.
 
-### 7. Capital est√° correndo para infraestrutura de IA
+### 7. Capital est· correndo para infraestrutura de IA
 
-**Fonte:** [VentureBeat AI](https://venturebeat.com/technology/listen-labs-raises-usd69m-after-viral-billboard-hiring-stunt-to-scale-ai)  
-**T√≠tulo em portugu√™s:** Capital est√° correndo para infraestrutura de IA  
-**T√≠tulo original:** Listen Labs raises $69M after viral billboard hiring stunt to scale AI customer interviews
 
-Alfred Wahlforss was running out of options. His startup, Listen Labs , needed to hire over 100 engineers, but competing against Mark Zuckerberg's $100 million offers seemed impossible. So he spent $5,000 ‚Äî a fifth of his marketing budget ‚Äî on a billboard in.
 
-**Por que importa:** Ferramentas de desenvolvimento com IA est√£o deixando de ser autocomplete e virando agentes que planejam, editam, testam e monitoram trabalho.
+**Por que importa:** Ferramentas de desenvolvimento com IA est„o deixando de ser autocomplete e virando agentes que planejam, editam, testam e monitoram trabalho.
 
-**Leitura pr√°tica:** se isso toca seu mercado, pense em qual processo poderia ser melhorado com uma camada de IA: atendimento, an√°lise, suporte, cria√ß√£o, revis√£o, monitoramento ou venda.
+**Leitura pr·tica:** se isso toca seu mercado, pense em qual processo poderia ser melhorado com uma camada de IA: atendimento, an·lise, suporte, criaÁ„o, revis„o, monitoramento ou venda.
 
-**A√ß√£o sugerida:** Liste um atendimento, resposta ou an√°lise repetitiva que hoje depende de voc√™ e desenhe quais dados um agente precisaria acessar.
+**AÁ„o sugerida:** Liste um atendimento, resposta ou an·lise repetitiva que hoje depende de vocÍ e desenhe quais dados um agente precisaria acessar.
 
-**Oportunidade poss√≠vel:** Pacote de atendimento com IA para pequenos neg√≥cios que perdem vendas por demora na resposta.
+**Oportunidade possÌvel:** Pacote de atendimento com IA para pequenos negÛcios que perdem vendas por demora na resposta.
 
 ### 8. Agentes de IA entram em uma nova fase operacional
 
-**Fonte:** [TechCrunch AI](https://techcrunch.com/2026/05/13/notion-just-turned-its-workspace-into-a-hub-for-ai-agents/)  
-**T√≠tulo em portugu√™s:** Agentes de IA entram em uma nova fase operacional  
-**T√≠tulo original:** Notion just turned its workspace into a hub for AI agents
 
-Notion‚Äôs new developer platform lets teams connect AI agents, external data sources, and custom code directly into their workspace as the company pushes deeper into agentic productivity.
+Notionís new developer platform lets teams connect AI agents, external data sources, and custom code directly into their workspace as the company pushes deeper into agentic productivity.
 
-**Por que importa:** Ferramentas de desenvolvimento com IA est√£o deixando de ser autocomplete e virando agentes que planejam, editam, testam e monitoram trabalho.
+**Por que importa:** Ferramentas de desenvolvimento com IA est„o deixando de ser autocomplete e virando agentes que planejam, editam, testam e monitoram trabalho.
 
-**Leitura pr√°tica:** se isso toca seu mercado, pense em qual processo poderia ser melhorado com uma camada de IA: atendimento, an√°lise, suporte, cria√ß√£o, revis√£o, monitoramento ou venda.
+**Leitura pr·tica:** se isso toca seu mercado, pense em qual processo poderia ser melhorado com uma camada de IA: atendimento, an·lise, suporte, criaÁ„o, revis„o, monitoramento ou venda.
 
-**A√ß√£o sugerida:** Liste um atendimento, resposta ou an√°lise repetitiva que hoje depende de voc√™ e desenhe quais dados um agente precisaria acessar.
+**AÁ„o sugerida:** Liste um atendimento, resposta ou an·lise repetitiva que hoje depende de vocÍ e desenhe quais dados um agente precisaria acessar.
 
-**Oportunidade poss√≠vel:** Servi√ßo de automa√ß√£o interna: transformar tarefas repetidas de planilha, e-mail e relat√≥rio em fluxos assistidos por IA.
+**Oportunidade possÌvel:** ServiÁo de automaÁ„o interna: transformar tarefas repetidas de planilha, e-mail e relatÛrio em fluxos assistidos por IA.
 
-### 9. Efici√™ncia de tokens virou vantagem competitiva em agentes
+### 9. EficiÍncia de tokens virou vantagem competitiva em agentes
 
-**Fonte:** [GitHub Blog](https://github.blog/ai-and-ml/github-copilot/improving-token-efficiency-in-github-agentic-workflows/)  
-**T√≠tulo em portugu√™s:** Efici√™ncia de tokens virou vantagem competitiva em agentes  
-**T√≠tulo original:** Improving token efficiency in GitHub Agentic Workflows
 
 Agentic workflows that run on every pull request can quietly accumulate large API bills. Here's how we instrumented our own production workflows, found the inefficiencies, and built agents to fix them. The post Improving token efficiency in GitHub Agentic.
 
-**Por que importa:** Ferramentas de desenvolvimento com IA est√£o deixando de ser autocomplete e virando agentes que planejam, editam, testam e monitoram trabalho.
+**Por que importa:** Ferramentas de desenvolvimento com IA est„o deixando de ser autocomplete e virando agentes que planejam, editam, testam e monitoram trabalho.
 
-**Leitura pr√°tica:** se isso toca seu mercado, pense em qual processo poderia ser melhorado com uma camada de IA: atendimento, an√°lise, suporte, cria√ß√£o, revis√£o, monitoramento ou venda.
+**Leitura pr·tica:** se isso toca seu mercado, pense em qual processo poderia ser melhorado com uma camada de IA: atendimento, an·lise, suporte, criaÁ„o, revis„o, monitoramento ou venda.
 
-**A√ß√£o sugerida:** Liste um atendimento, resposta ou an√°lise repetitiva que hoje depende de voc√™ e desenhe quais dados um agente precisaria acessar.
+**AÁ„o sugerida:** Liste um atendimento, resposta ou an·lise repetitiva que hoje depende de vocÍ e desenhe quais dados um agente precisaria acessar.
 
-**Oportunidade poss√≠vel:** Servi√ßo de automa√ß√£o interna: transformar tarefas repetidas de planilha, e-mail e relat√≥rio em fluxos assistidos por IA.
+**Oportunidade possÌvel:** ServiÁo de automaÁ„o interna: transformar tarefas repetidas de planilha, e-mail e relatÛrio em fluxos assistidos por IA.
 
-### 10. O movimento merece aten√ß√£o de quem usa tecnologia no neg√≥cio
+### 10. O movimento merece atenÁ„o de quem usa tecnologia no negÛcio
 
-**Fonte:** [OpenAI News](https://openai.com/index/what-parameter-golf-taught-us)  
-**T√≠tulo em portugu√™s:** O movimento merece aten√ß√£o de quem usa tecnologia no neg√≥cio  
-**T√≠tulo original:** What Parameter Golf taught us about AI-assisted research
 
 Parameter Golf brought together 1,000+ participants and 2,000+ submissions to explore AI-assisted machine learning research, coding agents, quantization, and novel model design under strict.
 
-**Por que importa:** Ferramentas de desenvolvimento com IA est√£o deixando de ser autocomplete e virando agentes que planejam, editam, testam e monitoram trabalho.
+**Por que importa:** Ferramentas de desenvolvimento com IA est„o deixando de ser autocomplete e virando agentes que planejam, editam, testam e monitoram trabalho.
 
-**Leitura pr√°tica:** se isso toca seu mercado, pense em qual processo poderia ser melhorado com uma camada de IA: atendimento, an√°lise, suporte, cria√ß√£o, revis√£o, monitoramento ou venda.
+**Leitura pr·tica:** se isso toca seu mercado, pense em qual processo poderia ser melhorado com uma camada de IA: atendimento, an·lise, suporte, criaÁ„o, revis„o, monitoramento ou venda.
 
-**A√ß√£o sugerida:** Liste um atendimento, resposta ou an√°lise repetitiva que hoje depende de voc√™ e desenhe quais dados um agente precisaria acessar.
+**AÁ„o sugerida:** Liste um atendimento, resposta ou an·lise repetitiva que hoje depende de vocÍ e desenhe quais dados um agente precisaria acessar.
 
-**Oportunidade poss√≠vel:** Servi√ßo de automa√ß√£o interna: transformar tarefas repetidas de planilha, e-mail e relat√≥rio em fluxos assistidos por IA.
+**Oportunidade possÌvel:** ServiÁo de automaÁ„o interna: transformar tarefas repetidas de planilha, e-mail e relatÛrio em fluxos assistidos por IA.
 
-### 11. Vibe coding est√° virando m√©todo de aprendizado para agentes
+### 11. Vibe coding est· virando mÈtodo de aprendizado para agentes
 
-**Fonte:** [Google AI Blog](https://blog.google/innovation-and-ai/technology/developers-tools/kaggle-genai-intensive-course-vibe-coding-june-2026/)  
-**T√≠tulo em portugu√™s:** Vibe coding est√° virando m√©todo de aprendizado para agentes  
-**T√≠tulo original:** Join the new AI Agents Vibe Coding Course from Google and Kaggle
 
 Google is bringing back its 5-Day AI Agents Intensive Course with Kaggle and registration is.
 
-**Por que importa:** Ferramentas de desenvolvimento com IA est√£o deixando de ser autocomplete e virando agentes que planejam, editam, testam e monitoram trabalho.
+**Por que importa:** Ferramentas de desenvolvimento com IA est„o deixando de ser autocomplete e virando agentes que planejam, editam, testam e monitoram trabalho.
 
-**Leitura pr√°tica:** se isso toca seu mercado, pense em qual processo poderia ser melhorado com uma camada de IA: atendimento, an√°lise, suporte, cria√ß√£o, revis√£o, monitoramento ou venda.
+**Leitura pr·tica:** se isso toca seu mercado, pense em qual processo poderia ser melhorado com uma camada de IA: atendimento, an·lise, suporte, criaÁ„o, revis„o, monitoramento ou venda.
 
-**A√ß√£o sugerida:** Liste um atendimento, resposta ou an√°lise repetitiva que hoje depende de voc√™ e desenhe quais dados um agente precisaria acessar.
+**AÁ„o sugerida:** Liste um atendimento, resposta ou an·lise repetitiva que hoje depende de vocÍ e desenhe quais dados um agente precisaria acessar.
 
-**Oportunidade poss√≠vel:** Servi√ßo de automa√ß√£o interna: transformar tarefas repetidas de planilha, e-mail e relat√≥rio em fluxos assistidos por IA.
+**Oportunidade possÌvel:** ServiÁo de automaÁ„o interna: transformar tarefas repetidas de planilha, e-mail e relatÛrio em fluxos assistidos por IA.
 
-### 12. O movimento merece aten√ß√£o de quem usa tecnologia no neg√≥cio
+### 12. O movimento merece atenÁ„o de quem usa tecnologia no negÛcio
 
-**Fonte:** [OpenAI News](https://openai.com/index/building-codex-windows-sandbox)  
-**T√≠tulo em portugu√™s:** O movimento merece aten√ß√£o de quem usa tecnologia no neg√≥cio  
-**T√≠tulo original:** Building a safe, effective sandbox to enable Codex on Windows
 
 Learn how OpenAI built a secure sandbox for Codex on Windows, enabling safe, efficient coding agents with controlled file access and network.
 
-**Por que importa:** Ferramentas de desenvolvimento com IA est√£o deixando de ser autocomplete e virando agentes que planejam, editam, testam e monitoram trabalho.
+**Por que importa:** Ferramentas de desenvolvimento com IA est„o deixando de ser autocomplete e virando agentes que planejam, editam, testam e monitoram trabalho.
 
-**Leitura pr√°tica:** se isso toca seu mercado, pense em qual processo poderia ser melhorado com uma camada de IA: atendimento, an√°lise, suporte, cria√ß√£o, revis√£o, monitoramento ou venda.
+**Leitura pr·tica:** se isso toca seu mercado, pense em qual processo poderia ser melhorado com uma camada de IA: atendimento, an·lise, suporte, criaÁ„o, revis„o, monitoramento ou venda.
 
-**A√ß√£o sugerida:** Liste um atendimento, resposta ou an√°lise repetitiva que hoje depende de voc√™ e desenhe quais dados um agente precisaria acessar.
+**AÁ„o sugerida:** Liste um atendimento, resposta ou an·lise repetitiva que hoje depende de vocÍ e desenhe quais dados um agente precisaria acessar.
 
-**Oportunidade poss√≠vel:** Servi√ßo de automa√ß√£o interna: transformar tarefas repetidas de planilha, e-mail e relat√≥rio em fluxos assistidos por IA.
+**Oportunidade possÌvel:** ServiÁo de automaÁ„o interna: transformar tarefas repetidas de planilha, e-mail e relatÛrio em fluxos assistidos por IA.
 
 
-## O padr√£o que aparece nas not√≠cias
+## O padr„o que aparece nas notÌcias
 
-O fio comum √© simples: IA est√° migrando de ferramenta isolada para infraestrutura de opera√ß√£o. As empresas mais r√°pidas n√£o est√£o apenas testando prompts. Elas est√£o conectando modelos a processos, dados, atendimento, desenvolvimento e tomada de decis√£o.
+O fio comum È simples: IA est· migrando de ferramenta isolada para infraestrutura de operaÁ„o. As empresas mais r·pidas n„o est„o apenas testando prompts. Elas est„o conectando modelos a processos, dados, atendimento, desenvolvimento e tomada de decis„o.
 
-Para neg√≥cios menores, isso abre uma janela interessante: d√° para aplicar a mesma l√≥gica em escala menor, come√ßando por um fluxo repetitivo e mensur√°vel.
+Para negÛcios menores, isso abre uma janela interessante: d· para aplicar a mesma lÛgica em escala menor, comeÁando por um fluxo repetitivo e mensur·vel.
 
-## Mini-manual: como transformar esse radar em a√ß√£o
+## Mini-manual: como transformar esse radar em aÁ„o
 
-Use este processo sempre que uma not√≠cia parecer importante, mas ainda abstrata:
+Use este processo sempre que uma notÌcia parecer importante, mas ainda abstrata:
 
-1. **Traduza a not√≠cia em problema.** Quem est√° ganhando tempo, reduzindo custo ou vendendo melhor com isso?
-2. **Encontre o processo equivalente no seu contexto.** Atendimento, vendas, relat√≥rio, cria√ß√£o, suporte, pesquisa ou opera√ß√£o.
-3. **Desenhe o fluxo simples.** Entrada, decis√£o, ferramenta, sa√≠da e revis√£o humana.
-4. **Teste pequeno.** Uma automa√ß√£o, um prompt operacional, uma p√°gina, um servi√ßo ou um conte√∫do.
-5. **Me√ßa o resultado.** Tempo economizado, erro reduzido, lead gerado, resposta enviada ou venda influenciada.
+1. **Traduza a notÌcia em problema.** Quem est· ganhando tempo, reduzindo custo ou vendendo melhor com isso?
+2. **Encontre o processo equivalente no seu contexto.** Atendimento, vendas, relatÛrio, criaÁ„o, suporte, pesquisa ou operaÁ„o.
+3. **Desenhe o fluxo simples.** Entrada, decis„o, ferramenta, saÌda e revis„o humana.
+4. **Teste pequeno.** Uma automaÁ„o, um prompt operacional, uma p·gina, um serviÁo ou um conte˙do.
+5. **MeÁa o resultado.** Tempo economizado, erro reduzido, lead gerado, resposta enviada ou venda influenciada.
 
-Se voc√™ seguir esses passos, a not√≠cia deixa de ser curiosidade e come√ßa a virar estrat√©gia.
+Se vocÍ seguir esses passos, a notÌcia deixa de ser curiosidade e comeÁa a virar estratÈgia.
 
 ## Radar de oportunidades
 
-- **Para pequenos neg√≥cios:** escolha uma tarefa que o dono faz toda semana e transforme em checklist automatiz√°vel.
-- **Para freelancers:** empacote uma dessas tend√™ncias como servi√ßo simples: diagn√≥stico, automa√ß√£o, setup ou treinamento.
+- **Para pequenos negÛcios:** escolha uma tarefa que o dono faz toda semana e transforme em checklist automatiz·vel.
+- **Para freelancers:** empacote uma dessas tendÍncias como serviÁo simples: diagnÛstico, automaÁ„o, setup ou treinamento.
 - **Para criadores:** transforme o tema mais forte do dia em post, carrossel, roteiro curto ou newsletter de nicho.
-- **Para profissionais:** use o assunto para propor uma melhoria concreta no seu trabalho antes que algu√©m pe√ßa.
+- **Para profissionais:** use o assunto para propor uma melhoria concreta no seu trabalho antes que alguÈm peÁa.
 
-## Pr√≥ximo passo
+## PrÛximo passo
 
-Se voc√™ quer receber esse tipo de leitura todos os dias, assine a [newsletter do Tech Briefing](/newsletter/). Se quer ir direto para execu√ß√£o com agentes, veja o ebook [Agentes de IA para Neg√≥cios](/ebook-agentes-ia/).
+Se vocÍ quer receber esse tipo de leitura todos os dias, assine a [newsletter do Tech Briefing](/newsletter/). Se quer ir direto para execuÁ„o com agentes, veja o ebook [Agentes de IA para NegÛcios](/ebook-agentes-ia/).
 
 ---
 
-Curadoria gerada com apoio de automa√ß√£o editorial do Tech Briefing. Sempre consulte as fontes originais antes de tomar decis√µes de neg√≥cio.
+Curadoria gerada com apoio de automaÁ„o editorial do Tech Briefing. Sempre consulte as fontes originais antes de tomar decisıes de negÛcio.

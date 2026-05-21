@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 const VALUES = [
   {n:'01',title:'Pragmatismo Operacional',desc:'Ignoramos o hype. Se a IA não resolve um gargalo, não reduz custo ou não gera ROI, ela não tem espaço em nossa pauta.'},
@@ -109,11 +109,11 @@ function App(){
             <div className="about-hero-card">
               <div className="about-hero-card-logo">
                 <div className="nav-pip"/>
-                Nexora Systems
+                Tech Briefing
               </div>
 
               <div className="about-hero-card-desc">
-                Operamos o TechBriefing como um braço editorial da Nexora, focando em documentar a transição global para fluxos de trabalho agentic e autônomos.
+                Operamos o TechBriefing como um braço editorial da Tech Briefing, focando em documentar a transição global para fluxos de trabalho agentic e autônomos.
               </div>
 
               <div className="about-hero-stat-grid">
@@ -121,7 +121,7 @@ function App(){
                   {n:'Guias',em:'',l:'Manuais práticos'},
                   {n:'Prompts',em:'',l:'Biblioteca gratuita'},
                   {n:'Reviews',em:'',l:'Ferramentas avaliadas'},
-                  {n:'Nexora',em:'',l:'Assinatura editorial'},
+                  {n:'Tech Briefing',em:'',l:'Assinatura editorial'},
                 ].map((s,i)=>(
                   <div className="about-stat" key={i}>
                     <div className="about-stat-n">
@@ -209,31 +209,31 @@ function App(){
               ))}
             </div>
 
-            <div className="nexora-box">
-              <div className="nexora-box-label">Iniciativa Nexora</div>
+            <div className="Tech Briefing-box">
+              <div className="Tech Briefing-box-label">Iniciativa Tech Briefing</div>
 
-              <div className="nexora-box-title">
+              <div className="Tech Briefing-box-title">
                 O ecossistema por trás do portal
               </div>
 
-              <div className="nexora-box-desc">
-                A Nexora Systems é uma empresa de operações de IA. Desenvolvemos o TechBriefing para servir como a base de conhecimento para o mercado brasileiro de tecnologia aplicada.
+              <div className="Tech Briefing-box-desc">
+                A Tech Briefing é uma empresa de operações de IA. Desenvolvemos o TechBriefing para servir como a base de conhecimento para o mercado brasileiro de tecnologia aplicada.
               </div>
 
-              <div className="nexora-box-links">
+              <div className="Tech Briefing-box-links">
                 {[
                   {name:'Guias Estratégicos',desc:'Páginas-pilar de conhecimento',href:'/guias'},
                   {name:'Laboratório de IA',desc:'Reviews e benchmarks reais',href:'/ferramentas'},
                 ].map((l,i)=>(
-                  <a href={l.href} className="nexora-link" key={i}>
+                  <a href={l.href} className="Tech Briefing-link" key={i}>
                     <div>
-                      <div className="nexora-link-name">{l.name}</div>
+                      <div className="Tech Briefing-link-name">{l.name}</div>
                       <div style={{fontFamily:'var(--mono)',fontSize:11,color:'var(--text-3)',letterSpacing:'.02em',marginTop:2}}>
                         {l.desc}
                       </div>
                     </div>
 
-                    <div className="nexora-link-arrow">↗</div>
+                    <div className="Tech Briefing-link-arrow">↗</div>
                   </a>
                 ))}
               </div>
@@ -261,7 +261,7 @@ function App(){
                   {ico:'✉️',title:'E-mail editorial',desc:'contato@techbriefing.com.br',href:'mailto:contato@techbriefing.com.br'},
                   {ico:'🤝',title:'Parcerias e anúncios',desc:'Solicite nosso media kit estratégico',href:'/contato'},
                   {ico:'𝕏',title:'Canais sociais',desc:'Em estruturação',href:'/contato'},
-                  {ico:'in',title:'LinkedIn',desc:'Tech Briefing — Nexora Systems',href:'/contato'},
+                  {ico:'in',title:'LinkedIn',desc:'Tech Briefing — Tech Briefing',href:'/contato'},
                 ].map((c,i)=>(
                   <a href={c.href} className="contact-link" key={i}>
                     <div className="contact-link-ico">{c.ico}</div>

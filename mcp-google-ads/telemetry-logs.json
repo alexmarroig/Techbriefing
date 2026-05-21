@@ -1,0 +1,332 @@
+[
+  {
+    "eventType": "dead_click",
+    "pageUrl": "/ebook-agentes-ia/",
+    "timestamp": "2026-05-17T23:32:52.313Z",
+    "details": {
+      "selector": "html > body > section > div:nth-of-type(3) > div > div > h1",
+      "tag": "H1",
+      "text": "Crie agentes de IA para automatizar tarefas reais",
+      "screenSize": "1920x917",
+      "referrer": "http://localhost:4321/ebooks"
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+    "ip": "127.0.0.1"
+  },
+  {
+    "eventType": "dead_click",
+    "pageUrl": "/ebook-agentes-ia/",
+    "timestamp": "2026-05-17T23:32:52.516Z",
+    "details": {
+      "selector": "html > body > section > div:nth-of-type(3) > div > div > h1",
+      "tag": "H1",
+      "text": "Crie agentes de IA para automatizar tarefas reais",
+      "screenSize": "1920x917",
+      "referrer": "http://localhost:4321/ebooks"
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+    "ip": "127.0.0.1"
+  },
+  {
+    "eventType": "dead_click",
+    "pageUrl": "/ebook-agentes-ia/",
+    "timestamp": "2026-05-17T23:32:52.873Z",
+    "details": {
+      "selector": "html > body > section > div:nth-of-type(3) > div",
+      "tag": "DIV",
+      "text": "FRAMEWORK OPERACIONAL - ACESSO IMEDIATO PARA QUEM",
+      "screenSize": "1920x917",
+      "referrer": "http://localhost:4321/ebooks"
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+    "ip": "127.0.0.1"
+  },
+  {
+    "eventType": "dead_click",
+    "pageUrl": "/ebook-agentes-ia/",
+    "timestamp": "2026-05-17T23:32:53.474Z",
+    "details": {
+      "selector": "html > body > section > div:nth-of-type(3) > div > div:nth-of-type(2) > div > img",
+      "tag": "IMG",
+      "text": "Capa do ebook Agentes de IA para Negócios",
+      "screenSize": "1920x917",
+      "referrer": "http://localhost:4321/ebooks"
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+    "ip": "127.0.0.1"
+  },
+  {
+    "eventType": "dead_click",
+    "pageUrl": "/ebook-agentes-ia/",
+    "timestamp": "2026-05-17T23:32:53.629Z",
+    "details": {
+      "selector": "html > body > section > div:nth-of-type(3) > div > div:nth-of-type(2) > div > img",
+      "tag": "IMG",
+      "text": "Capa do ebook Agentes de IA para Negócios",
+      "screenSize": "1920x917",
+      "referrer": "http://localhost:4321/ebooks"
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+    "ip": "127.0.0.1"
+  },
+  {
+    "eventType": "rage_click",
+    "pageUrl": "/ebook-agentes-ia/",
+    "timestamp": "2026-05-17T23:32:53.789Z",
+    "details": {
+      "selector": "html > body > section > div:nth-of-type(3) > div > div:nth-of-type(2) > div > img",
+      "text": "Capa do ebook Agentes de IA para Negócios",
+      "clicksCount": 3,
+      "screenSize": "1920x917",
+      "referrer": "http://localhost:4321/ebooks"
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+    "ip": "127.0.0.1"
+  },
+  {
+    "eventType": "dead_click",
+    "pageUrl": "/ebook-agentes-ia/",
+    "timestamp": "2026-05-17T23:32:53.790Z",
+    "details": {
+      "selector": "html > body > section > div:nth-of-type(3) > div > div:nth-of-type(2) > div > img",
+      "tag": "IMG",
+      "text": "Capa do ebook Agentes de IA para Negócios",
+      "screenSize": "1920x917",
+      "referrer": "http://localhost:4321/ebooks"
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+    "ip": "127.0.0.1"
+  },
+  {
+    "eventType": "dead_click",
+    "pageUrl": "/ebook-agentes-ia/",
+    "timestamp": "2026-05-17T23:32:53.955Z",
+    "details": {
+      "selector": "html > body > section > div:nth-of-type(3) > div > div:nth-of-type(2) > div > img",
+      "tag": "IMG",
+      "text": "Capa do ebook Agentes de IA para Negócios",
+      "screenSize": "1920x917",
+      "referrer": "http://localhost:4321/ebooks"
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+    "ip": "127.0.0.1"
+  },
+  {
+    "eventType": "dead_click",
+    "pageUrl": "/ebook-agentes-ia/",
+    "timestamp": "2026-05-17T23:32:54.818Z",
+    "details": {
+      "selector": "html > body > section > div:nth-of-type(3) > div > div > h1",
+      "tag": "H1",
+      "text": "Crie agentes de IA para automatizar tarefas reais",
+      "screenSize": "1920x917",
+      "referrer": "http://localhost:4321/ebooks"
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+    "ip": "127.0.0.1"
+  },
+  {
+    "eventType": "dead_click",
+    "pageUrl": "/ebook-agentes-ia/",
+    "timestamp": "2026-05-17T23:32:54.998Z",
+    "details": {
+      "selector": "html > body > section > div:nth-of-type(3) > div > div > h1",
+      "tag": "H1",
+      "text": "Crie agentes de IA para automatizar tarefas reais",
+      "screenSize": "1920x917",
+      "referrer": "http://localhost:4321/ebooks"
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+    "ip": "127.0.0.1"
+  },
+  {
+    "eventType": "rage_click",
+    "pageUrl": "/ebook-agentes-ia/",
+    "timestamp": "2026-05-17T23:32:55.156Z",
+    "details": {
+      "selector": "html > body > section > div:nth-of-type(3) > div > div > h1",
+      "text": "Crie agentes de IA para automatizar tarefas reais",
+      "clicksCount": 3,
+      "screenSize": "1920x917",
+      "referrer": "http://localhost:4321/ebooks"
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+    "ip": "127.0.0.1"
+  },
+  {
+    "eventType": "dead_click",
+    "pageUrl": "/ebook-agentes-ia/",
+    "timestamp": "2026-05-17T23:32:55.158Z",
+    "details": {
+      "selector": "html > body > section > div:nth-of-type(3) > div > div > h1",
+      "tag": "H1",
+      "text": "Crie agentes de IA para automatizar tarefas reais",
+      "screenSize": "1920x917",
+      "referrer": "http://localhost:4321/ebooks"
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+    "ip": "127.0.0.1"
+  },
+  {
+    "eventType": "dead_click",
+    "pageUrl": "/ebook-agentes-ia/",
+    "timestamp": "2026-05-17T23:32:55.325Z",
+    "details": {
+      "selector": "html > body > section > div:nth-of-type(3) > div > div > h1",
+      "tag": "H1",
+      "text": "Crie agentes de IA para automatizar tarefas reais",
+      "screenSize": "1920x917",
+      "referrer": "http://localhost:4321/ebooks"
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+    "ip": "127.0.0.1"
+  },
+  {
+    "eventType": "dead_click",
+    "pageUrl": "/ebook-agentes-ia/",
+    "timestamp": "2026-05-17T23:32:55.487Z",
+    "details": {
+      "selector": "html > body > section > div:nth-of-type(3) > div > div > h1",
+      "tag": "H1",
+      "text": "Crie agentes de IA para automatizar tarefas reais",
+      "screenSize": "1920x917",
+      "referrer": "http://localhost:4321/ebooks"
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+    "ip": "127.0.0.1"
+  },
+  {
+    "eventType": "rage_click",
+    "pageUrl": "/ebook-agentes-ia/",
+    "timestamp": "2026-05-17T23:33:03.662Z",
+    "details": {
+      "selector": "html > body > section > div",
+      "text": "",
+      "clicksCount": 3,
+      "screenSize": "1920x917",
+      "referrer": "http://localhost:4321/ebooks"
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+    "ip": "127.0.0.1"
+  },
+  {
+    "eventType": "time_on_page",
+    "pageUrl": "/ebook-agentes-ia/",
+    "timestamp": "2026-05-17T23:33:49.992Z",
+    "details": {
+      "durationSeconds": 59,
+      "screenSize": "1920x917",
+      "referrer": "http://localhost:4321/ebooks"
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+    "ip": "127.0.0.1"
+  },
+  {
+    "eventType": "time_on_page",
+    "pageUrl": "/ebook-agentes-ia/",
+    "timestamp": "2026-05-17T23:34:03.992Z",
+    "details": {
+      "durationSeconds": 14,
+      "screenSize": "1920x917",
+      "referrer": "http://localhost:4321/ebook-agentes-ia/"
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+    "ip": "127.0.0.1"
+  },
+  {
+    "eventType": "time_on_page",
+    "pageUrl": "/ebook-agentes-ia",
+    "timestamp": "2026-05-21T20:26:59.535Z",
+    "details": {
+      "durationSeconds": 51,
+      "screenSize": "376x815",
+      "referrer": "http://localhost:4321/"
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Claude/1.8089.1 Chrome/146.0.7680.216 Electron/41.6.1 Safari/537.36 MSIX",
+    "ip": "127.0.0.1"
+  },
+  {
+    "eventType": "scroll_depth",
+    "pageUrl": "/ebook-agentes-ia",
+    "timestamp": "2026-05-21T20:44:26.603Z",
+    "details": {
+      "milestone": 25,
+      "screenSize": "376x815",
+      "referrer": "http://localhost:4321/ferramentas"
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Claude/1.8089.1 Chrome/146.0.7680.216 Electron/41.6.1 Safari/537.36 MSIX",
+    "ip": "127.0.0.1"
+  },
+  {
+    "eventType": "time_on_page",
+    "pageUrl": "/ebook-agentes-ia",
+    "timestamp": "2026-05-21T20:47:37.024Z",
+    "details": {
+      "durationSeconds": 255,
+      "screenSize": "376x815",
+      "referrer": "http://localhost:4321/ferramentas"
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Claude/1.8089.1 Chrome/146.0.7680.216 Electron/41.6.1 Safari/537.36 MSIX",
+    "ip": "127.0.0.1"
+  },
+  {
+    "eventType": "scroll_depth",
+    "pageUrl": "/ebook-agentes-ia",
+    "timestamp": "2026-05-21T20:47:37.328Z",
+    "details": {
+      "milestone": 25,
+      "screenSize": "376x815",
+      "referrer": "http://localhost:4321/ebook-agentes-ia"
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Claude/1.8089.1 Chrome/146.0.7680.216 Electron/41.6.1 Safari/537.36 MSIX",
+    "ip": "127.0.0.1"
+  },
+  {
+    "eventType": "time_on_page",
+    "pageUrl": "/ebook-agentes-ia",
+    "timestamp": "2026-05-21T20:47:43.612Z",
+    "details": {
+      "durationSeconds": 6,
+      "screenSize": "376x815",
+      "referrer": "http://localhost:4321/ebook-agentes-ia"
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Claude/1.8089.1 Chrome/146.0.7680.216 Electron/41.6.1 Safari/537.36 MSIX",
+    "ip": "127.0.0.1"
+  },
+  {
+    "eventType": "scroll_depth",
+    "pageUrl": "/ebook-agentes-ia",
+    "timestamp": "2026-05-21T20:47:43.874Z",
+    "details": {
+      "milestone": 25,
+      "screenSize": "376x815",
+      "referrer": "http://localhost:4321/ebook-agentes-ia"
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Claude/1.8089.1 Chrome/146.0.7680.216 Electron/41.6.1 Safari/537.36 MSIX",
+    "ip": "127.0.0.1"
+  },
+  {
+    "eventType": "time_on_page",
+    "pageUrl": "/ebook-agentes-ia",
+    "timestamp": "2026-05-21T20:48:57.231Z",
+    "details": {
+      "durationSeconds": 73,
+      "screenSize": "376x815",
+      "referrer": "http://localhost:4321/ebook-agentes-ia"
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Claude/1.8089.1 Chrome/146.0.7680.216 Electron/41.6.1 Safari/537.36 MSIX",
+    "ip": "127.0.0.1"
+  },
+  {
+    "eventType": "time_on_page",
+    "pageUrl": "/ebook-agentes-ia",
+    "timestamp": "2026-05-21T20:51:15.310Z",
+    "details": {
+      "durationSeconds": 34,
+      "screenSize": "376x815",
+      "referrer": "http://localhost:4321/artigos/claude-vs-chatgpt-comparativo"
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Claude/1.8089.1 Chrome/146.0.7680.216 Electron/41.6.1 Safari/537.36 MSIX",
+    "ip": "127.0.0.1"
+  }
+]

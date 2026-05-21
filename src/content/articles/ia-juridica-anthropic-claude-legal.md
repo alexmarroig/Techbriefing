@@ -1,12 +1,12 @@
----
+﻿---
 title: "IA jurídica virou campo de batalha: por que isso importa mesmo fora do direito"
 description: "Anthropic, Harvey, Legora e outros players mostram que IA especializada está virando infraestrutura de trabalho. A lição vale para qualquer setor."
 category: "IA Prática"
-author: "Nexora Systems"
+author: "Tech Briefing"
 date: 2026-05-13
 readTime: "7 min"
 featured: false
-image: "/images/editorial/api-components.svg"
+image: "/images/article-api-dev.png"
 tags:
   - IA jurídica
   - Claude

@@ -2,11 +2,11 @@
 title: "Multi-agente vs agente único: quando usar cada abordagem"
 description: "Entenda as diferenças entre sistemas multi-agente e agente único em IA, quando cada arquitetura faz sentido e como escolher a certa para seu caso de uso."
 category: "Agentes de IA"
-author: "Nexora Systems"
+author: "Tech Briefing"
 date: 2026-04-15
 readTime: "9 min"
 featured: false
-image: "/images/editorial/agents-operations.svg"
+image: "/images/article-autonomous-agents.png"
 tags:
   - Agentes de IA
   - Multi-agente

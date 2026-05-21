@@ -1,12 +1,12 @@
----
+﻿---
 title: "Agent 365 mostra o novo problema das empresas: governar agentes como se fossem usuários"
 description: "Com agentes circulando por documentos, dados e sistemas, governança, identidade e auditoria deixam de ser detalhe técnico."
 category: "Governança"
-author: "Nexora Systems"
+author: "Tech Briefing"
 date: 2026-05-13
 readTime: "6 min"
 featured: true
-image: "/images/news/microsoft-agent-365-governanca-agentes.svg"
+image: "/images/article-strategy-business.png"
 tags:
   - Microsoft Agent 365
   - Governança

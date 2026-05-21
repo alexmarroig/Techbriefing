@@ -2,11 +2,11 @@
 title: "Como criar um chatbot inteligente para atendimento ao cliente"
 description: "Tutorial completo para criar um chatbot inteligente com IA para atendimento ao cliente: escolha da plataforma, configuração, treinamento e deploy em múltiplos canais."
 category: "Automação"
-author: "Nexora Systems"
+author: "Tech Briefing"
 date: 2026-05-03
 readTime: "11 min"
 featured: false
-image: "/images/editorial/automation-workflow.svg"
+image: "/images/article-ai-content.png"
 tags:
   - Chatbot
   - Atendimento

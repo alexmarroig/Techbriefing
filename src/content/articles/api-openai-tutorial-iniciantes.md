@@ -2,11 +2,11 @@
 title: "Como usar a API da OpenAI: tutorial completo para iniciantes"
 description: "Aprenda a usar a API da OpenAI do zero: configuração, primeiras chamadas, embeddings, gerenciamento de custos e boas práticas para desenvolvedores iniciantes."
 category: "IA Prática"
-author: "Nexora Systems"
+author: "Tech Briefing"
 date: 2026-04-25
 readTime: "11 min"
 featured: false
-image: "/images/editorial/api-components.svg"
+image: "/images/article-api-dev.png"
 tags:
   - OpenAI
   - API

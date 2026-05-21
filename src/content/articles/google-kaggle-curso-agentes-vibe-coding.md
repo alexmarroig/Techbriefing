@@ -1,12 +1,12 @@
----
+﻿---
 title: "Google e Kaggle trazem curso de agentes com foco em vibe coding"
 description: "A nova edição do curso mostra que construir agentes com linguagem natural virou habilidade de massa, não só de engenheiros especialistas."
 category: "Educação"
-author: "Nexora Systems"
+author: "Tech Briefing"
 date: 2026-05-13
 readTime: "6 min"
 featured: false
-image: "/images/news/google-kaggle-curso-agentes-vibe-coding.svg"
+image: "/images/article-api-dev.png"
 tags:
   - Google
   - Kaggle

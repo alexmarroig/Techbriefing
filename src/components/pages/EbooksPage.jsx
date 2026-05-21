@@ -46,7 +46,7 @@ function EbookCard({e}){
           <div className="ebook-cover-mark" style={{color:e.color}}>IA</div>
           <div className="ebook-cover-line" style={{background:e.color}}/>
           <div style={{fontFamily:'var(--serif)',fontSize:15,fontWeight:600,color:'var(--text)',textAlign:'center',lineHeight:1.3,letterSpacing:'-.01em',maxWidth:140}}>{e.title}</div>
-          <div className="ebook-cover-pub">Nexora<br/>Systems</div>
+          <div className="ebook-cover-pub">Tech Briefing<br/>Systems</div>
           <div className="ebook-cover-pages">{e.pages} páginas</div>
         </div>
       </div>
@@ -123,7 +123,7 @@ function TrustStrip(){
             {ico:'⚡',label:'Acesso imediato',sub:'Entregue por email instantaneamente'},
             {ico:'🔒',label:'Pagamento seguro',sub:'Stripe — criptografia SSL'},
             {ico:'🔄',label:'Atualizado em 2026',sub:'Conteúdo revisado e atual'},
-            {ico:'🌐',label:'Nexora Systems',sub:'Produto desenvolvido no Brasil'},
+            {ico:'🌐',label:'Tech Briefing',sub:'Produto desenvolvido no Brasil'},
           ].map((t,i)=>(
             <div className="trust-block" key={i}>
               <div className="trust-icon">{t.ico}</div>
@@ -185,7 +185,7 @@ function App(){
         <div className="wrap"><div className="hero-inner">
           <div className="hero-eyebrow"><div className="hero-eyebrow-rule"/><span className="hero-eyebrow-text">Produtos Digitais</span></div>
           <h1 className="hero-title">Conhecimento que<br/>vira <em>resultado.</em></h1>
-          <p className="hero-sub">Ebooks publicados pelo Tech Briefing, uma publicação editorial da Nexora Systems. Guias práticos para transformar IA, automação e ferramentas digitais em processo real.</p>
+          <p className="hero-sub">Ebooks publicados pelo Tech Briefing, uma publicação editorial da Tech Briefing. Guias práticos para transformar IA, automação e ferramentas digitais em processo real.</p>
           <div className="hero-trust">
             {['PDF + EPUB inclusos','Acesso imediato','Atualizado em 2026','Feito no Brasil'].map(t=>(
               <div className="trust-item" key={t}><div className="trust-dot"/>{t}</div>

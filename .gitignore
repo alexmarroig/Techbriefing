@@ -24,3 +24,9 @@ pnpm-debug.log*
 .idea/
 
 .vercel
+
+# Google Ads MCP Safety rules
+mcp-google-ads/node_modules/
+mcp-google-ads/credentials.json
+mcp-google-ads/.env
+

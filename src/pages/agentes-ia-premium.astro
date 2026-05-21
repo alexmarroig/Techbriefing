@@ -1,4 +1,4 @@
----
+﻿---
 import '../styles/global.css';
 import GoogleTag from '../components/GoogleTag.astro';
 import Telemetry from '../components/Telemetry.astro';
@@ -18,7 +18,7 @@ const CONFIG = {
 
   heroBadge: 'Acesso imediato • E-book completo',
   heroHeadline: 'Pare de usar IA como chat. Crie agentes que operam e automatizam seu negócio.',
-  heroSub: 'O manual operacional passo a passo para mapear processos, estruturar regras, desenhar fluxos e delegar tarefas operacionais para agentes de Inteligência Artificial — sem precisar de programadores.',
+  heroSub: 'O manual operacional de inteligência artificial para empresas mapearem processos, estruturarem regras, desenharem fluxos de automação com ia e criarem agentes de ia para negócio sem programar.',
 
   pages: '180',
   chapters: '12',
@@ -132,8 +132,8 @@ const CONFIG = {
 };
 
 const title = `${CONFIG.bookTitle} — Edição Premium`;
-const description = 'Transforme IA em processo e automação real para suporte, SDR, conteúdo e operações. O playbook definitivo para criar agentes funcionais sem programar.';
-const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url).toString();
+const description = 'Aprenda a criar agentes de ia para negócio e implementar automação com ia. Playbook operacional de inteligência artificial para empresas aumentarem lucros.';
+const canonical = new URL('/ebook-agentes-ia/', Astro.site ?? Astro.url).toString();
 const absoluteImage = new URL('/images/ebook-agentes-ia-premium-cover.png', Astro.site ?? Astro.url).toString();
 ---
 
@@ -241,7 +241,7 @@ const absoluteImage = new URL('/images/ebook-agentes-ia-premium-cover.png', Astr
       <div class="hero-visual">
         <div class="book-container-3d">
           <div class="glowing-backlight"></div>
-          <img src="/images/ebook-agentes-ia-premium-cover.png" alt="Capa do Framework de Agentes de IA para Negócios" class="premium-mockup-cover" width="400" height="570" fetchpriority="high" decoding="async" />
+          <img src="/images/agentes-de-ia-para-negocio-premium-cover.png" alt="Framework de agentes de ia para negócio - inteligência artificial para empresas" class="premium-mockup-cover" width="400" height="570" fetchpriority="high" decoding="async" />
           
           <div class="spec-metrics-panel">
             <div class="spec-item">
@@ -471,7 +471,7 @@ const absoluteImage = new URL('/images/ebook-agentes-ia-premium-cover.png', Astr
       
       <div class="final-offer-split">
         <div class="final-left-mockup">
-          <img src="/images/ebook-agentes-ia-premium-cover.png" alt="Ebook Agentes de IA" class="final-mockup-img" width="300" height="425" />
+          <img src="/images/agentes-de-ia-para-negocio-premium-cover.png" alt="Playbook para criar agentes de ia e automação com ia" class="final-mockup-img" width="300" height="425" />
         </div>
         
         <div class="final-right-details">
@@ -2072,6 +2072,39 @@ const absoluteImage = new URL('/images/ebook-agentes-ia-premium-cover.png', Astr
       display: flex;
     }
   }
+
+/* Definitive Mobile Grid Collapse Overrides (placed at bottom to win CSS specificity) */
+@media(max-width: 900px) {
+  .lp-outcomes-grid,
+  .lp-roles-grid,
+  .lp-audience-grid,
+  .lp-blocks-grid,
+  .lp-benefits-grid,
+  .lp-proof-layout,
+  .lp-origin-layout,
+  .lp-urgency-card {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media(max-width: 640px) {
+  .lp-outcome-card,
+  .lp-role-card {
+    min-height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 20px !important;
+  }
+  .lp-outcome-num {
+    margin-bottom: 12px !important;
+    width: auto !important;
+    height: auto !important;
+    background: none !important;
+    box-shadow: none !important;
+    font-size: 16px !important;
+    color: var(--amber) !important;
+  }
+}
 </style>
 
 <script is:inline>
@@ -2181,3 +2214,4 @@ const absoluteImage = new URL('/images/ebook-agentes-ia-premium-cover.png', Astr
 </script>
 </body>
 </html>
+

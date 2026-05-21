@@ -1,4 +1,4 @@
----
+﻿---
 import '../styles/global.css';
 import GoogleTag from '../components/GoogleTag.astro';
 import Telemetry from '../components/Telemetry.astro';
@@ -27,7 +27,7 @@ const CONFIG = {
 
   heroBadge: 'Framework operacional - acesso imediato',
   heroHeadline: 'Crie agentes de IA para automatizar tarefas reais no seu negócio',
-  heroSub: 'Um framework prático para identificar processos, desenhar fluxos e transformar IA em automação útil — mesmo sem equipe técnica.',
+  heroSub: 'Um framework prático de inteligência artificial para empresas identificarem processos, desenharem fluxos e implementarem automação com ia na prática.',
 
   pages: '180',
   chapters: '12',
@@ -105,8 +105,8 @@ const CONFIG = {
 };
 
 const title = `${CONFIG.bookTitle} — Tech Briefing`;
-const description = 'Framework prático para identificar processos, desenhar fluxos e transformar IA em automação útil para negócios, mesmo sem equipe técnica.';
-const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url).toString();
+const description = 'Aprenda a criar agentes de ia para negócio e implementar automação com ia. Playbook operacional de inteligência artificial para empresas aumentarem lucros.';
+const canonical = new URL('/ebook-agentes-ia/', Astro.site ?? Astro.url).toString();
 const image = '/images/ebook-cover.png';
 const absoluteImage = new URL(image, Astro.site ?? Astro.url).toString();
 const ebookSchemas = [
@@ -270,7 +270,7 @@ const ebookSchemas = [
         <div class="lp-book-3d">
           <div class="lp-book-glow" aria-hidden="true"></div>
           <a href={CONFIG.primaryBuyLink} data-cta-id="ebook_hero_image_click" style="display:block; text-decoration:none;">
-            <img src="/images/ebook-cover.png" alt="Capa do ebook Agentes de IA para Negócios" class="lp-cover-img" width="380" height="540" fetchpriority="high" decoding="async" />
+            <img src="/images/agentes-de-ia-para-negocio-ebook-cover.png" alt="Aprenda a criar agentes de ia para negócio com o e-book oficial de inteligência artificial para empresas e automação com ia" class="lp-cover-img" width="380" height="540" fetchpriority="high" decoding="async" />
           </a>
           <div class="lp-cover-circuit" aria-hidden="true">
             <svg viewBox="0 0 380 540" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -283,13 +283,13 @@ const ebookSchemas = [
           </div>
         </div>
         <div class="lp-hero-proof">
-          <strong>Para quem quer parar de testar IA e começar a usar IA como vantagem.</strong>
-          <span>Menos curiosidade. Mais processo, oferta e execução.</span>
+          <strong>O guia definitivo para criar agentes de ia para negócio e implementar automação com ia.</strong>
+          <span>Transforme a inteligência artificial para empresas em um motor de eficiência operacional.</span>
         </div>
         <div class="lp-checkout-card" aria-label="Resumo da compra">
           <div class="lp-checkout-kicker">Resumo da compra</div>
           <div class="lp-checkout-product">
-            <img src="/images/ebook-cover.png" alt="" width="48" height="68" />
+            <img src="/images/agentes-de-ia-para-negocio-ebook-cover.png" alt="Playbook para criar agentes de ia para negócio e implementar automação com ia" width="48" height="68" />
             <div>
               <strong>Framework Operacional de Agentes de IA</strong>
               <span>PDF + EPUB • playbook prático</span>
@@ -377,8 +377,8 @@ const ebookSchemas = [
       ))}
     </div>
     <div class="lp-problem-pivot">
-      <p>Este framework foi feito para trocar improviso por arquitetura. Você entende onde agentes fazem sentido, como desenhar o fluxo e como evitar o tipo de projeto que parece revolucionário no print, mas não entrega resultado quando alguém depende dele.</p>
-      <a href={CONFIG.primaryBuyLink} class="lp-inline-cta" data-cta-id="ebook_problem_cta">Quero sair do improviso →</a>
+      <p>Este framework prático foi feito para você que busca implementar **agentes de ia para negócio** de forma profissional. Você entende onde a **inteligência artificial para empresas** faz sentido real, aprende a **criar agentes de ia** com arquitetura robusta e desenha fluxos de **automação com ia** que não quebram.</p>
+      <a href={CONFIG.primaryBuyLink} class="lp-inline-cta" data-cta-id="ebook_problem_cta">Quero sair do improviso e criar agentes de ia →</a>
     </div>
   </div>
 </section>
@@ -566,12 +566,11 @@ const ebookSchemas = [
         { phase: 'Fase 2', role: 'Supervisor', desc: 'Monitora agentes e ajusta regras. O sistema executa, o humano valida.', href: '#conteudo' },
         { phase: 'Fase 3', role: 'Arquiteto', desc: 'Projeta objetivos e define o processo. O humano decide o que o sistema deve fazer — não como.', href: '#conteudo' },
       ].map(r => (
-        <a class="lp-role-card" href={r.href} aria-label={`Ver conteúdo sobre papel ${r.role}`}>
+        <div class="lp-role-card" aria-label={`Papel ${r.role}`}>
           <div class="lp-role-phase">{r.phase}</div>
           <div class="lp-role-title">{r.role}</div>
           <div class="lp-role-desc">{r.desc}</div>
-          <div class="lp-card-more">Ver no conteúdo →</div>
-        </a>
+          </div>
       ))}
     </div>
     <p class="lp-role-note">Não é uma mudança de relevância. É uma mudança de alavancagem. Seu julgamento passa a ter mais impacto porque atua no nível certo.</p>
@@ -617,7 +616,7 @@ const ebookSchemas = [
         </div>
       </div>
       <div class="lp-origin-card">
-        <img src="/images/nexora-systems-logo.png" alt="Nexora Systems" class="lp-nexora-logo-img" width="640" height="400" />
+        <img src="/images/inteligencia-artificial-para-empresas-nexora-systems-logo.png" alt="Nexora Systems - Inteligência artificial para empresas e automação com ia usando agentes de ia para negócio" class="lp-nexora-logo-img" width="640" height="400" />
         <div class="lp-origin-card-name">{CONFIG.authorBrand}</div>
         <div class="lp-origin-card-desc">Tecnologia, sistemas e inteligência artificial aplicada ao mundo real. Conteúdo, produtos e métodos para quem quer transformar IA em resultado.</div>
         <a href="/sobre" class="lp-arrow-link">Conhecer a Nexora →</a>
@@ -632,7 +631,7 @@ const ebookSchemas = [
     <div class="lp-offer-box">
       <div class="lp-offer-left">
         <div class="lp-offer-cover-wrap">
-          <img src="/images/ebook-spread.png" alt="Ebook aberto — capa e contracapa" class="lp-offer-spread" width="600" height="380" />
+          <img src="/images/automacao-com-ia-ebook-spread.png" alt="Páginas internas mostrando como criar agentes de ia para negócio e implantar inteligência artificial para empresas com automação com ia" class="lp-offer-spread" width="600" height="380" />
           <div class="lp-offer-cover-glow" aria-hidden="true"></div>
         </div>
       </div>
@@ -2329,5 +2328,63 @@ a.lp-benefit-link:active {
     transition: none;
   }
 }
+
+/* Definitive Mobile Grid Collapse Overrides (placed at bottom to win CSS specificity) */
+@media(max-width: 900px) {
+  .lp-outcomes-grid,
+  .lp-roles-grid,
+  .lp-audience-grid,
+  .lp-blocks-grid,
+  .lp-benefits-grid,
+  .lp-proof-layout,
+  .lp-origin-layout,
+  .lp-urgency-card {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media(max-width: 640px) {
+  .lp-outcome-card,
+  .lp-role-card {
+    min-height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 20px !important;
+  }
+  .lp-outcome-num {
+    margin-bottom: 12px !important;
+    width: auto !important;
+    height: auto !important;
+    background: none !important;
+    box-shadow: none !important;
+    font-size: 16px !important;
+    color: var(--amber) !important;
+  }
+}
 </style>
 
+
+<style is:global>
+  @media(max-width: 900px) {
+    .lp-outcomes-grid, .lp-roles-grid, .lp-audience-grid, .lp-blocks-grid, .lp-benefits-grid, .lp-proof-layout, .lp-origin-layout, .lp-urgency-card, .lp-agent-grid {
+      display: grid !important;
+      grid-template-columns: 1fr !important;
+      gap: 16px !important;
+    }
+  }
+  @media(max-width: 640px) {
+    .lp-footer-links {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: 12px !important;
+    }
+  }
+</style>
+<style is:global>
+  @media(max-width: 640px) {
+    .lp-shock-grid, .lp-trust-inner, .lp-proof-board {
+      display: grid !important;
+      grid-template-columns: 1fr !important;
+    }
+  }
+</style>

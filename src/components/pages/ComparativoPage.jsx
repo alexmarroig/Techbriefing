@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 
 
@@ -247,7 +247,7 @@ function Body(){
       <div className="ebook-inline">
         <div className="ebook-inline-cover">
           <div className="ebook-inline-ico">IA</div>
-          <div style={{fontFamily:'var(--mono)',fontSize:8,color:'var(--text-4)',letterSpacing:'.1em',textTransform:'uppercase',textAlign:'center',lineHeight:1.4}}>Nexora<br/>Systems</div>
+          <div style={{fontFamily:'var(--mono)',fontSize:8,color:'var(--text-4)',letterSpacing:'.1em',textTransform:'uppercase',textAlign:'center',lineHeight:1.4}}>Tech Briefing<br/>Systems</div>
         </div>
         <div>
           <div className="ebook-inline-eyebrow">Ebook relacionado</div>
@@ -284,7 +284,7 @@ function App(){
       <div className="bc"><div className="wrap"><div className="bc-inner">
         <a href="/" className="bc-a">Home</a>
         <span className="bc-sep">›</span>
-        <a href="/comparativos/n8n-vs-make" className="bc-a">Comparativos</a>
+        <a href="/comparativos/n8n-vs-make/" className="bc-a">Comparativos</a>
         <span className="bc-sep">›</span>
         <span className="bc-cur">n8n vs Make</span>
       </div></div></div>
@@ -325,7 +325,7 @@ function App(){
           </div>
           <div className="related-grid">
             {[
-              {tag:'Agentes',v:'c',title:'AutoGPT, CrewAI ou LangGraph? Guia definitivo 2026',meta:'28 abr · 14 min',href:'/artigos/autogpt-crewai-langgraph'},
+              {tag:'Agentes',v:'c',title:'AutoGPT, CrewAI ou LangGraph? Guia definitivo 2026',meta:'28 abr · 14 min',href:'/artigos/autogpt-crewai-langgraph/'},
               {tag:'Tutorial',v:'c',title:'Como criar um agente de IA com n8n + GPT-4o',meta:'25 abr · 9 min',href:'/agentes'},
               {tag:'Guia',v:'a',title:'Automação para freelancers: do zero ao sistema em 7 dias',meta:'20 abr · 11 min',href:'/agentes'},
             ].map((r,i)=>(

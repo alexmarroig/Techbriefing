@@ -1,12 +1,12 @@
----
+﻿---
 title: "Moonshot AI levanta US$ 2 bilhões e reacende a disputa por modelos abertos na China"
 description: "A nova rodada da dona do Kimi reforça que modelos abertos e inferência barata continuam atraindo investidores e empresas."
 category: "Modelos abertos"
-author: "Nexora Systems"
+author: "Tech Briefing"
 date: 2026-05-13
 readTime: "6 min"
 featured: false
-image: "/images/news/moonshot-ai-2b-open-source-china.svg"
+image: "/images/article-agents-framework.png"
 tags:
   - Moonshot AI
   - Kimi

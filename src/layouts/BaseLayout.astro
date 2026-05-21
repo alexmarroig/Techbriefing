@@ -1,4 +1,4 @@
-﻿---
+---
 import '../styles/global.css';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
@@ -17,10 +17,12 @@ const {
   category,
   tags = [],
   jsonLd = [],
+  robots = 'index, follow',
+  canonical: customCanonical,
   impactSiteVerification,
 } = Astro.props;
 
-const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url).toString();
+const canonical = customCanonical || new URL(Astro.url.pathname, Astro.site ?? Astro.url).toString();
 const siteName = 'Tech Briefing';
 const absoluteImage = new URL(image, Astro.site ?? Astro.url).toString();
 const schemas = [
@@ -92,7 +94,7 @@ const schemas = [
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content={robots} />
     <meta name="theme-color" content="#121417" />
     {impactSiteVerification && <meta name="impact-site-verification" value={impactSiteVerification} />}
     <link rel="canonical" href={canonical} />
@@ -115,6 +117,13 @@ const schemas = [
     <link rel="apple-touch-icon" href="/favicon.ico" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <title>{title}</title>
+    <script is:inline>
+      (function(){
+        var t=localStorage.getItem('theme');
+        if(!t)t=window.matchMedia('(prefers-color-scheme:light)').matches?'light':'dark';
+        document.documentElement.setAttribute('data-theme',t);
+      })();
+    </script>
     <GoogleTag />
     <AdSense />
     <script type="application/ld+json" set:html={JSON.stringify(schemas)} />

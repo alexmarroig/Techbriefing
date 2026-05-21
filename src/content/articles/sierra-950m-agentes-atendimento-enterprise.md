@@ -1,12 +1,12 @@
----
+﻿---
 title: "Sierra levanta US$ 950 milhões e mostra que atendimento com IA virou disputa bilionária"
 description: "A rodada da Sierra indica que agentes de atendimento deixaram de ser chatbots laterais e passaram a ocupar o centro da experiência do cliente."
 category: "Startups"
-author: "Nexora Systems"
+author: "Tech Briefing"
 date: 2026-05-13
 readTime: "6 min"
 featured: false
-image: "/images/news/sierra-950m-agentes-atendimento-enterprise.svg"
+image: "/images/article-strategy-business.png"
 tags:
   - Sierra
   - Atendimento

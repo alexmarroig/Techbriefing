@@ -1,0 +1,30 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Google aposta em agentes de IA operacionais</title>
+  <desc id="desc">Arte editorial com blocos de tarefas conectados a um núcleo de IA.</desc>
+  <rect width="1200" height="675" fill="#071012"/>
+  <radialGradient id="g" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(870 150) rotate(140) scale(780 520)">
+    <stop stop-color="#22d3ee" stop-opacity=".32"/>
+    <stop offset=".44" stop-color="#ffb15f" stop-opacity=".18"/>
+    <stop offset="1" stop-color="#071012" stop-opacity="0"/>
+  </radialGradient>
+  <rect width="1200" height="675" fill="url(#g)"/>
+  <g stroke="#163033" stroke-width="1">
+    <path d="M0 135H1200M0 270H1200M0 405H1200M0 540H1200M200 0V675M400 0V675M600 0V675M800 0V675M1000 0V675" opacity=".55"/>
+  </g>
+  <rect x="92" y="88" width="1016" height="499" rx="34" fill="#0b1517" stroke="#1e3438"/>
+  <text x="132" y="155" fill="#ffb15f" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="5">RADAR TECH</text>
+  <text x="132" y="230" fill="#f7f2e8" font-family="Georgia, serif" font-size="62" font-weight="700">Google troca conversa</text>
+  <text x="132" y="300" fill="#f7f2e8" font-family="Georgia, serif" font-size="62" font-weight="700">por execução</text>
+  <text x="134" y="358" fill="#b8c4c2" font-family="Arial, sans-serif" font-size="24">Gemini 3.5 Flash reforça a nova fase:</text>
+  <text x="134" y="392" fill="#b8c4c2" font-family="Arial, sans-serif" font-size="24">agentes que pesquisam, constroem e operam.</text>
+  <g transform="translate(735 170)">
+    <rect x="0" y="0" width="300" height="92" rx="18" fill="#101f23" stroke="#24515a"/>
+    <rect x="0" y="132" width="300" height="92" rx="18" fill="#101f23" stroke="#24515a"/>
+    <rect x="0" y="264" width="300" height="92" rx="18" fill="#101f23" stroke="#24515a"/>
+    <circle cx="-52" cy="178" r="62" fill="#102126" stroke="#22d3ee" stroke-width="3"/>
+    <path d="M-82 178h60M-22 178h72M150 92v40M150 224v40" stroke="#ffb15f" stroke-width="5" stroke-linecap="round"/>
+    <text x="28" y="55" fill="#e8f2ef" font-family="Arial, sans-serif" font-size="24" font-weight="700">Pesquisar</text>
+    <text x="28" y="187" fill="#e8f2ef" font-family="Arial, sans-serif" font-size="24" font-weight="700">Executar</text>
+    <text x="28" y="319" fill="#e8f2ef" font-family="Arial, sans-serif" font-size="24" font-weight="700">Entregar</text>
+  </g>
+</svg>

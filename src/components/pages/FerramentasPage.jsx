@@ -156,7 +156,7 @@ const CATEGORIES = [
 
 function ToolCard({t}){
   return(
-    <div className="tool-card">
+    <a className="tool-card" href={t.href || '#'}>
       <div className="tool-card-head">
         <div style={{display:'flex',gap:12,alignItems:'center'}}>
           <div className="tool-ico">{t.ico}</div>
@@ -172,7 +172,7 @@ function ToolCard({t}){
           <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
         </span>
       </div>
-    </div>
+    </a>
   );
 }
 
@@ -235,7 +235,7 @@ function App({ tools = [] }){
         <div className="tools-hero-bg"/>
         <div className="wrap"><div className="tools-hero-inner">
           <div>
-            <div className="tools-hero-eyebrow"><div className="tools-hero-rule"/><span className="tools-hero-eyebrow-text">Curadoria editorial</span></div>
+            <div className="tools-hero-eyebrow"><div className="tools-hero-rule"/><span className="tools-hero-eyebrow-text">Ferramentas recomendadas</span></div>
             <h1 className="tools-hero-title">Ferramentas que<br/><em>valem seu tempo.</em></h1>
             <p className="tools-hero-sub">Testadas e recomendadas pela equipe do Tech Briefing. Organizadas por categoria, com avaliações honestas e links diretos. Links de afiliado identificados — eles nos ajudam a manter o conteúdo gratuito.</p>
           </div>
@@ -285,7 +285,7 @@ function App({ tools = [] }){
               <div className="compare-strip-title">AutoGPT, CrewAI ou LangGraph? Guia definitivo 2026</div>
               <div className="compare-strip-desc">Comparamos os 3 principais frameworks de agentes em cenários reais.</div>
             </div>
-            <a href="/artigos/autogpt-crewai-langgraph" className="btn btn-stroke" style={{whiteSpace:'nowrap'}}>Ler o comparativo →</a>
+            <a href="/artigos/autogpt-crewai-langgraph/" className="btn btn-stroke" style={{whiteSpace:'nowrap'}}>Ler o comparativo →</a>
           </div>
         </div>
       </div>
