@@ -314,7 +314,7 @@ const ebookSchemas = [
     </div>
     <h2 class="lp-h2">Agentes com função clara, fluxo definido e utilidade real no negócio.</h2>
     <p class="lp-section-intro">O objetivo não é criar um robô genérico. É sair com repertório para desenhar agentes que resolvem tarefas específicas e podem virar automação, entrega ou oferta.</p>
-    <div class="lp-outcomes-grid lp-agent-grid">
+    <div class="lp-outcomes-grid lp-agent-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr))">
       {CONFIG.outcomes.map((o, index) => (
         <div class="lp-outcome-card lp-agent-card">
           <span class="lp-outcome-num">{String(index + 1).padStart(2, '0')}</span>
@@ -1652,7 +1652,7 @@ body {
 }
 .lp-outcomes-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 14px;
   margin-bottom: 42px;
 }
