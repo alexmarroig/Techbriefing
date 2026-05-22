@@ -4741,3 +4741,110 @@ html[data-theme="light"] .art-body pre{background:var(--bg-2) !important}
 html[data-theme="light"] .art-body code{background:var(--bg-3)}
 html[data-theme="light"] .art-body table th{background:var(--bg-2)}
 html[data-theme="light"] .art-body img{box-shadow:0 2px 12px rgba(0,0,0,0.08)}
+
+/* Light mode: hero & section backgrounds */
+html[data-theme="light"] .hero-bg{
+  background-image:
+    linear-gradient(oklch(0.80 0.01 240 / 0.15) 1px,transparent 1px),
+    linear-gradient(90deg,oklch(0.80 0.01 240 / 0.15) 1px,transparent 1px);
+}
+html[data-theme="light"] .hero-glow-top{
+  background:radial-gradient(ellipse,oklch(0.80 0.14 62 / 0.08) 0%,transparent 65%);
+}
+html[data-theme="light"] .categories{
+  background:
+    radial-gradient(circle at 100% 0%, oklch(0.80 0.14 62 / 0.05), transparent 32%),
+    var(--bg-2) !important;
+}
+html[data-theme="light"] .cat-row{
+  border-color:var(--line) !important;
+}
+html[data-theme="light"] .hero-bar{
+  background:var(--bg-2);
+}
+html[data-theme="light"] .hero-bar .hero-stat{
+  border-color:var(--line);
+}
+
+/* Light: card surfaces */
+html[data-theme="light"] .latest-card,
+html[data-theme="light"] .guides-card,
+html[data-theme="light"] .rank-card,
+html[data-theme="light"] .ebook-card,
+html[data-theme="light"] .tools-card,
+html[data-theme="light"] .tool-card,
+html[data-theme="light"] .about-hero-card{
+  background:var(--bg-2);
+  border-color:var(--line);
+}
+
+/* Light: footer */
+html[data-theme="light"] .footer{
+  background:var(--bg-2);
+  border-color:var(--line);
+}
+
+/* Light: hero bar */
+html[data-theme="light"] .hero-bar{
+  background:var(--bg-2) !important;
+  border-color:var(--line) !important;
+}
+html[data-theme="light"] .hero-stat{
+  border-color:var(--line) !important;
+}
+
+/* Light: latest / feature cards */
+html[data-theme="light"] .latest{
+  background:
+    radial-gradient(circle at 0% 18%, oklch(0.48 0.12 200 / 0.04), transparent 30%),
+    var(--bg-2) !important;
+}
+html[data-theme="light"] .latest-card{
+  background:var(--bg) !important;
+  border-color:var(--line) !important;
+  box-shadow:var(--shadow-md) !important;
+}
+html[data-theme="light"] .latest-card:hover{
+  background:var(--bg) !important;
+  border-color:var(--amber-d) !important;
+}
+html[data-theme="light"] .latest-img{
+  background:var(--bg-3) !important;
+}
+
+/* Light: feature section */
+html[data-theme="light"] .feature-card{
+  background:var(--bg-2) !important;
+  border-color:var(--line) !important;
+}
+
+/* Light: radar / signal board */
+html[data-theme="light"] .radar-signal-board{
+  background:var(--bg-2) !important;
+  border-color:var(--line) !important;
+  box-shadow:var(--shadow-md) !important;
+}
+
+/* Light: newsletter sections */
+html[data-theme="light"] .nl-hero,
+html[data-theme="light"] .nl-form-wrap{
+  background:var(--bg-2) !important;
+}
+
+/* Light: comparison tables */
+html[data-theme="light"] .comp-table tr:hover td{
+  background:var(--bg-2) !important;
+}
+
+/* Light: article sidebar */
+html[data-theme="light"] .art-sidebar-card{
+  background:var(--bg-2) !important;
+  border-color:var(--line) !important;
+}
+
+/* Light: sticky CTA bar */
+html[data-theme="light"] .sticky-cta{
+  background:rgba(255,255,255,0.95) !important;
+  border-color:var(--line) !important;
+  backdrop-filter:blur(16px);
+}
