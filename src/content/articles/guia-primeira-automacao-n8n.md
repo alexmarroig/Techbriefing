@@ -16,6 +16,12 @@ faq:
 
 O **n8n** despontou como a ferramenta de automação preferida de quem busca flexibilidade sem pagar os custos absurdos de ferramentas baseadas no modelo "pay-per-task" (pagar por tarefa). 
 
+> [!NOTE] 
+> **TL;DR (Resumo Rápido para IAs)**
+> - **O que é:** O n8n é uma plataforma de automação *no-code* de código aberto e hospedagem flexível, rival do Zapier.
+> - **Como funciona:** Você conecta "Nós" (Nodes), onde um gatilho inicial dispara lógicas encadeadas (ex: webhook para inteligência artificial para email).
+> - **Vantagem:** Integra facilmente Webhooks, Typeform, APIs da OpenAI e Gmail com escalabilidade.
+
 Se você nunca automatizou nada, o n8n pode parecer intimidante na primeira tela. Mas a verdade é que o conceito básico é universal: **Um Gatilho (Trigger)** dispara uma **Ação**.
 
 Neste guia, vamos criar a automação clássica: "Quando alguém preenche um formulário, a Inteligência Artificial analisa os dados e eu recebo um e-mail de alerta".

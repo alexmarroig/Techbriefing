@@ -30,6 +30,44 @@ const breadcrumbJsonLd = {
     { '@type': 'ListItem', position: 3, name: title, item: articleUrl },
   ],
 };
+
+const articleJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  image: image ? new URL(image, Astro.site ?? Astro.url).toString() : undefined,
+  author: {
+    '@type': 'Person',
+    name: author,
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Tech Briefing',
+    logo: {
+      '@type': 'ImageObject',
+      url: new URL('/favicon.ico', Astro.site ?? Astro.url).toString()
+    }
+  },
+  datePublished: date.toISOString(),
+  dateModified: date.toISOString(),
+};
+
+const faqJsonLd = faq && faq.length > 0 ? {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((item: any) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer
+    }
+  }))
+} : null;
+
+const schemas = [breadcrumbJsonLd, articleJsonLd];
+if (faqJsonLd) schemas.push(faqJsonLd);
 ---
 
 <BaseLayout
@@ -44,7 +82,7 @@ const breadcrumbJsonLd = {
   category={category}
   tags={tags}
   faq={faq}
-  jsonLd={[breadcrumbJsonLd]}
+  jsonLd={schemas}
 >
   <div class="article-progress" aria-hidden="true"></div>
 
