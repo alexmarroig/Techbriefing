@@ -1,12 +1,12 @@
-﻿---
-title: "Como usar a API da OpenAI: tutorial completo para iniciantes"
-description: "Aprenda a usar a API da OpenAI do zero: configuração, primeiras chamadas, embeddings, gerenciamento de custos e boas práticas para desenvolvedores iniciantes."
+---
+title: "Tutorial de API da OpenAI para Iniciantes"
+description: "Guia prático para programadores e não-programadores conectarem a API do ChatGPT aos seus sistemas. O passo a passo para gerar suas primeiras chaves e requisições."
 category: "IA Prática"
 author: "Lucas Andrade"
 date: 2026-04-25
-readTime: "11 min"
+readTime: "8 min"
 featured: false
-image: "/images/article-api-dev.png"
+image: "/images/openai-api-cover.png"
 tags:
   - OpenAI
   - API

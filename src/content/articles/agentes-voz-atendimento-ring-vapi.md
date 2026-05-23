@@ -1,12 +1,11 @@
 ---
-title: "Agentes de voz no atendimento: o caso Ring"
-description: "A escolha da Ring por agentes de voz em atendimento mostra uma virada importante: IA não é só chat bonito, é operação ao vivo, com regra, controle e métrica."
+title: "Agentes de Voz para Atendimento Automático (Vapi e Bland AI)"
+description: "A nova era dos call centers movidos a inteligência artificial. Como as plataformas Vapi, Ring Central e Bland AI estão automatizando até 80% das chamadas corporativas."
 category: "Agentes de IA"
 author: "Lucas Andrade"
 date: 2026-05-13
-readTime: "8 min"
+readTime: "9 min"
 featured: true
-image: "/images/article-automation-workflow.png"
 tags:
   - Agentes de voz
   - Atendimento com IA
