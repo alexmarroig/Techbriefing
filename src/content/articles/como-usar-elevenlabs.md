@@ -1,6 +1,7 @@
 ---
 title: "Como usar o ElevenLabs para criar e clonar vozes com IA"
 description: "Da interface inicial à clonagem de voz (Voice Cloning): um guia completo para tirar o melhor proveito do ElevenLabs para seus vídeos, podcasts e automações."
+image: "/images/elevenlabs-cover.png"
 readTime: "7 min"
 date: 2026-05-24
 author: "Mariana Costa"

@@ -1,6 +1,7 @@
 ---
 title: "Como fazer sua primeira automação no n8n: Guia passo a passo"
 description: "Pare de fazer tarefas repetitivas manualmente. Aprenda a criar seu primeiro fluxo visual no n8n ligando formulários, inteligência artificial e e-mail em menos de 10 minutos."
+image: "/images/n8n-cover.png"
 readTime: "8 min"
 date: 2026-05-24
 author: "Thiago Mendes"

@@ -5029,3 +5029,24 @@ html[data-theme="light"] .sticky-cta{
   }
 }
 
+
+/* --- DYNAMIC HOVER EFFECTS UPGRADE --- */
+.art-card, .feat-card, .rank-item, .card {
+  transition: transform 0.3s cubic-bezier(0.1, 0.7, 0.1, 1), box-shadow 0.3s ease, border-color 0.3s ease !important;
+}
+.art-card:hover, .feat-card:hover, .card:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.5) !important;
+  border-color: var(--amber-d) !important;
+}
+.art-card .art-card-img img, .feat-card .feat-card-img img, .card img {
+  transition: transform 0.6s cubic-bezier(0.1, 0.7, 0.1, 1) !important;
+}
+.art-card:hover .art-card-img img, .feat-card:hover .feat-card-img img {
+  transform: scale(1.06) !important;
+}
+.btn-fill:hover, .btn-stroke:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px var(--amber-d);
+}
+
