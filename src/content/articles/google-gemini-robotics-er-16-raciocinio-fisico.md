@@ -2,7 +2,7 @@
 title: "Gemini Robotics-ER 1.6 coloca raciocínio físico no centro da corrida por robôs úteis"
 description: "O avanço do Google DeepMind em robótica mostra que agentes físicos precisam entender espaço, instrumentos e sucesso de tarefa."
 category: "Robótica"
-author: "Tech Briefing"
+author: "Mariana Costa"
 date: 2026-05-13
 readTime: "6 min"
 featured: false

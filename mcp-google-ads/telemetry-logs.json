@@ -328,5 +328,31 @@
     },
     "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Claude/1.8089.1 Chrome/146.0.7680.216 Electron/41.6.1 Safari/537.36 MSIX",
     "ip": "127.0.0.1"
+  },
+  {
+    "eventType": "dead_click",
+    "pageUrl": "/ebook-agentes-ia",
+    "timestamp": "2026-05-21T22:39:17.741Z",
+    "details": {
+      "selector": "section#construir > div",
+      "tag": "DIV",
+      "text": "01\nO QUE VOCÊ VAI CONSEGUIR CONSTRUIR\nAgentes com",
+      "screenSize": "297x765",
+      "referrer": "http://localhost:4321/ferramentas"
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Claude/1.8089.1 Chrome/146.0.7680.216 Electron/41.6.1 Safari/537.36 MSIX",
+    "ip": "127.0.0.1"
+  },
+  {
+    "eventType": "time_on_page",
+    "pageUrl": "/ebook-agentes-ia",
+    "timestamp": "2026-05-21T22:40:29.382Z",
+    "details": {
+      "durationSeconds": 2082,
+      "screenSize": "297x765",
+      "referrer": "http://localhost:4321/ferramentas"
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Claude/1.8089.1 Chrome/146.0.7680.216 Electron/41.6.1 Safari/537.36 MSIX",
+    "ip": "127.0.0.1"
   }
 ]

@@ -2,7 +2,7 @@
 title: "Chatbot vs agente de IA: qual é a diferença real?"
 description: "Descubra as diferenças fundamentais entre chatbots tradicionais e agentes de IA modernos, e quando usar cada solução no seu negócio em 2026."
 category: "Agentes de IA"
-author: "Tech Briefing"
+author: "Lucas Andrade"
 date: 2026-03-15
 readTime: "7 min"
 featured: false

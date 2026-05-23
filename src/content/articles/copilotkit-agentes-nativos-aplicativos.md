@@ -2,7 +2,7 @@
 title: "CopilotKit: US$ 27M para agentes dentro de apps"
 description: "A tese da startup é simples: agentes não podem viver só em caixas de texto, precisam atuar dentro da interface real do produto."
 category: "Desenvolvimento"
-author: "Tech Briefing"
+author: "Mariana Costa"
 date: 2026-05-13
 readTime: "6 min"
 featured: false

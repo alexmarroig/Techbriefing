@@ -1,8 +1,8 @@
-﻿---
+---
 title: "12 movimentos de IA e tecnologia para acompanhar"
 description: "Uma curadoria em português com as notícias de tecnologia mais relevantes do dia e o que elas significam para IA, automação e negócios digitais."
 category: "Tech News"
-author: "Tech Briefing"
+author: "Lucas Andrade"
 date: 2026-05-13
 readTime: "14 min"
 featured: true
@@ -11,6 +11,10 @@ tags:
   - Agentes de IA
   - VentureBeat AI
 ---
+
+## Resumo rápido
+
+Uma curadoria em português com as notícias de tecnologia mais relevantes do dia e o que elas significam para IA, automação e negócios digitais.
 
 Este é o Radar Tech do dia: uma curadoria das notícias e discussões que mais importam para quem acompanha IA aplicada, automação, agentes, software e negócios digitais.
 

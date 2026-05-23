@@ -1,8 +1,8 @@
-﻿---
+---
 title: "3 provas de que você está usando IA errado no negócio"
 description: "Você usa ChatGPT, testa automações e ainda sente que nada virou resultado? Veja 3 provas práticas de que a IA está sendo usada do jeito errado no seu negócio."
 category: "IA Prática"
-author: "Tech Briefing"
+author: "Thiago Mendes"
 date: 2026-05-12
 readTime: "7 min"
 featured: true
@@ -12,6 +12,10 @@ tags:
   - Automação
   - Agentes de IA
 ---
+
+## Resumo rápido
+
+Você usa ChatGPT, testa automações e ainda sente que nada virou resultado? Veja 3 provas práticas de que a IA está sendo usada do jeito errado no seu negócio.
 
 Usar IA no negócio não significa abrir o ChatGPT, pedir uma ideia e voltar para a rotina manual de sempre. Esse é o ponto em que muita gente se engana: confunde **uso frequente de IA** com **uso estratégico de IA**.
 

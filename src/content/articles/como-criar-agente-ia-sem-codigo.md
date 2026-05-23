@@ -2,7 +2,7 @@
 title: "Como criar um agente de IA sem programar: tutorial passo a passo"
 description: "Aprenda a criar seu primeiro agente de inteligência artificial sem escrever código usando ferramentas no-code. Tutorial completo para iniciantes em 2026."
 category: "Agentes de IA"
-author: "Tech Briefing"
+author: "Lucas Andrade"
 date: 2026-03-10
 readTime: "10 min"
 featured: false

@@ -2,7 +2,7 @@
 title: "Big Tech acelera gastos em infraestrutura de IA"
 description: "Estimativas de capex bilionário mostram que a disputa entre Google, Amazon, Microsoft e Meta passa por chips, energia e data centers."
 category: "Mercado"
-author: "Tech Briefing"
+author: "Mariana Costa"
 date: 2026-05-13
 readTime: "6 min"
 featured: false

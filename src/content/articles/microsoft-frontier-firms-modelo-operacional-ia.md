@@ -1,8 +1,8 @@
-﻿---
+---
 title: "Microsoft fala em Frontier Firms: empresas começam a redesenhar o trabalho ao redor de agentes"
 description: "A visão de Author, Editor, Director e Orchestrator ajuda a entender como a colaboração entre humanos e agentes está mudando a operação das empresas."
 category: "Trabalho"
-author: "Tech Briefing"
+author: "Mariana Costa"
 date: 2026-05-13
 readTime: "6 min"
 featured: true
@@ -13,6 +13,10 @@ tags:
   - Futuro do trabalho
   - Copilot
 ---
+
+## Resumo rápido
+
+A visão de Author, Editor, Director e Orchestrator ajuda a entender como a colaboração entre humanos e agentes está mudando a operação das empresas.
 
 A visão de Author, Editor, Director e Orchestrator ajuda a entender como a colaboração entre humanos e agentes está mudando a operação das empresas.
 

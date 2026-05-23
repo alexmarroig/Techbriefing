@@ -2,7 +2,7 @@
 title: "Flowise: Como Criar Agentes de IA Visualmente — Sem Escrever Código"
 description: "Guia completo sobre Flowise, o builder open-source de agentes de IA com interface drag-and-drop. Instale, construa seu primeiro agente RAG e entenda quando usar o Flowise vs. alternativas."
 category: "Guias Práticos"
-author: "Tech Briefing"
+author: "Lucas Andrade"
 date: 2026-05-20
 readTime: "14 min"
 featured: false

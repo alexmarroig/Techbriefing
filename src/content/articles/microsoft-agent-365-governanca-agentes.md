@@ -1,8 +1,8 @@
-﻿---
+---
 title: "Agent 365 mostra o novo problema das empresas: governar agentes como se fossem usuários"
 description: "Com agentes circulando por documentos, dados e sistemas, governança, identidade e auditoria deixam de ser detalhe técnico."
 category: "Governança"
-author: "Tech Briefing"
+author: "Mariana Costa"
 date: 2026-05-13
 readTime: "6 min"
 featured: true
@@ -13,6 +13,10 @@ tags:
   - Segurança
   - Empresas
 ---
+
+## Resumo rápido
+
+Com agentes circulando por documentos, dados e sistemas, governança, identidade e auditoria deixam de ser detalhe técnico.
 
 Com agentes circulando por documentos, dados e sistemas, governança, identidade e auditoria deixam de ser detalhe técnico.
 

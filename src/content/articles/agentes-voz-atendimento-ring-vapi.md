@@ -1,8 +1,8 @@
-﻿---
+---
 title: "Agentes de voz no atendimento: o caso Ring"
 description: "A escolha da Ring por agentes de voz em atendimento mostra uma virada importante: IA não é só chat bonito, é operação ao vivo, com regra, controle e métrica."
 category: "Agentes de IA"
-author: "Tech Briefing"
+author: "Lucas Andrade"
 date: 2026-05-13
 readTime: "8 min"
 featured: true
@@ -12,6 +12,10 @@ tags:
   - Atendimento com IA
   - Automação
 ---
+
+## Resumo rápido
+
+A escolha da Ring por agentes de voz em atendimento mostra uma virada importante: IA não é só chat bonito, é operação ao vivo, com regra, controle e métrica.
 
 Uma das notícias mais interessantes da semana veio do atendimento ao cliente: a Ring, da Amazon, passou a rotear chamadas inbound por uma plataforma de agentes de voz depois de avaliar dezenas de fornecedores. O ponto importante não é o nome da ferramenta. É o sinal de mercado.
 

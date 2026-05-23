@@ -2,7 +2,7 @@
 title: "Como transformar IA em processo, não em brincadeira"
 description: "IA só vira resultado quando entra em um processo com objetivo, regras, ferramentas e medição. Veja um método simples para começar."
 category: "IA Prática"
-author: "Tech Briefing"
+author: "Thiago Mendes"
 date: 2026-05-12
 readTime: "7 min"
 featured: false

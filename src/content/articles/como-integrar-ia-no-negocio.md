@@ -1,8 +1,8 @@
-﻿---
+---
 title: "Como integrar inteligência artificial no seu negócio: roteiro prático"
 description: "Guia completo para integrar IA no seu negócio de forma estratégica: diagnóstico, planejamento, implementação e gestão de mudança. Do zero ao primeiro resultado."
 category: "IA Prática"
-author: "Tech Briefing"
+author: "Lucas Andrade"
 date: 2026-04-12
 readTime: "10 min"
 featured: true
@@ -13,6 +13,10 @@ tags:
   - Estratégia
   - Transformação Digital
 ---
+
+## Resumo rápido
+
+Guia completo para integrar IA no seu negócio de forma estratégica: diagnóstico, planejamento, implementação e gestão de mudança. Do zero ao primeiro resultado.
 
 ## Por onde começar: o erro mais comum das empresas
 

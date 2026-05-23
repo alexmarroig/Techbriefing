@@ -2,7 +2,7 @@
 title: "Meta compra startup de robótica e reforça ambição em humanoides"
 description: "A aquisição da Assured Robot Intelligence mostra que Big Tech vê robótica como uma próxima plataforma para modelos de IA."
 category: "Big Tech"
-author: "Tech Briefing"
+author: "Mariana Costa"
 date: 2026-05-13
 readTime: "6 min"
 featured: false

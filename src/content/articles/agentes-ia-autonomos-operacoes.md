@@ -2,7 +2,7 @@
 title: "Agentes de IA autônomos: como empresas delegam operações inteiras para IA"
 description: "A próxima onda não é usar IA como ferramenta. É colocar agentes para operar processos inteiros — atendimento, análise, conteúdo e vendas — com supervisão humana mínima."
 category: "Agentes de IA"
-author: "Tech Briefing"
+author: "Lucas Andrade"
 date: 2026-05-19
 readTime: "10 min"
 featured: false

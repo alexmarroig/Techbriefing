@@ -2,7 +2,7 @@
 title: "Parameter Golf mostra como IA pode acelerar pesquisa assistida por humanos"
 description: "O experimento da OpenAI reforça um uso menos chamativo e mais importante da IA: explorar hipóteses, testar variações e aprender mais rápido."
 category: "Pesquisa"
-author: "Tech Briefing"
+author: "Lucas Andrade"
 date: 2026-05-13
 readTime: "6 min"
 featured: false

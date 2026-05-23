@@ -2,7 +2,7 @@
 title: "Claude Security: IA para corrigir vulnerabilidades"
 description: "A proposta da Anthropic para segurança indica que a próxima fase da AppSec será menos relatório parado e mais correção guiada."
 category: "Cibersegurança"
-author: "Tech Briefing"
+author: "Lucas Andrade"
 date: 2026-05-13
 readTime: "6 min"
 featured: false

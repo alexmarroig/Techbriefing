@@ -2,7 +2,7 @@
 title: "Make vs Zapier: qual ferramenta de automação escolher em 2026?"
 description: "Comparativo completo entre Make e Zapier: preços, capacidades, integrações, facilidade de uso e para qual perfil de empresa cada uma é a melhor escolha."
 category: "Comparativo"
-author: "Tech Briefing"
+author: "Lucas Andrade"
 date: 2026-05-01
 readTime: "8 min"
 featured: false

@@ -16,6 +16,7 @@ const {
   author = 'Nexora Systems',
   category,
   tags = [],
+  faq = [],
   jsonLd = [],
   robots = 'index, follow',
   canonical: customCanonical,
@@ -56,7 +57,7 @@ const schemas = [
         datePublished: publishedTime,
         dateModified: modifiedTime || publishedTime,
         author: {
-          '@type': 'Organization',
+          '@type': ['Lucas Andrade', 'Mariana Costa', 'Thiago Mendes'].includes(author) ? 'Person' : 'Organization',
           name: author,
           url: 'https://www.techbriefing.com.br/sobre/',
         },
@@ -84,6 +85,20 @@ const schemas = [
         },
         inLanguage: 'pt-BR',
       },
+  faq.length > 0
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faq.map((f: { question: string; answer: string }) => ({
+          '@type': 'Question',
+          name: f.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: f.answer,
+          },
+        })),
+      }
+    : null,
   ...jsonLd,
 ].filter(Boolean);
 ---
@@ -97,6 +112,7 @@ const schemas = [
     <meta name="robots" content={robots} />
     <meta name="theme-color" content="#0a0a0b" />
     <meta name="color-scheme" content="dark light" />
+    {type === 'article' && <link rel="alternate" type="text/markdown" href={canonical.replace(/\/$/, '') + '.txt'} />}
     {impactSiteVerification && <meta name="impact-site-verification" value={impactSiteVerification} />}
     <link rel="canonical" href={canonical} />
     <meta property="og:site_name" content={siteName} />

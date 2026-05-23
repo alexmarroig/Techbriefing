@@ -2,7 +2,7 @@
 title: "O erro que faz 90% das automações com IA quebrarem"
 description: "A maioria das automações com IA quebra porque começa pela ferramenta, não pelo processo. Veja como evitar esse erro antes de escalar."
 category: "Automação"
-author: "Tech Briefing"
+author: "Lucas Andrade"
 date: 2026-05-12
 readTime: "7 min"
 featured: false

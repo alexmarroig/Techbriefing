@@ -13,7 +13,7 @@ export function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
-const { title, description, image, category, author, date, readTime, tags } = entry.data;
+const { title, description, image, category, author, date, readTime, tags, faq = [] } = entry.data;
 const { Content } = await render(entry);
 const formattedDate = new Intl.DateTimeFormat('pt-BR', {
   day: '2-digit',
@@ -43,6 +43,7 @@ const breadcrumbJsonLd = {
   author={author}
   category={category}
   tags={tags}
+  faq={faq}
   jsonLd={[breadcrumbJsonLd]}
 >
   <div class="article-progress" aria-hidden="true"></div>

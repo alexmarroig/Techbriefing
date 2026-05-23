@@ -2,7 +2,7 @@
 title: "Anthropic lança agentes especializados para finanças"
 description: "Templates prontos para pitchbooks, KYC e fechamento mensal mostram como agentes começam a se especializar por função."
 category: "Finanças"
-author: "Tech Briefing"
+author: "Mariana Costa"
 date: 2026-05-13
 readTime: "6 min"
 featured: false

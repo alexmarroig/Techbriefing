@@ -2,7 +2,7 @@
 title: "Sierra levantou quase US$ 1 bi: a corrida por agentes empresariais ficou séria"
 description: "A nova rodada da Sierra mostra que agentes de IA para empresas deixaram de ser experimento. Entenda o que isso sinaliza para negócios digitais."
 category: "Agentes de IA"
-author: "Tech Briefing"
+author: "Lucas Andrade"
 date: 2026-05-13
 readTime: "8 min"
 featured: false

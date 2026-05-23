@@ -2,7 +2,7 @@
 title: "Slackbot virou agente: o escritório está entrando na era da IA operacional"
 description: "A nova versão do Slackbot mostra como assistentes corporativos estão deixando de ser notificadores para atuar como agentes que buscam dados e executam tarefas."
 category: "Agentes de IA"
-author: "Tech Briefing"
+author: "Mariana Costa"
 date: 2026-05-19
 readTime: "8 min"
 featured: false

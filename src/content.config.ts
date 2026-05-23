@@ -14,6 +14,10 @@ const article = defineCollection({
     featured: z.boolean().default(false),
     image: z.string().optional(),
     tags: z.array(z.string()).default([]),
+    faq: z.array(z.object({
+      question: z.string(),
+      answer: z.string()
+    })).default([]),
   }),
 });
 
@@ -72,10 +76,21 @@ const ebook = defineCollection({
   }),
 });
 
+const glossario = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/glossario' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    author: z.string().default('Tech Briefing'),
+    date: z.coerce.date(),
+  }),
+});
+
 export const collections = {
   articles: article,
   comparativos: comparativo,
   tools: tool,
   apps: app,
   ebooks: ebook,
+  glossario: glossario,
 };

@@ -2,7 +2,7 @@
 title: "Como a IA reduz custos operacionais na prática: números reais"
 description: "Descubra como empresas usam IA para reduzir custos operacionais com dados reais, casos práticos e estratégias para calcular o ROI das iniciativas de IA."
 category: "IA Prática"
-author: "Tech Briefing"
+author: "Lucas Andrade"
 date: 2026-04-20
 readTime: "9 min"
 featured: false

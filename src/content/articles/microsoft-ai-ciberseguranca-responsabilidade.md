@@ -2,7 +2,7 @@
 title: "Microsoft alerta: IA avançada pode fortalecer ou fragilizar a segurança digital"
 description: "A discussão sobre modelos capazes de acelerar descoberta de vulnerabilidades coloca responsabilidade no centro da adoção de IA."
 category: "Cibersegurança"
-author: "Tech Briefing"
+author: "Lucas Andrade"
 date: 2026-05-13
 readTime: "6 min"
 featured: false

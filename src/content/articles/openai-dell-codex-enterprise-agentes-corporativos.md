@@ -2,7 +2,7 @@
 title: "OpenAI e Dell levam Codex para empresas: agentes de código entram na infraestrutura"
 description: "A parceria entre OpenAI e Dell mostra que agentes de programação estão virando parte da operação corporativa, com foco em ambientes híbridos e on-premise."
 category: "Software"
-author: "Tech Briefing"
+author: "Lucas Andrade"
 date: 2026-05-19
 readTime: "7 min"
 featured: false

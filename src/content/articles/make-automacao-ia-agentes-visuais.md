@@ -2,7 +2,7 @@
 title: "Make com IA: Automação Visual de Agentes para Negócios em 2026"
 description: "Guia completo para usar o Make (ex-Integromat) como plataforma de orquestração de IA. Construa agentes reativos, conecte LLMs a qualquer app e automatize operações completas sem código."
 category: "Guias Práticos"
-author: "Tech Briefing"
+author: "Lucas Andrade"
 date: 2026-05-20
 readTime: "13 min"
 featured: false

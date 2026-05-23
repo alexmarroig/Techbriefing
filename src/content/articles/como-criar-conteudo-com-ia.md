@@ -2,7 +2,7 @@
 title: "Como criar conteúdo profissional com IA: guia completo para criadores"
 description: "Aprenda a usar ferramentas de IA para produzir textos, posts, roteiros e e-mails com qualidade editorial — sem perder sua voz e sem depender de tentativa solta."
 category: "Guias Práticos"
-author: "Tech Briefing"
+author: "Lucas Andrade"
 date: 2026-05-20
 readTime: "12 min"
 featured: false

@@ -2,7 +2,7 @@
 title: "Google aposta em agentes, não em chatbots: o que muda para negócios"
 description: "O Gemini 3.5 Flash reforça uma virada importante: IA deixa de ser apenas conversa e passa a executar tarefas, pesquisar, programar e operar fluxos reais."
 category: "Agentes de IA"
-author: "Tech Briefing"
+author: "Mariana Costa"
 date: 2026-05-19
 readTime: "8 min"
 featured: false

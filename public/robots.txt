@@ -1,5 +1,21 @@
 User-agent: *
 Allow: /
 
+# AEO / AI Crawler Allowances
+User-agent: GPTBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: Claude-Web
+Allow: /
+User-agent: CCBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+
+# LLM Standard Meta
+# https://llmstxt.org/
+llms: https://www.techbriefing.com.br/llms.txt
+
 Sitemap: https://techbriefing.com.br/sitemap-index.xml
 Sitemap: https://www.techbriefing.com.br/sitemap-index.xml

@@ -2,7 +2,7 @@
 title: "LangGraph: Guia Completo para Construir Agentes com Python em 2026"
 description: "Aprenda a construir agentes de IA robustos com LangGraph — o runtime de orquestração do LangChain. Do StateGraph básico até agentes com memória, human-in-the-loop e deploy em produção."
 category: "Guias Práticos"
-author: "Tech Briefing"
+author: "Lucas Andrade"
 date: 2026-05-20
 readTime: "18 min"
 featured: false

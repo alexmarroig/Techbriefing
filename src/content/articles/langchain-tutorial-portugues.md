@@ -1,8 +1,8 @@
-﻿---
+---
 title: "LangChain tutorial em português: guia completo para iniciantes"
 description: "Aprenda LangChain do zero em português: instalação, chains, agentes, RAG e exemplos práticos. O framework mais popular para desenvolvimento com LLMs explicado de forma simples."
 category: "IA Prática"
-author: "Tech Briefing"
+author: "Lucas Andrade"
 date: 2026-05-06
 readTime: "13 min"
 featured: true
@@ -14,6 +14,10 @@ tags:
   - Desenvolvimento
   - LLM
 ---
+
+## Resumo rápido
+
+Aprenda LangChain do zero em português: instalação, chains, agentes, RAG e exemplos práticos. O framework mais popular para desenvolvimento com LLMs explicado de forma simples.
 
 ## O que é LangChain e por que aprender?
 

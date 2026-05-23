@@ -2,7 +2,7 @@
 title: "Google e Kaggle trazem curso de agentes com foco em vibe coding"
 description: "A nova edição do curso mostra que construir agentes com linguagem natural virou habilidade de massa, não só de engenheiros especialistas."
 category: "Educação"
-author: "Tech Briefing"
+author: "Lucas Andrade"
 date: 2026-05-13
 readTime: "6 min"
 featured: false

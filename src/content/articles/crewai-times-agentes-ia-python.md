@@ -2,7 +2,7 @@
 title: "CrewAI: Como Criar Times de Agentes de IA com Papéis Definidos"
 description: "Guia completo de CrewAI em Python — crie crews de agentes especializados que colaboram para completar tarefas complexas. Com exemplos reais de código, comparativo e casos de uso."
 category: "Guias Práticos"
-author: "Tech Briefing"
+author: "Lucas Andrade"
 date: 2026-05-20
 readTime: "15 min"
 featured: false

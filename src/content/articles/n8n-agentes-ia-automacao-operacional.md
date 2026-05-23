@@ -2,7 +2,7 @@
 title: "n8n com IA: Como Construir Agentes Operacionais de Automação em 2026"
 description: "Guia prático para construir agentes de IA com n8n — do nó AI Agent básico até um agente SDR completo com memória, ferramentas e integração com CRM. Inclui templates prontos."
 category: "Guias Práticos"
-author: "Tech Briefing"
+author: "Lucas Andrade"
 date: 2026-05-20
 readTime: "16 min"
 featured: false

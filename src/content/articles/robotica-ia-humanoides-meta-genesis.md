@@ -2,7 +2,7 @@
 title: "Robôs com IA estão voltando: agora a disputa é pelo modelo que entende o mundo físico"
 description: "Meta, Genesis AI e outras empresas estão mirando robótica com modelos fundacionais. Entenda por que isso pode ser a próxima grande fronteira da IA."
 category: "IA Prática"
-author: "Tech Briefing"
+author: "Lucas Andrade"
 date: 2026-05-13
 readTime: "8 min"
 featured: false

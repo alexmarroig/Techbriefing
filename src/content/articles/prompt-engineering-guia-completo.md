@@ -1,8 +1,8 @@
-﻿---
+---
 title: "Prompt engineering: guia completo para resultados melhores com IA"
 description: "Aprenda prompt engineering do básico ao avançado: técnicas, padrões e exemplos práticos para obter respostas muito melhores de qualquer modelo de linguagem."
 category: "IA Prática"
-author: "Tech Briefing"
+author: "Mariana Costa"
 date: 2026-04-23
 readTime: "12 min"
 featured: true
@@ -13,6 +13,10 @@ tags:
   - LLM
   - Tutorial
 ---
+
+## Resumo rápido
+
+Aprenda prompt engineering do básico ao avançado: técnicas, padrões e exemplos práticos para obter respostas muito melhores de qualquer modelo de linguagem.
 
 ## O que é prompt engineering e por que importa
 

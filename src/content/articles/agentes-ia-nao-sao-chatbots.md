@@ -2,7 +2,7 @@
 title: "Agentes de IA não são chatbots com nome bonito"
 description: "Entenda a diferença prática entre chatbot, automação e agente de IA, e por que confundir esses conceitos pode custar caro para seu negócio."
 category: "Agentes de IA"
-author: "Tech Briefing"
+author: "Thiago Mendes"
 date: 2026-05-12
 readTime: "8 min"
 featured: false

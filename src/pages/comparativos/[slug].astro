@@ -13,7 +13,7 @@ export function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
-const { title, description, image, author, date, category, tools } = entry.data;
+const { title, description, image, author, date, category, tools, faq } = entry.data;
 const pageUrl = new URL(Astro.url.pathname, Astro.site ?? Astro.url).toString();
 const breadcrumbJsonLd = {
   '@context': 'https://schema.org',
@@ -37,6 +37,7 @@ const breadcrumbJsonLd = {
   author={author}
   category={category}
   tags={tools}
+  faq={faq}
   jsonLd={[breadcrumbJsonLd]}
 >
   <ComparativoPage entry={{ slug: entry.id, ...entry.data }} client:load />

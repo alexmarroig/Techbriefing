@@ -1,8 +1,8 @@
-﻿---
+---
 title: "As melhores ferramentas de IA para negócios em 2026"
 description: "Conheça as ferramentas de inteligência artificial mais eficazes para empresas em 2026: do atendimento ao cliente à automação de processos e análise de dados."
 category: "Software"
-author: "Tech Briefing"
+author: "Lucas Andrade"
 date: 2026-03-20
 readTime: "12 min"
 featured: true
@@ -13,6 +13,10 @@ tags:
   - Negócios
   - Tendências
 ---
+
+## Resumo rápido
+
+Conheça as ferramentas de inteligência artificial mais eficazes para empresas em 2026: do atendimento ao cliente à automação de processos e análise de dados.
 
 ## O cenário das ferramentas de IA em 2026
 

@@ -2,7 +2,7 @@
 title: "GitHub mostra que eficiência de tokens virou métrica séria para agentes de código"
 description: "A otimização de workflows agentic no GitHub indica que custo por tarefa será tão importante quanto qualidade do resultado."
 category: "Desenvolvimento"
-author: "Tech Briefing"
+author: "Lucas Andrade"
 date: 2026-05-13
 readTime: "6 min"
 featured: false

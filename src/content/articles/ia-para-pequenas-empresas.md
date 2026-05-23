@@ -2,7 +2,7 @@
 title: "IA para pequenas empresas: por onde começar sem complicar"
 description: "Guia prático de inteligência artificial para pequenas empresas: as melhores ferramentas, casos de uso acessíveis e como começar sem equipe técnica ou grande investimento."
 category: "IA Prática"
-author: "Tech Briefing"
+author: "Mariana Costa"
 date: 2026-04-28
 readTime: "9 min"
 featured: false

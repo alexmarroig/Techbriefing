@@ -2,7 +2,7 @@
 title: "Claude vs ChatGPT: qual IA usar em 2026?"
 description: "Comparativo completo entre Claude (Anthropic) e ChatGPT (OpenAI) em 2026: performance, preço, casos de uso e qual escolher para cada necessidade de negócio."
 category: "Comparativo"
-author: "Tech Briefing"
+author: "Lucas Andrade"
 date: 2026-03-28
 readTime: "9 min"
 featured: false

@@ -2,7 +2,7 @@
 title: "Moonshot AI levanta US$ 2 bilhões e reacende a disputa por modelos abertos na China"
 description: "A nova rodada da dona do Kimi reforça que modelos abertos e inferência barata continuam atraindo investidores e empresas."
 category: "Modelos abertos"
-author: "Tech Briefing"
+author: "Lucas Andrade"
 date: 2026-05-13
 readTime: "6 min"
 featured: false

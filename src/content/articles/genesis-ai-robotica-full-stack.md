@@ -2,7 +2,7 @@
 title: "Genesis AI aposta em robótica full stack"
 description: "A demonstração da Genesis AI aponta para uma tendência: controlar modelo e hardware pode acelerar robôs mais capazes."
 category: "Robótica"
-author: "Tech Briefing"
+author: "Mariana Costa"
 date: 2026-05-13
 readTime: "6 min"
 featured: false

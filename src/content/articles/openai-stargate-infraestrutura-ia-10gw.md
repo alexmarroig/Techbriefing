@@ -1,8 +1,8 @@
-﻿---
+---
 title: "Stargate passa de promessa a infraestrutura: por que a corrida por data centers importa"
 description: "A expansão de compute da OpenAI reforça que a próxima fase da IA será decidida por energia, chips, capital e capacidade de entregar modelos em escala."
 category: "Infraestrutura"
-author: "Tech Briefing"
+author: "Lucas Andrade"
 date: 2026-05-13
 readTime: "6 min"
 featured: true
@@ -13,6 +13,10 @@ tags:
   - Data centers
   - Compute
 ---
+
+## Resumo rápido
+
+A expansão de compute da OpenAI reforça que a próxima fase da IA será decidida por energia, chips, capital e capacidade de entregar modelos em escala.
 
 A expansão de compute da OpenAI reforça que a próxima fase da IA será decidida por energia, chips, capital e capacidade de entregar modelos em escala.
 

@@ -2,7 +2,7 @@
 title: "Mercado busca profissionais com habilidades em IA"
 description: "A reestruturação de tecnologia da GM mostra uma tendência dura: não basta usar ferramentas, é preciso entender dados, automação e workflows com IA."
 category: "Negócios Digitais"
-author: "Tech Briefing"
+author: "Lucas Andrade"
 date: 2026-05-13
 readTime: "7 min"
 featured: false
