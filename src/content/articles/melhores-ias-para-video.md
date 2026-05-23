@@ -97,3 +97,6 @@ Criado pelos mestres de Neural Radiance Fields (NeRFs), o Luma é ridiculamente 
 Se você atua em **Filmmaking, VFX e Edição Comercial**, **Runway Gen-3** deve ser o seu modelo principal de trabalho pago. A previsibilidade de controle via câmera nativa é superior para fluxo profissional.
 
 Se você está apenas brincando de criador de conteúdo no TikTok ou quer cenas humanas muito específicas com interação de ambiente sem pagar os altos preços ocidentais agora: vá de **Kling AI**. A cota de créditos diários não pagos deles permite iterações espetaculares.
+
+<br>
+<a href="/guias" class="btn btn-fill">Ver Catálogo de Guias Práticos &#8594;</a>

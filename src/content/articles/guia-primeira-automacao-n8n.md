@@ -71,3 +71,9 @@ Com esses três "nós" conectados, tudo o que você precisa fazer é **salvar** 
 A partir de agora, o n8n está monitorando. Sempre que o formulário for preenchido, ele acordará, usará o modelo GPT para extrair inteligência, e você receberá um e-mail pronto em segundos.
 
 **Próximos Passos:** Brinque com nós de roteamento (If/Switch) para enviar o e-mail para vendas se for "Prioridade Alta", ou colocar numa planilha do Sheets se for "Baixa". A imaginação é o limite.
+
+### Você conseguiu!
+Em poucos minutos, você conectou um formulário a uma IA, escreveu o e-mail sozinho e acionou sua caixa de entrada. Tudo isso sem usar código. Quando as pessoas falam de "Produtividade 10x com IA", estão falando exatamente disso.
+
+<br>
+<a href="/ferramentas" class="btn btn-fill">Explorar Diretório de Ferramentas &#8594;</a>

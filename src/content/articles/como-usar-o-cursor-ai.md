@@ -52,3 +52,6 @@ Isso acontece porque a janela de contexto poluiu. Para evitar isso:
 ## Próximos Passos
 
 A programação deixou de ser sobre **como escrever** e passou a ser sobre **o que construir**. O Cursor AI remove a barreira da sintaxe. Sua única limitação agora é a capacidade de decompor problemas lógicos e pedir para o Composer resolvê-los um a um.
+
+<br>
+<a href="/prompts" class="btn btn-fill">Acessar Biblioteca de Prompts &#8594;</a>

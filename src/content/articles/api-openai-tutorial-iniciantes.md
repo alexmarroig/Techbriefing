@@ -354,7 +354,14 @@ def chamar_com_retry(prompt, max_tentativas=3):
 
 **`ContextLengthExceededError`**: O prompt + histórico excede o limite de tokens do modelo. Reduza o histórico ou use um modelo com janela maior.
 
-## Conclusão
+### Conclusão
+
+Este é o básico para integrar modelos de IA a aplicações tradicionais. Se antes precisávamos ter doutorado em machine learning, hoje só precisamos fazer um POST para a URL correta com nosso token de autenticação. 
+
+*Esse é o verdadeiro poder da IA nas mãos dos construtores.*
+
+<br>
+<a href="/glossario" class="btn btn-fill">Consultar Glossário de Inteligência Artificial &#8594;</a>
 
 Você agora tem o conhecimento fundamental para usar a API da OpenAI em projetos reais. Os próximos passos naturais são:
 

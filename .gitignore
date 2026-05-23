@@ -24,6 +24,7 @@ pnpm-debug.log*
 .idea/
 
 .vercel
+.claude/
 
 # Google Ads MCP Safety rules
 mcp-google-ads/node_modules/

@@ -1,5 +1,5 @@
 ---
-const adsenseClientId = import.meta.env.PUBLIC_ADSENSE_CLIENT_ID;
+const adsenseClientId = import.meta.env.PUBLIC_ADSENSE_CLIENT_ID || 'ca-pub-7195062504228428';
 const isConfigured = typeof adsenseClientId === 'string' && adsenseClientId.startsWith('ca-pub-');
 ---
 
