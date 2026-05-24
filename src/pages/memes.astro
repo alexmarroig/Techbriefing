@@ -4,48 +4,48 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const memes = [
   {
     src: '/images/memes/meme1.png',
-    pt: 'Engenharia de Prompt',
-    en: 'Prompt Engineering'
+    pt: 'Quando a gambiarra funciona em produção',
+    en: 'When the workaround works in production'
   },
   {
     src: '/images/memes/meme2.png',
-    pt: 'Na minha máquina funciona',
-    en: 'It works on my machine'
+    pt: 'Na minha máquina funciona perfeitamente',
+    en: 'It works perfectly on my machine'
   },
   {
     src: '/images/memes/meme3.png',
-    pt: 'IA e o código legado',
-    en: 'AI maintaining legacy code'
+    pt: 'Existem 10 tipos de pessoas: as que entendem binário e as que não',
+    en: 'There are 10 types of people: those who understand binary and those who don\'t'
   },
   {
     src: '/images/memes/meme4.png',
-    pt: 'Sênior em dia de deploy',
-    en: 'Senior dev on deploy day'
+    pt: 'Deploy na sexta-feira às 17h',
+    en: 'Deploy on Friday at 5 PM'
   },
   {
     src: '/images/memes/meme5.png',
-    pt: 'Alucinação da IA',
-    en: 'AI Hallucination'
+    pt: 'Para entender recursão, você precisa entender recursão',
+    en: 'To understand recursion, you must understand recursion'
   },
   {
     src: '/images/memes/meme6.png',
-    pt: 'Git Push --force na Sexta',
-    en: 'Git Push --force on Friday'
+    pt: 'Eu vou lembrar o que esse código faz amanhã',
+    en: 'I will remember what this code does tomorrow'
   },
   {
     src: '/images/memes/meme7.png',
-    pt: 'Resolvi 1 bug, ganhei 99',
-    en: 'Fixed 1 bug, got 99 more'
+    pt: '99 pequenos bugs no código. Corrija um, compile, 127 pequenos bugs no código.',
+    en: '99 little bugs in the code. Patch one down, 127 little bugs in the code.'
   },
   {
     src: '/images/memes/meme8.png',
-    pt: 'CSS é fácil',
-    en: 'CSS is easy'
+    pt: 'Light theme? Você quis dizer: farol de milha',
+    en: 'Light theme? You mean: flashbang'
   },
   {
     src: '/images/memes/meme9.png',
-    pt: 'Meu código de 6 meses atrás',
-    en: 'My code from 6 months ago'
+    pt: 'Se está funcionando, não toque. Nunca.',
+    en: 'If it ain\'t broke, don\'t fix it. Ever.'
   }
 ];
 
@@ -251,19 +251,16 @@ const seoDescription = "A maior galeria de memes de TI, programação, inteligê
     padding: 24px 20px 16px;
     background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
     color: #fff;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
-  }
-
-  .meme-card:hover .meme-overlay {
-    opacity: 1;
+    opacity: 1; /* Always visible so the language toggle has immediate feedback */
   }
 
   .meme-title-text {
     font-weight: 600;
     font-size: 15px;
     font-family: var(--sans);
+    line-height: 1.4;
+    display: block;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
   }
 
   .submit-meme-box {
