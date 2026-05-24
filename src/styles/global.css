@@ -3966,10 +3966,10 @@ html[data-theme="light"] .hero{
 .prompt-meta-grid strong {
   display: block;
   margin-bottom: 8px;
-  color: var(--text);
+  color: #fff;
 }
 .prompt-meta-grid span {
-  color: var(--text-2);
+  color: rgba(255,255,255,0.8);
   font-size: 14px;
   line-height: 1.55;
 }
@@ -4000,7 +4000,7 @@ html[data-theme="light"] .hero{
   margin: 0;
   padding: 58px 22px 22px;
   white-space: pre-wrap;
-  color: var(--text-2);
+  color: rgba(255,255,255,0.85);
   font-size: 14px;
   line-height: 1.7;
 }
