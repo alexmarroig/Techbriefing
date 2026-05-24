@@ -16,11 +16,34 @@ const memes = [
     src: '/images/memes/meme3.png',
     alt: 'When the AI realizes it has to maintain legacy code',
     title: 'IA e o código legado'
+  },
+  {
+    src: '/images/memes/meme4.png',
+    alt: 'Senior developer saying its a feature not a bug while server room burns',
+    title: 'Sênior em dia de deploy'
+  },
+  {
+    src: '/images/memes/meme5.png',
+    alt: 'AI brain answering 1+1=3 with a 5 paragraph essay',
+    title: 'Alucinação da IA'
+  },
+  {
+    src: '/images/memes/meme6.png',
+    alt: 'Developer walking away from explosion after git push force on friday 5PM',
+    title: 'Git Push --force na Sexta'
   }
 ];
+
+const seoDescription = "A maior galeria de memes de TI, programação, inteligência artificial e mundo corporativo tech. Porque rir do código legado é melhor do que chorar.";
 ---
 
-<BaseLayout title="Memes e Humor Tech | Tech Briefing" description="Porque nem só de código vive o programador. Memes, tirinhas e humor sobre Inteligência Artificial, programação e tecnologia." type="website">
+<BaseLayout 
+  title="Humor Tech & Memes de IA | Tech Briefing" 
+  description={seoDescription} 
+  type="website"
+  image="/images/memes/meme1.png"
+  tags={["memes TI", "memes programação", "humor dev", "memes inteligência artificial", "piadas programação"]}
+>
   <main class="memes-page">
     <header class="memes-hero">
       <div class="container">
