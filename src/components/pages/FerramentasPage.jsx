@@ -1,5 +1,6 @@
 import React from 'react';
-
+import { db } from '../../lib/firebase';
+import { collection, doc, getDocs, updateDoc, increment, setDoc, getDoc } from 'firebase/firestore';
 const CATEGORIES = [
   {
     id:'automacao',
@@ -154,7 +155,15 @@ const CATEGORIES = [
   },
 ];
 
-function ToolCard({t}){
+function ToolCard({t, upvotes, onUpvote}){
+  const toolId = t.name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+  const count = upvotes[toolId] || 0;
+  
+  const handleVote = (e) => {
+    e.preventDefault();
+    onUpvote(toolId);
+  };
+
   return(
     <a className="tool-card" href={t.href || '#'}>
       <div className="tool-card-head">
@@ -167,10 +176,16 @@ function ToolCard({t}){
       <div className="tool-desc">{t.desc}</div>
       <div className="tool-footer">
         <span className="tool-stars">{t.stars}</span>
-        <span className="tool-try">
-          Testar
-          <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
-        </span>
+        <div style={{display:'flex',gap:12,alignItems:'center'}}>
+          <button className="tool-upvote" onClick={handleVote} style={{display:'inline-flex',alignItems:'center',gap:4,background:'var(--bg-3)',border:'1px solid var(--line-s)',color:'var(--text-2)',padding:'4px 8px',borderRadius:6,fontSize:12,fontWeight:600,cursor:'pointer'}}>
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 9.5V2.5M6 2.5L2.5 6M6 2.5L9.5 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            {count}
+          </button>
+          <span className="tool-try">
+            Testar
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
+          </span>
+        </div>
       </div>
     </a>
   );
@@ -221,6 +236,39 @@ function App({ tools = [] }){
     CATEGORIES.splice(0, CATEGORIES.length, ...Object.values(grouped));
   }
   const [active,setActive]=React.useState('todos');
+  const [upvotes, setUpvotes] = React.useState({});
+  
+  React.useEffect(() => {
+    async function fetchUpvotes() {
+      try {
+        const querySnapshot = await getDocs(collection(db, "tool_upvotes"));
+        const counts = {};
+        querySnapshot.forEach((doc) => {
+          counts[doc.id] = doc.data().count;
+        });
+        setUpvotes(counts);
+      } catch(e) {
+        console.error("Error fetching upvotes:", e);
+      }
+    }
+    fetchUpvotes();
+  }, []);
+
+  const handleUpvote = async (toolId) => {
+    setUpvotes(prev => ({ ...prev, [toolId]: (prev[toolId] || 0) + 1 }));
+    try {
+      const docRef = doc(db, "tool_upvotes", toolId);
+      const docSnap = await getDoc(docRef);
+      if (docSnap.exists()) {
+        await updateDoc(docRef, { count: increment(1) });
+      } else {
+        await setDoc(docRef, { count: 1 });
+      }
+    } catch(e) {
+      console.error("Error updating upvote:", e);
+    }
+  };
+
   const shown = active==='todos' ? CATEGORIES : CATEGORIES.filter(c=>c.id===active);
   const total = CATEGORIES.reduce((s,c)=>s+c.tools.length,0);
   const affCount = CATEGORIES.reduce((s,c)=>s+c.tools.filter(t=>t.aff).length,0);
@@ -275,7 +323,7 @@ function App({ tools = [] }){
                 <span className="cat-section-count">{c.tools.length} ferramenta{c.tools.length>1?'s':''}</span>
               </div>
               <div className="tools-cat-grid">
-                {c.tools.map((t,i)=><ToolCard key={i} t={t}/>)}
+                {c.tools.map((t,i)=><ToolCard key={i} t={t} upvotes={upvotes} onUpvote={handleUpvote} />)}
               </div>
             </section>
           ))}

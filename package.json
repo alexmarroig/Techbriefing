@@ -24,6 +24,7 @@
     "@sanity/code-input": "^7.1.1",
     "@sanity/image-url": "^2.1.1",
     "astro": "^6.2.2",
+    "firebase": "^12.13.0",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
     "sanity": "^5.26.0",
