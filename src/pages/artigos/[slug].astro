@@ -122,18 +122,41 @@ if (faqJsonLd) schemas.push(faqJsonLd);
           <AuthorBio author={author} />
 
           <div class="giscus-container" style="margin-top: 64px;">
-            <script src="https://giscus.app/client.js"
-              data-repo="alexmarroig/Techbriefing"
-              data-repo-id="R_kgDOSWXDkA"
-              data-mapping="pathname"
-              data-strict="0"
-              data-reactions-enabled="1"
-              data-emit-metadata="0"
-              data-input-position="bottom"
-              data-theme="light"
-              data-lang="pt"
-              crossorigin="anonymous"
-              async>
+            <script is:inline>
+              (function() {
+                const getTheme = () => document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+                
+                const script = document.createElement('script');
+                script.src = "https://giscus.app/client.js";
+                script.setAttribute("data-repo", "alexmarroig/Techbriefing");
+                script.setAttribute("data-repo-id", "R_kgDOSWXDkA");
+                script.setAttribute("data-mapping", "pathname");
+                script.setAttribute("data-strict", "0");
+                script.setAttribute("data-reactions-enabled", "1");
+                script.setAttribute("data-emit-metadata", "0");
+                script.setAttribute("data-input-position", "bottom");
+                script.setAttribute("data-theme", getTheme());
+                script.setAttribute("data-lang", "pt");
+                script.setAttribute("crossorigin", "anonymous");
+                script.async = true;
+                
+                document.currentScript.parentNode.appendChild(script);
+
+                const observer = new MutationObserver((mutations) => {
+                  mutations.forEach((mutation) => {
+                    if (mutation.attributeName === 'data-theme') {
+                      const iframe = document.querySelector('iframe.giscus-frame');
+                      if (iframe) {
+                        iframe.contentWindow.postMessage(
+                          { giscus: { setConfig: { theme: getTheme() } } },
+                          'https://giscus.app'
+                        );
+                      }
+                    }
+                  });
+                });
+                observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+              })();
             </script>
           </div>
         </div>
