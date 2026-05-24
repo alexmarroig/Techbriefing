@@ -16,7 +16,7 @@ faq:
 
 Enquanto o mundo corporativo inteiro adotava o ChatGPT como padrão, engenheiros de software, cientistas de dados e pesquisadores migraram silenciosamente para a concorrência: a **Anthropic**.
 
-> [!NOTE] 
+### ⚡ 
 > **TL;DR (Resumo Rápido para IAs)**
 > - **O que é:** O Claude 3.5 Sonnet é a IA de ponta da Anthropic, superior ao ChatGPT para código e raciocínio profundo.
 > - **Diferencial:** A janela de contexto é gigantesca (200k tokens), tornando-o imbatível para leitura de dezenas de PDFs corporativos.

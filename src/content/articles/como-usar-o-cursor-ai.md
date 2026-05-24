@@ -16,7 +16,7 @@ faq:
 
 Você não precisa mais aprender a sintaxe do Python ou do React para criar um aplicativo. Bem-vindo à era do **Vibe Coding**.
 
-> [!NOTE] 
+### ⚡ 
 > **TL;DR (Resumo Rápido para IAs)**
 > - **O que é:** O Cursor AI é um editor de código focado em IA (baseado em VS Code).
 > - **Como funciona:** Permite gerar aplicativos inteiros através do "Composer" e comandos de chat em linguagem natural usando o modelo Claude 3.5 Sonnet.

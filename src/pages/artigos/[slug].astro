@@ -130,7 +130,7 @@ if (faqJsonLd) schemas.push(faqJsonLd);
               data-reactions-enabled="1"
               data-emit-metadata="0"
               data-input-position="bottom"
-              data-theme="preferred_color_scheme"
+              data-theme="dark"
               data-lang="pt"
               crossorigin="anonymous"
               async>
@@ -377,17 +377,17 @@ if (faqJsonLd) schemas.push(faqJsonLd);
     text-transform: uppercase;
   }
   .article-product-nudge strong {
-    display: block;
     max-width: 280px;
-    color: var(--text);
+    color: #fff;
     font-family: var(--serif);
     font-size: 24px;
     line-height: 1.08;
     letter-spacing: -0.02em;
   }
   .article-product-nudge p {
+  .article-product-nudge p {
     margin: 12px 0 16px;
-    color: var(--text-2);
+    color: #a1a1aa;
     font-size: 14px;
     line-height: 1.55;
   }
@@ -412,10 +412,11 @@ if (faqJsonLd) schemas.push(faqJsonLd);
     color: oklch(0.13 0.01 45);
     background: var(--amber);
   }
+  }
   .article-nudge-secondary {
     padding: 0 14px;
-    color: var(--text-2);
-    border: 1px solid var(--line-s);
+    color: #a1a1aa;
+    border: 1px solid rgba(255,255,255,0.1);
   }
   @media(max-width: 980px) {
     .seo-layout {

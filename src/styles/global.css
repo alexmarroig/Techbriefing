@@ -4394,6 +4394,8 @@ html[data-theme="light"] .hero{
   .art-list-meta{display:none}
   .nl-strip-inner{flex-direction:column;align-items:flex-start}
   .nl-strip-input{width:100%}
+  html[data-theme="light"] .btn-fill{color:#000}
+  html[data-theme="light"] .btn-fill:hover{color:#000}
   .footer-top{grid-template-columns:1fr}
   .cat-hero-title{font-size:clamp(52px,12vw,80px)}
   .nav-links{display:none}
@@ -4750,8 +4752,8 @@ html[data-theme="light"] ::-webkit-scrollbar-thumb{background:#d4d6db}
 
 html[data-theme="light"]{--nav-mobile-bg:rgba(255,255,255,0.97)}
 html[data-theme="light"] .nav{background:rgba(255,255,255,0.88);backdrop-filter:blur(24px) saturate(180%);border-bottom-color:var(--line)}
-html[data-theme="light"] .btn-fill{color:#fff}
-html[data-theme="light"] .btn-fill:hover{color:#fff}
+html[data-theme="light"] .btn-fill{color:#000}
+html[data-theme="light"] .btn-fill:hover{color:#000}
 
 html[data-theme="light"] .ph{
   background:repeating-linear-gradient(-60deg,var(--bg-3) 0,var(--bg-3) 11px,var(--bg-4) 11px,var(--bg-4) 12px);
