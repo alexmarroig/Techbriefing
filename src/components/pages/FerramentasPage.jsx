@@ -119,8 +119,8 @@ const CATEGORIES = [
     num:'06',
     name:'SEO & Analytics',
     tools:[
-      {ico:'📊',name:'Semrush',desc:'Suite completa de SEO, pesquisa de palavras-chave e inteligência competitiva. Padrão da indústria.',stars:'★★★★★',aff:true},
-      {ico:'🔎',name:'Ahrefs',desc:'Análise de backlinks e research de conteúdo. Favorito de SEOs avançados para estratégia orgânica.',stars:'★★★★★',aff:true},
+      {ico:'📊',name:'Semrush',desc:'Suite completa de SEO, pesquisa de palavras-chave e inteligência competitiva. Padrão da indústria.',stars:'★★★★★',aff:true,href:'https://www.semrush.com/'},
+      {ico:'🔎',name:'Ahrefs',desc:'Análise de backlinks e research de conteúdo. Favorito de SEOs avançados para estratégia orgânica.',stars:'★★★★★',aff:true,href:'https://ahrefs.com/'},
     ]
   },
   {
@@ -128,9 +128,9 @@ const CATEGORIES = [
     num:'07',
     name:'Criação de Conteúdo',
     tools:[
-      {ico:'🎙️',name:'Descript',desc:'Edição de áudio e vídeo baseada em texto. Transcreve automaticamente e edita como se fosse um doc.',stars:'★★★★★',aff:true},
-      {ico:'🎬',name:'CapCut',desc:'Edição de vídeo com IA para mobile e desktop. Legendas automáticas, templates e efeitos em segundos.',stars:'★★★★☆',aff:false},
-      {ico:'🎭',name:'Canva',desc:'Design acessível para tudo. Com IA generativa, gera imagens, apresentações e posts em minutos.',stars:'★★★★☆',aff:true},
+      {ico:'🎙️',name:'Descript',desc:'Edição de áudio e vídeo baseada em texto. Transcreve automaticamente e edita como se fosse um doc.',stars:'★★★★★',aff:true,href:'https://www.descript.com/'},
+      {ico:'🎬',name:'CapCut',desc:'Edição de vídeo com IA para mobile e desktop. Legendas automáticas, templates e efeitos em segundos.',stars:'★★★★☆',aff:false,href:'https://www.capcut.com/'},
+      {ico:'🎭',name:'Canva',desc:'Design acessível para tudo. Com IA generativa, gera imagens, apresentações e posts em minutos.',stars:'★★★★☆',aff:true,href:'https://www.canva.com/'},
     ]
   },
   {
@@ -138,10 +138,10 @@ const CATEGORIES = [
     num:'08',
     name:'Desenvolvimento',
     tools:[
-      {ico:'🚂',name:'Railway',desc:'Deploy de apps e APIs em segundos. O Heroku moderno — sem fricção, com escala automática.',stars:'★★★★★',aff:true},
-      {ico:'▲',name:'Vercel',desc:'Plataforma de deploy para front-end e full-stack. Padrão para apps Next.js e projetos Jamstack.',stars:'★★★★★',aff:false},
-      {ico:'⚡',name:'Supabase',desc:'Backend open source com banco de dados, auth e storage. Alternativa ao Firebase com mais controle.',stars:'★★★★★',aff:true},
-      {ico:'💡',name:'Replit',desc:'IDE na nuvem para prototipagem rápida. Ideal para testar ideias e projetos com IA sem setup.',stars:'★★★★☆',aff:true},
+      {ico:'🚂',name:'Railway',desc:'Deploy de apps e APIs em segundos. O Heroku moderno — sem fricção, com escala automática.',stars:'★★★★★',aff:true,href:'https://railway.app/'},
+      {ico:'▲',name:'Vercel',desc:'Plataforma de deploy para front-end e full-stack. Padrão para apps Next.js e projetos Jamstack.',stars:'★★★★★',aff:false,href:'https://vercel.com/'},
+      {ico:'⚡',name:'Supabase',desc:'Backend open source com banco de dados, auth e storage. Alternativa ao Firebase com mais controle.',stars:'★★★★★',aff:true,href:'https://supabase.com/'},
+      {ico:'💡',name:'Replit',desc:'IDE na nuvem para prototipagem rápida. Ideal para testar ideias e projetos com IA sem setup.',stars:'★★★★☆',aff:true,href:'https://replit.com/'},
     ]
   },
   {
@@ -149,8 +149,8 @@ const CATEGORIES = [
     num:'09',
     name:'Formulários',
     tools:[
-      {ico:'📋',name:'Tally',desc:'Formulários bonitos e gratuitos. Interface limpa, integrações nativas e plano free generoso.',stars:'★★★★★',aff:true},
-      {ico:'📐',name:'Typeform',desc:'Formulários conversacionais com alta taxa de resposta. Ideal para pesquisas e onboarding.',stars:'★★★★☆',aff:true},
+      {ico:'📋',name:'Tally',desc:'Formulários bonitos e gratuitos. Interface limpa, integrações nativas e plano free generoso.',stars:'★★★★★',aff:true,href:'https://tally.so/'},
+      {ico:'📐',name:'Typeform',desc:'Formulários conversacionais com alta taxa de resposta. Ideal para pesquisas e onboarding.',stars:'★★★★☆',aff:true,href:'https://www.typeform.com/'},
     ]
   },
 ];
@@ -219,6 +219,7 @@ function NlStrip(){
   );
 }
 
+const urlMap = {"n8n":"https://n8n.io/","Make":"https://www.make.com/","OpenAI":"https://openai.com/","Claude (Anthropic)":"https://claude.ai/","Perplexity":"https://www.perplexity.ai/","Notion":"https://www.notion.so/","Cursor":"https://cursor.sh/","Framer":"https://www.framer.com/","Webflow":"https://webflow.com/","Beehiiv":"https://www.beehiiv.com/","ConvertKit":"https://convertkit.com/","Semrush":"https://www.semrush.com/","Ahrefs":"https://ahrefs.com/","Descript":"https://www.descript.com/","CapCut":"https://www.capcut.com/","Canva":"https://www.canva.com/","Railway":"https://railway.app/","Vercel":"https://vercel.com/","Supabase":"https://supabase.com/","Replit":"https://replit.com/","Tally":"https://tally.so/","Typeform":"https://www.typeform.com/"};
 function App({ tools = [] }){
   if (tools.length) {
     const grouped = tools.reduce((acc, tool) => {
