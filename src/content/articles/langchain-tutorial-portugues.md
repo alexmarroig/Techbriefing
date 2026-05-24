@@ -17,7 +17,7 @@ tags:
 
 ## Resumo rápido
 
-![Ilustração do Artigo](https://images.unsplash.com/photo-1518932945647-7a1c969f8be2?auto=format&fit=crop&q=80&w=1200)
+![Ilustração visual para: LangChain tutorial em português: guia completo para iniciantes](https://images.unsplash.com/photo-1518932945647-7a1c969f8be2?auto=format&fit=crop&q=80&w=1200)
 
 
 Aprenda LangChain do zero em português: instalação, chains, agentes, RAG e exemplos práticos. O framework mais popular para desenvolvimento com LLMs explicado de forma simples.

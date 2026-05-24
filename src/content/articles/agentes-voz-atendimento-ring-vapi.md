@@ -14,7 +14,7 @@ tags:
 
 ## Resumo rápido
 
-![Ilustração do Artigo](https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200)
+![Ilustração visual para: Agentes de Voz para Atendimento Automático (Vapi e Bland AI)](https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200)
 
 
 A escolha da Ring por agentes de voz em atendimento mostra uma virada importante: IA não é só chat bonito, é operação ao vivo, com regra, controle e métrica.

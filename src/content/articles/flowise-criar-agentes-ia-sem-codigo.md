@@ -17,7 +17,7 @@ tags:
 
 ## O que é Flowise
 
-![Ilustração do Artigo](https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200)
+![Ilustração visual para: Flowise: Como Criar Agentes de IA Visualmente — Sem Escrever Código](https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200)
 
 
 Flowise é uma plataforma open-source para construir agentes de IA, pipelines de LLM e sistemas de RAG (Retrieval Augmented Generation) através de uma interface visual drag-and-drop. Você conecta nós — modelo de linguagem, memória, ferramentas, fontes de dados — e o Flowise gera o agente funcional automaticamente.

@@ -1,16 +1,37 @@
 ---
 const { active = '' } = Astro.props;
-const links = [
+const mainLinks = [
   ['Notícias', '/'],
   ['Agentes', '/agentes'],
   ['Guias', '/guias'],
-  ['Glossário', '/glossario'],
-  ['Prompts', '/prompts'],
-  ['Fórum', '/forum'],
-  ['Memes', '/memes'],
   ['Ferramentas', '/ferramentas'],
-  ['Ebooks', '/ebooks'],
-  ['Sobre', '/sobre'],
+];
+
+const megaMenuCols = [
+  {
+    title: 'Aprender',
+    links: [
+      { n: 'Glossário IA', href: '/glossario' },
+      { n: 'O que são Agentes', href: '/artigos/o-que-sao-agentes-de-ia' },
+      { n: 'Como criar Prompts', href: '/artigos/prompt-engineering-guia-completo' },
+    ]
+  },
+  {
+    title: 'Recursos',
+    links: [
+      { n: 'Biblioteca de Prompts', href: '/prompts' },
+      { n: 'Ebooks & Manuais', href: '/ebooks' },
+      { n: 'Fórum da Comunidade', href: '/forum' },
+    ]
+  },
+  {
+    title: 'Mais',
+    links: [
+      { n: 'Sobre o Projeto', href: '/sobre' },
+      { n: 'Contato', href: '/contato' },
+      { n: 'Humor & Memes', href: '/memes' },
+    ]
+  }
 ];
 ---
 
@@ -29,10 +50,30 @@ const links = [
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links">
-      {links.map(([label, href]) => (
+      {mainLinks.map(([label, href]) => (
         <li><a href={href} class:list={[{ active: active === label }]}>{label}</a></li>
       ))}
+      
+      <!-- Mega Menu Dropdown -->
+      <li class="has-mega">
+        <a href="#" class:list={[{ active: ['Glossário', 'Prompts', 'Fórum', 'Ebooks', 'Sobre', 'Memes'].includes(active) }]} onclick="event.preventDefault()">Explorar ▾</a>
+        <div class="mega-menu">
+          <div class="mega-inner">
+            {megaMenuCols.map(col => (
+              <div class="mega-col">
+                <span class="mega-title">{col.title}</span>
+                <ul>
+                  {col.links.map(l => (
+                    <li><a href={l.href}>{l.n}</a></li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </li>
     </ul>
+    
     <button class="theme-toggle" aria-label="Alternar tema" type="button">
       <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
       <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -64,34 +105,92 @@ const links = [
   .nav-logo {
     min-width: max-content;
   }
-  .brand-line {
-    display: inline-flex;
-    margin-left: 4px;
-    padding-left: 10px;
-    border-left: 1px solid var(--line);
-    color: var(--text-3);
-    font-family: var(--mono);
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
   .nav-links li a {
     font-size: 13.5px;
     font-weight: 500;
     letter-spacing: -0.01em;
   }
-  @media (max-width: 1120px) {
-    .brand-line {
-      display: none;
-    }
-    .nav-links li a {
-      padding-inline: 10px;
-    }
+  
+  /* Mega Menu Styles */
+  .has-mega {
+    position: relative;
   }
+  .mega-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 500px;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.2s ease;
+    z-index: 100;
+  }
+  .has-mega:hover .mega-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  .mega-inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .mega-title {
+    display: block;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-3);
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+  .mega-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .mega-col ul li a {
+    color: var(--text-2);
+    padding: 0;
+    font-size: 13px;
+  }
+  .mega-col ul li a:hover {
+    color: var(--text);
+  }
+  
   @media (max-width: 1024px) {
     .nav-links li a {
       font-size: 16px;
+    }
+    .mega-menu {
+      position: static;
+      width: 100%;
+      box-shadow: none;
+      border: none;
+      padding: 10px 0;
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      display: none;
+      background: transparent;
+    }
+    .has-mega:hover .mega-menu, .has-mega:active .mega-menu {
+      display: block;
+    }
+    .mega-inner {
+      grid-template-columns: 1fr;
+      gap: 16px;
+      padding-left: 10px;
+      border-left: 1px solid var(--line);
     }
   }
 </style>

@@ -16,7 +16,7 @@ tags:
 
 ## Da ferramenta ao operador
 
-![Ilustração do Artigo](https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200)
+![Ilustração visual para: Agentes de IA autônomos: como empresas delegam operações inteiras para IA](https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200)
 
 
 Durante os últimos dois anos, a conversa sobre IA nos negócios girou em torno de ferramentas: "qual LLM usar", "como escrever prompts melhores", "qual plataforma integra com meu CRM". Essa conversa está ficando para trás.

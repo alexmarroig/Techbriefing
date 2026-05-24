@@ -22,7 +22,7 @@ Neste guia, ensinaremos como navegar na plataforma para produzir áudios profiss
 
 ## Como criar áudios do zero (Text to Speech)
 
-![Ilustração do Artigo](https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80&w=1200)
+![Ilustração visual para: Como usar o ElevenLabs para criar e clonar vozes com IA](https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80&w=1200)
 
 
 A tela principal do ElevenLabs é a seção **Speech Synthesis**. É aqui que a mágica acontece.

@@ -17,7 +17,7 @@ tags:
 
 ## n8n não é só automação — é infraestrutura de agentes
 
-![Ilustração do Artigo](https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200)
+![Ilustração visual para: n8n com IA: Como Construir Agentes Operacionais de Automação em 2026](https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200)
 
 
 Quando a maioria das pessoas pensa em n8n, pensa em automações: "se receber um e-mail, crie uma tarefa no Notion". Isso ainda é verdade, mas é só metade da história.

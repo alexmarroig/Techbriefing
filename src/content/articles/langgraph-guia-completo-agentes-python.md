@@ -17,7 +17,7 @@ tags:
 
 ## O que é LangGraph e por que importa
 
-![Ilustração do Artigo](https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&q=80&w=1200)
+![Ilustração visual para: LangGraph: Guia Completo para Construir Agentes com Python em 2026](https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&q=80&w=1200)
 
 
 LangGraph é o runtime de orquestração de agentes do ecossistema LangChain. Enquanto o LangChain fornece as abstrações para modelos, ferramentas e cadeias de raciocínio, o LangGraph resolve um problema diferente e mais difícil: como você controla o **fluxo de execução** de um agente ao longo do tempo?

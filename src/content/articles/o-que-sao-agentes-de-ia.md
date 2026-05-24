@@ -26,7 +26,7 @@ faq:
 
 ## Resumo rápido
 
-![Ilustração do Artigo](https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200)
+![Ilustração visual para: O que são Agentes de IA: Guia Completo e Definitivo](https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200)
 
 
 Agentes de IA são sistemas inteligentes e autônomos que usam Modelos de Linguagem Grande (LLMs) como "cérebro" para pensar, planejar e utilizar ferramentas externas. Ao contrário de um chatbot reativo (que só responde perguntas), o agente de IA age: ele lê a internet, consome APIs, analisa planilhas e altera o mundo real para atingir um objetivo específico que lhe foi designado.

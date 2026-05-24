@@ -16,7 +16,7 @@ tags:
 
 ## Resumo rápido
 
-![Ilustração do Artigo](https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&q=80&w=1200)
+![Ilustração visual para: Stargate passa de promessa a infraestrutura: por que a corrida por data centers importa](https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&q=80&w=1200)
 
 
 A expansão de compute da OpenAI reforça que a próxima fase da IA será decidida por energia, chips, capital e capacidade de entregar modelos em escala.

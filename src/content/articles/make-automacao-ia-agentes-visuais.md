@@ -17,7 +17,7 @@ tags:
 
 ## Make em 2026: muito além de automações simples
 
-![Ilustração do Artigo](https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80&w=1200)
+![Ilustração visual para: Make com IA: Automação Visual de Agentes para Negócios em 2026](https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80&w=1200)
 
 
 O Make (anteriormente Integromat) nasceu como ferramenta de automação: "quando X acontece em app A, faça Y no app B". Em 2024 e 2025, a plataforma passou por uma transformação profunda para se tornar uma plataforma de **orquestração de IA**.

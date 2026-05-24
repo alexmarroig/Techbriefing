@@ -29,7 +29,7 @@ Neste guia, você vai aprender a usar as duas ferramentas que transformam qualqu
 
 ## 1. O que você precisa antes de começar
 
-![Ilustração do Artigo](https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80&w=1200)
+![Ilustração visual para: Como usar o Cursor AI: O guia prático para não-programadores](https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80&w=1200)
 
 
 1. Acesse [cursor.com](https://cursor.com) e baixe o aplicativo (disponível para Mac e Windows).

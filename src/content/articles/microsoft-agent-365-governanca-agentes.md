@@ -16,7 +16,7 @@ tags:
 
 ## Resumo rápido
 
-![Ilustração do Artigo](https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200)
+![Ilustração visual para: Agent 365 mostra o novo problema das empresas: governar agentes como se fossem usuários](https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200)
 
 
 Com agentes circulando por documentos, dados e sistemas, governança, identidade e auditoria deixam de ser detalhe técnico.

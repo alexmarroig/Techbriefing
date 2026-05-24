@@ -87,7 +87,7 @@ Neste guia, apresentamos as principais plataformas no-code para IA, com análise
 
 ## Plataformas especializadas em agentes de IA
 
-![Ilustração do Artigo](https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200)
+![Ilustração visual para: Melhores ferramentas no-code para criar IA em 2026](https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200)
 
 
 ### Relevance AI

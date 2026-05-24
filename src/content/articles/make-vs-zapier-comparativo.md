@@ -17,7 +17,7 @@ tags:
 
 ## O duelo das ferramentas de automação
 
-![Ilustração do Artigo](https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80&w=1200)
+![Ilustração visual para: Make vs Zapier: qual ferramenta de automação escolher em 2026?](https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80&w=1200)
 
 
 Zapier e Make (antigo Integromat) dominam o mercado de automação no-code para não desenvolvedores. Ambas permitem conectar aplicativos e criar fluxos automáticos sem escrever código — mas têm filosofias, preços e casos de uso bem diferentes.

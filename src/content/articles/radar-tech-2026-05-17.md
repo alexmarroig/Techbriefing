@@ -14,7 +14,7 @@ tags:
 
 ## Resumo rápido
 
-![Ilustração do Artigo](https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200)
+![Ilustração visual para: 12 movimentos de IA para acompanhar](https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200)
 
 
 Uma curadoria em portugu�s com as not�cias de tecnologia mais relevantes do dia, traduzidas em impacto pr�tico, oportunidade e pr�ximo passo.

@@ -16,7 +16,7 @@ tags:
 
 ## O problema que o RAG resolve
 
-![Ilustração do Artigo](https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200)
+![Ilustração visual para: O que é RAG (Retrieval-Augmented Generation): O Guia Definitivo](https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200)
 
 
 Os grandes modelos de linguagem como GPT-4 e Claude são incrivelmente capazes, mas têm limitações fundamentais que criam problemas reais em aplicações empresariais:
