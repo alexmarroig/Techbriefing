@@ -145,15 +145,15 @@ function Hero(){
 
       <div className="hero-bar wrap">
         {[
-          {n:'Análises',em:'',l:'com leitura aplicável'},
-          {n:'Guias',em:'',l:'para executar melhor'},
-          {n:'Prompts',em:'',l:'gratuitos e copiáveis'},
-          {n:'Reviews',em:'',l:'com critério editorial'},
+          {n:'Análises',em:'',l:'com leitura aplicável', href: '/arquivo'},
+          {n:'Guias',em:'',l:'para executar melhor', href: '/guias'},
+          {n:'Prompts',em:'',l:'gratuitos e copiáveis', href: '/prompts'},
+          {n:'Reviews',em:'',l:'com critério editorial', href: '/ferramentas'},
         ].map((s,i)=>(
-          <div className="hero-stat" key={i}>
+          <a href={s.href} className="hero-stat" key={i} style={{ textDecoration: 'none', color: 'inherit', transition: 'transform 0.2s, background 0.2s', cursor: 'pointer' }} onMouseOver={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.background = 'rgba(0,0,0,0.02)' }} onMouseOut={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.background = 'transparent' }}>
             <div className="hero-stat-n">{s.n}{s.em && <em>{s.em}</em>}</div>
             <div className="hero-stat-l">{s.l}</div>
-          </div>
+          </a>
         ))}
       </div>
     </section>
