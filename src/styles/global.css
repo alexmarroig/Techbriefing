@@ -293,7 +293,7 @@ html:not([data-theme]) .theme-icon-sun{display:block}
   max-width:560px;margin-bottom:44px;
   font-weight:400;
 }
-.hero-actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.hero-actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap;position:relative;z-index:50;}
 /* Hero bottom bar */
 .hero-bar{
   margin-top:72px;
