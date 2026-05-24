@@ -6,7 +6,7 @@ author: "Lucas Andrade"
 date: 2026-04-05
 readTime: "10 min"
 featured: false
-image: "/images/article-ai-sales-2026.png"
+image: "https://images.unsplash.com/photo-1531297172864-742c65f84b65?auto=format&fit=crop&q=80&w=1200"
 tags:
   - Vendas
   - Agentes de IA

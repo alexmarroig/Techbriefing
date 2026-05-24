@@ -6,7 +6,7 @@ author: "Lucas Andrade"
 date: 2026-05-12
 readTime: "14 min"
 featured: true
-image: "/images/article-automation-workflow.png"
+image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200"
 tags:
   - Agentes de IA
   - VentureBeat AI

@@ -6,7 +6,7 @@ author: "Mariana Costa"
 date: 2026-05-13
 readTime: "6 min"
 featured: false
-image: "/images/article-agents-framework.png"
+image: "https://images.unsplash.com/photo-1531297172864-742c65f84b65?auto=format&fit=crop&q=80&w=1200"
 tags:
   - Google
   - Deep Research

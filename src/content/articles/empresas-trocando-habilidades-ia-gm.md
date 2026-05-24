@@ -6,7 +6,7 @@ author: "Lucas Andrade"
 date: 2026-05-13
 readTime: "7 min"
 featured: false
-image: "/images/article-strategy-business.png"
+image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=1200"
 tags:
   - Carreira em IA
   - Automação

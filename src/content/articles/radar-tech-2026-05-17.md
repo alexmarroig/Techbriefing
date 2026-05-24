@@ -6,7 +6,7 @@ author: "Lucas Andrade"
 date: 2026-05-17
 readTime: "14 min"
 featured: true
-image: "/images/article-radar-tech-default.png"
+image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200"
 tags:
   - Agentes de IA
   - VentureBeat AI

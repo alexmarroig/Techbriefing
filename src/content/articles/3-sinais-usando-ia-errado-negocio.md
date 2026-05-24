@@ -6,7 +6,7 @@ author: "Thiago Mendes"
 date: 2026-05-12
 readTime: "7 min"
 featured: true
-image: "/images/article-automation-workflow.png"
+image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1200"
 tags:
   - IA para negócios
   - Automação

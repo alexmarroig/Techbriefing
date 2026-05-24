@@ -6,7 +6,7 @@ author: "Thiago Mendes"
 date: 2026-05-12
 readTime: "8 min"
 featured: false
-image: "/images/article-strategy-business.png"
+image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200"
 tags:
   - Consultoria
   - Agentes de IA

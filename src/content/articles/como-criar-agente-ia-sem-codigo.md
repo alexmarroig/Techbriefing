@@ -6,7 +6,7 @@ author: "Lucas Andrade"
 date: 2026-03-10
 readTime: "10 min"
 featured: false
-image: "/images/article-agents-framework.png"
+image: "https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&q=80&w=1200"
 tags:
   - Agentes de IA
   - No-code

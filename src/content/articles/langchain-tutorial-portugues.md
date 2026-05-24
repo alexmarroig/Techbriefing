@@ -6,7 +6,7 @@ author: "Lucas Andrade"
 date: 2026-05-06
 readTime: "13 min"
 featured: true
-image: "/images/article-api-dev.png"
+image: "https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&q=80&w=1200"
 tags:
   - LangChain
   - Python

@@ -6,7 +6,7 @@ author: "Lucas Andrade"
 date: 2026-05-20
 readTime: "13 min"
 featured: false
-image: "/images/article-make-automation.png"
+image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&q=80&w=1200"
 tags:
   - Make
   - Automação

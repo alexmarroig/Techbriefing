@@ -6,7 +6,7 @@ author: "Mariana Costa"
 date: 2026-05-13
 readTime: "6 min"
 featured: false
-image: "/images/article-strategy-business.png"
+image: "https://images.unsplash.com/photo-1580894732444-8ecbef79bd14?auto=format&fit=crop&q=80&w=1200"
 tags:
   - Sierra
   - Atendimento

@@ -6,7 +6,7 @@ author: "Lucas Andrade"
 date: 2026-05-20
 readTime: "14 min"
 featured: false
-image: "/images/article-flowise.png"
+image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1200"
 tags:
   - Flowise
   - No-Code

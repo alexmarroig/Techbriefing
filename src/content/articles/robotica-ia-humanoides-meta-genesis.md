@@ -6,7 +6,7 @@ author: "Lucas Andrade"
 date: 2026-05-13
 readTime: "8 min"
 featured: false
-image: "/images/article-autonomous-agents.png"
+image: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&q=80&w=1200"
 tags:
   - Robótica
   - IA física

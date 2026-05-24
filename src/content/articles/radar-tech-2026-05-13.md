@@ -6,7 +6,7 @@ author: "Lucas Andrade"
 date: 2026-05-13
 readTime: "14 min"
 featured: true
-image: "/images/article-agents-framework.png"
+image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200"
 tags:
   - Agentes de IA
   - VentureBeat AI

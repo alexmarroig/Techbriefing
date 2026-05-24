@@ -6,7 +6,7 @@ author: "Lucas Andrade"
 date: 2026-05-20
 readTime: "18 min"
 featured: false
-image: "/images/article-langgraph.png"
+image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=1200"
 tags:
   - LangGraph
   - Python

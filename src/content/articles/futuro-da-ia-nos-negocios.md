@@ -6,7 +6,7 @@ author: "Lucas Andrade"
 date: 2026-05-05
 readTime: "10 min"
 featured: false
-image: "/images/article-agents-framework.png"
+image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200"
 tags:
   - Futuro
   - Tendências

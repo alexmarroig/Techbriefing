@@ -6,7 +6,7 @@ author: "Lucas Andrade"
 date: 2026-04-02
 readTime: "13 min"
 featured: false
-image: "/images/article-n8n-agents.png"
+image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&q=80&w=1200"
 tags:
   - n8n
   - Automação

@@ -6,7 +6,7 @@ author: "Lucas Andrade"
 date: 2026-05-13
 readTime: "8 min"
 featured: false
-image: "/images/article-strategy-business.png"
+image: "https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&q=80&w=1200"
 tags:
   - Agentes enterprise
   - Customer experience

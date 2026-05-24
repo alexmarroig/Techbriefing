@@ -6,7 +6,7 @@ author: "Thiago Mendes"
 date: 2026-04-25
 readTime: "11 min"
 featured: false
-image: "/images/article-automation-workflow.png"
+image: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&q=80&w=1200"
 tags:
   - Automação
   - IA Prática
