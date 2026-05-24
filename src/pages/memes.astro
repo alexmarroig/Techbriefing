@@ -3,22 +3,34 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const memes = [
   {
-    src: '/images/memes/meme_1_notext.png',
-    pt: 'ENGENHARIA DE PROMPT\\nEM 2026',
-    en: 'PROMPT ENGINEERING\\nIN 2026',
-    pos: 'top'
+    src: '/images/memes/meme1.png',
+    pt: 'Engenharia de Prompt',
+    en: 'Prompt Engineering'
   },
   {
-    src: '/images/memes/meme_2_notext.png',
-    pt: 'QUANDO A IA DESCOBRE QUE VAI\\nMANTER CÓDIGO LEGADO',
-    en: 'WHEN THE AI REALIZES IT HAS\\nTO MAINTAIN LEGACY CODE',
-    pos: 'top'
+    src: '/images/memes/meme2.png',
+    pt: 'Na minha máquina funciona',
+    en: 'It works on my machine'
   },
   {
-    src: '/images/memes/meme_3_notext.png',
-    pt: 'IA: "1+1 = 3. E AQUI ESTÁ UM\\nENSAIO DE 5 PARÁGRAFOS..."',
-    en: 'AI: "1+1 = 3. AND HERE IS A\\n5 PARAGRAPH ESSAY..."',
-    pos: 'bottom'
+    src: '/images/memes/meme3.png',
+    pt: 'IA e o código legado',
+    en: 'AI maintaining legacy code'
+  },
+  {
+    src: '/images/memes/meme4.png',
+    pt: 'Sênior em dia de deploy',
+    en: 'Senior dev on deploy day'
+  },
+  {
+    src: '/images/memes/meme5.png',
+    pt: 'Alucinação da IA',
+    en: 'AI Hallucination'
+  },
+  {
+    src: '/images/memes/meme6.png',
+    pt: 'Git Push --force na Sexta',
+    en: 'Git Push --force on Friday'
   }
 ];
 
@@ -29,7 +41,7 @@ const seoDescription = "A maior galeria de memes de TI, programação, inteligê
   title="Humor Tech & Memes de IA | Tech Briefing" 
   description={seoDescription} 
   type="website"
-  image="/images/memes/meme_1_notext.png"
+  image="/images/memes/meme1.png"
   tags={["memes TI", "memes programação", "humor dev", "memes inteligência artificial", "piadas programação"]}
 >
   <main class="memes-page">
@@ -42,8 +54,8 @@ const seoDescription = "A maior galeria de memes de TI, programação, inteligê
         
         <div class="lang-toggle-wrap">
           <div class="lang-toggle" id="lang-toggle">
-            <button class="active" data-lang="pt">🇧🇷 Português</button>
-            <button data-lang="en">🇺🇸 English</button>
+            <button class="active" data-lang="pt">🇧🇷 Títulos em PT</button>
+            <button data-lang="en">🇺🇸 Títulos em EN</button>
           </div>
         </div>
       </div>
@@ -54,16 +66,9 @@ const seoDescription = "A maior galeria de memes de TI, programação, inteligê
         <div class="masonry-grid" id="memes-container" data-current-lang="pt">
           {memes.map(meme => (
             <div class="meme-card">
-              <div class="meme-generator-box">
-                <img src={meme.src} alt={meme.en} loading="lazy" />
-                <div class={`meme-text meme-text-${meme.pos}`} data-pt={meme.pt} data-en={meme.en}>
-                  {meme.pt.split('\\n').map((line, i) => (
-                    <>
-                      {line}
-                      {i < meme.pt.split('\\n').length - 1 && <br />}
-                    </>
-                  ))}
-                </div>
+              <img src={meme.src} alt={meme.en} loading="lazy" />
+              <div class="meme-overlay">
+                <span class="meme-title-text" data-pt={meme.pt} data-en={meme.en}>{meme.pt}</span>
               </div>
             </div>
           ))}
@@ -85,7 +90,7 @@ const seoDescription = "A maior galeria de memes de TI, programação, inteligê
     
     const buttons = toggle.querySelectorAll('button');
     const container = document.getElementById('memes-container');
-    const texts = document.querySelectorAll('.meme-text');
+    const texts = document.querySelectorAll('.meme-title-text');
     
     buttons.forEach(btn => {
       btn.addEventListener('click', () => {
@@ -102,7 +107,7 @@ const seoDescription = "A maior galeria de memes de TI, programação, inteligê
         texts.forEach(textEl => {
           const newText = textEl.getAttribute(`data-${lang}`);
           if (newText) {
-            textEl.innerHTML = newText.replace(/\\n/g, '<br>');
+            textEl.innerHTML = newText;
           }
         });
       });
@@ -172,7 +177,7 @@ const seoDescription = "A maior galeria de memes de TI, programação, inteligê
   }
 
   .memes-grid-section .container {
-    max-width: 1000px;
+    max-width: 1150px;
   }
 
   /* Masonry Layout */
@@ -210,46 +215,36 @@ const seoDescription = "A maior galeria de memes de TI, programação, inteligê
     box-shadow: 0 12px 24px rgba(0,0,0,0.1);
   }
 
-  .meme-generator-box {
-    position: relative;
-    width: 100%;
-  }
-
-  .meme-generator-box img {
+  .meme-card img {
     width: 100%;
     display: block;
     height: auto;
   }
 
-  /* Meme text CSS */
-  .meme-text {
+  .meme-overlay {
     position: absolute;
+    bottom: 0;
     left: 0;
     width: 100%;
-    text-align: center;
-    color: white;
-    font-family: Impact, "Arial Black", sans-serif;
-    font-size: clamp(20px, 2vw, 26px);
-    line-height: 1.1;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 0 16px;
-    text-shadow: 
-      -2px -2px 0 #000,
-       2px -2px 0 #000,
-      -2px  2px 0 #000,
-       2px  2px 0 #000,
-       0px  3px 0 #000,
-       3px  0px 0 #000;
+    padding: 24px 20px 16px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
   }
-  
-  .meme-text-top {
-    top: 4%;
+
+  .meme-card:hover .meme-overlay {
+    opacity: 1;
   }
-  
-  .meme-text-bottom {
-    bottom: 4%;
+
+  .meme-title-text {
+    font-weight: 600;
+    font-size: 15px;
+    font-family: var(--sans);
   }
+
+
 
   .submit-meme-box {
     margin: 0 auto;
