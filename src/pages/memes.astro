@@ -107,95 +107,95 @@ const seoDescription = "A maior galeria de memes de TI, programação, inteligê
 </BaseLayout>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    // --- Language Toggle Logic ---
-    const toggle = document.getElementById('lang-toggle');
-    const container = document.getElementById('memes-container');
-    const texts = document.querySelectorAll('.meme-title-text');
-    let currentLang = 'pt';
-    
-    if(toggle && container) {
-      const buttons = toggle.querySelectorAll('button');
-      buttons.forEach(btn => {
-        btn.addEventListener('click', () => {
-          currentLang = btn.getAttribute('data-lang');
-          
-          buttons.forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
-          container.setAttribute('data-current-lang', currentLang);
-          
-          texts.forEach(textEl => {
-            const newText = textEl.getAttribute(`data-${currentLang}`);
-            if (newText) {
-              textEl.innerHTML = newText;
-            }
-          });
-          
-          // Se o lightbox estiver aberto, atualiza o caption também!
-          const lightboxCaption = document.getElementById('lightbox-caption');
-          const lightbox = document.getElementById('meme-lightbox');
-          if (lightbox && lightbox.classList.contains('active') && activeMemeEl) {
-            const newCaption = activeMemeEl.querySelector('.meme-title-text').getAttribute(`data-${currentLang}`);
-            lightboxCaption.innerHTML = newCaption;
+  // --- Language Toggle Logic ---
+  const toggle = document.getElementById('lang-toggle');
+  const container = document.getElementById('memes-container');
+  const texts = document.querySelectorAll('.meme-title-text');
+  let currentLang = 'pt';
+  
+  if(toggle && container) {
+    const buttons = toggle.querySelectorAll('button');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        currentLang = btn.getAttribute('data-lang');
+        
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        container.setAttribute('data-current-lang', currentLang);
+        
+        texts.forEach(textEl => {
+          const newText = textEl.getAttribute(`data-${currentLang}`);
+          if (newText) {
+            textEl.innerHTML = newText;
           }
         });
+        
+        // Se o lightbox estiver aberto, atualiza o caption também
+        const lightboxCaption = document.getElementById('lightbox-caption');
+        const lightbox = document.getElementById('meme-lightbox');
+        if (lightbox && lightbox.classList.contains('active') && window.activeMemeEl) {
+          const newCaption = window.activeMemeEl.querySelector('.meme-title-text').getAttribute(`data-${currentLang}`);
+          lightboxCaption.innerHTML = newCaption;
+        }
       });
-    }
+    });
+  }
 
-    // --- Lightbox Logic ---
-    const lightbox = document.getElementById('meme-lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    const lightboxCaption = document.getElementById('lightbox-caption');
-    const lightboxClose = document.getElementById('lightbox-close');
-    const memeCards = document.querySelectorAll('.meme-card');
-    let activeMemeEl = null;
+  // --- Lightbox Logic ---
+  const lightbox = document.getElementById('meme-lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxCaption = document.getElementById('lightbox-caption');
+  const lightboxClose = document.getElementById('lightbox-close');
+  const memeCards = document.querySelectorAll('.meme-card');
+  window.activeMemeEl = null; // Store globally so the toggle can read it if needed
 
-    if (lightbox && lightboxImg) {
-      // Abre o lightbox ao clicar em um meme
-      memeCards.forEach(card => {
-        card.addEventListener('click', () => {
-          activeMemeEl = card;
-          const img = card.querySelector('img');
-          const title = card.querySelector('.meme-title-text').getAttribute(`data-${currentLang}`);
-          
-          lightboxImg.src = img.src;
-          lightboxCaption.innerHTML = title;
-          
-          // Animação de entrada
-          lightbox.style.display = 'flex';
-          // Force reflow
-          void lightbox.offsetWidth;
-          lightbox.classList.add('active');
-          document.body.style.overflow = 'hidden'; // impede scroll da página
-        });
+  if (lightbox && lightboxImg) {
+    // Abre o lightbox ao clicar em um meme
+    memeCards.forEach(card => {
+      card.addEventListener('click', () => {
+        window.activeMemeEl = card;
+        const img = card.querySelector('img');
+        const title = card.querySelector('.meme-title-text').getAttribute(`data-${currentLang}`);
+        
+        lightboxImg.src = img.src;
+        lightboxCaption.innerHTML = title;
+        
+        // Animação de entrada
+        lightbox.style.display = 'flex';
+        // Force reflow
+        void lightbox.offsetWidth;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden'; // impede scroll da página
       });
+    });
 
-      // Fecha o lightbox
-      const closeLightbox = () => {
-        lightbox.classList.remove('active');
-        document.body.style.overflow = '';
-        setTimeout(() => {
-          lightbox.style.display = 'none';
-        }, 300); // tempo da animação CSS
-      };
+    // Fecha o lightbox
+    const closeLightbox = () => {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+      setTimeout(() => {
+        lightbox.style.display = 'none';
+      }, 300); // tempo da animação CSS
+    };
 
+    if(lightboxClose) {
       lightboxClose.addEventListener('click', closeLightbox);
-      
-      // Fecha ao clicar fora da imagem
-      lightbox.addEventListener('click', (e) => {
-        if (e.target !== lightboxImg) {
-          closeLightbox();
-        }
-      });
-      
-      // Fecha com a tecla ESC
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
-          closeLightbox();
-        }
-      });
     }
-  });
+    
+    // Fecha ao clicar fora da imagem
+    lightbox.addEventListener('click', (e) => {
+      if (e.target !== lightboxImg) {
+        closeLightbox();
+      }
+    });
+    
+    // Fecha com a tecla ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+        closeLightbox();
+      }
+    });
+  }
 </script>
 
 <style>
