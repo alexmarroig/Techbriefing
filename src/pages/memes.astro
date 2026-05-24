@@ -1,0 +1,161 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const memes = [
+  {
+    src: '/images/memes/meme1.png',
+    alt: 'Prompt Engineering in 2026',
+    title: 'Engenharia de Prompt'
+  },
+  {
+    src: '/images/memes/meme2.png',
+    alt: 'It works on my machine',
+    title: 'Na minha máquina funciona'
+  },
+  {
+    src: '/images/memes/meme3.png',
+    alt: 'When the AI realizes it has to maintain legacy code',
+    title: 'IA e o código legado'
+  }
+];
+---
+
+<BaseLayout title="Memes e Humor Tech | Tech Briefing" description="Porque nem só de código vive o programador. Memes, tirinhas e humor sobre Inteligência Artificial, programação e tecnologia." type="website">
+  <main class="memes-page">
+    <header class="memes-hero">
+      <div class="container">
+        <h1>Humor Tech & IA 🤖</h1>
+        <p class="hero-subtitle">
+          Um respiro cômico para a comunidade. Porque se a gente não rir do código legado, a gente chora.
+        </p>
+      </div>
+    </header>
+
+    <section class="memes-grid-section">
+      <div class="container">
+        <div class="masonry-grid">
+          {memes.map(meme => (
+            <div class="meme-card">
+              <img src={meme.src} alt={meme.alt} loading="lazy" />
+              <div class="meme-overlay">
+                <span>{meme.title}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+        
+        <div class="submit-meme-box">
+          <p>Fez um meme bom e quer colocar aqui?</p>
+          <a href="/forum" class="btn btn-fill">Mande no Fórum</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .memes-page {
+    padding-bottom: 80px;
+  }
+  .memes-hero {
+    padding: 80px 0 40px;
+    text-align: center;
+    background: linear-gradient(180deg, var(--bg-2) 0%, transparent 100%);
+  }
+  .memes-hero h1 {
+    margin-bottom: 16px;
+    font-size: clamp(32px, 5vw, 48px);
+    letter-spacing: -0.02em;
+  }
+  .hero-subtitle {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 18px;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+  
+  .memes-grid-section {
+    padding: 40px 0;
+  }
+
+  /* Masonry Layout */
+  .masonry-grid {
+    column-count: 3;
+    column-gap: 24px;
+    padding-bottom: 60px;
+  }
+  
+  @media (max-width: 900px) {
+    .masonry-grid {
+      column-count: 2;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .masonry-grid {
+      column-count: 1;
+    }
+  }
+
+  .meme-card {
+    break-inside: avoid;
+    margin-bottom: 24px;
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    background: var(--bg-2);
+    border: 1px solid var(--border);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .meme-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+  }
+
+  .meme-card img {
+    width: 100%;
+    display: block;
+    height: auto;
+  }
+
+  .meme-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 24px 20px 16px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+
+  .meme-card:hover .meme-overlay {
+    opacity: 1;
+  }
+
+  .meme-overlay span {
+    font-weight: 600;
+    font-size: 15px;
+    font-family: var(--sans);
+  }
+
+  .submit-meme-box {
+    margin: 0 auto;
+    max-width: 500px;
+    padding: 32px;
+    text-align: center;
+    border-radius: 16px;
+    background: var(--bg-2);
+    border: 1px dashed var(--border-hover);
+  }
+
+  .submit-meme-box p {
+    margin-bottom: 16px;
+    font-weight: 500;
+    color: var(--text-muted);
+  }
+</style>
