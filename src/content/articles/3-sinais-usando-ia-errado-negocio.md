@@ -15,6 +15,9 @@ tags:
 
 ## Resumo rápido
 
+![Ilustração do Artigo](https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1200)
+
+
 Você usa ChatGPT, testa automações e ainda sente que nada virou resultado? Veja 3 provas práticas de que a IA está sendo usada do jeito errado no seu negócio.
 
 Usar IA no negócio não significa abrir o ChatGPT, pedir uma ideia e voltar para a rotina manual de sempre. Esse é o ponto em que muita gente se engana: confunde **uso frequente de IA** com **uso estratégico de IA**.

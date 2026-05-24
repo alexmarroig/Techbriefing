@@ -24,6 +24,9 @@ Veja como criar seu clone digital em 5 minutos:
 
 ## 1. O Setup Inicial (Instant Avatar)
 
+![Ilustração do Artigo](https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200)
+
+
 Logue na HeyGen e vá para o painel de navegação esquerdo, clique em **Avatars** e selecione a aba **Instant Avatar**. Clique no botão "Create Instant Avatar".
 
 ### Regras de Ouro antes de clicar em gravar:

@@ -29,6 +29,9 @@ Neste guia, você vai aprender a usar as duas ferramentas que transformam qualqu
 
 ## 1. O que você precisa antes de começar
 
+![Ilustração do Artigo](https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80&w=1200)
+
+
 1. Acesse [cursor.com](https://cursor.com) e baixe o aplicativo (disponível para Mac e Windows).
 2. Durante a instalação, ele perguntará se você quer importar suas extensões do VS Code. Se você nunca usou o VS Code, apenas pule.
 3. No painel de configurações (canto superior direito), certifique-se de que o modelo selecionado seja o **Claude 3.5 Sonnet**. Atualmente, a Anthropic domina a OpenAI em testes de raciocínio de código.

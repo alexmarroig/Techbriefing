@@ -14,6 +14,9 @@ tags:
 
 ## Resumo rápido
 
+![Ilustração do Artigo](https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80&w=1200)
+
+
 Uma curadoria em português com as notícias de tecnologia mais relevantes do dia e o que elas significam para IA, automação e negócios digitais.
 
 Este é o Radar Tech do dia: uma curadoria das notícias e discussões que mais importam para quem acompanha IA aplicada, automação, agentes, software e negócios digitais.

@@ -14,6 +14,9 @@ tags:
 
 ## Resumo rápido
 
+![Ilustração do Artigo](https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200)
+
+
 Uma curadoria em portugu�s com as not�cias de tecnologia mais relevantes do dia, traduzidas em impacto pr�tico, oportunidade e pr�ximo passo.
 
 Este � o Radar Tech do dia: uma curadoria das not�cias e discuss�es que mais importam para quem quer transformar IA, automa��o e tecnologia em produtividade, neg�cio e renda.

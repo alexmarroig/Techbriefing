@@ -14,6 +14,9 @@ tags:
 
 ## Resumo rápido
 
+![Ilustração do Artigo](https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200)
+
+
 A escolha da Ring por agentes de voz em atendimento mostra uma virada importante: IA não é só chat bonito, é operação ao vivo, com regra, controle e métrica.
 
 Uma das notícias mais interessantes da semana veio do atendimento ao cliente: a Ring, da Amazon, passou a rotear chamadas inbound por uma plataforma de agentes de voz depois de avaliar dezenas de fornecedores. O ponto importante não é o nome da ferramenta. É o sinal de mercado.

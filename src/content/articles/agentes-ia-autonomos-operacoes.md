@@ -16,6 +16,9 @@ tags:
 
 ## Da ferramenta ao operador
 
+![Ilustração do Artigo](https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200)
+
+
 Durante os últimos dois anos, a conversa sobre IA nos negócios girou em torno de ferramentas: "qual LLM usar", "como escrever prompts melhores", "qual plataforma integra com meu CRM". Essa conversa está ficando para trás.
 
 O que está acontecendo agora é diferente. Empresas não estão mais usando IA como ferramenta de suporte — estão delegando operações inteiras para sistemas de agentes que tomam decisões, executam ações e corrigem erros sem intervenção humana a cada passo.

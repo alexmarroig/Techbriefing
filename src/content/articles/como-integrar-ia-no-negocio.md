@@ -16,6 +16,9 @@ tags:
 
 ## Resumo rápido
 
+![Ilustração do Artigo](https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&q=80&w=1200)
+
+
 Guia completo para integrar IA no seu negócio de forma estratégica: diagnóstico, planejamento, implementação e gestão de mudança. Do zero ao primeiro resultado.
 
 ## Por onde começar: o erro mais comum das empresas

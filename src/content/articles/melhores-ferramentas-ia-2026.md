@@ -16,6 +16,9 @@ tags:
 
 ## Resumo rápido
 
+![Ilustração do Artigo](https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=1200)
+
+
 Conheça as ferramentas de inteligência artificial mais eficazes para empresas em 2026: do atendimento ao cliente à automação de processos e análise de dados.
 
 ## O cenário das ferramentas de IA em 2026

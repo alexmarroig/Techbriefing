@@ -17,6 +17,9 @@ tags:
 
 ## O conceito por trás do CrewAI
 
+![Ilustração do Artigo](https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1200)
+
+
 O CrewAI parte de uma premissa elegante: tarefas complexas são resolvidas melhor por **especialistas colaborando** do que por um generalista tentando fazer tudo sozinho.
 
 Em vez de um único agente enorme tentando pesquisar, analisar, escrever e revisar ao mesmo tempo, você define uma **crew** — uma equipe de agentes especializados, cada um com:

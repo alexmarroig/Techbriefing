@@ -16,6 +16,9 @@ tags:
 
 ## Por que aprender a usar a API da OpenAI?
 
+![Ilustração do Artigo](https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200)
+
+
 A interface do ChatGPT é ótima para uso pessoal, mas quando você quer integrar IA nos seus sistemas, automatizar processos ou criar produtos com IA, você precisa da API. A API permite:
 
 - Chamar os modelos programaticamente dos seus sistemas

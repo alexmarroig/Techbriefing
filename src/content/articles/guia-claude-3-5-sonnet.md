@@ -29,6 +29,9 @@ Neste guia, veja como extrair o potencial máximo do Claude para o seu negócio.
 
 ## 1. O Recurso Assassino: Artifacts (Artefatos)
 
+![Ilustração do Artigo](https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200)
+
+
 A maior diferença visual entre o Claude e as outras IAs é como ele entrega o resultado.
 
 Se você pedir ao ChatGPT para criar um "Gráfico interativo de vendas", ele vai gerar o código Python e você terá que rodá-lo em outro lugar. Se você pedir ao Claude 3.5 Sonnet, ele abre uma tela dividida na direita (o Artifact) e **exibe o gráfico funcionando na sua frente** usando React e Recharts.

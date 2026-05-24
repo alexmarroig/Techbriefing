@@ -143,3 +143,12 @@ Se você usa IA principalmente para programação, análise de imagens ou precis
 Para raciocínio matemático e científico avançado: **o3 da OpenAI não tem concorrência atual**.
 
 A melhor estratégia para empresas em 2026 é não se limitar a um único provedor. A portabilidade entre modelos é uma vantagem competitiva — e as plataformas de orquestração como LangChain e n8n facilitam exatamente isso.
+
+## Resumo Comparativo: Claude vs Chatgpt comparativo
+
+| Critério | Claude | Chatgpt comparativo |
+|---|---|---|
+| **Foco Principal** | Analisar caso a caso | Analisar caso a caso |
+| **Curva de Aprendizado** | Relativa | Relativa |
+| **Custo-benefício** | Depende do escopo | Depende do escopo |
+

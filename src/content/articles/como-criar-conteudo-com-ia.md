@@ -16,6 +16,9 @@ tags:
 
 ## O problema com "IA para conteúdo"
 
+![Ilustração do Artigo](https://images.unsplash.com/photo-1518932945647-7a1c969f8be2?auto=format&fit=crop&q=80&w=1200)
+
+
 A maioria das pessoas usa IA para criar conteúdo da forma errada: jogam um tema no ChatGPT, recebem um texto genérico, publicam. O resultado é conteúdo que parece robô — porque foi criado exatamente assim.
 
 A diferença entre conteúdo medíocre e conteúdo profissional com IA não está na ferramenta. Está no processo, na estrutura dos prompts e na edição humana inteligente.

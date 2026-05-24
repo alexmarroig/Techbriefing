@@ -24,6 +24,9 @@ Analisamos os gigantes de ponta (Sora, Runway Gen-3 Alpha, Kling AI, Luma Dream 
 
 ## Tabela Comparativa de Motores de Vídeo
 
+![Ilustração do Artigo](https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1200)
+
+
 <div class="comp-table-wrap">
   <table class="comp-table">
     <thead>

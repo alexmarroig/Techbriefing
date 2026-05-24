@@ -16,6 +16,9 @@ tags:
 
 ## Resumo rápido
 
+![Ilustração do Artigo](https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200)
+
+
 A visão de Author, Editor, Director e Orchestrator ajuda a entender como a colaboração entre humanos e agentes está mudando a operação das empresas.
 
 A visão de Author, Editor, Director e Orchestrator ajuda a entender como a colaboração entre humanos e agentes está mudando a operação das empresas.

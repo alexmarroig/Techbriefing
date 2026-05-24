@@ -26,6 +26,9 @@ faq:
 
 ## Resumo rápido
 
+![Ilustração do Artigo](https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200)
+
+
 A adoção de IA em empresas deixou de ser um diferencial de inovação e passou a ser uma necessidade de sobrevivência operacional. Implementar inteligência artificial significa substituir fluxos de trabalho braçais e repetitivos por sistemas autônomos ou "copilotos" que reduzem custos vertiginosamente, melhoram a consistência das entregas e escalam o atendimento ou a análise de dados sem aumento de despesas na folha de pagamento.
 
 ## O que é IA Empresarial (Enterprise AI)

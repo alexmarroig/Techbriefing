@@ -16,6 +16,9 @@ tags:
 
 ## Resumo rápido
 
+![Ilustração do Artigo](https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80&w=1200)
+
+
 Aprenda prompt engineering do básico ao avançado: técnicas, padrões e exemplos práticos para obter respostas muito melhores de qualquer modelo de linguagem.
 
 ## O que é prompt engineering e por que importa
