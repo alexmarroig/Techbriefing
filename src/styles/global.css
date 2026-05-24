@@ -2600,6 +2600,19 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;o
   line-height: 1.62;
   margin: auto 0 0;
 }
+.manual-playbook li{
+  counter-increment:playbook;
+  display:grid;
+  grid-template-columns:34px 1fr;
+  gap:12px;
+  align-items:center;
+  padding:12px 14px;
+  border:1px solid var(--line-s);
+  border-radius:14px;
+  background:oklch(0.09 0.01 245/.72);
+  color:#fff;
+  font-weight:500;
+}
 .manuals-page{
   background: var(--bg);
 }

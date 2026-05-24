@@ -3,49 +3,49 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const memes = [
   {
-    src: '/images/memes/meme1.png',
-    pt: 'Quando a gambiarra funciona em produção',
-    en: 'When the workaround works in production'
+    src: '/images/memes/meme1_notext.png',
+    pt: 'Quando a gambiarra\nfunciona em produção',
+    en: 'When the workaround\nworks in production'
   },
   {
-    src: '/images/memes/meme2.png',
-    pt: 'Na minha máquina funciona perfeitamente',
-    en: 'It works perfectly on my machine'
+    src: '/images/memes/meme2_notext.png',
+    pt: 'Na minha máquina\nfunciona perfeitamente',
+    en: 'It works perfectly\non my machine'
   },
   {
-    src: '/images/memes/meme3.png',
-    pt: 'Existem 10 tipos de pessoas: as que entendem binário e as que não',
-    en: 'There are 10 types of people: those who understand binary and those who don\'t'
+    src: '/images/memes/meme3_notext.png',
+    pt: 'Existem 10 tipos de pessoas:\nas que entendem binário e as que não',
+    en: 'There are 10 types of people:\nthose who understand binary and those who don\'t'
   },
   {
-    src: '/images/memes/meme4.png',
-    pt: 'Deploy na sexta-feira às 17h',
-    en: 'Deploy on Friday at 5 PM'
+    src: '/images/memes/meme4_notext.png',
+    pt: 'Deploy na sexta-feira\nàs 17h',
+    en: 'Deploy on Friday\nat 5 PM'
   },
   {
-    src: '/images/memes/meme5.png',
-    pt: 'Para entender recursão, você precisa entender recursão',
-    en: 'To understand recursion, you must understand recursion'
+    src: '/images/memes/meme5_notext.png',
+    pt: 'Para entender recursão,\nvocê precisa entender recursão',
+    en: 'To understand recursion,\nyou must understand recursion'
   },
   {
-    src: '/images/memes/meme6.png',
-    pt: 'Eu vou lembrar o que esse código faz amanhã',
-    en: 'I will remember what this code does tomorrow'
+    src: '/images/memes/meme6_notext.png',
+    pt: 'Eu vou lembrar\no que esse código faz amanhã',
+    en: 'I will remember\nwhat this code does tomorrow'
   },
   {
-    src: '/images/memes/meme7.png',
-    pt: '99 pequenos bugs no código. Corrija um, compile, 127 pequenos bugs no código.',
-    en: '99 little bugs in the code. Patch one down, 127 little bugs in the code.'
+    src: '/images/memes/meme7_notext.png',
+    pt: '99 pequenos bugs no código.\nCorrija um, compile, 127 pequenos bugs.',
+    en: '99 little bugs in the code.\nPatch one down, 127 little bugs.'
   },
   {
-    src: '/images/memes/meme8.png',
-    pt: 'Light theme? Você quis dizer: farol de milha',
-    en: 'Light theme? You mean: flashbang'
+    src: '/images/memes/meme8_notext.png',
+    pt: 'Light theme?\nVocê quis dizer: farol de milha',
+    en: 'Light theme?\nYou mean: flashbang'
   },
   {
-    src: '/images/memes/meme9.png',
-    pt: 'Se está funcionando, não toque. Nunca.',
-    en: 'If it ain\'t broke, don\'t fix it. Ever.'
+    src: '/images/memes/meme9_notext.png',
+    pt: 'Se está funcionando,\nnão toque. Nunca.',
+    en: 'If it ain\'t broke,\ndon\'t fix it. Ever.'
   }
 ];
 
@@ -81,9 +81,12 @@ const seoDescription = "A maior galeria de memes de TI, programação, inteligê
         <div class="masonry-grid" id="memes-container" data-current-lang="pt">
           {memes.map(meme => (
             <div class="meme-card">
-              <img src={meme.src} alt={meme.en} loading="lazy" />
+              <div class="meme-img-wrap">
+                <img src={meme.src} alt={meme.en.replace(/\n/g, ' ')} loading="lazy" />
+                <div class="meme-generator-text" data-pt={meme.pt} data-en={meme.en}>{meme.pt}</div>
+              </div>
               <div class="meme-overlay">
-                <span class="meme-title-text" data-pt={meme.pt} data-en={meme.en}>{meme.pt}</span>
+                <span class="meme-title-text" data-pt={meme.pt.replace(/\n/g, ' ')} data-en={meme.en.replace(/\n/g, ' ')}>{meme.pt.replace(/\n/g, ' ')}</span>
               </div>
             </div>
           ))}
@@ -111,7 +114,7 @@ const seoDescription = "A maior galeria de memes de TI, programação, inteligê
     // --- Language Toggle Logic ---
     var toggle = document.getElementById('lang-toggle');
     var container = document.getElementById('memes-container');
-    var texts = document.querySelectorAll('.meme-title-text');
+    var texts = document.querySelectorAll('.meme-title-text, .meme-generator-text');
     var currentLang = 'pt';
     
     if(toggle && container) {
@@ -128,7 +131,7 @@ const seoDescription = "A maior galeria de memes de TI, programação, inteligê
           texts.forEach(function(textEl) {
             var newText = textEl.getAttribute('data-' + currentLang);
             if (newText) {
-              textEl.innerHTML = newText;
+              textEl.innerHTML = newText.replace(/\n/g, '<br>');
             }
           });
           
@@ -207,57 +210,59 @@ const seoDescription = "A maior galeria de memes de TI, programação, inteligê
 
 <style>
   .memes-page {
-    padding-bottom: 80px;
-  }
-  .memes-hero {
-    padding: 80px 0 40px;
-    text-align: center;
-    background: linear-gradient(180deg, var(--bg-2) 0%, transparent 100%);
-  }
-  .memes-hero h1 {
-    margin-bottom: 16px;
-    font-size: clamp(32px, 5vw, 48px);
-    letter-spacing: -0.02em;
-    font-family: var(--mono);
-  }
-  .hero-subtitle {
-    max-width: 600px;
-    margin: 0 auto;
-    font-size: 18px;
-    color: var(--text-muted);
-    line-height: 1.6;
-    margin-bottom: 32px;
-  }
-  .hero-subtitle code {
-    background: var(--bg-3);
-    padding: 2px 6px;
-    border-radius: 4px;
-    font-size: 0.9em;
+    background-color: var(--bg);
+    min-height: 100vh;
   }
   
+  .memes-hero {
+    text-align: center;
+    padding: 80px 20px 40px;
+    background: linear-gradient(180deg, var(--bg-2) 0%, var(--bg) 100%);
+    border-bottom: 1px solid var(--line-s);
+  }
+  
+  .memes-hero h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    margin-bottom: 16px;
+    letter-spacing: -0.03em;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-2);
+    max-width: 600px;
+    margin: 0 auto 30px;
+    line-height: 1.5;
+  }
+  
+  .hero-subtitle code {
+    background: rgba(0,0,0,0.05);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: var(--mono);
+    font-size: 0.9em;
+  }
+
   .lang-toggle-wrap {
     display: flex;
     justify-content: center;
     margin-top: 24px;
   }
+
   .lang-toggle {
     display: inline-flex;
-    background: var(--bg-3);
+    background: var(--bg-2);
+    border: 1px solid var(--line-s);
     border-radius: 100px;
     padding: 4px;
-    border: 1px solid var(--border);
+    gap: 4px;
   }
+
   .lang-toggle button {
     background: transparent;
     border: none;
-    color: var(--text-muted);
     padding: 8px 16px;
-    font-size: 14px;
-    font-weight: 500;
-    font-family: var(--sans);
-    border-radius: 100px;
-    cursor: pointer;
-    transition: all 0.2s ease;
   }
   .lang-toggle button:hover {
     color: var(--text);
