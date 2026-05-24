@@ -1,0 +1,128 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Fórum da Comunidade | Tech Briefing" description="Participe do Fórum do Tech Briefing. Tire dúvidas sobre IA, compartilhe automações e converse com outros profissionais." type="website">
+  <main class="forum-page">
+    <header class="forum-hero">
+      <div class="container">
+        <h1>Fórum da Comunidade</h1>
+        <p class="hero-subtitle">
+          Onde a prática acontece. Tire dúvidas, compartilhe seus workflows e conecte-se com profissionais aplicando IA no mundo real.
+        </p>
+        
+        <div class="forum-cta-box">
+          <h2>Tópicos e Discussões Completas</h2>
+          <p>
+            Nosso fórum principal é hospedado gratuitamente no GitHub Discussions para garantir velocidade, nenhuma propaganda e suporte a blocos de código nativos.
+          </p>
+          <a href="https://github.com/alexmarroig/Techbriefing/discussions" target="_blank" rel="noopener noreferrer" class="btn btn-fill">
+            Acessar o Fórum Completo &#8594;
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <section class="forum-general-chat">
+      <div class="container" style="max-width: 800px;">
+        <h2>Mural de Recados</h2>
+        <p style="margin-bottom: 32px; color: var(--text-muted); font-size: 16px;">
+          Quer apenas deixar um olá ou dar um feedback rápido? Use o chat geral abaixo (conectado via sua conta do GitHub).
+        </p>
+
+        <div class="giscus-container">
+          <script is:inline>
+            (function() {
+              const getTheme = () => document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+              
+              const script = document.createElement('script');
+              script.src = "https://giscus.app/client.js";
+              script.setAttribute("data-repo", "alexmarroig/Techbriefing");
+              script.setAttribute("data-repo-id", "R_kgDOSWXDkA");
+              script.setAttribute("data-mapping", "pathname");
+              script.setAttribute("data-strict", "0");
+              script.setAttribute("data-reactions-enabled", "1");
+              script.setAttribute("data-emit-metadata", "0");
+              script.setAttribute("data-input-position", "top");
+              script.setAttribute("data-theme", getTheme());
+              script.setAttribute("data-lang", "pt");
+              script.setAttribute("crossorigin", "anonymous");
+              script.async = true;
+              
+              document.currentScript.parentNode.appendChild(script);
+
+              const observer = new MutationObserver((mutations) => {
+                mutations.forEach((mutation) => {
+                  if (mutation.attributeName === 'data-theme') {
+                    const iframe = document.querySelector('iframe.giscus-frame');
+                    if (iframe) {
+                      iframe.contentWindow.postMessage(
+                        { giscus: { setConfig: { theme: getTheme() } } },
+                        'https://giscus.app'
+                      );
+                    }
+                  }
+                });
+              });
+              observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+            })();
+          </script>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .forum-page {
+    padding-bottom: 80px;
+  }
+  .forum-hero {
+    padding: 80px 0;
+    text-align: center;
+    background: linear-gradient(180deg, var(--bg-2) 0%, transparent 100%);
+  }
+  .forum-hero h1 {
+    margin-bottom: 16px;
+    font-size: clamp(32px, 5vw, 48px);
+    letter-spacing: -0.02em;
+  }
+  .hero-subtitle {
+    max-width: 600px;
+    margin: 0 auto 48px;
+    font-size: 18px;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+  .forum-cta-box {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 24px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.05);
+  }
+  .forum-cta-box h2 {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+  .forum-cta-box p {
+    color: var(--text-muted);
+    margin-bottom: 32px;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  .forum-cta-box .btn-fill {
+    font-size: 16px;
+    padding: 0 32px;
+    height: 52px;
+  }
+  .forum-general-chat {
+    padding: 60px 0;
+  }
+  .forum-general-chat h2 {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+</style>
