@@ -6,6 +6,8 @@ if (author.toLowerCase().includes('thiago')) {
   avatarSrc = '/images/avatars/thiago.png';
 } else if (author.toLowerCase().includes('alex')) {
   avatarSrc = '/images/avatars/alex.png';
+} else if (author.toLowerCase().includes('lucas')) {
+  avatarSrc = '/images/avatars/lucas.png';
 }
 ---
 
@@ -18,7 +20,7 @@ if (author.toLowerCase().includes('thiago')) {
     <div class="author-bio-name">{author}</div>
     <p class="author-bio-text">
       {author.startsWith('Lucas')
-        ? "Lucas Faria é estrategista de operações e editor do TechBriefing. Com foco em ROI operacional, Lucas documenta como integrar agentes, automações e LLMs em fluxos de trabalho reais para escalar a produtividade profissional."
+        ? `${author} é estrategista de operações e editor do TechBriefing. Com foco em ROI operacional, documenta como integrar agentes, automações e LLMs em fluxos de trabalho reais para escalar a produtividade profissional.`
         : "Especialista técnico focado em aplicação prática de IA, colaborando com o TechBriefing para entregar análises baseadas em testes reais e implementações de mercado."}
     </p>
     <div class="author-bio-links">

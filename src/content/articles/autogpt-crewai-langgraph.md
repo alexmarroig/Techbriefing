@@ -21,6 +21,9 @@ Um guia editorial para escolher frameworks de agentes de IA com base em maturida
 
 Mas com o crescimento do ecossistema, surge a dúvida: qual framework escolher? Neste artigo, dissecaremos os três principais pilares de desenvolvimento de agentes e quando você deve usar cada um deles.
 
+
+![Comparativo de Agentes de IA](https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200)
+
 ## O declínio do AutoGPT: Deixando de lado a autonomia irrestrita
 
 Quando o AutoGPT surgiu, a promessa era maravilhosa: "Dê um objetivo de alto nível, e a IA fará tudo sozinha". A realidade, no entanto, foi dura. Agentes que operam em loops infinitos sem restrições provaram ser propensos a alucinações, alto custo de tokens e baixa confiabilidade para operações críticas.
@@ -50,6 +53,18 @@ O LangGraph, mantido pela equipe do LangChain, tornou-se o padrão ouro para age
 O LangGraph exige um conhecimento maior de arquitetura de software, mas recompensa com robustez absoluta.
 
 > **Mergulhe fundo na construção de grafos:** Leia nosso [Guia Definitivo do LangGraph](/artigos/langgraph-guia-completo-agentes-python).
+
+
+## Tabela Comparativa: AutoGPT vs CrewAI vs LangGraph
+
+| Funcionalidade / Framework | AutoGPT | CrewAI | LangGraph |
+|---|---|---|---|
+| **Abordagem** | Autônomo irrestrito | Multi-agente hierárquico | Grafos e Máquinas de Estado |
+| **Curva de Aprendizado** | Baixa (pronto pra uso) | Média (Python básico) | Alta (Arquitetura de software) |
+| **Previsibilidade** | Muito Baixa | Média / Alta | Muito Alta |
+| **Melhor Caso de Uso** | Scripts e automações rápidas | Marketing, Research, Fluxos claros | Sistemas Enterprise, SaaS, Backend |
+| **Controle de Estado** | Não possui | Via Tarefas | Via StateGraph (Memória persistente) |
+
 
 ## Conclusão: Matriz de Decisão
 

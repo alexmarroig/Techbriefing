@@ -143,6 +143,15 @@ O agente recebe a proposta, lê o documento, analisa pontos-chave, verifica se e
 
 O resultado do multi-agente será de qualidade superior, mas custará 4-5x mais em tokens e levará mais tempo para configurar.
 
+
+## Comparativo Direto: MULTI-AGENTE vs AGENTE-UNICO
+
+| Critério | MULTI-AGENTE | AGENTE-UNICO |
+|---|---|---|
+| **Foco Principal** | Analisar caso a caso | Analisar caso a caso |
+| **Curva de Aprendizado** | Relativa | Relativa |
+| **Custo-benefício** | Depende do escopo | Depende do escopo |
+
 ## Conclusão: simples é melhor (até não ser)
 
 A maioria dos casos de uso em negócios começa melhor com agente único. É mais rápido de implementar, mais barato de operar e mais fácil de manter. Multi-agente deve ser considerado quando você já tem um agente único funcionando e identifica limitações específicas que somente multi-agente resolve.
