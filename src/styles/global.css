@@ -296,6 +296,8 @@ html:not([data-theme]) .theme-icon-sun{display:block}
 .hero-actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap;position:relative;z-index:50;}
 /* Hero bottom bar */
 .hero-bar{
+  position: relative;
+  z-index: 10;
   margin-top:72px;
   border-top:1px solid var(--line-s);
   display:grid;grid-template-columns:repeat(4,1fr);
