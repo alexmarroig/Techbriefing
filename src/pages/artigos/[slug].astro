@@ -310,7 +310,7 @@ if (faqJsonLd) schemas.push(faqJsonLd);
   .seo-content :global(p) {
     margin: 0 0 22px;
   }
-  .seo-content :global(a) {
+  .seo-content :global(a:not(.btn)) {
     color: var(--amber);
     text-decoration: underline;
     text-underline-offset: 4px;
@@ -385,7 +385,6 @@ if (faqJsonLd) schemas.push(faqJsonLd);
     letter-spacing: -0.02em;
   }
   .article-product-nudge p {
-  .article-product-nudge p {
     margin: 12px 0 16px;
     color: #a1a1aa;
     font-size: 14px;
@@ -409,9 +408,8 @@ if (faqJsonLd) schemas.push(faqJsonLd);
   }
   .article-nudge-primary {
     flex: 1;
-    color: oklch(0.13 0.01 45);
-    background: var(--amber);
-  }
+    color: oklch(0.13 0.01 45) !important;
+    background: var(--amber) !important;
   }
   .article-nudge-secondary {
     padding: 0 14px;
