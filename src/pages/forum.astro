@@ -24,7 +24,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </header>
 
     <section class="forum-general-chat">
-      <div class="container" style="max-width: 800px;">
+      <div class="container" style="max-width: 800px; margin: 0 auto;">
         <h2>Mural de Recados</h2>
         <p style="margin-bottom: 32px; color: var(--text-muted); font-size: 16px;">
           Quer apenas deixar um olá ou dar um feedback rápido? Use o chat geral abaixo (conectado via sua conta do GitHub).
@@ -124,5 +124,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .forum-general-chat h2 {
     font-size: 28px;
     margin-bottom: 12px;
+    text-align: center;
+  }
+  .forum-general-chat p {
+    text-align: center;
   }
 </style>
