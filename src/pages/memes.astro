@@ -31,6 +31,21 @@ const memes = [
     src: '/images/memes/meme6.png',
     pt: 'Git Push --force na Sexta',
     en: 'Git Push --force on Friday'
+  },
+  {
+    src: '/images/memes/meme7.png',
+    pt: 'Resolvi 1 bug, ganhei 99',
+    en: 'Fixed 1 bug, got 99 more'
+  },
+  {
+    src: '/images/memes/meme8.png',
+    pt: 'CSS é fácil',
+    en: 'CSS is easy'
+  },
+  {
+    src: '/images/memes/meme9.png',
+    pt: 'Meu código de 6 meses atrás',
+    en: 'My code from 6 months ago'
   }
 ];
 
@@ -38,7 +53,7 @@ const seoDescription = "A maior galeria de memes de TI, programação, inteligê
 ---
 
 <BaseLayout 
-  title="Humor Tech & Memes de IA | Tech Briefing" 
+  title="/dev/null | Memes & Humor Tech" 
   description={seoDescription} 
   type="website"
   image="/images/memes/meme1.png"
@@ -46,10 +61,10 @@ const seoDescription = "A maior galeria de memes de TI, programação, inteligê
 >
   <main class="memes-page">
     <header class="memes-hero">
-      <div class="container">
-        <h1>Humor Tech & IA 🤖</h1>
+      <div class="wrap">
+        <h1>/dev/null 🗑️</h1>
         <p class="hero-subtitle">
-          Um respiro cômico para a comunidade. Porque se a gente não rir do código legado, a gente chora.
+          Um repositório cômico de dores diárias. Afinal, se a gente não rir do <code>console.log("socorro")</code>, a gente chora.
         </p>
         
         <div class="lang-toggle-wrap">
@@ -62,7 +77,7 @@ const seoDescription = "A maior galeria de memes de TI, programação, inteligê
     </header>
 
     <section class="memes-grid-section">
-      <div class="container">
+      <div class="wrap">
         <div class="masonry-grid" id="memes-container" data-current-lang="pt">
           {memes.map(meme => (
             <div class="meme-card">
@@ -75,8 +90,8 @@ const seoDescription = "A maior galeria de memes de TI, programação, inteligê
         </div>
         
         <div class="submit-meme-box">
-          <p>Fez um meme bom e quer colocar aqui?</p>
-          <a href="/forum" class="btn btn-fill">Mande no Fórum</a>
+          <p>Uncaught Exception: Meme muito bom, quer commitar ele aqui?</p>
+          <a href="/forum" class="btn btn-fill"><code>git push --forum</code></a>
         </div>
       </div>
     </section>
@@ -128,6 +143,7 @@ const seoDescription = "A maior galeria de memes de TI, programação, inteligê
     margin-bottom: 16px;
     font-size: clamp(32px, 5vw, 48px);
     letter-spacing: -0.02em;
+    font-family: var(--mono);
   }
   .hero-subtitle {
     max-width: 600px;
@@ -136,6 +152,12 @@ const seoDescription = "A maior galeria de memes de TI, programação, inteligê
     color: var(--text-muted);
     line-height: 1.6;
     margin-bottom: 32px;
+  }
+  .hero-subtitle code {
+    background: var(--bg-3);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
   }
   
   .lang-toggle-wrap {
@@ -176,7 +198,7 @@ const seoDescription = "A maior galeria de memes de TI, programação, inteligê
     padding: 40px 0;
   }
 
-  .memes-grid-section .container {
+  .memes-grid-section .wrap {
     max-width: 1150px;
   }
 
@@ -244,8 +266,6 @@ const seoDescription = "A maior galeria de memes de TI, programação, inteligê
     font-family: var(--sans);
   }
 
-
-
   .submit-meme-box {
     margin: 0 auto;
     max-width: 500px;
@@ -260,5 +280,11 @@ const seoDescription = "A maior galeria de memes de TI, programação, inteligê
     margin-bottom: 16px;
     font-weight: 500;
     color: var(--text-muted);
+  }
+  .submit-meme-box a code {
+    font-size: 1.1em;
+    font-weight: 600;
+  }
+</style>lor: var(--text-muted);
   }
 </style>
