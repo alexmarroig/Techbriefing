@@ -3257,7 +3257,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;o
   margin:0;
   padding:58px 22px 22px;
   white-space:pre-wrap;
-  color:var(--text-2);
+  color:rgba(255,255,255,0.85);
   font-size:14px;
   line-height:1.7;
 }
