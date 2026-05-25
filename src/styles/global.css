@@ -4402,6 +4402,18 @@ html[data-theme="light"] .hero{
   .nl-strip-input{width:100%}
   html[data-theme="light"] .btn-fill{color:#000}
   html[data-theme="light"] .btn-fill:hover{color:#000}
+
+html[data-theme="light"] .btn-stroke {
+  color: #000;
+  border-color: rgba(0,0,0,0.1);
+  background: rgba(0,0,0,0.03);
+}
+html[data-theme="light"] .btn-stroke:hover {
+  color: var(--amber);
+  border-color: var(--amber);
+  background: rgba(255, 92, 0, 0.05);
+}
+
   .footer-top{grid-template-columns:1fr}
   .cat-hero-title{font-size:clamp(52px,12vw,80px)}
   .nav-links{display:none}

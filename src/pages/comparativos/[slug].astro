@@ -5,8 +5,9 @@ import { client } from '../../sanity/lib/client';
 
 export async function getStaticPaths() {
   const comparativos = await client.fetch(`*[_type == "comparativo"]{ "slug": slug.current }`);
-  return comparativos.map((entry) => ({
-    params: { slug: entry.slug },
+  const uniqueSlugs = [...new Set(comparativos.map(c => c.slug))];
+  return uniqueSlugs.map((slug) => ({
+    params: { slug },
   }));
 }
 

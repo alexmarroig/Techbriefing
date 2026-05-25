@@ -157,7 +157,7 @@ function App({ articles = [] }){
   const [hovered,setHovered]=React.useState(null);
   const filtered=ARTICLES.filter(a=>{
     const matchCat=cat==='Todos'||a.cat===cat;
-    const matchQ=!query||a.title?.toLowerCase().includes(query.toLowerCase())||a.excerpt?.toLowerCase().includes(query.toLowerCase());
+    const matchQ=!query||(a.title||'').toLowerCase().includes(query.toLowerCase())||(a.excerpt||'').toLowerCase().includes(query.toLowerCase());
     return matchCat&&matchQ;
   });
 
