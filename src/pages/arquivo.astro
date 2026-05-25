@@ -2,11 +2,20 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ArquivoPage from '../components/pages/ArquivoPage.jsx';
 import { getCollection } from 'astro:content';
+import { client } from '../sanity/lib/client';
+
+const fetchedArticles = await client.fetch(`*[_type == "article"]`);
+const sanityArticles = fetchedArticles.map((entry) => ({ 
+  type: 'article', 
+  slug: entry.slug.current, 
+  href: `/artigos/${entry.slug.current}`, 
+  ...entry 
+}));
 
 const articles = [
-  ...(await getCollection('articles')).map((entry) => ({ type: 'article', slug: entry.id, href: `/artigos/${entry.id}`, ...entry.data })),
+  ...sanityArticles,
   ...(await getCollection('comparativos')).map((entry) => ({ type: 'comparativo', slug: entry.id, href: `/comparativos/${entry.id}`, ...entry.data })),
-].sort((a, b) => b.date.valueOf() - a.date.valueOf());
+].sort((a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf());
 ---
 
 <BaseLayout title="Arquivo de Artigos e Análises de IA | Tech Briefing" description="Explore o arquivo editorial do Tech Briefing com artigos, guias e comparativos." active="Artigos">

@@ -1,20 +1,22 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getCollection, render } from 'astro:content';
+import { client } from '../../sanity/lib/client';
+import PortableTextRenderer from '../../components/PortableTextRenderer.jsx';
 import AuthorBio from '../../components/AuthorBio.astro';
 
-export function getStaticPaths() {
-  return getCollection('articles').then((entries) =>
-    entries.map((entry) => ({
-      params: { slug: entry.id },
-      props: { entry },
-    })),
-  );
+export async function getStaticPaths() {
+  const articles = await client.fetch(`*[_type == "article"]{ "slug": slug.current }`);
+  return articles.map((article) => ({
+    params: { slug: article.slug },
+  }));
 }
 
-const { entry } = Astro.props;
-const { title, description, image, category, author, date, readTime, tags, faq = [] } = entry.data;
-const { Content } = await render(entry);
+const { slug } = Astro.params;
+const entry = await client.fetch(`*[_type == "article" && slug.current == $slug][0]`, { slug });
+
+if (!entry) return Astro.redirect('/404');
+
+const { title, description, image, category, author, date, readTime, tags, faq = [], body } = entry;
 const formattedDate = new Intl.DateTimeFormat('pt-BR', {
   day: '2-digit',
   month: 'short',
@@ -118,7 +120,7 @@ if (faqJsonLd) schemas.push(faqJsonLd);
 
       <div class="seo-layout">
         <div class="seo-content">
-          <Content />
+          {body ? <PortableTextRenderer value={body} /> : null}
           <AuthorBio author={author} />
 
           <div class="giscus-container" style="margin-top: 64px;">

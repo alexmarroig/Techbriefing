@@ -2,14 +2,14 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import IndexPage from '../components/pages/IndexPage.jsx';
 import { getCollection } from 'astro:content';
+import { client } from '../sanity/lib/client';
 
-const articles = (await getCollection('articles'))
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .map((entry) => ({
-    slug: entry.id,
-    href: `/artigos/${entry.id}`,
-    ...entry.data,
-  }));
+const fetchedArticles = await client.fetch(`*[_type == "article"] | order(date desc)`);
+const articles = fetchedArticles.map((entry) => ({
+  slug: entry.slug.current,
+  href: `/artigos/${entry.slug.current}`,
+  ...entry,
+}));
 
 const tools = (await getCollection('tools')).map((entry) => ({
   slug: entry.id,
