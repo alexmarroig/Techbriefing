@@ -191,6 +191,70 @@ export const MANUALS = [
     ],
     mistakes: ['Vender IA genérica', 'Prometer automação milagrosa', 'Não definir limite de revisão'],
   },
+  {
+    slug: 'como-aparecer-no-chatgpt-e-google-ai',
+    category: 'SEO e AIO',
+    title: 'Como aparecer no ChatGPT e no Google AI',
+    description: 'Um manual prático para estruturar conteúdo que possa ser entendido, citado e recomendado por buscadores com IA.',
+    outcome: 'Publicar páginas mais claras para Google, ChatGPT, Gemini, Perplexity e leitores humanos.',
+    tools: ['Google Search Console', 'ChatGPT', 'Gemini', 'Perplexity', 'Schema Markup'],
+    steps: [
+      'Escolha uma pergunta específica com intenção real de busca.',
+      'Responda a pergunta principal nos primeiros parágrafos.',
+      'Use subtítulos em formato de pergunta e listas de passos.',
+      'Adicione FAQ, autoria, data, fontes e links internos.',
+      'Teste se ChatGPT ou Gemini conseguem resumir sua página com clareza.',
+    ],
+    mistakes: ['Escrever introdução genérica demais', 'Não mostrar autoria e fontes', 'Publicar sem links internos para páginas pilar'],
+  },
+  {
+    slug: 'como-usar-google-ai-mode-para-pesquisa',
+    category: 'SEO e AIO',
+    title: 'Como usar Google AI Mode para pesquisa',
+    description: 'Como usar busca com IA para encontrar ideias, comparar ferramentas, validar pautas e transformar pesquisas em conteúdo melhor.',
+    outcome: 'Sair com um processo de pesquisa mais rápido para artigos, guias, reviews e produtos digitais.',
+    tools: ['Google AI Mode', 'Gemini', 'Perplexity', 'Google Trends', 'Search Console'],
+    steps: [
+      'Comece com uma pergunta ampla e peça subtemas relacionados.',
+      'Procure dúvidas, comparações, preços, riscos e alternativas.',
+      'Valide a pauta no Google Trends e no Search Console.',
+      'Organize o artigo em resposta rápida, passo a passo, exemplos e FAQ.',
+      'Inclua fontes originais quando a pauta envolver notícia ou lançamento.',
+    ],
+    mistakes: ['Confiar em resposta sem fonte', 'Copiar estrutura genérica', 'Ignorar intenção de busca antes de escrever'],
+  },
+  {
+    slug: 'como-criar-video-com-ia-veo-kling-runway',
+    category: 'Vídeo viral',
+    title: 'Como criar vídeo com IA usando Veo, Kling e Runway',
+    description: 'Pipeline para criar vídeos curtos e realistas com IA, usando roteiro, cenas, prompts, edição e teste de retenção.',
+    outcome: 'Criar um vídeo curto publicável com visual forte, legenda e chamada para ação.',
+    tools: ['Veo', 'Kling', 'Runway', 'Luma', 'CapCut'],
+    steps: [
+      'Escreva um gancho visual de 3 segundos.',
+      'Divida o vídeo em cenas de 4 a 8 segundos.',
+      'Gere cada cena separadamente com estilo consistente.',
+      'Edite ritmo, legenda, música e CTA no CapCut ou editor similar.',
+      'Publique duas versões com aberturas diferentes e compare retenção.',
+    ],
+    mistakes: ['Gerar vídeo longo de uma vez', 'Não manter personagem e estilo', 'Publicar sem legenda legível no celular'],
+  },
+  {
+    slug: 'como-montar-stack-ia-para-negocios',
+    category: 'Renda com IA',
+    title: 'Como montar uma stack de IA para negócios',
+    description: 'Como escolher ferramentas de IA para conteúdo, atendimento, vendas, automação, dados e criação sem pagar assinatura demais.',
+    outcome: 'Montar uma pilha enxuta de ferramentas para operar melhor sem desperdiçar orçamento.',
+    tools: ['ChatGPT', 'Claude', 'n8n', 'Make', 'Canva', 'Perplexity'],
+    steps: [
+      'Liste as tarefas que mais consomem tempo no negócio.',
+      'Separe por categoria: conteúdo, vendas, atendimento, dados e operação.',
+      'Escolha uma ferramenta principal por categoria.',
+      'Teste custo real por entrega aprovada, não só mensalidade.',
+      'Revise a stack a cada 30 dias e corte ferramentas duplicadas.',
+    ],
+    mistakes: ['Assinar tudo por curiosidade', 'Não medir uso real', 'Escolher ferramenta antes de mapear processo'],
+  },
 ];
 
 export const MANUAL_TRACKS = [
@@ -215,6 +279,17 @@ export const MANUAL_TRACKS = [
       'videos-virais-ia-bichos-cantando',
       'como-criar-cortes-virais-com-ia',
       'como-gerar-videos-longos-com-ia',
+      'como-criar-video-com-ia-veo-kling-runway',
+    ],
+  },
+  {
+    id: 'seo-aio',
+    label: 'SEO e AIO',
+    title: 'Aparecer em buscas, respostas de IA e motores generativos',
+    outcome: 'Estruturar conteúdo para ser encontrado por Google, ChatGPT, Gemini, Perplexity e leitores que querem resposta direta.',
+    manualSlugs: [
+      'como-aparecer-no-chatgpt-e-google-ai',
+      'como-usar-google-ai-mode-para-pesquisa',
     ],
   },
   {
@@ -242,6 +317,7 @@ export const MANUAL_TRACKS = [
     manualSlugs: [
       'como-montar-newsletter-diaria-com-ia',
       'como-vender-servicos-com-ia',
+      'como-montar-stack-ia-para-negocios',
     ],
   },
 ];

@@ -13,6 +13,9 @@ Idioma principal: pt-BR
 - [Home](https://www.techbriefing.com.br/): visão editorial, destaques e caminhos principais do site.
 - [Arquivo de artigos](https://www.techbriefing.com.br/arquivo/): notícias, análises rápidas, guias e conteúdos evergreen.
 - [Guias e manuais](https://www.techbriefing.com.br/guias/): tutoriais práticos de IA, automação, vídeo, voz, agentes, apps e ferramentas.
+- [Manual: como aparecer no ChatGPT e no Google AI](https://www.techbriefing.com.br/guias/como-aparecer-no-chatgpt-e-google-ai/): guia AIO para respostas de IA e busca generativa.
+- [Manual: como criar vídeo com IA usando Veo, Kling e Runway](https://www.techbriefing.com.br/guias/como-criar-video-com-ia-veo-kling-runway/): pipeline de vídeo com IA para conteúdo e anúncios.
+- [Manual: como montar uma stack de IA para negócios](https://www.techbriefing.com.br/guias/como-montar-stack-ia-para-negocios/): escolha de ferramentas por tarefa e orçamento.
 - [Prompts](https://www.techbriefing.com.br/prompts/): biblioteca gratuita de prompts para negócios, conteúdo, vendas, automação, análise e criação.
 - [Ferramentas](https://www.techbriefing.com.br/ferramentas/): seleção e análise de ferramentas de IA e automação.
 - [Ebooks e frameworks](https://www.techbriefing.com.br/ebooks/): produtos digitais e materiais premium.
@@ -20,6 +23,10 @@ Idioma principal: pt-BR
 
 ## Artigos recentes importantes
 
+- [Radar Tech 2026-05-25](https://www.techbriefing.com.br/artigos/radar-tech-2026-05-25/): curadoria diária com movimentos de IA, agentes e tecnologia.
+- [Tendências de IA mais quentes em 2026](https://www.techbriefing.com.br/artigos/tendencias-ia-mais-pesquisadas-2026/): mapa de temas pesquisados, oportunidades editoriais e aplicações de negócio.
+- [Melhores ferramentas de IA para vídeo](https://www.techbriefing.com.br/artigos/melhores-ferramentas-ia-video-hot-trends/): comparação prática de Runway, Kling, Veo, Pika e Luma.
+- [Google AI Mode e busca com IA](https://www.techbriefing.com.br/artigos/google-ai-mode-aio-busca-com-ia/): guia para estruturar conteúdo para respostas de IA.
 - [Radar Tech 2026-05-19](https://www.techbriefing.com.br/artigos/radar-tech-2026-05-19/): curadoria diária com movimentos de IA, agentes e tecnologia.
 - [Google aposta em agentes, não em chatbots](https://www.techbriefing.com.br/artigos/google-gemini-35-flash-agentes-operacionais/): análise prática sobre Gemini 3.5 Flash e a mudança de chatbots para agentes.
 - [OpenAI e Dell levam Codex para empresas](https://www.techbriefing.com.br/artigos/openai-dell-codex-enterprise-agentes-corporativos/): impacto de agentes de código em ambientes corporativos.
