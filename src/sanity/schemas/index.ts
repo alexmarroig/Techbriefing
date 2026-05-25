@@ -8,6 +8,7 @@ import app from './app'
 import prompt from './prompt'
 import manual from './manual'
 import pillar from './pillar'
+import glossario from './glossario'
 
 export const schemaTypes = [
   // Object types

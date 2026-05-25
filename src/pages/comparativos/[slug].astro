@@ -1,19 +1,21 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ComparativoPage from '../../components/pages/ComparativoPage.jsx';
-import { getCollection } from 'astro:content';
+import { client } from '../../sanity/lib/client';
 
-export function getStaticPaths() {
-  return getCollection('comparativos').then((entries) =>
-    entries.map((entry) => ({
-      params: { slug: entry.id },
-      props: { entry },
-    })),
-  );
+export async function getStaticPaths() {
+  const comparativos = await client.fetch(`*[_type == "comparativo"]{ "slug": slug.current }`);
+  return comparativos.map((entry) => ({
+    params: { slug: entry.slug },
+  }));
 }
 
-const { entry } = Astro.props;
-const { title, description, image, author, date, category, tools, faq } = entry.data;
+const { slug } = Astro.params;
+const entry = await client.fetch(`*[_type == "comparativo" && slug.current == $slug][0]`, { slug });
+
+if (!entry) return Astro.redirect('/404');
+
+const { title, description, image, author, date, category, tools, faq } = entry;
 const pageUrl = new URL(Astro.url.pathname, Astro.site ?? Astro.url).toString();
 const breadcrumbJsonLd = {
   '@context': 'https://schema.org',
@@ -32,13 +34,13 @@ const breadcrumbJsonLd = {
   image={image}
   active="Comparativo"
   type="article"
-  publishedTime={date.toISOString()}
-  modifiedTime={date.toISOString()}
+  publishedTime={date ? new Date(date).toISOString() : ''}
+  modifiedTime={date ? new Date(date).toISOString() : ''}
   author={author}
   category={category}
   tags={tools}
   faq={faq}
   jsonLd={[breadcrumbJsonLd]}
 >
-  <ComparativoPage entry={{ slug: entry.id, ...entry.data }} client:load />
+  <ComparativoPage entry={{ slug: slug, ...entry }} client:load />
 </BaseLayout>

@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import IndexPage from '../components/pages/IndexPage.jsx';
-import { getCollection } from 'astro:content';
 import { client } from '../sanity/lib/client';
 
 const fetchedArticles = await client.fetch(`*[_type == "article"] | order(date desc)`);
@@ -11,19 +10,22 @@ const articles = fetchedArticles.map((entry) => ({
   ...entry,
 }));
 
-const tools = (await getCollection('tools')).map((entry) => ({
-  slug: entry.id,
-  ...entry.data,
+const fetchedTools = await client.fetch(`*[_type == "tool"]`);
+const tools = fetchedTools.map((entry) => ({
+  slug: entry.slug.current,
+  ...entry,
 }));
 
-const apps = (await getCollection('apps')).map((entry) => ({
-  slug: entry.id,
-  ...entry.data,
+const fetchedApps = await client.fetch(`*[_type == "app"]`);
+const apps = fetchedApps.map((entry) => ({
+  slug: entry.slug.current,
+  ...entry,
 }));
 
-const ebooks = (await getCollection('ebooks')).map((entry) => ({
-  slug: entry.id,
-  ...entry.data,
+const fetchedEbooks = await client.fetch(`*[_type == "ebook"]`);
+const ebooks = fetchedEbooks.map((entry) => ({
+  slug: entry.slug.current,
+  ...entry,
 }));
 ---
 

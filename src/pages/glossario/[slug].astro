@@ -1,24 +1,26 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getCollection, render } from 'astro:content';
+import { client } from '../../sanity/lib/client';
+import PortableTextRenderer from '../../components/PortableTextRenderer.jsx';
 
-export function getStaticPaths() {
-  return getCollection('glossario').then((entries) =>
-    entries.map((entry) => ({
-      params: { slug: entry.id },
-      props: { entry },
-    })),
-  );
+export async function getStaticPaths() {
+  const glossarios = await client.fetch(`*[_type == "glossario"]{ "slug": slug.current }`);
+  return glossarios.map((entry) => ({
+    params: { slug: entry.slug },
+  }));
 }
 
-const { entry } = Astro.props;
-const { title, description, author, date } = entry.data;
-const { Content } = await render(entry);
-const formattedDate = new Intl.DateTimeFormat('pt-BR', {
+const { slug } = Astro.params;
+const entry = await client.fetch(`*[_type == "glossario" && slug.current == $slug][0]`, { slug });
+
+if (!entry) return Astro.redirect('/404');
+
+const { title, description, author, date, body } = entry;
+const formattedDate = date ? new Intl.DateTimeFormat('pt-BR', {
   day: '2-digit',
   month: 'short',
   year: 'numeric',
-}).format(date);
+}).format(new Date(date)) : '';
 const url = new URL(Astro.url.pathname, Astro.site ?? Astro.url).toString();
 const breadcrumbJsonLd = {
   '@context': 'https://schema.org',
@@ -36,8 +38,8 @@ const breadcrumbJsonLd = {
   description={description}
   active="Glossario"
   type="article"
-  publishedTime={date.toISOString()}
-  modifiedTime={date.toISOString()}
+  publishedTime={date ? new Date(date).toISOString() : ''}
+  modifiedTime={date ? new Date(date).toISOString() : ''}
   author={author}
   category="Glossário de IA"
   jsonLd={[breadcrumbJsonLd]}
@@ -53,12 +55,12 @@ const breadcrumbJsonLd = {
         <div class="seo-meta">
           <span>Por {author}</span>
           <span>&bull;</span>
-          <time datetime={date.toISOString()}>{formattedDate}</time>
+          <time datetime={date ? new Date(date).toISOString() : ''}>{formattedDate}</time>
         </div>
       </header>
 
       <div class="seo-content">
-        <Content />
+        {body ? <PortableTextRenderer value={body} /> : null}
       </div>
     </div>
   </article>

@@ -1,11 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import FerramentasPage from '../components/pages/FerramentasPage.jsx';
-import { getCollection } from 'astro:content';
+import { client } from '../sanity/lib/client';
 
-const tools = (await getCollection('tools')).map((entry) => ({
-  slug: entry.id,
-  ...entry.data,
+const fetchedTools = await client.fetch(`*[_type == "tool"]`);
+const tools = fetchedTools.map((entry) => ({
+  slug: entry.slug.current,
+  ...entry,
 }));
 ---
 
