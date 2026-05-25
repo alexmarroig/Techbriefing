@@ -142,11 +142,11 @@ function Sidebar(){
 function App({ articles = [] }){
   if (articles.length) {
     ARTICLES.splice(0, ARTICLES.length, ...articles.map((a, i)=>({
-      cat: a.category,
-      cv: a.category === 'Comparativo' ? '' : a.category.includes('Agentes') ? 'c' : 'a',
-      title: a.title,
-      excerpt: a.description,
-      date: new Date(a.date).toLocaleDateString('pt-BR', { day: '2-digit', month: 'short', year: 'numeric' }),
+      cat: a.category || 'Comparativo',
+      cv: a.category === 'Comparativo' ? '' : a.category?.includes('Agentes') ? 'c' : 'a',
+      title: a.title || 'Untitled',
+      excerpt: a.description || '',
+      date: a.date ? new Date(a.date).toLocaleDateString('pt-BR', { day: '2-digit', month: 'short', year: 'numeric' }) : '',
       rt: a.readTime,
       href: a.href,
       image: a.image,
@@ -157,7 +157,7 @@ function App({ articles = [] }){
   const [hovered,setHovered]=React.useState(null);
   const filtered=ARTICLES.filter(a=>{
     const matchCat=cat==='Todos'||a.cat===cat;
-    const matchQ=!query||a.title.toLowerCase().includes(query.toLowerCase())||a.excerpt.toLowerCase().includes(query.toLowerCase());
+    const matchQ=!query||a.title?.toLowerCase().includes(query.toLowerCase())||a.excerpt?.toLowerCase().includes(query.toLowerCase());
     return matchCat&&matchQ;
   });
 
