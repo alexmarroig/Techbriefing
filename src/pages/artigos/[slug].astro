@@ -21,7 +21,7 @@ const formattedDate = new Intl.DateTimeFormat('pt-BR', {
   day: '2-digit',
   month: 'short',
   year: 'numeric',
-}).format(date);
+}).format(new Date(date));
 const articleUrl = new URL(Astro.url.pathname, Astro.site ?? Astro.url).toString();
 const breadcrumbJsonLd = {
   '@context': 'https://schema.org',
