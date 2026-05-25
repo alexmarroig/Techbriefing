@@ -51,8 +51,8 @@ const articleJsonLd = {
       url: new URL('/favicon.ico', Astro.site ?? Astro.url).toString()
     }
   },
-  datePublished: date.toISOString(),
-  dateModified: date.toISOString(),
+  datePublished: new Date(date).toISOString(),
+  dateModified: new Date(date).toISOString(),
 };
 
 const faqJsonLd = faq && faq.length > 0 ? {
@@ -78,8 +78,8 @@ if (faqJsonLd) schemas.push(faqJsonLd);
   image={image}
   active="Artigo"
   type="article"
-  publishedTime={date.toISOString()}
-  modifiedTime={date.toISOString()}
+  publishedTime={new Date(date).toISOString()}
+  modifiedTime={new Date(date).toISOString()}
   author={author}
   category={category}
   tags={tags}
