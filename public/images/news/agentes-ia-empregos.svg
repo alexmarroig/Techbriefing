@@ -1,0 +1,27 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="675" fill="#070A0F"/>
+  <defs>
+    <radialGradient id="red" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(860 345) rotate(148) scale(590 390)">
+      <stop stop-color="#FF5E7A" stop-opacity=".62"/>
+      <stop offset=".52" stop-color="#342032" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#070A0F" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#red)"/>
+  <g stroke="#253142" opacity=".45">
+    <path d="M120 150h410M120 260h410M120 370h410M120 480h410"/>
+    <path d="M670 118h385M670 228h385M670 338h385M670 448h385"/>
+  </g>
+  <rect x="660" y="135" width="388" height="385" rx="40" fill="#101621" stroke="#344155"/>
+  <circle cx="780" cy="275" r="86" fill="#161F2B" stroke="#FFB061" stroke-width="5"/>
+  <path d="M725 380c34-42 78-63 131-63s96 21 130 63" stroke="#DCE7F3" stroke-width="20" stroke-linecap="round"/>
+  <circle cx="780" cy="250" r="38" fill="#DCE7F3"/>
+  <path d="M870 255h100M870 300h78M870 345h118" stroke="#FF5E7A" stroke-width="13" stroke-linecap="round"/>
+  <path d="M710 135l338 385" stroke="#FF5E7A" stroke-width="7" stroke-linecap="round" opacity=".82"/>
+  <text x="92" y="112" fill="#FF5E7A" font-family="Inter, Arial" font-size="24" font-weight="800" letter-spacing="6">AGENTES DE IA</text>
+  <text x="90" y="216" fill="#F7F5EF" font-family="Georgia, serif" font-size="70" font-weight="700">O primeiro</text>
+  <text x="90" y="296" fill="#F7F5EF" font-family="Georgia, serif" font-size="70" font-weight="700">trabalho que</text>
+  <text x="90" y="376" fill="#F7F5EF" font-family="Georgia, serif" font-size="70" font-weight="700">os agentes vao</text>
+  <text x="90" y="456" fill="#F7F5EF" font-family="Georgia, serif" font-size="70" font-weight="700">engolir</text>
+  <text x="92" y="535" fill="#C7D1DE" font-family="Inter, Arial" font-size="24">Nao e sobre cargo. E sobre tarefa repetida sem criterio.</text>
+</svg>

@@ -1,0 +1,28 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="675" fill="#070A0F"/>
+  <defs>
+    <radialGradient id="blue" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(750 290) rotate(135) scale(560 420)">
+      <stop stop-color="#42E8C8" stop-opacity=".55"/>
+      <stop offset=".52" stop-color="#283B68" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#070A0F" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#blue)"/>
+  <g stroke="#213044" opacity=".5">
+    <path d="M95 545h1010M95 130h1010"/>
+    <path d="M190 70v545M1008 70v545"/>
+  </g>
+  <rect x="690" y="120" width="350" height="420" rx="32" fill="#0F1620" stroke="#334357"/>
+  <rect x="725" y="170" width="280" height="56" rx="14" fill="#162231"/>
+  <rect x="725" y="260" width="118" height="118" rx="24" fill="#121B27" stroke="#42E8C8"/>
+  <rect x="887" y="260" width="118" height="118" rx="24" fill="#121B27" stroke="#FFB061"/>
+  <rect x="725" y="415" width="280" height="58" rx="18" fill="#FFB061"/>
+  <text x="755" y="456" fill="#0A0D12" font-family="Inter, Arial" font-size="23" font-weight="900">GERAR APP</text>
+  <path d="M755 198h200M760 317h45M918 317h45" stroke="#DDE8F6" stroke-width="12" stroke-linecap="round"/>
+  <text x="92" y="112" fill="#42E8C8" font-family="Inter, Arial" font-size="24" font-weight="800" letter-spacing="6">VIBE CODING</text>
+  <text x="90" y="216" fill="#F7F5EF" font-family="Georgia, serif" font-size="72" font-weight="700">A nova bolha</text>
+  <text x="90" y="300" fill="#F7F5EF" font-family="Georgia, serif" font-size="72" font-weight="700">de ouro:</text>
+  <text x="90" y="384" fill="#F7F5EF" font-family="Georgia, serif" font-size="72" font-weight="700">apps criados</text>
+  <text x="90" y="468" fill="#FFB061" font-family="Georgia, serif" font-size="72" font-style="italic">por prompt</text>
+  <text x="92" y="545" fill="#C8D3DE" font-family="Inter, Arial" font-size="24">O software ficou mais barato. A distribuicao ficou mais cruel.</text>
+</svg>

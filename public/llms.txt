@@ -23,6 +23,10 @@ Idioma principal: pt-BR
 
 ## Artigos recentes importantes
 
+- [Gemini Spark: o agente do Google que quer trabalhar enquanto você dorme](https://www.techbriefing.com.br/artigos/google-gemini-spark-agente-pessoal/): análise do novo agente 24/7 do Google e o impacto para produtividade, automação e negócios.
+- [Usar ChatGPT não é mais vantagem competitiva](https://www.techbriefing.com.br/artigos/chatgpt-nao-e-mais-vantagem-competitiva/): por que o diferencial agora está em transformar IA em processos e fluxos.
+- [O primeiro trabalho que agentes de IA vão engolir](https://www.techbriefing.com.br/artigos/primeiro-trabalho-que-agentes-ia-vao-engolir/): leitura prática sobre tarefas vulneráveis, futuro do trabalho e agentes.
+- [Apps criados por prompt em minutos](https://www.techbriefing.com.br/artigos/apps-por-prompt-nova-bolha-software/): análise sobre vibe coding, micro SaaS e a nova corrida de software com IA.
 - [Radar Tech 2026-05-25](https://www.techbriefing.com.br/artigos/radar-tech-2026-05-25/): curadoria diária com movimentos de IA, agentes e tecnologia.
 - [Tendências de IA mais quentes em 2026](https://www.techbriefing.com.br/artigos/tendencias-ia-mais-pesquisadas-2026/): mapa de temas pesquisados, oportunidades editoriais e aplicações de negócio.
 - [Melhores ferramentas de IA para vídeo](https://www.techbriefing.com.br/artigos/melhores-ferramentas-ia-video-hot-trends/): comparação prática de Runway, Kling, Veo, Pika e Luma.
