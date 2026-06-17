@@ -1,28 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ArquivoPage from '../components/pages/ArquivoPage.jsx';
-import { client } from '../sanity/lib/client';
+import { getMergedArchiveItems } from '../lib/articles';
 
-const fetchedArticles = await client.fetch(`*[_type == "article"]`);
-const sanityArticles = fetchedArticles.map((entry) => ({ 
-  type: 'article', 
-  slug: entry.slug.current, 
-  href: `/artigos/${entry.slug.current}`, 
-  ...entry 
-}));
-
-const fetchedComparativos = await client.fetch(`*[_type == "comparativo"]`);
-const sanityComparativos = fetchedComparativos.map((entry) => ({
-  type: 'comparativo',
-  slug: entry.slug.current,
-  href: `/comparativos/${entry.slug.current}`,
-  ...entry
-}));
-
-const articles = [
-  ...sanityArticles,
-  ...sanityComparativos,
-].sort((a, b) => new Date(b.date || 0).valueOf() - new Date(a.date || 0).valueOf());
+const articles = await getMergedArchiveItems();
 ---
 
 <BaseLayout title="Arquivo de Artigos e Análises de IA | Tech Briefing" description="Explore o arquivo editorial do Tech Briefing com artigos, guias e comparativos." active="Artigos">

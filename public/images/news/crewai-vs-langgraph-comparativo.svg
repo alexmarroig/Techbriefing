@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">CrewAI vs LangGraph: Qual o Melhor Framework para Agentes (2026)?</title>
+  <desc id="desc">Capa editorial Tech Briefing para crewai-vs-langgraph-comparativo.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#05070a"/>
+      <stop offset="0.55" stop-color="#0c1016"/>
+      <stop offset="1" stop-color="#12141b"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="68%" cy="38%" r="55%">
+      <stop offset="0" stop-color="hsl(190 86% 62% / .45)"/>
+      <stop offset=".48" stop-color="hsl(190 86% 48% / .12)"/>
+      <stop offset="1" stop-color="transparent"/>
+    </radialGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0v48" fill="none" stroke="#ffffff" stroke-opacity=".055"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <rect width="1200" height="675" fill="url(#grid)"/>
+  <rect width="1200" height="675" fill="url(#glow)"/>
+  <g opacity=".68" stroke="#22d3ee" stroke-width="2" fill="none">
+    <path d="M80 500 C220 420 270 560 410 470 S650 330 780 390 960 520 1120 410"/>
+    <path d="M830 95 h170 v80 h92"/>
+    <path d="M910 560 h-150 v-85 h-120"/>
+    <circle cx="1002" cy="175" r="7" fill="#22d3ee"/>
+    <circle cx="640" cy="475" r="7" fill="#22d3ee"/>
+  </g>
+  <g transform="translate(78 82)">
+    <rect x="0" y="0" width="180" height="38" rx="19" fill="#ffb15c" fill-opacity=".12" stroke="#ffb15c" stroke-opacity=".65"/>
+    <text x="20" y="25" fill="#ffb15c" font-family="JetBrains Mono, Consolas, monospace" font-size="15" font-weight="700" letter-spacing="2">AGENTES</text>
+  </g>
+  <g transform="translate(78 176)">
+    <text fill="#f7f4ee" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="64" letter-spacing="-2">
+      <tspan x="0" y="0">CrewAI vs LangGraph: Qual o Melhor</tspan>
+      <tspan x="0" y="74">Framework para Agentes (2026)?</tspan>
+    </text>
+  </g>
+  <g transform="translate(78 565)">
+    <text fill="#9ca3af" font-family="JetBrains Mono, Consolas, monospace" font-size="18" letter-spacing="1.4">TECH BRIEFING · IMAGES.UNSPLASH.COM</text>
+  </g>
+</svg>

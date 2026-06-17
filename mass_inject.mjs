@@ -1,3 +1,7 @@
+/**
+ * @deprecated Image injection is handled by `npm run curate:images`.
+ * Table injection logic may still be used manually if needed.
+ */
 import fs from 'fs';
 import path from 'path';
 

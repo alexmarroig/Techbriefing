@@ -1,0 +1,85 @@
+name: Daily News Article
+
+on:
+  schedule:
+    # 15:00 in Sao Paulo (UTC-3). Runs after the morning radar workflow.
+    - cron: '0 18 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-news-article
+  cancel-in-progress: false
+
+jobs:
+  publish-news-article:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      RADAR_TIMEZONE: America/Sao_Paulo
+      NEWS_SKIP_RADAR_TOP: 5
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate news article and curate cover
+        id: news
+        shell: bash
+        run: |
+          set +e
+          npm run news:article 2>&1 | tee news.log
+          news_status=${PIPESTATUS[0]}
+          set -e
+
+          SLUG=$(grep '^\[news\] slug=' news.log | tail -1 | cut -d= -f2- | tr -d '\r')
+          echo "slug=${SLUG}" >> "$GITHUB_OUTPUT"
+
+          if [ "$news_status" -ne 0 ]; then
+            echo "News article generation failed or skipped."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          if [ -n "$SLUG" ] && [ -f "src/content/articles/${SLUG}.md" ]; then
+            npm run curate:images -- --apply --slug "${SLUG}"
+            npm run og:images -- --slug "${SLUG}"
+          fi
+
+          npm run audit:images
+
+          if git diff --quiet -- src/content/articles public/images/news public/images/og public/assets/og-default.webp; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Build site
+        if: steps.news.outputs.changed == 'true'
+        run: npm run build
+
+      - name: Commit news article
+        if: steps.news.outputs.changed == 'true'
+        run: |
+          git config user.name "tech-briefing-bot"
+          git config user.email "actions@github.com"
+          git add src/content/articles public/images/news public/images/og public/assets/og-default.webp
+          git commit -m "Add daily news article (${{ steps.news.outputs.slug }})"
+          git push
+
+      - name: Nothing to publish
+        if: steps.news.outputs.changed != 'true'
+        run: echo "No new news article to publish today."

@@ -2,13 +2,9 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import IndexPage from '../components/pages/IndexPage.jsx';
 import { client } from '../sanity/lib/client';
+import { getMergedArticles } from '../lib/articles';
 
-const fetchedArticles = await client.fetch(`*[_type == "article"] | order(date desc)`);
-const articles = fetchedArticles.map((entry) => ({
-  slug: entry.slug.current,
-  href: `/artigos/${entry.slug.current}`,
-  ...entry,
-}));
+const articles = await getMergedArticles();
 
 const fetchedTools = await client.fetch(`*[_type == "tool"]`);
 const tools = fetchedTools.map((entry) => ({

@@ -6,7 +6,7 @@ author: "Lucas Andrade"
 date: 2026-05-12
 readTime: "7 min"
 featured: false
-image: "https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&q=80&w=1200"
+image: "/images/news/erro-automacoes-com-ia-quebram.svg"
 tags:
   - Automação com IA
   - Processos

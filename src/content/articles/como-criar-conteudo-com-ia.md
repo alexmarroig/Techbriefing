@@ -6,7 +6,7 @@ author: "Lucas Andrade"
 date: 2026-05-20
 readTime: "12 min"
 featured: false
-image: "/images/article-ai-content.png"
+image: "/images/news/como-criar-conteudo-com-ia.svg"
 tags:
   - Criação de Conteúdo
   - IA Generativa

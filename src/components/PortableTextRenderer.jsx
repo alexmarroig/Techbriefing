@@ -63,11 +63,11 @@ const components = {
   },
 }
 
-export default function PortableTextRenderer({ body }) {
-  if (!body) return null
+export default function PortableTextRenderer({ value }) {
+  if (!value) return null
   return (
     <div className="seo-content">
-      <PortableText value={body} components={components} />
+      <PortableText value={value} components={components} />
     </div>
   )
 }

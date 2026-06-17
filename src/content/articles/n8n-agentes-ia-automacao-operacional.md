@@ -6,7 +6,7 @@ author: "Lucas Andrade"
 date: 2026-05-20
 readTime: "16 min"
 featured: false
-image: "https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&q=80&w=1200"
+image: "/images/news/n8n-agentes-ia-automacao-operacional.svg"
 tags:
   - n8n
   - Automação

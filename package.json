@@ -10,7 +10,12 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "radar:tech": "node scripts/generate-tech-radar.mjs"
+    "radar:tech": "node scripts/generate-tech-radar.mjs",
+    "news:article": "node scripts/generate-news-article.mjs",
+    "curate:images": "node scripts/curate-article-images.mjs",
+    "audit:images": "node scripts/audit-images.mjs",
+    "og:images": "node scripts/generate-og-images.mjs",
+    "sync:sanity-images": "node scripts/sync-sanity-images.mjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.9",
@@ -37,6 +42,7 @@
     "@portabletext/block-tools": "^5.1.2",
     "gray-matter": "^4.0.3",
     "jsdom": "^29.1.1",
-    "marked": "^18.0.4"
+    "marked": "^18.0.4",
+    "sharp": "^0.34.2"
   }
 }

@@ -6,7 +6,7 @@ author: "Nexora Systems"
 date: 2026-05-25
 readTime: "10 min"
 featured: false
-image: "/images/video-ai-cover.png"
+image: "/images/news/melhores-ferramentas-ia-video-hot-trends.svg"
 tags:
   - Vídeo com IA
   - Runway

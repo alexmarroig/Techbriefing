@@ -6,7 +6,7 @@ author: "Lucas Andrade"
 date: 2026-05-13
 readTime: "6 min"
 featured: false
-image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1200"
+image: "/images/news/github-token-efficiency-agentic-workflows.svg"
 tags:
   - GitHub
   - Copilot

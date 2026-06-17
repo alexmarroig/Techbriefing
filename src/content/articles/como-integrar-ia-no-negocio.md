@@ -6,7 +6,7 @@ author: "Lucas Andrade"
 date: 2026-04-12
 readTime: "10 min"
 featured: true
-image: "/images/article-api-dev.png"
+image: "/images/news/como-integrar-ia-no-negocio.svg"
 tags:
   - IA Prática
   - Negócios

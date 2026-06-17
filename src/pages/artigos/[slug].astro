@@ -1,8 +1,10 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { client } from '../../sanity/lib/client';
+import { articleBySlugQuery } from '../../sanity/lib/queries';
 import PortableTextRenderer from '../../components/PortableTextRenderer.jsx';
 import AuthorBio from '../../components/AuthorBio.astro';
+import { resolveArticleImage, resolveOgImage } from '../../lib/articleImage';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -19,7 +21,7 @@ export async function getStaticPaths() {
 }
 
 const { slug } = Astro.params;
-const sanityEntry = await client.fetch(`*[_type == "article" && slug.current == $slug][0]`, { slug });
+const sanityEntry = await client.fetch(articleBySlugQuery, { slug });
 const localArticles = await getCollection('articles');
 const localEntry = localArticles.find((article) => article.id === slug);
 
@@ -30,7 +32,17 @@ const entry = sanityEntry ?? (localEntry ? {
 
 if (!entry) return Astro.redirect('/404');
 
-const { title, description, image, category, author, date, readTime, tags, faq = [], body } = entry;
+const { title, description, category, author, date, readTime, tags, faq = [], body } = entry;
+const image = resolveArticleImage({
+  slug,
+  image: entry.image,
+  title,
+  category,
+});
+const ogImage = resolveOgImage({
+  slug,
+  image: entry.image,
+});
 const localRender = localEntry && !sanityEntry ? await render(localEntry) : null;
 const LocalContent = localRender?.Content;
 const formattedDate = new Intl.DateTimeFormat('pt-BR', {
@@ -54,7 +66,7 @@ const articleJsonLd = {
   '@type': 'Article',
   headline: title,
   description: description,
-  image: image ? new URL(image, Astro.site ?? Astro.url).toString() : undefined,
+  image: ogImage ? new URL(ogImage, Astro.site ?? Astro.url).toString() : undefined,
   author: {
     '@type': 'Person',
     name: author,
@@ -91,7 +103,7 @@ if (faqJsonLd) schemas.push(faqJsonLd);
 <BaseLayout
   title={`${title} - Tech Briefing`}
   description={description}
-  image={image}
+  image={ogImage}
   active="Artigo"
   type="article"
   publishedTime={new Date(date).toISOString()}

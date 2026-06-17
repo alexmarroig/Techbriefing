@@ -6,7 +6,7 @@ author: "Thiago Mendes"
 date: 2026-05-12
 readTime: "6 min"
 featured: false
-image: "https://images.unsplash.com/photo-1580894732444-8ecbef79bd14?auto=format&fit=crop&q=80&w=1200"
+image: "/images/news/chatgpt-manual-agentes-ia.svg"
 tags:
   - ChatGPT
   - Agentes de IA

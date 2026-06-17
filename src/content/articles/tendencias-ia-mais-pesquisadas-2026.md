@@ -6,7 +6,7 @@ author: "Nexora Systems"
 date: 2026-05-25
 readTime: "11 min"
 featured: true
-image: "/images/article-ai-small-business.png"
+image: "/images/news/tendencias-ia-mais-pesquisadas-2026.svg"
 tags:
   - Tendências de IA
   - Agentes de IA

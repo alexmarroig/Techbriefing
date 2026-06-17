@@ -6,7 +6,7 @@ author: "Lucas Andrade"
 date: 2026-03-10
 readTime: "10 min"
 featured: false
-image: "https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&q=80&w=1200"
+image: "/images/news/como-criar-agente-ia-sem-codigo.svg"
 tags:
   - Agentes de IA
   - No-code

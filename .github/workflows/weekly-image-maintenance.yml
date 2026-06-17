@@ -1,0 +1,105 @@
+name: Weekly Image Maintenance
+
+on:
+  schedule:
+    # Domingo 10:00 Sao Paulo (UTC-3) -> 13:00 UTC
+    - cron: '0 13 * * 0'
+  workflow_dispatch:
+    inputs:
+      try_remote:
+        description: 'Tentar imagens RSS/OG (mais lento)'
+        type: boolean
+        default: false
+      sync_sanity:
+        description: 'Enviar imagens novas ao Sanity CDN'
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: weekly-image-maintenance
+  cancel-in-progress: false
+
+jobs:
+  curate-all-covers:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Audit images (before)
+        run: npm run audit:images
+
+      - name: Curate article covers
+        env:
+          TRY_REMOTE: ${{ github.event.inputs.try_remote == 'true' && '1' || '0' }}
+        run: |
+          if [ "$TRY_REMOTE" = "1" ]; then
+            npm run curate:images -- --apply
+          else
+            npm run curate:images -- --apply --skip-remote
+          fi
+
+      - name: Generate OG WebP images
+        run: npm run og:images
+
+      - name: Sync new images to Sanity
+        env:
+          SANITY_WRITE_TOKEN: ${{ secrets.SANITY_WRITE_TOKEN }}
+          PUBLIC_SANITY_PROJECT_ID: ${{ secrets.PUBLIC_SANITY_PROJECT_ID }}
+          PUBLIC_SANITY_DATASET: ${{ secrets.PUBLIC_SANITY_DATASET }}
+          SYNC_SANITY_INPUT: ${{ github.event.inputs.sync_sanity }}
+        run: |
+          if [ "$SYNC_SANITY_INPUT" = "false" ]; then
+            echo "Sanity sync disabled for this run."
+            exit 0
+          fi
+          if [ -z "$SANITY_WRITE_TOKEN" ]; then
+            echo "Skipping Sanity sync (SANITY_WRITE_TOKEN not configured)."
+            exit 0
+          fi
+          npm run sync:sanity-images -- --apply
+
+      - name: Audit images (after)
+        run: npm run audit:images
+
+      - name: Detect changes
+        id: changes
+        run: |
+          if git diff --quiet -- src/content/articles public/images/news public/images/radar public/images/og public/assets/og-default.webp scripts/image-mapping.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Build site
+        if: steps.changes.outputs.changed == 'true'
+        run: npm run build
+
+      - name: Commit curated images
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name "tech-briefing-bot"
+          git config user.email "actions@github.com"
+          git add src/content/articles public/images/news public/images/radar public/images/og public/assets/og-default.webp scripts/image-mapping.json
+          git commit -m "chore: weekly image curation and OG assets"
+          git push
+
+      - name: Nothing to update
+        if: steps.changes.outputs.changed != 'true'
+        run: echo "All article covers are already curated."

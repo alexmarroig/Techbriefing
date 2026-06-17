@@ -6,7 +6,7 @@ author: "Mariana Costa"
 date: 2026-05-13
 readTime: "6 min"
 featured: false
-image: "/images/article-news-tech-general.png"
+image: "/images/news/big-tech-capex-ia-725-bilhoes.svg"
 tags:
   - Big Tech
   - Capex

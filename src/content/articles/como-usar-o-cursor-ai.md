@@ -1,7 +1,7 @@
 ---
 title: "Como usar o Cursor AI: O guia prático para não-programadores"
 description: "Descubra como o Cursor AI está revolucionando o desenvolvimento de software, permitindo que qualquer pessoa crie aplicativos inteiros apenas conversando com a IA em português."
-image: "/images/cursor-ai-cover.png"
+image: "/images/news/como-usar-o-cursor-ai.svg"
 readTime: "9 min"
 date: 2026-05-24
 author: "Thiago Mendes"

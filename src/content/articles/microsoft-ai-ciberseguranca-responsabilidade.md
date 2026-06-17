@@ -6,7 +6,7 @@ author: "Lucas Andrade"
 date: 2026-05-13
 readTime: "6 min"
 featured: false
-image: "/images/article-api-dev.png"
+image: "/images/news/microsoft-ai-ciberseguranca-responsabilidade.svg"
 tags:
   - Microsoft
   - Segurança

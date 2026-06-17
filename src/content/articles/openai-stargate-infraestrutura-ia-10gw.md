@@ -6,7 +6,7 @@ author: "Lucas Andrade"
 date: 2026-05-13
 readTime: "6 min"
 featured: true
-image: "/images/article-strategy-business.png"
+image: "/images/news/openai-stargate-infraestrutura-ia-10gw.svg"
 tags:
   - OpenAI
   - Stargate

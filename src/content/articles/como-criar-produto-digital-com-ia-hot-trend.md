@@ -6,7 +6,7 @@ author: "Nexora Systems"
 date: 2026-05-25
 readTime: "12 min"
 featured: false
-image: "/images/article-strategy-business.png"
+image: "/images/news/como-criar-produto-digital-com-ia-hot-trend.svg"
 tags:
   - Produto digital
   - Renda com IA

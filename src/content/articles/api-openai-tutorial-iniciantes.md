@@ -6,7 +6,7 @@ author: "Lucas Andrade"
 date: 2026-04-25
 readTime: "8 min"
 featured: false
-image: "/images/openai-api-cover.png"
+image: "/images/news/api-openai-tutorial-iniciantes.svg"
 tags:
   - OpenAI
   - API

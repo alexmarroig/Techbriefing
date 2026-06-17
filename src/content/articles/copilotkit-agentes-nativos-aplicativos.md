@@ -6,7 +6,7 @@ author: "Mariana Costa"
 date: 2026-05-13
 readTime: "6 min"
 featured: false
-image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=1200"
+image: "/images/news/copilotkit-agentes-nativos-aplicativos.svg"
 tags:
   - CopilotKit
   - Agentes

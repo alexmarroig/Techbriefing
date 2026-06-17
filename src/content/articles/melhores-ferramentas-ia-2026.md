@@ -6,7 +6,7 @@ author: "Lucas Andrade"
 date: 2026-03-20
 readTime: "12 min"
 featured: true
-image: "/images/article-frameworks-comparison.png"
+image: "/images/news/melhores-ferramentas-ia-2026.svg"
 tags:
   - Ferramentas de IA
   - Software

@@ -6,7 +6,7 @@ author: "Lucas Andrade"
 date: 2026-05-13
 readTime: "6 min"
 featured: false
-image: "/images/article-agents-framework.png"
+image: "/images/news/moonshot-ai-2b-open-source-china.svg"
 tags:
   - Moonshot AI
   - Kimi

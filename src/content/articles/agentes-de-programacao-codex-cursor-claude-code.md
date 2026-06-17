@@ -6,7 +6,7 @@ author: "Nexora Systems"
 date: 2026-05-25
 readTime: "10 min"
 featured: false
-image: "/images/cursor-ai-cover.png"
+image: "/images/news/agentes-de-programacao-codex-cursor-claude-code.svg"
 tags:
   - Codex
   - Cursor

@@ -6,7 +6,7 @@ author: "Mariana Costa"
 date: 2026-05-13
 readTime: "6 min"
 featured: false
-image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200"
+image: "/images/news/anthropic-agentes-financeiros-claude.svg"
 tags:
   - Anthropic
   - Claude

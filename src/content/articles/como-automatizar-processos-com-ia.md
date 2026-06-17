@@ -6,7 +6,7 @@ author: "Lucas Andrade"
 date: 2026-03-25
 readTime: "11 min"
 featured: false
-image: "/images/article-automation-workflow.png"
+image: "/images/news/como-automatizar-processos-com-ia.svg"
 tags:
   - Automação
   - Processos

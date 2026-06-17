@@ -1,7 +1,7 @@
 ---
 title: "Como criar seu avatar na HeyGen em 5 minutos"
 description: "Economize horas de gravação e cenário. Aprenda o passo a passo para escanear seu rosto e voz no HeyGen e gerar vídeos infinitos a partir de scripts de texto."
-image: "/images/heygen-cover.png"
+image: "/images/news/como-criar-avatar-heygen.svg"
 readTime: "6 min"
 date: 2026-05-24
 author: "Lucas Andrade"

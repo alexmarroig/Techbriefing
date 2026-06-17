@@ -6,7 +6,7 @@ author: "Lucas Andrade"
 date: 2026-05-01
 readTime: "8 min"
 featured: false
-image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=1200"
+image: "/images/news/make-vs-zapier-comparativo.svg"
 tags:
   - Make
   - Zapier

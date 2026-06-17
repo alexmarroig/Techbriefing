@@ -6,7 +6,7 @@ author: "Lucas Andrade"
 date: 2026-05-20
 readTime: "15 min"
 featured: false
-image: "https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?auto=format&fit=crop&q=80&w=1200"
+image: "/images/news/crewai-times-agentes-ia-python.svg"
 tags:
   - CrewAI
   - Python

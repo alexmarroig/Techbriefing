@@ -6,7 +6,7 @@ author: "Mariana Costa"
 date: 2026-05-13
 readTime: "6 min"
 featured: false
-image: "/images/article-autonomous-agents.png"
+image: "/images/news/meta-compra-ari-robos-humanoides.svg"
 tags:
   - Meta
   - Robótica

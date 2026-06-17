@@ -6,7 +6,7 @@ author: "Mariana Costa"
 date: 2026-05-13
 readTime: "6 min"
 featured: true
-image: "https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?auto=format&fit=crop&q=80&w=1200"
+image: "/images/news/microsoft-frontier-firms-modelo-operacional-ia.svg"
 tags:
   - Microsoft
   - Agentes de IA

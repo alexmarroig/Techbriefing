@@ -6,7 +6,7 @@ author: "Mariana Costa"
 date: 2026-04-23
 readTime: "12 min"
 featured: true
-image: "/images/article-prompt-engineering.png"
+image: "/images/news/prompt-engineering-guia-completo.svg"
 tags:
   - Prompt Engineering
   - IA Prática

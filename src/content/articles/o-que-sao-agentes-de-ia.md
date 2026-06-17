@@ -6,7 +6,7 @@ author: "Lucas Andrade"
 date: 2026-05-23
 readTime: "8 min"
 featured: true
-image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1200"
+image: "/images/news/o-que-sao-agentes-de-ia.svg"
 tags:
   - Agentes de IA
   - Inteligência Artificial

@@ -6,7 +6,7 @@ author: "Lucas Andrade"
 date: 2026-04-08
 readTime: "11 min"
 featured: false
-image: "/images/rag-database-cover.png"
+image: "/images/news/rag-explicado-guia-pratico.svg"
 tags:
   - RAG
   - IA Prática

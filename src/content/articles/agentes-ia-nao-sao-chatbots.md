@@ -6,7 +6,7 @@ author: "Thiago Mendes"
 date: 2026-05-12
 readTime: "8 min"
 featured: false
-image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200"
+image: "/images/news/agentes-ia-nao-sao-chatbots.svg"
 tags:
   - Agentes de IA
   - Chatbots

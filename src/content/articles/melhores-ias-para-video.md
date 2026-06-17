@@ -1,7 +1,7 @@
 ---
 title: "Quais as melhores IAs para criar vídeos: Comparativo Completo 2026"
 description: "Runway Gen-3, Sora, Luma Dream Machine, Kling ou Minimax? Destrinchamos as potências da geração de vídeo (text-to-video) para descobrir o melhor Custo-Benefício."
-image: "/images/video-ai-cover.png"
+image: "/images/news/melhores-ias-para-video.svg"
 readTime: "12 min"
 date: 2026-05-24
 author: "Thiago Mendes"

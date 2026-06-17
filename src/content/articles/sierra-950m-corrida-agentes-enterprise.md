@@ -6,7 +6,7 @@ author: "Lucas Andrade"
 date: 2026-05-13
 readTime: "8 min"
 featured: false
-image: "https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&q=80&w=1200"
+image: "/images/news/sierra-950m-corrida-agentes-enterprise.svg"
 tags:
   - Agentes enterprise
   - Customer experience

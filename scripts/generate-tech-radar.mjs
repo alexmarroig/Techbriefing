@@ -1,6 +1,8 @@
 import { mkdir, writeFile } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import path from 'node:path';
+import { renderRadarCover } from './lib/render-cover.mjs';
+import { extractRssImage } from './lib/resolve-image.mjs';
 
 const ROOT = process.cwd();
 const OUT_DIR = path.join(ROOT, 'src', 'content', 'articles');
@@ -87,14 +89,6 @@ function slugify(value) {
 
 function escapeYaml(value) {
   return String(value).replace(/"/g, '\\"');
-}
-
-function escapeXml(value) {
-  return String(value || '')
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
 }
 
 function getDomain(url) {
@@ -239,116 +233,6 @@ ${data.map(([label, value, desc]) => `    <div class="radar-signal-card">
 </div>`;
 }
 
-function renderRadarImage(items, date) {
-  const top = items[0];
-  const counts = signalCounts(items);
-  const max = Math.max(1, items.length);
-  const topTitle = escapeXml(translateAngle(top.title));
-  const dateLabel = escapeXml(date.iso);
-  const bars = [
-    ['AGENTES', counts.agents, '#22d3ee', '#0891b2'],
-    ['AUTOMACAO', counts.automation, '#ffb15f', '#ea580c'],
-    ['NEGOCIOS', counts.business, '#ff4ab8', '#db2777'],
-  ];
-
-  return `<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Radar Tech ${dateLabel}</title>
-  <desc id="desc">Painel editorial visual com principais notícias e ideias de tecnologia do dia.</desc>
-  <defs>
-    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(942 130) rotate(142) scale(820 560)">
-      <stop stop-color="#22d3ee" stop-opacity=".22"/>
-      <stop offset=".42" stop-color="#ffb15f" stop-opacity=".12"/>
-      <stop offset="1" stop-color="#02040a" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="hot" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#22d3ee"/>
-      <stop offset=".5" stop-color="#ffb15f"/>
-      <stop offset="1" stop-color="#ff4ab8"/>
-    </linearGradient>
-    <linearGradient id="card-stroke" x1="0" y1="0" x2="0" y2="1">
-      <stop stop-color="#334155" stop-opacity="0.5"/>
-      <stop offset="1" stop-color="#1e293b" stop-opacity="0.2"/>
-    </linearGradient>
-  </defs>
-  
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&amp;family=Space+Grotesk:wght@500;700&amp;family=JetBrains+Mono:wght@600;800&amp;display=swap');
-    .txt-title { font-family: 'Space Grotesk', -apple-system, sans-serif; font-weight: 700; }
-    .txt-body { font-family: 'Plus Jakarta Sans', -apple-system, sans-serif; font-weight: 700; }
-    .txt-mono { font-family: 'JetBrains Mono', monospace; font-weight: 800; }
-  </style>
-
-  <rect width="1200" height="675" fill="#030712"/>
-  <rect width="1200" height="675" fill="url(#glow)"/>
-  
-  <!-- Subtle Grid -->
-  <g opacity=".08">
-    <path d="M0 96H1200M0 192H1200M0 288H1200M0 384H1200M0 480H1200M0 576H1200" stroke="#4b5563" stroke-width="1"/>
-    <path d="M96 0V675M192 0V675M288 0V675M384 0V675M480 0V675M576 0V675M672 0V675M768 0V675M864 0V675M960 0V675M1056 0V675" stroke="#4b5563" stroke-width="1"/>
-  </g>
-  
-  <!-- Outer Frame -->
-  <rect x="72" y="60" width="1056" height="555" rx="24" fill="#090d16" fill-opacity="0.8" stroke="url(#card-stroke)" stroke-width="2"/>
-  
-  <!-- Header elements -->
-  <text x="112" y="122" fill="#ffb15f" class="txt-mono" font-size="14" letter-spacing="4">TECH BRIEFING / RADAR ${dateLabel}</text>
-  
-  <text x="112" y="195" fill="#f8fafc" class="txt-title" font-size="52" letter-spacing="-0.02em">3 ideias para aplicar</text>
-  <text x="112" y="250" fill="#94a3b8" class="txt-title" font-size="52" letter-spacing="-0.02em">antes que vire hype.</text>
-  
-  <!-- Headline box -->
-  <foreignObject x="112" y="295" width="610" height="115">
-    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family:'Plus Jakarta Sans', sans-serif; color:#f1f5f9; font-size:22px; line-height:1.45; font-weight:700; border-left:4px solid #22d3ee; padding-left:18px;">
-      ${topTitle}
-    </div>
-  </foreignObject>
-  
-  <!-- Progress Bars -->
-  <g transform="translate(112 458)">
-${bars.map(([label, value, color, colorDark], index) => {
-    const width = Math.max(58, Math.round((value / max) * 340));
-    const y = index * 48;
-    return `    <text x="0" y="${y + 16}" fill="#94a3b8" class="txt-mono" font-size="13" letter-spacing="2">${label}</text>
-    <rect x="140" y="${y}" width="360" height="20" rx="10" fill="#1e293b" />
-    <rect x="140" y="${y}" width="${width}" height="20" rx="10" fill="url(#grad-${index})"/>
-    <text x="524" y="${y + 16}" fill="#f8fafc" class="txt-mono" font-size="14" font-weight="800">${value}/${max}</text>
-    
-    <defs>
-      <linearGradient id="grad-${index}" x1="0" y1="0" x2="1" y2="0">
-        <stop stop-color="${color}"/>
-        <stop offset="1" stop-color="${colorDark}"/>
-      </linearGradient>
-    </defs>`;
-  }).join('\n')}
-  </g>
-  
-  <!-- Interactive Side Widget -->
-  <g transform="translate(780 164)">
-    <!-- Widget Container -->
-    <rect width="276" height="318" rx="24" fill="#0f172a" fill-opacity="0.6" stroke="url(#card-stroke)" stroke-width="1.5"/>
-    
-    <!-- Decorative Glowing Elements -->
-    <circle cx="138" cy="135" r="70" fill="#22d3ee" fill-opacity="0.03" filter="blur(20px)"/>
-    
-    <!-- Flow Graph -->
-    <path d="M68 214C108 150 168 154 208 74" stroke="url(#hot)" stroke-width="6" stroke-linecap="round"/>
-    
-    <!-- Node circles -->
-    <circle cx="68" cy="214" r="12" fill="#22d3ee" stroke="#090d16" stroke-width="2"/>
-    <circle cx="208" cy="74" r="12" fill="#ff4ab8" stroke="#090d16" stroke-width="2"/>
-    
-    <!-- Action Node -->
-    <circle cx="138" cy="144" r="36" fill="#0b0f19" stroke="#ffb15f" stroke-width="3"/>
-    
-    <!-- Little Action Bolt Icon inside Circle -->
-    <path d="M138 128 L128 146 H138 L134 160 L148 140 H138 Z" fill="#ffb15f" stroke="#ffb15f" stroke-width="1" stroke-linejoin="round"/>
-    
-    <text x="138" y="258" fill="#f8fafc" class="txt-title" font-size="24" text-anchor="middle">Ideia vira ação</text>
-    <text x="138" y="282" fill="#64748b" class="txt-body" font-size="13" text-anchor="middle">Prática diária de IA</text>
-  </g>
-</svg>`;
-}
-
 async function fetchJson(url) {
   const res = await fetch(url, { headers: { 'user-agent': 'TechBriefingRadar/1.0' } });
   if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
@@ -368,7 +252,8 @@ function parseRss(xml, sourceName) {
     const link = stripHtml(matchTag(block, 'link')) || matchAtomLink(block);
     const summary = stripHtml(matchTag(block, 'description') || matchTag(block, 'summary') || matchTag(block, 'content:encoded'));
     const pubDate = stripHtml(matchTag(block, 'pubDate') || matchTag(block, 'updated') || matchTag(block, 'published'));
-    return { title, url: link, summary, source: sourceName, publishedAt: pubDate };
+    const imageUrl = extractRssImage(block);
+    return { title, url: link, summary, source: sourceName, publishedAt: pubDate, imageUrl };
   }).filter((item) => item.title && item.url);
 }
 
@@ -545,7 +430,15 @@ async function main() {
     throw new Error(`Arquivo já existe: ${outputPath}. Use RADAR_OVERWRITE=1 para sobrescrever.`);
   }
 
-  await writeFile(imageOutputPath, renderRadarImage(allItems, date), 'utf8');
+  await writeFile(
+    imageOutputPath,
+    renderRadarCover({
+      title: translateAngle(allItems[0].title),
+      dateLabel: date.iso,
+      items: allItems,
+    }),
+    'utf8',
+  );
   await writeFile(outputPath, renderMarkdown(allItems, date, imagePublicPath), 'utf8');
 
   console.log(`[radar] ${allItems.length} itens selecionados.`);

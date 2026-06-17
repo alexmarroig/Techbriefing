@@ -6,7 +6,7 @@ author: "Lucas Andrade"
 date: 2026-04-15
 readTime: "9 min"
 featured: false
-image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=1200"
+image: "/images/news/multi-agente-vs-agente-unico.svg"
 tags:
   - Agentes de IA
   - Multi-agente

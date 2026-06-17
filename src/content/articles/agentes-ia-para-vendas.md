@@ -6,7 +6,7 @@ author: "Lucas Andrade"
 date: 2026-04-05
 readTime: "10 min"
 featured: false
-image: "https://images.unsplash.com/photo-1531297172864-742c65f84b65?auto=format&fit=crop&q=80&w=1200"
+image: "/images/news/agentes-ia-para-vendas.svg"
 tags:
   - Vendas
   - Agentes de IA

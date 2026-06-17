@@ -6,7 +6,7 @@ author: "Lucas Andrade"
 date: 2026-05-23
 readTime: "9 min"
 featured: true
-image: "https://images.unsplash.com/photo-1580894732444-8ecbef79bd14?auto=format&fit=crop&q=80&w=1200"
+image: "/images/news/ia-para-empresas.svg"
 tags:
   - IA Aplicada
   - Estratégia

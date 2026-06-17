@@ -17,7 +17,7 @@ const FEATURED = {
   date:'28 abr 2026',
   readTime:'11 min',
   href:'/artigos/como-criar-agente-ia-sem-codigo',
-  image:'/images/article-autonomous-agents.png',
+  image:'/images/editorial/automation-workflow.svg',
 };
 
 const ASIDE = [
@@ -86,7 +86,7 @@ const TOOLS = [
   {ico:'💻',name:'Cursor',desc:'O editor de código com IA que está mudando o desenvolvimento.',stars:'★★★★★',aff:false},
 ];
 
-const FALLBACK_ARTICLE_IMAGE = '/images/article-autonomous-agents.png';
+const FALLBACK_ARTICLE_IMAGE = '/images/editorial/tech-radar.svg';
 
 function formatArticleDate(date, opts = { day: '2-digit', month: 'short' }) {
   if (!date) return '';

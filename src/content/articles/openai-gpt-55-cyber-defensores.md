@@ -6,7 +6,7 @@ author: "Lucas Andrade"
 date: 2026-05-13
 readTime: "6 min"
 featured: true
-image: "/images/article-api-dev.png"
+image: "/images/news/openai-gpt-55-cyber-defensores.svg"
 tags:
   - OpenAI
   - Cibersegurança

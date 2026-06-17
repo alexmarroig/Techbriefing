@@ -1,7 +1,7 @@
 ---
 title: "Como usar o Claude 3.5 Sonnet: O melhor LLM para raciocínio corporativo"
 description: "Esqueça o ChatGPT para tarefas de alta complexidade. Descubra por que o Claude 3.5 Sonnet da Anthropic se tornou a ferramenta definitiva para análise de dados, programação e estruturação de documentos longos."
-image: "/images/claude-sonnet-cover.png"
+image: "/images/news/guia-claude-3-5-sonnet.svg"
 readTime: "8 min"
 date: 2026-05-24
 author: "Mariana Costa"

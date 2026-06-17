@@ -6,7 +6,7 @@ author: "Mariana Costa"
 date: 2026-05-13
 readTime: "6 min"
 featured: false
-image: "/images/article-strategy-business.png"
+image: "/images/news/pentagono-ai-redes-classificadas.svg"
 tags:
   - Pentágono
   - IA militar

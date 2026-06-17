@@ -6,7 +6,7 @@ author: "Nexora Systems"
 date: 2026-05-25
 readTime: "9 min"
 featured: false
-image: "/images/article-radar-tech-default.png"
+image: "/images/news/radar-hot-trends-ia-2026-guia-editorial.svg"
 tags:
   - Hot trends
   - Conteúdo com IA

@@ -6,7 +6,7 @@ author: "Mariana Costa"
 date: 2026-04-28
 readTime: "9 min"
 featured: false
-image: "/images/article-ai-small-business.png"
+image: "/images/news/ia-para-pequenas-empresas.svg"
 tags:
   - Pequenas Empresas
   - IA Prática

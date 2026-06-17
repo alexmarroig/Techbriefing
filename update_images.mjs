@@ -1,3 +1,7 @@
+/**
+ * @deprecated Use `npm run curate:images` instead.
+ * This script injected generic Unsplash URLs without editorial curation.
+ */
 import fs from 'fs';
 import path from 'path';
 

@@ -6,7 +6,7 @@ author: "Lucas Andrade"
 date: 2026-05-20
 readTime: "15 min"
 featured: true
-image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=1200"
+image: "/images/news/comparativo-frameworks-agentes-ia-2026.svg"
 tags:
   - Agentes de IA
   - LangGraph

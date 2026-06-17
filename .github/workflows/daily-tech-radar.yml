@@ -34,20 +34,35 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Generate radar
+      - name: Generate radar and curate cover
         id: radar
         shell: bash
         run: |
           set +e
-          npm run radar:tech
-          status=$?
-          set -e
+          DATE=$(TZ=America/Sao_Paulo date +%Y-%m-%d)
+          SLUG="radar-tech-${DATE}"
+          echo "date=${DATE}" >> "$GITHUB_OUTPUT"
+          echo "slug=${SLUG}" >> "$GITHUB_OUTPUT"
 
-          if [ "$status" -ne 0 ]; then
-            echo "Radar already exists or generation failed. Checking whether there are file changes."
+          npm run radar:tech
+          radar_status=$?
+
+          if [ "$radar_status" -ne 0 ]; then
+            echo "Radar generation skipped or failed (${radar_status})."
           fi
 
-          if git diff --quiet -- src/content/articles; then
+          if [ -f "src/content/articles/${SLUG}.md" ]; then
+            npm run curate:images -- --apply --slug "${SLUG}" --skip-remote
+            npm run og:images -- --slug "${SLUG}"
+          else
+            echo "No radar markdown for ${SLUG}; skipping curate:images."
+          fi
+
+          set -e
+
+          npm run audit:images
+
+          if git diff --quiet -- src/content/articles public/images/radar public/images/news public/images/og public/assets/og-default.webp; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
@@ -62,10 +77,10 @@ jobs:
         run: |
           git config user.name "tech-briefing-bot"
           git config user.email "actions@github.com"
-          git add src/content/articles
-          git commit -m "Add daily tech radar"
+          git add src/content/articles public/images/radar public/images/news public/images/og public/assets/og-default.webp
+          git commit -m "Add daily tech radar (${{ steps.radar.outputs.date }})"
           git push
 
       - name: Nothing to publish
         if: steps.radar.outputs.changed != 'true'
-        run: echo "No new radar post to publish today."
+        run: echo "No new radar post or cover changes for ${{ steps.radar.outputs.slug }}."

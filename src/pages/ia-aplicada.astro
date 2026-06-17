@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import { resolveArticleImage } from '../lib/articleImage';
 
 const articles = (await getCollection('articles'))
   .filter(a => a.data.category?.toLowerCase().includes('ia') || a.data.category?.toLowerCase().includes('aplicada'))
@@ -22,7 +23,7 @@ const articles = (await getCollection('articles'))
         {articles.map((article) => (
           <a class="latest-card" href={`/artigos/${article.id}`}>
             <div class="latest-img-wrap">
-              <img src={article.data.image || '/images/editorial/tech-radar.svg'} alt="" loading="lazy"/>
+              <img src={resolveArticleImage({ slug: article.id, image: article.data.image, title: article.data.title, category: article.data.category })} alt={article.data.title} loading="lazy"/>
             </div>
             <div class="latest-content">
               <div class="latest-top">

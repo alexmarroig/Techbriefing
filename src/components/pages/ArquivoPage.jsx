@@ -199,7 +199,7 @@ function App({ articles = [] }){
         {featured && (
           <a href={featured.href} className="art-featured" onMouseEnter={()=>setHovered('feat')} onMouseLeave={()=>setHovered(null)}>
             <div className="art-featured-img">
-              <img src={featured.image || articleCoverSvg(0)} alt={featured.title} loading="lazy"/>
+              <img src={featured.image || '/images/editorial/tech-radar.svg'} alt={featured.title} loading="lazy"/>
               <div className={`art-featured-pulse ${hovered==='feat'?'active':''}`}/>
             </div>
             <div className="art-featured-content">
@@ -230,7 +230,7 @@ function App({ articles = [] }){
                 onMouseLeave={()=>setHovered(null)}
               >
                 <div className="art-card-img">
-                  <img src={a.image || articleCoverSvg(i+1)} alt={a.title} loading="lazy"/>
+                  <img src={a.image || '/images/editorial/tech-radar.svg'} alt={a.title} loading="lazy"/>
                   <div className={`art-card-glow ${hovered===i?'active':''}`}/>
                 </div>
                 <div className="art-card-body">

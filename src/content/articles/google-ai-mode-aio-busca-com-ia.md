@@ -6,7 +6,7 @@ author: "Nexora Systems"
 date: 2026-05-25
 readTime: "9 min"
 featured: false
-image: "/images/article-strategy-business.png"
+image: "/images/news/google-ai-mode-aio-busca-com-ia.svg"
 tags:
   - AIO
   - SEO

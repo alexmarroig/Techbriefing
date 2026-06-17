@@ -6,7 +6,7 @@ author: "Lucas Andrade"
 date: 2026-04-18
 readTime: "10 min"
 featured: false
-image: "/images/article-n8n-vs-make.png"
+image: "/images/news/ferramentas-no-code-para-ia.svg"
 tags:
   - No-code
   - Ferramentas de IA

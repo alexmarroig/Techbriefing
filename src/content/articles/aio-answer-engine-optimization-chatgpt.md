@@ -6,7 +6,7 @@ author: "Lucas Andrade"
 date: 2026-05-25
 readTime: "6 min"
 featured: true
-image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200"
+image: "/images/news/aio-answer-engine-optimization-chatgpt.svg"
 tags:
   - SEO
   - Inteligência Artificial

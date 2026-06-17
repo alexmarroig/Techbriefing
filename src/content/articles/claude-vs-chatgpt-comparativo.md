@@ -6,7 +6,7 @@ author: "Lucas Andrade"
 date: 2026-03-28
 readTime: "9 min"
 featured: false
-image: "/images/article-frameworks-comparison.png"
+image: "/images/news/claude-vs-chatgpt-comparativo.svg"
 tags:
   - Claude
   - ChatGPT

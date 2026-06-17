@@ -6,7 +6,7 @@ author: "Lucas Andrade"
 date: 2026-03-15
 readTime: "7 min"
 featured: false
-image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80&w=1200"
+image: "/images/news/chatbot-vs-agente-ia-diferencas.svg"
 tags:
   - Agentes de IA
   - Chatbot

@@ -6,7 +6,7 @@ author: "Lucas Andrade"
 date: 2026-05-13
 readTime: "6 min"
 featured: false
-image: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&q=80&w=1200"
+image: "/images/news/google-kaggle-curso-agentes-vibe-coding.svg"
 tags:
   - Google
   - Kaggle

@@ -10,6 +10,7 @@ tags:
   - Agentes de voz
   - Atendimento com IA
   - Automação
+image: "/images/news/agentes-voz-atendimento-ring-vapi.svg"
 ---
 
 ## Resumo rápido

@@ -6,7 +6,7 @@ author: "Lucas Andrade"
 date: 2026-05-25
 readTime: "7 min"
 featured: true
-image: "https://images.unsplash.com/photo-1518932945647-7a1c969f8be2?auto=format&fit=crop&q=80&w=1200"
+image: "/images/news/ia-local-privacidade-n8n-ollama.svg"
 tags:
   - Automação
   - n8n

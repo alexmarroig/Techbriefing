@@ -6,7 +6,7 @@ author: "Lucas Andrade"
 date: 2026-05-19
 readTime: "10 min"
 featured: false
-image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200"
+image: "/images/news/agentes-ia-autonomos-operacoes.svg"
 tags:
   - Agentes de IA
   - Automação

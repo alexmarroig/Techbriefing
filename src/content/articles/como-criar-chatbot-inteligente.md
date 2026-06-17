@@ -6,7 +6,7 @@ author: "Lucas Andrade"
 date: 2026-05-03
 readTime: "11 min"
 featured: false
-image: "/images/article-ai-content.png"
+image: "/images/news/como-criar-chatbot-inteligente.svg"
 tags:
   - Chatbot
   - Atendimento
