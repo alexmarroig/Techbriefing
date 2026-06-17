@@ -120,7 +120,7 @@ function Hero(){
         <div className="hero-eyebrow">
           <span className="hero-eyebrow-mark">Tech Briefing</span>
           <div className="hero-eyebrow-rule"/>
-          <span className="hero-eyebrow-tag">Inteligência Artificial aplicada para negócios</span>
+          <span className="hero-eyebrow-tag">Seu Blog de Inteligência Artificial e Tecnologia</span>
         </div>
 
         <h1 className="hero-h1">
