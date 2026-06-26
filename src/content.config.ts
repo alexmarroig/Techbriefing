@@ -13,6 +13,12 @@ const article = defineCollection({
     readTime: z.string(),
     featured: z.boolean().default(false),
     image: z.string().optional(),
+    sourceUrl: z.string().optional(),
+    sourceName: z.string().optional(),
+    editorialScore: z.number().optional(),
+    canonicalKeyword: z.string().optional(),
+    editorialType: z.string().optional(),
+    discussionPrompts: z.array(z.string()).default([]),
     tags: z.array(z.string()).default([]),
     faq: z.array(z.object({
       question: z.string(),

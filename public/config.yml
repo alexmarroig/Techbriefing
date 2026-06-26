@@ -27,6 +27,12 @@ collections:
       - { label: "Tempo de leitura", name: "readTime", widget: "string", default: "8 min" }
       - { label: "Destaque", name: "featured", widget: "boolean", default: false }
       - { label: "Imagem", name: "image", widget: "image", required: false }
+      - { label: "URL da fonte original", name: "sourceUrl", widget: "string", required: false }
+      - { label: "Nome da fonte", name: "sourceName", widget: "string", required: false }
+      - { label: "Score editorial", name: "editorialScore", widget: "number", required: false, value_type: "int" }
+      - { label: "Keyword canonica", name: "canonicalKeyword", widget: "string", required: false }
+      - { label: "Tipo editorial", name: "editorialType", widget: "string", required: false }
+      - { label: "Perguntas para comentarios reais", name: "discussionPrompts", widget: "list", required: false }
       - { label: "Tags", name: "tags", widget: "list", required: false }
       - { label: "Corpo", name: "body", widget: "markdown" }
 

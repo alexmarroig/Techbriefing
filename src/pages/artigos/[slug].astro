@@ -32,7 +32,7 @@ const entry = sanityEntry ?? (localEntry ? {
 
 if (!entry) return Astro.redirect('/404');
 
-const { title, description, category, author, date, readTime, tags, faq = [], body } = entry;
+const { title, description, category, author, date, readTime, tags, faq = [], discussionPrompts = [], body } = entry;
 const image = resolveArticleImage({
   slug,
   image: entry.image,
@@ -151,6 +151,15 @@ if (faqJsonLd) schemas.push(faqJsonLd);
           {body ? <PortableTextRenderer value={body} /> : null}
           {LocalContent ? <LocalContent /> : null}
           <AuthorBio author={author} />
+
+          {discussionPrompts?.length > 0 && (
+            <aside class="discussion-prompts" aria-label="Perguntas para comentar">
+              <h2>Perguntas para a comunidade</h2>
+              <ul>
+                {discussionPrompts.slice(0, 4).map((prompt) => <li>{prompt}</li>)}
+              </ul>
+            </aside>
+          )}
 
           <div class="giscus-container" style="margin-top: 64px;">
             <script is:inline>
@@ -435,6 +444,28 @@ if (faqJsonLd) schemas.push(faqJsonLd);
     border-top: 1px solid var(--line-s);
     margin: 48px 0;
     opacity: 0.6;
+  }
+  .discussion-prompts {
+    margin: 52px 0 0;
+    padding: 26px;
+    border: 1px solid var(--line-s);
+    border-radius: 16px;
+    background: var(--bg-2);
+  }
+  .discussion-prompts h2 {
+    margin: 0 0 18px;
+    color: var(--text);
+    font-family: var(--serif);
+    font-size: clamp(26px, 3vw, 36px);
+    line-height: 1.12;
+  }
+  .discussion-prompts ul {
+    margin: 0;
+    padding-left: 22px;
+  }
+  .discussion-prompts li {
+    margin-bottom: 12px;
+    color: var(--text-2);
   }
   .seo-content :global(table) {
     width: 100%;

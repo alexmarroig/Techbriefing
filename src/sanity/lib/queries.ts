@@ -2,14 +2,16 @@
 export const allArticlesQuery = `
   *[_type == "article"] | order(date desc) {
     _id, title, "slug": slug.current, description, category, author,
-    date, readTime, featured, "image": image.asset->url, tags
+    date, readTime, featured, "image": image.asset->url, tags,
+    sourceUrl, sourceName, editorialScore, canonicalKeyword, editorialType, discussionPrompts
   }
 `
 
 export const featuredArticlesQuery = `
   *[_type == "article" && featured == true] | order(date desc) {
     _id, title, "slug": slug.current, description, category, author,
-    date, readTime, featured, "image": image.asset->url, tags
+    date, readTime, featured, "image": image.asset->url, tags,
+    sourceUrl, sourceName, editorialScore, canonicalKeyword, editorialType, discussionPrompts
   }
 `
 
@@ -17,14 +19,16 @@ export const articleBySlugQuery = `
   *[_type == "article" && slug.current == $slug][0] {
     _id, title, "slug": slug.current, description, category, author,
     date, readTime, featured, "image": image.asset->url, tags,
-    body, seo
+    sourceUrl, sourceName, editorialScore, canonicalKeyword, editorialType,
+    discussionPrompts, body, seo
   }
 `
 
 export const articlesByCategoryQuery = `
   *[_type == "article" && category == $category] | order(date desc) {
     _id, title, "slug": slug.current, description, category, author,
-    date, readTime, featured, "image": image.asset->url, tags
+    date, readTime, featured, "image": image.asset->url, tags,
+    sourceUrl, sourceName, editorialScore, canonicalKeyword, editorialType, discussionPrompts
   }
 `
 

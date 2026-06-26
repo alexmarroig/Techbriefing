@@ -1,0 +1,88 @@
+name: Daily Editorial Pipeline
+
+on:
+  schedule:
+    # 11:00 in Sao Paulo (UTC-3). GitHub schedules use UTC.
+    - cron: '0 14 * * *'
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: 'Numero maximo de artigos'
+        type: string
+        default: '10'
+      min_score:
+        description: 'Score minimo'
+        type: string
+        default: '35'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-editorial-pipeline
+  cancel-in-progress: false
+
+jobs:
+  publish-editorial-batch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      RADAR_TIMEZONE: America/Sao_Paulo
+      EDITORIAL_DAILY_LIMIT: ${{ github.event.inputs.limit || '10' }}
+      EDITORIAL_MIN_SCORE: ${{ github.event.inputs.min_score || '35' }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Repair and generate editorial articles
+        run: npm run editorial:run -- --limit "$EDITORIAL_DAILY_LIMIT" --min-score "$EDITORIAL_MIN_SCORE" --publish
+
+      - name: Refresh LLM index
+        run: npm run llms:index
+
+      - name: Generate OG images
+        run: npm run og:images
+
+      - name: Audit editorial quality
+        run: npm run audit:editorial
+
+      - name: Audit images
+        run: npm run audit:images
+
+      - name: Detect changes
+        id: changes
+        run: |
+          if git diff --quiet -- src/content/articles public/images/news public/images/og public/assets/og-default.webp public/llms.txt; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Build site
+        if: steps.changes.outputs.changed == 'true'
+        run: npm run build
+
+      - name: Commit editorial batch
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name "tech-briefing-bot"
+          git config user.email "actions@github.com"
+          git add src/content/articles public/images/news public/images/og public/assets/og-default.webp public/llms.txt
+          git commit -m "Add daily editorial batch"
+          git push
+
+      - name: Nothing to publish
+        if: steps.changes.outputs.changed != 'true'
+        run: echo "No new editorial articles to publish today."

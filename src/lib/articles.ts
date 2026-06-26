@@ -15,6 +15,12 @@ type ArticleRecord = {
   featured?: boolean;
   image?: string;
   tags?: string[];
+  sourceUrl?: string;
+  sourceName?: string;
+  editorialScore?: number;
+  canonicalKeyword?: string;
+  editorialType?: string;
+  discussionPrompts?: string[];
   type?: string;
 };
 
@@ -37,6 +43,12 @@ function normalizeLocalArticle(entry: Awaited<ReturnType<typeof getCollection<'a
       category: entry.data.category,
     }),
     tags: entry.data.tags,
+    sourceUrl: entry.data.sourceUrl,
+    sourceName: entry.data.sourceName,
+    editorialScore: entry.data.editorialScore,
+    canonicalKeyword: entry.data.canonicalKeyword,
+    editorialType: entry.data.editorialType,
+    discussionPrompts: entry.data.discussionPrompts,
     type: 'article',
   };
 }
@@ -60,6 +72,12 @@ function normalizeSanityArticle(entry: Record<string, unknown>): ArticleRecord {
       category: String(entry.category || ''),
     }),
     tags: Array.isArray(entry.tags) ? entry.tags.map(String) : [],
+    sourceUrl: String(entry.sourceUrl || ''),
+    sourceName: String(entry.sourceName || ''),
+    editorialScore: typeof entry.editorialScore === 'number' ? entry.editorialScore : undefined,
+    canonicalKeyword: String(entry.canonicalKeyword || ''),
+    editorialType: String(entry.editorialType || ''),
+    discussionPrompts: Array.isArray(entry.discussionPrompts) ? entry.discussionPrompts.map(String) : [],
     type: String(entry._type || 'article'),
   };
 }

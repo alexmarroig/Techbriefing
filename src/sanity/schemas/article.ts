@@ -90,6 +90,47 @@ export default defineType({
       options: { layout: 'tags' },
     }),
     defineField({
+      name: 'sourceUrl',
+      title: 'URL da fonte original',
+      type: 'url',
+      description: 'Fonte usada pela rotina editorial automatizada.',
+    }),
+    defineField({
+      name: 'sourceName',
+      title: 'Nome da fonte',
+      type: 'string',
+    }),
+    defineField({
+      name: 'editorialScore',
+      title: 'Score editorial',
+      type: 'number',
+      description: 'Pontuacao usada para priorizar publicacao automatica.',
+    }),
+    defineField({
+      name: 'canonicalKeyword',
+      title: 'Keyword canonica',
+      type: 'string',
+    }),
+    defineField({
+      name: 'editorialType',
+      title: 'Tipo editorial',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Analise automatizada de noticia', value: 'automated-news-analysis' },
+          { title: 'Guia evergreen', value: 'evergreen-guide' },
+          { title: 'Editorial manual', value: 'manual-editorial' },
+        ],
+      },
+    }),
+    defineField({
+      name: 'discussionPrompts',
+      title: 'Perguntas para comentarios reais',
+      type: 'array',
+      of: [{ type: 'string' }],
+      description: 'Perguntas editoriais exibidas antes do Giscus. Nao usar comentarios falsos.',
+    }),
+    defineField({
       name: 'faq',
       title: 'FAQ (Schema)',
       type: 'array',
